@@ -1,0 +1,61 @@
+input:focus,
+*:focus {
+  outline: none !important;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+mark {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none !important;
+  outline: none !important;
+  transition: color 0.3s, background 0.3s, opacity 0.3s, border 0.3s;
+}
+
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none !important;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.clear {
+  clear: both;
+}
+
+header:after,
+.row:after,
+ul.list-company:after,
+ul.team-ul:after,
+.social-wr:after,
+.contact-left ul li:after,
+.section-option:after,
+.ch-select:after,
+.nav-page .select-block:after,
+ul.ul-about:after {
+  content: '';
+  width: 100%;
+  height: 0;
+  display: block;
+  clear: both;
+}

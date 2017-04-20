@@ -1,0 +1,27 @@
+/* 1 Main layout*/
+@import "layout-settings";
+/* end of Main layout*/
+
+/* 2 Bootstrap override */
+@import "bootstrap-override";
+/* end of Bootstrap override */
+
+/* 3 fonts */
+@import "fonts";
+/* end of fonts */
+
+/* 4 Buttons */
+@import "buttons";
+/* end of Buttons */
+
+/* 5 Datapicker */
+@import "datepicker.scss";
+/* end of Datapicker */
+
+/* 6 Base sizing helper classes */
+@import "base-sizing";
+/* end of Base sizing */
+
+/* 7 helper classes */
+@import "helpers.scss";
+/* end of Base sizing */
