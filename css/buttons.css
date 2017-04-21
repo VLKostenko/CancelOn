@@ -12,7 +12,7 @@
   display: block;
   width: 22px;
   height: 22px;
-  background-image: url("../images/unblocked-icon.svg");
+  background-image: url("../images/icons/unblocked-icon.svg");
   background-size: cover;
   position: absolute;
   left: 11px;
@@ -76,7 +76,7 @@
 }
 
 .adults-btn:before {
-  background-image: url("../images/user.svg");
+  background-image: url("../images/icons/user.svg");
   display: block;
   width: 12px;
   height: 18px;
@@ -97,9 +97,15 @@
   content: '';
 }
 
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
+  color: #fff;
+  background-color: #54aee1;
+  border-color: #54aee1;
+}
+
 .input-search-btn {
   position: absolute;
-  right: -10px;
+  right: 0;
   top: 36px;
   z-index: 4;
 }
@@ -114,7 +120,7 @@
   width: 130px;
 }
 
-.input-search-btn button:hover {
+.input-search-btn button:hover, .input-search-btn button:focus, .input-search-btn button:active {
   background-color: #54aee1;
   border-color: #54aee1;
   color: #ffffff;
@@ -123,7 +129,7 @@
 .input-search-btn button:before {
   content: '';
   display: block;
-  background-image: url("../images/search-icon.svg");
+  background-image: url("../images/icons/search-icon.svg");
   background-size: cover;
   -webkit-filter: brightness(2);
   filter: brightness(2);
@@ -135,7 +141,7 @@
 }
 
 .menu-icon {
-  background-image: url(../images/menu-icon.svg);
+  background-image: url("../images/icons/menu-icon.svg");
   background-size: cover;
   width: 17px;
   height: 15px;

@@ -1,56 +1,91 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
-body{
+body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
-h3{
-  font-size: 20px;
+
+h1, .h1 { font-size: 26px; }
+h2, .h2 { font-size: 20px; }
+h3, .h3 { font-size: 18px; }
+h4, .h4 { font-size: 16px; }
+h5, .h5 { font-size: 14px; }
+h6, .h6 { font-size: 12px; }
+
+.font-weight-100 {
+  font-weight: 100;
 }
-.price{
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-500 {
+  font-weight: 500;
+}
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.price {
   font-size: 18px;
 }
-.small-text{
-  font-size: 12.1px;
-  font-weight: 200;
+
+.small-text {
+  font-size: 12px;
 }
-.extra-small{
+
+.extra-small {
   font-size: 10px;
 }
-.big-text{
+
+.big-text {
   font-size: 16px;
 }
-.btn{
+
+.btn {
   font-size: 13px;
 }
-.big-text{
-  font-weight: bold;
+
+.font-roboto {
   font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
 }
-.large{
+
+.font-montserrat {
   font-family: 'Montserrat', sans-serif;
+}
+
+.large {
   font-size: 17px;
 }
-.regular-text{
+
+.regular-text {
   font-size: 14px;
 }
-.red-price{
-  font-size: 12px;
-  color: #dc3b41;
+
+.red-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff454c;
   text-align: right;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 0;
+  margin-left: 30px;
+  line-height: 40px;
 }
-.price{
+
+.price {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-  color: #94b747;
-  font-size: 14px;
+  color: #85b83a;
+  font-size: 30px;
+  margin-bottom: 0;
   text-align: right;
 }
-.price-red{
+
+.price-red {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   color: #ff383f;
@@ -58,7 +93,8 @@ h3{
   text-align: right;
   text-decoration: line-through;
 }
-.copy{
+
+.copy {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;

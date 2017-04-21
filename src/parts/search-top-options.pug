@@ -1,0 +1,23 @@
+.container.mt-25.pl-10.pr-10
+	.filter-top.white
+		.col-md-2.pr-0
+			p.big-text.text-uppercase.font-weight-600.font-roboto.mnl-5
+				| Search Filter
+				a.pull-right.mnr-10(href='#')
+					span.menu-icon
+		.col-md-10.pl-50
+			.display
+				a.list-btn.active(href='#')
+					i.fa.fa-bars(aria-hidden='true')
+				a.grid-btn.top-n-1.ml-5(href='#')
+					i.fa.fa-th(aria-hidden='true')
+			select.selectpicker.pull-left
+				option Low to High
+				option High to Low
+				option Newest
+			p.avail Available 471 Of 471
+			.onoffswitch.pull-right
+				input#myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='')
+				label.onoffswitch-label(for='myonoffswitch')
+					span.onoffswitch-inner
+					span.onoffswitch-switch

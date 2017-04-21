@@ -1,3 +1,5 @@
+@import "mixins";
+
 .date-picker {
   width: 170px;
   height: 25px;
@@ -16,7 +18,7 @@
 
 .date-picker-wrapper {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   border: 1px solid #bfbfbf;
   background-color: #efefef;
   padding: 5px 12px;
@@ -365,11 +367,10 @@
 }
 
 /* datarangepicker end */
-
-.datepicker-input {
-  font-size: 12px;
-  &::-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder {
-    font-size: 18px;
+input[type="text"] {
+  &.datepicker-input {
+    font-size: 14px;
+    color: #333;
   }
 }
 

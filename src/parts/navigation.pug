@@ -1,0 +1,89 @@
+nav.navbar.navbar-default.mb-0
+	.container
+		.navbar-header
+			a.navbar-brand(href='#')
+				img.img-responsive(alt='logo', src='images/logo.png')
+			p.navbar-text.small-text.font-weight-200
+				i.fa.fa-info-circle(aria-hidden='true')
+				|	Sell and Buy Non-Refundable Hotel Reservations
+		.col-md-6.pull-right.pr-0
+			ul.nav.navbar-nav.navbar-right
+				li
+					a(href='#')
+						i.fa.fa-map(aria-hidden='true')
+						| Explore
+				li.dropdown.show
+					a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						i.fa.fa-user(aria-hidden='true')
+						| Sign In
+						span.bs-caret
+							span.caret
+					.dropdown-menu.sign-in-menu(aria-labelledby='dropdownMenuLink1')
+						.col-md-12
+							p.pull-left.w-30.big-text.font-weight-500 Login
+							a.pull-right.w-70.extra-small(href='#') Not registered? Sign Up
+							input.log-input(type='text', placeholder='Enter Your Login')
+							p.pull-left.w-50.big-text.font-weight-500 Password
+							a.pull-right.w-50.extra-small(href='#') Forgot Password
+							input.log-input(type='text', placeholder='Enter Your Password')
+							.w-50.pull-left.text-center
+								a.sign-btn(href="javascript:void(0)") Sign In
+							.w-50.pull-right.text-center.socials
+								a(href="javascript:void(0)")
+									i.fa.fa-facebook(aria-hidden='true')
+								a(href="javascript:void(0)")
+									i.fa.fa-google-plus(aria-hidden='true')
+								a(href="javascript:void(0)")
+									i.fa.fa-twitter(aria-hidden='true')
+				li.form-group
+					select#sel1.selectpicker.currency-menu
+						option (USD) $
+						option (EUR) &euro;
+						option (GBP) &pound;
+						option (AED) Dh
+						option (AFN) ؋
+						option (ALL) Lek
+						option (DZD) DA
+						option (ARS) $
+						option (AUD) $
+						option (BSD) $
+						option (BDT) Tk
+						option (BBD) $
+						option (BMD) $
+				li.dropdown.show
+					a#dropdownMenuLink2.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						i.fa.fa-language(aria-hidden='true')
+						| Language
+						span.bs-caret
+							span.caret
+					.dropdown-menu.languages-menu(aria-labelledby='dropdownMenuLink2')
+						.col-md-12.languages
+							a(href='#')
+								img(width='32', src='images/icons/flag.svg', alt='')
+								| English
+							a(href='#')
+								img(width='32', src='images/icons/flag1.svg', alt='')
+								| Deutch
+							a(href='#')
+								img(width='32', src='images/icons/flag2.svg', alt='')
+								| French
+							a(href='#')
+								img(width='32', src='images/icons/flag3.svg', alt='')
+								| Spanish
+							a(href='#')
+								img(width='32', src='images/icons/flag4.svg', alt='')
+								| Italiano
+							a(href='#')
+								img(width='32', src='images/icons/flag5.svg', alt='')
+								| Russian
+			ul.nav.navbar-nav.navbar-right.down-menu
+				li
+					a.blue-btn(href='#') Unlock special prices
+				li
+					a.green-btn(href='#') Buy hotel reservation
+				li
+					a(href='#') About
+				li
+					a(href='#') Support
+				li
+					a(href='#') Alert Me

@@ -14,13 +14,16 @@ var gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   pngquant = require('imagemin-pngquant'),
   rimraf = require('rimraf'),
-  browserSync = require('browser-sync').create(),
+  browserSync = require('browser-sync'),
   rename = require('gulp-rename'),
-  reload = browserSync.reload;
-var clip = require('gulp-clip-empty-files');
-var saveLicense = require('uglify-save-license');
-var lessToScss = require('gulp-less-to-scss');
-// var deleteEmpty = require('delete-empty');
+  reload = browserSync.reload,
+  clip = require('gulp-clip-empty-files'),
+  saveLicense = require('uglify-save-license'),
+  lessToScss = require('gulp-less-to-scss'),
+  imgRetina = require('gulp-img-retina'),
+  pug = require('gulp-pug');
+
+var retinaOpts = {};
 
 var folders = {
   src: 'src/',
@@ -46,6 +49,7 @@ var path = {
   },
   src: {
     html: folders.src + '*.html',
+    pug: folders.src + '*.pug',
     //js
     js_bootstrap: folders.src + 'js/bootstrap.js',
     js_ds_custom: folders.src + 'js/ds-custom.js',
@@ -53,11 +57,6 @@ var path = {
     js_ds_scripts: folders.src + 'js/**/*.js',
     //css
     css: folders.src + 'styles/**/*.scss',
-    style_template: folders.src + 'styles/template.scss',
-    style_base_sizing: folders.src + 'styles/base-sizing.scss',
-    style_custom: folders.src + 'styles/custom.scss',
-    style_ds_components: folders.src + 'styles/ds-components.scss',
-    style_bootstrap: folders.src + 'styles/bootstrap.scss',
     less: folders.src + 'styles/**/*.less',
     img: [
       folders.src + 'images/**/*.*'
@@ -66,17 +65,13 @@ var path = {
   },
   watch: {
     html: folders.src + '**/*.html',
-    scc: folders.src + 'styles/**/*.scss',
+    pug: folders.src + '**/*.pug',
+    css: folders.src + 'styles/**/*.scss',
+    less: folders.src + 'styles/**/*.less',
     js_bootstrap: folders.src + 'js/**/*.js',
     js_ds_custom: folders.src + 'js/**/*.js',
     js_ds_plugins: folders.src + 'js/**/*.js',
     js_ds_scripts: folders.src + 'js/**/*.js',
-    style_template: folders.src + 'styles/**/*.scss',
-    style_base_sizing: folders.src + 'styles/**/*.scss',
-    style_custom: folders.src + 'styles/**/*.scss',
-    style_ds_components: folders.src + 'styles/**/*.scss',
-    style_bootstrap: folders.src + 'styles/**/*.scss',
-    less: folders.src + 'styles/**/*.less',
     img: [
       folders.src + 'images/**/*.*'
     ],
@@ -94,15 +89,17 @@ gulp.task('browser:sync', function() {
   browserSync.init({
     server: {
       baseDir: path.build.html
-    }
+    },
+    open: false
   });
-
-  gulp.watch(path.src.css).on("change", reload);
+  gulp.watch(path.src.css).on("end", reload);
 });
 
 gulp.task('html:build', function () {
-  gulp.src(path.src.html)
+  gulp.src(path.src.pug)
     .pipe(rigger())
+    .pipe(pug({ pretty: true }))
+    .pipe(imgRetina(retinaOpts))
     .pipe(gulp.dest(path.build.html));
 });
 
@@ -157,100 +154,21 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('styles:build', function () {
-  gulp.src(path.src.style_template)
+  gulp.src(path.src.css)
     .pipe(clip())
-    // .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: ['src/styles/'],
+      // includePaths: ['src/styles/'],
       outputStyle: 'expanded',
-      // sourceMap: true,
+      sourceMap: true,
       errLogToConsole: true
     }))
     .pipe(prefixer())
     .pipe(gulp.dest(path.build.css_template))
     .pipe(rename({ extname: '.min.css' }))
     .pipe(cssmin())
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.css_template));
-
-  gulp.src(path.src.style_base_sizing)
-    .pipe(clip())
-    // .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: ['src/styles/'],
-      outputStyle: 'expanded',
-      // sourceMap: true,
-      errLogToConsole: true
-    }))
-    .pipe(prefixer())
-    .pipe(gulp.dest(path.build.css_base_sizing))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(cssmin())
-    // .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.build.css_base_sizing));
-
-  gulp.src(path.src.style_custom)
-    .pipe(clip())
-    // .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: ['src/styles/'],
-      outputStyle: 'expanded',
-      // sourceMap: true,
-      errLogToConsole: true
-    }))
-    .pipe(prefixer())
-    .pipe(gulp.dest(path.build.css_custom))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(cssmin())
-    // .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.build.css_custom));
-  gulp.src(path.src.style_ds_components)
-    .pipe(clip())
-    // .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: ['src/styles/'],
-      outputStyle: 'expanded',
-      // sourceMap: true,
-      errLogToConsole: true
-    }))
-    .pipe(prefixer())
-    .pipe(gulp.dest(path.build.css_ds_components))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(cssmin())
-    // .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.build.css_ds_components));
-  gulp.src(path.src.style_bootstrap)
-    .pipe(clip())
-    // .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: ['src/styles/'],
-      outputStyle: 'expanded',
-      // sourceMap: true,
-      errLogToConsole: true
-    }))
-    .pipe(prefixer())
-    .pipe(gulp.dest(path.build.css_bootstrap))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(cssmin())
-    // .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.build.css_bootstrap));
-  gulp.src(path.src.css)
-    .pipe(clip())
-    // .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: ['src/styles/'],
-      outputStyle: 'expanded',
-      // sourceMap: true,
-      errLogToConsole: true
-    }))
-    .pipe(prefixer())
-    .pipe(gulp.dest(path.build.css_bootstrap))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(cssmin())
-    // .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.build.css_bootstrap));
-
-  //gulp.src(path.src.css).pipe(browserSync.stream());
+    // .pipe(reload({ stream:true }))
 });
 
 
@@ -272,31 +190,19 @@ gulp.task('fonts:build', function () {
 
 gulp.task('build', [
   'html:build',
-  'js:build',
   'styles:build',
+  'js:build',
   'fonts:build',
   'images:build',
   'browser:sync'
 ]);
 
 gulp.task('watch', function () {
-  gulp.watch([path.watch.html], function (event, cb) {
+  gulp.watch([path.watch.pug], function (event, cb) {
     gulp.start('html:build');
   });
   //css
-  gulp.watch([path.watch.style_template], function (event, cb) {
-    gulp.start('styles:build');
-  });
-  gulp.watch([path.watch.style_base_sizing], function (event, cb) {
-    gulp.start('styles:build');
-  });
-  gulp.watch([path.watch.style_custom], function (event, cb) {
-    gulp.start('styles:build');
-  });
-  gulp.watch([path.watch.style_ds_components], function (event, cb) {
-    gulp.start('styles:build');
-  });
-  gulp.watch([path.watch.style_bootstrap], function (event, cb) {
+  gulp.watch([path.watch.css], function (event, cb) {
     gulp.start('styles:build');
   });
   //js

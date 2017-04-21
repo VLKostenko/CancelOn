@@ -34,5 +34,11 @@
     "imagemin-pngquant": "^4.2.0",
     "rimraf": "^2.4.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-iconfont": "^8.0.1",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-img-retina": "0.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-pug": "^3.3.0"
+  }
 }

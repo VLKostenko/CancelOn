@@ -1783,7 +1783,6 @@
     }
 
     function showDaysBorders() {
-      console.log('showDaysBorders');
       var first = $('.first-date-selected');
       var last = $('.last-date-selected');
       var borderRight = '<div class="round-border round-border-right"></div>';

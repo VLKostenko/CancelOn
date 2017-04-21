@@ -1,1227 +1,1028 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
-
-	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="images/favicon/manifest.json">
-	<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg">
-	<meta name="apple-mobile-web-app-title" content="CancelOn">
-	<meta name="application-name" content="CancelOn">
-	<meta name="msapplication-TileColor" content="#323232">
-	<meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-	<!-- /Favicons -->
-
-	<!-- Personal Meta tags -->
-	<meta name="CancelOn - Booking Service" content="">
-
-	<!--[if IE]>
-	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
-
-	<!-- Meta descriptions -->
-	<meta name="keywords" content="CancelOn, Booking, apartments, trip"/>
-	<meta name="description" content="CancelOn - Booking service">
-
-	<!-- Url of your website (without extra pages) -->
-	<link rel="canonical" href="http://yoursite.com"/>
-
-	<!-- Restrict google from scanning info from Dmoz or YahooDir -->
-	<meta name="robots" content="noodp,noydir"/>
-
-	<!-- Author markup -->
-	<meta name="author" content="CancelOn - Booking Service">
-	<meta name="copyright" content="CancelOn">
-	<!-- / Personal Meta tags -->
-
-	<title>Cancel On - Booking service</title>
-
-	<!-- Bootstrap CSS -->
-	<link href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-
-	<!-- Font-awesome CSS -->
-	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="assets/plugins/jquery-ui/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
-	<link href="assets/plugins/jquery-ui/themes/smoothness/theme.css" rel="stylesheet">
-
-	<!-- Main Template CSS -->
-	<link href="css/main.min.css" rel="stylesheet">
-
-</head>
-
-<body>
-<nav class="navbar navbar-default mb-0">
-	<div class="container pr-0">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">
-				<img alt="logo" class="img-responsive" src="images/logo.png">
-			</a>
-			<p class="navbar-text small-text"><i class="fa fa-info-circle" aria-hidden="true"></i>
-				Sell and Buy Non-Refundable Hotel Reservations</p>
-		</div>
-		<div class="col-md-6 pull-right pr-0">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><i class="fa fa-map" aria-hidden="true"></i> Explore</a></li>
-				<li class="dropdown show">
-					<a class="dropdown-toggle mnr-10" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="fa fa-user" aria-hidden="true"></i>
-						Sign In
-					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-						<div class="col-md-12">
-							<p class="pull-left w-30">Login</p>
-							<a href="#" class="pull-right w-70 extra-small">Not registered? Sign Up</a>
-							<input class="log-input" type="text" placeholder="Enter Your Login">
-
-							<p class="pull-left w-50">Password</p>
-							<a href="#" class="pull-right w-50 extra-small">Forgot Password</a>
-							<input class="log-input" type="text" placeholder="Enter Your Password">
-						</div>
-					</div></li>
-				<li class="form-group">
-					<select class="selectpicker" id="sel1">
-						<option>USD</option>
-						<option>EUR</option>
-						<option>GBP</option>
-						<option>AED</option>
-					</select>
-				</li>
-				<li class="dropdown show">
-					<a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="fa fa-language" aria-hidden="true"></i>
-						Language
-					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-						<div class="col-md-12 languages">
-							<a href="#"><img class="pr-5 pb-10" width="32" src="images/flag.svg" alt="">English</a>
-							<a href="#"><img class="pr-5 pb-10" width="32" src="images/flag1.svg" alt="">Deutch</a>
-							<a href="#"><img class="pr-5 pb-10" width="32" src="images/flag2.svg" alt="">French</a>
-							<a href="#"><img class="pr-5 pb-10" width="32" src="images/flag3.svg" alt="">Spanish</a>
-							<a href="#"><img class="pr-5 pb-10" width="32" src="images/flag4.svg" alt="">Italiano</a>
-							<a href="#"><img class="pr-5 pb-10" width="32" src="images/flag5.svg" alt="">Russian</a>
-						</div>
-					</div></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right down-menu">
-				<li><a class="blue-btn" href="#">Unlock special prices</a></li>
-				<li><a class="green-btn" href="#">Buy hotel reservation</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Support</a></li>
-				<li><a href="#">Alert Me</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-<div class="container-fluid white">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 pt-35 pl-0">
-				<div class="col-md-6">
-					<div class="form-group">
-						<div class="input-group input-group-white"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-							<input type="text" class="form-control datepicker-input" placeholder="Date">
-							<b class="carret"></b>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 adults">
-					<div class="btn-group">
-						<a type="button" class="adults-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Adults
-						</a>
-						<div class="dropdown-menu mt-10">
-							<label for="quant[1]" class="col-form-label">Room Quantity</label>
-							<div class="input-group mt-10">
-					            <span class="input-group-btn">
-					              <button type="button" class="btn btn-info btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-					                  -
-					              </button>
-					             </span>
-								<input type="text" id="quant[1]" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-
-								<span class="input-group-btn">
-						              <button type="button" class="btn btn-warning btn-number" data-type="plus" data-field="quant[1]">
-						                  +
-						              </button>
-								</span>
-							</div>
-
-							<label for="quant[2]" class="col-form-label mt-20">Adults</label>
-							<div class="input-group mt-10 mb-20">
-						          <span class="input-group-btn">
-						              <button type="button" class="btn btn-info btn-number"  data-type="minus" data-field="quant[2]">
-						                -
-						              </button>
-						          </span>
-								<input type="text" id="quant[2]" name="quant[2]" class="form-control input-number" value="10" min="1" max="100">
-								<span class="input-group-btn">
-					              <button type="button" class="btn btn-warning btn-number" data-type="plus" data-field="quant[2]">
-					                  +
-					              </button>
-					          </span>
-							</div>
-							<a class="black-text" href="#">Cancel</a>
-							<a class="blue-text ml-20" href="#">Next</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-9 pl-0 mnl-10">
-				<div class="input-group">
-					<span class="search-icon"></span>
-					<input type="text" class="form-control input-search" placeholder="Search for...">
-					<span class="input-search-btn">
-        <button class="btn btn-default" type="button">SEARCH</button>
-      </span>
-				</div><!-- /input-group -->
-			</div>
-		</div>
-
-	</div>
-</div>
-
-<div class="container mt-25 pl-10 pr-10">
-	<div class="filter-top white">
-		<div class="col-md-2 pr-35">
-				<p class="big-text mnl-5">Search Filter
-					<a class="pull-right" href="#"><span class="menu-icon"></span></a>
-				</p>
-		</div>
-		<div class="col-md-10">
-			<div class="display">
-				<a class="list-btn active" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
-				<a class="grid-btn" href="#"><i class="fa fa-th" aria-hidden="true"></i></a>
-			</div>
-			<select class="selectpicker pull-left">
-				<option>Low to High</option>
-				<option>High to Low</option>
-				<option>Newest</option>
-			</select>
-			<p class="avail">Available 471 Of 471</p>
-			<div class="onoffswitch pull-right">
-				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-				<label class="onoffswitch-label" for="myonoffswitch">
-					<span class="onoffswitch-inner"></span>
-					<span class="onoffswitch-switch"></span>
-				</label>
-			</div>
-
-		</div>
-	</div>
-</div>
-
-<div class="container pl-0 pr-0">
-	<aside>
-		<div class="panel-group mb-0">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" href="#collapse1" aria-expanded="true">Total Price
-							<i class="fa fa-caret-up" aria-hidden="true"></i></a>
-					</h4>
-				</div>
-				<div id="collapse1" class="panel-collapse">
-					<div class="panel-body">
-							<input type="text" id="amount1"  style="border:0; color:#f6931f; font-weight:bold;">
-							<input type="text" id="amount2"  style="border:0; color:#f6931f; font-weight:bold;">
-	
-						<div id="slider-range"></div>
-					</div>
-				</div>
-	
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" href="#collapse2" aria-expanded="true">Stars
-							<i class="fa fa-caret-up" aria-hidden="true"></i></a>
-					</h4>
-				</div>
-				<div id="collapse2" class="panel-collapse">
-					<div class="panel-body">
-						<div class="checkbox checkbox-success">
-							<input id="checkbox1" type="checkbox">
-							<label for="checkbox1">
-								<ul class="stars">
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-								</ul>
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox2" type="checkbox">
-							<label for="checkbox2">
-								<ul class="stars">
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-								</ul>
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox3" type="checkbox">
-							<label for="checkbox3">
-								<ul class="stars">
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-								</ul>
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox4" type="checkbox">
-							<label for="checkbox4">
-								<ul class="stars">
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-								</ul>
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox5" type="checkbox">
-							<label for="checkbox5">
-								<ul class="stars">
-									<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-								</ul>
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox6" type="checkbox">
-							<label for="checkbox6">
-								Any
-							</label>
-						</div>
-					</div>
-				</div>
-	
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" href="#collapse3" aria-expanded="true">Cancelon Exclusives
-							<i class="fa fa-caret-up" aria-hidden="true"></i></a>
-					</h4>
-				</div>
-				<div id="collapse3" class="panel-collapse">
-					<div class="panel-body">
-						<div class="checkbox checkbox-success">
-							<input id="checkbox11" type="checkbox">
-							<label for="checkbox11">
-								Sale Hotel Rooms
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox12" type="checkbox">
-							<label for="checkbox12">
-								Only Deals
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox13" type="checkbox">
-							<label for="checkbox13">
-								Roll-in shower
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox14" type="checkbox">
-							<label for="checkbox14">
-								In-room accessibility
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox15" type="checkbox">
-							<label for="checkbox15">
-								Accessible bathroom
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox16" type="checkbox">
-							<label for="checkbox16">
-								Wheelchair accessible rooms
-							</label>
-						</div>
-						<div class="divider"></div>
-					</div>
-				</div>
-	
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" href="#collapse4" aria-expanded="true">Facilities
-							<i class="fa fa-caret-up" aria-hidden="true"></i></a>
-					</h4>
-				</div>
-				<div id="collapse4" class="panel-collapse">
-					<div class="panel-body">
-						<div class="checkbox checkbox-success">
-							<input id="checkbox21" type="checkbox">
-							<label for="checkbox21">
-								<i class="fa blue-text fa-wifi" aria-hidden="true"></i> Free Wi-Fi
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox22" type="checkbox">
-							<label for="checkbox22">
-								<i class="fa blue-text fa-car" aria-hidden="true"></i> Parking
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox23" type="checkbox">
-							<label for="checkbox23">
-								<i class="fa blue-text fa-thermometer-half" aria-hidden="true"></i> Air conditioner
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox24" type="checkbox">
-							<label for="checkbox24">
-								<i class="fa blue-text fa-phone" aria-hidden="true"></i> Phone
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox25" type="checkbox">
-							<label for="checkbox25">
-								<i class="fa blue-text fa-television" aria-hidden="true"></i> TV
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox26" type="checkbox">
-							<label for="checkbox26">
-								<i class="fa blue-text fa-shower" aria-hidden="true"></i> Shower
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox27" type="checkbox">
-							<label for="checkbox27">
-								<i class="fa blue-text fa-street-view" aria-hidden="true"></i>Valet
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox28" type="checkbox">
-							<label for="checkbox28">
-								<i class="fa blue-text fa-bed" aria-hidden="true"></i> Single bed
-							</label>
-						</div>
-						<div class="divider"></div>
-						<a class="underline block pt-20 pb-20" href="#">Show 33 parametrs</a>
-					</div>
-					</div>
-				</div>
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" href="#collapse5" aria-expanded="true">Accommodation Type
-							<i class="fa fa-caret-up" aria-hidden="true"></i></a>
-					</h4>
-				</div>
-				<div id="collapse5" class="panel-collapse">
-					<div class="panel-body">
-						<div class="checkbox checkbox-success">
-							<input id="checkbox41" type="checkbox">
-							<label for="checkbox41">
-								Hotel
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox42" type="checkbox">
-							<label for="checkbox42">
-								Hostel
-							</label>
-						</div>
-						<div class="divider"></div>
-						<div class="checkbox checkbox-success">
-							<input id="checkbox43" type="checkbox">
-							<label for="checkbox43">
-								Apartments
-							</label>
-						</div>
-					</div>
-				</div>
-			</div>
-	</aside>
-	<div class="check">
-		<div class="grid mt-10">
-	
-			<div class="grid-item">
-				<img src="images/room1.png" class="img-responsive" alt="">
-				<div class="col-md-9 mt-10">
-					<h3>Joint Base</h3>
-					<ul class="stars">
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					</ul>
-				</div>
-				<div class="col-md-3 pl-0 mt-10">
-					<p class="price">$311 <span class="regular-text">/day</span></p>
-					<p class="red-price">$520</p>
-				</div>
-				<div class="col-md-12">
-					<p class="small-text">485 Clawson St, Staten Island, NY 10306</p>
-				</div>
-				<div class="divider col-md-12 mb-10"></div>
-				<div class="pl-15 w-10 pull-left">
-					<img src="images/5.svg">
-				</div>
-				<div class="col-md-10 pr-0">
-					<p class="small-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
-				</div>
-				<div class="trip">
-					<img src="images/tripavisor.svg">
-				</div>
-				<div class="col-md-4">
-					<ul class="reviews">
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					</ul>
-					<a class="extra-small">142 Reviews</a>
-				</div>
-				<div class="col-md-6 pl-0 pr-0 mb-10">
-					<a href="#" class="views">View</a>
-					<span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span>
-				</div>
-				<div class="divider col-md-12 mb-10 mt-10"></div>
-				<div class="col-md-12">
-					<ul class="features">
-						<li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-						<li><i class="fa fa-car" aria-hidden="true"></i></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i></li>
-						<li><i class="fa fa-television" aria-hidden="true"></i></li>
-						<li><i class="fa fa-shower" aria-hidden="true"></i></li>
-					</ul>
-					<p class="booked pull-right">Booked <span>30</span> Times Today</p>
-				</div>
-			</div>
-	
-			<div class="grid-item">
-				<img src="images/room2.png" class="img-responsive" alt="">
-				<div class="col-md-9 mt-10">
-					<h3>London Hilton Hotel</h3>
-					<ul class="stars">
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					</ul>
-				</div>
-				<div class="col-md-3 pl-0 mt-10">
-					<p class="price">$200 <span class="regular-text">/day</span></p>
-				</div>
-				<div class="col-md-12">
-					<p class="small-text">485 Clawson St, Staten Island, NY 10306</p>
-				</div>
-				<div class="divider col-md-12 mb-10"></div>
-				<div class="pl-15 w-10 pull-left">
-					<img src="images/5.svg">
-				</div>
-				<div class="col-md-10 pr-0">
-					<p class="small-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
-				</div>
-				<div class="trip">
-					<img src="images/tripavisor.svg">
-				</div>
-				<div class="col-md-4">
-					<ul class="reviews">
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					</ul>
-					<a class="extra-small">142 Reviews</a>
-				</div>
-				<div class="col-md-6 pl-0 pr-0 mb-10">
-					<a href="#" class="views">View</a>
-					<span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span>
-				</div>
-				<div class="divider col-md-12 mb-10 mt-10"></div>
-				<div class="col-md-12">
-					<ul class="features">
-						<li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-						<li><i class="fa fa-car" aria-hidden="true"></i></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i></li>
-						<li><i class="fa fa-television" aria-hidden="true"></i></li>
-						<li><i class="fa fa-shower" aria-hidden="true"></i></li>
-					</ul>
-					<p class="booked pull-right">Booked <span>30</span> Times Today</p>
-				</div>
-			</div>
-	
-			<div class="grid-item">
-				<img src="images/room3.png" class="img-responsive" alt="">
-				<div class="col-md-9 mt-10">
-					<h3>Radisson Blu Resort</h3>
-					<ul class="stars">
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					</ul>
-				</div>
-				<div class="col-md-3 pl-0 mt-10">
-					<p class="price">$177 <span class="regular-text">/day</span></p>
-				</div>
-				<div class="col-md-12">
-					<p class="small-text">485 Clawson St, Staten Island, NY 10306</p>
-				</div>
-				<div class="divider col-md-12 mb-10"></div>
-				<div class="pl-15 w-10 pull-left">
-					<img src="images/5.svg">
-				</div>
-				<div class="col-md-10 pr-0">
-					<p class="small-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
-				</div>
-				<div class="trip">
-					<img src="images/tripavisor.svg">
-				</div>
-				<div class="col-md-4">
-					<ul class="reviews">
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					</ul>
-					<a class="extra-small">142 Reviews</a>
-				</div>
-				<div class="col-md-6 pl-0 pr-0 mb-10">
-					<a href="#" class="views">View</a>
-					<span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span>
-				</div>
-				<div class="divider col-md-12 mb-10 mt-10"></div>
-				<div class="col-md-12">
-					<ul class="features">
-						<li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-						<li><i class="fa fa-car" aria-hidden="true"></i></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i></li>
-						<li><i class="fa fa-television" aria-hidden="true"></i></li>
-						<li><i class="fa fa-shower" aria-hidden="true"></i></li>
-					</ul>
-					<p class="booked pull-right">Booked <span>30</span> Times Today</p>
-				</div>
-			</div>
-	
-			<div class="grid-item">
-				<img src="images/room4.png" class="img-responsive" alt="">
-				<div class="col-md-9 mt-10">
-					<h3>Soho, Soma-Bay Resort</h3>
-					<ul class="stars">
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					</ul>
-				</div>
-				<div class="col-md-3 pl-0 mt-10">
-					<p class="price">$500 <span class="regular-text">/day</span></p>
-				</div>
-				<div class="col-md-12">
-					<p class="small-text">485 Clawson St, Staten Island, NY 10306</p>
-				</div>
-				<div class="divider col-md-12 mb-10"></div>
-				<div class="pl-15 w-10 pull-left">
-					<img src="images/5.svg">
-				</div>
-				<div class="col-md-10 pr-0">
-					<p class="small-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
-				</div>
-				<div class="trip">
-					<img src="images/tripavisor.svg">
-				</div>
-				<div class="col-md-4">
-					<ul class="reviews">
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					</ul>
-					<a class="extra-small">142 Reviews</a>
-				</div>
-				<div class="col-md-6 pl-0 pr-0 mb-10">
-					<a href="#" class="views">View</a>
-					<span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span>
-				</div>
-				<div class="divider col-md-12 mb-10 mt-10"></div>
-				<div class="col-md-12">
-					<ul class="features">
-						<li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-						<li><i class="fa fa-car" aria-hidden="true"></i></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i></li>
-						<li><i class="fa fa-television" aria-hidden="true"></i></li>
-						<li><i class="fa fa-shower" aria-hidden="true"></i></li>
-					</ul>
-					<p class="booked pull-right">Booked <span>30</span> Times Today</p>
-				</div>
-			</div>
-		</div>
-	
-		<div class="list mt-10">
-			<div class="list-item">
-				<img src="images/room-list.png" class="img-responsive col-md-3 pl-0 pr-0" alt="">
-				<div class="col-md-6 mt-10">
-					<h3>Joint Base</h3>
-					<ul class="stars">
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><img width="30" class="ml-10 mr-10" src="images/tripavisor.svg"></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><a class="extra-small ml-5">142 Reviews</a></li>
-					</ul>
-					<p class="small-text">485 Clawson St, Staten Island, NY 10306</p>
-					<div class="col-md-1 pl-0 pr-0">
-						<img class="img-responsive" width="40" src="images/5.svg">
-					</div>
-					<div class="col-md-10 pl-5 pr-0 mt-5">
-						<p class="small-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
-					</div>
-					<ul class="features">
-						<li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-						<li><i class="fa fa-car" aria-hidden="true"></i></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i></li>
-						<li><i class="fa fa-television" aria-hidden="true"></i></li>
-						<li><i class="fa fa-shower" aria-hidden="true"></i></li>
-					</ul>
-				</div>
-				<div class="col-md-3 mt-10 pl-0 pr-10">
-					<p class="red-price pull-left mt-5">$520</p>
-					<p class="price">$468 <span class="regular-text">/day</span></p>
-					<p class="pull-right w-100 text-right">Only <span class="orange-text">3</span> rooms left!</p>
-					<a href="#" class="views">View</a>
-					<p class="extra-small pull-right mt-5 w-100 text-right">Booked 30 Times Today</p>
-					<p class="extra-small pull-right mt-5">5 People Looking Right Now</p>
-				</div>
-			</div>
-			<div class="list-item">
-				<img src="images/room-list.png" class="img-responsive col-md-3 pl-0 pr-0" alt="">
-				<div class="col-md-6 mt-10">
-					<h3>London Hilton Hotel</h3>
-					<ul class="stars">
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><img width="30" class="ml-10 mr-10" src="images/tripavisor.svg"></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><a class="extra-small ml-5">142 Reviews</a></li>
-					</ul>
-					<p class="small-text">485 Clawson St, Staten Island, NY 10306</p>
-					<div class="col-md-1 pl-0 pr-0">
-						<img class="img-responsive" width="40" src="images/5.svg">
-					</div>
-					<div class="col-md-10 pl-5 pr-0 mt-5">
-						<p class="small-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
-					</div>
-					<ul class="features">
-						<li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-						<li><i class="fa fa-car" aria-hidden="true"></i></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i></li>
-						<li><i class="fa fa-television" aria-hidden="true"></i></li>
-						<li><i class="fa fa-shower" aria-hidden="true"></i></li>
-					</ul>
-				</div>
-				<div class="col-md-3 mt-10 pl-0 pr-10">
-					<p class="price">$300 <span class="regular-text">/day</span></p>
-					<a href="#" class="views">View</a>
-					<p class="extra-small pull-right mt-5 w-100 text-right">Booked 30 Times Today</p>
-					<p class="extra-small pull-right mt-5">5 People Looking Right Now</p>
-				</div>
-			</div>
-			<div class="list-item">
-				<img src="images/room-list.png" class="img-responsive col-md-3 pl-0 pr-0" alt="">
-				<div class="col-md-6 mt-10">
-					<h3>Joint Base</h3>
-					<ul class="stars">
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><img width="30" class="ml-10 mr-10" src="images/tripavisor.svg"></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><a class="extra-small ml-5">142 Reviews</a></li>
-					</ul>
-					<p class="small-text">485 Clawson St, Staten Island, NY 10306</p>
-					<div class="col-md-1 pl-0 pr-0">
-						<img class="img-responsive" width="40" src="images/5.svg">
-					</div>
-					<div class="col-md-10 pl-5 pr-0 mt-5">
-						<p class="small-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
-					</div>
-					<ul class="features">
-						<li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-						<li><i class="fa fa-car" aria-hidden="true"></i></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i></li>
-						<li><i class="fa fa-television" aria-hidden="true"></i></li>
-						<li><i class="fa fa-shower" aria-hidden="true"></i></li>
-					</ul>
-				</div>
-				<div class="col-md-3 mt-10 pl-0 pr-10">
-					<p class="price">$211 <span class="regular-text">/day</span></p>
-					<a href="#" class="views">View</a>
-					<p class="extra-small pull-right mt-5 w-100 text-right">Booked 30 Times Today</p>
-					<p class="extra-small pull-right mt-5">5 People Looking Right Now</p>
-				</div>
-			</div>
-			<div class="list-item">
-				<img src="images/room-list.png" class="img-responsive col-md-3 pl-0 pr-0" alt="">
-				<div class="col-md-6 mt-10">
-					<h3>Joint Base</h3>
-					<ul class="stars">
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-						<li><img width="30" class="ml-10 mr-10" src="images/tripavisor.svg"></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-								<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-						<li><a class="extra-small ml-5">142 Reviews</a></li>
-					</ul>
-					<p class="small-text">485 Clawson St, Staten Island, NY 10306</p>
-					<div class="col-md-1 pl-0 pr-0">
-						<img class="img-responsive" width="40" src="images/5.svg">
-					</div>
-					<div class="col-md-10 pl-5 pr-0 mt-5">
-						<p class="small-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
-					</div>
-					<ul class="features">
-						<li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-						<li><i class="fa fa-car" aria-hidden="true"></i></li>
-						<li><i class="fa fa-phone" aria-hidden="true"></i></li>
-						<li><i class="fa fa-television" aria-hidden="true"></i></li>
-						<li><i class="fa fa-shower" aria-hidden="true"></i></li>
-					</ul>
-				</div>
-				<div class="col-md-3 mt-10 pl-0 pr-10">
-					<p class="red-price pull-left mt-5">$120</p>
-					<p class="price">$90 <span class="regular-text">/day</span></p>
-					<p class="pull-right w-100 text-right">Only <span class="red-text">1</span> room left!</p>
-					<a href="#" class="views">View</a>
-					<p class="extra-small pull-right mt-5 w-100 text-right">Booked 30 Times Today</p>
-					<p class="extra-small pull-right mt-5">5 People Looking Right Now</p>
-				</div>
-			</div>
-	
-		</div>
-	</div>
-	
-		<div id="map"></div>
-	
-	<div class="exclusive pl-0 pr-0">
-		<h3>UP TO 80%</h3>
-		<h4>Exclusive Cancelon deals around these dates</h4>
-		<div class="col-md-6 btrans pl-0 pr-0 white">
-			<div class="col-md-1 pl-5 pr-0 mt-10 mb-10">
-				<img width="30" src="images/tripavisor.svg">
-			</div>
-			<div class="col-md-11 pl-0 pr-0 mt-10">
-				<ul class="reviews ml-10">
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-				</ul>
-				<a class="extra-small reviews-number">142 Reviews</a>
-				<p class="small-text pull-left ml-10">Apr 04 - 07</p>
-				<span class="top">Top Deal</span>
-			</div>
-			<img src="images/room4.png" class="img-responsive" alt="">
-			<div class="col-md-9 mt-10">
-				<h5>Soho, Soma-Bay Resort</h5>
-				<ul class="stars">
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-				</ul>
-				<p class="small-text">Amsterdam Schiphol,Netherlands</p>
-				<p class="small-text"><i class="fa fa-map-marker" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
-			</div>
-			<div class="col-md-3 mt-10 pl-0 pr-10">
-				<img class="pull-right" src="images/heart.svg" width="50" alt="">
-				<p class="price">$500 <span class="regular-text">/day</span></p>
-				<p class="price-red">$780 <span class="regular-text">/day</span></p>
-			</div>
-			<div class="col-md-12">
-				<p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p>
-				<a class="orange-view">VIEW</a>
-			</div>
-		</div>
-		<div class="col-md-6 btrans pl-0 pr-0 white">
-			<div class="col-md-1 pl-5 pr-0 mt-10 mb-10">
-				<img width="30" src="images/tripavisor.svg">
-			</div>
-			<div class="col-md-11 pl-0 pr-0 mt-10">
-				<ul class="reviews ml-10">
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-					<li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-				</ul>
-				<a class="extra-small reviews-number">142 Reviews</a>
-				<p class="small-text pull-left ml-10">Apr 04 - 07</p>
-				<span class="top">Top Deal</span>
-			</div>
-			<img src="images/room4.png" class="img-responsive" alt="">
-			<div class="col-md-9 mt-10">
-				<h5>Soho, Soma-Bay Resort</h5>
-				<ul class="stars">
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-					<li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-				</ul>
-				<p class="small-text">Amsterdam Schiphol,Netherlands</p>
-				<p class="small-text"><i class="fa fa-map-marker" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
-			</div>
-			<div class="col-md-3 mt-10 pl-0 pr-10">
-				<img class="pull-right" src="images/heart.svg" width="50" alt="">
-				<p class="price">$500 <span class="regular-text">/day</span></p>
-				<p class="price-red">$780 <span class="regular-text">/day</span></p>
-			</div>
-			<div class="col-md-12">
-				<p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p>
-				<a class="orange-view">VIEW</a>
-			</div>
-		</div>
-	</div>
-		<script>
-	      function initMap() {
-	        var uluru = {lat: -25.363, lng: 131.044};
-	        var map = new google.maps.Map(document.getElementById('map'), {
-	          zoom: 12,
-	          center: uluru,
-	          scrollwheel: false
-	        });
-	        var marker = new google.maps.Marker({
-	          position: uluru,
-	          map: map
-	        });
-	      }
-		</script>
-</div>
-
-
-<footer>
-	<div class="container">
-		<div class="row mt-10">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">
-					<img alt="logo" class="img-responsive mt-5" width="166" src="images/logo.png">
-				</a>
-				<p class="navbar-text small-text"><i class="fa blue-text fa-info-circle" aria-hidden="true"></i>
-					Sell and Buy Non-Refundable Hotel Reservations</p>
-			</div>
-			<div class="socials">
-				<ul class="social">
-					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row mb-50">
-			<div class="col-md-3">
-				<ul class="list-unstyled">
-					<li class="widget-container widget_nav_menu"><!-- widgets list -->
-						<h1 class="white-text pb-20">Company</h1>
-						<ul>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Register</a></li>
-							<li><a href="#">User Agreement</a></li>
-							<li><a href="#">Buyer Protection</a></li>
-							<li><a href="#">Seller's Protection</a></li>
-							<li><a href="#">Blog</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-3">
-				<ul class="list-unstyled">
-					<li class="widget-container widget_nav_menu"><!-- widgets list -->
-						<h1 class="white-text pb-20">Support</h1>
-						<ul>
-							<li><a href="#">Contact info</a></li>
-							<li><a href="#">Privacy policy</a></li>
-							<li><a href="#">Discount hotel reservations</a></li>
-							<li><a href="#">Discount Hotels</a></li>
-							<li><a href="#">Best Price Guarantee</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-3">
-				<ul class="list-unstyled">
-					<li class="widget-container widget_nav_menu"><!-- widgets list -->
-						<h1 class="white-text pb-20">Selling</h1>
-						<ul>
-							<li><a href="#">Sell hotel reservation</a></li>
-							<li><a href="#">Hotel cancellation policy</a></li>
-							<li><a href="#">Hotel reservation deals</a></li>
-							<li><a href="#">Buy hotel reservation</a></li>
-							<li><a href="#">Hotel Reservation</a></li>
-							<li><a href="#">Cancel hotel reservation</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-3">
-				<ul class="list-unstyled">
-					<li class="widget-container"><!-- widgets list -->
-						<h1 class="white-text pb-20">Have a Questions?</h1>
-						<ul>
-							<li><a href="#">US 1-855-226-2359</a></li>
-							<li><a href="#">UK 0-800-014-8161</a></li>
-							<li><a href="#">FR 0-805-080-042</a></li>
-							<li><a href="#">DE 0-800-184-4594</a></li>
-							<li><a href="#">AU 1-800-459-141</a></li>
-							<li><a href="#">NZ 0-800-451-433</a></li>
-							<li><a href="#">IE 1-800-901-655</a></li>
-							<li><a href="#">CA 1-855-226-2359</a></li>
-							<li><a href="#">support@cancelon.com</a></li>
-							<li><a href="#">24/7 Dedicated Customer Support</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-6">
-				<p class="large white-text">We have a price for you that is too low to show!!</p>
-				<p class="white-text">Unlock special rates by signing up here:</p>
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Your email address here...">
-					<span class="input-group-btn">
-                        <button class="btn btn-secondary" type="button">SIGN UP</button>
-                    </span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid navy">
-		<div class="container">
-			<div class="row mt-30 pb-50">
-				<div class="col-md-3">
-					<ul class="list-unstyled">
-						<li class="widget-container widget_nav_menu"><!-- widgets list -->
-							<h1 class="white-text">Top Destinations</h1>
-							<ul>
-								<li><a href="#">Las Vegas, NV, USA</a></li>
-								<li><a href="#">Orlando, FL, USA</a></li>
-								<li><a href="#">Kissimmee, FL, USA</a></li>
-								<li><a href="#">New York, NY, USA</a></li>
-								<li><a href="#">London, United Kingdom</a></li>
-								<li><a href="#">Washington, DC, USA</a></li>
-								<li><a href="#">Cancun, Mexico</a></li>
-								<li><a href="#">Birmingham, United Kingdom</a></li>
-								<li><a href="#">New Orleans, LA, USA</a></li>
-								<li><a href="#">Amsterdam, Netherlands</a></li>
-								<li><a href="#">Paris, France</a></li>
-								<li><a href="#">Clearwater Beach, FL, USA</a></li>
-								<li><a href="#">Playa Del Carmen, Mexico</a></li>
-								<li><a href="#">Miami Beach, FL, USA</a></li>
-								<li><a href="#">Hollywood, CA, USA</a></li>
-								<li><a href="#">Dubai, United Arab Emirates</a></li>
-								<li><a href="#">Bangkok, Thailand</a></li>
-								<li><a href="#">Reno, NV, USA</a></li>
-								<li><a href="#">Melbourne, VC, Australia</a></li>
-								<li><a href="#">San Francisco, CA, USA</a></li>
-								<li><a href="#">Stateline, NV, USA</a></li>
-								<li><a href="#">Miami, FL, USA</a></li>
-								<li><a href="#">San Diego, CA, USA</a></li>
-								<li><a href="#">San Antonio, TX, USA</a></li>
-								<li><a href="#">Tampa, FL, USA</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-3 mt-40">
-					<ul class="list-unstyled">
-						<li class="widget-container widget_nav_menu"><!-- widgets list -->
-							<ul>
-								<li><a href="#">Anaheim, CA, USA</a></li>
-								<li><a href="#">Winter Garden, FL, USA</a></li>
-								<li><a href="#">Rome, Italy</a></li>
-								<li><a href="#">Sydney, NW, Australia</a></li>
-								<li><a href="#">Surfers Paradise, QL, Austr...</a></li>
-								<li><a href="#">Arlington, VA, USA</a></li>
-								<li><a href="#">Chessy, France</a></li>
-								<li><a href="#">Atlanta, GA, USA</a></li>
-								<li><a href="#">Pittsburgh, PA, USA</a></li>
-								<li><a href="#">Berlin, Germany</a></li>
-								<li><a href="#">Venice, Italy</a></li>
-								<li><a href="#">Toronto, ON, Canada</a></li>
-								<li><a href="#">Chicago, IL, USA</a></li>
-								<li><a href="#">Madrid, Spain</a></li>
-								<li><a href="#">Panama City, Panama</a></li>
-								<li><a href="#">Boston, MA, USA</a></li>
-								<li><a href="#">Cleveland, OH, USA</a></li>
-								<li><a href="#">Lisbon, Portugal</a></li>
-								<li><a href="#">Denver, CO, USA</a></li>
-								<li><a href="#">Doha, Qatar</a></li>
-								<li><a href="#">Barcelona, Spain</a></li>
-								<li><a href="#">Brisbane, QL, Australia</a></li>
-								<li><a href="#">Kansas City, MO, USA</a></li>
-								<li><a href="#">Newark, NJ, USA</a></li>
-								<li><a href="#">Dublin, Ireland</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-3 mt-40">
-					<ul class="list-unstyled">
-						<li class="widget-container widget_nav_menu"><!-- widgets list -->
-							<ul>
-								<li><a href="#">San Juan, Puerto Rico</a></li>
-								<li><a href="#">Florence, Italy</a></li>
-								<li><a href="#">Singapore, Singapore</a></li>
-								<li><a href="#">Cologne, Germany</a></li>
-								<li><a href="#">Vancouver, BC, Canada</a></li>
-								<li><a href="#">Auckland, New Zealand</a></li>
-								<li><a href="#">Edinburgh, United Kingdom</a></li>
-								<li><a href="#">Hollywood, FL, USA</a></li>
-								<li><a href="#">Houston, TX, USA</a></li>
-								<li><a href="#">Montreal, QC, Canada</a></li>
-								<li><a href="#">Benidorm, Spain</a></li>
-								<li><a href="#">Cambridge, MA, USA</a></li>
-								<li><a href="#">Liverpool, United Kingdom</a></li>
-								<li><a href="#">Henderson, NV, USA</a></li>
-								<li><a href="#">Dallas, TX, USA</a></li>
-								<li><a href="#">Honolulu, HI, USA</a></li>
-								<li><a href="#">Sedona, AZ, USA</a></li>
-								<li><a href="#">Manama, Bahrain</a></li>
-								<li><a href="#">Antalya, Turkey</a></li>
-								<li><a href="#">Tokyo, Japan</a></li>
-								<li><a href="#">Manchester, United Kingdom</a></li>
-								<li><a href="#">Savannah, GA, USA</a></li>
-								<li><a href="#">Budapest, Hungary</a></li>
-								<li><a href="#">Perth, WA, Australia</a></li>
-								<li><a href="#">Southampton, United Kingdom</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-3 mt-40">
-					<ul class="list-unstyled">
-						<li class="widget-container widget_nav_menu"><!-- widgets list -->
-							<ul>
-								<li><a href="#">Durham, USA</a></li>
-								<li><a href="#">Riviera Maya, Mexico</a></li>
-								<li><a href="#">Charlotte, NC, USA</a></li>
-								<li><a href="#">Vienna, Austria</a></li>
-								<li><a href="#">Windsor, United Kingdom</a></li>
-								<li><a href="#">Seattle, WA, USA</a></li>
-								<li><a href="#">Windermere, United Kingdom</a></li>
-								<li><a href="#">Kowloon, Hong Kong</a></li>
-								<li><a href="#">San Jose Del Cabo, Mexico</a></li>
-								<li><a href="#">Darlington, United Kingdom</a></li>
-								<li><a href="#">Sharjah, United Arab Emirates</a></li>
-								<li><a href="#">Athens, Greece</a></li>
-								<li><a href="#">Grand Canyon, AZ, USA</a></li>
-								<li><a href="#">Carolina, Puerto Rico</a></li>
-								<li><a href="#">Atlantic City, NJ, USA</a></li>
-								<li><a href="#">Cozumel, Mexico</a></li>
-								<li><a href="#">Irvine, CA, USA</a></li>
-								<li><a href="#">Reykjavik, Iceland</a></li>
-								<li><a href="#">Cardiff, United Kingdom</a></li>
-								<li><a href="#">Philadelphia, PA, USA</a></li>
-								<li><a href="#">Brussels, Belgium</a></li>
-								<li><a href="#">Chiang Rai, Thailand</a></li>
-								<li><a href="#">South Lake Tahoe, CA, USA</a></li>
-								<li><a href="#">Queenstown, New Zealand</a></li>
-								<li><a href="#">Cairns, QL, Australia</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="row black">
-			<p class="copy">Copyright © 2015 - 2017 Cancelon Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the cancelon User agreement and Privacy policy.</p>
-		</div>
-	</div>
-</footer>
-
-<!-- Scripts -->
-<!-- jQuery -->
-<script type="text/javascript" src="assets/plugins/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script type="text/javascript" src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Retina.js -->
-<script type="text/javascript" src="assets/plugins/retina-1.3.0/retina.min.js"></script>
-<!-- Theme Plugins scripts -->
-<script type="text/javascript" src="js/main.min.js"></script>
-<script type="text/javascript" src="js/moment.min.js"></script>
-<script type="text/javascript" src="js/datarangepicker/jquery.datarangepicker.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap-dropdown-hover/dist/jquery.bootstrap-dropdown-hover.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="assets/plugins/isotope/dist/isotope.pkgd.js"></script>
-
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC57_OG5_SuoIpQJbcYsjqTR8ybO4X5PV8&callback=initMap"></script>
-<!-- /Scripts -->
-
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg">
+    <meta name="apple-mobile-web-app-title" content="CancelOn">
+    <meta name="application-name" content="CancelOn">
+    <meta name="msapplication-TileColor" content="#323232">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- /Favicons-->
+    <!-- Personal Meta tags-->
+    <meta name="CancelOn - Booking Service" content="">
+    <!--if IEmeta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+    <!-- Meta descriptions-->
+    <meta name="keywords" content="CancelOn, Booking, apartments, trip">
+    <meta name="description" content="CancelOn - Booking service">
+    <!-- Url of your website (without extra pages)-->
+    <link rel="canonical" href="http://yoursite.com">
+    <!-- Restrict google from scanning info from Dmoz or YahooDir-->
+    <meta name="robots" content="noodp,noydir">
+    <!-- Author markup-->
+    <meta name="author" content="CancelOn - Booking Service">
+    <meta name="copyright" content="CancelOn">
+    <!-- / Personal Meta tags-->
+    <title>Cancel On - Booking service</title>
+    <!-- Bootstrap CSS-->
+    <link href="assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- Font-awesome CSS-->
+    <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
+    <link href="assets/plugins/jquery-ui/themes/smoothness/theme.css" rel="stylesheet">
+    <!-- Main Template CSS-->
+    <link href="css/main.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default mb-0">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="#"><img class="img-responsive" alt="logo" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
+          <p class="navbar-text small-text font-weight-200"><i class="fa fa-info-circle" aria-hidden="true"></i>	Sell and Buy Non-Refundable Hotel Reservations</p>
+        </div>
+        <div class="col-md-6 pull-right pr-0">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-map" aria-hidden="true"></i>Explore</a></li>
+            <li class="dropdown show"><a class="dropdown-toggle mnr-10" id="dropdownMenuLink1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>Sign In<span class="bs-caret"><span class="caret"></span></span></a>
+              <div class="dropdown-menu sign-in-menu" aria-labelledby="dropdownMenuLink1">
+                <div class="col-md-12">
+                  <p class="pull-left w-30 big-text font-weight-500">Login</p><a class="pull-right w-70 extra-small" href="#">Not registered? Sign Up</a>
+                  <input class="log-input" type="text" placeholder="Enter Your Login">
+                  <p class="pull-left w-50 big-text font-weight-500">Password</p><a class="pull-right w-50 extra-small" href="#">Forgot Password</a>
+                  <input class="log-input" type="text" placeholder="Enter Your Password">
+                  <div class="w-50 pull-left text-center"><a class="sign-btn" href="javascript:void(0)">Sign In</a></div>
+                  <div class="w-50 pull-right text-center socials"><a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="javascript:void(0)"><i class="fa fa-google-plus" aria-hidden="true"></i></a><a href="javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                </div>
+              </div>
+            </li>
+            <li class="form-group">
+              <select class="selectpicker currency-menu" id="sel1">
+                <option>(USD) $</option>
+                <option>(EUR) &euro;</option>
+                <option>(GBP) &pound;</option>
+                <option>(AED) Dh</option>
+                <option>(AFN) ؋</option>
+                <option>(ALL) Lek</option>
+                <option>(DZD) DA</option>
+                <option>(ARS) $</option>
+                <option>(AUD) $</option>
+                <option>(BSD) $</option>
+                <option>(BDT) Tk</option>
+                <option>(BBD) $</option>
+                <option>(BMD) $</option>
+              </select>
+            </li>
+            <li class="dropdown show"><a class="dropdown-toggle" id="dropdownMenuLink2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-language" aria-hidden="true"></i>Language<span class="bs-caret"><span class="caret"></span></span></a>
+              <div class="dropdown-menu languages-menu" aria-labelledby="dropdownMenuLink2">
+                <div class="col-md-12 languages"><a href="#"><img width="32" src="images/icons/flag.svg" alt="">English</a><a href="#"><img width="32" src="images/icons/flag1.svg" alt="">Deutch</a><a href="#"><img width="32" src="images/icons/flag2.svg" alt="">French</a><a href="#"><img width="32" src="images/icons/flag3.svg" alt="">Spanish</a><a href="#"><img width="32" src="images/icons/flag4.svg" alt="">Italiano</a><a href="#"><img width="32" src="images/icons/flag5.svg" alt="">Russian</a></div>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right down-menu">
+            <li><a class="blue-btn" href="#">Unlock special prices</a></li>
+            <li><a class="green-btn" href="#">Buy hotel reservation</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Alert Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 pt-35 pl-0">
+            <div class="col-md-5">
+              <div class="form-group">
+                <div class="input-group input-group-white"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                  <input class="form-control datepicker-input" type="text" placeholder="Date"><b class="carret"></b>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 adults">
+              <div class="btn-group"><a class="adults-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adults</a>
+                <div class="dropdown-menu mt-10">
+                  <label class="col-form-label" for="quant[1]">Room Quantity</label>
+                  <div class="input-group mt-10"><span class="input-group-btn">
+                      <button class="btn btn-info btn-number" type="button" disabled="disabled" data-type="minus" data-field="quant[1]">-</button></span>
+                    <input class="form-control input-number" type="text" id="quant[1]" name="quant[1]" value="1" min="1" max="10"><span class="input-group-btn">
+                      <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[1]">+</button></span>
+                  </div>
+                  <label class="col-form-label mt-20" for="quant[2]">Adults</label>
+                  <div class="input-group mt-10 mb-20"><span class="input-group-btn">
+                      <button class="btn btn-info btn-number" type="button" data-type="minus" data-field="quant[2]">-</button></span>
+                    <input class="form-control input-number" type="text" id="quant[2]" name="quant[2]" value="10" min="1" max="100"><span class="input-group-btn">
+                      <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[2]">+</button></span>
+                  </div><a class="black-text" href="#">Cancel</a><a class="blue-text ml-20" href="#">Next</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 pl-0 mnl-10 pr-5">
+            <div class="input-group"><span class="search-icon"></span>
+              <input class="form-control input-search" type="text" placeholder="Search for..."><span class="input-search-btn">
+                <button class="btn btn-default" type="button">SEARCH</button></span>
+            </div>
+            <!-- /input-group-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-25 pl-10 pr-10">
+      <div class="filter-top white">
+        <div class="col-md-2 pr-0">
+          <p class="big-text text-uppercase font-weight-600 font-roboto mnl-5">Search Filter<a class="pull-right mnr-10" href="#"><span class="menu-icon"></span></a></p>
+        </div>
+        <div class="col-md-10 pl-50">
+          <div class="display"><a class="list-btn active" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a><a class="grid-btn top-n-1 ml-5" href="#"><i class="fa fa-th" aria-hidden="true"></i></a></div>
+          <select class="selectpicker pull-left">
+            <option>Low to High</option>
+            <option>High to Low</option>
+            <option>Newest</option>
+          </select>
+          <p class="avail">Available 471 Of 471</p>
+          <div class="onoffswitch pull-right">
+            <input class="onoffswitch-checkbox" id="myonoffswitch" type="checkbox" name="onoffswitch" checked>
+            <label class="onoffswitch-label" for="myonoffswitch"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container pl-0 pr-0">
+      <aside class="sidebar-filter">
+        <div class="panel-group mb-0">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse1" aria-expanded="true">Total Price<i class="fa fa-caret-up" aria-hidden="true"></i></a></h4>
+            </div>
+            <div class="panel-collapse collapse in" id="collapse1">
+              <div class="panel-body">
+                <input id="amount1" type="text" style="border:0; color:#f6931f; font-weight:bold;">
+                <input id="amount2" type="text" style="border:0; color:#f6931f; font-weight:bold;">
+                <div id="slider-range"></div>
+              </div>
+            </div>
+            <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse2" aria-expanded="true">Stars<i class="fa fa-caret-up" aria-hidden="true"></i></a></h4>
+            </div>
+            <div class="panel-collapse collapse in" id="collapse2">
+              <div class="panel-body">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox1" type="checkbox">
+                  <label for="checkbox1">
+                    <ul class="stars">
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    </ul>
+                  </label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox2" type="checkbox">
+                  <label for="checkbox2">
+                    <ul class="stars">
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    </ul>
+                  </label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox3" type="checkbox">
+                  <label for="checkbox3">
+                    <ul class="stars">
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    </ul>
+                  </label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox4" type="checkbox">
+                  <label for="checkbox4">
+                    <ul class="stars">
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    </ul>
+                  </label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox5" type="checkbox">
+                  <label for="checkbox5">
+                    <ul class="stars">
+                      <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    </ul>
+                  </label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox6" type="checkbox">
+                  <label for="checkbox6">Any</label>
+                </div>
+              </div>
+            </div>
+            <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse3" aria-expanded="true">Cancelon Exclusives<i class="fa fa-caret-up" aria-hidden="true"></i></a></h4>
+            </div>
+            <div class="panel-collapse collapse in" id="collapse3">
+              <div class="panel-body">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox11" type="checkbox">
+                  <label for="checkbox11">Sale Hotel Rooms</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox12" type="checkbox">
+                  <label for="checkbox12">Only Deals</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox13" type="checkbox">
+                  <label for="checkbox13">Roll-in shower</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox14" type="checkbox">
+                  <label for="checkbox14">In-room accessibility</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox15" type="checkbox">
+                  <label for="checkbox15">Accessible bathroom</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox16" type="checkbox">
+                  <label for="checkbox16">Wheelchair accessible rooms</label>
+                </div>
+                <div class="divider"></div>
+              </div>
+            </div>
+            <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse4" aria-expanded="true">Facilities<i class="fa fa-caret-up" aria-hidden="true"></i></a></h4>
+            </div>
+            <div class="panel-collapse facilities collapse in" id="collapse4">
+              <div class="panel-body">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox21" type="checkbox">
+                  <label for="checkbox21"><i class="fa blue-text fa-wifi" aria-hidden="true"></i> Free Wi-Fi</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox22" type="checkbox">
+                  <label for="checkbox22"><i class="fa blue-text fa-car" aria-hidden="true"></i> Parking</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox23" type="checkbox">
+                  <label for="checkbox23"><i class="fa blue-text fa-thermometer-half" aria-hidden="true"></i> Air conditioner</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox24" type="checkbox">
+                  <label for="checkbox24"><i class="fa blue-text fa-phone" aria-hidden="true"></i> Phone</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox25" type="checkbox">
+                  <label for="checkbox25"><i class="fa blue-text fa-television" aria-hidden="true"></i> TV</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox26" type="checkbox">
+                  <label for="checkbox26"><i class="fa blue-text fa-shower" aria-hidden="true"></i> Shower</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox27" type="checkbox">
+                  <label for="checkbox27"><i class="fa blue-text fa-street-view" aria-hidden="true"></i>Valet</label>
+                </div>
+                <div class="divider"></div>
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox28" type="checkbox">
+                  <label for="checkbox28"><i class="fa blue-text fa-bed" aria-hidden="true"></i> Single bed</label>
+                </div>
+                <div class="divider"></div><a class="underline block pt-20 pb-20" href="#">Show 33 parametrs</a>
+              </div>
+            </div>
+          </div>
+          <div class="panel-heading">
+            <h4 class="panel-title"><a data-toggle="collapse" href="#collapse5" aria-expanded="true">Accommodation Type<i class="fa fa-caret-up" aria-hidden="true"></i></a></h4>
+          </div>
+          <div class="panel-collapse collapse in" id="collapse5">
+            <div class="panel-body">
+              <div class="checkbox checkbox-success">
+                <input id="checkbox41" type="checkbox">
+                <label for="checkbox41">Hotel</label>
+              </div>
+              <div class="divider"></div>
+              <div class="checkbox checkbox-success">
+                <input id="checkbox42" type="checkbox">
+                <label for="checkbox42">Hostel</label>
+              </div>
+              <div class="divider"></div>
+              <div class="checkbox checkbox-success">
+                <input id="checkbox43" type="checkbox">
+                <label for="checkbox43">Apartments</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="check">
+        <div class="grid mt-10">
+          <div class="grid-item"><img class="img-responsive" src="images/room1.png" alt="" srcset="images/room1.png 1x, images/room1@2x.png 2x, images/room1@3x.png 3x">
+            <div class="col-md-9 mt-10">
+              <h2>Joint Base</h2>
+              <ul class="stars">
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-3 pl-0 mt-10">
+              <p class="price">$311<span class="regular-text">/day</span></p>
+              <p class="red-price">$520</p>
+            </div>
+            <div class="col-md-12">
+              <p class="small-text font-weight-600">485 Clawson St, Staten Island, NY 10306</p>
+            </div>
+            <div class="divider col-md-12 mb-10"></div>
+            <div class="pl-15 w-10 pull-left"><img src="images/icons/5.svg"></div>
+            <div class="col-md-10 pr-0">
+              <p class="small-text font-weight-600"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
+            </div>
+            <div class="trip"><img src="images/icons/tripavisor.svg"></div>
+            <div class="col-md-4">
+              <ul class="reviews">
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              </ul><a class="extra-small">142 Reviews</a>
+            </div>
+            <div class="col-md-6 pl-0 pr-0 mb-10"><a class="views" href="#">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span></div>
+            <div class="divider col-md-12 mb-10 mt-10"></div>
+            <div class="col-md-12">
+              <ul class="features">
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+              </ul>
+              <p class="booked pull-right">Booked<span>30</span> Times Today</p>
+            </div>
+          </div>
+          <div class="grid-item"><img class="img-responsive" src="images/room2.png" alt="" srcset="images/room2.png 1x, images/room2@2x.png 2x, images/room2@3x.png 3x">
+            <div class="col-md-9 mt-10">
+              <h2>London Hilton Hotel</h2>
+              <ul class="stars">
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-3 pl-0 mt-10">
+              <p class="price">$200<span class="regular-text">/day</span></p>
+            </div>
+            <div class="col-md-12">
+              <p class="small-text font-weight-600">485 Clawson St, Staten Island, NY 10306</p>
+            </div>
+            <div class="divider col-md-12 mb-10"></div>
+            <div class="pl-15 w-10 pull-left"><img src="images/icons/5.svg"></div>
+            <div class="col-md-10 pr-0">
+              <p class="small-text font-weight-600"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
+            </div>
+            <div class="trip"><img src="images/icons/tripavisor.svg"></div>
+            <div class="col-md-4">
+              <ul class="reviews">
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              </ul><a class="extra-small">142 Reviews</a>
+            </div>
+            <div class="col-md-6 pl-0 pr-0 mb-10"><a class="views" href="#">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span></div>
+            <div class="divider col-md-12 mb-10 mt-10"></div>
+            <div class="col-md-12">
+              <ul class="features">
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+              </ul>
+              <p class="booked pull-right">Booked<span>30</span> Times Today</p>
+            </div>
+          </div>
+          <div class="grid-item"><img class="img-responsive" src="images/room3.png" alt="" srcset="images/room3.png 1x, images/room3@2x.png 2x, images/room3@3x.png 3x">
+            <div class="col-md-9 mt-10">
+              <h2>Radisson Blu Resort</h2>
+              <ul class="stars">
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-3 pl-0 mt-10">
+              <p class="price">$177<span class="regular-text">/day</span></p>
+            </div>
+            <div class="col-md-12">
+              <p class="small-text font-weight-600">485 Clawson St, Staten Island, NY 10306</p>
+            </div>
+            <div class="divider col-md-12 mb-10"></div>
+            <div class="pl-15 w-10 pull-left"><img src="images/icons/5.svg"></div>
+            <div class="col-md-10 pr-0">
+              <p class="small-text font-weight-600"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
+            </div>
+            <div class="trip"><img src="images/icons/tripavisor.svg"></div>
+            <div class="col-md-4">
+              <ul class="reviews">
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              </ul><a class="extra-small">142 Reviews</a>
+            </div>
+            <div class="col-md-6 pl-0 pr-0 mb-10"><a class="views" href="#">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span></div>
+            <div class="divider col-md-12 mb-10 mt-10"></div>
+            <div class="col-md-12">
+              <ul class="features">
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+              </ul>
+              <p class="booked pull-right">Booked<span>30</span> Times Today</p>
+            </div>
+          </div>
+          <div class="grid-item"><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+            <div class="col-md-9 mt-10">
+              <h2>Soho, Soma-Bay Resort</h2>
+              <ul class="stars">
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-3 pl-0 mt-10">
+              <p class="price">$500<span class="regular-text">/day</span></p>
+            </div>
+            <div class="col-md-12">
+              <p class="small-text font-weight-600">485 Clawson St, Staten Island, NY 10306</p>
+            </div>
+            <div class="divider col-md-12 mb-10"></div>
+            <div class="pl-15 w-10 pull-left"><img src="images/icons/5.svg"></div>
+            <div class="col-md-10 pr-0">
+              <p class="small-text font-weight-600"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
+            </div>
+            <div class="trip"><img src="images/icons/tripavisor.svg"></div>
+            <div class="col-md-4">
+              <ul class="reviews">
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              </ul><a class="extra-small">142 Reviews</a>
+            </div>
+            <div class="col-md-6 pl-0 pr-0 mb-10"><a class="views" href="#">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span></div>
+            <div class="divider col-md-12 mb-10 mt-10"></div>
+            <div class="col-md-12">
+              <ul class="features">
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+              </ul>
+              <p class="booked pull-right">Booked<span>30</span> Times Today</p>
+            </div>
+          </div>
+        </div>
+        <div class="list mt-10">
+          <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
+            <div class="col-md-6 mt-10">
+              <h1>Joint Base</h1>
+              <ul class="stars">
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><a class="extra-small ml-5 text-underline">142 Reviews</a></li>
+              </ul>
+              <p class="big-text">485 Clawson St, Staten Island, NY 10306</p>
+              <div class="col-md-1 pl-0 pr-0"><img class="img-responsive" width="40" src="images/icons/5.svg"></div>
+              <div class="col-md-10 pl-5 pr-0 mt-5">
+                <p class="regular-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
+              </div>
+              <ul class="features">
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mt-10 pl-0 pr-10">
+              <p class="red-price pull-left">$520</p>
+              <p class="price">$468<span class="regular-text">/day</span></p>
+              <p class="pull-right w-100 text-right font-weight-600 mb-5">Only<span class="orange-text"> 3</span> rooms left!</p><a class="views" href="#">View</a>
+              <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
+              <p class="small-text font-weight-400 pull-right mt-5 mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
+            </div>
+          </div>
+          <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
+            <div class="col-md-6 mt-10">
+              <h1>London Hilton Hotel</h1>
+              <ul class="stars">
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><a class="extra-small ml-5 text-underline">142 Reviews</a></li>
+              </ul>
+              <p class="big-text">485 Clawson St, Staten Island, NY 10306</p>
+              <div class="col-md-1 pl-0 pr-0"><img class="img-responsive" width="40" src="images/icons/5.svg"></div>
+              <div class="col-md-10 pl-5 pr-0 mt-5">
+                <p class="regular-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
+              </div>
+              <ul class="features">
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mt-10 pl-0 pr-10">
+              <p class="price">$300<span class="regular-text">/day</span></p><a class="views" href="#">View</a>
+              <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
+              <p class="small-text font-weight-400 pull-right mt-5 mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
+            </div>
+          </div>
+          <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
+            <div class="col-md-6 mt-10">
+              <h1>Joint Base</h1>
+              <ul class="stars">
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><a class="extra-small ml-5 text-underline">142 Reviews</a></li>
+              </ul>
+              <p class="big-text">485 Clawson St, Staten Island, NY 10306</p>
+              <div class="col-md-1 pl-0 pr-0"><img class="img-responsive" width="40" src="images/icons/5.svg"></div>
+              <div class="col-md-10 pl-5 pr-0 mt-5">
+                <p class="regular-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
+              </div>
+              <ul class="features">
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mt-10 pl-0 pr-10">
+              <p class="price">$211<span class="regular-text">/day</span></p><a class="views" href="#">View</a>
+              <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
+              <p class="small-text font-weight-400 pull-right mt-5 mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
+            </div>
+          </div>
+          <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
+            <div class="col-md-6 mt-10">
+              <h1>Joint Base</h1>
+              <ul class="stars">
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                <li><a class="extra-small ml-5 text-underline">142 Reviews</a></li>
+              </ul>
+              <p class="big-text">485 Clawson St, Staten Island, NY 10306</p>
+              <div class="col-md-1 pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
+              <div class="col-md-10 pl-5 pr-0 mt-5">
+                <p class="regular-text"><span class="blue-text">1.98 km.</span> to the centre of Central Park</p>
+              </div>
+              <ul class="features">
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mt-10 pl-0 pr-10">
+              <p class="red-price pull-left">$120</p>
+              <p class="price">$90<span class="regular-text">/day</span></p>
+              <p class="pull-right w-100 text-right font-weight-600 mb-5">Only<span class="red-text"> 1</span> room left!</p><a class="views" href="#">View</a>
+              <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
+              <p class="small-text font-weight-400 pull-right mt-5 mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+      <div class="exclusive pl-0 pr-0">
+        <h2>UP TO 80%</h2>
+        <h3>Exclusive Cancelon deals around these dates</h3>
+        <div class="col-md-6 btrans pl-0 pr-0 white">
+          <div class="col-md-1 pl-5 pr-0 mt-10 mb-10"><img width="30" src="images/icons/tripavisor.svg"></div>
+          <div class="col-md-11 pl-0 pr-0 mt-10">
+            <ul class="reviews ml-10">
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+            </ul><a class="extra-small reviews-number">142 Reviews</a>
+            <p class="small-text font-weight-200 pull-left ml-10">Apr 04 - 07</p><span class="top">Top Deal</span>
+          </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+          <div class="col-md-9 mt-10">
+            <h5>Soho, Soma-Bay Resort</h5>
+            <ul class="stars">
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+            </ul>
+            <p class="small-text font-weight-200">Amsterdam Schiphol,Netherlands</p>
+            <p class="small-text font-weight-200"><i class="fa fa-map-marker" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+          </div>
+          <div class="col-md-3 mt-10 pl-0 pr-10"><img class="pull-right" src="images/icons/heart.svg" width="50" alt="">
+            <p class="price">$500<span class="regular-text">/day</span></p>
+            <p class="price-red">$780<span class="regular-text">/day</span></p>
+          </div>
+          <div class="col-md-12">
+            <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view">VIEW</a>
+          </div>
+        </div>
+        <div class="col-md-6 btrans pl-0 pr-0 white">
+          <div class="col-md-1 pl-5 pr-0 mt-10 mb-10"><img width="30" src="images/icons/tripavisor.svg"></div>
+          <div class="col-md-11 pl-0 pr-0 mt-10">
+            <ul class="reviews ml-10">
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+              <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+            </ul><a class="extra-small reviews-number">142 Reviews</a>
+            <p class="small-text font-weight-200 pull-left ml-10">Apr 04 - 07</p><span class="top">Top Deal</span>
+          </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+          <div class="col-md-9 mt-10">
+            <h5>Soho, Soma-Bay Resort</h5>
+            <ul class="stars">
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+              <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+            </ul>
+            <p class="small-text font-weight-200">Amsterdam Schiphol,Netherlands</p>
+            <p class="small-text font-weight-200"><i class="fa fa-map-marker" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+          </div>
+          <div class="col-md-3 mt-10 pl-0 pr-10"><img class="pull-right" src="images/icons/heart.svg" width="50" alt="">
+            <p class="price">$500<span class="regular-text">/day</span></p>
+            <p class="price-red">$780<span class="regular-text">/day</span></p>
+          </div>
+          <div class="col-md-12">
+            <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view">VIEW</a>
+          </div>
+          <script>
+            function initMap() {
+            	var uluru = {lat: -25.363, lng: 131.044};
+            	var map = new google.maps.Map(document.getElementById('map'), {
+            		zoom: 12,
+            		center: uluru,
+            		scrollwheel: false
+            	});
+            	var marker = new google.maps.Marker({
+            		position: uluru,
+            		map: map
+            	});
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row mt-10">
+          <div class="navbar-header"><a class="navbar-brand" href="#"><img class="img-responsive mt-5" alt="logo" width="166" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
+            <p class="navbar-text small-text font-weight-200"><i class="fa blue-text fa-info-circle" aria-hidden="true"></i>					Sell and Buy Non-Refundable Hotel Reservations</p>
+          </div>
+          <div class="socials">
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mb-50">
+          <div class="col-md-3">
+            <ul class="list-unstyled">
+              <li class="widget-container widget_nav_menu">
+                <!-- widgets list-->
+                <h1 class="white-text pb-20">Company</h1>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Register</a></li>
+                  <li><a href="#">User Agreement</a></li>
+                  <li><a href="#">Buyer Protection</a></li>
+                  <li><a href="#">Seller's Protection</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="list-unstyled">
+              <li class="widget-container widget_nav_menu">
+                <!-- widgets list-->
+                <h1 class="white-text pb-20">Support</h1>
+                <ul>
+                  <li><a href="#">Contact info</a></li>
+                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="#">Discount hotel reservations</a></li>
+                  <li><a href="#">Discount Hotels</a></li>
+                  <li><a href="#">Best Price Guarantee</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="list-unstyled">
+              <li class="widget-container widget_nav_menu">
+                <!-- widgets list-->
+                <h1 class="white-text pb-20">Selling</h1>
+                <ul>
+                  <li><a href="#">Sell hotel reservation</a></li>
+                  <li><a href="#">Hotel cancellation policy</a></li>
+                  <li><a href="#">Hotel reservation deals</a></li>
+                  <li><a href="#">Buy hotel reservation</a></li>
+                  <li><a href="#">Hotel Reservation</a></li>
+                  <li><a href="#">Cancel hotel reservation</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="list-unstyled">
+              <li class="widget-container">
+                <!-- widgets list-->
+                <h1 class="white-text pb-20">Have a Questions?</h1>
+                <ul>
+                  <li><a href="#">US 1-855-226-2359</a></li>
+                  <li><a href="#">UK 0-800-014-8161</a></li>
+                  <li><a href="#">FR 0-805-080-042</a></li>
+                  <li><a href="#">DE 0-800-184-4594</a></li>
+                  <li><a href="#">AU 1-800-459-141</a></li>
+                  <li><a href="#">NZ 0-800-451-433</a></li>
+                  <li><a href="#">IE 1-800-901-655</a></li>
+                  <li><a href="#">CA 1-855-226-2359</a></li>
+                  <li><a href="#">support@cancelon.com</a></li>
+                  <li><a href="#">24/7 Dedicated Customer Support</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <p class="large white-text">We have a price for you that is too low to show!!</p>
+            <p class="white-text">Unlock special rates by signing up here:</p>
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Your email address here..."><span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">SIGN UP</button></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid navy">
+        <div class="container">
+          <div class="row mt-30 pb-50">
+            <div class="col-md-3">
+              <ul class="list-unstyled">
+                <li class="widget-container widget_nav_menu">
+                  <!-- widgets list-->
+                  <h1 class="white-text">Top Destinations</h1>
+                  <ul>
+                    <li><a href="#">Las Vegas, NV, USA</a></li>
+                    <li><a href="#">Orlando, FL, USA</a></li>
+                    <li><a href="#">Kissimmee, FL, USA</a></li>
+                    <li><a href="#">New York, NY, USA</a></li>
+                    <li><a href="#">London, United Kingdom</a></li>
+                    <li><a href="#">Washington, DC, USA</a></li>
+                    <li><a href="#">Cancun, Mexico</a></li>
+                    <li><a href="#">Birmingham, United Kingdom</a></li>
+                    <li><a href="#">New Orleans, LA, USA</a></li>
+                    <li><a href="#">Amsterdam, Netherlands</a></li>
+                    <li><a href="#">Paris, France</a></li>
+                    <li><a href="#">Clearwater Beach, FL, USA</a></li>
+                    <li><a href="#">Playa Del Carmen, Mexico</a></li>
+                    <li><a href="#">Miami Beach, FL, USA</a></li>
+                    <li><a href="#">Hollywood, CA, USA</a></li>
+                    <li><a href="#">Dubai, United Arab Emirates</a></li>
+                    <li><a href="#">Bangkok, Thailand</a></li>
+                    <li><a href="#">Reno, NV, USA</a></li>
+                    <li><a href="#">Melbourne, VC, Australia</a></li>
+                    <li><a href="#">San Francisco, CA, USA</a></li>
+                    <li><a href="#">Stateline, NV, USA</a></li>
+                    <li><a href="#">Miami, FL, USA</a></li>
+                    <li><a href="#">San Diego, CA, USA</a></li>
+                    <li><a href="#">San Antonio, TX, USA</a></li>
+                    <li><a href="#">Tampa, FL, USA</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3 mt-40">
+              <ul class="list-unstyled">
+                <li class="widget-container widget_nav_menu">
+                  <!-- widgets list-->
+                  <ul>
+                    <li><a href="#">Anaheim, CA, USA</a></li>
+                    <li><a href="#">Winter Garden, FL, USA</a></li>
+                    <li><a href="#">Rome, Italy</a></li>
+                    <li><a href="#">Sydney, NW, Australia</a></li>
+                    <li><a href="#">Surfers Paradise, QL, Austr...</a></li>
+                    <li><a href="#">Arlington, VA, USA</a></li>
+                    <li><a href="#">Chessy, France</a></li>
+                    <li><a href="#">Atlanta, GA, USA</a></li>
+                    <li><a href="#">Pittsburgh, PA, USA</a></li>
+                    <li><a href="#">Berlin, Germany</a></li>
+                    <li><a href="#">Venice, Italy</a></li>
+                    <li><a href="#">Toronto, ON, Canada</a></li>
+                    <li><a href="#">Chicago, IL, USA</a></li>
+                    <li><a href="#">Madrid, Spain</a></li>
+                    <li><a href="#">Panama City, Panama</a></li>
+                    <li><a href="#">Boston, MA, USA</a></li>
+                    <li><a href="#">Cleveland, OH, USA</a></li>
+                    <li><a href="#">Lisbon, Portugal</a></li>
+                    <li><a href="#">Denver, CO, USA</a></li>
+                    <li><a href="#">Doha, Qatar</a></li>
+                    <li><a href="#">Barcelona, Spain</a></li>
+                    <li><a href="#">Brisbane, QL, Australia</a></li>
+                    <li><a href="#">Kansas City, MO, USA</a></li>
+                    <li><a href="#">Newark, NJ, USA</a></li>
+                    <li><a href="#">Dublin, Ireland</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3 mt-40">
+              <ul class="list-unstyled">
+                <li class="widget-container widget_nav_menu">
+                  <!-- widgets list-->
+                  <ul>
+                    <li><a href="#">San Juan, Puerto Rico</a></li>
+                    <li><a href="#">Florence, Italy</a></li>
+                    <li><a href="#">Singapore, Singapore</a></li>
+                    <li><a href="#">Cologne, Germany</a></li>
+                    <li><a href="#">Vancouver, BC, Canada</a></li>
+                    <li><a href="#">Auckland, New Zealand</a></li>
+                    <li><a href="#">Edinburgh, United Kingdom</a></li>
+                    <li><a href="#">Hollywood, FL, USA</a></li>
+                    <li><a href="#">Houston, TX, USA</a></li>
+                    <li><a href="#">Montreal, QC, Canada</a></li>
+                    <li><a href="#">Benidorm, Spain</a></li>
+                    <li><a href="#">Cambridge, MA, USA</a></li>
+                    <li><a href="#">Liverpool, United Kingdom</a></li>
+                    <li><a href="#">Henderson, NV, USA</a></li>
+                    <li><a href="#">Dallas, TX, USA</a></li>
+                    <li><a href="#">Honolulu, HI, USA</a></li>
+                    <li><a href="#">Sedona, AZ, USA</a></li>
+                    <li><a href="#">Manama, Bahrain</a></li>
+                    <li><a href="#">Antalya, Turkey</a></li>
+                    <li><a href="#">Tokyo, Japan</a></li>
+                    <li><a href="#">Manchester, United Kingdom</a></li>
+                    <li><a href="#">Savannah, GA, USA</a></li>
+                    <li><a href="#">Budapest, Hungary</a></li>
+                    <li><a href="#">Perth, WA, Australia</a></li>
+                    <li><a href="#">Southampton, United Kingdom</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3 mt-40">
+              <ul class="list-unstyled">
+                <li class="widget-container widget_nav_menu">
+                  <!-- widgets list-->
+                  <ul>
+                    <li><a href="#">Durham, USA</a></li>
+                    <li><a href="#">Riviera Maya, Mexico</a></li>
+                    <li><a href="#">Charlotte, NC, USA</a></li>
+                    <li><a href="#">Vienna, Austria</a></li>
+                    <li><a href="#">Windsor, United Kingdom</a></li>
+                    <li><a href="#">Seattle, WA, USA</a></li>
+                    <li><a href="#">Windermere, United Kingdom</a></li>
+                    <li><a href="#">Kowloon, Hong Kong</a></li>
+                    <li><a href="#">San Jose Del Cabo, Mexico</a></li>
+                    <li><a href="#">Darlington, United Kingdom</a></li>
+                    <li><a href="#">Sharjah, United Arab Emirates</a></li>
+                    <li><a href="#">Athens, Greece</a></li>
+                    <li><a href="#">Grand Canyon, AZ, USA</a></li>
+                    <li><a href="#">Carolina, Puerto Rico</a></li>
+                    <li><a href="#">Atlantic City, NJ, USA</a></li>
+                    <li><a href="#">Cozumel, Mexico</a></li>
+                    <li><a href="#">Irvine, CA, USA</a></li>
+                    <li><a href="#">Reykjavik, Iceland</a></li>
+                    <li><a href="#">Cardiff, United Kingdom</a></li>
+                    <li><a href="#">Philadelphia, PA, USA</a></li>
+                    <li><a href="#">Brussels, Belgium</a></li>
+                    <li><a href="#">Chiang Rai, Thailand</a></li>
+                    <li><a href="#">South Lake Tahoe, CA, USA</a></li>
+                    <li><a href="#">Queenstown, New Zealand</a></li>
+                    <li><a href="#">Cairns, QL, Australia</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row black">
+          <p class="copy">Copyright © 2015 - 2017 Cancelon Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the cancelon User agreement and Privacy policy.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Scripts-->
+    <!-- jQuery-->
+    <script type="text/javascript" src="assets/plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap-->
+    <script type="text/javascript" src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Theme Plugins scripts-->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/datarangepicker/jquery.datarangepicker.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-dropdown-hover/dist/jquery.bootstrap-dropdown-hover.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/isotope/dist/isotope.pkgd.js"></script>
+    <script type="text/javascript" src="assets/plugins/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC57_OG5_SuoIpQJbcYsjqTR8ybO4X5PV8&amp;callback=initMap"></script>
+    <!-- /Scripts-->
+  </body>
 </html>

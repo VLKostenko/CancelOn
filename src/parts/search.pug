@@ -1,0 +1,43 @@
+.container-fluid.white
+	.container
+		.row
+			.col-md-4.pt-35.pl-0
+				.col-md-5
+					.form-group
+						.input-group.input-group-white
+							span.input-group-addon
+								i.fa.fa-calendar
+							input.form-control.datepicker-input(type='text', placeholder='Date')
+							b.carret
+				.col-md-6.adults
+					.btn-group
+						a.adults-btn.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							| Adults
+						.dropdown-menu.mt-10
+							label.col-form-label(for='quant[1]') Room Quantity
+							.input-group.mt-10
+								span.input-group-btn
+									button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
+										| -
+								input.form-control.input-number(type='text', id='quant[1]', name='quant[1]', value='1', min='1', max='10')
+								span.input-group-btn
+									button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1]')
+										| +
+							label.col-form-label.mt-20(for='quant[2]') Adults
+							.input-group.mt-10.mb-20
+								span.input-group-btn
+									button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2]')
+										| -
+								input.form-control.input-number(type='text', id='quant[2]', name='quant[2]', value='10', min='1', max='100')
+								span.input-group-btn
+									button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2]')
+										| +
+							a.black-text(href='#') Cancel
+							a.blue-text.ml-20(href='#') Next
+			.col-md-8.pl-0.mnl-10.pr-5
+				.input-group
+					span.search-icon
+					input.form-control.input-search(type='text', placeholder='Search for...')
+					span.input-search-btn
+						button.btn.btn-default(type='button') SEARCH
+				// /input-group

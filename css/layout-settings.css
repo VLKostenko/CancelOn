@@ -59,3 +59,8 @@ ul.ul-about:after {
   display: block;
   clear: both;
 }
+
+.sidebar-filter a {
+  display: block;
+  padding: 17px 15px;
+}

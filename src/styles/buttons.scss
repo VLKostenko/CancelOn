@@ -1,60 +1,64 @@
-.blue-btn{
+.blue-btn {
   background-color: #55c1ff;
   padding: 7px 16px 9px 43px !important;
   border-radius: 4px;
   margin: -3px -5px 5px 19px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  &:before{
+  &:before {
     content: '';
     display: block;
     width: 22px;
     height: 22px;
-    background-image: url('../images/unblocked-icon.svg');
+    background-image: url('../images/icons/unblocked-icon.svg');
     background-size: cover;
     position: absolute;
     left: 11px;
   }
-  &:hover{
-    background-color: #54aee1!important;
+  &:hover {
+    background-color: #54aee1 !important;
     padding: 7px 16px 9px 43px !important;
     border-radius: 4px;
-    color: #ffffff!important;
+    color: #ffffff !important;
   }
 }
-.green-btn{
+
+.green-btn {
   background-color: #85b83a;
   padding: 7px 22px 10px 19px !important;
   border-radius: 4px;
   margin: -3px -5px 5px 19px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  &:hover{
-    background-color: #7aa835!important;
+  &:hover {
+    background-color: #7aa835 !important;
     padding: 7px 22px 10px 19px !important;
     border-radius: 4px;
-    color: #ffffff!important;
+    color: #ffffff !important;
   }
 }
-.btn-primary{
+
+.btn-primary {
   background-color: #55c1ff;
   border-color: #55c1ff;
-  &:hover{
+  &:hover {
     background-color: #54aee1;
     border-color: #54aee1;
   }
 }
-.btn-dark-grey{
+
+.btn-dark-grey {
   background-color: #7e7e7e;
   border-color: #7e7e7e;
   color: #ffffff;
-  &:hover{
+  &:hover {
     background-color: #9e9e9e;
     border-color: #9e9e9e;
     color: #ffffff;
   }
 }
-.adults-btn{
+
+.adults-btn {
   cursor: pointer;
   padding: 11px 94px 10px 38px;
   border: 1px solid #ebebeb;
@@ -64,8 +68,8 @@
   text-decoration: none !important;
   font-family: Roboto, sans-serif;
   color: #000;
-  &:before{
-    background-image: url("../images/user.svg");
+  &:before {
+    background-image: url("../images/icons/user.svg");
     display: block;
     width: 12px;
     height: 18px;
@@ -74,7 +78,7 @@
     position: absolute;
     left: 14px;
   }
-  &:after{
+  &:after {
     position: absolute;
     top: 16px;
     left: 147px;
@@ -85,12 +89,18 @@
     content: '';
   }
 }
-.input-search-btn{
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+  color: #fff;
+  background-color: #54aee1;
+  border-color: #54aee1;
+}
+
+.input-search-btn {
   position: absolute;
-  right: -10px;
+  right: 0;
   top: 36px;
   z-index: 4;
-  button{
+  button {
     background-color: #55c1ff;
     border-radius: 4px;
     border-color: #55c1ff;
@@ -98,15 +108,15 @@
     color: #ffffff;
     height: 42px;
     width: 130px;
-    &:hover{
+    &:hover, &:focus, &:active {
       background-color: #54aee1;
       border-color: #54aee1;
       color: #ffffff;
     }
-    &:before{
+    &:before {
       content: '';
       display: block;
-      background-image: url("../images/search-icon.svg");
+      background-image: url("../images/icons/search-icon.svg");
       background-size: cover;
       -webkit-filter: brightness(2);
       filter: brightness(2);
@@ -118,8 +128,9 @@
     }
   }
 }
-.menu-icon{
-  background-image: url(../images/menu-icon.svg);
+
+.menu-icon {
+  background-image: url("../images/icons/menu-icon.svg");
   background-size: cover;
   width: 17px;
   height: 15px;
@@ -127,12 +138,14 @@
   margin-right: 3px;
   margin-top: 3px;
 }
-.display{
+
+.display {
   float: left;
   padding-right: 20px;
   margin-left: -26px;
   margin-top: -3px;
 }
+
 .list-btn {
   i {
     font-size: 23px;
@@ -144,6 +157,7 @@
     }
   }
 }
+
 .grid-btn {
   i {
     font-size: 21px;
@@ -157,7 +171,8 @@
     }
   }
 }
-.btn-sort{
+
+.btn-sort {
   padding: 4px 12px;
   border: 1px solid #eeeeee;
   -webkit-border-radius: 4px;
@@ -166,14 +181,14 @@
 }
 
 .onoffswitch {
-  &:before{
+  &:before {
     content: 'Wide';
     position: absolute;
     left: -41px;
     top: 2px;
     font-family: Roboto, sans-serif;
   }
-  &:after{
+  &:after {
     content: 'Map';
     position: absolute;
     right: -33px;
@@ -181,36 +196,62 @@
     font-family: Roboto, sans-serif;
   }
   margin-right: 35px;
-  position: relative; width: 54px;
-  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+  position: relative;
+  width: 54px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
+
 .onoffswitch-checkbox {
   display: none;
 }
+
 .onoffswitch-label {
-  display: block; overflow: hidden; cursor: pointer; margin-bottom: 0px; margin-top: 5px;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 0px;
+  margin-top: 5px;
 }
+
 .onoffswitch-inner {
-  display: block; width: 200%; margin-left: -100%;
+  display: block;
+  width: 200%;
+  margin-left: -100%;
   transition: margin 0.3s ease-in 0s;
 }
+
 .onoffswitch-inner:before, .onoffswitch-inner:after {
-  display: block; float: left; width: 50%; height: 16px; padding: 0; line-height: 12px;
-  font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  display: block;
+  float: left;
+  width: 50%;
+  height: 16px;
+  padding: 0;
+  line-height: 12px;
+  font-size: 10px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
   box-sizing: border-box;
   background-clip: padding-box;
 }
+
 .onoffswitch-inner:before {
   content: "";
   padding-left: 5px;
-  background-color: #ECECEC; color: #FFFFFF;
+  background-color: #ECECEC;
+  color: #FFFFFF;
 }
+
 .onoffswitch-inner:after {
   content: "";
   padding-right: 5px;
-  background-color: #ECECEC; color: #999999;
+  background-color: #ECECEC;
+  color: #999999;
   text-align: right;
 }
+
 .onoffswitch-switch {
   display: block;
   width: 27px;
@@ -224,9 +265,11 @@
   -webkit-transition: all .3s ease-in 0s;
   transition: all .3s ease-in 0s;
 }
+
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
   margin-left: 0;
 }
+
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
 }

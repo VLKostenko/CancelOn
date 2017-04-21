@@ -7,7 +7,7 @@
 }
 
 .orange-text {
-  color: #e39d47;
+  color: #f99e3e;
 }
 
 .red-text {
@@ -15,7 +15,7 @@
 }
 
 .green-text {
-  color: #a5c261 !important;
+  color: #99c45a !important;
 }
 
 .white-text {
@@ -43,7 +43,7 @@
 }
 
 .list-item {
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   width: 99%;
   float: left;
   cursor: pointer;
@@ -55,21 +55,34 @@
   box-shadow: 2px 1px 5px rgba(108, 118, 123, 0.4);
 }
 
-.list-item:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  box-shadow: 4px 1px 10px rgba(108, 118, 123, 0.8);
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+.list-item > img {
+  min-height: 185px;
+}
+
+.list-item .views {
+  background: #55c1ff;
+  padding: 4px 35px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin: 5px 0;
+  float: right;
+  color: #ffffff;
+}
+
+.list-item .stars {
+  margin-bottom: 10px;
+}
+
+.list-item .stars li .fa-dot-circle-o {
+  margin-right: 3px;
 }
 
 .check {
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .grid-item {
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   width: 49%;
   float: left;
   cursor: pointer;
@@ -81,13 +94,15 @@
   box-shadow: 2px 1px 5px rgba(108, 118, 123, 0.4);
 }
 
-.grid-item:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  box-shadow: 4px 1px 10px rgba(108, 118, 123, 0.8);
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+.grid-item .views {
+  float: right;
+  background: #7fc0fd;
+  padding: 2.5px 20px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-top: 2px;
+  margin-right: -9px;
+  color: #ffffff;
 }
 
 .grid-item img {
@@ -99,10 +114,8 @@
 }
 
 .grid-item .small-text {
-  font-weight: 400;
-  margin-top: 7px;
+  margin-top: 4px;
   margin-bottom: 12px;
-  letter-spacing: 0.1px;
 }
 
 .grid-item .extra-small {
@@ -169,29 +182,8 @@
   margin-right: 10px;
 }
 
-.list-item .views {
-  background: #55c1ff;
-  padding: 4px 20px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  margin-right: 6px;
-  float: right;
-  color: #ffffff;
-}
-
 .grid {
   display: none;
-}
-
-.grid-item .views {
-  float: right;
-  background: #7fc0fd;
-  padding: 2.5px 20px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  margin-top: 2px;
-  margin-right: -9px;
-  color: #ffffff;
 }
 
 .reviews {
@@ -214,28 +206,39 @@ i.fa-dot-circle-o {
 
 .features {
   float: left;
-  margin-left: 5px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .features li {
   display: inline-block;
   float: left;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .features li i {
-  font-size: 10pt;
-  color: #6bb7bf;
+  font-size: 18px;
+  color: #0c8a96;
 }
 
 #map {
-  width: 29.2%;
   margin-right: 15px;
   float: right;
   height: 100%;
   min-height: 1500px;
   background-color: grey;
+}
+
+@media (min-width: 1400px) {
+  #map {
+    width: 26.7%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #map {
+    width: 26.1%;
+  }
 }
 
 .divider {
@@ -449,7 +452,7 @@ footer .navy .widget-container li a:hover {
 aside {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
-  width: 14.7%;
+  width: 17%;
   margin-left: 15px;
   float: left;
 }
@@ -483,12 +486,31 @@ aside #amount2 {
   border-radius: 4px;
 }
 
-aside .checkbox input[type="checkbox"] {
-  right: 0;
+aside .facilities .checkbox label {
+  padding-left: 25px;
 }
 
-aside .checkbox label {
-  padding-left: 0;
+aside .facilities .checkbox label i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 0;
+  margin: auto;
+  width: 15px;
+  text-align: center;
+}
+
+aside .checkbox input[type="checkbox"] {
+  right: 0;
+  opacity: 0;
+}
+
+aside .checkbox input[type="checkbox"]:focus {
+  outline: none !important;
+}
+
+aside .checkbox input[type="checkbox"]:focus + label:after {
+  outline: none !important;
 }
 
 aside .checkbox {
@@ -499,6 +521,7 @@ aside .checkbox label {
   display: inline-block;
   position: relative;
   padding-left: 5px;
+  width: 100%;
 }
 
 aside .checkbox label::after {
@@ -512,7 +535,7 @@ aside .checkbox label::after {
   width: 17px;
   height: 17px;
   border: 1px solid #cccccc;
-  border-radius: 3px;
+  border-radius: 0;
   background-color: #fff;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
 }
@@ -529,10 +552,6 @@ aside .checkbox label::before {
   padding-top: 1px;
   font-size: 11px;
   color: #555555;
-}
-
-aside .checkbox input[type="checkbox"] {
-  opacity: 0;
 }
 
 aside .checkbox input[type="checkbox"]:focus + label::after {
@@ -741,22 +760,111 @@ aside .radio-success input[type="radio"]:checked + label::after {
   color: #b8b8b8;
 }
 
-.log-input {
+.sign-in-menu {
+  padding: 15px 0;
+}
+
+.sign-in-menu .big-text + a {
+  line-height: 21px;
+  text-decoration: underline !important;
+  text-align: right;
+}
+
+.sign-in-menu p {
+  margin: 0;
+}
+
+.sign-in-menu .log-input {
   border: none;
   border-bottom: 2px solid #636e80;
-  margin-bottom: 20px;
-  margin-top: 5px;
+  margin-bottom: 10px;
   padding: 10px;
 }
 
-.languages a {
+.sign-in-menu .sign-btn {
+  color: #fff !important;
+  background: #55c1ff !important;
+  padding: 8px 15px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+}
+
+.sign-in-menu .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 36px;
+  padding-left: 10px;
+}
+
+.sign-in-menu .socials a {
+  width: 20px;
+  text-align: center;
+  color: #333 !important;
+}
+
+.sign-in-menu .socials a:hover {
+  color: #55c1ff !important;
+}
+
+.sign-in-menu .log-input::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+
+.sign-in-menu .log-input::-moz-placeholder {
+  color: #a1a1a1;
+}
+
+.sign-in-menu .log-input:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+@media (min-width: 768px) {
+  .languages-menu {
+    right: -1px;
+    left: initial;
+    min-width: 140px;
+  }
+}
+
+.languages-menu .languages {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.languages-menu .languages a {
   float: left;
   width: 100%;
   color: #000 !important;
+  padding: 5px 13px;
 }
 
-.languages a:hover {
-  color: #55c1ff;
+.languages-menu .languages a img {
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.languages-menu .languages a:hover {
+  color: #55c1ff !important;
+}
+
+.currency-menu .dropdown-menu li a {
+  color: #333 !important;
+}
+
+.currency-menu .dropdown-menu li:hover {
+  background: #55c1ff;
+}
+
+.currency-menu .dropdown-menu li:hover .text {
+  color: #fff !important;
 }
 
 .filter-top {
