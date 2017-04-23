@@ -2,9 +2,9 @@
 	include content-grid
 	include content-list
 #map
-.exclusive.pl-0.pr-0
-	h2 UP TO 80%
-	h3 Exclusive Cancelon deals around these dates
+.exclusive.pl-5.pr-5
+	h3 UP TO 80%
+	h4 Exclusive Cancelon deals around these dates
 	.col-md-6.btrans.pl-0.pr-0.white
 		.col-md-1.pl-5.pr-0.mt-10.mb-10
 			img(width='30', src='images/icons/tripavisor.svg')
@@ -20,13 +20,13 @@
 					i.fa.green-text.fa-dot-circle-o(aria-hidden='true')
 				li
 					i.fa.green-text.fa-dot-circle-o(aria-hidden='true')
-			a.extra-small.reviews-number 142 Reviews
-			p.small-text.font-weight-200.pull-left.ml-10 Apr 04 - 07
+			a.extra-small.reviews-number.font-roboto.text-underline.mt-5 142 Reviews
 			span.top Top Deal
+			p.small-text.font-weight-600.pull-right.ml-10.font-roboto.mb-0.top-2.mr-25 Apr 04 - 07
 		img.img-responsive(src='images/room4.png', alt='')
 		.col-md-9.mt-10
-			h5 Soho, Soma-Bay Resort
-			ul.stars
+			h5 St Martins Lane London
+			ul.stars.mb-10
 				li
 					i.fa.orange-text.fa-star(aria-hidden='true')
 				li
@@ -37,19 +37,19 @@
 					i.fa.orange-text.fa-star(aria-hidden='true')
 				li
 					i.fa.orange-text.fa-star(aria-hidden='true')
-			p.small-text.font-weight-200 Amsterdam Schiphol,Netherlands
-			p.small-text.font-weight-200
-				i.fa.fa-map-marker(aria-hidden='true')
+			p.small-text.font-weight-500.font-roboto Amsterdam Schiphol, Netherlands
+			p.small-text.font-weight-400.font-roboto
+				i.fa.fa-map-pin(aria-hidden='true')
 				|  485 Clawson St, Staten Island, NY 10306
-		.col-md-3.mt-10.pl-0.pr-10
+		.col-md-3.mt-10.pl-0.pr-15
 			img.pull-right(src='images/icons/heart.svg', width='50', alt='')
 			p.price
-				| $500
-				span.regular-text /day
+				| $500/
+				span.regular-text Day
 			p.price-red
-				| $780
-				span.regular-text /day
-		.col-md-12
+				| $780/
+				span.regular-text Day
+		.col-md-12.mt-30
 			p.cancelon
 				i.fa.fa-star(aria-hidden='true')
 				|  Cancelon Exclusive
@@ -69,13 +69,13 @@
 					i.fa.green-text.fa-dot-circle-o(aria-hidden='true')
 				li
 					i.fa.green-text.fa-dot-circle-o(aria-hidden='true')
-			a.extra-small.reviews-number 142 Reviews
-			p.small-text.font-weight-200.pull-left.ml-10 Apr 04 - 07
+			a.extra-small.reviews-number.font-roboto.text-underline.mt-5 142 Reviews
 			span.top Top Deal
+			p.small-text.font-weight-600.pull-right.ml-10.font-roboto.mb-0.top-2.mr-25 Apr 04 - 07
 		img.img-responsive(src='images/room4.png', alt='')
 		.col-md-9.mt-10
 			h5 Soho, Soma-Bay Resort
-			ul.stars
+			ul.stars.mb-10
 				li
 					i.fa.orange-text.fa-star(aria-hidden='true')
 				li
@@ -86,33 +86,23 @@
 					i.fa.orange-text.fa-star(aria-hidden='true')
 				li
 					i.fa.orange-text.fa-star(aria-hidden='true')
-			p.small-text.font-weight-200 Amsterdam Schiphol,Netherlands
-			p.small-text.font-weight-200
-				i.fa.fa-map-marker(aria-hidden='true')
+			p.small-text.font-weight-500.font-roboto Amsterdam Schiphol, Netherlands
+			p.small-text.font-weight-400.font-roboto
+				i.fa.fa-map-pin(aria-hidden='true')
 				|  485 Clawson St, Staten Island, NY 10306
-		.col-md-3.mt-10.pl-0.pr-10
+		.col-md-3.mt-10.pl-0.pr-15
 			img.pull-right(src='images/icons/heart.svg', width='50', alt='')
 			p.price
-				| $500
-				span.regular-text /day
+				| $500/
+				span.regular-text Day
 			p.price-red
-				| $780
-				span.regular-text /day
-		.col-md-12
+				| $780/
+				span.regular-text Day
+		.col-md-12.mt-30
 			p.cancelon
 				i.fa.fa-star(aria-hidden='true')
 				|  Cancelon Exclusive
 			a.orange-view VIEW
-		script.
-			function initMap() {
-				var uluru = {lat: -25.363, lng: 131.044};
-				var map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 12,
-					center: uluru,
-					scrollwheel: false
-				});
-				var marker = new google.maps.Marker({
-					position: uluru,
-					map: map
-				});
-			}
+.loading
+	i(aria-hidden="true", class="fa fa-spinner fa-spin")
+	span.text-uppercase Loading

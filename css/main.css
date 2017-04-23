@@ -1,6 +1,4 @@
 /* 1 Main layout*/
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 input:focus,
 *:focus {
   outline: none !important;
@@ -589,6 +587,11 @@ h6, .h6 {
   font-size: 11px;
   color: #7a818e;
   font-family: 'Montserat', sans-serif;
+}
+
+.copy a {
+  font-size: 11px !important;
+  text-decoration: underline !important;
 }
 
 /* end of fonts */
@@ -7113,13 +7116,13 @@ input[type="text"].datepicker-input {
 
 .grid-item {
   font-family: 'Roboto', sans-serif !important;
-  width: 49%;
+  width: 48.5%;
   float: left;
   cursor: pointer;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   background-color: #ffffff;
   box-shadow: 2px 1px 5px rgba(108, 118, 123, 0.4);
 }
@@ -7133,6 +7136,32 @@ input[type="text"].datepicker-input {
   margin-top: 2px;
   margin-right: -9px;
   color: #ffffff;
+}
+
+.grid-item .warning {
+  position: absolute;
+  color: #fff;
+  top: 25%;
+  width: 40%;
+  padding: 7px 5px;
+  font-size: 14px;
+  font-weight: 600;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.grid-item .warning.red {
+  background: rgba(255, 69, 76, 0.85);
+}
+
+.grid-item .warning.orange {
+  background: rgba(222, 140, 54, 0.85);
+}
+
+.grid-item .warning.green {
+  background: rgba(122, 168, 53, 0.85);
 }
 
 .grid-item img {
@@ -7158,6 +7187,13 @@ input[type="text"].datepicker-input {
   margin-bottom: 0;
 }
 
+.grid-item .red-price {
+  font-size: 12px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
 .grid-item .trip {
   float: left;
   width: 30px;
@@ -7172,10 +7208,33 @@ input[type="text"].datepicker-input {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 .grid-item .booked span {
   font-weight: 700;
+}
+
+.grid-item .top {
+  background: #ff383f;
+  color: #fff;
+  padding: 4px 8px 2px;
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+}
+
+.grid-item .top:after {
+  content: '';
+  position: absolute;
+  display: block;
+  border: 10px solid #ff383f;
+  border-left-width: 1px;
+  border-right-color: transparent;
+  left: initial;
+  right: -10px;
+  top: 0;
 }
 
 .stars {
@@ -7199,7 +7258,7 @@ input[type="text"].datepicker-input {
   float: right;
   background: #54aee1;
   color: #fff;
-  padding: 7px 7px 6px 7.6px;
+  padding: 7px 10px 6px 7.6px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   line-height: 4px;
@@ -7261,7 +7320,7 @@ i.fa-dot-circle-o {
 
 @media (min-width: 1400px) {
   #map {
-    width: 26.7%;
+    width: 27%;
   }
 }
 
@@ -7278,14 +7337,15 @@ i.fa-dot-circle-o {
 }
 
 .exclusive {
-  width: 54.17841374874%;
+  width: 53.91%;
   background-color: #55c1ff;
   float: right;
   margin-top: 108px;
 }
 
 .exclusive .price {
-  font-size: 11pt;
+  font-size: 22px;
+  margin-top: 58px;
 }
 
 .exclusive .price .regular-text {
@@ -7293,7 +7353,7 @@ i.fa-dot-circle-o {
 }
 
 .exclusive .price-red {
-  font-size: 11pt;
+  font-size: 18px;
 }
 
 .exclusive .price-red .regular-text {
@@ -7313,13 +7373,28 @@ i.fa-dot-circle-o {
 
 .exclusive .top {
   float: right;
-  background: red;
-  padding: 0px 3px 0px 3px;
+  background: #ff383f;
   color: #ffffff;
+  padding: 4px 8px 2px;
+  font-size: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.exclusive .top:before {
+  content: '';
+  position: absolute;
+  display: block;
+  border: 10px solid #ff383f;
+  left: -10px;
+  top: 0;
+  border-right-width: 1px;
+  border-left-color: transparent;
 }
 
 .exclusive h5 {
-  font-size: 18pt;
+  font-size: 18px;
+  margin-top: 8px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -7340,6 +7415,7 @@ i.fa-dot-circle-o {
   margin: 19px auto;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+  font-size: 21px;
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -7373,6 +7449,13 @@ i.fa-dot-circle-o {
 
 .btrans {
   border: 10px solid #55c1ff;
+  border-right-width: 7.5px;
+  border-bottom-width: 15px;
+}
+
+.btrans + .btrans {
+  border-right-width: 10px;
+  border-left-width: 7.5px;
 }
 
 footer {
@@ -7446,6 +7529,10 @@ footer .navbar-text {
   font-family: 'Montserat', sans-serif;
 }
 
+footer .widget-container {
+  font-family: "Montserat", sans-serif;
+}
+
 footer .widget-container h1 {
   color: #ffffff;
   font-size: 26px;
@@ -7485,6 +7572,7 @@ aside {
   width: 17%;
   margin-left: 15px;
   float: left;
+  padding-bottom: 25px;
 }
 
 aside #amount1 {
@@ -7921,6 +8009,133 @@ aside .radio-success input[type="radio"]:checked + label::after {
   float: left;
   margin-left: 15px;
   margin-top: 5px;
+}
+
+.loading {
+  font-size: 18px;
+  width: 53.57%;
+  float: right;
+  text-align: center;
+  color: #b3b3b3;
+  font-weight: 600;
+  margin-top: 23px;
+}
+
+.loading span {
+  margin-left: 5px;
+  top: 1px;
+  position: relative;
+}
+
+.special-sign[type="text"]::-webkit-input-placeholder {
+  color: #9d9d9d;
+}
+
+.special-sign[type="text"]::-moz-placeholder {
+  color: #9d9d9d;
+}
+
+.special-sign[type="text"]:-ms-input-placeholder {
+  color: #9d9d9d;
+}
+
+#map .gm-style-iw .thumbnail {
+  margin: 0;
+}
+
+/* white background and box outline */
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div {
+  /* we have to use !important because we are overwritng inline styles */
+  background-color: transparent !important;
+  box-shadow: none !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* arrow colour */
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div > div > div {
+  box-shadow: none !important;
+  background-color: #ffffff !important;
+}
+
+/* close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child {
+  margin-right: 5px;
+  margin-top: 5px;
+  display: none;
+}
+
+/* image icon inside close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child > img {
+  display: none;
+}
+
+/* positioning of infowindow */
+.gm-style-iw {
+  top: 22px !important;
+  left: 22px !important;
+}
+
+.thumbnail {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin-bottom: 29px;
+  line-height: 1.6666;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+}
+
+.thumbnail-img {
+  position: relative;
+  display: block;
+}
+
+.thumbnail-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px 10px;
+}
+
+.thumbnail-info .label {
+  color: #fff;
+  background-color: #ff383f;
+  border-radius: 0;
+  font-weight: 600;
+  padding: 7px 12px;
+  font-size: 14px;
+}
+
+.thumbnail .caption {
+  padding: 10px 22px 1px;
+  color: #333333;
+  padding-top: 20px;
+}
+
+.thumbnail .caption h5 {
+  margin-bottom: 5px;
+}
+
+.thumbnail .caption h5 a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.thumbnail .caption p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.thumbnail a > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* end of Base sizing */
