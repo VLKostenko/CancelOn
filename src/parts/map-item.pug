@@ -1,4 +1,4 @@
-.black-bg
+.black-bg-map
 .map-item-block
    .map-item-block-wrapper
       .close-line
@@ -26,7 +26,7 @@
                      i.fa.fa-google-plus(aria-hidden='true')
       .title-rating
          .container
-            .row
+            .row.pl-16.pr-16
                .col-sm-1
                   img(src='images/icons/map-item.png', alt='')
                .col-sm-3.pl-10
@@ -45,7 +45,7 @@
                .col-sm-3.pull-right
                   ul.stars
                      li
-                        img.ml-10.mr-10(width='50', height='44' src='images/icons/tripavisor-text.svg')
+                        img.ml-5.mr-10(width='50', height='44' src='images/icons/tripavisor-text.svg')
                      li
                         i.fa.green-text.fa-dot-circle-o(aria-hidden='true')
                      li
@@ -57,7 +57,7 @@
                      li
                         i.fa.green-text.fa-dot-circle-o(aria-hidden='true')
                      li
-                        a.extra-small.text-underline 142 Reviews
+                        a.extra-small.text-underline(href='javascript:void(0)') 142 Reviews
       .owl-carousel
          .item
             img(src='images/map-item-image.png', alt='Alt 1')
@@ -82,3 +82,79 @@
       .main-price
          i.fa.fa-money(aria-hidden='true')
          span $60
+      .map-item-info
+         .row.pl-16.pr-16
+            .col-sm-12
+               .top-info
+                  .row
+                     .col-sm-6
+                        h3 Overview
+                        span.distance-blue
+                           i.fa.fa-map-pin(aria-hidden='true')
+                           | 1.98 km. to the centre of Central Park (map)
+                     .col-sm-6
+                        .pull-right
+                           a.book-btn(href='javascript:void(0)') Book Offsite
+            .col-sm-12
+               .bottom-info
+                  ul.nav.nav-pills
+                     li.active
+                        a(href='#hotel-details', data-toggle='tab') Hotel Details
+                     li
+                        a(href='#price-compare', data-toggle='tab') Price Compare
+                  .tab-content.clearfix
+                     #hotel-details.tab-pane.active
+                        .clearfix
+                        ul
+                           span
+                              i.fa.distance-blue.fa-wifi(aria-hidden='true')
+                              | Free Wf-Fi
+                           span
+                              i.fa.distance-blue.fa-car(aria-hidden='true')
+                              | Parking
+                           span
+                              i.fa.distance-blue.fa-thermometer-half(aria-hidden='true')
+                              | Air Conditioner
+                           span
+                              i.fa.distance-blue.fa-phone(aria-hidden='true')
+                              | Phone
+                        ul
+                           span
+                              i.fa.distance-blue.fa-television(aria-hidden='true')
+                              |  TV
+                           span
+                              i.fa.distance-blue.fa-shower(aria-hidden='true')
+                              |  Shower
+                           span
+                              i.fa.distance-blue.fa-street-view(aria-hidden='true')
+                              | Valet
+                           span
+                              i.fa.distance-blue.fa-bed(aria-hidden='true')
+                              | Single bed
+                        ul
+                           span
+                              | Sweeping broom
+                           span
+                              | Double bed
+                           span
+                              i.fa.distance-blue.fa-credit-card-alt(aria-hidden='true')
+                              | Hotel keycard
+                           span
+                              i.fa.distance-blue.fa-video-camera(aria-hidden='true')
+                              | Camera
+                        ul
+                           span
+                              | No smoking
+                           span
+                              | Do not disturb
+                           span
+                              i.fa.distance-blue.fa-medkit(aria-hidden='true')
+                              | Medic
+                           span
+                              | Smoke free
+                        .clearfix
+                        .description.mt-30
+                           h3.font-weight-600.mb-15 Description
+                           p Stylish London hotel on Regent Street, near the Tube Regent Street style The stylish Saint Georges Hotel puts you at the top end of Regent Street, in the heart of London. You'll be in one of the city's most exclusive neighborhoods, a couple of blocks from Oxford Circus Tube Station. High-fashion shopping Within 2 minutes you can be browsing the fashion shops and department stores of Oxford Street. If you're looking for something a little more exclusive, head south for 10 minutes to Bond Street, where you'll find designers including Prada and Gucci. Skyline views Guests rave about panoramic views of the London skyline from The Heights Restaurant, perched on the hotel's 15th floor. Comfy and modern Smoke-free guestrooms indulge with free WiFi, flat-screen TVs, and minibars. In superior rooms you'll find slick, contemporary design and upgraded toiletries, as well as an enhanced refreshment tray.
+                     #price-compare.tab-pane
+                        iframe(src='https://brands.datahc.com/Hotel/DoubleTree_by_Hilton_NYC_Financial_District.htm', style='width: 100%; height: 300px', frameborder='0')

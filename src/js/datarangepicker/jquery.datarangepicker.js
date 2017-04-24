@@ -918,11 +918,16 @@
     var initiated = false;
     var self = this;
     var selfDom = $(self).get(0);
+    var outputDom = $('.datepicker-output');
     var domChangeTimer;
 
     $(this).unbind('.datepicker').bind('click.datepicker', function(evt) {
       var isOpen = box.is(':visible');
-      if (!isOpen) open(opt.duration);
+      if (!isOpen) {
+        open(opt.duration);
+        $('.black-bg-map').fadeIn(opt.duration);
+        showDaysBorders();
+      }
     }).bind('change.datepicker', function(evt) {
       checkAndSetDefaultValue();
     }).bind('keyup.datepicker', function() {
@@ -1256,7 +1261,10 @@
     function calcPosition() {
       if (!opt.inline) {
         var offset = $(self).offset();
-        var offsetParent = $(self).parent().offset();
+        var offsetParent = $(self).closest('.sidebar-filter').offset();
+        var parent = $(self).closest('.sidebar-filter');
+        var parentCollapseTitle = $(self).closest('.panel-collapse').siblings('.panel-heading');
+        var backupWidth = $(self).width() + $(self).parent().width();
         if ($(opt.container).css('position') == 'relative') {
           var containerOffset = $(opt.container).offset();
           box.css({
@@ -1264,16 +1272,18 @@
             left: offsetParent.left - containerOffset.left
           });
         } else {
-          if (offset.left < 460) //left to right
+          if ( $(window).width() > backupWidth )
           {
+            box.css({
+              // top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
+              top: offsetParent.top + parentCollapseTitle.outerHeight() + parseInt($('body').css('border-top') || 0, 10),
+              left: offsetParent.left + parent.width()
+            });
+          } else {
+            console.log('window: ' + $(window).width() + ' < ' + 'element: ' + backupWidth);
             box.css({
               top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
               left: offsetParent.left
-            });
-          } else {
-            box.css({
-              top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
-              left: offsetParent.left + $(self).width() - box.width() - 16
             });
           }
         }
@@ -1413,6 +1423,7 @@
       box.find('.day.last-date-selected').removeClass('last-date-selected');
       box.find('.day.first-date-selected').removeClass('first-date-selected');
       opt.setValue.call(selfDom, '');
+      opt.setValue.call(outputDom, '');
       checkSelectionValid();
       showSelectedInfo();
       showSelectedDays();
@@ -1744,6 +1755,8 @@
         box.find('.end-day').html(getDateString(new Date(parseInt(opt.end))));
       }
       var dateRange;
+      var dateRangeStart;
+      var dateRangeEnd;
       if (opt.start && opt.singleDate) {
         box.find('.apply-btn').removeClass('disabled');
         dateRange = getDateString(new Date(opt.start));
@@ -1764,8 +1777,12 @@
 
         // output all data in input
         dateRange = moment(new Date(opt.start)).format('DD.MM.YYYY') + ' ' + startTime + opt.separator + moment(new Date(opt.end)).format('DD.MM.YYYY') + ' ' + endTime;
+        dateRangeStart = moment(new Date(opt.start)).format('DD.MM.YYYY') + ' ' + startTime;
+        dateRangeEnd = moment(new Date(opt.end)).format('DD.MM.YYYY') + ' ' + endTime;
+        // opt.setValue.call(selfDom, dateRange);
 
-        opt.setValue.call(selfDom, dateRange);
+        opt.setValue.call(selfDom, dateRangeStart);
+        opt.setValue.call(outputDom, dateRangeEnd);
 
         if (initiated && !silent) {
           $(self).trigger('datepicker-change', {
@@ -1799,7 +1816,7 @@
       $('.date-picker-wrapper tbody > tr > td:last-child .real-today.checked').after(borderLeft);
 
       if ( $('.date-picker-wrapper tbody > tr > td').not(':first').not(':last').children('.real-today').hasClass('first-date-selected') ||
-           $('.date-picker-wrapper tbody > tr > td').not(':first').not(':last').children('.real-today').hasClass('last-date-selected') ) {
+        $('.date-picker-wrapper tbody > tr > td').not(':first').not(':last').children('.real-today').hasClass('last-date-selected') ) {
         $('.date-picker-wrapper tbody > tr > td').not(':first').not(':last').children('.real-today').children('.round-border').remove();
       } else {
         $('.date-picker-wrapper tbody > tr > td').not(':first').not(':last').children('.real-today').after(borderBg);
@@ -2022,6 +2039,8 @@
       $(self).trigger('datepicker-close', {
         relatedTarget: box
       });
+
+      $('.black-bg-map').fadeOut(opt.duration);
     }
 
     function redrawDatePicker() {
@@ -2058,9 +2077,9 @@
         "<span class='down'></span>" +
         "</div>" +
         "<div class='am-pm'>" +
-          "<div class='showing am'>AM</div>" +
-          "<span class='up-arrow'></span>" +
-          "<span class='down-arrow'></span>" +
+        "<div class='showing am'>AM</div>" +
+        "<span class='up-arrow'></span>" +
+        "<span class='down-arrow'></span>" +
         "</div>";
       // return '<div>' +
       //   '<span>' + translate('Time') + '</span>' +
@@ -2469,7 +2488,9 @@
       $('.am-pm .up-arrow, .am-pm .down-arrow').click(function () {
         if ( $(this).siblings('.showing').hasClass('am') ) {
           $(this).siblings('.showing').removeClass('am').addClass('pm').text('PM');
+          alert(1);
         } else if ( $('.am-pm .showing').hasClass('pm') ) {
+          alert(2);
           $(this).siblings('.showing').removeClass('pm').addClass('am').text('AM');
         }
       });

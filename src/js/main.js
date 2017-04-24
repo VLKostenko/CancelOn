@@ -1,6 +1,3 @@
-/**
- * Created by buyandfly on 10.04.17.
- */
 ;(function($) {
   "use strict";
   /*
@@ -146,72 +143,72 @@
     }
   });
 
-  $('.grid').isotope({
-    itemSelector: '.grid-item',
-    layoutMode: 'masonry',
-    masonry: {
-      columnWidth: '.grid-item',
-      gutter: 15
-    }
-  });
-
-  $('.list').isotope({
-    itemSelector: '.list-item',
-    layoutMode: 'masonry',
-    masonry: {
-      columnWidth: '.list-item',
-      gutter: 15
-    }
-  });
+  // $('.grid').isotope({
+  //   itemSelector: '.grid-item',
+  //   layoutMode: 'masonry',
+  //   masonry: {
+  //     columnWidth: '.grid-item',
+  //     gutter: 15
+  //   }
+  // });
+  //
+  // $('.list').isotope({
+  //   itemSelector: '.list-item',
+  //   layoutMode: 'masonry',
+  //   masonry: {
+  //     columnWidth: '.list-item',
+  //     gutter: 15
+  //   }
+  // });
 
   $('.onoffswitch').click(function() {
     if ( document.getElementById('myonoffswitch').checked ) {
 
       $('#map').show();
-      $('.check').css('width', '52.3%');
-      $('.grid-item').css('width', '49%');
-      $('.exclusive').css('width', '54.17841374874%');
-      $('.grid').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'masonry',
-        masonry: {
-          // use outer width of grid-sizer for columnWidth
-          columnWidth: '.grid-item',
-          gutter: 15
-        }
-      });
-
-      $('.list').isotope({
-        itemSelector: '.list-item',
-        layoutMode: 'masonry',
-        masonry: {
-          columnWidth: '.list-item',
-          gutter: 15
-        }
-      });
+      // $('.check').css('width', '52.3%');
+      // $('.grid-item').css('width', '49%');
+      // $('.exclusive').css('width', '54.17841374874%');
+      // $('.grid').isotope({
+      //   itemSelector: '.grid-item',
+      //   layoutMode: 'masonry',
+      //   masonry: {
+      //     // use outer width of grid-sizer for columnWidth
+      //     columnWidth: '.grid-item',
+      //     gutter: 15
+      //   }
+      // });
+      //
+      // $('.list').isotope({
+      //   itemSelector: '.list-item',
+      //   layoutMode: 'masonry',
+      //   masonry: {
+      //     columnWidth: '.list-item',
+      //     gutter: 15
+      //   }
+      // });
     } else {
       $('#map').hide();
-      $('.check').css('width', '83.2%');
-      $('.grid-item').css('width', '32%');
-      $('.exclusive').css('width', '84.33%');
-      $('.grid').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'masonry',
-        masonry: {
-          // use outer width of grid-sizer for columnWidth
-          columnWidth: '.grid-item',
-          gutter: 15
-        }
-      });
-
-      $('.list').isotope({
-        itemSelector: '.list-item',
-        layoutMode: 'masonry',
-        masonry: {
-          columnWidth: '.list-item',
-          gutter: 15
-        }
-      });
+      // $('.check').css('width', '83.2%');
+      // $('.grid-item').css('width', '32%');
+      // $('.exclusive').css('width', '84.33%');
+      // $('.grid').isotope({
+      //   itemSelector: '.grid-item',
+      //   layoutMode: 'masonry',
+      //   masonry: {
+      //     // use outer width of grid-sizer for columnWidth
+      //     columnWidth: '.grid-item',
+      //     gutter: 15
+      //   }
+      // });
+      //
+      // $('.list').isotope({
+      //   itemSelector: '.list-item',
+      //   layoutMode: 'masonry',
+      //   masonry: {
+      //     columnWidth: '.list-item',
+      //     gutter: 15
+      //   }
+      // });
     }
   });
 
@@ -228,14 +225,14 @@
     $('.grid').hide();
     $('.list').show();
 
-    $('.list').isotope({
-      itemSelector: '.list-item',
-      layoutMode: 'masonry',
-      masonry: {
-        columnWidth: '.list-item',
-        gutter: 15
-      }
-    });
+    // $('.list').isotope({
+    //   itemSelector: '.list-item',
+    //   layoutMode: 'masonry',
+    //   masonry: {
+    //     columnWidth: '.list-item',
+    //     gutter: 15
+    //   }
+    // });
   });
 
   $('.grid-btn').click(function(e) {
@@ -245,15 +242,15 @@
     $('.list').hide();
     $('.grid').show();
 
-    $('.grid').isotope({
-      itemSelector: '.grid-item',
-      layoutMode: 'masonry',
-      masonry: {
-        // use outer width of grid-sizer for columnWidth
-        columnWidth: '.grid-item',
-        gutter: 15
-      }
-    });
+    // $('.grid').isotope({
+    //   itemSelector: '.grid-item',
+    //   layoutMode: 'masonry',
+    //   masonry: {
+    //     // use outer width of grid-sizer for columnWidth
+    //     columnWidth: '.grid-item',
+    //     gutter: 15
+    //   }
+    // });
   });
 
   $('.owl-carousel').owlCarousel({
@@ -262,6 +259,24 @@
     nav: false,
     lazyLoad: true,
     singleItem: true
+  });
+
+  $('.navbar-brand.dropdown').click(function() {
+
+    if ( $(this).hasClass('opened') ) {
+      $(this).removeClass('opened');
+    } else {
+      $(this).addClass('opened');
+    }
+
+  });
+
+  $('.navbar-brand.dropdown.opened').click(function() {
+
+  });
+
+  $('.datepicker-output').on('click', function(event) {
+    // $('.datepicker-input').click();
   });
 
 })(jQuery);

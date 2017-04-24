@@ -26,7 +26,8 @@ button[type="button"] {
   .down-menu {
     li {
       a {
-        padding-top: 5px;
+        padding: 7px 5px;
+        margin-left: 15px;
       }
     }
   }
@@ -114,6 +115,9 @@ button[type="button"] {
 
 .navbar-right {
   margin-right: 0;
+  &.down-menu {
+    margin-right: 12px !important;
+  }
 }
 
 .dropdown-item {
@@ -144,7 +148,14 @@ button[type="button"] {
     }
   }
 }
-
+@media screen and (max-width: 1600px) {
+  .container-fluid {
+    > .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
   .container {
     width: 100% !important;
@@ -153,7 +164,8 @@ button[type="button"] {
 
 @media screen and (min-width: 1600px) {
   .container {
-    width: 1600px !important;
+    width: 100%!important;
+    max-width: 1600px;
   }
 }
 
@@ -203,18 +215,20 @@ footer {
   }
 }
 
-.datepicker-input {
-  border-left: none;
+.datepicker-input,
+.datepicker-output {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0!important;
   cursor: pointer;
   padding: 5px 5px 3px 1px;
   height: 42px;
-  width: 95% !important;
   background-color: transparent;
   &:focus, &:active {
     outline: none;
     box-shadow: none !important;
     border-color: #ebebeb;
-    border-radius: 4px;
   }
 }
 
@@ -288,10 +302,19 @@ footer {
   border-radius: 0;
   padding-left: 90px;
   padding-top: 10px;
+  &::-webkit-input-placeholder {
+    color: #d7d8da!important;
+    text-align: center;
+  }
+  &:-ms-input-placeholder {
+    color: #d7d8da!important;
+    text-align: center;
+  }
   &::-moz-placeholder {
+    text-align: center;
     font-size: 54px !important;
     font-family: 'Roboto', sans-serif !important;
-    color: #102e4a !important;
+    color: #d7d8da !important;
     font-weight: 300 !important;
   }
 }
@@ -321,7 +344,7 @@ footer {
 }
 
 .avail {
-  margin-left: 7.4px !important;
+  margin-left: 10px;
   margin-top: 2px;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
@@ -362,7 +385,7 @@ footer {
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default {
-  background: #85b83a;
+  background: #69b926;
   border-radius: 50%;
   border: none;
   width: 14px;
@@ -380,6 +403,9 @@ footer {
 }
 
 .ui-slider .ui-slider-range {
-  background: #85b83a;
+  background: #69b926;
 }
-
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}

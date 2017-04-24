@@ -110,7 +110,18 @@ for (i = 0; i < locations.length; i++) {
     }
   })(marker, i));
 
-  google.maps.event.addListener(map, 'click', function() {
-    infowindow.close();
+  google.maps.event.addListener(infowindow, 'domready', function(){
+    $('.open-map-item').click(function() {
+      $('.black-bg-map').fadeIn(200);
+      $('.map-item-block').show("slide", { direction: "right" }, 300);
+    });
   });
+  $('.black-bg-map, .map-item-block .close-btn').click(function() {
+    $('.black-bg-map').fadeOut(200);
+    $('.map-item-block').hide("slide", { direction: "right" }, 200);
+  });
+
+  // google.maps.event.addListener(map, 'click', function() {
+  //   infowindow.close();
+  // });
 }

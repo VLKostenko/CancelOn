@@ -112,7 +112,8 @@ button[type="button"].btn:focus {
 }
 
 .navbar-default .down-menu li a {
-  padding-top: 5px;
+  padding: 7px 5px;
+  margin-left: 15px;
 }
 
 .navbar-default .navbar-nav li a .fa {
@@ -202,6 +203,10 @@ button[type="button"].btn:focus {
   margin-right: 0;
 }
 
+.navbar-right.down-menu {
+  margin-right: 12px !important;
+}
+
 .dropdown-item {
   color: #000;
 }
@@ -224,6 +229,13 @@ button[type="button"].btn:focus {
   color: #55c1ff;
 }
 
+@media screen and (max-width: 1600px) {
+  .container-fluid > .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
   .container {
     width: 100% !important;
@@ -232,7 +244,8 @@ button[type="button"].btn:focus {
 
 @media screen and (min-width: 1600px) {
   .container {
-    width: 1600px !important;
+    width: 100% !important;
+    max-width: 1600px;
   }
 }
 
@@ -282,20 +295,24 @@ button[type="button"].btn:focus {
   border-radius: 4px;
 }
 
-.datepicker-input {
-  border-left: none;
+.datepicker-input,
+.datepicker-output {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0 !important;
   cursor: pointer;
   padding: 5px 5px 3px 1px;
   height: 42px;
-  width: 95% !important;
   background-color: transparent;
 }
 
-.datepicker-input:focus, .datepicker-input:active {
+.datepicker-input:focus, .datepicker-input:active,
+.datepicker-output:focus,
+.datepicker-output:active {
   outline: none;
   box-shadow: none !important;
   border-color: #ebebeb;
-  border-radius: 4px;
 }
 
 .form-control::-moz-placeholder {
@@ -371,10 +388,21 @@ button[type="button"].btn:focus {
   padding-top: 10px;
 }
 
+.input-search::-webkit-input-placeholder {
+  color: #d7d8da !important;
+  text-align: center;
+}
+
+.input-search:-ms-input-placeholder {
+  color: #d7d8da !important;
+  text-align: center;
+}
+
 .input-search::-moz-placeholder {
+  text-align: center;
   font-size: 54px !important;
   font-family: 'Roboto', sans-serif !important;
-  color: #102e4a !important;
+  color: #d7d8da !important;
   font-weight: 300 !important;
 }
 
@@ -404,7 +432,7 @@ button[type="button"].btn:focus {
 }
 
 .avail {
-  margin-left: 7.4px !important;
+  margin-left: 10px;
   margin-top: 2px;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
@@ -442,7 +470,7 @@ button[type="button"].btn:focus {
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default {
-  background: #85b83a;
+  background: #69b926;
   border-radius: 50%;
   border: none;
   width: 14px;
@@ -460,7 +488,12 @@ button[type="button"].btn:focus {
 }
 
 .ui-slider .ui-slider-range {
-  background: #85b83a;
+  background: #69b926;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 
 /* end of Bootstrap override */
@@ -564,7 +597,7 @@ h6, .h6 {
 .price {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-  color: #85b83a;
+  color: #69b926;
   font-size: 30px;
   margin-bottom: 0;
   text-align: right;
@@ -598,9 +631,8 @@ h6, .h6 {
 /* 4 Buttons */
 .blue-btn {
   background-color: #55c1ff;
-  padding: 7px 16px 9px 43px !important;
+  padding: 7px 19px 7px 42px !important;
   border-radius: 4px;
-  margin: -3px -5px 5px 19px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
@@ -616,25 +648,22 @@ h6, .h6 {
   left: 11px;
 }
 
-.blue-btn:hover {
+.blue-btn:hover, .blue-btn:focus {
   background-color: #54aee1 !important;
-  padding: 7px 16px 9px 43px !important;
   border-radius: 4px;
   color: #ffffff !important;
 }
 
 .green-btn {
-  background-color: #85b83a;
-  padding: 7px 22px 10px 19px !important;
+  background-color: #69b926;
+  padding: 7px 19px 7px 19px !important;
   border-radius: 4px;
-  margin: -3px -5px 5px 19px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
 
-.green-btn:hover {
+.green-btn:hover, .green-btn:focus {
   background-color: #7aa835 !important;
-  padding: 7px 22px 10px 19px !important;
   border-radius: 4px;
   color: #ffffff !important;
 }
@@ -712,7 +741,7 @@ h6, .h6 {
   background-color: #55c1ff;
   border-radius: 4px;
   border-color: #55c1ff;
-  padding: 6px 20px 6px 41px;
+  padding: 6px 18px;
   color: #ffffff;
   height: 42px;
   width: 130px;
@@ -722,20 +751,6 @@ h6, .h6 {
   background-color: #54aee1;
   border-color: #54aee1;
   color: #ffffff;
-}
-
-.input-search-btn button:before {
-  content: '';
-  display: block;
-  background-image: url("../images/icons/search-icon.svg");
-  background-size: cover;
-  -webkit-filter: brightness(2);
-  filter: brightness(2);
-  width: 18.5px;
-  height: 18.5px;
-  position: absolute;
-  top: 11px;
-  left: 15px;
 }
 
 .menu-icon {
@@ -860,7 +875,7 @@ h6, .h6 {
   width: 27px;
   height: 16px;
   margin: 0;
-  background: #85B83A;
+  background: #69b926;
   position: absolute;
   top: 5px;
   bottom: 0;
@@ -954,6 +969,13 @@ h6, .h6 {
   position: relative;
   _overflow: hidden;
   min-width: 270px;
+  max-width: 270px;
+}
+
+@media screen and (max-width: 768px) {
+  .date-picker-wrapper .month-wrapper {
+    max-width: 270px;
+  }
 }
 
 .date-picker-wrapper .month-wrapper table {
@@ -1209,7 +1231,6 @@ h6, .h6 {
 
 .date-picker-wrapper {
   min-width: 270px;
-  margin-top: 10px;
 }
 
 .date-picker-wrapper .time1 {
@@ -2301,6 +2322,10 @@ input[type="text"].datepicker-input {
   padding-left: 15px !important;
 }
 
+.pl-16 {
+  padding-left: 16px !important;
+}
+
 .pl-20 {
   padding-left: 20px !important;
 }
@@ -2383,6 +2408,10 @@ input[type="text"].datepicker-input {
 
 .pr-15 {
   padding-right: 15px !important;
+}
+
+.pr-16 {
+  padding-right: 16px !important;
 }
 
 .pr-20 {
@@ -7047,6 +7076,10 @@ input[type="text"].datepicker-input {
   color: #7fc0fd !important;
 }
 
+.distance-blue {
+  color: #2f8ce8 !important;
+}
+
 .orange-text {
   color: #f99e3e;
 }
@@ -7056,7 +7089,7 @@ input[type="text"].datepicker-input {
 }
 
 .green-text {
-  color: #99c45a !important;
+  color: #69b926 !important;
 }
 
 .white-text {
@@ -7085,12 +7118,12 @@ input[type="text"].datepicker-input {
 
 .list-item {
   font-family: 'Roboto', sans-serif !important;
-  width: 99%;
+  width: 100%;
   float: left;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(108, 118, 123, 0.4);
 }
@@ -7117,13 +7150,9 @@ input[type="text"].datepicker-input {
   margin-right: 3px;
 }
 
-.check {
-  font-family: 'Roboto', sans-serif !important;
-}
-
 .grid-item {
   font-family: 'Roboto', sans-serif !important;
-  width: 48.5%;
+  width: calc((100% - 15px)/2);
   float: left;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -7131,6 +7160,11 @@ input[type="text"].datepicker-input {
   margin-bottom: 15px;
   background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(108, 118, 123, 0.4);
+  position: relative;
+}
+
+.grid-item:nth-child(2n) {
+  margin-left: 15px;
 }
 
 .grid-item .views {
@@ -7224,7 +7258,7 @@ input[type="text"].datepicker-input {
 .grid-item .top {
   background: #ff383f;
   color: #fff;
-  padding: 4px 8px 2px;
+  padding: 4px 8px 3px;
   font-size: 10px;
   position: absolute;
   left: 0;
@@ -7317,23 +7351,12 @@ i.fa-dot-circle-o {
 }
 
 #map {
-  margin-right: 15px;
-  float: right;
+  margin-left: 15px;
+  float: left;
   height: 100%;
   min-height: 1500px;
   background-color: grey;
-}
-
-@media (min-width: 1400px) {
-  #map {
-    width: 27%;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-  #map {
-    width: 26.1%;
-  }
+  width: calc(30% - 60px);
 }
 
 .divider {
@@ -7343,10 +7366,9 @@ i.fa-dot-circle-o {
 }
 
 .exclusive {
-  width: 53.91%;
   background-color: #55c1ff;
-  float: right;
-  margin-top: 108px;
+  float: left;
+  margin-top: 2px;
 }
 
 .exclusive .price {
@@ -7581,7 +7603,6 @@ aside {
   width: 17%;
   margin-left: 15px;
   float: left;
-  padding-bottom: 25px;
 }
 
 aside #amount1 {
@@ -7611,6 +7632,16 @@ aside #amount2 {
   margin-top: 11px;
   font-family: 'Roboto', sans-serif;
   border-radius: 4px;
+}
+
+aside .panel-title > a.collapsed {
+  background-color: #ebebeb;
+}
+
+aside #date-adults .input-group-addon {
+  border-left: 0;
+  border-top: 0;
+  border-radius: 0;
 }
 
 aside .facilities .checkbox label {
@@ -7888,7 +7919,8 @@ aside .radio-success input[type="radio"]:checked + label::after {
 }
 
 .sign-in-menu {
-  padding: 15px 0;
+  padding: 15px 0 13px;
+  min-width: 320px;
 }
 
 .sign-in-menu .big-text + a {
@@ -7904,14 +7936,15 @@ aside .radio-success input[type="radio"]:checked + label::after {
 .sign-in-menu .log-input {
   border: none;
   border-bottom: 2px solid #636e80;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 10px;
+  width: 100%;
 }
 
 .sign-in-menu .sign-btn {
   color: #fff !important;
   background: #55c1ff !important;
-  padding: 8px 15px;
+  padding: 12px 15px;
   border-radius: 2px;
   text-transform: uppercase;
   width: 100%;
@@ -7927,7 +7960,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 36px;
+  height: 45px;
   padding-left: 10px;
 }
 
@@ -7939,6 +7972,10 @@ aside .radio-success input[type="radio"]:checked + label::after {
 
 .sign-in-menu .socials a:hover {
   color: #55c1ff !important;
+}
+
+.sign-in-menu .socials a i {
+  font-size: 16px;
 }
 
 .sign-in-menu .log-input::-webkit-input-placeholder {
@@ -7976,6 +8013,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
 .languages-menu .languages a img {
   border-radius: 4px;
   margin-right: 12px;
+  margin-top: -1px;
 }
 
 .languages-menu .languages a:hover {
@@ -8003,7 +8041,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
 }
 
 .filter-top .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-  padding: 3px 0 6px 0;
+  padding: 1px 0 0;
   margin-top: -3px;
   margin-left: -3px;
 }
@@ -8013,17 +8051,14 @@ aside .radio-success input[type="radio"]:checked + label::after {
 }
 
 .check {
-  width: 52.3%;
-  display: block;
   float: left;
-  margin-left: 15px;
-  margin-top: 5px;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .loading {
   font-size: 18px;
-  width: 53.57%;
-  float: right;
+  width: 100%;
+  float: left;
   text-align: center;
   color: #b3b3b3;
   font-weight: 600;
@@ -8034,6 +8069,14 @@ aside .radio-success input[type="radio"]:checked + label::after {
   margin-left: 5px;
   top: 1px;
   position: relative;
+}
+
+.content-wrapper {
+  width: 53%;
+  display: block;
+  float: left;
+  margin-left: 15px;
+  margin-top: 5px;
 }
 
 .special-sign[type="text"]::-webkit-input-placeholder {
@@ -8145,7 +8188,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
   font-size: 9pt;
   cursor: pointer;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: block;
   width: 70px;
   text-align: center;
@@ -8165,10 +8208,11 @@ aside .radio-success input[type="radio"]:checked + label::after {
   margin-right: auto;
 }
 
-.black-bg {
+.black-bg-map {
+  display: none;
   position: absolute;
   right: 15px;
-  width: 80.9%;
+  width: calc(100% - 17% - 30px);
   height: 100%;
   background: rgba(15, 48, 78, 0.7);
 }
@@ -8203,7 +8247,29 @@ aside .radio-success input[type="radio"]:checked + label::after {
   transform: rotate(-45deg);
 }
 
+.nav-pills > li.active {
+  border-bottom: 2px solid #f44336;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active:focus, .nav-pills > li.active:hover {
+  color: #2196f3 !important;
+  background-color: transparent !important;
+}
+
+.nav-pills > li a {
+  color: #333;
+  background: transparent !important;
+}
+
+.filter-top .bootstrap-select .dropdown-menu {
+  font-family: "Roboto", sans-serif;
+}
+
 /* end of helper classes */
+.navbar-brand {
+  max-width: 280px;
+}
+
 .navbar-brand.dropdown + .dropdown-menu {
   display: block;
   opacity: 0;
@@ -8309,23 +8375,15 @@ aside .radio-success input[type="radio"]:checked + label::after {
   transform: rotate(10deg);
 }
 
-.navbar-brand.dropdown + .dropdown-menu:hover {
+.navbar-brand.dropdown.opened + .dropdown-menu {
   opacity: 1;
   visibility: visible;
-}
-
-.navbar-brand.dropdown:hover + .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-}
-
-.black-bg {
-  display: none;
 }
 
 .map-item-block {
   display: none;
   position: absolute;
+  font-family: "Roboto", sans-serif;
   right: 15px;
   width: 45%;
   height: 100%;
@@ -8434,4 +8492,86 @@ aside .radio-success input[type="radio"]:checked + label::after {
 
 .map-item-block .owl-carousel .owl-dots .owl-dot.active span, .map-item-block .owl-carousel .owl-dots .owl-dot:hover span {
   background: #2f8ce8;
+}
+
+.map-item-block .main-price {
+  float: right;
+  padding: 13px 15px 8px;
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  width: 200px;
+  color: #fff;
+  background: #55c1ff;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  margin-top: -58px;
+  margin-right: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.map-item-block .main-price i {
+  float: left;
+  line-height: 36px;
+}
+
+.map-item-block .map-item-info .top-info {
+  padding: 15px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.map-item-block .map-item-info .top-info h3 {
+  font-weight: 600;
+}
+
+.map-item-block .map-item-info .top-info .distance-blue i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.map-item-block .map-item-info .top-info .book-btn {
+  padding: 15px 55px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #00b9f1;
+  border-radius: 5px;
+  line-height: 50px;
+}
+
+.map-item-block .map-item-info .top-info .book-btn:hover {
+  background: #55c1ff;
+}
+
+.map-item-block .map-item-info .bottom-info .nav-pills {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.map-item-block .map-item-info .bottom-info .tab-content #hotel-details ul {
+  float: left;
+  width: 25%;
+}
+
+.map-item-block .map-item-info .bottom-info .tab-content #hotel-details ul span {
+  font-size: 13px;
+  padding-left: 30px;
+  float: left;
+  clear: left;
+  position: relative;
+  width: 100%;
+}
+
+.map-item-block .map-item-info .bottom-info .tab-content #hotel-details ul span i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  bottom: 0;
+  width: 15px;
+  text-align: center;
+}
+
+.map-item-block .map-item-info .bottom-info .tab-content #hotel-details .description p {
+  line-height: 22px;
 }

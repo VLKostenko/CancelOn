@@ -66,6 +66,10 @@
     position: relative;
     _overflow: hidden;
     min-width: 270px;
+    @media screen and (max-width: 768px) {
+      max-width: 270px;
+    }
+    max-width: 270px;
     table {
       width: 100%;
       float: left;
@@ -296,7 +300,6 @@
 
 .date-picker-wrapper {
     min-width: 270px;
-    margin-top: 10px;
   .time1 {
     float: left;
   }

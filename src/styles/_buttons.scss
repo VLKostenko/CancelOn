@@ -1,8 +1,7 @@
 .blue-btn {
   background-color: $main-blue;
-  padding: 7px 16px 9px 43px !important;
+  padding: 7px 19px 7px 42px !important;
   border-radius: 4px;
-  margin: -3px -5px 5px 19px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   &:before {
@@ -15,24 +14,21 @@
     position: absolute;
     left: 11px;
   }
-  &:hover {
+  &:hover, &:focus {
     background-color: $light-blue !important;
-    padding: 7px 16px 9px 43px !important;
     border-radius: 4px;
     color: #ffffff !important;
   }
 }
 
 .green-btn {
-  background-color: #85b83a;
-  padding: 7px 22px 10px 19px !important;
+  background-color: #69b926;
+  padding: 7px 19px 7px 19px !important;
   border-radius: 4px;
-  margin: -3px -5px 5px 19px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  &:hover {
+  &:hover, &:focus {
     background-color: #7aa835 !important;
-    padding: 7px 22px 10px 19px !important;
     border-radius: 4px;
     color: #ffffff !important;
   }
@@ -104,7 +100,7 @@
     background-color: $main-blue;
     border-radius: 4px;
     border-color: $main-blue;
-    padding: 6px 20px 6px 41px;
+    padding: 6px 18px;
     color: #ffffff;
     height: 42px;
     width: 130px;
@@ -113,19 +109,19 @@
       border-color: $light-blue;
       color: #ffffff;
     }
-    &:before {
-      content: '';
-      display: block;
-      background-image: url("../images/icons/search-icon.svg");
-      background-size: cover;
-      -webkit-filter: brightness(2);
-      filter: brightness(2);
-      width: 18.5px;
-      height: 18.5px;
-      position: absolute;
-      top: 11px;
-      left: 15px;
-    }
+    //&:before {
+    //  content: '';
+    //  display: block;
+    //  background-image: url("../images/icons/search-icon.svg");
+    //  background-size: cover;
+    //  -webkit-filter: brightness(2);
+    //  filter: brightness(2);
+    //  width: 18.5px;
+    //  height: 18.5px;
+    //  position: absolute;
+    //  top: 11px;
+    //  left: 15px;
+    //}
   }
 }
 
@@ -257,7 +253,7 @@
   width: 27px;
   height: 16px;
   margin: 0;
-  background: #85B83A;
+  background: #69b926;
   position: absolute;
   top: 5px;
   bottom: 0;

@@ -3,6 +3,42 @@ aside.sidebar-filter
 		.panel.panel-default
 			.panel-heading
 				h4.panel-title
+					a(data-toggle='collapse', href='#date-adults', aria-expanded='true')
+						| Date and Adults
+						i.fa.fa-caret-up(aria-hidden='true')
+			#date-adults.panel-collapse.collapse.in
+				.panel-body
+					.form-group.mb-0
+						label.col-form-label.mt-5(for='date[1]') Check-in date
+						.input-group.input-group-white
+							span.input-group-addon
+								i.fa.fa-calendar.green-text
+							input.form-control.datepicker-input(type='text', placeholder='Check-in date', id='date[1]')
+						label.col-form-label.mt-10(for='date[1]') Check-out date
+						.input-group.input-group-white
+							span.input-group-addon
+								i.fa.fa-calendar.red-text
+							input.form-control.datepicker-output(type='text', placeholder='Check-out date','date[2]')
+						label.col-form-label.mt-20(for='quant[1]') Room Quantity
+						.input-group.mt-10
+							span.input-group-btn
+								button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
+									| -
+							input.form-control.input-number(type='text', id='quant[1]', name='quant[1]', value='1', min='1', max='10')
+							span.input-group-btn
+								button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1]')
+									| +
+						label.col-form-label.mt-20(for='quant[2]') Adults
+						.input-group.mt-10.mb-20
+							span.input-group-btn
+								button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2]')
+									| -
+							input.form-control.input-number(type='text', id='quant[2]', name='quant[2]', value='2', min='1', max='100')
+							span.input-group-btn
+								button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2]')
+									| +
+			.panel-heading
+				h4.panel-title
 					a(data-toggle='collapse', href='#collapse1', aria-expanded='true')
 						| Total Price
 						i.fa.fa-caret-up(aria-hidden='true')
@@ -116,10 +152,10 @@ aside.sidebar-filter
 					.divider
 			.panel-heading
 				h4.panel-title
-					a(data-toggle='collapse', href='#collapse4', aria-expanded='true')
+					a.collapsed(data-toggle='collapse', href='#collapse4', aria-expanded='false')
 						| Facilities
-						i.fa.fa-caret-up(aria-hidden='true')
-			#collapse4.panel-collapse.facilities.collapse.in
+						i.fa.fa-caret-down(aria-hidden='true')
+			#collapse4.panel-collapse.facilities.collapse
 				.panel-body
 					.checkbox.checkbox-success
 						input#checkbox21(type='checkbox')
@@ -172,10 +208,10 @@ aside.sidebar-filter
 					a.underline.block.pt-20.pb-20(href='#') Show 33 parametrs
 		.panel-heading
 			h4.panel-title
-				a(data-toggle='collapse', href='#collapse5', aria-expanded='true')
+				a.collapsed(data-toggle='collapse', href='#collapse5', aria-expanded='false')
 					| Accommodation Type
-					i.fa.fa-caret-up(aria-hidden='true')
-		#collapse5.panel-collapse.collapse.in
+					i.fa.fa-caret-down(aria-hidden='true')
+		#collapse5.panel-collapse.collapse
 			.panel-body
 				.checkbox.checkbox-success
 					input#checkbox41(type='checkbox')
