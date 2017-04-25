@@ -270,9 +270,11 @@
       $(this).removeClass('hidden-filter');
       $('.sidebar-filter').show("slide", { direction: "left" }, 200);
       $('.content-wrapper.hidden-sidebar-filter').removeClass('hidden-sidebar-filter');
+      $('.black-bg-map').removeClass('no-filter');
     } else {
       $(this).addClass('hidden-filter');
       $('.sidebar-filter').hide("slide", { direction: "left" }, 200);
+      $('.black-bg-map').addClass('no-filter');
       setTimeout(function() {
         $('#map').siblings('.content-wrapper').addClass('hidden-sidebar-filter');
       }, 200);

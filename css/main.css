@@ -8321,6 +8321,10 @@ aside .radio-success input[type="radio"]:checked + label::after {
   }
 }
 
+.black-bg-map.no-filter {
+  width: calc(100% - 30px);
+}
+
 .close-icon {
   display: inline-block;
   width: 25px;

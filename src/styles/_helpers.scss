@@ -1113,6 +1113,9 @@ aside {
     $aside-width: 14%;
     @include calc(width, '100% - #{$aside-width} - 30px');
   }
+  &.no-filter {
+    @include calc(width, '100% - 30px');
+  }
 }
 .close-icon {
   display: inline-block;
