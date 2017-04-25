@@ -52,7 +52,7 @@ aside.sidebar-filter
 					a(data-toggle='collapse', href='#collapse2', aria-expanded='true')
 						| Stars
 						i.fa.fa-caret-up(aria-hidden='true')
-			#collapse2.panel-collapse.collapse.in
+			#collapse2.stars-filter.panel-collapse.collapse.in
 				.panel-body
 					.checkbox.checkbox-success
 						input#checkbox1(type='checkbox')
@@ -206,24 +206,24 @@ aside.sidebar-filter
 							|  Single bed
 					.divider
 					a.underline.block.pt-20.pb-20(href='#') Show 33 parametrs
-		.panel-heading
-			h4.panel-title
-				a.collapsed(data-toggle='collapse', href='#collapse5', aria-expanded='false')
-					| Accommodation Type
-					i.fa.fa-caret-down(aria-hidden='true')
-		#collapse5.panel-collapse.collapse
-			.panel-body
-				.checkbox.checkbox-success
-					input#checkbox41(type='checkbox')
-					label(for='checkbox41')
-						| Hotel
-				.divider
-				.checkbox.checkbox-success
-					input#checkbox42(type='checkbox')
-					label(for='checkbox42')
-						| Hostel
-				.divider
-				.checkbox.checkbox-success
-					input#checkbox43(type='checkbox')
-					label(for='checkbox43')
-						| Apartments
+			.panel-heading
+				h4.panel-title
+					a.collapsed(data-toggle='collapse', href='#collapse5', aria-expanded='false')
+						| Accommodation Type
+						i.fa.fa-caret-down(aria-hidden='true')
+			#collapse5.panel-collapse.collapse
+				.panel-body
+					.checkbox.checkbox-success
+						input#checkbox41(type='checkbox')
+						label(for='checkbox41')
+							| Hotel
+					.divider
+					.checkbox.checkbox-success
+						input#checkbox42(type='checkbox')
+						label(for='checkbox42')
+							| Hostel
+					.divider
+					.checkbox.checkbox-success
+						input#checkbox43(type='checkbox')
+						label(for='checkbox43')
+							| Apartments

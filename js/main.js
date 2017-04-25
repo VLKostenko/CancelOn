@@ -143,73 +143,39 @@
     }
   });
 
-  // $('.grid').isotope({
-  //   itemSelector: '.grid-item',
-  //   layoutMode: 'masonry',
-  //   masonry: {
-  //     columnWidth: '.grid-item',
-  //     gutter: 15
-  //   }
-  // });
-  //
-  // $('.list').isotope({
-  //   itemSelector: '.list-item',
-  //   layoutMode: 'masonry',
-  //   masonry: {
-  //     columnWidth: '.list-item',
-  //     gutter: 15
-  //   }
-  // });
 
-  $('.onoffswitch').click(function() {
-    if ( document.getElementById('myonoffswitch').checked ) {
-
-      $('#map').show();
-      // $('.check').css('width', '52.3%');
-      // $('.grid-item').css('width', '49%');
-      // $('.exclusive').css('width', '54.17841374874%');
-      // $('.grid').isotope({
-      //   itemSelector: '.grid-item',
-      //   layoutMode: 'masonry',
-      //   masonry: {
-      //     // use outer width of grid-sizer for columnWidth
-      //     columnWidth: '.grid-item',
-      //     gutter: 15
-      //   }
-      // });
-      //
-      // $('.list').isotope({
-      //   itemSelector: '.list-item',
-      //   layoutMode: 'masonry',
-      //   masonry: {
-      //     columnWidth: '.list-item',
-      //     gutter: 15
-      //   }
-      // });
+  $('.onoffswitch').change(function() {
+    if ( $('#myonoffswitch').prop('checked') ) {
+      $('#map').removeClass('full-width');
+      if ( $('.hide-filter').hasClass('hidden-filter') ) {
+        $('.content-wrapper').fadeIn(200);
+      } else {
+        $('.sidebar-filter, .content-wrapper').fadeIn(200);
+      }
+      $(' .filter-top .search-filter, .filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
+        .css({
+          'opacity': 0,
+          'pointer-events': 'initial'
+        })
+        .animate({
+          'opacity': 1
+        }, 200);
     } else {
-      $('#map').hide();
-      // $('.check').css('width', '83.2%');
-      // $('.grid-item').css('width', '32%');
-      // $('.exclusive').css('width', '84.33%');
-      // $('.grid').isotope({
-      //   itemSelector: '.grid-item',
-      //   layoutMode: 'masonry',
-      //   masonry: {
-      //     // use outer width of grid-sizer for columnWidth
-      //     columnWidth: '.grid-item',
-      //     gutter: 15
-      //   }
-      // });
-      //
-      // $('.list').isotope({
-      //   itemSelector: '.list-item',
-      //   layoutMode: 'masonry',
-      //   masonry: {
-      //     columnWidth: '.list-item',
-      //     gutter: 15
-      //   }
-      // });
+      $('#map').addClass('full-width');
+      $('.sidebar-filter, .content-wrapper').fadeOut(200);
+      $(' .filter-top .search-filter, .filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
+        .css({
+          'opacity': 1,
+          'pointer-events': 'none'
+        })
+        .animate({
+          'opacity': 0
+        }, 200);
     }
+    var center = map.getCenter();
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(center);
+
   });
 
   $('.collapse').on('shown.bs.collapse', function() {
@@ -225,15 +191,44 @@
     $('.grid').hide();
     $('.list').show();
 
-    // $('.list').isotope({
-    //   itemSelector: '.list-item',
-    //   layoutMode: 'masonry',
-    //   masonry: {
-    //     columnWidth: '.list-item',
-    //     gutter: 15
-    //   }
-    // });
   });
+
+  /**
+   * ------------------------------------------------------------------------------------------------------
+   * Load More Items on Page Scroll (on reaching .loading-wrapper)
+   * ------------------------------------------------------------------------------------------------------
+   **/
+
+  appear({
+    elements: function elements() {
+      return document.getElementsByClassName('loading-more');
+    },
+    appear: function appear(el) {
+      var type = el.getAttribute('data-type');
+      el.innerHTML =
+        '<div class="loading">' +
+          '<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>' +
+          '<span class="text-uppercase">Loading</span>' +
+        '</div>';
+      function appendItems(data) {
+        var newItems = $(data);
+
+        $('.content-wrapper .check').append(newItems).fadeIn(200);
+      }
+
+      function shiftedLoading() {
+        $.get('partial/ajax-grid.html', {}, function(data) {
+          appendItems(data);
+        });
+        el.innerHTML = '';
+      }
+      setTimeout(shiftedLoading, 1500);
+    },
+    // if 'reappear: true' appear.js will keep tracking elements for successfuive appears and dissappears
+    reappear: false
+  });
+
+
 
   $('.grid-btn').click(function(e) {
     e.preventDefault();
@@ -242,15 +237,6 @@
     $('.list').hide();
     $('.grid').show();
 
-    // $('.grid').isotope({
-    //   itemSelector: '.grid-item',
-    //   layoutMode: 'masonry',
-    //   masonry: {
-    //     // use outer width of grid-sizer for columnWidth
-    //     columnWidth: '.grid-item',
-    //     gutter: 15
-    //   }
-    // });
   });
 
   $('.owl-carousel').owlCarousel({
@@ -275,8 +261,22 @@
 
   });
 
-  $('.datepicker-output').on('click', function(event) {
-    // $('.datepicker-input').click();
+  // $('.datepicker-output').on('click', function(event) {
+  //   // $('.datepicker-input').click();
+  // });
+
+  $('.hide-filter').click(function() {
+    if ( $(this).hasClass('hidden-filter') ) {
+      $(this).removeClass('hidden-filter');
+      $('.sidebar-filter').show("slide", { direction: "left" }, 200);
+      $('.content-wrapper.hidden-sidebar-filter').removeClass('hidden-sidebar-filter');
+    } else {
+      $(this).addClass('hidden-filter');
+      $('.sidebar-filter').hide("slide", { direction: "left" }, 200);
+      setTimeout(function() {
+        $('#map').siblings('.content-wrapper').addClass('hidden-sidebar-filter');
+      }, 200);
+    }
   });
 
 })(jQuery);

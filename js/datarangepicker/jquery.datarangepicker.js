@@ -2488,9 +2488,7 @@
       $('.am-pm .up-arrow, .am-pm .down-arrow').click(function () {
         if ( $(this).siblings('.showing').hasClass('am') ) {
           $(this).siblings('.showing').removeClass('am').addClass('pm').text('PM');
-          alert(1);
         } else if ( $('.am-pm .showing').hasClass('pm') ) {
-          alert(2);
           $(this).siblings('.showing').removeClass('pm').addClass('am').text('AM');
         }
       });

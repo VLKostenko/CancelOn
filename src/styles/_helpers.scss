@@ -79,7 +79,7 @@
 
 .grid-item {
   font-family: 'Roboto', sans-serif !important;
-  width: calc((100% - 15px)/2);
+  @include calc(width, '(100% - 15px)/2');
   float: left;
   transition: transform 0.5s;
   margin-bottom: 15px;
@@ -258,13 +258,10 @@ i.fa-dot-circle-o {
   height: 100%;
   min-height: 1500px;
   background-color: grey;
-  width: calc(30% - 60px);
-  //@media (min-width: 1400px) {
-  //  width: 26%;
-  //}
-  //@media (min-width: 1200px) and (max-width: 1400px) {
-  //  width: 26.1%;
-  //}
+  @include calc(width, '30% - 60px');
+  &.full-width {
+    @include calc(width, '100% - 30px');
+  }
 }
 
 .divider {
@@ -277,6 +274,7 @@ i.fa-dot-circle-o {
   background-color: $main-blue;
   float: left;
   margin-top: 2px;
+  margin-bottom: 15px;
   .price {
     font-size: 22px;
     margin-top: 58px;
@@ -321,6 +319,7 @@ i.fa-dot-circle-o {
   h5 {
     font-size: 18px;
     margin-top: 8px;
+    margin-bottom: 5px;
     font-family: 'Roboto', sans-serif;
   }
   h4 {
@@ -351,20 +350,24 @@ i.fa-dot-circle-o {
     border: 1px solid #f99e3e;
     color: #f99e3e;
     float: left;
-    padding: 3px 10px;
+    padding: 3px 10px 2px;
+    text-transform: uppercase;
+    font-size: 10px;
   }
   .orange-view {
-    &:hover {
-      background-color: #de8c36;
-    }
+    margin-top: -5px;
     background-color: #f99e3e;
-    padding: 5px 15px;
+    padding: 5px 15px 3px;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 9pt;
     float: right;
     cursor: pointer;
     text-transform: uppercase;
+    @include crossBrowser(border-radius, 2px);
+    &:hover {
+      background-color: #de8c36;
+    }
   }
 }
 
@@ -381,6 +384,7 @@ i.fa-dot-circle-o {
 footer {
   background-color: #282d36;
   width: 100%;
+  font-family: "Montserrat", sans-serif;
   .input-group {
     button {
       height: 49px;
@@ -389,8 +393,12 @@ footer {
       color: #ffffff;
     }
   }
+  h1 {
+    font-family: "Montserrat", sans-serif;
+  }
   a {
     font-size: 14px !important;
+    font-family: "Montserrat", sans-serif;
     &:hover {
       text-decoration: underline !important;
     }
@@ -409,7 +417,7 @@ footer {
     color: #ffffff;
     margin-top: 38px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Montserat', sans-serif;
   }
   .widget-container {
@@ -445,6 +453,14 @@ footer {
       }
     }
   }
+  .best-price {
+    color: #6ac0f3!important;
+    text-decoration: underline!important;
+    &:hover {
+      color: lighten(#6ac0f3, 15%)!important;
+      text-decoration: underline!important;
+    }
+  }
 }
 
 .social {
@@ -465,10 +481,10 @@ footer {
     a {
       font-size: 23px;
       padding: 3px;
-      width: 43px;
+      width: 40px;
       display: block;
-      height: 43px;
-      line-height: 46px;
+      height: 40px;
+      line-height: 42px;
       i {
         font-size: 23px;
         color: #ffffff;
@@ -480,9 +496,13 @@ footer {
 aside {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
-  width: 17%;
   margin-left: 15px;
   float: left;
+  width: $aside-width;
+  @media screen and (min-width: 1441px) {
+    $aside-width: 14%;
+    width: $aside-width;
+  }
   #amount1 {
     float: left;
     width: 46%;
@@ -524,6 +544,15 @@ aside {
       border-radius: 0;
     }
   }
+  .stars-filter {
+    .checkbox {
+      label {
+        &:after {
+          margin-top: -14px;
+        }
+      }
+    }
+  }
   .facilities {
     .checkbox {
       label {
@@ -540,6 +569,15 @@ aside {
       }
     }
   }
+  .checkbox {
+    padding-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    .stars {
+      position: relative;
+      top: 3px;
+    }
+  }
   .checkbox input[type="checkbox"] {
     right: 0;
     opacity: 0;
@@ -549,9 +587,6 @@ aside {
         outline: none!important;
       }
     }
-  }
-  .checkbox {
-    padding-left: 0;
   }
   .checkbox label {
     display: inline-block;
@@ -566,9 +601,9 @@ aside {
     left: 0;
     float: right;
     margin-left: 100%;
-    margin-top: -18px;
-    width: 17px;
-    height: 17px;
+    margin-top: -17px;
+    width: 14px;
+    height: 14px;
     border: 1px solid #cccccc;
     border-radius: 0;
     background-color: #fff;
@@ -877,17 +912,40 @@ aside {
 .filter-top {
   height: 55px;
   padding-top: 18px;
-  margin-top: -10px;
-  margin-left: 5px;
-  margin-right: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     padding: 1px 0 0;
     margin-top: -3px;
     margin-left: -3px;
   }
-  .big-text {
-    margin-left: -5px;
+  .search-filter {
+    float: left;
+    width: $aside-width;
+    @media screen and (min-width: 1441px) {
+      $aside-width: 14%;
+      width: $aside-width;
+    }
+    .hide-filter {
+      margin-right: 10px;
+    }
+  }
+  .content-settings {
+    float: left;
+    margin-left: 5px;
+    @include calc(width, '#{$content-settings-width} - 5px');
+    @media screen and (min-width: 1441px) {
+      $content-settings-width: 86%;
+      @include calc(width, '#{$content-settings-width} - 5px');
+
+    }
+    .display {
+      float: left;
+      padding-right: 20px;
+      margin-left: 5px;
+      margin-top: -3px;
+    }
   }
 }
 
@@ -896,6 +954,10 @@ aside {
   font-family: 'Roboto', sans-serif !important;
 }
 
+.loading-more {
+  width: 100%;
+  float: left;
+}
 .loading {
   font-size: 18px;
   width: 100%;
@@ -903,7 +965,7 @@ aside {
   text-align: center;
   color: #b3b3b3;
   font-weight: 600;
-  margin-top: 23px;
+  margin-top: 50px;
   span {
     margin-left: 5px;
     top: 1px;
@@ -912,11 +974,21 @@ aside {
 }
 
 .content-wrapper {
-  width: 53%;
   display: block;
   float: left;
   margin-left: 15px;
   margin-top: 5px;
+  width: 54%;
+  @include crossBrowser(transition, width .2s);
+  @media screen and (min-width: 1441px) {
+    width: 56%;
+  }
+  &.hidden-sidebar-filter {
+    @include calc(width, '70% + 15px');
+    @media screen and (min-width: 1441px) {
+      @include calc(width, '72% + 15px');
+    }
+  }
 }
 
 @include placeholder-color('.special-sign[type="text"]', #9d9d9d);
@@ -1001,17 +1073,19 @@ aside {
       font-weight: 400;
     }
     .view-btn {
-      background-color: #f99e3e;
-      padding: 5px 15px;
-      color: #fff;
-      font-size: 9pt;
-      cursor: pointer;
-      text-transform: uppercase;
       margin-bottom: 15px;
       display: block;
       width: 70px;
       text-align: center;
       line-height: 16px;
+      margin-top: -5px;
+      background-color: #f99e3e;
+      padding: 5px 15px 3px;
+      color: #fff;
+      font-size: 9pt;
+      cursor: pointer;
+      text-transform: uppercase;
+      border-radius: 2px;
       &:hover {
         background-color: #de8c36;
       }
@@ -1032,9 +1106,13 @@ aside {
   display: none;
   position: absolute;
   right: 15px;
-  width: calc(100% - 17% - 30px);
   height: 100%;
   background: rgba(15, 48, 78, 0.7);
+  @include calc(width, '100% - #{$aside-width} - 30px');
+  @media screen and (min-width: 1441px) {
+    $aside-width: 14%;
+    @include calc(width, '100% - #{$aside-width} - 30px');
+  }
 }
 .close-icon {
   display: inline-block;

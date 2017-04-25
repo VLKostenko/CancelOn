@@ -33,6 +33,7 @@ var folders = {
 var path = {
   build: {
     html: folders.dst,
+    partHtml: folders.dst + 'partial/',
     js_bootstrap: folders.dst + 'js/',
     js_ds_custom: folders.dst + 'js/',
     js_ds_plugins: folders.dst + 'js/',
@@ -50,6 +51,7 @@ var path = {
   src: {
     html: folders.src + '*.html',
     pug: folders.src + '*.pug',
+    pugPart: folders.src + 'parts/partial/*.pug',
     //js
     js_bootstrap: folders.src + 'js/bootstrap.js',
     js_ds_custom: folders.src + 'js/ds-custom.js',
@@ -96,6 +98,14 @@ gulp.task('browser:sync', function() {
 });
 
 gulp.task('html:build', function () {
+  gulp.src(path.src.pugPart)
+    .pipe(rigger())
+    .pipe(pug({ pretty: true }))
+    .pipe(imgRetina(retinaOpts))
+    .pipe(gulp.dest(path.build.partHtml));
+});
+
+gulp.task('pug:build', function () {
   gulp.src(path.src.pug)
     .pipe(rigger())
     .pipe(pug({ pretty: true }))
@@ -189,6 +199,7 @@ gulp.task('fonts:build', function () {
 });
 
 gulp.task('build', [
+  'pug:build',
   'html:build',
   'styles:build',
   'js:build',
@@ -199,7 +210,7 @@ gulp.task('build', [
 
 gulp.task('watch', function () {
   gulp.watch([path.watch.pug], function (event, cb) {
-    gulp.start('html:build');
+    gulp.start('pug:build', 'html:build');
   });
   //css
   gulp.watch([path.watch.css], function (event, cb) {
