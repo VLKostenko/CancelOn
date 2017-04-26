@@ -1,7 +1,11 @@
 nav.navbar.navbar-default.mb-0
 	.container
 		.row
-			.navbar-header.col-md-6
+			.navbar-header
+				button#menu-button.navbar-toggle(type='button')
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
 				a.navbar-brand.dropdown(href='javascript:void(0)')
 					img.img-responsive(alt='logo', src='images/logo.png')
 				.dropdown-menu
@@ -35,9 +39,23 @@ nav.navbar.navbar-default.mb-0
 							a(href='javascript:void(0)')
 								img(src='images/messages.png')
 
-				p.navbar-text.small-text.font-weight-200
+				p.navbar-text.small-text.font-weight-200.visible-lg
 					i.fa.fa-info-circle(aria-hidden='true')
 					|	Sell and Buy Non-Refundable Hotel Reservations
+				#nav_mobile.navbar-mobile
+					ul.nav.navbar-nav
+						li
+							a(href='javascript:void(0)')
+								| Home
+						li
+							a(href='javascript:void(0)')
+								| About
+						li
+							a(href='javascript:void(0)')
+								| Support
+						li
+							a(href='javascript:void(0)')
+								| Alert Me
 			.navbar-menu
 				ul.nav.navbar-nav.navbar-right
 					li
@@ -113,9 +131,9 @@ nav.navbar.navbar-default.mb-0
 						a.blue-btn(href='javascript:void(0)') Unlock special prices
 					li
 						a.green-btn(href='javascript:void(0)') Buy hotel reservation
-					li
+					li.visible-lg
 						a(href='javascript:void(0)') About
-					li
+					li.visible-lg
 						a(href='javascript:void(0)') Support
-					li
+					li.visible-lg
 						a(href='javascript:void(0)') Alert Me

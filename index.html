@@ -56,7 +56,8 @@
     <nav class="navbar navbar-default mb-0">
       <div class="container">
         <div class="row">
-          <div class="navbar-header col-md-6"><a class="navbar-brand dropdown" href="javascript:void(0)"><img class="img-responsive" alt="logo" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
+          <div class="navbar-header">
+            <button class="navbar-toggle" id="menu-button" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand dropdown" href="javascript:void(0)"><img class="img-responsive" alt="logo" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
             <div class="dropdown-menu">
               <div class="logo-info">
                 <div class="info">
@@ -81,7 +82,15 @@
                 <div class="message"><a href="javascript:void(0)"><img src="images/messages.png" srcset="images/messages.png 1x, images/messages@2x.png 2x, images/messages@3x.png 3x"></a></div>
               </div>
             </div>
-            <p class="navbar-text small-text font-weight-200"><i class="fa fa-info-circle" aria-hidden="true"></i>	Sell and Buy Non-Refundable Hotel Reservations</p>
+            <p class="navbar-text small-text font-weight-200 visible-lg"><i class="fa fa-info-circle" aria-hidden="true"></i>	Sell and Buy Non-Refundable Hotel Reservations</p>
+            <div class="navbar-mobile" id="nav_mobile">
+              <ul class="nav navbar-nav">
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">About</a></li>
+                <li><a href="javascript:void(0)">Support</a></li>
+                <li><a href="javascript:void(0)">Alert Me</a></li>
+              </ul>
+            </div>
           </div>
           <div class="navbar-menu">
             <ul class="nav navbar-nav navbar-right">
@@ -124,9 +133,9 @@
             <ul class="nav navbar-nav navbar-right down-menu">
               <li><a class="blue-btn" href="javascript:void(0)">Unlock special prices</a></li>
               <li><a class="green-btn" href="javascript:void(0)">Buy hotel reservation</a></li>
-              <li><a href="javascript:void(0)">About</a></li>
-              <li><a href="javascript:void(0)">Support</a></li>
-              <li><a href="javascript:void(0)">Alert Me</a></li>
+              <li class="visible-lg"><a href="javascript:void(0)">About</a></li>
+              <li class="visible-lg"><a href="javascript:void(0)">Support</a></li>
+              <li class="visible-lg"><a href="javascript:void(0)">Alert Me</a></li>
             </ul>
           </div>
         </div>
@@ -178,9 +187,13 @@
             <option>Newest</option>
           </select>
           <p class="avail">Available 471 Of 471</p>
-          <div class="onoffswitch pull-right">
-            <input class="onoffswitch-checkbox" id="myonoffswitch" type="checkbox" name="onoffswitch" checked>
-            <label class="onoffswitch-label" for="myonoffswitch"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+          <div class="onoffswitch pull-right visible-lg">
+            <input class="myonoffswitch onoffswitch-checkbox" id="myonoffswitch1" type="checkbox" name="onoffswitch1" checked>
+            <label class="onoffswitch-label" for="myonoffswitch1"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+          </div>
+          <div class="onoffswitch pull-right hidden-lg">
+            <input class="myonoffswitch onoffswitch-checkbox" id="myonoffswitch2" type="checkbox" name="onoffswitch2">
+            <label class="onoffswitch-label" for="myonoffswitch2"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
           </div>
         </div>
       </div>
@@ -404,533 +417,519 @@
           </div>
         </div>
       </aside>
-      <div class="content-wrapper">
-        <div class="check">
-          <div class="grid mt-10">
-            <div class="grid-item"><span class="top">Top Deal</span><img class="img-responsive" src="images/room1.png" alt="" srcset="images/room1.png 1x, images/room1@2x.png 2x, images/room1@3x.png 3x">
-              <div class="warning red">Only 3 rooms left!</div>
-              <div class="col-md-9 mt-10">
-                <h2>Joint Base</h2>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-md-3 pl-0 mt-10">
-                <p class="price">$311<span class="regular-text">/day</span></p>
-                <p class="red-price">$520</p>
-              </div>
-              <div class="col-md-12">
-                <p class="small-text font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
-              </div>
-              <div class="divider col-md-12 mb-10"></div>
-              <div class="pl-15 pull-left number"><img src="images/icons/5.svg"></div>
-              <div class="col-md-10 pr-0">
-                <p class="small-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
-              </div>
-              <div class="pull-left w-100">
-                <div class="col-md-6">
-                  <div class="trip"><img src="images/icons/tripavisor.svg"></div>
-                  <div class="col-md-8">
-                    <ul class="reviews">
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                    </ul><a class="extra-small" href="javascript:void(0)">142 Reviews</a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="col-md-11 pl-0 pr-0 mb-10"><a class="views" href="javascript:void(0)">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span></div>
-                </div>
-              </div>
-              <div class="divider col-md-12 mb-10 mt-10"></div>
-              <div class="col-md-12">
-                <ul class="features">
-                  <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-car" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-television" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-shower" aria-hidden="true"></i></li>
-                </ul>
-                <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
-              </div>
-            </div>
-            <div class="grid-item"><img class="img-responsive" src="images/room2.png" alt="" srcset="images/room2.png 1x, images/room2@2x.png 2x, images/room2@3x.png 3x">
-              <div class="col-md-9 mt-10">
-                <h2>London Hilton Hotel</h2>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-md-3 pl-0 mt-10">
-                <p class="price">$200<span class="regular-text">/day</span></p>
-              </div>
-              <div class="col-md-12">
-                <p class="small-text font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
-              </div>
-              <div class="divider col-md-12 mb-10"></div>
-              <div class="pl-15 pull-left number"><img src="images/icons/5.svg"></div>
-              <div class="col-md-10 pr-0">
-                <p class="small-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
-              </div>
-              <div class="pull-left w-100">
-                <div class="col-md-6">
-                  <div class="trip"><img src="images/icons/tripavisor.svg"></div>
-                  <div class="col-md-8">
-                    <ul class="reviews">
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                    </ul><a class="extra-small" href="javascript:void(0)">142 Reviews</a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="col-md-11 pl-0 pr-0 mb-10"><a class="views" href="javascript:void(0)">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>255</span></div>
-                </div>
-              </div>
-              <div class="divider col-md-12 mb-10 mt-10"></div>
-              <div class="col-md-12">
-                <ul class="features">
-                  <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-car" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-television" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-shower" aria-hidden="true"></i></li>
-                </ul>
-                <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
-              </div>
-            </div>
-            <div class="grid-item"><img class="img-responsive" src="images/room3.png" alt="" srcset="images/room3.png 1x, images/room3@2x.png 2x, images/room3@3x.png 3x">
-              <div class="warning orange">Only 5 rooms left!</div>
-              <div class="col-md-9 mt-10">
-                <h2>Radisson Blu Resort</h2>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-md-3 pl-0 mt-10">
-                <p class="price">$177<span class="regular-text">/day</span></p>
-              </div>
-              <div class="col-md-12">
-                <p class="small-text font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
-              </div>
-              <div class="divider col-md-12 mb-10"></div>
-              <div class="pl-15 pull-left number"><img src="images/icons/5.svg"></div>
-              <div class="col-md-10 pr-0">
-                <p class="small-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
-              </div>
-              <div class="pull-left w-100">
-                <div class="col-md-6">
-                  <div class="trip"><img src="images/icons/tripavisor.svg"></div>
-                  <div class="col-md-8">
-                    <ul class="reviews">
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                    </ul><a class="extra-small" href="javascript:void(0)">142 Reviews</a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="col-md-11 pl-0 pr-0 mb-10"><a class="views" href="javascript:void(0)">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>8</span></div>
-                </div>
-              </div>
-              <div class="divider col-md-12 mb-10 mt-10"></div>
-              <div class="col-md-12">
-                <ul class="features">
-                  <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-car" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-television" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-shower" aria-hidden="true"></i></li>
-                </ul>
-                <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
-              </div>
-            </div>
-            <div class="grid-item"><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
-              <div class="warning green">Only 6 rooms left!</div>
-              <div class="col-md-9 mt-10">
-                <h2>Soho, Soma-Bay Resort</h2>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-md-3 pl-0 mt-10">
-                <p class="price">$500<span class="regular-text">/day</span></p>
-                <p class="red-price">$520</p>
-              </div>
-              <div class="col-md-12">
-                <p class="small-text font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
-              </div>
-              <div class="divider col-md-12 mb-10"></div>
-              <div class="pl-15 pull-left number"><img src="images/icons/5.svg"></div>
-              <div class="col-md-10 pr-0">
-                <p class="small-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
-              </div>
-              <div class="pull-left w-100">
-                <div class="col-md-6">
-                  <div class="trip"><img src="images/icons/tripavisor.svg"></div>
-                  <div class="col-md-8">
-                    <ul class="reviews">
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                    </ul><a class="extra-small" href="javascript:void(0)">142 Reviews</a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="col-md-11 pl-0 pr-0 mb-10"><a class="views" href="javascript:void(0)">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>25 688</span></div>
-                </div>
-              </div>
-              <div class="divider col-md-12 mb-10 mt-10"></div>
-              <div class="col-md-12">
-                <ul class="features">
-                  <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-car" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-television" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-shower" aria-hidden="true"></i></li>
-                </ul>
-                <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
-              </div>
-            </div>
-          </div>
-          <div class="list mt-10">
-            <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
-              <div class="col-md-6 mt-10">
-                <h1>Joint Base</h1>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><a class="extra-small ml-5 text-underline" href="javascript:void(0)">142 Reviews</a></li>
-                </ul>
-                <p class="font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
-                <div class="pull-left pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
-                <div class="col-md-10 pl-5 pr-0 top-3">
-                  <p class="regular-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
-                </div>
-                <ul class="features">
-                  <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-car" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-television" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-shower" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-10 pl-0 pr-10">
-                <p class="price pull-right">$468<span class="regular-text">/day</span></p>
-                <p class="red-price pull-right">$520</p>
-                <p class="pull-right w-100 text-right font-weight-600 mb-5">Only<span class="orange-text"> 3</span> rooms left!</p>
-                <div class="clearfix"></div><a class="views" href="javascript:void(0)">View</a>
-                <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
-                <p class="small-text font-weight-400 pull-right mt-5 text-right mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
-              </div>
-            </div>
-            <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
-              <div class="col-md-6 mt-10">
-                <h1>London Hilton Hotel</h1>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><a class="extra-small ml-5 text-underline" href="javascript:void(0)">142 Reviews</a></li>
-                </ul>
-                <p class="font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
-                <div class="pull-left pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
-                <div class="col-md-10 pl-5 pr-0 top-3">
-                  <p class="regular-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
-                </div>
-                <ul class="features">
-                  <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-car" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-television" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-shower" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-10 pl-0 pr-10">
-                <p class="price pull-right">$300<span class="regular-text">/day</span></p>
-                <div class="clearfix"></div><a class="views" href="javascript:void(0)">View</a>
-                <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
-                <p class="small-text font-weight-400 pull-right mt-5 text-right mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
-              </div>
-            </div>
-            <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
-              <div class="col-md-6 mt-10">
-                <h1>Joint Base</h1>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><a class="extra-small ml-5 text-underline" href="javascript:void(0)">142 Reviews</a></li>
-                </ul>
-                <p class="font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
-                <div class="pull-left pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
-                <div class="col-md-10 pl-5 pr-0 top-3">
-                  <p class="regular-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
-                </div>
-                <ul class="features">
-                  <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-car" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-television" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-shower" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-10 pl-0 pr-10">
-                <p class="price pull-right">$211<span class="regular-text">/day</span></p>
-                <div class="clearfix"></div><a class="views" href="javascript:void(0)">View</a>
-                <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
-                <p class="small-text font-weight-400 pull-right mt-5 text-right mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
-              </div>
-            </div>
-            <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
-              <div class="col-md-6 mt-10">
-                <h1>Joint Base</h1>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><a class="extra-small ml-5 text-underline" href="javascript:void(0)">142 Reviews</a></li>
-                </ul>
-                <p class="font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
-                <div class="pull-left pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
-                <div class="col-md-10 pl-5 pr-0 top-3">
-                  <p class="regular-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
-                </div>
-                <ul class="features">
-                  <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-car" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-television" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-shower" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-10 pl-0 pr-10">
-                <p class="price pull-right">$90<span class="regular-text">/day</span></p>
-                <p class="red-price pull-right">$120</p>
-                <p class="pull-right w-100 text-right font-weight-600 mb-5">Only<span class="red-text"> 1</span> room left!</p>
-                <div class="clearfix"></div><a class="views" href="javascript:void(0)">View</a>
-                <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
-                <p class="small-text font-weight-400 pull-right mt-5 text-right mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
-              </div>
-            </div>
-          </div>
-          <div class="row exclusive pl-5 pr-5">
-            <h3>UP TO 80%</h3>
-            <h4>Exclusive Cancelon deals around these dates</h4>
-            <div class="col-md-6 btrans pl-0 pr-0 white">
-              <div class="col-md-1 pl-5 pr-0 mt-15 mb-15"><img width="30" src="images/icons/tripavisor.svg"></div>
-              <div class="col-md-11 pl-0 pr-0 mt-15">
-                <ul class="reviews ml-10">
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                </ul><a class="extra-small reviews-number font-roboto text-underline mt-5" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
-                <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
-              </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
-              <div class="col-md-9 mt-10">
-                <h5>St Martins Lane London</h5>
-                <ul class="stars mb-5">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                </ul>
-                <p class="small-text font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
-                <p class="small-text font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
-              </div>
-              <div class="col-md-3 mt-10 pl-0 pr-15"><img class="pull-right" src="images/icons/heart.svg" width="50" alt="">
-                <p class="price">$500/<span class="regular-text">Day</span></p>
-                <p class="price-red">$780/<span class="regular-text">Day</span></p>
-              </div>
-              <div class="col-md-12 mt-30">
-                <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view" href="javascript:void(0)">VIEW</a>
-              </div>
-            </div>
-            <div class="col-md-6 btrans pl-0 pr-0 white">
-              <div class="col-md-1 pl-5 pr-0 mt-15 mb-15"><img width="30" src="images/icons/tripavisor.svg"></div>
-              <div class="col-md-11 pl-0 pr-0 mt-15">
-                <ul class="reviews ml-10">
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                </ul><a class="extra-small reviews-number font-roboto text-underline mt-5" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
-                <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
-              </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
-              <div class="col-md-9 mt-10">
-                <h5>Soho, Soma-Bay Resort</h5>
-                <ul class="stars mb-5">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                </ul>
-                <p class="small-text font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
-                <p class="small-text font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
-              </div>
-              <div class="col-md-3 mt-10 pl-0 pr-15"><img class="pull-right" src="images/icons/heart.svg" width="50" alt="">
-                <p class="price">$500/<span class="regular-text">Day</span></p>
-                <p class="price-red">$780/<span class="regular-text">Day</span></p>
-              </div>
-              <div class="col-md-12 mt-30">
-                <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view" href="javascript:void(0)">VIEW</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="loading-more">
-          <div class="loading"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i><span class="text-uppercase">Loading</span></div>
-        </div>
-      </div>
-      <div id="map"></div>
-      <div class="black-bg-search"></div>
-      <div class="black-bg-map"></div>
-      <div class="map-item-block">
-        <div class="map-item-block-wrapper">
-          <div class="close-line"><a class="close-btn" href="javascript:void(0)"><span class="close-icon"><span class="bar"></span><span class="bar"></span></span><span class="text">Close Details</span></a>
-            <div class="socials">
-              <ul class="social">
-                <li><a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="javascript:void(0)"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                <li><a href="javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a href="javascript:void(0)"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="title-rating">
-            <div class="row pl-16 pr-16">
-              <div class="col-sm-1"><img src="images/icons/map-item.png" alt="" srcset="images/icons/map-item.png 1x, images/icons/map-item@2x.png 2x, images/icons/map-item@3x.png 3x"></div>
-              <div class="col-sm-3 pl-10">
-                <h2 class="main-title">Joint Base</h2>
-                <ul class="stars">
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                  <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
-                </ul>
-              </div>
-              <div class="col-sm-3 col-sm-offset-5">
-                <ul class="stars">
-                  <li><img class="ml-5 mr-10" width="49" height="44" src="images/icons/tripavisor-text.svg"></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
-                  <li><a class="extra-small text-underline" href="javascript:void(0)">142 Reviews</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="owl-carousel">
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 1" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 2" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 3" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 4" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 5" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 6" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 7" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 8" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 9" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-            <div class="item"><img src="images/map-item-image.png" alt="Alt 10" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
-          </div>
-          <div class="main-price"><i class="fa fa-money" aria-hidden="true"></i><span>$60</span></div>
-          <div class="map-item-info">
-            <div class="row pl-16 pr-16">
-              <div class="col-sm-12">
-                <div class="top-info">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <h3>Overview</h3><span class="distance-blue"><i class="fa fa-map-pin" aria-hidden="true"></i>1.98 km. to the centre of Central Park (map)</span>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="pull-right"><a class="book-btn" href="javascript:void(0)">Book Offsite</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="bottom-info">
-                  <ul class="nav nav-pills">
-                    <li class="active"><a href="#hotel-details" data-toggle="tab">Hotel Details</a></li>
-                    <li><a href="#price-compare" data-toggle="tab">Price Compare</a></li>
+      <div class="main-wrapper">
+        <div class="content-wrapper">
+          <div class="check">
+            <div class="grid mt-10">
+              <div class="grid-item"><span class="top">Top Deal</span><img class="img-responsive" src="images/room1.png" alt="" srcset="images/room1.png 1x, images/room1@2x.png 2x, images/room1@3x.png 3x">
+                <div class="warning red">Only 3 rooms left!</div>
+                <div class="col-md-9 mt-10">
+                  <h2>Joint Base</h2>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
                   </ul>
-                  <div class="tab-content clearfix">
-                    <div class="tab-pane active" id="hotel-details">
-                      <div class="clearfix"></div>
-                      <ul><span><i class="fa distance-blue fa-wifi" aria-hidden="true"></i>Free Wf-Fi</span><span><i class="fa distance-blue fa-car" aria-hidden="true"></i>Parking</span><span><i class="fa distance-blue fa-thermometer-half" aria-hidden="true"></i>Air Conditioner</span><span><i class="fa distance-blue fa-phone" aria-hidden="true"></i>Phone</span></ul>
-                      <ul><span><i class="fa distance-blue fa-television" aria-hidden="true"></i> TV</span><span><i class="fa distance-blue fa-shower" aria-hidden="true"></i> Shower</span><span><i class="fa distance-blue fa-street-view" aria-hidden="true"></i>Valet</span><span><i class="fa distance-blue fa-bed" aria-hidden="true"></i>Single bed</span></ul>
-                      <ul><span>Sweeping broom</span><span>Double bed</span><span><i class="fa distance-blue fa-credit-card-alt" aria-hidden="true"></i>Hotel keycard</span><span><i class="fa distance-blue fa-video-camera" aria-hidden="true"></i>Camera</span></ul>
-                      <ul><span>No smoking</span><span>Do not disturb</span><span><i class="fa distance-blue fa-medkit" aria-hidden="true"></i>Medic</span><span>Smoke free</span></ul>
-                      <div class="clearfix"></div>
-                      <div class="description mt-30">
-                        <h3 class="font-weight-600 mb-15">Description</h3>
-                        <p>Stylish London hotel on Regent Street, near the Tube Regent Street style The stylish Saint Georges Hotel puts you at the top end of Regent Street, in the heart of London. You'll be in one of the city's most exclusive neighborhoods, a couple of blocks from Oxford Circus Tube Station. High-fashion shopping Within 2 minutes you can be browsing the fashion shops and department stores of Oxford Street. If you're looking for something a little more exclusive, head south for 10 minutes to Bond Street, where you'll find designers including Prada and Gucci. Skyline views Guests rave about panoramic views of the London skyline from The Heights Restaurant, perched on the hotel's 15th floor. Comfy and modern Smoke-free guestrooms indulge with free WiFi, flat-screen TVs, and minibars. In superior rooms you'll find slick, contemporary design and upgraded toiletries, as well as an enhanced refreshment tray.</p>
+                </div>
+                <div class="col-md-3 pl-0 mt-10">
+                  <p class="price">$311<span class="regular-text">/day</span></p>
+                  <p class="red-price">$520</p>
+                </div>
+                <div class="col-md-12">
+                  <p class="small-text font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="divider col-md-12 mb-10"></div>
+                <div class="pl-15 pull-left number"><img src="images/icons/5.svg"></div>
+                <div class="col-md-10 pr-0">
+                  <p class="small-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
+                </div>
+                <div class="pull-left w-100">
+                  <div class="grid-rate">
+                    <div class="trip"><img src="images/icons/tripavisor.svg"></div>
+                    <ul class="reviews">
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    </ul><a class="extra-small" href="javascript:void(0)">142 Reviews</a>
+                  </div>
+                  <div class="views-wrapper pr-15 mt-10"><a class="views" href="javascript:void(0)">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>5</span></div>
+                </div>
+                <div class="divider col-md-12 mb-10 mt-10"></div>
+                <div class="col-md-12">
+                  <ul class="features">
+                    <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                </div>
+              </div>
+              <div class="grid-item"><img class="img-responsive" src="images/room2.png" alt="" srcset="images/room2.png 1x, images/room2@2x.png 2x, images/room2@3x.png 3x">
+                <div class="col-md-9 mt-10">
+                  <h2>London Hilton Hotel</h2>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 pl-0 mt-10">
+                  <p class="price">$200<span class="regular-text">/day</span></p>
+                </div>
+                <div class="col-md-12">
+                  <p class="small-text font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="divider col-md-12 mb-10"></div>
+                <div class="pl-15 pull-left number"><img src="images/icons/5.svg"></div>
+                <div class="col-md-10 pr-0">
+                  <p class="small-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
+                </div>
+                <div class="pull-left w-100">
+                  <div class="grid-rate">
+                    <div class="trip"><img src="images/icons/tripavisor.svg"></div>
+                    <ul class="reviews">
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    </ul><a class="extra-small" href="javascript:void(0)">142 Reviews</a>
+                  </div>
+                  <div class="views-wrapper pr-15 mt-10"><a class="views" href="javascript:void(0)">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>255</span></div>
+                </div>
+                <div class="divider col-md-12 mb-10 mt-10"></div>
+                <div class="col-md-12">
+                  <ul class="features">
+                    <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                </div>
+              </div>
+              <div class="grid-item"><img class="img-responsive" src="images/room3.png" alt="" srcset="images/room3.png 1x, images/room3@2x.png 2x, images/room3@3x.png 3x">
+                <div class="warning orange">Only 5 rooms left!</div>
+                <div class="col-md-9 mt-10">
+                  <h2>Radisson Blu Resort</h2>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 pl-0 mt-10">
+                  <p class="price">$177<span class="regular-text">/day</span></p>
+                </div>
+                <div class="col-md-12">
+                  <p class="small-text font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="divider col-md-12 mb-10"></div>
+                <div class="pl-15 pull-left number"><img src="images/icons/5.svg"></div>
+                <div class="col-md-10 pr-0">
+                  <p class="small-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
+                </div>
+                <div class="pull-left w-100">
+                  <div class="grid-rate">
+                    <div class="trip"><img src="images/icons/tripavisor.svg"></div>
+                    <ul class="reviews">
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    </ul><a class="extra-small" href="javascript:void(0)">142 Reviews</a>
+                  </div>
+                  <div class="views-wrapper pr-15 mt-10"><a class="views" href="javascript:void(0)">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>8</span></div>
+                </div>
+                <div class="divider col-md-12 mb-10 mt-10"></div>
+                <div class="col-md-12">
+                  <ul class="features">
+                    <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                </div>
+              </div>
+              <div class="grid-item"><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+                <div class="warning green">Only 6 rooms left!</div>
+                <div class="col-md-9 mt-10">
+                  <h2>Soho, Soma-Bay Resort</h2>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 pl-0 mt-10">
+                  <p class="price">$500<span class="regular-text">/day</span></p>
+                  <p class="red-price">$520</p>
+                </div>
+                <div class="col-md-12">
+                  <p class="small-text font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="divider col-md-12 mb-10"></div>
+                <div class="pl-15 pull-left number"><img src="images/icons/5.svg"></div>
+                <div class="col-md-10 pr-0">
+                  <p class="small-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
+                </div>
+                <div class="pull-left w-100">
+                  <div class="grid-rate">
+                    <div class="trip"><img src="images/icons/tripavisor.svg"></div>
+                    <ul class="reviews">
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                      <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    </ul><a class="extra-small" href="javascript:void(0)">142 Reviews</a>
+                  </div>
+                  <div class="views-wrapper pr-15 mt-10"><a class="views" href="javascript:void(0)">View</a><span class="count"><i class="fa fa-eye" aria-hidden="true"></i>127</span></div>
+                </div>
+                <div class="divider col-md-12 mb-10 mt-10"></div>
+                <div class="col-md-12">
+                  <ul class="features">
+                    <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                </div>
+              </div>
+            </div>
+            <div class="list mt-10">
+              <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
+                <div class="col-md-6 mt-10">
+                  <h1>Joint Base</h1>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><a class="extra-small ml-5 text-underline" href="javascript:void(0)">142 Reviews</a></li>
+                  </ul>
+                  <p class="font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
+                  <div class="pull-left pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
+                  <div class="col-md-10 pl-5 pr-0 top-3">
+                    <p class="regular-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
+                  </div>
+                  <ul class="features">
+                    <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 mt-10 pl-0 pr-10">
+                  <p class="price pull-right">$468<span class="regular-text">/day</span></p>
+                  <p class="red-price pull-right">$520</p>
+                  <p class="pull-right w-100 text-right font-weight-600 mb-5">Only<span class="orange-text"> 3</span> rooms left!</p>
+                  <div class="clearfix"></div><a class="views" href="javascript:void(0)">View</a>
+                  <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
+                  <p class="small-text font-weight-400 pull-right mt-5 text-right mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
+                </div>
+              </div>
+              <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
+                <div class="col-md-6 mt-10">
+                  <h1>London Hilton Hotel</h1>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><a class="extra-small ml-5 text-underline" href="javascript:void(0)">142 Reviews</a></li>
+                  </ul>
+                  <p class="font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
+                  <div class="pull-left pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
+                  <div class="col-md-10 pl-5 pr-0 top-3">
+                    <p class="regular-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
+                  </div>
+                  <ul class="features">
+                    <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 mt-10 pl-0 pr-10">
+                  <p class="price pull-right">$300<span class="regular-text">/day</span></p>
+                  <div class="clearfix"></div><a class="views" href="javascript:void(0)">View</a>
+                  <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
+                  <p class="small-text font-weight-400 pull-right mt-5 text-right mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
+                </div>
+              </div>
+              <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
+                <div class="col-md-6 mt-10">
+                  <h1>Joint Base</h1>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><a class="extra-small ml-5 text-underline" href="javascript:void(0)">142 Reviews</a></li>
+                  </ul>
+                  <p class="font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
+                  <div class="pull-left pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
+                  <div class="col-md-10 pl-5 pr-0 top-3">
+                    <p class="regular-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
+                  </div>
+                  <ul class="features">
+                    <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 mt-10 pl-0 pr-10">
+                  <p class="price pull-right">$211<span class="regular-text">/day</span></p>
+                  <div class="clearfix"></div><a class="views" href="javascript:void(0)">View</a>
+                  <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
+                  <p class="small-text font-weight-400 pull-right mt-5 text-right mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
+                </div>
+              </div>
+              <div class="list-item"><img class="img-responsive col-md-3 pl-0 pr-0" src="images/room-list.png" alt="" srcset="images/room-list.png 1x, images/room-list@2x.png 2x, images/room-list@3x.png 3x">
+                <div class="col-md-6 mt-10">
+                  <h1>Joint Base</h1>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><img class="ml-10 mr-10" width="25" src="images/icons/tripavisor.svg"></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><a class="extra-small ml-5 text-underline" href="javascript:void(0)">142 Reviews</a></li>
+                  </ul>
+                  <p class="font-weight-500">485 Clawson St, Staten Island, NY 10306</p>
+                  <div class="pull-left pl-0 pr-0"><img class="img-responsive" width="25" src="images/icons/5.svg"></div>
+                  <div class="col-md-10 pl-5 pr-0 top-3">
+                    <p class="regular-text font-weight-500"><span class="distance-blue">1.98 km.</span> to the centre of Central Park</p>
+                  </div>
+                  <ul class="features">
+                    <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
+                <div class="col-md-3 mt-10 pl-0 pr-10">
+                  <p class="price pull-right">$90<span class="regular-text">/day</span></p>
+                  <p class="red-price pull-right">$120</p>
+                  <p class="pull-right w-100 text-right font-weight-600 mb-5">Only<span class="red-text"> 1</span> room left!</p>
+                  <div class="clearfix"></div><a class="views" href="javascript:void(0)">View</a>
+                  <p class="small-text font-weight-400 pull-right mt-5 w-100 text-right mb-0">Booked<span class="font-weight-600"> 30</span> Times Today</p>
+                  <p class="small-text font-weight-400 pull-right mt-5 text-right mb-0"><span class="font-weight-600">5</span> People Looking Right Now</p>
+                </div>
+              </div>
+            </div>
+            <div class="row exclusive pl-5 pr-5">
+              <h3>UP TO 80%</h3>
+              <h4>Exclusive Cancelon deals around these dates</h4>
+              <div class="col-md-6 btrans pl-0 pr-0 white">
+                <div class="col-md-1 pl-5 pr-0 mt-15 mb-15"><img width="30" src="images/icons/tripavisor.svg"></div>
+                <div class="col-md-11 pl-0 pr-0 mt-15">
+                  <ul class="reviews ml-10">
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                  </ul><a class="extra-small reviews-number font-roboto text-underline mt-5" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
+                  <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
+                </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+                <div class="col-md-9 mt-10">
+                  <h5>St Martins Lane London</h5>
+                  <ul class="stars mb-5">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="small-text font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
+                  <p class="small-text font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="col-md-3 mt-10 pl-0 pr-15"><img class="pull-right" src="images/icons/heart.svg" width="50" alt="">
+                  <p class="price">$500/<span class="regular-text">Day</span></p>
+                  <p class="price-red">$780/<span class="regular-text">Day</span></p>
+                </div>
+                <div class="col-md-12 mt-30">
+                  <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view" href="javascript:void(0)">VIEW</a>
+                </div>
+              </div>
+              <div class="col-md-6 btrans pl-0 pr-0 white">
+                <div class="col-md-1 pl-5 pr-0 mt-15 mb-15"><img width="30" src="images/icons/tripavisor.svg"></div>
+                <div class="col-md-11 pl-0 pr-0 mt-15">
+                  <ul class="reviews ml-10">
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                  </ul><a class="extra-small reviews-number font-roboto text-underline mt-5" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
+                  <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
+                </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+                <div class="col-md-9 mt-10">
+                  <h5>Soho, Soma-Bay Resort</h5>
+                  <ul class="stars mb-5">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="small-text font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
+                  <p class="small-text font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="col-md-3 mt-10 pl-0 pr-15"><img class="pull-right" src="images/icons/heart.svg" width="50" alt="">
+                  <p class="price">$500/<span class="regular-text">Day</span></p>
+                  <p class="price-red">$780/<span class="regular-text">Day</span></p>
+                </div>
+                <div class="col-md-12 mt-30">
+                  <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view" href="javascript:void(0)">VIEW</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loading-more">
+            <div class="loading"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i><span class="text-uppercase">Loading</span></div>
+          </div>
+        </div>
+        <div id="map"></div>
+        <div class="black-bg-search"></div>
+        <div class="black-bg-map"></div>
+        <div class="map-item-block">
+          <div class="map-item-block-wrapper">
+            <div class="close-line"><a class="close-btn" href="javascript:void(0)"><span class="close-icon"><span class="bar"></span><span class="bar"></span></span><span class="text">Close Details</span></a>
+              <div class="socials">
+                <ul class="social">
+                  <li><a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="javascript:void(0)"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                  <li><a href="javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li><a href="javascript:void(0)"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="title-rating">
+              <div class="row pl-16 pr-16">
+                <div class="col-sm-1"><img src="images/icons/map-item.png" alt="" srcset="images/icons/map-item.png 1x, images/icons/map-item@2x.png 2x, images/icons/map-item@3x.png 3x"></div>
+                <div class="col-sm-3 pl-10">
+                  <h2 class="main-title">Joint Base</h2>
+                  <ul class="stars">
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 col-sm-offset-5">
+                  <ul class="stars">
+                    <li><img class="ml-5 mr-10" width="49" height="44" src="images/icons/tripavisor-text.svg"></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><i class="fa green-text fa-dot-circle-o" aria-hidden="true"></i></li>
+                    <li><a class="extra-small text-underline" href="javascript:void(0)">142 Reviews</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="owl-carousel">
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 1" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 2" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 3" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 4" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 5" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 6" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 7" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 8" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 9" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+              <div class="item"><img src="images/map-item-image.png" alt="Alt 10" srcset="images/map-item-image.png 1x, images/map-item-image@2x.png 2x, images/map-item-image@3x.png 3x"></div>
+            </div>
+            <div class="main-price"><i class="fa fa-money" aria-hidden="true"></i><span>$60</span></div>
+            <div class="map-item-info">
+              <div class="row pl-16 pr-16">
+                <div class="col-sm-12">
+                  <div class="top-info">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <h3>Overview</h3><span class="distance-blue"><i class="fa fa-map-pin" aria-hidden="true"></i>1.98 km. to the centre of Central Park (map)</span>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pull-right"><a class="book-btn" href="javascript:void(0)">Book Offsite</a></div>
                       </div>
                     </div>
-                    <div class="tab-pane" id="price-compare">
-                      <!--iframe(src='https://brands.datahc.com/Hotel/DoubleTree_by_Hilton_NYC_Financial_District.htm', style='width: 100%; height: 300px', frameborder='0')-->
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="bottom-info">
+                    <ul class="nav nav-pills">
+                      <li class="active"><a href="#hotel-details" data-toggle="tab">Hotel Details</a></li>
+                      <li><a href="#price-compare" data-toggle="tab">Price Compare</a></li>
+                    </ul>
+                    <div class="tab-content clearfix">
+                      <div class="tab-pane active" id="hotel-details">
+                        <div class="clearfix"></div>
+                        <ul><span><i class="fa distance-blue fa-wifi" aria-hidden="true"></i>Free Wf-Fi</span><span><i class="fa distance-blue fa-car" aria-hidden="true"></i>Parking</span><span><i class="fa distance-blue fa-thermometer-half" aria-hidden="true"></i>Air Conditioner</span><span><i class="fa distance-blue fa-phone" aria-hidden="true"></i>Phone</span></ul>
+                        <ul><span><i class="fa distance-blue fa-television" aria-hidden="true"></i> TV</span><span><i class="fa distance-blue fa-shower" aria-hidden="true"></i> Shower</span><span><i class="fa distance-blue fa-street-view" aria-hidden="true"></i>Valet</span><span><i class="fa distance-blue fa-bed" aria-hidden="true"></i>Single bed</span></ul>
+                        <ul><span>Sweeping broom</span><span>Double bed</span><span><i class="fa distance-blue fa-credit-card-alt" aria-hidden="true"></i>Hotel keycard</span><span><i class="fa distance-blue fa-video-camera" aria-hidden="true"></i>Camera</span></ul>
+                        <ul><span>No smoking</span><span>Do not disturb</span><span><i class="fa distance-blue fa-medkit" aria-hidden="true"></i>Medic</span><span>Smoke free</span></ul>
+                        <div class="clearfix"></div>
+                        <div class="description mt-30">
+                          <h3 class="font-weight-600 mb-15">Description</h3>
+                          <p>Stylish London hotel on Regent Street, near the Tube Regent Street style The stylish Saint Georges Hotel puts you at the top end of Regent Street, in the heart of London. You'll be in one of the city's most exclusive neighborhoods, a couple of blocks from Oxford Circus Tube Station. High-fashion shopping Within 2 minutes you can be browsing the fashion shops and department stores of Oxford Street. If you're looking for something a little more exclusive, head south for 10 minutes to Bond Street, where you'll find designers including Prada and Gucci. Skyline views Guests rave about panoramic views of the London skyline from The Heights Restaurant, perched on the hotel's 15th floor. Comfy and modern Smoke-free guestrooms indulge with free WiFi, flat-screen TVs, and minibars. In superior rooms you'll find slick, contemporary design and upgraded toiletries, as well as an enhanced refreshment tray.</p>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="price-compare">
+                        <!--iframe(src='https://brands.datahc.com/Hotel/DoubleTree_by_Hilton_NYC_Financial_District.htm', style='width: 100%; height: 300px', frameborder='0')-->
+                      </div>
                     </div>
                   </div>
                 </div>

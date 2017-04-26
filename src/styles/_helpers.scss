@@ -109,13 +109,12 @@
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     margin-top: 2px;
-    margin-right: -13px;
     color: #ffffff;
   }
   .warning {
     position: absolute;
     color: #fff;
-    top: 25%;
+    top: 27%;
     width: 40%;
     padding: 7px 5px;
     font-size: 14px;
@@ -146,8 +145,14 @@
     margin-bottom: 12px;
   }
   .extra-small {
-    margin-left: -2px;
+    margin-left: 42px;
+    float: left;
     text-decoration: underline !important;
+  }
+  .grid-rate {
+    width: 55%;
+    float: left;
+    padding-left: 15px;
   }
   .price {
     font-size: 20px;
@@ -163,7 +168,9 @@
     float: left;
     width: 30px;
     img {
-      margin-top: 6px;
+      margin-top: 5px;
+      position: relative;
+      top: 8px;
     }
   }
   .booked {
@@ -234,9 +241,9 @@
 }
 
 .reviews {
-  width: 100%;
+  width: 50%;
   float: left;
-  margin: -7px;
+  margin-left: 10px;
   li {
     display: inline-block;
     float: left;
@@ -262,18 +269,6 @@ i.fa-dot-circle-o {
       font-size: 18px;
       color: #0c8a96;
     }
-  }
-}
-
-#map {
-  margin-left: 15px;
-  float: left;
-  height: 100%;
-  min-height: 1500px;
-  background-color: grey;
-  @include calc(width, '30% - 60px');
-  &.full-width {
-    @include calc(width, '100% - 30px');
   }
 }
 
@@ -511,11 +506,11 @@ aside {
   background-color: #ffffff;
   margin-left: 15px;
   float: left;
-  width: $aside-width;
-  @media screen and (min-width: 1441px) {
-    $aside-width: 14%;
-    width: $aside-width;
-  }
+  width: 225px;
+  //@media screen and (min-width: 1441px) {
+  //  $aside-width: 14%;
+  //  width: $aside-width;
+  //}
   #amount1 {
     float: left;
     width: 46%;
@@ -935,24 +930,24 @@ aside {
   }
   .search-filter {
     float: left;
-    width: $aside-width;
-    @media screen and (min-width: 1441px) {
-      $aside-width: 14%;
-      width: $aside-width;
-    }
+    width: 225px;
+    //@media screen and (min-width: 1441px) {
+    //  $aside-width: 14%;
+    //  width: $aside-width;
+    //}
     .hide-filter {
-      margin-right: 10px;
+      margin-right: 28px;
     }
   }
   .content-settings {
     float: left;
     margin-left: 5px;
-    @include calc(width, '#{$content-settings-width} - 5px');
-    @media screen and (min-width: 1441px) {
-      $content-settings-width: 86%;
-      @include calc(width, '#{$content-settings-width} - 5px');
-
-    }
+    @include calc(width, '100% - 225px - 5px');
+    //@media screen and (min-width: 1441px) {
+    //  $content-settings-width: 86%;
+    //  @include calc(width, '#{$content-settings-width} - 5px');
+    //
+    //}
     .display {
       float: left;
       padding-right: 20px;
@@ -987,31 +982,45 @@ aside {
   }
 }
 
-.content-wrapper {
-  display: block;
+.main-wrapper {
   float: left;
-  margin-left: 15px;
-  margin-top: 5px;
-  width: 54%;
-  @include crossBrowser(transition, width .2s);
-  @media screen and (min-width: 1441px) {
-    width: 56%;
-  }
+  @include calc(width, '100% - 255px');
   &.hidden-sidebar-filter {
-    @include calc(width, '70% + 15px');
+    @include calc(width, '100% - 15px');
     //@media screen and (min-width: 1441px) {
     //  @include calc(width, '72% + 15px');
     //}
   }
 }
+
+.content-wrapper {
+  display: block;
+  float: left;
+  margin-left: 15px;
+  margin-top: 5px;
+  @include calc(width, '65% - 15px');
+  @include crossBrowser(transition, width .2s);
+  //@media screen and (min-width: 1441px) {
+  //  width: 56%;
+  //}
+}
 .hidden-sidebar-filter {
   .grid-item {
     .warning {
-      top: 35%;
+      top: 32%;
     }
-    .views {
-      margin-right: -18px;
-    }
+  }
+}
+
+#map {
+  margin-left: 15px;
+  float: left;
+  height: 100%;
+  min-height: 1500px;
+  background-color: grey;
+  @include calc(width, '35% - 15px');
+  &.full-width {
+    @include calc(width, '100% - 15px');
   }
 }
 
@@ -1146,11 +1155,11 @@ aside {
   right: 15px;
   height: 100%;
   background: rgba(15, 48, 78, 0.7);
-  @include calc(width, '100% - #{$aside-width} - 30px');
-  @media screen and (min-width: 1441px) {
-    $aside-width: 14%;
-    @include calc(width, '100% - #{$aside-width} - 30px');
-  }
+  @include calc(width, '100% - 225px - 30px');
+  //@media screen and (min-width: 1441px) {
+  //  $aside-width: 14%;
+  //  @include calc(width, '100% - #{$aside-width} - 30px');
+  //}
   &.no-filter {
     @include calc(width, '100% - 30px');
   }

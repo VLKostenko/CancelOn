@@ -16,8 +16,13 @@
 				option High to Low
 				option Newest
 			p.avail Available 471 Of 471
-			.onoffswitch.pull-right
-				input#myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='')
-				label.onoffswitch-label(for='myonoffswitch')
+			.onoffswitch.pull-right.visible-lg
+				input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1', checked='')
+				label.onoffswitch-label(for='myonoffswitch1')
+					span.onoffswitch-inner
+					span.onoffswitch-switch
+			.onoffswitch.pull-right.hidden-lg
+				input#myonoffswitch2.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch2')
+				label.onoffswitch-label(for='myonoffswitch2')
 					span.onoffswitch-inner
 					span.onoffswitch-switch
