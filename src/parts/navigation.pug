@@ -1,120 +1,121 @@
 nav.navbar.navbar-default.mb-0
 	.container
-		.navbar-header
-			a.navbar-brand.dropdown(href='javascript:void(0)')
-				img.img-responsive(alt='logo', src='images/logo.png')
-			.dropdown-menu
-				.logo-info
-					.info
-						.title
-							a(href='javascript:void(0)') Go to Home Page
-						.text The first social marketplace where you can buy & sell unused hotel reservations.
-						.contacts
-							.name Your Company LTD
-							.address Street nr 100, 4536534, Chicago, US
-					.numbers
-						.title Contact Info
-						.number
-							a(href='javascript:void(0)') US 1-855-226-2359
-						.number
-							a(href='javascript:void(0)') UK 0-800-014-8161
-						.number
-							a(href='javascript:void(0)') FR 0-805-080-042
-						.number
-							a(href='javascript:void(0)') DE 0-800-184-4594
-						.number
-							a(href='javascript:void(0)') AU 1-800-459-141
-						.number
-							a(href='javascript:void(0)') NZ 0-800-451-433
-						.number
-							a(href='javascript:void(0)') IE 1-800-901-655
-						.number
-							a(href='javascript:void(0)') CA 1-855-226-2359
-					.message
-						a(href='javascript:void(0)')
-							img(src='images/messages.png')
+		.row
+			.navbar-header.col-md-6
+				a.navbar-brand.dropdown(href='javascript:void(0)')
+					img.img-responsive(alt='logo', src='images/logo.png')
+				.dropdown-menu
+					.logo-info
+						.info
+							.title
+								a(href='javascript:void(0)') Go to Home Page
+							.text The first social marketplace where you can buy & sell unused hotel reservations.
+							.contacts
+								.name Your Company LTD
+								.address Street nr 100, 4536534, Chicago, US
+						.numbers
+							.title Contact Info
+							.number
+								a(href='javascript:void(0)') US 1-855-226-2359
+							.number
+								a(href='javascript:void(0)') UK 0-800-014-8161
+							.number
+								a(href='javascript:void(0)') FR 0-805-080-042
+							.number
+								a(href='javascript:void(0)') DE 0-800-184-4594
+							.number
+								a(href='javascript:void(0)') AU 1-800-459-141
+							.number
+								a(href='javascript:void(0)') NZ 0-800-451-433
+							.number
+								a(href='javascript:void(0)') IE 1-800-901-655
+							.number
+								a(href='javascript:void(0)') CA 1-855-226-2359
+						.message
+							a(href='javascript:void(0)')
+								img(src='images/messages.png')
 
-			p.navbar-text.small-text.font-weight-200
-				i.fa.fa-info-circle(aria-hidden='true')
-				|	Sell and Buy Non-Refundable Hotel Reservations
-		.col-md-6.pull-right.pr-0
-			ul.nav.navbar-nav.navbar-right
-				li
-					a(href='javascript:void(0)')
-						i.fa.fa-map(aria-hidden='true')
-						| Explore
-				li.dropdown.show
-					a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-						i.fa.fa-user(aria-hidden='true')
-						| Sign In
-						span.bs-caret
-							span.caret
-					.dropdown-menu.sign-in-menu(aria-labelledby='dropdownMenuLink1')
-						.col-md-12
-							p.pull-left.w-30.big-text.font-weight-500 Login
-							a.pull-right.w-70.extra-small(href='javascript:void(0)') Not registered? Sign Up
-							input.log-input(type='text', placeholder='Enter Your Login')
-							p.pull-left.w-50.big-text.font-weight-500 Password
-							a.pull-right.w-50.extra-small(href='javascript:void(0)') Forgot Password
-							input.log-input(type='text', placeholder='Enter Your Password')
-							.w-50.pull-left.text-center
-								a.sign-btn(href="javascript:void(0)") Sign In
-							.w-50.pull-right.text-center.socials
-								a(href="javascript:void(0)")
-									i.fa.fa-facebook(aria-hidden='true')
-								a(href="javascript:void(0)")
-									i.fa.fa-google-plus(aria-hidden='true')
-								a(href="javascript:void(0)")
-									i.fa.fa-twitter(aria-hidden='true')
-				li.form-group
-					select#sel1.selectpicker.currency-menu
-						option (USD) $
-						option (EUR) &euro;
-						option (GBP) &pound;
-						option (AED) Dh
-						option (AFN) ؋
-						option (ALL) Lek
-						option (DZD) DA
-						option (ARS) $
-						option (AUD) $
-						option (BSD) $
-						option (BDT) Tk
-						option (BBD) $
-						option (BMD) $
-				li.dropdown.show
-					a#dropdownMenuLink2.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-						i.fa.fa-language(aria-hidden='true')
-						| Language
-						span.bs-caret
-							span.caret
-					.dropdown-menu.languages-menu(aria-labelledby='dropdownMenuLink2')
-						.col-md-12.languages
-							a(href='javascript:void(0)')
-								img(width='25', src='images/icons/flag.svg', alt='')
-								| English
-							a(href='javascript:void(0)')
-								img(width='25', src='images/icons/flag1.svg', alt='')
-								| Deutch
-							a(href='javascript:void(0)')
-								img(width='25', src='images/icons/flag2.svg', alt='')
-								| French
-							a(href='javascript:void(0)')
-								img(width='25', src='images/icons/flag3.svg', alt='')
-								| Spanish
-							a(href='javascript:void(0)')
-								img(width='25', src='images/icons/flag4.svg', alt='')
-								| Italiano
-							a(href='javascript:void(0)')
-								img(width='25', src='images/icons/flag5.svg', alt='')
-								| Russian
-			ul.nav.navbar-nav.navbar-right.down-menu
-				li
-					a.blue-btn(href='javascript:void(0)') Unlock special prices
-				li
-					a.green-btn(href='javascript:void(0)') Buy hotel reservation
-				li
-					a(href='javascript:void(0)') About
-				li
-					a(href='javascript:void(0)') Support
-				li
-					a(href='javascript:void(0)') Alert Me
+				p.navbar-text.small-text.font-weight-200
+					i.fa.fa-info-circle(aria-hidden='true')
+					|	Sell and Buy Non-Refundable Hotel Reservations
+			.navbar-menu
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href='javascript:void(0)')
+							i.fa.fa-map(aria-hidden='true')
+							| Explore
+					li.dropdown.show
+						a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							i.fa.fa-user(aria-hidden='true')
+							| Sign In
+							span.bs-caret
+								span.caret
+						.dropdown-menu.sign-in-menu(aria-labelledby='dropdownMenuLink1')
+							.col-md-12
+								p.pull-left.w-30.big-text.font-weight-500 Login
+								a.pull-right.w-70.extra-small(href='javascript:void(0)') Not registered? Sign Up
+								input.log-input(type='text', placeholder='Enter Your Login')
+								p.pull-left.w-50.big-text.font-weight-500 Password
+								a.pull-right.w-50.extra-small(href='javascript:void(0)') Forgot Password
+								input.log-input(type='text', placeholder='Enter Your Password')
+								.w-50.pull-left.text-center
+									a.sign-btn(href="javascript:void(0)") Sign In
+								.w-50.pull-right.text-center.socials
+									a(href="javascript:void(0)")
+										i.fa.fa-facebook(aria-hidden='true')
+									a(href="javascript:void(0)")
+										i.fa.fa-google-plus(aria-hidden='true')
+									a(href="javascript:void(0)")
+										i.fa.fa-twitter(aria-hidden='true')
+					li.form-group
+						select#sel1.selectpicker.currency-menu
+							option (USD) $
+							option (EUR) &euro;
+							option (GBP) &pound;
+							option (AED) Dh
+							option (AFN) ؋
+							option (ALL) Lek
+							option (DZD) DA
+							option (ARS) $
+							option (AUD) $
+							option (BSD) $
+							option (BDT) Tk
+							option (BBD) $
+							option (BMD) $
+					li.dropdown.show
+						a#dropdownMenuLink2.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							i.fa.fa-language(aria-hidden='true')
+							| Language
+							span.bs-caret
+								span.caret
+						.dropdown-menu.languages-menu(aria-labelledby='dropdownMenuLink2')
+							.col-md-12.languages
+								a(href='javascript:void(0)')
+									img(width='25', src='images/icons/flag.svg', alt='')
+									| English
+								a(href='javascript:void(0)')
+									img(width='25', src='images/icons/flag1.svg', alt='')
+									| Deutch
+								a(href='javascript:void(0)')
+									img(width='25', src='images/icons/flag2.svg', alt='')
+									| French
+								a(href='javascript:void(0)')
+									img(width='25', src='images/icons/flag3.svg', alt='')
+									| Spanish
+								a(href='javascript:void(0)')
+									img(width='25', src='images/icons/flag4.svg', alt='')
+									| Italiano
+								a(href='javascript:void(0)')
+									img(width='25', src='images/icons/flag5.svg', alt='')
+									| Russian
+				ul.nav.navbar-nav.navbar-right.down-menu
+					li
+						a.blue-btn(href='javascript:void(0)') Unlock special prices
+					li
+						a.green-btn(href='javascript:void(0)') Buy hotel reservation
+					li
+						a(href='javascript:void(0)') About
+					li
+						a(href='javascript:void(0)') Support
+					li
+						a(href='javascript:void(0)') Alert Me

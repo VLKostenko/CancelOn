@@ -129,6 +129,20 @@
   }
 }
 
+//.datepick-wrapper {
+//  background: #55c1ff;
+//  color: #fff;
+//  margin-left: -10px;
+//  margin-right: -10px;
+//  padding-left: 10px;
+//  padding-right: 10px;
+//  padding-bottom: 10px;
+//  .datepicker-input,
+//  .datepicker-output {
+//    background: #fff;
+//  }
+//}
+
 .map-item-block {
   display: none;
   position: absolute;
@@ -322,6 +336,7 @@
 .search-result {
   display: none;
   position: absolute;
+  z-index: 11;
   top: calc(100% + 20px);
   left: 0;
   right: 0;
@@ -331,7 +346,6 @@
   width: calc(100% - 15px);
   font-family: "Roboto", sans-serif;
   margin: auto;
-  z-index: 10;
   overflow: hidden;
   -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.25);
@@ -426,3 +440,4 @@
 }
 
 @import "conditions";
+@import "response";

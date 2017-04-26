@@ -201,11 +201,7 @@ button[type="button"].btn:focus {
 }
 
 .navbar-right {
-  margin-right: 0;
-}
-
-.navbar-right.down-menu {
-  margin-right: 12px !important;
+  margin-right: -10px;
 }
 
 .dropdown-item {
@@ -7186,6 +7182,13 @@ input[type="text"].datepicker-input {
   margin-right: 3px;
 }
 
+.navbar-menu {
+  width: 50%;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .grid-item {
   font-family: 'Roboto', sans-serif !important;
   width: calc((100% - 15px)/2);
@@ -7527,7 +7530,7 @@ i.fa-dot-circle-o {
 }
 
 .btrans {
-  border: 10px solid #55c1ff;
+  border: 10px solid #00c2ff;
   border-right-width: 7.5px;
   border-bottom-width: 15px;
 }
@@ -8267,6 +8270,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
 }
 
 .thumbnail {
+  width: 100% !important;
   display: block;
   position: relative;
   padding: 0;
@@ -8344,6 +8348,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
   width: 100%;
   max-width: 100%;
   height: auto;
+  min-height: 100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -8743,6 +8748,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
 .search-result {
   display: none;
   position: absolute;
+  z-index: 11;
   top: calc(100% + 20px);
   left: 0;
   right: 0;
@@ -8752,7 +8758,6 @@ aside .radio-success input[type="radio"]:checked + label::after {
   width: calc(100% - 15px);
   font-family: "Roboto", sans-serif;
   margin: auto;
-  z-index: 10;
   overflow: hidden;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.25);
 }
@@ -8862,7 +8867,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
 }
 
 /* Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 1400px) {
   .list-btn {
     position: relative;
     top: 1px;
@@ -8871,4 +8876,45 @@ aside .radio-success input[type="radio"]:checked + label::after {
 
 .ie-style aside .checkbox label::after {
   margin-top: -14px;
+}
+
+@media screen and (max-width: 1399px) {
+  .navbar-default .navbar-text {
+    margin-top: -8px;
+    margin-bottom: 10px;
+  }
+  .navbar-header {
+    width: 31%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .navbar-menu {
+    width: 69%;
+    padding: 10px 0;
+  }
+  .search-group {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .input-search-btn {
+    right: 15px;
+  }
+  .map-item-block {
+    width: 55%;
+  }
+  .thumbnail .caption {
+    padding: 20px 10px 1px;
+  }
+  .sidebar-filter a {
+    font-size: 14px;
+  }
+  .btrans .date {
+    display: none;
+  }
+  .exclusive .price, .exclusive .red-price {
+    margin-left: -10px;
+  }
+  .search-result {
+    width: calc(100% - 30px);
+  }
 }

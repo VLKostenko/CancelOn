@@ -9,16 +9,17 @@ aside.sidebar-filter
 			#date-adults.panel-collapse.collapse.in
 				.panel-body
 					.form-group.mb-0
-						label.col-form-label.mt-5(for='date[1]') Check-in date
-						.input-group.input-group-white
-							span.input-group-addon
-								i.fa.fa-calendar.green-text
-							input.form-control.datepicker-input(type='text', placeholder='Check-in date', id='date[1]')
-						label.col-form-label.mt-10(for='date[1]') Check-out date
-						.input-group.input-group-white
-							span.input-group-addon
-								i.fa.fa-calendar.red-text
-							input.form-control.datepicker-output(type='text', placeholder='Check-out date','date[2]')
+						.datepick-wrapper
+							label.col-form-label.mt-5(for='date[1]') Check-in date
+							.input-group.input-group-white
+								span.input-group-addon
+									i.fa.fa-calendar.green-text
+								input.form-control.datepicker-input(type='text', placeholder='Check-in date', id='date[1]')
+							label.col-form-label.mt-10(for='date[1]') Check-out date
+							.input-group.input-group-white
+								span.input-group-addon
+									i.fa.fa-calendar.red-text
+								input.form-control.datepicker-output(type='text', placeholder='Check-out date','date[2]')
 						label.col-form-label.mt-20(for='quant[1]') Room Quantity
 						.input-group.mt-10
 							span.input-group-btn

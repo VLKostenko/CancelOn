@@ -1,0 +1,44 @@
+@media screen and (max-width: 1399px) {
+  .navbar-default {
+    .navbar-text {
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+  }
+  .navbar-header {
+    width: 31%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .navbar-menu {
+    width: 69%;
+    padding: 10px 0;
+  }
+  .search-group {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .input-search-btn {
+    right: 15px;
+  }
+  .map-item-block {
+    width: 55%;
+  }
+  .thumbnail .caption {
+    padding: 20px 10px 1px;
+  }
+  .sidebar-filter a {
+    font-size: 14px;
+  }
+  .btrans .date {
+    display: none;
+  }
+  .exclusive {
+    .price, .red-price {
+      margin-left: -10px;
+    }
+  }
+  .search-result {
+    width: calc(100% - 30px);
+  }
+}

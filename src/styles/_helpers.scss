@@ -77,6 +77,13 @@
   }
 }
 
+.navbar-menu {
+  width: 50%;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .grid-item {
   font-family: 'Roboto', sans-serif !important;
   @include calc(width, '(100% - 15px)/2');
@@ -378,7 +385,7 @@ i.fa-dot-circle-o {
 }
 
 .btrans {
-  border: 10px solid $main-blue;
+  border: 10px solid #00c2ff;
   border-right-width: 7.5px;
   border-bottom-width: 15px;
   & + & {
@@ -1047,6 +1054,7 @@ aside {
   left: 22px !important;
 }
 .thumbnail {
+  width: 100%!important;
   display: block;
   position: relative;
   padding: 0;
@@ -1114,6 +1122,7 @@ aside {
       width: 100%;
       max-width: 100%;
       height: auto;
+      min-height: 100px;
       margin-left: auto;
       margin-right: auto;
     }

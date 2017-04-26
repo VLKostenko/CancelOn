@@ -114,10 +114,10 @@ button[type="button"] {
 }
 
 .navbar-right {
-  margin-right: 0;
-  &.down-menu {
-    margin-right: 12px !important;
-  }
+  margin-right: -10px;
+  //&.down-menu {
+  //  margin-right: 12px !important;
+  //}
 }
 
 .dropdown-item {
