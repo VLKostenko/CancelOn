@@ -132,6 +132,7 @@
 .map-item-block {
   display: none;
   position: absolute;
+  z-index: 10;
   font-family: "Roboto", sans-serif;
   right: 15px;
   width: 45%;
@@ -318,3 +319,110 @@
     }
   }
 }
+.search-result {
+  display: none;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 2px solid #55c1ff;
+  border-radius: 5px;
+  width: calc(100% - 15px);
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  z-index: 10;
+  overflow: hidden;
+  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.25);
+  &-inner {
+    max-height: 370px;
+    overflow-y: auto;
+    padding: 0 25px 0 10px;
+  }
+  .list-group {
+    margin: 25px 0 15px;
+    border: none;
+    background: transparent;
+    &-item {
+      background: transparent;
+      border: none;
+      padding: 0;
+      h4 {
+        margin: 5px 0 0;
+        font-weight: 600;
+        color: #000;
+      }
+      .location {
+        color: #9d9d9d;
+        font-size: 12px;
+      }
+      a {
+        display: block;
+        padding: 10px 0 10px 30px;
+        border-radius: 5px;
+        &:hover {
+          background: rgba(0, 185, 241, 0.08);
+        }
+      }
+    }
+    .category {
+      text-align: right;
+      font-family: "Montserrat", sans-serif;
+      font-size: 12px;
+      color: #a7a7a7;
+    }
+  }
+  .city-label {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    text-align: right;
+    padding-right: 25px;
+    padding-top: 3px;
+    color: #a7a7a7;
+    background: #fff;
+    width: 100%;
+  }
+  .result-icon {
+    width: 20px;
+    height: 20px;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    &.marker {
+      background-image: url('../images/icons/location-outline.svg');
+    }
+    &.home {
+      background-image: url('../images/icons/home-outline.svg');
+    }
+    &.info {
+      background-image: url('../images/icons/info-large-outline.svg');
+    }
+    &.plane {
+      background-image: url('../images/icons/plane-outline.svg');
+    }
+  }
+  .search-all {
+    width: 100%;
+    display: block;
+    border-top: 1px solid #ebebeb;
+    background: #f8f8f8;
+    padding: 14px 0 14px 15px;
+    font-size: 14px;
+    text-decoration: underline!important;
+    color: $dark-blue;
+    &:hover {
+      color: lighten($dark-blue, 20%);
+    }
+  }
+}
+
+@import "conditions";

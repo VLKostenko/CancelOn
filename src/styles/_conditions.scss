@@ -1,0 +1,12 @@
+/* Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .list-btn {
+    position: relative;
+    top: 1px;
+  }
+}
+.ie-style {
+  aside .checkbox label::after {
+    margin-top: -14px;
+  }
+}

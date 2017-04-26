@@ -1,43 +1,44 @@
-.container-fluid.white.overflow-hidden
+.container-fluid.white
 	.container
 		.row
-			//.col-md-4.pt-35.pl-0
-			//	.col-md-5
-			//		.form-group
-			//			.input-group.input-group-white
-			//				span.input-group-addon
-			//					i.fa.fa-calendar
-			//				input.form-control.datepicker-input(type='text', placeholder='Date')
-			//				b.carret
-			//	.col-md-6.adults
-			//		.btn-group
-			//			a.adults-btn.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-			//				| Adults
-			//			.dropdown-menu.mt-10
-			//				label.col-form-label(for='quant[1]') Room Quantity
-			//				.input-group.mt-10
-			//					span.input-group-btn
-			//						button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
-			//							| -
-			//					input.form-control.input-number(type='text', id='quant[1]', name='quant[1]', value='1', min='1', max='10')
-			//					span.input-group-btn
-			//						button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1]')
-			//							| +
-			//				label.col-form-label.mt-20(for='quant[2]') Adults
-			//				.input-group.mt-10.mb-20
-			//					span.input-group-btn
-			//						button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2]')
-			//							| -
-			//					input.form-control.input-number(type='text', id='quant[2]', name='quant[2]', value='10', min='1', max='100')
-			//					span.input-group-btn
-			//						button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2]')
-			//							| +
-			//				a.black-text(href='#') Cancel
-			//				a.blue-text.ml-20(href='#') Next
 			.col-md-12
 				.input-group
 					span.search-icon
 					input.form-control.input-search(type='text', placeholder='What Are You Looking For')
 					span.input-search-btn
 						button.btn.btn-default(type='button') SEARCH
+					.search-result
+						span.city-label City
+						.scrollbar-dynamic
+							.search-result-inner
+								ul.list-group
+									li.list-group-item
+										a(href="javascript:void(0)")
+											span.result-icon.marker
+											h4 London
+											span.location Greater London, United Kingdom
+									li.list-group-item
+										a(href="javascript:void(0)")
+											span.result-icon.marker
+											h4 London
+											span.location Victoria Station, United Kingdom
+									li.list-group-item
+										a(href="javascript:void(0)")
+											span.result-icon.home
+											h4 Paddington Station, London
+											span.location London, United Kingdom
+									li.category
+										span.category-name Point of interest
+									li.list-group-item
+										a(href="javascript:void(0)")
+											span.result-icon.info
+											h4 LHR
+											span.location London Heathrow Airport, United Kingdom
+									li.list-group-item
+										a(href="javascript:void(0)")
+											span.result-icon.plane
+											h4 London Gatwick Airport, London
+											span.location London United Kingdom
+						a(href="javascript:void(0)").small.search-all: b All Results 75
+					// /.search-result
 				// /input-group

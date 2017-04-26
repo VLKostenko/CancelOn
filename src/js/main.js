@@ -147,6 +147,8 @@
   $('.onoffswitch').change(function() {
     if ( $('#myonoffswitch').prop('checked') ) {
       $('#map').removeClass('full-width');
+      $('.black-bg-map').removeClass('no-filter');
+      $('.black-bg-search').removeClass('no-filter');
       if ( $('.hide-filter').hasClass('hidden-filter') ) {
         $('.content-wrapper').fadeIn(200);
       } else {
@@ -162,6 +164,8 @@
         }, 200);
     } else {
       $('#map').addClass('full-width');
+      $('.black-bg-map').addClass('no-filter');
+      $('.black-bg-search').addClass('no-filter');
       $('.sidebar-filter, .content-wrapper').fadeOut(200);
       $(' .filter-top .search-filter, .filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
         .css({
@@ -271,14 +275,48 @@
       $('.sidebar-filter').show("slide", { direction: "left" }, 200);
       $('.content-wrapper.hidden-sidebar-filter').removeClass('hidden-sidebar-filter');
       $('.black-bg-map').removeClass('no-filter');
+      $('.black-bg-search').removeClass('no-filter');
     } else {
       $(this).addClass('hidden-filter');
       $('.sidebar-filter').hide("slide", { direction: "left" }, 200);
       $('.black-bg-map').addClass('no-filter');
-      setTimeout(function() {
-        $('#map').siblings('.content-wrapper').addClass('hidden-sidebar-filter');
-      }, 200);
+      $('.black-bg-search').addClass('no-filter');
+      $('#map').siblings('.content-wrapper').addClass('hidden-sidebar-filter');
     }
   });
+
+  function toggleFocus(e) {
+    if ( e.type == 'keyup' ) {
+      $('.search-result').fadeIn(200);
+      $('.black-bg-search').fadeIn(200);
+    }
+    else {
+      $('.search-result').fadeOut(200);
+      $('.black-bg-search').fadeOut(200);
+    }
+    if(e.which == 13) {
+      $('.search-result').fadeOut(200);
+      $('.black-bg-search').fadeOut(200);
+    }
+  }
+  $('.input-search').on('keyup blur', toggleFocus);
+
+  $('.btn-go-app').click(function() {
+    $('html, body').animate(
+      {
+        scrollTop : 0
+      }, 800);
+    return false;
+  });
+
+  var IE = navigator.userAgent.indexOf("MSIE") > -1;
+
+  if ( IE ) {
+    $('body').addClass('ie-style');
+  }
+
+  // $(document).ready(function(){
+  //   $('.scrollbar-dynamic').scrollbar();
+  // });
 
 })(jQuery);

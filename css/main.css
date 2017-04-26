@@ -751,6 +751,7 @@ h6, .h6 {
   color: #ffffff;
   height: 42px;
   width: 130px;
+  font-family: "Roboto", sans-serif;
 }
 
 .input-search-btn button:hover, .input-search-btn button:focus, .input-search-btn button:active {
@@ -781,7 +782,7 @@ h6, .h6 {
   font-size: 21px;
   color: #c8c9cc;
   margin-top: 3.8px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .grid-btn.active i {
@@ -886,7 +887,40 @@ h6, .h6 {
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0px;
+  right: 0;
+}
+
+.btn-go-app {
+  position: absolute;
+  left: -110px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 95px;
+  height: 95px;
+  background: #333943;
+  border-radius: 50%;
+  border: 0;
+  transition: background 0.2s;
+}
+
+.btn-go-app .icon {
+  background-image: url("../images/icons/chevron-outline.svg");
+  width: 40px;
+  height: 30px;
+  margin: auto;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: block;
+  transition: background-image 0.2s;
+}
+
+.btn-go-app:hover {
+  background: #2d323a;
+}
+
+.btn-go-app:hover .icon {
+  background-image: url("../images/icons/chevron-outline-light.svg");
 }
 
 /* end of Buttons */
@@ -7169,6 +7203,11 @@ input[type="text"].datepicker-input {
   margin-left: 15px;
 }
 
+.grid-item .number img {
+  width: 25px;
+  height: 25px;
+}
+
 .grid-item .views {
   float: right;
   background: #7fc0fd;
@@ -7176,7 +7215,7 @@ input[type="text"].datepicker-input {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-top: 2px;
-  margin-right: -9px;
+  margin-right: -13px;
   color: #ffffff;
 }
 
@@ -7192,6 +7231,7 @@ input[type="text"].datepicker-input {
   right: 0;
   margin: auto;
   text-align: center;
+  transition: top 0.2s ease;
 }
 
 .grid-item .warning.red {
@@ -7233,13 +7273,12 @@ input[type="text"].datepicker-input {
   font-size: 12px;
   position: absolute;
   top: 20px;
-  right: 15px;
+  right: 5px;
 }
 
 .grid-item .trip {
   float: left;
   width: 30px;
-  margin-left: 14px;
 }
 
 .grid-item .trip img {
@@ -7372,7 +7411,7 @@ i.fa-dot-circle-o {
 }
 
 .exclusive {
-  background-color: #55c1ff;
+  background-color: #00c2ff;
   float: left;
   margin-top: 2px;
   margin-bottom: 15px;
@@ -8142,6 +8181,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
   color: #b3b3b3;
   font-weight: 600;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .loading span {
@@ -8169,10 +8209,12 @@ aside .radio-success input[type="radio"]:checked + label::after {
   width: calc(70% + 15px);
 }
 
-@media screen and (min-width: 1441px) {
-  .content-wrapper.hidden-sidebar-filter {
-    width: calc(72% + 15px);
-  }
+.hidden-sidebar-filter .grid-item .warning {
+  top: 35%;
+}
+
+.hidden-sidebar-filter .grid-item .views {
+  margin-right: -18px;
 }
 
 .special-sign[type="text"]::-webkit-input-placeholder {
@@ -8306,9 +8348,22 @@ aside .radio-success input[type="radio"]:checked + label::after {
   margin-right: auto;
 }
 
+.black-bg-search {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: -55px;
+  right: 15px;
+  height: calc(100% + 55px);
+  background: rgba(0, 0, 0, 0.25);
+  width: calc(100% - 30px);
+}
+
 .black-bg-map {
   display: none;
   position: absolute;
+  z-index: 5;
+  top: 0;
   right: 15px;
   height: 100%;
   background: rgba(15, 48, 78, 0.7);
@@ -8491,6 +8546,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
 .map-item-block {
   display: none;
   position: absolute;
+  z-index: 10;
   font-family: "Roboto", sans-serif;
   right: 15px;
   width: 45%;
@@ -8682,4 +8738,137 @@ aside .radio-success input[type="radio"]:checked + label::after {
 
 .map-item-block .map-item-info .bottom-info .tab-content #hotel-details .description p {
   line-height: 22px;
+}
+
+.search-result {
+  display: none;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 2px solid #55c1ff;
+  border-radius: 5px;
+  width: calc(100% - 15px);
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  z-index: 10;
+  overflow: hidden;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.25);
+}
+
+.search-result-inner {
+  max-height: 370px;
+  overflow-y: auto;
+  padding: 0 25px 0 10px;
+}
+
+.search-result .list-group {
+  margin: 25px 0 15px;
+  border: none;
+  background: transparent;
+}
+
+.search-result .list-group-item {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.search-result .list-group-item h4 {
+  margin: 5px 0 0;
+  font-weight: 600;
+  color: #000;
+}
+
+.search-result .list-group-item .location {
+  color: #9d9d9d;
+  font-size: 12px;
+}
+
+.search-result .list-group-item a {
+  display: block;
+  padding: 10px 0 10px 30px;
+  border-radius: 5px;
+}
+
+.search-result .list-group-item a:hover {
+  background: rgba(0, 185, 241, 0.08);
+}
+
+.search-result .list-group .category {
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #a7a7a7;
+}
+
+.search-result .city-label {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  text-align: right;
+  padding-right: 25px;
+  padding-top: 3px;
+  color: #a7a7a7;
+  background: #fff;
+  width: 100%;
+}
+
+.search-result .result-icon {
+  width: 20px;
+  height: 20px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.search-result .result-icon.marker {
+  background-image: url("../images/icons/location-outline.svg");
+}
+
+.search-result .result-icon.home {
+  background-image: url("../images/icons/home-outline.svg");
+}
+
+.search-result .result-icon.info {
+  background-image: url("../images/icons/info-large-outline.svg");
+}
+
+.search-result .result-icon.plane {
+  background-image: url("../images/icons/plane-outline.svg");
+}
+
+.search-result .search-all {
+  width: 100%;
+  display: block;
+  border-top: 1px solid #ebebeb;
+  background: #f8f8f8;
+  padding: 14px 0 14px 15px;
+  font-size: 14px;
+  text-decoration: underline !important;
+  color: #00b9f1;
+}
+
+.search-result .search-all:hover {
+  color: #58d8ff;
+}
+
+/* Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .list-btn {
+    position: relative;
+    top: 1px;
+  }
+}
+
+.ie-style aside .checkbox label::after {
+  margin-top: -14px;
 }

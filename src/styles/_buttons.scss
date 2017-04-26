@@ -104,24 +104,12 @@
     color: #ffffff;
     height: 42px;
     width: 130px;
+    font-family: "Roboto", sans-serif;
     &:hover, &:focus, &:active {
       background-color: $light-blue;
       border-color: $light-blue;
       color: #ffffff;
     }
-    //&:before {
-    //  content: '';
-    //  display: block;
-    //  background-image: url("../images/icons/search-icon.svg");
-    //  background-size: cover;
-    //  -webkit-filter: brightness(2);
-    //  filter: brightness(2);
-    //  width: 18.5px;
-    //  height: 18.5px;
-    //  position: absolute;
-    //  top: 11px;
-    //  left: 15px;
-    //}
   }
 }
 
@@ -151,7 +139,7 @@
     font-size: 21px;
     color: #c8c9cc;
     margin-top: 3.8px;
-    margin-left: 0px;
+    margin-left: 0;
   }
   &.active {
     i {
@@ -259,5 +247,35 @@
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0px;
+  right: 0;
+}
+
+.btn-go-app {
+  position: absolute;
+  left: -110px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 95px;
+  height: 95px;
+  background: #333943;
+  border-radius: 50%;
+  border: 0;
+  @include crossBrowser(transition, background .2s);
+  .icon {
+    background-image: url('../images/icons/chevron-outline.svg');
+    width: 40px;
+    height: 30px;
+    margin: auto;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: block;
+    @include crossBrowser(transition, background-image .2s);
+  }
+  &:hover {
+    background: #2d323a;
+    .icon {
+      background-image:  url('../images/icons/chevron-outline-light.svg');
+    }
+  }
 }
