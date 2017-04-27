@@ -265,9 +265,9 @@
 
   });
 
-  // $('.datepicker-output').on('click', function(event) {
-  //   // $('.datepicker-input').click();
-  // });
+  $('.datepicker-output').on('click', function() {
+    $('.datepicker-input').click();
+  });
 
   $('.hide-filter').click(function() {
     if ( $(this).hasClass('hidden-filter') ) {

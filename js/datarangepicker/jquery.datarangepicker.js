@@ -856,12 +856,6 @@
       minDays: 0,
       maxDays: 0,
       showShortcuts: false,
-      shortcuts: {
-        //'prev-days': [1,3,5,7],
-        // 'next-days': [3,5,7],
-        //'prev' : ['week','month','year'],
-        // 'next' : ['week','month','year']
-      },
       customShortcuts: [],
       inline: false,
       container: 'body',
@@ -994,7 +988,7 @@
     return this;
 
     function IsOwnDatePickerClicked(evt, selfObj) {
-      return (selfObj.contains(evt.target) || evt.target == selfObj || (selfObj.childNodes != undefined && $.inArray(evt.target, selfObj.childNodes) >= 0));
+      return (selfObj.contains(evt.target) || evt.target == $('.datepicker-output')[0] || evt.target == selfObj || (selfObj.childNodes != undefined && $.inArray(evt.target, selfObj.childNodes) >= 0));
     }
 
     function init_datepicker() {
@@ -1027,12 +1021,12 @@
 
       if (opt.time.enabled) {
         if ((opt.startDate && opt.endDate) || (opt.start && opt.end)) {
-          showTime(moment(opt.start || opt.startDate).toDate(), 'time1');
-          showTime(moment(opt.end || opt.endDate).toDate(), 'time2');
+          // showTime(moment(opt.start || opt.startDate).toDate(), 'time1');
+          // showTime(moment(opt.end || opt.endDate).toDate(), 'time2');
         } else {
           var defaultEndTime = opt.defaultEndTime ? opt.defaultEndTime : defaultTime;
-          showTime(defaultTime, 'time1');
-          showTime(defaultEndTime, 'time2');
+          // showTime(defaultTime, 'time1');
+          // showTime(defaultEndTime, 'time2');
         }
       }
 
@@ -1777,8 +1771,10 @@
 
         // output all data in input
         dateRange = moment(new Date(opt.start)).format('DD.MM.YYYY') + ' ' + startTime + opt.separator + moment(new Date(opt.end)).format('DD.MM.YYYY') + ' ' + endTime;
-        dateRangeStart = moment(new Date(opt.start)).format('DD.MM.YYYY') + ' ' + startTime;
-        dateRangeEnd = moment(new Date(opt.end)).format('DD.MM.YYYY') + ' ' + endTime;
+        // dateRangeStart = moment(new Date(opt.start)).format('DD.MM.YYYY') + ' ' + startTime;
+        // dateRangeEnd = moment(new Date(opt.end)).format('DD.MM.YYYY') + ' ' + endTime;
+        dateRangeStart = moment(new Date(opt.start)).format('DD.MM.YYYY');
+        dateRangeEnd = moment(new Date(opt.end)).format('DD.MM.YYYY');
         // opt.setValue.call(selfDom, dateRange);
 
         opt.setValue.call(selfDom, dateRangeStart);
@@ -2188,7 +2184,7 @@
           '</div>';
       }
       html += '<div class="buttons"><input type="button" class="close-btn cancel btn-dark-grey btn open-sans-font" value="Cancel" />';
-      html += '<input type="button" class="apply-btn disabled btn-primary btn open-sans-font' + getApplyBtnClass() + '" value="Save Time" /></div>';
+      html += '<input type="button" class="apply-btn disabled btn-primary btn open-sans-font' + getApplyBtnClass() + '" value="Save Date" /></div>';
 
       html += '</div>' +
         '<div style="clear:both;height:0;font-size:0;"></div>' +

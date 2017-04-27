@@ -161,6 +161,7 @@ button[type="button"].btn:focus {
 .navbar-default .navbar-nav li .bootstrap-select button:hover, .navbar-default .navbar-nav li .bootstrap-select button:active {
   background: transparent !important;
   color: #55c1ff;
+  box-shadow: none;
 }
 
 .navbar-default .navbar-nav li .bootstrap-select .dropdown-toggle .caret {
@@ -226,10 +227,21 @@ button[type="button"].btn:focus {
   color: #55c1ff;
 }
 
-@media screen and (max-width: 1600px) {
-  .container-fluid > .container {
-    padding-left: 0;
-    padding-right: 0;
+@media screen and (min-width: 1400px) and (max-width: 1619px) {
+  footer .container {
+    width: 1170px !important;
+  }
+}
+
+@media screen and (min-width: 1620px) {
+  footer .container {
+    width: 1170px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
 }
 
@@ -246,15 +258,10 @@ button[type="button"].btn:focus {
   }
 }
 
-@media screen and (min-width: 1400px) and (max-width: 1619px) {
-  footer .container {
-    width: 1170px !important;
-  }
-}
-
-@media screen and (min-width: 1620px) {
-  footer .container {
-    width: 1170px !important;
+@media screen and (max-width: 1600px) {
+  .container-fluid > .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -665,7 +672,7 @@ h6, .h6 {
 }
 
 .green-btn:hover, .green-btn:focus {
-  background-color: #7aa835 !important;
+  background-color: #5ba021 !important;
   border-radius: 4px;
   color: #ffffff !important;
 }
@@ -1347,7 +1354,7 @@ input[type="text"].datepicker-input {
 }
 
 .date-picker-wrapper.single-month .time {
-  height: 125px;
+  height: 105px;
   background: #f3f3f3;
   padding-top: 10px;
   color: #999;
@@ -1380,6 +1387,7 @@ input[type="text"].datepicker-input {
   top: 52%;
   margin: auto;
   text-align: center;
+  display: none;
 }
 
 .date-picker-wrapper .start-time, .date-picker-wrapper .end-time {
@@ -1611,7 +1619,7 @@ input[type="text"].datepicker-input {
 .date-picker-wrapper .month-wrapper .time .buttons {
   width: 100%;
   float: left;
-  padding: 35px 0 15px;
+  padding: 15px 0 15px;
 }
 
 .date-picker-wrapper .month-wrapper .time .buttons input {
@@ -8857,6 +8865,16 @@ aside .radio-success input[type="radio"]:checked + label::after {
   margin-top: -14px;
 }
 
+@media screen and (min-width: 1400px) {
+  .navbar-header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .navbar-menu {
+    float: right;
+  }
+}
+
 @media screen and (max-width: 1399px) {
   .navbar-default .navbar-text {
     margin-top: -8px;
@@ -8872,8 +8890,8 @@ aside .radio-success input[type="radio"]:checked + label::after {
     padding: 10px 0;
   }
   .search-group {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .input-search-btn {
     right: 15px;
@@ -8938,6 +8956,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
   .navbar-header {
     width: 45%;
     padding-right: 0;
+    padding-left: 0;
   }
   .navbar-header .navbar-brand {
     max-width: 210px;
@@ -9026,7 +9045,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
   .input-group .input-search {
     font-size: 40px;
     text-align: left;
-    padding-left: 60px;
+    padding-left: 80px;
   }
   .input-group .input-search::-webkit-input-placeholder {
     text-align: left;
@@ -9041,7 +9060,7 @@ aside .radio-success input[type="radio"]:checked + label::after {
     font-size: 40px;
   }
   .container-fluid > .container {
-    padding-left: 0;
+    padding-left: 15px;
     padding-right: 15px;
   }
   .list-btn {
@@ -9095,6 +9114,17 @@ aside .radio-success input[type="radio"]:checked + label::after {
     background: #fff;
     box-shadow: none;
   }
+  #nav_mobile .nav:before {
+    content: '';
+    position: absolute;
+    z-index: 10001;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    -ms-box-shadow: inset -0.35em 0 0.3em 0 rgba(0, 0, 0, 0.2);
+    -o-box-shadow: inset -0.35em 0 0.3em 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset -0.35em 0 0.3em 0 rgba(0, 0, 0, 0.2);
+  }
   #nav_mobile .nav li {
     width: 100%;
   }
@@ -9105,8 +9135,8 @@ aside .radio-success input[type="radio"]:checked + label::after {
     font-size: 16px;
     padding: 8px 55px 8px 42px;
     position: relative;
+    width: calc(calc(100% - 5px));
     z-index: 99999;
-    margin-left: 5px;
     line-height: 29px;
     border: 0;
     border-bottom: 1px solid #f3f3f3;

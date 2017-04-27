@@ -28,7 +28,7 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   &:hover, &:focus {
-    background-color: #7aa835 !important;
+    background-color: darken(#69b926, 6%) !important;
     border-radius: 4px;
     color: #ffffff !important;
   }

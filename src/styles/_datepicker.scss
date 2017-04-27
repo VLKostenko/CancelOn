@@ -382,7 +382,7 @@ input[type="text"] {
   font-family: "Open Sans";
   /* Time */
   &.single-month .time {
-    height: 125px;
+    height: 105px;
     background: #f3f3f3;
     padding-top: 10px;
     color: #999;
@@ -412,6 +412,7 @@ input[type="text"] {
     top: 52%;
     margin: auto;
     text-align: center;
+    display: none;
   }
   .start-time, .end-time {
     width: 50%;
@@ -616,7 +617,8 @@ input[type="text"] {
     .time .buttons {
       width: 100%;
       float: left;
-      padding: 35px 0 15px;
+      //padding: 35px 0 15px;
+      padding: 15px 0 15px;
       input {
         width: 40%;
         margin: 0 5%;

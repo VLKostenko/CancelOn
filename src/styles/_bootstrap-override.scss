@@ -70,6 +70,7 @@ button[type="button"] {
           &:hover, &:active {
             background: transparent !important;
             color: $main-blue;
+            box-shadow: none;
           }
         }
         .dropdown-toggle {
@@ -148,14 +149,33 @@ button[type="button"] {
     }
   }
 }
-@media screen and (max-width: 1600px) {
-  .container-fluid {
-    > .container {
-      padding-left: 0;
-      padding-right: 0;
+
+footer {
+  @media screen and (min-width: 1400px) and (max-width: 1619px) {
+    .container {
+      width: 1170px !important;
+    }
+  }
+  @media screen and (min-width: 1620px) {
+    .container {
+      width: 1170px !important;
     }
   }
 }
+
+//@media (min-width: 768px) {
+//  .container {
+//    width: 770px;
+//  }
+//}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
   .container {
     width: 100% !important;
@@ -169,15 +189,11 @@ button[type="button"] {
   }
 }
 
-footer {
-  @media screen and (min-width: 1400px) and (max-width: 1619px) {
-    .container {
-      width: 1170px !important;
-    }
-  }
-  @media screen and (min-width: 1620px) {
-    .container {
-      width: 1170px !important;
+@media screen and (max-width: 1600px) {
+  .container-fluid {
+    > .container {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
