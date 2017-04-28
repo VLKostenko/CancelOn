@@ -393,3 +393,21 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 22px auto!important;
+    width: 120px;
+    height: 34px;
+    max-width: initial!important;
+    padding: 0!important;
+  }
+  .navbar-header {
+    .navbar-toggle {
+      width: 60px;
+      height: 78px;
+    }
+  }
+}
