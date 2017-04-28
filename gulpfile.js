@@ -167,7 +167,7 @@ gulp.task('styles:build', function () {
   gulp.src(path.src.css)
     .pipe(clip())
     .pipe(sass({
-      // includePaths: ['src/styles/'],
+      includePaths: ['src/styles/'],
       outputStyle: 'expanded',
       sourceMap: true,
       errLogToConsole: true

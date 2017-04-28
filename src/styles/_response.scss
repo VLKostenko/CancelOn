@@ -231,6 +231,9 @@
   .main-wrapper {
     #map {
       display: none;
+      &.full-width {
+        display: block;
+      }
     }
     .content-wrapper {
       @include calc(width, '100% - 15px');
@@ -315,4 +318,78 @@
   //    float: left;
   //  }
   //}
+}
+@media screen and (min-width: 992px) {
+  footer {
+    .clearfix {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .map-item-block {
+    width: 90%;
+  }
+  .grid-item {
+    width: 100%;
+    margin-left: 0;
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+    .preview {
+      .image {
+        height: 205px;
+      }
+    }
+    .warning {
+      top: 35%;
+    }
+    .reviews {
+      font-size: 12px;
+      margin-top: 12px;
+    }
+  }
+  .main-wrapper {
+    &.hidden-sidebar-filter {
+      .grid-item {
+        .preview {
+          .image {
+            height: 260px;
+          }
+        }
+        .warning {
+          top: 43%;
+        }
+      }
+      .exclusive {
+        .btrans {
+          min-height: 526px;
+        }
+      }
+    }
+  }
+  .search-result {
+    left: -10px;
+    width: 100%;
+  }
+  .exclusive {
+    width: 100%;
+    margin: auto;
+    .trip {
+      .rate {
+        margin-bottom: 15px;
+      }
+    }
+    .btrans {
+      min-height: 433px;
+      border-width: 5px;
+      border-top-width: 10px;
+      border-bottom-width: 10px;
+      & + .btrans {
+        border-width: 5px;
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+      }
+    }
+  }
 }

@@ -7,22 +7,17 @@
 					span.menu-icon
 		.content-settings
 			.display.visible-lg
-				a.list-btn.active(href='javascript:void(0)')
+				a.list-btn(href='javascript:void(0)')
 					i.fa.fa-bars(aria-hidden='true')
-				a.grid-btn.ml-5(href='javascript:void(0)')
+				a.grid-btn.active.ml-5(href='javascript:void(0)')
 					i.fa.fa-th(aria-hidden='true')
 			select.selectpicker.pull-left
 				option Low to High
 				option High to Low
 				option Newest
 			p.avail Available 471 Of 471
-			.onoffswitch.pull-right.visible-lg
-				input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1', checked='')
+			.onoffswitch.pull-right
+				input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1')
 				label.onoffswitch-label(for='myonoffswitch1')
-					span.onoffswitch-inner
-					span.onoffswitch-switch
-			.onoffswitch.pull-right.hidden-lg
-				input#myonoffswitch2.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch2')
-				label.onoffswitch-label(for='myonoffswitch2')
 					span.onoffswitch-inner
 					span.onoffswitch-switch

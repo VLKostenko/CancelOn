@@ -4,23 +4,23 @@ aside.sidebar-filter
 			.panel-heading
 				h4.panel-title
 					a(data-toggle='collapse', href='#date-adults', aria-expanded='true')
-						| Date and Adults
+						| General
 						i.fa.fa-caret-up(aria-hidden='true')
 			#date-adults.panel-collapse.collapse.in
-				.panel-body
+				.panel-body.pt-0
 					.form-group.mb-0
 						.datepick-wrapper
-							label.col-form-label.mt-5(for='date[1]') Check-in date
+							//label.col-form-label.mt-5(for='date[1]') Check-in date
 							.input-group.input-group-white
 								span.input-group-addon
 									i.fa.fa-calendar.green-text
 								input.form-control.datepicker-input(type='text', placeholder='Check-in date', id='date[1]')
-							label.col-form-label.mt-10(for='date[1]') Check-out date
+							//label.col-form-label.mt-10(for='date[1]') Check-out date
 							.input-group.input-group-white
 								span.input-group-addon
 									i.fa.fa-calendar.red-text
 								input.form-control.datepicker-output(type='text', placeholder='Check-out date','date[2]')
-						label.col-form-label.mt-20(for='quant[1]') Room Quantity
+						label.col-form-label.mt-20(for='quant[1]') Rooms
 						.input-group.mt-10
 							span.input-group-btn
 								button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')

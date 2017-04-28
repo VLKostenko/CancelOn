@@ -129,19 +129,29 @@
   }
 }
 
-//.datepick-wrapper {
-//  background: #55c1ff;
-//  color: #fff;
-//  margin-left: -10px;
-//  margin-right: -10px;
-//  padding-left: 10px;
-//  padding-right: 10px;
-//  padding-bottom: 10px;
-//  .datepicker-input,
-//  .datepicker-output {
-//    background: #fff;
-//  }
-//}
+.datepick-wrapper {
+  background: #55c1ff;
+  color: #fff;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1px;
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .datepicker-input,
+  .datepicker-output {
+    background: #fff;
+    border-top-right-radius: 5px!important;
+    border-bottom-right-radius: 5px!important;
+  }
+  .input-group-addon {
+    border-top-left-radius: 5px!important;
+    border-bottom-left-radius: 5px!important;
+  }
+}
 
 .map-item-block {
   display: none;
@@ -215,6 +225,21 @@
         font-size: 22px;
         font-weight: 600;
         margin-bottom: 0;
+      }
+      .trip {
+        .rate {
+          .rate-image {
+            float: right;
+            margin-right: 2px;
+          }
+        }
+      }
+      .reviews {
+        font-size: 10px;
+        margin: 5px 4px 5px 2px;
+        text-decoration: underline!important;
+        float: right;
+        text-align: right;
       }
     }
   }
@@ -436,6 +461,27 @@
     &:hover {
       color: lighten($dark-blue, 20%);
     }
+  }
+}
+
+.load-icon {
+  color: #55c1ff;
+  font-size: 50px;
+  position: absolute;
+  background: #fff;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 0;
+  z-index: 10;
+  left: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  @include crossBrowser(transition, opacity .1s);
+  &.writing {
+    opacity: 1;
   }
 }
 

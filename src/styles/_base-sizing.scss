@@ -364,6 +364,9 @@
 * Helper classes for side margins on negative
 */
 
+.mnl-0 {
+	margin-left: 0!important;
+}
 .mnl-10 {
 	margin-left: -10px !important;
 }
@@ -486,6 +489,10 @@
 
 .mnr-150 {
 	margin-right: -150px !important;
+}
+
+.mnt-0 {
+	margin-top: 0!important;
 }
 
 .mnt-1 {
@@ -2528,6 +2535,9 @@
   * Margins Classes - Negative
   * Helper classes for side margins on negative MEDIUM
   */
+	.mnl-md-0 {
+		margin-left: 0!important;
+	}
 	.mnl-md-10 {
 		margin-left: -10px !important;
 	}
@@ -2617,6 +2627,9 @@
 	}
 	.mnr-md-150 {
 		margin-right: -150px !important;
+	}
+	.mnt-md-0 {
+		margin-top: 0!important;
 	}
 	.mnt-md-10 {
 		margin-top: -10px !important;
@@ -3601,6 +3614,9 @@
   * Margins Classes - Negative
   * Helper classes for side margins on negative SMALL
   */
+	.mnl-sm-0 {
+		margin-left: 0!important;
+	}
 	.mnl-sm-10 {
 		margin-left: -10px !important;
 	}
@@ -3690,6 +3706,9 @@
 	}
 	.mnr-sm-150 {
 		margin-right: -150px !important;
+	}
+	.mnt-sm-0 {
+		margin-top: 0!important;
 	}
 	.mnt-sm-10 {
 		margin-top: -10px !important;
@@ -4673,6 +4692,9 @@
   * Margins Classes - Negative
   * Helper classes for side margins on negative EXTRA SMALL
   */
+	.mnl-xs-0 {
+		margin-left: 0!important;
+	}
 	.mnl-xs-10 {
 		margin-left: -10px !important;
 	}
@@ -4762,6 +4784,9 @@
 	}
 	.mnr-xs-150 {
 		margin-right: -150px !important;
+	}
+	.mnt-xs-0 {
+		margin-top: 0!important;
 	}
 	.mnt-xs-10 {
 		margin-top: -10px !important;

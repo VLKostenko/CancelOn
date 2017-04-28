@@ -1,14 +1,18 @@
 var map;
+var labels = '123456789';
+var labelIndex = 0;
+var blackIcon = 'images/icons/black-marker.png';
+var blueIcon = 'images/icons/blue-marker.png';
 function initialize() {
-  var heartIcon = 'images/icons/heart.svg';
-  var defaultIcon = {
-    path: google.maps.SymbolPath.CIRCLE,
-    scale: 20,
-    fillColor: '#55c1ff',
-    fillOpacity: 1,
-    strokeColor: '#ffffff',
-    strokeWeight: 2.5
-  };
+  // var heartIcon = 'images/icons/heart.svg';
+  // var defaultIcon = {
+  //   path: google.maps.SymbolPath.CIRCLE,
+  //   scale: 20,
+  //   fillColor: '#55c1ff',
+  //   fillOpacity: 1,
+  //   strokeColor: '#ffffff',
+  //   strokeWeight: 2.5
+  // };
 
   var locations = [
     [
@@ -19,7 +23,7 @@ function initialize() {
       38.885765,
       -77.047563,
       '8',
-      defaultIcon
+      'images/icons/black-marker.png'
     ],
     [
       'Radisson Blu Resort',
@@ -29,7 +33,7 @@ function initialize() {
       38.877951,
       -77.035238,
       '7',
-      defaultIcon
+      'images/icons/black-marker.png'
     ],
     [
       'London Hilton Hotel',
@@ -39,7 +43,7 @@ function initialize() {
       38.888337,
       -77.025073,
       '6',
-      defaultIcon
+      'images/icons/black-marker.png'
     ],
     [
       'Joint Base',
@@ -49,7 +53,7 @@ function initialize() {
       38.846002,
       -77.016459,
       '5',
-      defaultIcon
+      'images/icons/black-marker.png'
     ],
     [
       'St Martins Lane London',
@@ -59,7 +63,7 @@ function initialize() {
       38.823484,
       -77.008872,
       ' ',
-      heartIcon
+      'images/icons/black-marker.png'
     ]
   ];
 
@@ -78,40 +82,89 @@ function initialize() {
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i][4], locations[i][5]),
       map: map,
-      icon: locations[i][7],
+      icon: {
+        url: locations[i][7],
+        // size: new google.maps.Size(45, 45),
+        // origin: new google.maps.Point(0, 0),
+        // anchor: new google.maps.Point(0, 0),
+        labelOrigin: new google.maps.Point(14, 14)
+      },
       label: {
-        text: locations[i][6],
-        color: '#ffffff',
-        fontSize: '15px',
-        fontWeight: 'bold'
+        text: labels[labelIndex++ % labels.length],
+        color: 'white',
+        fontSize: '14px'
       }
     });
+    
+    var handleMarkerClick = (function(marker, i) {
 
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        var iwContent =
+          '<div class="thumbnail" style="width: 250px;">' +
+          '<div class="thumbnail-wrapper">' +
+          '<a href="javascript:void(0)" class="thumbnail-img">' +
+          '<img src="' + locations[i][3] + '" alt="img" class="img-responsive">' +
+          '<div class="thumbnail-info text-right">' +
+          '<span class="label">Rate ' + locations[i][2] + '</span>' +
+          '</div>' +
+          '</a>' +
+          '<div class="caption">' +
+          '<h5>' +
+          '<a href="javascript:void(0)">' + locations[i][0] + '</a>' +
+          '</h5>' +
+          '<p> ' + locations[i][1] + '</p>' +
+          '<a href="javascript:void(0)" class="view-btn open-map-item">View</a>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+        return function() {
+          infowindow.setContent(iwContent);
+          infowindow.open(map, marker);
+        }
+      })(marker, i);
 
-      var iwContent =
-        '<div class="thumbnail" style="width: 250px;">' +
-        '<div class="thumbnail-wrapper">' +
-        '<a href="javascript:void(0)" class="thumbnail-img">' +
-        '<img src="' + locations[i][3] + '" alt="img" class="img-responsive">' +
-        '<div class="thumbnail-info text-right">' +
-        '<span class="label">Rate ' + locations[i][2] + '</span>' +
-        '</div>' +
-        '</a>' +
-        '<div class="caption">' +
-        '<h5>' +
-        '<a href="javascript:void(0)">' + locations[i][0] + '</a>' +
-        '</h5>' +
-        '<p> ' + locations[i][1] + '</p>' +
-        '<a href="javascript:void(0)" class="view-btn open-map-item">View</a>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
-      return function() {
-        infowindow.setContent(iwContent);
-        infowindow.open(map, marker);
+    function handleMarkerMouseOver() {
+      if ( this.icon.url == blackIcon ) {
+        this.setIcon({
+          url: blueIcon,
+          labelOrigin: new google.maps.Point(14, 14)
+        });
       }
-    })(marker, i));
+      // var iwContent =
+      //   '<div class="thumbnail" style="width: 250px;">' +
+      //   '<div class="thumbnail-wrapper">' +
+      //   '<a href="javascript:void(0)" class="thumbnail-img">' +
+      //   '<img src="' + locations[i][3] + '" alt="img" class="img-responsive">' +
+      //   '<div class="thumbnail-info text-right">' +
+      //   '<span class="label">Rate ' + locations[i][2] + '</span>' +
+      //   '</div>' +
+      //   '</a>' +
+      //   '<div class="caption">' +
+      //   '<h5>' +
+      //   '<a href="javascript:void(0)">' + locations[i][0] + '</a>' +
+      //   '</h5>' +
+      //   '<p> ' + locations[i][1] + '</p>' +
+      //   '<a href="javascript:void(0)" class="view-btn open-map-item">View</a>' +
+      //   '</div>' +
+      //   '</div>' +
+      //   '</div>';
+      // infowindow.setContent(iwContent);
+      // infowindow.open(map, this);
+      // changeMarker();
+    }
+
+    function handleMarkerMouseLeave() {
+      if ( this.icon.url == blueIcon ) {
+        this.setIcon({
+          url: blackIcon,
+          labelOrigin: new google.maps.Point(14, 14)
+        });
+      //   // infowindow.close();
+      }
+    }
+
+    google.maps.event.addListener(marker, 'click', handleMarkerClick);
+    google.maps.event.addListener(marker, "mouseover", handleMarkerMouseOver);
+    google.maps.event.addListener(marker, "mouseout", handleMarkerMouseLeave);
 
     google.maps.event.addListener(infowindow, 'domready', function() {
       $('.open-map-item').click(function() {
@@ -119,14 +172,15 @@ function initialize() {
         $('.map-item-block').show("slide", { direction: "right" }, 300);
       });
     });
+
     $('.black-bg-map, .map-item-block .close-btn').click(function() {
       $('.black-bg-map').fadeOut(200);
       $('.map-item-block').hide("slide", { direction: "right" }, 200);
     });
 
-    // google.maps.event.addListener(map, 'click', function() {
-    //   infowindow.close();
-    // });
+    google.maps.event.addListener(map, 'click', function() {
+      infowindow.close();
+    });
   }
 }
 google.maps.event.addDomListener(window, 'load', initialize);

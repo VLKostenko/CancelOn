@@ -146,24 +146,6 @@
 
   $('.onoffswitch').change(function() {
     if ( $('.myonoffswitch').prop('checked') ) {
-      $('#map').removeClass('full-width');
-      $('.black-bg-map').removeClass('no-filter');
-      $('.black-bg-search').removeClass('no-filter');
-      $('.main-wrapper').removeClass('hidden-sidebar-filter');
-      if ( $('.hide-filter').hasClass('hidden-filter') ) {
-        $('.content-wrapper').fadeIn(200);
-      } else {
-        $('.sidebar-filter, .content-wrapper').fadeIn(200);
-      }
-      $(' .filter-top .search-filter, .filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
-        .css({
-          'opacity': 0,
-          'pointer-events': 'initial'
-        })
-        .animate({
-          'opacity': 1
-        }, 200);
-    } else {
       $('#map').addClass('full-width');
       $('.black-bg-map').addClass('no-filter');
       $('.black-bg-search').addClass('no-filter');
@@ -177,6 +159,24 @@
         .animate({
           'opacity': 0
         }, 200);
+    } else {
+      $('#map').removeClass('full-width');
+      $('.black-bg-map').removeClass('no-filter');
+      $('.black-bg-search').removeClass('no-filter');
+      if ( $('.hide-filter').hasClass('hidden-filter') ) {
+        $('.content-wrapper').fadeIn(200);
+      } else {
+        $('.sidebar-filter, .content-wrapper').fadeIn(200);
+        $('.main-wrapper').removeClass('hidden-sidebar-filter');
+      }
+      $(' .filter-top .search-filter, .filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
+        .css({
+          'opacity': 0,
+          'pointer-events': 'initial'
+        })
+        .animate({
+          'opacity': 1
+        }, 200);
     }
     reinitMap();
 
@@ -188,59 +188,93 @@
     $(this).prev().find('.fa').removeClass("fa-caret-up").addClass("fa-caret-down");
   });
 
-  $('.list-btn').click(function(e) {
-    e.preventDefault();
-    $(this).addClass('active');
-    $('.grid-btn').removeClass('active');
-    $('.grid').hide();
-    $('.list').show();
-
-  });
-
   /**
    * ------------------------------------------------------------------------------------------------------
    * Load More Items on Page Scroll (on reaching .loading-wrapper)
    * ------------------------------------------------------------------------------------------------------
    **/
 
-  appear({
-    elements: function elements() {
-      return document.getElementsByClassName('loading-more');
-    },
-    appear: function appear(el) {
-      var type = el.getAttribute('data-type');
-      el.innerHTML =
-        '<div class="loading">' +
-          '<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>' +
-          '<span class="text-uppercase">Loading</span>' +
-        '</div>';
-      function appendItems(data) {
-        var newItems = $(data);
+  // appear({
+  //   elements: function elements() {
+  //     return document.getElementsByClassName('loading-more');
+  //   },
+  //   appear: function appear(el) {
+  //     var type = el.getAttribute('data-type');
+  //     el.innerHTML =
+  //       '<div class="loading">' +
+  //         '<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>' +
+  //         '<span class="text-uppercase">Loading</span>' +
+  //       '</div>';
+  //     function appendItems(data) {
+  //       var newItems = $(data);
+  //
+  //       $('.content-wrapper .check').append(newItems).fadeIn(200);
+  //     }
+  //
+  //     function shiftedLoading() {
+  //       $.get('partial/ajax-grid.html', {}, function(data) {
+  //         appendItems(data);
+  //       });
+  //       el.innerHTML = '';
+  //     }
+  //     setTimeout(shiftedLoading, 1500);
+  //   },
+  //   // if 'reappear: true' appear.js will keep tracking elements for successfuive appears and dissappears
+  //   reappear: false
+  // });
 
-        $('.content-wrapper .check').append(newItems).fadeIn(200);
+
+  $.fn.rate = function() {
+    return this.each(
+
+      function(i, e) {
+        var data = $(e).data('rate');
+        var rate = (Math.round(data * 2) / 2).toFixed(1);
+        var src = '../images/icons/rate/' + rate + '.svg';
+        $(e).html($('<img class="rate-image" src="' + src + '"/>'));
       }
 
-      function shiftedLoading() {
-        $.get('partial/ajax-grid.html', {}, function(data) {
-          appendItems(data);
-        });
-        el.innerHTML = '';
+    );
+  };
+
+  $.fn.stars = function() {
+    return this.each(
+
+      function(i, e) {
+        var data = $(e).data('stars');
+        var rate = (Math.round(data * 2) / 2).toFixed(1);
+
+        if ( !isNaN(rate) && rate.toString().indexOf('.5') != -1 ) {
+          for (i = 0; i < rate - 1; i++) {
+            $(this).children('li').eq(i).removeClass('hidden');
+          }
+          $(this).children('li:last-child').removeClass('hidden');
+        } else {
+          for (i = 0; i < parseInt(rate); i++) {
+            $(this).children('li').eq(i).removeClass('hidden');
+          }
+        }
       }
-      setTimeout(shiftedLoading, 1500);
-    },
-    // if 'reappear: true' appear.js will keep tracking elements for successfuive appears and dissappears
-    reappear: false
-  });
 
+    );
+  };
 
+  $('.stars-hotel').stars();
+
+  $('.rate').rate();
 
   $('.grid-btn').click(function(e) {
     e.preventDefault();
     $(this).addClass('active');
     $('.list-btn').removeClass('active');
-    $('.list').hide();
-    $('.grid').show();
+    $('.grid').removeClass('list-view');
+  });
 
+  $('.list-btn').click(function(e) {
+    e.preventDefault();
+    $(this).addClass('active');
+    $('.grid-btn').removeClass('active');
+    $('.grid').addClass('list-view');
   });
 
   $('.owl-carousel').owlCarousel({
@@ -286,21 +320,34 @@
     reinitMap();
   });
 
+  var search = $('.input-search');
+  var searchResult = $('.search-result');
+  var loadIcon = $('.load-icon');
+
   function toggleFocus(e) {
     if ( e.type == 'keyup' ) {
-      $('.search-result').fadeIn(200);
+      searchResult.fadeIn(200);
       $('.black-bg-search').fadeIn(200);
     }
     else {
-      $('.search-result').fadeOut(200);
+      searchResult.fadeOut(200);
       $('.black-bg-search').fadeOut(200);
     }
     if(e.which == 13) {
-      $('.search-result').fadeOut(200);
+      searchResult.fadeOut(200);
       $('.black-bg-search').fadeOut(200);
     }
   }
-  $('.input-search').on('keyup blur', toggleFocus);
+  search.on('keyup blur', toggleFocus);
+
+  search.on('keyup', function() {
+    if ( !loadIcon.hasClass('writing') ) {
+      loadIcon.addClass('writing');
+      setTimeout(function() {
+        loadIcon.removeClass('writing');
+      }, 3000);
+    }
+  });
 
   $('.btn-go-app').click(function() {
     $('html, body').animate(
