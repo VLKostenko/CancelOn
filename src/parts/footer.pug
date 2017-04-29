@@ -1,7 +1,7 @@
 footer
 	.container.pos-rel
-		.row.mt-10
-			.navbar-header
+		.row.mt-10.mt-xs-0
+			.navbar-header.hidden-xs
 				a.navbar-brand(href='javascript:void(0)')
 					img.img-responsive.mt-5(alt='logo', width='166', src='images/logo.png')
 				p.navbar-text.small-text.font-weight-200
@@ -25,7 +25,7 @@ footer
 						a(href='javascript:void(0)')
 							i.fa.fa-google-plus(aria-hidden='true')
 		.row.mb-50
-			.col-md-3.col-sm-6.mt-15
+			.col-md-3.col-sm-6.mt-15.hidden-xs
 				ul.list-unstyled
 					li.widget-container.widget_nav_menu
 						// widgets list
@@ -43,7 +43,7 @@ footer
 								a(href='javascript:void(0)') Seller's Protection
 							li
 								a(href='javascript:void(0)') Blog
-			.col-md-3.col-sm-6.mt-15
+			.col-md-3.col-sm-6.mt-15.hidden-xs
 				ul.list-unstyled
 					li.widget-container.widget_nav_menu
 						// widgets list
@@ -62,7 +62,7 @@ footer
 									img(src='images/icons/best.svg', alt='')
 									| Best Price Guarantee
 			.clearfix
-			.col-md-3.col-sm-6.mt-15
+			.col-md-3.col-sm-6.mt-15.hidden-xs
 				ul.list-unstyled
 					li.widget-container.widget_nav_menu
 						// widgets list
@@ -80,7 +80,7 @@ footer
 								a(href='javascript:void(0)') Hotel Reservation
 							li
 								a(href='javascript:void(0)') Cancel hotel reservation
-			.col-md-3.col-sm-6.mt-15
+			.col-md-3.col-sm-6.mt-15.hidden-xs
 				ul.list-unstyled
 					li.widget-container
 						// widgets list
@@ -106,7 +106,87 @@ footer
 								a(href='javascript:void(0)') support@cancelon.com
 							li
 								a(href='javascript:void(0)') 24/7 Dedicated Customer Support
-			.col-md-6.col-sm-12.mnt-80.mt-sm-20.mt-xs-20
+			.col-xs-12.visible-xs
+				ul.nav.navbar-nav.navbar-footer
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							| Company
+						ul.dropdown-menu
+							li
+								a(href='javascript:void(0)') About
+							li
+								a(href='javascript:void(0)') Register
+							li
+								a(href='javascript:void(0)') User Agreement
+							li
+								a(href='javascript:void(0)') Buyer Protection
+							li
+								a(href='javascript:void(0)') Seller's Protection
+							li
+								a(href='javascript:void(0)') Blog
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							| Support
+						ul.dropdown-menu
+							li
+								a(href='javascript:void(0)') Contact info
+							li
+								a(href='javascript:void(0)') Privacy policy
+							li
+								a(href='javascript:void(0)') Discount hotel reservations
+							li
+								a(href='javascript:void(0)') Discount Hotels
+							li
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							| Selling
+						ul.dropdown-menu
+							li
+								a(href='javascript:void(0)') Sell hotel reservation
+							li
+								a(href='javascript:void(0)') Hotel cancellation policy
+							li
+								a(href='javascript:void(0)') Hotel reservation deals
+							li
+								a(href='javascript:void(0)') Buy hotel reservation
+							li
+								a(href='javascript:void(0)') Hotel Reservation
+							li
+								a(href='javascript:void(0)') Cancel hotel reservation
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							| Have a Questions?
+						ul.dropdown-menu
+							li
+								a(href='javascript:void(0)') US 1-855-226-2359
+							li
+								a(href='javascript:void(0)') UK 0-800-014-8161
+							li
+								a(href='javascript:void(0)') FR 0-805-080-042
+							li
+								a(href='javascript:void(0)') DE 0-800-184-4594
+							li
+								a(href='javascript:void(0)') AU 1-800-459-141
+							li
+								a(href='javascript:void(0)') NZ 0-800-451-433
+							li
+								a(href='javascript:void(0)') IE 1-800-901-655
+							li
+								a(href='javascript:void(0)') CA 1-855-226-2359
+							li
+								a(href='javascript:void(0)') support@cancelon.com
+							li
+								a(href='javascript:void(0)') 24/7 Dedicated Customer Support
+			.clearfix
+			.col-md-6.col-sm-12.mnt-80.mt-sm-20.mt-xs-40.signup
 				p.large.white-text We have a price for you that is too low to show!!
 				p.white-text Unlock special rates by signing up here:
 				.input-group
@@ -116,7 +196,7 @@ footer
 		button.btn-go-app(type='button')
 			span.icon
 	.container-fluid.navy
-		.container
+		.container.hidden-xs
 			.row.mt-30.pb-50
 				.col-md-3.col-sm-6
 					ul.list-unstyled
@@ -341,7 +421,7 @@ footer
 									a(href='javascript:void(0)') Cairns, QL, Australia
 		.row.black
 			.col-sm-10.col-sm-offset-1
-				p.copy
+				p.copy.text-center-xs
 					| Copyright © 2015 - 2017 Cancelon Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the cancelon User agreement and
 					a(href="javascript:void(0)")  Privacy policy
 					| .

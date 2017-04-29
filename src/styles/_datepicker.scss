@@ -26,8 +26,16 @@
   line-height: 20px;
   color: #aaa;
   font-family: Arial, sans-serif;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 0 7px 0 rgba(0, 0, 0, 0.10);
   box-sizing: initial;
+  &:before {
+    content: '';
+    box-shadow: inset 3px 0 5px 0 rgba(0,0,0,.1);
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    z-index: 10;
+  }
   &.inline-wrapper {
     position: relative;
     box-shadow: none;

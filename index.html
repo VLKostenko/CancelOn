@@ -94,6 +94,8 @@
                 <li class="visible-xs"><a href="javascript:void(0)"><i aria-hidden="true"></i>Sign Up</a></li>
                 <li class="visible-xs"><a href="javascript:void(0)"><i aria-hidden="true"></i>USD</a></li>
                 <li class="visible-xs"><a href="javascript:void(0)"><i aria-hidden="true"></i>Language</a></li>
+                <li class="visible-xs"><a class="blue-btn" href="javascript:void(0)">Unlock special prices</a></li>
+                <li class="visible-xs"><a class="green-btn" href="javascript:void(0)">Buy hotel reservation</a></li>
               </ul>
             </div>
           </div>
@@ -147,13 +149,17 @@
       </div>
     </nav>
     <div class="container-fluid white">
-      <div class="container">
+      <div class="container pl-xs-0 pr-xs-0">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 pl-xs-0 pr-xs-0">
             <div class="input-group search-group"><span class="search-icon"></span>
-              <input class="form-control input-search" type="text" placeholder="What Are You Looking For"><span class="input-search-btn">
-                <button class="btn btn-default" type="button">SEARCH</button></span>
+              <input class="form-control input-search" type="text" placeholder="What Are You Looking For"><span class="input-search-btn hidden-xs">
+                <button class="btn btn-default" type="button">SEARCH</button></span><span class="input-search-btn visible-xs">
+                <button type="button">
+                  <div class="search-icon"></div>
+                </button></span>
               <div class="load-icon"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></div>
+              <div class="filter-icon visible-xs"><i class="fa fa-filter" aria-hidden="true"></i></div>
               <div class="search-result"><span class="city-label">City</span>
                 <div class="scrollbar-dynamic">
                   <div class="search-result-inner">
@@ -180,10 +186,10 @@
         </div>
       </div>
     </div>
-    <div class="container mt-15 remove-padding-md">
+    <div class="container mt-15 remove-padding-md pl-xs-0 pr-xs-0">
       <div class="filter-top white">
         <div class="search-filter">
-          <p class="big-text text-uppercase font-weight-600 font-roboto mnl-5">Search Filter<a class="pull-right hide-filter" href="javascript:void(0)"><span class="menu-icon"></span></a></p>
+          <p class="big-text text-uppercase font-weight-600 font-roboto mnl-5 hidden-xs">Search Filter<a class="pull-right hide-filter" href="javascript:void(0)"><span class="menu-icon active"></span></a></p>
         </div>
         <div class="content-settings">
           <div class="display visible-lg"><a class="list-btn" href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a><a class="grid-btn active ml-5" href="javascript:void(0)"><i class="fa fa-th" aria-hidden="true"></i></a></div>
@@ -202,6 +208,8 @@
     </div>
     <div class="container pl-0 pr-0 pos-rel">
       <aside class="sidebar-filter">
+        <div class="mobile-filter-line visible-xs"><i class="fa fa-filter" aria-hidden="true"></i>Search filter</div>
+        <div class="mobile-close visible-xs"><i class="fa fa-times" aria-hidden="true"></i></div>
         <div class="panel-group mb-0">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -469,7 +477,8 @@
                       <li><i class="fa fa-television" aria-hidden="true"></i></li>
                       <li><i class="fa fa-shower" aria-hidden="true"></i></li>
                     </ul>
-                    <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                    <div class="views-bottom"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
+                    <p class="booked pull-right visible-xs">Booked<span> 30</span> Times Today</p>
                   </div>
                 </div>
               </div>
@@ -519,6 +528,7 @@
                       <li><i class="fa fa-television" aria-hidden="true"></i></li>
                       <li><i class="fa fa-shower" aria-hidden="true"></i></li>
                     </ul>
+                    <div class="views-bottom"><i class="fa fa-eye" aria-hidden="true"></i>255</div>
                     <p class="booked pull-right">Booked<span> 17</span> Times Today</p>
                   </div>
                 </div>
@@ -569,6 +579,7 @@
                       <li><i class="fa fa-television" aria-hidden="true"></i></li>
                       <li><i class="fa fa-shower" aria-hidden="true"></i></li>
                     </ul>
+                    <div class="views-bottom"><i class="fa fa-eye" aria-hidden="true"></i>8</div>
                     <p class="booked pull-right">Booked<span> 24</span> Times Today</p>
                   </div>
                 </div>
@@ -618,6 +629,7 @@
                       <li><i class="fa fa-television" aria-hidden="true"></i></li>
                       <li><i class="fa fa-shower" aria-hidden="true"></i></li>
                     </ul>
+                    <div class="views-bottom"><i class="fa fa-eye" aria-hidden="true"></i>25 688</div>
                     <p class="booked pull-right">Booked<span> 41</span> Times Today</p>
                   </div>
                 </div>
@@ -633,7 +645,7 @@
                   </div><a class="reviews" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
                   <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
                 </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
-                <div class="col-md-9 col-sm-9 mt-10">
+                <div class="col-md-9 col-sm-9 col-xs-9 mt-10 left-block">
                   <h5>St Martins Lane London</h5>
                   <ul class="stars stars-hotel mb-5" data-stars="4.91">
                     <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
@@ -646,7 +658,7 @@
                   <p class="small-text font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
                   <p class="small-text font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
                 </div>
-                <div class="col-md-3 col-sm-3 mt-10 pl-0 pr-15"><img class="pull-right" src="images/icons/heart.svg" width="50" alt="">
+                <div class="col-md-3 col-sm-3 col-xs-3 mt-10 pl-0 pr-15 right-block"><img class="pull-right heart" src="images/icons/heart.svg" width="50" alt="">
                   <p class="price">$500/<span class="regular-text">Day</span></p>
                   <p class="price-red">$780/<span class="regular-text">Day</span></p>
                 </div>
@@ -661,7 +673,7 @@
                   </div><a class="reviews" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
                   <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
                 </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
-                <div class="col-md-9 col-sm-9 mt-10">
+                <div class="col-md-9 col-sm-9 col-xs-9 mt-10 left-block">
                   <h5>Soho, Soma-Bay Resort</h5>
                   <ul class="stars stars-hotel mb-5" data-stars="4.87">
                     <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
@@ -674,7 +686,7 @@
                   <p class="small-text font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
                   <p class="small-text font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
                 </div>
-                <div class="col-md-3 col-sm-3 mt-10 pl-0 pr-15"><img class="pull-right" src="images/icons/heart.svg" width="50" alt="">
+                <div class="col-md-3 col-sm-3 col-xs-3 mt-10 pl-0 pr-15 right-block"><img class="pull-right heart" src="images/icons/heart.svg" width="50" alt="">
                   <p class="price">$500/<span class="regular-text">Day</span></p>
                   <p class="price-red">$780/<span class="regular-text">Day</span></p>
                 </div>
@@ -785,8 +797,8 @@
     </div>
     <footer>
       <div class="container pos-rel">
-        <div class="row mt-10">
-          <div class="navbar-header"><a class="navbar-brand" href="javascript:void(0)"><img class="img-responsive mt-5" alt="logo" width="166" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
+        <div class="row mt-10 mt-xs-0">
+          <div class="navbar-header hidden-xs"><a class="navbar-brand" href="javascript:void(0)"><img class="img-responsive mt-5" alt="logo" width="166" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
             <p class="navbar-text small-text font-weight-200"><i class="fa blue-text fa-info-circle" aria-hidden="true"></i>					Sell and Buy Non-Refundable Hotel Reservations</p>
           </div>
           <div class="socials">
@@ -800,7 +812,7 @@
           </div>
         </div>
         <div class="row mb-50">
-          <div class="col-md-3 col-sm-6 mt-15">
+          <div class="col-md-3 col-sm-6 mt-15 hidden-xs">
             <ul class="list-unstyled">
               <li class="widget-container widget_nav_menu">
                 <!-- widgets list-->
@@ -816,7 +828,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 col-sm-6 mt-15">
+          <div class="col-md-3 col-sm-6 mt-15 hidden-xs">
             <ul class="list-unstyled">
               <li class="widget-container widget_nav_menu">
                 <!-- widgets list-->
@@ -832,7 +844,7 @@
             </ul>
           </div>
           <div class="clearfix"></div>
-          <div class="col-md-3 col-sm-6 mt-15">
+          <div class="col-md-3 col-sm-6 mt-15 hidden-xs">
             <ul class="list-unstyled">
               <li class="widget-container widget_nav_menu">
                 <!-- widgets list-->
@@ -848,7 +860,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 col-sm-6 mt-15">
+          <div class="col-md-3 col-sm-6 mt-15 hidden-xs">
             <ul class="list-unstyled">
               <li class="widget-container">
                 <!-- widgets list-->
@@ -868,7 +880,59 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-6 col-sm-12 mnt-80 mt-sm-20 mt-xs-20">
+          <div class="col-xs-12 visible-xs">
+            <ul class="nav navbar-nav navbar-footer">
+              <li class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-plus-square-o" aria-hidden="true"></i><i class="fa fa-minus-square-o" aria-hidden="true"></i>Company</button>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0)">About</a></li>
+                  <li><a href="javascript:void(0)">Register</a></li>
+                  <li><a href="javascript:void(0)">User Agreement</a></li>
+                  <li><a href="javascript:void(0)">Buyer Protection</a></li>
+                  <li><a href="javascript:void(0)">Seller's Protection</a></li>
+                  <li><a href="javascript:void(0)">Blog</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-plus-square-o" aria-hidden="true"></i><i class="fa fa-minus-square-o" aria-hidden="true"></i>Support</button>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0)">Contact info</a></li>
+                  <li><a href="javascript:void(0)">Privacy policy</a></li>
+                  <li><a href="javascript:void(0)">Discount hotel reservations</a></li>
+                  <li><a href="javascript:void(0)">Discount Hotels</a></li>
+                  <li></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-plus-square-o" aria-hidden="true"></i><i class="fa fa-minus-square-o" aria-hidden="true"></i>Selling</button>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0)">Sell hotel reservation</a></li>
+                  <li><a href="javascript:void(0)">Hotel cancellation policy</a></li>
+                  <li><a href="javascript:void(0)">Hotel reservation deals</a></li>
+                  <li><a href="javascript:void(0)">Buy hotel reservation</a></li>
+                  <li><a href="javascript:void(0)">Hotel Reservation</a></li>
+                  <li><a href="javascript:void(0)">Cancel hotel reservation</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-plus-square-o" aria-hidden="true"></i><i class="fa fa-minus-square-o" aria-hidden="true"></i>Have a Questions?</button>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0)">US 1-855-226-2359</a></li>
+                  <li><a href="javascript:void(0)">UK 0-800-014-8161</a></li>
+                  <li><a href="javascript:void(0)">FR 0-805-080-042</a></li>
+                  <li><a href="javascript:void(0)">DE 0-800-184-4594</a></li>
+                  <li><a href="javascript:void(0)">AU 1-800-459-141</a></li>
+                  <li><a href="javascript:void(0)">NZ 0-800-451-433</a></li>
+                  <li><a href="javascript:void(0)">IE 1-800-901-655</a></li>
+                  <li><a href="javascript:void(0)">CA 1-855-226-2359</a></li>
+                  <li><a href="javascript:void(0)">support@cancelon.com</a></li>
+                  <li><a href="javascript:void(0)">24/7 Dedicated Customer Support</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-6 col-sm-12 mnt-80 mt-sm-20 mt-xs-40 signup">
             <p class="large white-text">We have a price for you that is too low to show!!</p>
             <p class="white-text">Unlock special rates by signing up here:</p>
             <div class="input-group">
@@ -880,7 +944,7 @@
         <button class="btn-go-app" type="button"><span class="icon"></span></button>
       </div>
       <div class="container-fluid navy">
-        <div class="container">
+        <div class="container hidden-xs">
           <div class="row mt-30 pb-50">
             <div class="col-md-3 col-sm-6">
               <ul class="list-unstyled">
@@ -1023,7 +1087,7 @@
         </div>
         <div class="row black">
           <div class="col-sm-10 col-sm-offset-1">
-            <p class="copy">Copyright © 2015 - 2017 Cancelon Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the cancelon User agreement and<a href="javascript:void(0)"> Privacy policy</a>.</p>
+            <p class="copy text-center-xs">Copyright © 2015 - 2017 Cancelon Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. Use of this Web site constitutes acceptance of the cancelon User agreement and<a href="javascript:void(0)"> Privacy policy</a>.</p>
           </div>
         </div>
       </div>

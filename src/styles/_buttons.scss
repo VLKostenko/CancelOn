@@ -120,6 +120,9 @@
   height: 15px;
   display: block;
   margin-top: 3px;
+  &.active {
+    background-image: url("../images/icons/menu-icon-active.svg");
+  }
 }
 
 .list-btn {

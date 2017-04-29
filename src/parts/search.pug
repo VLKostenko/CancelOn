@@ -1,14 +1,19 @@
 .container-fluid.white
-	.container
+	.container.pl-xs-0.pr-xs-0
 		.row
-			.col-md-12
+			.col-md-12.pl-xs-0.pr-xs-0
 				.input-group.search-group
 					span.search-icon
 					input.form-control.input-search(type='text', placeholder='What Are You Looking For')
-					span.input-search-btn
+					span.input-search-btn.hidden-xs
 						button.btn.btn-default(type='button') SEARCH
+					span.input-search-btn.visible-xs
+						button(type='button')
+							.search-icon
 					.load-icon
 						i.fa.fa-spinner.fa-spin(aria-hidden='true')
+					.filter-icon.visible-xs
+						i.fa.fa-filter(aria-hidden='true')
 					.search-result
 						span.city-label City
 						.scrollbar-dynamic
