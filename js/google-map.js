@@ -71,7 +71,17 @@ function initialize() {
     zoom: 13,
     center: new google.maps.LatLng(locations[0][4] - 0.07, locations[0][5] - ( -0.015)),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false
+    scrollwheel: false,
+    mapTypeControl: false,
+    streetViewControl: false,
+    zoomControl: true,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.TOP_RIGHT
+    }
+    // mapTypeControlOptions: {
+    //   style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+    //   position: google.maps.ControlPosition.TOP_RIGHT
+    // }
   });
 
   var infowindow = new google.maps.InfoWindow();

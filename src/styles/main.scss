@@ -16,7 +16,7 @@
 /* end of Buttons */
 
 /* 5 Datapicker */
-@import "datepicker.scss";
+@import "datepicker";
 /* end of Datapicker */
 
 /* 6 Base sizing helper classes */
@@ -24,8 +24,12 @@
 /* end of Base sizing */
 
 /* 7 helper classes */
-@import "helpers.scss";
+@import "helpers";
 /* end of helper classes */
+
+/* 8 icon moon */
+@import "iconmoon";
+/* end of icon moon */
 
 .navbar-brand {
   max-width: 280px;
