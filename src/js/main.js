@@ -151,7 +151,9 @@
       $('.black-bg-search').addClass('no-filter');
       $('.main-wrapper').addClass('hidden-sidebar-filter');
       $('.sidebar-filter, .content-wrapper').fadeOut(200);
-      $(' .filter-top .search-filter, .filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
+      $('.search-filter .menu-icon').removeClass('active').parent('.hide-filter').addClass('hidden-filter');
+      $('.sidebar-filter').addClass('show-on-map');
+      $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
         .css({
           'opacity': 1,
           'pointer-events': 'none'
@@ -163,13 +165,19 @@
       $('#map').removeClass('full-width');
       $('.black-bg-map').removeClass('no-filter');
       $('.black-bg-search').removeClass('no-filter');
+      $('.search-filter .menu-icon').addClass('active').parent('.hide-filter').removeClass('hidden-filter');
       if ( $('.hide-filter').hasClass('hidden-filter') ) {
         $('.content-wrapper').fadeIn(200);
       } else {
-        $('.sidebar-filter, .content-wrapper').fadeIn(200);
+        if ( $(window).width() > 768 ) {
+          $('.sidebar-filter, .content-wrapper').fadeIn(200);
+        } else {
+          $('.content-wrapper').fadeIn(200);
+        }
         $('.main-wrapper').removeClass('hidden-sidebar-filter');
       }
-      $(' .filter-top .search-filter, .filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
+      $('.sidebar-filter').removeClass('show-on-map');
+      $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
         .css({
           'opacity': 0,
           'pointer-events': 'initial'
@@ -230,7 +238,7 @@
       function(i, e) {
         var data = $(e).data('rate');
         var rate = (Math.round(data * 2) / 2).toFixed(1);
-        var src = '../images/icons/rate/' + rate + '.svg';
+        var src = './images/icons/rate/' + rate + '.svg';
         $(e).html($('<img class="rate-image" src="' + src + '"/>'));
       }
 
@@ -259,22 +267,24 @@
     );
   };
 
-  $('.stars-hotel').stars();
-
-  $('.rate').rate();
-
-  $('.grid-btn').click(function(e) {
-    e.preventDefault();
-    $(this).addClass('active');
-    $('.list-btn').removeClass('active');
-    $('.grid').removeClass('list-view');
-  });
-
-  $('.list-btn').click(function(e) {
-    e.preventDefault();
-    $(this).addClass('active');
+  function listView() {
+    $('.list-btn').addClass('active');
     $('.grid-btn').removeClass('active');
     $('.grid').addClass('list-view');
+  }
+
+  function gridView() {
+    $('.grid-btn').addClass('active');
+    $('.list-btn').removeClass('active');
+    $('.grid').removeClass('list-view');
+  }
+
+  $('.grid-btn').click(function() {
+    gridView();
+  });
+
+  $('.list-btn').click(function() {
+    listView();
   });
 
   $('.owl-carousel').owlCarousel({
@@ -285,22 +295,16 @@
     singleItem: true
   });
 
-  $('.navbar-brand.dropdown').click(function() {
-
-    if ( $(this).hasClass('opened') ) {
-      $(this).removeClass('opened');
-    } else {
-      $(this).addClass('opened');
-    }
-
-  });
-
   $('.navbar-brand.dropdown.opened').click(function() {
 
   });
 
   $('.datepicker-output').on('click', function() {
     $('.datepicker-input').click();
+  });
+
+  $('.grid-item .distance').click(function() {
+    $(this).addClass('clicked').siblings('.number').addClass('clicked');
   });
 
   $('.hide-filter').click(function() {
@@ -324,12 +328,13 @@
 
   $('.filter-icon').click(function() {
     $('.sidebar-filter').fadeIn(200);
-    $('.black-bg-map').fadeIn(200);
+    $('body').css('overflow', 'hidden');
   });
 
   $('.sidebar-filter .mobile-close').click(function() {
     $('.sidebar-filter').fadeOut(200);
     $('.black-bg-map').fadeOut(200);
+    $('body').css('overflow', 'initial');
   });
 
   var search = $('.input-search');
@@ -369,12 +374,6 @@
     return false;
   });
 
-  var IE = navigator.userAgent.indexOf("MSIE") > -1;
-
-  if ( IE ) {
-    $('body').addClass('ie-style');
-  }
-
   function reinitMap() {
     var center = map.getCenter();
     google.maps.event.trigger(map, "resize");
@@ -382,7 +381,7 @@
   }
 
   // $(document).ready(function(){
-  //   $('.scrollbar-dynamic').scrollbar();
+  //   $('.sidebar-filter').scrollbar();
   // });
 
   function hideMobileNav() {
@@ -408,6 +407,50 @@
     if ( $('.navbar-header').hasClass('open') ) {
       hideMobileNav();
     }
+  });
+
+  $('.languages-menu .languages a').click(function() {
+    $('#dropdownMenuLink2').html('');
+    $(this).clone().appendTo($('#dropdownMenuLink2'));
+    $('#dropdownMenuLink2').append('<span class="bs-caret"><span class="caret"></span></span>');
+  });
+
+  $(window).resize(function() {
+    if ( $(window).width() < 992 ) {
+      gridView();
+    }
+    if ( $(window).width() < 768 ) {
+      $('.sidebar-filter').mCustomScrollbar();
+    }
+  });
+
+  $(window).load(function() {
+    $('.stars-hotel').stars();
+    $('.rate').rate();
+    if ( $(window).width() < 768 ) {
+      $('.sidebar-filter').mCustomScrollbar();
+    }
+  });
+
+  $(document).ready(function() {
+    if ( $(window).width() < 992 ) {
+      gridView();
+    }
+    if (/MSIE 10/i.test(navigator.userAgent)) {
+      // This is internet explorer 10
+      $('html').addClass('ie-style');
+    }
+
+    if (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
+      // This is internet explorer 9 or 11
+      $('html').addClass('ie-style');
+    }
+
+    if (/Edge\/\d./i.test(navigator.userAgent)){
+      // This is Microsoft Edge
+      $('html').addClass('ie-style');
+    }
+
   });
 
 })(jQuery);

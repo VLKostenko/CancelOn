@@ -1,0 +1,12 @@
+.ie-style {
+  .grid-item {
+    &:nth-child(2n) {
+      margin-left: 14px;
+    }
+  }
+  .list-view {
+    .grid-item {
+      margin-left: 0;
+    }
+  }
+}

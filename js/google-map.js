@@ -63,7 +63,7 @@ function initialize() {
       38.823484,
       -77.008872,
       ' ',
-      'images/icons/black-marker.png'
+      'images/icons/heart.svg'
     ]
   ];
 
@@ -100,7 +100,7 @@ function initialize() {
         labelOrigin: new google.maps.Point(14, 14)
       },
       label: {
-        text: labels[labelIndex++ % labels.length],
+        text: locations[i][6],
         color: 'white',
         fontSize: '14px'
       }

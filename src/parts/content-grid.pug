@@ -1,4 +1,4 @@
-.grid.mt-10
+.grid.mt-10.list-view
    .grid-item
       span.ribbon.top Top Deal
       .preview
@@ -37,7 +37,7 @@
             .divider
             .left-block.center-block
                .number
-                  img(src='images/icons/5.svg', width='25')
+                  span 5
                .distance
                   span.distance-color 1.98 km.
                   |  to the centre of Central Park
@@ -66,10 +66,13 @@
             .views-bottom.visible-xs
                i.fa.fa-eye(aria-hidden='true')
                | 5
-            p.booked.pull-right.visible-xs
+            p.booked.pull-right
                | Booked
                span  30
                |  Times Today
+            p.watching-now.pull-right
+               span 5
+               |  People Looking Right Now
    .grid-item
       span.ribbon.top.hidden Top Deal
       .preview
@@ -109,7 +112,7 @@
             .divider
             .left-block.center-block
                .number
-                  img(src='images/icons/5.svg', width='25')
+                  span 5
                .distance
                   span.distance-color 1.98 km.
                   |  to the centre of Central Park
@@ -142,6 +145,9 @@
                | Booked
                span  17
                |  Times Today
+            p.watching-now.pull-right
+               span 8
+               |  People Looking Right Now
    .grid-item
       span.ribbon.top.hidden Top Deal
       .preview
@@ -180,7 +186,7 @@
             .divider
             .left-block.center-block
                .number
-                  img(src='images/icons/5.svg', width='25')
+                  span 5
                .distance
                   span.distance-color 1.98 km.
                   |  to the centre of Central Park
@@ -213,7 +219,10 @@
                | Booked
                span  24
                |  Times Today
-   .grid-item
+            p.watching-now.pull-right
+               span 3
+               |  People Looking Right Now
+   .grid-item.show1200-1280
       span.ribbon.top.hidden Top Deal
       .preview
          .image(style="background-image: url('images/room4.png')")
@@ -249,7 +258,7 @@
             .divider
             .left-block.center-block
                .number
-                  img(src='images/icons/5.svg', width='25')
+                  span 5
                .distance
                   span.distance-color 1.98 km.
                   |  to the centre of Central Park
@@ -282,3 +291,155 @@
                | Booked
                span  41
                |  Times Today
+            p.watching-now.pull-right
+               span 9
+               |  People Looking Right Now
+   .grid-item.show1200-1280
+      span.ribbon.top Top Deal
+      .preview
+         .image(style="background-image: url('images/room1.png')")
+      .warning.orange Only 3 rooms left!
+      .block-wrapper
+         .top-wrapper.clearfix
+            .left-block.top-block
+               h2.title Joint Base
+               ul.stars.stars-hotel(data-stars='4.47')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star-half(aria-hidden='true')
+               .trip
+                  .rate(data-rate='4.54')
+               a.reviews(href='javascript:void(0)') 142 Reviews
+               p.address 485 Clawson St, Staten Island, NY 10306
+            .right-block.top-block
+               p.price
+                  | $311
+                  span.regular-text /day
+               p.red-price $520
+               p.warning-list Only
+                  span.orange-text  3
+                  |  rooms left!
+            .clearfix
+            .divider
+            .left-block.center-block
+               .number
+                  span 5
+               .distance
+                  span.distance-color 1.98 km.
+                  |  to the centre of Central Park
+               .trip
+                  .rate(data-rate='4.54')
+               a.reviews(href='javascript:void(0)') 142 Reviews
+            .right-block.center-block
+               a.views(href='javascript:void(0)')
+                  span.right View
+                  span.left
+                     i.fa.fa-eye(aria-hidden='true')
+                     | 5
+            .clearfix
+            .divider
+            ul.features
+               li
+                  i.fa.fa-wifi(aria-hidden='true')
+               li
+                  i.fa.fa-car(aria-hidden='true')
+               li
+                  i.fa.fa-phone(aria-hidden='true')
+               li
+                  i.fa.fa-television(aria-hidden='true')
+               li
+                  i.fa.fa-shower(aria-hidden='true')
+            .views-bottom.visible-xs
+               i.fa.fa-eye(aria-hidden='true')
+               | 5
+            p.booked.pull-right
+               | Booked
+               span  30
+               |  Times Today
+            p.watching-now.pull-right
+               span 5
+               |  People Looking Right Now
+   .grid-item
+      span.ribbon.top.hidden Top Deal
+      .preview
+         .image(style="background-image: url('images/room2.png')")
+      .warning.red.hidden Only 3 rooms left!
+      .block-wrapper
+         .top-wrapper.clearfix
+            .left-block.top-block
+               h2.title London Hilton Hotel
+               ul.stars.stars-hotel(data-stars='4.23')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star-half(aria-hidden='true')
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+               .trip
+                  .rate(data-rate='4.1')
+               a.reviews(href='javascript:void(0)') 142 Reviews
+               p.address 485 Clawson St, Staten Island, NY 10306
+            .right-block.top-block
+               p.price
+                  | $200
+                  span.regular-text /day
+               p.red-price.hidden $520
+               p.warning-list.hidden Only
+                  span.orange-text  3
+                  |  rooms left!
+            .clearfix
+            .divider
+            .left-block.center-block
+               .number
+                  span 5
+               .distance
+                  span.distance-color 1.98 km.
+                  |  to the centre of Central Park
+               .trip
+                  .rate(data-rate='4.1')
+               a.reviews(href='javascript:void(0)') 142 Reviews
+            .right-block.center-block
+               a.views(href='javascript:void(0)')
+                  span.right View
+                  span.left
+                     i.fa.fa-eye(aria-hidden='true')
+                     | 255
+            .clearfix
+            .divider
+            ul.features
+               li
+                  i.fa.fa-wifi(aria-hidden='true')
+               li
+                  i.fa.fa-car(aria-hidden='true')
+               li
+                  i.fa.fa-phone(aria-hidden='true')
+               li
+                  i.fa.fa-television(aria-hidden='true')
+               li
+                  i.fa.fa-shower(aria-hidden='true')
+            .views-bottom.visible-xs
+               i.fa.fa-eye(aria-hidden='true')
+               | 255
+            p.booked.pull-right
+               | Booked
+               span  17
+               |  Times Today
+            p.watching-now.pull-right
+               span 8
+               |  People Looking Right Now

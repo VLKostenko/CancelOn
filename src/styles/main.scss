@@ -123,8 +123,12 @@
           }
         }
       }
+      &:hover {
+         opacity: 1;
+         visibility: visible;
+      }
     }
-    &.opened {
+    &:hover {
       & + .dropdown-menu {
         opacity: 1;
         visibility: visible;
@@ -166,8 +170,17 @@
   width: 45%;
   height: 100%;
   background: #fff;
-  box-shadow: -5px 0 40px 0 rgba(0,0,0,0.5);
+  box-shadow:  -25px 0 60px 0 rgba(0, 0, 0, 0.21);
   &-wrapper {
+    //&:after {
+    //  content: '';
+    //  box-shadow: -5px 0 40px 0 rgba(0, 0, 0, .5);
+    //  position: absolute;
+    //  z-index: 0;
+    //  left: 0;
+    //  width: 10px;
+    //  height: 100%;
+    //}
     .close-line {
       padding: 15px;
       background: #f3f3f3;
@@ -338,6 +351,7 @@
             span {
               font-size: 13px;
               padding-left: 30px;
+              margin-bottom: 5px;
               float: left;
               clear: left;
               position: relative;
@@ -491,3 +505,4 @@
 
 @import "conditions";
 @import "response";
+@import "compatibility";

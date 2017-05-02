@@ -48,7 +48,7 @@
     <link href="assets/plugins/jquery-ui/themes/smoothness/theme.css" rel="stylesheet">
     <link href="assets/plugins/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="assets/plugins/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link href="assets/plugins/jquery.scrollbar/jquery.scrollbar.css" rel="stylesheet">
+    <link href="assets/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <!-- Main Template CSS-->
     <link href="css/main.min.css" rel="stylesheet">
   </head>
@@ -57,7 +57,7 @@
       <div class="container">
         <div class="row">
           <div class="navbar-header">
-            <button class="navbar-toggle" id="menu-button" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand dropdown" href="javascript:void(0)"><img class="img-responsive" alt="logo" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
+            <button class="navbar-toggle" id="menu-button" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand dropdown" href="."><img class="img-responsive" alt="logo" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
             <div class="dropdown-menu">
               <div class="logo-info">
                 <div class="info">
@@ -85,6 +85,7 @@
             <p class="navbar-text small-text font-weight-200 visible-lg"><i class="fa fa-info-circle" aria-hidden="true"></i>	Sell and Buy Non-Refundable Hotel Reservations</p>
             <div class="navbar-mobile hidden-lg" id="nav_mobile">
               <ul class="nav navbar-nav">
+                <li class="menu"><a href="javascript:void(0)">Menu</a></li>
                 <li><a href="javascript:void(0)">Home</a></li>
                 <li><a href="javascript:void(0)">About</a></li>
                 <li><a href="javascript:void(0)">Support</a></li>
@@ -148,10 +149,10 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid white">
+    <div class="container-fluid white pl-xs-0 pr-xs-0">
       <div class="container pl-xs-0 pr-xs-0">
-        <div class="row">
-          <div class="col-md-12 pl-xs-0 pr-xs-0">
+        <div class="row container-search-wrapper">
+          <div class="col-md-12 pl-xs-0 pr-xs-0 pl-md-0 pr-md-0">
             <div class="input-group search-group"><span class="search-icon"></span>
               <input class="form-control input-search" type="text" placeholder="What Are You Looking For"><span class="input-search-btn hidden-xs">
                 <button class="btn btn-default" type="button">SEARCH</button></span><span class="input-search-btn visible-xs">
@@ -192,7 +193,7 @@
           <p class="big-text text-uppercase font-weight-600 font-roboto mnl-5 hidden-xs">Search Filter<a class="pull-right hide-filter" href="javascript:void(0)"><span class="menu-icon active"></span></a></p>
         </div>
         <div class="content-settings">
-          <div class="display visible-lg"><a class="list-btn" href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a><a class="grid-btn active ml-5" href="javascript:void(0)"><i class="fa fa-th" aria-hidden="true"></i></a></div>
+          <div class="display hidden-xs hidden-sm"><a class="list-btn active" href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a><a class="grid-btn ml-5" href="javascript:void(0)"><i class="fa fa-th" aria-hidden="true"></i></a></div>
           <select class="selectpicker pull-left">
             <option>Low to High</option>
             <option>High to Low</option>
@@ -430,7 +431,7 @@
       <div class="main-wrapper">
         <div class="content-wrapper">
           <div class="check">
-            <div class="grid mt-10">
+            <div class="grid mt-10 list-view">
               <div class="grid-item"><span class="ribbon top">Top Deal</span>
                 <div class="preview">
                   <div class="image" style="background-image: url('images/room1.png');"></div>
@@ -461,7 +462,7 @@
                     <div class="clearfix"></div>
                     <div class="divider"></div>
                     <div class="left-block center-block">
-                      <div class="number"><img src="images/icons/5.svg" width="25"></div>
+                      <div class="number"><span>5</span></div>
                       <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
                       <div class="trip">
                         <div class="rate" data-rate="4.54"></div>
@@ -478,7 +479,8 @@
                       <li><i class="fa fa-shower" aria-hidden="true"></i></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
-                    <p class="booked pull-right visible-xs">Booked<span> 30</span> Times Today</p>
+                    <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>5</span> People Looking Right Now</p>
                   </div>
                 </div>
               </div>
@@ -512,7 +514,7 @@
                     <div class="clearfix"></div>
                     <div class="divider"></div>
                     <div class="left-block center-block">
-                      <div class="number"><img src="images/icons/5.svg" width="25"></div>
+                      <div class="number"><span>5</span></div>
                       <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
                       <div class="trip">
                         <div class="rate" data-rate="4.1"></div>
@@ -530,6 +532,7 @@
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>255</div>
                     <p class="booked pull-right">Booked<span> 17</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>8</span> People Looking Right Now</p>
                   </div>
                 </div>
               </div>
@@ -563,7 +566,7 @@
                     <div class="clearfix"></div>
                     <div class="divider"></div>
                     <div class="left-block center-block">
-                      <div class="number"><img src="images/icons/5.svg" width="25"></div>
+                      <div class="number"><span>5</span></div>
                       <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
                       <div class="trip">
                         <div class="rate" data-rate="3.48"></div>
@@ -581,10 +584,11 @@
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>8</div>
                     <p class="booked pull-right">Booked<span> 24</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>3</span> People Looking Right Now</p>
                   </div>
                 </div>
               </div>
-              <div class="grid-item"><span class="ribbon top hidden">Top Deal</span>
+              <div class="grid-item show1200-1280"><span class="ribbon top hidden">Top Deal</span>
                 <div class="preview">
                   <div class="image" style="background-image: url('images/room4.png');"></div>
                 </div>
@@ -613,7 +617,7 @@
                     <div class="clearfix"></div>
                     <div class="divider"></div>
                     <div class="left-block center-block">
-                      <div class="number"><img src="images/icons/5.svg" width="25"></div>
+                      <div class="number"><span>5</span></div>
                       <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
                       <div class="trip">
                         <div class="rate" data-rate="4.9"></div>
@@ -631,6 +635,111 @@
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>25 688</div>
                     <p class="booked pull-right">Booked<span> 41</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>9</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item show1200-1280"><span class="ribbon top">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room1.png');"></div>
+                </div>
+                <div class="warning orange">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Joint Base</h2>
+                      <ul class="stars stars-hotel" data-stars="4.47">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$311<span class="regular-text">/day</span></p>
+                      <p class="red-price">$520</p>
+                      <p class="warning-list">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>5</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
+                    <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>5</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room2.png');"></div>
+                </div>
+                <div class="warning red hidden">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">London Hilton Hotel</h2>
+                      <ul class="stars stars-hotel" data-stars="4.23">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$200<span class="regular-text">/day</span></p>
+                      <p class="red-price hidden">$520</p>
+                      <p class="warning-list hidden">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>255</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>255</div>
+                    <p class="booked pull-right">Booked<span> 17</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>8</span> People Looking Right Now</p>
                   </div>
                 </div>
               </div>
@@ -655,8 +764,8 @@
                     <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
                     <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
                   </ul>
-                  <p class="small-text font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
-                  <p class="small-text font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+                  <p class="font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
+                  <p class="font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-3 mt-10 pl-0 pr-15 right-block"><img class="pull-right heart" src="images/icons/heart.svg" width="50" alt="">
                   <p class="price">$500/<span class="regular-text">Day</span></p>
@@ -683,8 +792,754 @@
                     <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
                     <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
                   </ul>
-                  <p class="small-text font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
-                  <p class="small-text font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+                  <p class="font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
+                  <p class="font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 mt-10 pl-0 pr-15 right-block"><img class="pull-right heart" src="images/icons/heart.svg" width="50" alt="">
+                  <p class="price">$500/<span class="regular-text">Day</span></p>
+                  <p class="price-red">$780/<span class="regular-text">Day</span></p>
+                </div>
+                <div class="col-md-12 col-sm-12 mt-30 mt-sm-10">
+                  <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view" href="javascript:void(0)">VIEW</a>
+                </div>
+              </div>
+            </div>
+            <div class="grid mt-10 list-view">
+              <div class="grid-item"><span class="ribbon top">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room1.png');"></div>
+                </div>
+                <div class="warning orange">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Joint Base</h2>
+                      <ul class="stars stars-hotel" data-stars="4.47">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$311<span class="regular-text">/day</span></p>
+                      <p class="red-price">$520</p>
+                      <p class="warning-list">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>5</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
+                    <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>5</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room2.png');"></div>
+                </div>
+                <div class="warning red hidden">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">London Hilton Hotel</h2>
+                      <ul class="stars stars-hotel" data-stars="4.23">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$200<span class="regular-text">/day</span></p>
+                      <p class="red-price hidden">$520</p>
+                      <p class="warning-list hidden">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>255</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>255</div>
+                    <p class="booked pull-right">Booked<span> 17</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>8</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room3.png');"></div>
+                </div>
+                <div class="warning green">Only 6 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Radisson Blu Resort</h2>
+                      <ul class="stars stars-hotel" data-stars="3.47">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="3.48"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$177<span class="regular-text">/day</span></p>
+                      <p class="red-price hidden">$520</p>
+                      <p class="warning-list">Only<span class="green-text"> 6</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="3.48"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>8</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>8</div>
+                    <p class="booked pull-right">Booked<span> 24</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>3</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item show1200-1280"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room4.png');"></div>
+                </div>
+                <div class="warning red">Only 1 room left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Soho, Soma-Bay Resort</h2>
+                      <ul class="stars">
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.9"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$500<span class="regular-text">/day</span></p>
+                      <p class="red-price">$520</p>
+                      <p class="warning-list">Only<span class="red-text"> 1</span> room left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.9"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>25 688</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>25 688</div>
+                    <p class="booked pull-right">Booked<span> 41</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>9</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item show1200-1280"><span class="ribbon top">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room1.png');"></div>
+                </div>
+                <div class="warning orange">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Joint Base</h2>
+                      <ul class="stars stars-hotel" data-stars="4.47">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$311<span class="regular-text">/day</span></p>
+                      <p class="red-price">$520</p>
+                      <p class="warning-list">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>5</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
+                    <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>5</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room2.png');"></div>
+                </div>
+                <div class="warning red hidden">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">London Hilton Hotel</h2>
+                      <ul class="stars stars-hotel" data-stars="4.23">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$200<span class="regular-text">/day</span></p>
+                      <p class="red-price hidden">$520</p>
+                      <p class="warning-list hidden">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>255</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>255</div>
+                    <p class="booked pull-right">Booked<span> 17</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>8</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row exclusive pl-5 pr-5">
+              <h3>UP TO 80%</h3>
+              <h4 class="pl-xs-15 pr-xs-15">Exclusive Cancelon deals around these dates</h4>
+              <div class="col-md-6 btrans pl-0 pr-0 white">
+                <div class="col-md-12 pl-0 pr-0 mt-15 mb-15">
+                  <div class="trip">
+                    <div class="rate" data-rate="4.91"></div>
+                  </div><a class="reviews" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
+                  <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
+                </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+                <div class="col-md-9 col-sm-9 col-xs-9 mt-10 left-block">
+                  <h5>St Martins Lane London</h5>
+                  <ul class="stars stars-hotel mb-5" data-stars="4.91">
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
+                  <p class="font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 mt-10 pl-0 pr-15 right-block"><img class="pull-right heart" src="images/icons/heart.svg" width="50" alt="">
+                  <p class="price">$500/<span class="regular-text">Day</span></p>
+                  <p class="price-red">$780/<span class="regular-text">Day</span></p>
+                </div>
+                <div class="col-md-12 col-sm-12 mt-30 mt-sm-10">
+                  <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view" href="javascript:void(0)">VIEW</a>
+                </div>
+              </div>
+              <div class="col-md-6 btrans pl-0 pr-0 white">
+                <div class="col-md-12 pl-0 pr-0 mt-15 mb-15">
+                  <div class="trip">
+                    <div class="rate" data-rate="4.93"></div>
+                  </div><a class="reviews" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
+                  <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
+                </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+                <div class="col-md-9 col-sm-9 col-xs-9 mt-10 left-block">
+                  <h5>Soho, Soma-Bay Resort</h5>
+                  <ul class="stars stars-hotel mb-5" data-stars="4.87">
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
+                  <p class="font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 mt-10 pl-0 pr-15 right-block"><img class="pull-right heart" src="images/icons/heart.svg" width="50" alt="">
+                  <p class="price">$500/<span class="regular-text">Day</span></p>
+                  <p class="price-red">$780/<span class="regular-text">Day</span></p>
+                </div>
+                <div class="col-md-12 col-sm-12 mt-30 mt-sm-10">
+                  <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view" href="javascript:void(0)">VIEW</a>
+                </div>
+              </div>
+            </div>
+            <div class="grid mt-10 list-view">
+              <div class="grid-item"><span class="ribbon top">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room1.png');"></div>
+                </div>
+                <div class="warning orange">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Joint Base</h2>
+                      <ul class="stars stars-hotel" data-stars="4.47">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$311<span class="regular-text">/day</span></p>
+                      <p class="red-price">$520</p>
+                      <p class="warning-list">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>5</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
+                    <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>5</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room2.png');"></div>
+                </div>
+                <div class="warning red hidden">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">London Hilton Hotel</h2>
+                      <ul class="stars stars-hotel" data-stars="4.23">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$200<span class="regular-text">/day</span></p>
+                      <p class="red-price hidden">$520</p>
+                      <p class="warning-list hidden">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>255</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>255</div>
+                    <p class="booked pull-right">Booked<span> 17</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>8</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room3.png');"></div>
+                </div>
+                <div class="warning green">Only 6 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Radisson Blu Resort</h2>
+                      <ul class="stars stars-hotel" data-stars="3.47">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="3.48"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$177<span class="regular-text">/day</span></p>
+                      <p class="red-price hidden">$520</p>
+                      <p class="warning-list">Only<span class="green-text"> 6</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="3.48"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>8</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>8</div>
+                    <p class="booked pull-right">Booked<span> 24</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>3</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item show1200-1280"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room4.png');"></div>
+                </div>
+                <div class="warning red">Only 1 room left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Soho, Soma-Bay Resort</h2>
+                      <ul class="stars">
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.9"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$500<span class="regular-text">/day</span></p>
+                      <p class="red-price">$520</p>
+                      <p class="warning-list">Only<span class="red-text"> 1</span> room left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.9"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>25 688</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>25 688</div>
+                    <p class="booked pull-right">Booked<span> 41</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>9</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item show1200-1280"><span class="ribbon top">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room1.png');"></div>
+                </div>
+                <div class="warning orange">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">Joint Base</h2>
+                      <ul class="stars stars-hotel" data-stars="4.47">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$311<span class="regular-text">/day</span></p>
+                      <p class="red-price">$520</p>
+                      <p class="warning-list">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.54"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>5</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
+                    <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>5</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item"><span class="ribbon top hidden">Top Deal</span>
+                <div class="preview">
+                  <div class="image" style="background-image: url('images/room2.png');"></div>
+                </div>
+                <div class="warning red hidden">Only 3 rooms left!</div>
+                <div class="block-wrapper">
+                  <div class="top-wrapper clearfix">
+                    <div class="left-block top-block">
+                      <h2 class="title">London Hilton Hotel</h2>
+                      <ul class="stars stars-hotel" data-stars="4.23">
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                        <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                      </ul>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                      <p class="address">485 Clawson St, Staten Island, NY 10306</p>
+                    </div>
+                    <div class="right-block top-block">
+                      <p class="price">$200<span class="regular-text">/day</span></p>
+                      <p class="red-price hidden">$520</p>
+                      <p class="warning-list hidden">Only<span class="orange-text"> 3</span> rooms left!</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <div class="left-block center-block">
+                      <div class="number"><span>5</span></div>
+                      <div class="distance"><span class="distance-color">1.98 km.</span> to the centre of Central Park</div>
+                      <div class="trip">
+                        <div class="rate" data-rate="4.1"></div>
+                      </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
+                    </div>
+                    <div class="right-block center-block"><a class="views" href="javascript:void(0)"><span class="right">View</span><span class="left"><i class="fa fa-eye" aria-hidden="true"></i>255</span></a></div>
+                    <div class="clearfix"></div>
+                    <div class="divider"></div>
+                    <ul class="features">
+                      <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-car" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-phone" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-shower" aria-hidden="true"></i></li>
+                    </ul>
+                    <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>255</div>
+                    <p class="booked pull-right">Booked<span> 17</span> Times Today</p>
+                    <p class="watching-now pull-right"><span>8</span> People Looking Right Now</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row exclusive pl-5 pr-5">
+              <h3>UP TO 80%</h3>
+              <h4 class="pl-xs-15 pr-xs-15">Exclusive Cancelon deals around these dates</h4>
+              <div class="col-md-6 btrans pl-0 pr-0 white">
+                <div class="col-md-12 pl-0 pr-0 mt-15 mb-15">
+                  <div class="trip">
+                    <div class="rate" data-rate="4.91"></div>
+                  </div><a class="reviews" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
+                  <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
+                </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+                <div class="col-md-9 col-sm-9 col-xs-9 mt-10 left-block">
+                  <h5>St Martins Lane London</h5>
+                  <ul class="stars stars-hotel mb-5" data-stars="4.91">
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
+                  <p class="font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 mt-10 pl-0 pr-15 right-block"><img class="pull-right heart" src="images/icons/heart.svg" width="50" alt="">
+                  <p class="price">$500/<span class="regular-text">Day</span></p>
+                  <p class="price-red">$780/<span class="regular-text">Day</span></p>
+                </div>
+                <div class="col-md-12 col-sm-12 mt-30 mt-sm-10">
+                  <p class="cancelon"><i class="fa fa-star" aria-hidden="true"></i> Cancelon Exclusive</p><a class="orange-view" href="javascript:void(0)">VIEW</a>
+                </div>
+              </div>
+              <div class="col-md-6 btrans pl-0 pr-0 white">
+                <div class="col-md-12 pl-0 pr-0 mt-15 mb-15">
+                  <div class="trip">
+                    <div class="rate" data-rate="4.93"></div>
+                  </div><a class="reviews" href="javascript:void(0)">142 Reviews</a><span class="top">Top Deal</span>
+                  <p class="small-text font-weight-600 pull-right ml-10 font-roboto mb-0 top-2 mr-25 date">Apr 04 - 07</p>
+                </div><img class="img-responsive" src="images/room4.png" alt="" srcset="images/room4.png 1x, images/room4@2x.png 2x, images/room4@3x.png 3x">
+                <div class="col-md-9 col-sm-9 col-xs-9 mt-10 left-block">
+                  <h5>Soho, Soma-Bay Resort</h5>
+                  <ul class="stars stars-hotel mb-5" data-stars="4.87">
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
+                    <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
+                  </ul>
+                  <p class="font-weight-500 font-roboto mb-5">Amsterdam Schiphol, Netherlands</p>
+                  <p class="font-weight-400 font-roboto mb-5"><i class="fa fa-map-pin" aria-hidden="true"></i> 485 Clawson St, Staten Island, NY 10306</p>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-3 mt-10 pl-0 pr-15 right-block"><img class="pull-right heart" src="images/icons/heart.svg" width="50" alt="">
                   <p class="price">$500/<span class="regular-text">Day</span></p>
@@ -699,11 +1554,24 @@
           <div class="loading-more">
             <div class="loading"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i><span class="text-uppercase">Loading</span></div>
           </div>
+          <div class="pagination-wrapper">
+            <div class="pagination">
+              <ul>
+                <li><a href="javascript:void(0)">Previous</a></li>
+                <li class="numbers"><a href="javascript:void(0)">1</a></li>
+                <li class="numbers"><a href="javascript:void(0)">2</a></li>
+                <li class="numbers active"><a href="javascript:void(0)">3</a></li>
+                <li class="numbers"><a href="javascript:void(0)">4</a></li>
+                <li class="numbers"><a href="javascript:void(0)">5</a></li>
+                <li><a href="javascript:void(0)">Next</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div id="map"></div>
         <div class="black-bg-search"></div>
         <div class="black-bg-map"></div>
-        <div class="map-item-block">
+        <div class="map-item-block" id="map-item-block">
           <div class="map-item-block-wrapper">
             <div class="close-line"><a class="close-btn" href="javascript:void(0)"><span class="close-icon"><span class="bar"></span><span class="bar"></span></span><span class="text">Close Details</span></a>
               <div class="socials">
@@ -718,8 +1586,8 @@
             </div>
             <div class="title-rating">
               <div class="row pl-16 pr-16">
-                <div class="col-sm-1"><img src="images/icons/map-item.png" alt="" srcset="images/icons/map-item.png 1x, images/icons/map-item@2x.png 2x, images/icons/map-item@3x.png 3x"></div>
-                <div class="col-sm-3 pl-10">
+                <div class="col-sm-1 col-xs-3"><img src="images/icons/map-item.png" alt="" srcset="images/icons/map-item.png 1x, images/icons/map-item@2x.png 2x, images/icons/map-item@3x.png 3x"></div>
+                <div class="col-sm-3 col-xs-9 pl-10">
                   <h2 class="main-title">Joint Base</h2>
                   <ul class="stars stars-hotel" data-stars="4.47">
                     <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
@@ -730,7 +1598,7 @@
                     <li class="hidden"><i class="fa orange-text fa-star-half" aria-hidden="true"></i></li>
                   </ul>
                 </div>
-                <div class="col-sm-3 col-sm-offset-5">
+                <div class="col-sm-3 col-sm-offset-5 hidden-xs">
                   <div class="trip">
                     <div class="rate" data-rate="4.54"></div>
                   </div><a class="reviews" href="javascript:void(0)">142 Reviews</a>
@@ -813,7 +1681,7 @@
           </div>
         </div>
         <div class="row mb-50">
-          <div class="col-md-3 col-sm-6 mt-15 hidden-xs">
+          <div class="col-md-3 col-sm-6 mt-15 hidden-sm hidden-xs">
             <ul class="list-unstyled">
               <li class="widget-container widget_nav_menu">
                 <!-- widgets list-->
@@ -829,7 +1697,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 col-sm-6 mt-15 hidden-xs">
+          <div class="col-md-3 col-sm-6 mt-15 hidden-sm hidden-xs">
             <ul class="list-unstyled">
               <li class="widget-container widget_nav_menu">
                 <!-- widgets list-->
@@ -845,7 +1713,7 @@
             </ul>
           </div>
           <div class="clearfix"></div>
-          <div class="col-md-3 col-sm-6 mt-15 hidden-xs">
+          <div class="col-md-3 col-sm-6 mt-15 hidden-sm hidden-xs">
             <ul class="list-unstyled">
               <li class="widget-container widget_nav_menu">
                 <!-- widgets list-->
@@ -861,7 +1729,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 col-sm-6 mt-15 hidden-xs">
+          <div class="col-md-3 col-sm-6 mt-15 hidden-sm hidden-xs">
             <ul class="list-unstyled">
               <li class="widget-container">
                 <!-- widgets list-->
@@ -881,7 +1749,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-xs-12 visible-xs">
+          <div class="col-xs-12 visible-sm visible-xs">
             <ul class="nav navbar-nav navbar-footer">
               <li class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-plus-square-o" aria-hidden="true"></i><i class="fa fa-minus-square-o" aria-hidden="true"></i>Company</button>
@@ -938,7 +1806,7 @@
             <p class="white-text">Unlock special rates by signing up here:</p>
             <div class="input-group">
               <input class="form-control special-sign" type="text" placeholder="Your email address here..."><span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">SIGN UP</button></span>
+                <button class="btn btn-secondary ml-0" type="button">SIGN UP</button></span>
             </div>
           </div>
         </div>
@@ -1108,7 +1976,7 @@
     <script type="text/javascript" src="assets/plugins/owl.carousel/dist/owl.carousel.min.js"></script>
     <script type="text/javascript" src="assets/plugins/modernizr/modernizr.js"></script>
     <script type="text/javascript" src="js/appear.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Google Maps Api-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvpH7_ggEW5MYLRO8EN1BbJak4u2uIvaA"></script>
     <!-- Google Maps Settings-->
