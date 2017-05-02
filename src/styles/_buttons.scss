@@ -22,13 +22,13 @@
 }
 
 .green-btn {
-  background-color: #69b926;
+  background-color: #68b925;
   padding: 7px 19px 7px 19px !important;
   border-radius: 4px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   &:hover, &:focus {
-    background-color: darken(#69b926, 6%) !important;
+    background-color: darken(#68b925, 6%) !important;
     border-radius: 4px;
     color: #ffffff !important;
   }
@@ -236,7 +236,7 @@
   width: 27px;
   height: 16px;
   margin: 0;
-  background: #69b926;
+  background: #68b925;
   position: absolute;
   top: 5px;
   bottom: 0;

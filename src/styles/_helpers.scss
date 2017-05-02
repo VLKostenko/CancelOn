@@ -12,15 +12,15 @@
 }
 
 .orange-text {
-  color: #f99e3e;
+  color: #f68d2a;
 }
 
 .red-text {
-  color: #ff383f;
+  color: #ff353d;
 }
 
 .green-text {
-  color: #69b926 !important;
+  color: #68b925 !important;
 }
 
 .white-text {
@@ -132,7 +132,7 @@
     border: 2px solid #000;
     border-radius: 50%;
     &.clicked, &:focus {
-      color: #55c1ff;
+      color: #00c2ff;
     }
   }
   .distance {
@@ -182,7 +182,7 @@
     }
   }
   .top {
-    background: #ff383f;
+    background: #ff353d;
     color: #fff;
     padding: 4px 8px 2px;
     font-size: 10px;
@@ -193,7 +193,7 @@
       content: '';
       position: absolute;
       display: block;
-      border: 10px solid #ff383f;
+      border: 10px solid #ff353d;
       border-left-width: 1px;
       border-right-color: transparent;
       left: initial;
@@ -218,7 +218,7 @@
     }
     .right {
       float: right;
-      background: #55c1ff;
+      background: #00c2ff;
       color: #fff;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
@@ -231,7 +231,7 @@
     }
     &:hover {
       .left {
-        background: #55c1ff;
+        background: #00c2ff;
       }
       .right {
         background: #54aee1;
@@ -431,7 +431,7 @@
     display: inline-block;
     float: left;
     i.fa-star {
-      color: #f99e3e;
+      color: #f68d2a;
       font-size: 14px;
       margin-left: 1px;
       margin-right: 3px;
@@ -506,7 +506,7 @@
   }
   .top {
     float: right;
-    background: #ff383f;
+    background: #ff353d;
     color: #ffffff;
     padding: 4px 8px 2px;
     font-size: 10px;
@@ -516,7 +516,7 @@
       content: '';
       position: absolute;
       display: block;
-      border: 10px solid #ff383f;
+      border: 10px solid #ff353d;
       left: -10px;
       top: 0;
       border-right-width: 1px;
@@ -554,8 +554,8 @@
     width: 100%;
   }
   .cancelon {
-    border: 1px solid #f99e3e;
-    color: #f99e3e;
+    border: 1px solid #f68d2a;
+    color: #f68d2a;
     float: left;
     padding: 3px 10px 2px;
     text-transform: uppercase;
@@ -563,7 +563,7 @@
   }
   .orange-view {
     margin-top: -5px;
-    background-color: #f99e3e;
+    background-color: #f68d2a;
     padding: 5px 15px 3px;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
@@ -706,10 +706,6 @@ aside {
   margin-left: 15px;
   float: left;
   width: 225px;
-  //@media screen and (min-width: 1441px) {
-  //  $aside-width: 14%;
-  //  width: $aside-width;
-  //}
   #amount1 {
     float: left;
     width: 46%;
@@ -800,6 +796,7 @@ aside {
     position: relative;
     padding-left: 5px;
     width: 100%;
+    font-weight: 500;
     &::after {
       content: "";
       display: inline-block;
@@ -839,6 +836,12 @@ aside {
   .checkbox input[type="checkbox"]:checked + label::before {
     font-family: 'FontAwesome';
     content: "";
+  }
+  .checkbox input[type="checkbox"]:checked + label {
+    color: #5cb85c;
+    i {
+      color: #5cb85c!important;
+    }
   }
   .checkbox input[type="checkbox"]:disabled + label {
     opacity: 0.65;
@@ -1144,6 +1147,10 @@ aside {
       margin-top: -2px;
     }
   }
+  .bs-caret {
+    position: absolute;
+    right: 15px;
+  }
 }
 .filter-top {
   height: 55px;
@@ -1254,6 +1261,17 @@ aside {
     width: calc(100% - 15px)!important;
   }
 }
+.stickit {
+  margin-left: 660px;
+  position: fixed;
+  top: 0;
+}
+
+.stickit-end {
+  bottom: 40px;
+  position: absolute;
+  right: 0;
+}
 
 @include placeholder-color('.special-sign[type="text"]', #9d9d9d);
 
@@ -1314,7 +1332,7 @@ aside {
     padding: 15px 10px;
     .label {
       color: #fff;
-      background-color: #ff383f;
+      background-color: #ff353d;
       border-radius: 0;
       font-weight: 600;
       padding: 7px 12px;
@@ -1344,7 +1362,7 @@ aside {
       text-align: center;
       line-height: 16px;
       margin-top: -5px;
-      background-color: #f99e3e;
+      background-color: #f68d2a;
       padding: 5px 15px 3px;
       color: #fff;
       font-size: 9pt;
@@ -1437,6 +1455,8 @@ aside {
 }
 
 .filter-top {
+  z-index: 20;
+  position: relative;
   .bootstrap-select {
     .dropdown-menu {
       font-family: "Roboto", sans-serif;
@@ -1469,8 +1489,8 @@ aside {
         margin-right: 10px;
         @include crossBrowser(transition, all .3s);
         &:hover {
-          background: #d1d7e0;
-          border-color: #d1d7e0;
+          background: #d0d8e1;
+          border-color: #d0d8e1;
           color: #000;
         }
       }
@@ -1484,9 +1504,9 @@ aside {
       }
       &.active {
         a {
-          background-color: #55c1ff;
+          background-color: #00c2ff;
           color: #fff;
-          border-color: #55c1ff;
+          border-color: #00c2ff;
         }
       }
     }

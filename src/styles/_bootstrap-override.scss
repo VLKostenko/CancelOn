@@ -20,6 +20,8 @@ button[type="button"] {
 }
 
 .navbar-default {
+  position: relative;
+  z-index: 150;
   @include background-image-retina('../images/navbar-bg', png);
   background-size: cover;
   border: 0;
@@ -278,13 +280,13 @@ footer {
 }
 
 .btn-info {
-  background-color: #666e7e !important;
-  border-color: #666e7e !important;
+  background-color: #636e80 !important;
+  border-color: #636e80 !important;
 }
 
 .btn-warning {
-  background-color: #e39d47 !important;
-  border-color: #e39d47 !important;
+  background-color: #f68d2a !important;
+  border-color: #f68d2a !important;
 }
 
 .btn-number {
@@ -383,7 +385,7 @@ footer {
 
 .panel-heading {
   border-radius: 0;
-  background-color: #d1d7e0 !important;
+  background-color: #d0d8e1 !important;
   padding: 0;
   margin-bottom: 1px;
 }
@@ -411,7 +413,7 @@ footer {
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default {
-  background: #69b926;
+  background: #68b925;
   border-radius: 50%;
   border: none;
   width: 14px;
@@ -429,7 +431,7 @@ footer {
 }
 
 .ui-slider .ui-slider-range {
-  background: #69b926;
+  background: #68b925;
 }
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
   font-family: "Roboto", sans-serif;

@@ -98,6 +98,12 @@
     margin-right: 15px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .main-search-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+}
 @media screen and (min-width: 1200px) and (max-width: 1280px) {
   .main-wrapper {
     #map {
@@ -148,9 +154,21 @@
   }
 }
 @media screen and (max-width: 1199px) {
+  [data-aos^=fade][data-aos^=fade] {
+    opacity: 1;
+  }
+  [data-aos=fade-down],
+  [data-aos=fade-up],
+  [data-aos=fade] {
+    transform: initial;
+  }
   .container-search-wrapper {
     max-width: 100%;
     margin: 0 auto;
+  }
+  .remove-padding-md {
+    position: relative;
+    z-index: 1;
   }
   .navbar-header {
     width: 41%;
@@ -203,7 +221,7 @@
     }
     &.open {
       .navbar-toggle {
-        background-color: #55c1ff;
+        background-color: #00c2ff;
         .icon-bar {
           background-color: #fff;
           position: relative;
@@ -410,7 +428,7 @@
           li {
             &.menu {
               a {
-                background: #55c1ff;
+                background: #00c2ff;
               }
             }
           }
@@ -437,6 +455,10 @@
 @media screen and (max-width: 991px) {
   .map-item-block {
     width: 90%;
+  }
+  .remove-padding-md {
+    position: relative;
+    z-index: 1;
   }
   .grid-item {
     width: 100%;
@@ -673,7 +695,7 @@
       margin: auto;
       border-radius: 0 0 5px 5px!important;
       z-index: 2;
-      background: #69b926!important;
+      background: #68b925!important;
       text-transform: uppercase;
       width: 200px;
       height: 50px;
@@ -712,7 +734,7 @@
     left: 0;
     width: 60px;
     height: 78px;
-    top: -78px;
+    top: 0;
     color: #102e4a;
     background: #d9dfe4;
     font-size: 46px;
@@ -884,7 +906,7 @@
     }
     .views-bottom {
       font-family: "Roboto",sans-serif;
-      color: #69b926;
+      color: #68b925;
       font-size: 12px;
       text-transform: uppercase;
       float: left;

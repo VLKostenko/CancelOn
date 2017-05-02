@@ -2,7 +2,9 @@
 * Margins Classes - Negative
 * Helper classes for side margins on negative
 */
-
+.z-index1 {
+	z-index: 1!important;
+}
 .m-auto {
 	margin: 0 auto;
 }
@@ -5413,6 +5415,9 @@
 	}
 	.hsize-xs-700 {
 		height: 700px;
+	}
+	.z-index-xs-11 {
+		z-index: 11!important;
 	}
 	/* Reset Columnized Lists */
 	.list-col-reset-xs[data-columns] {
