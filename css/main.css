@@ -8530,25 +8530,13 @@ aside.show-on-map + .main-wrapper {
   margin-left: 15px;
   float: left;
   height: 100%;
-  min-height: 1500px;
+  min-height: 1883px;
   background-color: grey;
   width: calc(35% - 15px);
 }
 
 #map.full-width {
   width: calc(100% - 15px) !important;
-}
-
-.stickit {
-  margin-left: 660px;
-  position: fixed;
-  top: 0;
-}
-
-.stickit-end {
-  bottom: 40px;
-  position: absolute;
-  right: 0;
 }
 
 .special-sign[type="text"]::-webkit-input-placeholder {
@@ -8753,11 +8741,6 @@ aside.show-on-map + .main-wrapper {
 .nav-pills > li a {
   color: #333;
   background: transparent !important;
-}
-
-.filter-top {
-  z-index: 20;
-  position: relative;
 }
 
 .filter-top .bootstrap-select .dropdown-menu {
