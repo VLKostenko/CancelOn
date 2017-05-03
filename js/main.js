@@ -326,16 +326,16 @@
     reinitMap();
   });
 
-  $('.filter-icon').click(function() {
-    $('.sidebar-filter').fadeIn(200);
-    $('body').css('overflow', 'hidden');
-  });
+  // $('.filter-icon').click(function() {
+  //   $('.sidebar-filter').fadeIn(200);
+  //   $('body').css('overflow', 'hidden');
+  // });
 
-  $('.sidebar-filter .mobile-close').click(function() {
-    $('.sidebar-filter').fadeOut(200);
-    $('.black-bg-map').fadeOut(200);
-    $('body').css('overflow', 'initial');
-  });
+  // $('.sidebar-filter .mobile-close').click(function() {
+  //   $('.sidebar-filter').fadeOut(200);
+  //   $('.black-bg-map').fadeOut(200);
+  //   $('body').css('overflow', 'initial');
+  // });
 
   var search = $('.input-search');
   var searchResult = $('.search-result');
@@ -385,16 +385,22 @@
   // });
 
   function hideMobileNav() {
-    $('.navbar-header').removeClass('open');
+    $('.navbar-header').removeClass('open-menu');
     $('body').removeClass('opened-menu');
     $('.black-bg-search').fadeOut(200).removeAttr('style')
   }
 
+  function hideMobileFilter() {
+    $('.navbar-header').removeClass('open-filter');
+    $('body').removeClass('opened-filter');
+    $('.black-bg-search').fadeOut(200).removeAttr('style')
+  }
+
   $('#menu-button').click(function() {
-    if ( $(this).parent('.navbar-header').hasClass('open') ) {
+    if ( $(this).parent('.navbar-header').hasClass('open-menu') ) {
       hideMobileNav();
     } else {
-      $(this).parent('.navbar-header').addClass('open');
+      $(this).parent('.navbar-header').addClass('open-menu');
       $('body').addClass('opened-menu');
       $('.black-bg-search').fadeIn(200).css({
         'position': 'fixed',
@@ -403,9 +409,24 @@
     }
   });
 
+  $('.filter-icon').click(function() {
+    if ( $(this).parent('.navbar-header').hasClass('open-filter') ) {
+      hideMobileFilter();
+    } else {
+      $(this).parent('.navbar-header').addClass('open-filter');
+      $('body').addClass('opened-filter');
+      $('.black-bg-search').fadeIn(200).css({
+        'position': 'fixed',
+        'z-index': '100'
+      });
+    }
+  });
+
   $('.black-bg-search').click(function() {
-    if ( $('.navbar-header').hasClass('open') ) {
+    if ( $('.navbar-header').hasClass('open-menu') ) {
       hideMobileNav();
+    } else if ( $('.navbar-header').hasClass('open-filter') ) {
+      hideMobileFilter();
     }
   });
 
@@ -428,13 +449,24 @@
     $('#dropdownMenuLink2').append('<span class="bs-caret"><span class="caret"></span></span>');
   });
 
+  function sidebarPosition() {
+    if ( $(window).width() < 768 ) {
+      $('.sidebar-filter').mCustomScrollbar();
+      $('.sidebar-filter').appendTo('#filter_mobile');
+    } else {
+      $('.sidebar-filter').mCustomScrollbar('destroy');
+      $('.sidebar-filter').insertBefore($('.main-wrapper'));
+    }
+  }
+
   $(window).resize(function() {
     initAOS();
     if ( $(window).width() < 992 ) {
       gridView();
     }
-    if ( $(window).width() < 768 ) {
-      $('.sidebar-filter').mCustomScrollbar();
+    sidebarPosition();
+    if ( $(window).width() > 767 ) {
+      hideMobileFilter();
     }
   });
 
@@ -598,10 +630,10 @@
 
         getThumbBoundsFn: function(index) {
           // See Options -> getThumbBoundsFn section of documentation for more info
-          var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+          var thumbnail = items[index].el.getElementsByTagName('img')[0] || items[index].el.getElementsByClassName('image')[0], // find thumbnail
             pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
             rect = thumbnail.getBoundingClientRect();
-
+          console.log(thumbnail);
           return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
         }
 
@@ -658,8 +690,11 @@
   // execute above function
   initPhotoSwipeFromDOM('.photoswipe-block');
 
+  initPhotoSwipeFromDOM('.photoswipe-block');
+
   $(document).ready(function() {
     initAOS();
+    sidebarPosition();
     if ( $(window).width() < 992 ) {
       gridView();
     }

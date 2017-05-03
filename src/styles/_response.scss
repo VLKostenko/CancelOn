@@ -101,7 +101,7 @@
 @media screen and (min-width: 1200px) {
   .main-search-wrapper {
     position: relative;
-    z-index: 10;
+    z-index: 12;
   }
   .remove-padding-md {
     //position: relative;
@@ -158,6 +158,9 @@
   }
 }
 @media screen and (max-width: 1199px) {
+  body {
+    position: static!important;
+  }
   [data-aos^=fade][data-aos^=fade] {
     opacity: 1;
   }
@@ -223,7 +226,7 @@
         }
       }
     }
-    &.open {
+    &.open-menu {
       .navbar-toggle {
         background-color: #00c2ff;
         .icon-bar {
@@ -336,39 +339,63 @@
     position: relative;
     left: 0;
     &.opened-menu {
+      left: -275px;
+      overflow-y: hidden!important;
+      position: relative!important;
+    }
+    &.opened-filter {
       left: 275px;
       overflow-y: hidden!important;
+      position: relative!important;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include crossBrowser(transition, left .5s ease);
+      &.opened-menu {
+        left: 275px;
+        position: relative!important;
+      }
     }
   }
 
   #nav_mobile {
     .nav {
       @include crossBrowser(backface-visibility, hidden);
-      @include crossBrowser(transition, left .5s ease);
+      @include crossBrowser(transition, right .5s ease);
       display: block !important;
       margin: 0;
       opacity: 1;
       visibility: visible;
       height: 100%;
       max-height: 100vh;
-      left: -275px;
-      right: auto;
+      right: -275px;
+      left: auto;
       top: 0;
+      overflow-x: hidden;
       overflow-y: auto;
       position: fixed;
       z-index: 10002;
       width: 275px;
       background: #002a4a;
       box-shadow: none;
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @include crossBrowser(transition, left .5s ease);
+        left: -275px;
+        right: auto;
+      }
       &:after {
         content: '';
         position: absolute;
         z-index: 100222;
-        right: 0;
+        left: 0;
         top: 0;
         height: 100vh;
         width: 10px;
-        @include crossBrowser(box-shadow, inset -0.35em 0 0.3em 0 rgba(0, 0, 0, 0.2));
+        @include crossBrowser(box-shadow, inset 0.35em 0 0.3em 0 rgba(0, 0, 0, 0.2));
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          @include crossBrowser(box-shadow, inset -0.35em 0 0.3em 0 rgba(0, 0, 0, 0.2));
+          right: 0;
+          left: initial;
+        }
       }
       li {
         width: 100%;
@@ -424,10 +451,41 @@
       }
     }
   }
+  #filter_mobile {
+    .sidebar-filter {
+      @include crossBrowser(backface-visibility, hidden);
+      @include crossBrowser(transition, left .5s ease);
+      display: block !important;
+      margin: 0;
+      opacity: 1;
+      visibility: visible;
+      height: 100%;
+      max-height: 100vh;
+      left: -275px;
+      right: auto;
+      top: 0;
+      overflow-y: auto;
+      position: fixed;
+      z-index: 10002;
+      width: 275px;
+      background: #002a4a;
+      box-shadow: none;
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 100222;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 10px;
+        @include crossBrowser(box-shadow, inset -0.35em 0 0.3em 0 rgba(0, 0, 0, 0.2));
+      }
+    }
+  }
   .navbar-header {
-    &.open {
-      #nav_mobile {
-        .nav {
+    &.open-filter {
+      #filter_mobile {
+        .sidebar-filter {
           left: 0;
           li {
             &.menu {
@@ -435,6 +493,25 @@
                 background: #00c2ff;
               }
             }
+          }
+        }
+      }
+    }
+    &.open-menu {
+      #nav_mobile {
+        .nav {
+          right: 0;
+          li {
+            &.menu {
+              a {
+                background: #00c2ff;
+              }
+            }
+          }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          .nav {
+            left: 0;
           }
         }
       }
@@ -457,6 +534,9 @@
   }
 }
 @media screen and (max-width: 991px) {
+  body {
+    position: static!important;
+  }
   .map-item-block {
     width: 90%;
   }
@@ -593,6 +673,7 @@
 }
 @media screen and (max-width: 767px) {
   body {
+    position: relative!important;
     min-width: 320px;
   }
   .navbar-brand.dropdown.opened+.dropdown-menu,
@@ -620,11 +701,6 @@
       width: 60px;
       height: 78px;
       float: right;
-    }
-    &.open {
-      .navbar-toggle {
-        float: left;
-      }
     }
   }
   .black-bg-map {

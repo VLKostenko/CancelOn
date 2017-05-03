@@ -1259,15 +1259,18 @@
         var parent = $(self).closest('.sidebar-filter');
         var parentCollapseTitle = $(self).closest('.panel-collapse').siblings('.panel-heading');
         var backupWidth = $(self).width() + $(self).parent().width();
+        console.log('backupWidth: ' + backupWidth);
+        console.log('window width: ' + $(window).width());
         if ($(opt.container).css('position') == 'relative') {
           var containerOffset = $(opt.container).offset();
           box.css({
             top: offset.top - containerOffset.top + $(self).outerHeight() + 4,
             left: offsetParent.left - containerOffset.left
           });
+          console.log($(opt.container).css('position'))
+
         } else {
-          if ( $(window).width() > backupWidth )
-          {
+          if ( $(window).width() > backupWidth ) {
             box.css({
               // top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
               top: offsetParent.top + parentCollapseTitle.outerHeight() + parseInt($('body').css('border-top') || 0, 10),
