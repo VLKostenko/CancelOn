@@ -734,7 +734,8 @@ aside {
     max-height: 100vh;
   }
   .mCustomScrollBox {
-    max-height: calc(100vh - 60px)!important;
+    //max-height: calc(100vh - 60px)!important;
+    max-height: 100vh;
   }
   .mCSB_scrollTools {
     width: 10px;

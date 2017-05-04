@@ -7983,7 +7983,7 @@ aside.mCustomScrollbar {
 }
 
 aside .mCustomScrollBox {
-  max-height: calc(100vh - 60px) !important;
+  max-height: 100vh;
 }
 
 aside .mCSB_scrollTools {
@@ -10033,8 +10033,9 @@ aside.show-on-map .panel-group .panel.panel-default {
     background: #264d6a;
     cursor: default;
     font-size: 24px;
-    padding: 15px;
     pointer-events: none;
+    padding: 39px 15px;
+    border-bottom: 1px solid #00c2ff;
   }
   #filter_mobile .sidebar-filter {
     -webkit-backface-visibility: hidden;
@@ -10055,6 +10056,7 @@ aside.show-on-map .panel-group .panel.panel-default {
     width: 275px;
     background: #002a4a;
     box-shadow: none;
+    overflow: hidden;
   }
   #filter_mobile .sidebar-filter:after {
     content: '';
@@ -10231,6 +10233,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   nav.navbar {
     min-height: initial;
+  }
+  #nav_mobile li.menu a {
+    padding: 24px 15px;
   }
   .navbar-header {
     width: 100%;
