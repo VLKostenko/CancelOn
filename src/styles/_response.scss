@@ -55,7 +55,7 @@
   .content-wrapper {
     @include calc(width, '70% - 15px');
   }
-  #map {
+  .map-wrapper {
     @include calc(width, '30% - 15px');
   }
   .list-item {
@@ -101,7 +101,7 @@
 @media screen and (min-width: 1200px) {
   .main-search-wrapper {
     position: relative;
-    z-index: 12;
+    z-index: 13;
   }
   .remove-padding-md {
     //position: relative;
@@ -110,7 +110,10 @@
 }
 @media screen and (min-width: 1200px) and (max-width: 1280px) {
   .main-wrapper {
-    #map {
+    .map-wrapper {
+      display: none;
+    }
+    .map-wrapper {
       display: none;
       &.full-width {
         display: block;
@@ -303,7 +306,7 @@
     width: calc(100% - 225px);
   }
   .main-wrapper {
-    #map {
+    .map-wrapper {
       display: none;
       &.full-width {
         display: block;
@@ -805,6 +808,7 @@
       margin-right: 15px;
     }
     &.show-on-map {
+      display: none!important;
       position: fixed;
       z-index: 1005;
     }

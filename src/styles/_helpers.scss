@@ -65,11 +65,14 @@
   font-family: 'Roboto', sans-serif !important;
   @include calc(width, '(100% - 15px)/2');
   float: left;
-  transition: transform 0.5s;
   margin-bottom: 15px;
   background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(108, 118, 123, 0.15);
   position: relative;
+  transition: transform .5s;
+  &:hover {
+    background: rgba(175, 236, 255, 0.1);
+  }
   &:nth-child(2n) {
     margin-left: 15px;
   }
@@ -172,7 +175,7 @@
       float: left;
       margin-right: 15px;
       i {
-        font-size: 18px;
+        font-size: 20px;
         color: #0c8a96;
       }
     }
@@ -256,7 +259,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    margin-top: 12px;
+    margin-top: 15px;
     span {
       font-weight: 700;
     }
@@ -720,6 +723,26 @@ aside {
   margin-left: 15px;
   float: left;
   width: 225px;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom: 25px;
+  &.mCustomScrollbar {
+    max-height: 100vh;
+  }
+  .mCustomScrollBox {
+    max-height: calc(100vh - 60px)!important;
+  }
+  .mCSB_scrollTools {
+    width: 10px;
+    display: block!important;
+  }
+  .mCSB_inside > .mCSB_container {
+    margin-right: 10px!important;
+  }
   #amount1 {
     float: left;
     width: 46%;
@@ -811,11 +834,12 @@ aside {
     padding-left: 5px;
     width: 100%;
     font-weight: 500;
+    padding-right: 20px;
     &::after {
       content: "";
       display: inline-block;
       position: relative;
-      left: 0;
+      left: 5px;
       float: right;
       margin-left: 100%;
       margin-top: -17px;
@@ -1034,6 +1058,14 @@ aside {
     & + .main-wrapper {
       width: calc(100% - 15px);
     }
+    .panel-group {
+      .panel {
+        &.panel-default {
+          height: 100%;
+          min-height: 1883px;
+        }
+      }
+    }
   }
 }
 
@@ -1171,6 +1203,8 @@ aside {
   padding-top: 18px;
   padding-left: 15px;
   padding-right: 15px;
+  position: relative;
+  z-index: 12;
 
   .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     padding: 1px 0 0;
@@ -1239,7 +1273,7 @@ aside {
     .content-wrapper {
       @include calc(width, '50% - 15px');
     }
-    #map {
+    .map-wrapper {
       @include calc(width, '50% - 15px');
     }
   }
@@ -1264,15 +1298,26 @@ aside {
   }
 }
 
-#map {
+.map-wrapper {
   margin-left: 15px;
   float: left;
   height: 100%;
   min-height: 1883px;
   background-color: grey;
   @include calc(width, '35% - 15px');
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
   &.full-width {
     width: calc(100% - 15px)!important;
+  }
+  #map {
+    height: 100%;
+    width: 100%;
+    min-height: 1883px;
   }
 }
 
@@ -1392,7 +1437,7 @@ aside {
 .black-bg-search {
   display: none;
   position: absolute;
-  z-index: 10;
+  z-index: 12;
   top: -70px;
   height: calc(100% + 70px);
   background: rgba(15,48,78,.7);

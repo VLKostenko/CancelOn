@@ -146,7 +146,7 @@
 
   $('.onoffswitch').change(function() {
     if ( $('.myonoffswitch').prop('checked') ) {
-      $('#map').addClass('full-width');
+      $('.map-wrapper').addClass('full-width');
       $('.black-bg-map').addClass('no-filter');
       $('.black-bg-search').addClass('no-filter');
       $('.main-wrapper').addClass('hidden-sidebar-filter');
@@ -162,7 +162,7 @@
           'opacity': 0
         }, 200);
     } else {
-      $('#map').removeClass('full-width');
+      $('.map-wrapper').removeClass('full-width');
       $('.black-bg-map').removeClass('no-filter');
       $('.black-bg-search').removeClass('no-filter');
       $('.search-filter .menu-icon').addClass('active').parent('.hide-filter').removeClass('hidden-filter');
@@ -271,12 +271,14 @@
     $('.list-btn').addClass('active');
     $('.grid-btn').removeClass('active');
     $('.grid').addClass('list-view');
+    AOS.refresh();
   }
 
   function gridView() {
     $('.grid-btn').addClass('active');
     $('.list-btn').removeClass('active');
     $('.grid').removeClass('list-view');
+    AOS.refresh();
   }
 
   $('.grid-btn').click(function() {
@@ -313,29 +315,22 @@
       $(this).children('.menu-icon').addClass('active');
       $('.sidebar-filter').show("slide", { direction: "left" }, 200);
       $('.main-wrapper.hidden-sidebar-filter').removeClass('hidden-sidebar-filter');
-      $('.black-bg-map').removeClass('no-filter');
-      $('.black-bg-search').removeClass('no-filter');
+      if ( !$('.map-wrapper').hasClass('full-width') ) {
+        $('.black-bg-map').removeClass('no-filter');
+        $('.black-bg-search').removeClass('no-filter');
+      }
     } else {
       $(this).addClass('hidden-filter');
       $(this).children('.menu-icon').removeClass('active');
       $('.sidebar-filter').hide("slide", { direction: "left" }, 200);
-      $('.black-bg-map').addClass('no-filter');
-      $('.black-bg-search').addClass('no-filter');
       $('.main-wrapper').addClass('hidden-sidebar-filter');
+      if ( !$('.map-wrapper').hasClass('full-width') ) {
+        $('.black-bg-map').addClass('no-filter');
+        $('.black-bg-search').addClass('no-filter');
+      }
     }
     reinitMap();
   });
-
-  // $('.filter-icon').click(function() {
-  //   $('.sidebar-filter').fadeIn(200);
-  //   $('body').css('overflow', 'hidden');
-  // });
-
-  // $('.sidebar-filter .mobile-close').click(function() {
-  //   $('.sidebar-filter').fadeOut(200);
-  //   $('.black-bg-map').fadeOut(200);
-  //   $('body').css('overflow', 'initial');
-  // });
 
   var search = $('.input-search');
   var searchResult = $('.search-result');
@@ -450,11 +445,10 @@
   });
 
   function sidebarPosition() {
-    if ( $(window).width() < 768 ) {
       $('.sidebar-filter').mCustomScrollbar();
+    if ( $(window).width() < 768 ) {
       $('.sidebar-filter').appendTo('#filter_mobile');
     } else {
-      $('.sidebar-filter').mCustomScrollbar('destroy');
       $('.sidebar-filter').insertBefore($('.main-wrapper'));
     }
   }
@@ -464,11 +458,20 @@
     if ( $(window).width() < 992 ) {
       gridView();
     }
-    sidebarPosition();
+    if ( !$('#map-item-block').is(':visible') ) {
+      sidebarPosition();
+    }
     if ( $(window).width() > 767 ) {
       hideMobileFilter();
     }
   });
+
+  // $(document).ready(function(){
+  //   $(".map-item-block-wrapper").sticky({
+  //     topSpacing: 0,
+  //     // wrapperClassName: '.test-container'
+  //   });
+  // });
 
   $(window).load(function() {
     $('.stars-hotel').stars();
@@ -476,7 +479,9 @@
     if ( $(window).width() < 768 ) {
       $('.sidebar-filter').mCustomScrollbar();
     }
+    $('.map-item-block--wrapper').mCustomScrollbar();
   });
+
   function initAOS() {
     if ( $(window).width() > 1199 ) {
       AOS.init();
@@ -633,7 +638,6 @@
           var thumbnail = items[index].el.getElementsByTagName('img')[0] || items[index].el.getElementsByClassName('image')[0], // find thumbnail
             pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
             rect = thumbnail.getBoundingClientRect();
-          console.log(thumbnail);
           return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
         }
 
@@ -694,7 +698,9 @@
 
   $(document).ready(function() {
     initAOS();
-    sidebarPosition();
+    if ( !$('#map-item-block').is(':visible') ) {
+      sidebarPosition();
+    }
     if ( $(window).width() < 992 ) {
       gridView();
     }

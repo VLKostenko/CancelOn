@@ -180,12 +180,17 @@ function initialize() {
       $('.open-map-item').click(function() {
         $('.black-bg-map').fadeIn(200);
         $('.map-item-block').show("slide", { direction: "right" }, 300);
+        $('body').css('overflow', 'hidden');
+        if ( $('.myonoffswitch').prop('checked') ) {
+          alert(1);
+        }
       });
     });
 
-    $('.black-bg-map, .map-item-block .close-btn').click(function() {
+    $('.black-bg-map, .map-item-block .close-btn, .input-search').click(function() {
       $('.black-bg-map').fadeOut(200);
       $('.map-item-block').hide("slide", { direction: "right" }, 200);
+      $('body').css('overflow', 'initial');
     });
 
     google.maps.event.addListener(map, 'click', function() {
