@@ -1,0 +1,40 @@
+$(document).ready(function() {
+
+  function addSpinnerSpin() {
+    $('.loading-more .loading .fa-spinner').show(200);
+  }
+
+  function removeSpinnerSpin() {
+    $('.loading-more .loading .fa-spinner').hide(200);
+  }
+
+  // Ajax setup
+  $.ajaxSetup({
+    cache: false
+  });
+
+  $('.loading-more .loading a').click(function(event) {
+    var href = this.href;
+    event.preventDefault();
+    addSpinnerSpin();
+    setTimeout(function() {
+      loadContent(href);
+    }, 2000);
+  });
+
+  function loadContent(url) {
+    $.ajax({
+      url: url,
+      type: 'GET',
+      beforeSend: function() {
+      },
+      success: function(data) {
+        removeSpinnerSpin();
+        $('.main-wrapper .content-wrapper .check').append(data);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        alert(textStatus + ': ' + errorThrown + ' please, try again later');
+      }
+    });
+  }
+});

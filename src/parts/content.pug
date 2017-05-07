@@ -1,15 +1,11 @@
 .content-wrapper
 	.check
 		include content-grid
-		include exclusive
 		include content-grid
-		include exclusive
-		include content-grid
-		include exclusive
 	.loading-more
 		.loading
 			i.fa.fa-spinner.fa-spin(aria-hidden='true')
-			span.text-uppercase Loading
+			a(href='/partial/content-grid-item.html').text-uppercase Load Next 10 Items
 	.pagination-wrapper
 		.pagination
 			ul
@@ -27,6 +23,5 @@
 					a(href='javascript:void(0)') 5
 				li
 					a(href='javascript:void(0)') Next
-
 .map-wrapper
 	#map

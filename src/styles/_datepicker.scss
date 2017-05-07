@@ -72,16 +72,17 @@
     cursor: default;
     position: relative;
     _overflow: hidden;
-    min-width: 270px;
-    @media screen and (max-width: 768px) {
-      max-width: 270px;
-    }
+    min-width: 550px;
+    //@media screen and (max-width: 768px) {
+    //  max-width: 270px;
+    //}
     max-width: 270px;
     table {
-      width: 100%;
+      width: calc(50% - 15px);
       float: left;
+      margin-left: 10px;
       &.month2 {
-        width: 190px;
+        width: calc(50% - 15px);
         float: left;
       }
       th, td {
@@ -145,6 +146,7 @@
   table .caption {
     height: 40px;
     .next, .prev {
+      display: none;
       padding: 0 5px;
       cursor: pointer;
     }
@@ -154,71 +156,74 @@
     }
   }
   .gap {
-    position: relative;
-    z-index: 1;
-    width: 15px;
-    height: 100%;
-    background-color: red;
-    font-size: 0;
-    line-height: 0;
-    float: left;
-    top: -5px;
-    margin: 0 10px -10px;
-    visibility: hidden;
-    height: 0;
-    .gap-lines {
-      height: 100%;
-      overflow: hidden;
-    }
-    .gap-line {
-      height: 15px;
-      width: 15px;
-      position: relative;
-      .gap-1 {
-        z-index: 1;
-        height: 0;
-        border-left: 8px solid white;
-        border-top: 8px solid #eee;
-        border-bottom: 8px solid #eee;
-      }
-      .gap-2 {
-        position: absolute;
-        right: 0;
-        top: 0px;
-        z-index: 2;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-top: 8px solid white;
-      }
-      .gap-3 {
-        position: absolute;
-        right: 0;
-        top: 8px;
-        z-index: 2;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-bottom: 8px solid white;
-      }
-    }
-    .gap-top-mask {
-      width: 6px;
-      height: 1px;
-      position: absolute;
-      top: -1px;
-      left: 1px;
-      background-color: #eee;
-      z-index: 3;
-    }
-    .gap-bottom-mask {
-      width: 6px;
-      height: 1px;
-      position: absolute;
-      bottom: -1px;
-      left: 7px;
-      background-color: #eee;
-      z-index: 3;
-    }
+    display: none;
   }
+  //.gap {
+  //  position: relative;
+  //  z-index: 1;
+  //  width: 15px;
+  //  height: 100%;
+  //  background-color: red;
+  //  font-size: 0;
+  //  line-height: 0;
+  //  float: left;
+  //  top: -5px;
+  //  margin: 0 10px -10px;
+  //  visibility: hidden;
+  //  height: 0;
+  //  .gap-lines {
+  //    height: 100%;
+  //    overflow: hidden;
+  //  }
+  //  .gap-line {
+  //    height: 15px;
+  //    width: 15px;
+  //    position: relative;
+  //    .gap-1 {
+  //      z-index: 1;
+  //      height: 0;
+  //      border-left: 8px solid white;
+  //      border-top: 8px solid #eee;
+  //      border-bottom: 8px solid #eee;
+  //    }
+  //    .gap-2 {
+  //      position: absolute;
+  //      right: 0;
+  //      top: 0px;
+  //      z-index: 2;
+  //      height: 0;
+  //      border-left: 8px solid transparent;
+  //      border-top: 8px solid white;
+  //    }
+  //    .gap-3 {
+  //      position: absolute;
+  //      right: 0;
+  //      top: 8px;
+  //      z-index: 2;
+  //      height: 0;
+  //      border-left: 8px solid transparent;
+  //      border-bottom: 8px solid white;
+  //    }
+  //  }
+  //  .gap-top-mask {
+  //    width: 6px;
+  //    height: 1px;
+  //    position: absolute;
+  //    top: -1px;
+  //    left: 1px;
+  //    background-color: #eee;
+  //    z-index: 3;
+  //  }
+  //  .gap-bottom-mask {
+  //    width: 6px;
+  //    height: 1px;
+  //    position: absolute;
+  //    bottom: -1px;
+  //    left: 7px;
+  //    background-color: #eee;
+  //    z-index: 3;
+  //  }
+  //}
   .selected-days {
     display: none;
   }
@@ -256,7 +261,6 @@
       padding: 3px 5px;
       margin: 0;
       font-size: 12px;
-      border-radius: 4px;
       cursor: pointer;
       color: #d9eef7;
       border: solid 1px #0076a3;
@@ -338,7 +342,6 @@
     display: none;
     background-color: yellow;
     padding: 0 6px;
-    border-radius: 2px;
     font-size: 12px;
     line-height: 16px;
     -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
@@ -423,6 +426,7 @@ input[type="text"] {
     display: none;
   }
   .start-time, .end-time {
+    display: none;
     width: 50%;
     position: relative;
   }
@@ -484,13 +488,13 @@ input[type="text"] {
     z-index: 10;
   }
   .first-date-selected, .last-date-selected {
-    border-radius: 50%;
+    border-radius: 0;
     background: #00004d !important;
     position: relative;
     z-index: 1;
   }
   .first-date-selected + .round-border, .last-date-selected + .round-border {
-    background: rgba(0, 0, 77, 0.5);
+    //background: rgba(0, 0, 77, 0.5);
     position: absolute;
     z-index: 0;
     left: 0;
@@ -556,16 +560,16 @@ input[type="text"] {
       }
       .caption {
         th {
-          &:first-child {
-            border-top-left-radius: 3px;
-          }
-          &:last-child {
-            border-top-right-radius: 3px;
-          }
+          //&:first-child {
+          //  border-top-left-radius: 3px;
+          //}
+          //&:last-child {
+          //  border-top-right-radius: 3px;
+          //}
         }
         .prev, .next {
           background-color: $main-blue;
-          border-radius: 50%;
+          border-radius: 0;
           color: #fff;
           border: 0;
           -webkit-transition: box-shadow 0.2s ease;
@@ -601,7 +605,7 @@ input[type="text"] {
           }
         }
         &.real-today {
-          border-radius: 50%;
+          border-radius: 0;
           background: #00004d;
           &.checked, &.hovering {
             background: #00004d;
@@ -625,15 +629,15 @@ input[type="text"] {
       }
     }
     .time .buttons {
-      width: 100%;
+      width: 40%;
       float: left;
-      //padding: 35px 0 15px;
-      padding: 15px 0 15px;
+      padding: 10px 0;
+      margin-top: -8px;
       input {
         width: 40%;
-        margin: 0 5%;
         padding: 3px 0;
-        border-radius: 3px;
+        border-radius: 0;
+        margin-left: 10px;
       }
     }
   }

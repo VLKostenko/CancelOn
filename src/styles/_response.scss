@@ -277,18 +277,14 @@
   .input-group {
     .input-search {
       font-size: 40px;
-      text-align: left;
       padding-left: 80px;
       &::-webkit-input-placeholder {
-        text-align: left;
         font-size: 40px;
       }
       &:-ms-input-placeholder {
-        text-align: left;
         font-size: 40px;
       }
       &::-moz-placeholder {
-        text-align: left;
         font-size: 40px;
       }
     }
@@ -429,7 +425,6 @@
             color: #fff;
             @include calc(width, '100% - 30px');
             margin: auto;
-            border-radius: 5px;
             border: 0!important;
             margin-top: 10px;
           }
@@ -437,7 +432,6 @@
             color: #fff;
             @include calc(width, '100% - 30px');
             margin: auto;
-            border-radius: 5px;
             border: 0!important;
             margin-top: 15px;
           }
@@ -787,7 +781,6 @@
       left: 0;
       right: 0;
       margin: auto;
-      border-radius: 0 0 5px 5px!important;
       z-index: 2;
       background: #68b925!important;
       text-transform: uppercase;
@@ -889,15 +882,12 @@
       padding-right: 5px;
       padding-left: 5px;
       &::-webkit-input-placeholder {
-        text-align: center;
         font-size: 24px;
       }
       &:-ms-input-placeholder {
-        text-align: center;
         font-size: 24px;
       }
       &::-moz-placeholder {
-        text-align: center;
         font-size: 24px;
       }
     }
@@ -906,6 +896,7 @@
     button {
       background: none;
       border: 0;
+      border-radius: 0;
       padding: 0;
       width: 45px;
       height: 45px;
@@ -992,7 +983,6 @@
         display: none;
       }
       .right {
-        border-radius: 4px;
         padding: 7px 35px 5px;
       }
     }

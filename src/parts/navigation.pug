@@ -87,10 +87,14 @@ nav.navbar.navbar-default.mb-0
 				#filter_mobile.navbar-filter.hidden-lg
 			.navbar-menu.hidden-xs
 				ul.nav.navbar-nav.navbar-right
-					li
+					li.visible-lg
 						a(href='javascript:void(0)')
-							i.fa.fa-map(aria-hidden='true')
-							| Explore
+							i.fa.fa-search(aria-hidden='true')
+							| Search
+					li.visible-lg
+						a(href='javascript:void(0)')
+							i.fa.fa-fire(aria-hidden='true')
+							| Sell
 					li.dropdown.show
 						a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 							i.fa.fa-user(aria-hidden='true')
@@ -114,6 +118,18 @@ nav.navbar.navbar-default.mb-0
 										i.fa.fa-google-plus(aria-hidden='true')
 									a(href="javascript:void(0)")
 										i.fa.fa-twitter(aria-hidden='true')
+					li.visible-lg
+						a(href='javascript:void(0)')
+							i.fa.fa-life-ring(aria-hidden='true')
+							| Support
+					li.visible-lg
+						a(href='javascript:void(0)')
+							i.fa.fa-info-circle(aria-hidden='true')
+							| Alert Me
+					li
+						a(href='javascript:void(0)')
+							i.fa.fa-map(aria-hidden='true')
+							| Explore
 					li.form-group
 						select#sel1.selectpicker.currency-menu
 							option (USD) $
@@ -156,13 +172,9 @@ nav.navbar.navbar-default.mb-0
 									img(width='25', src='images/icons/flag5.svg', alt='')
 									| Russian
 				ul.nav.navbar-nav.navbar-right.down-menu
+					li.visible-lg
+						a(href='javascript:void(0)') About
 					li
 						a.blue-btn(href='javascript:void(0)') Unlock special prices
 					li
 						a.green-btn(href='javascript:void(0)') Buy hotel reservation
-					li.visible-lg
-						a(href='javascript:void(0)') About
-					li.visible-lg
-						a(href='javascript:void(0)') Support
-					li.visible-lg
-						a(href='javascript:void(0)') Alert Me

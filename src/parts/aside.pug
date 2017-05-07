@@ -44,12 +44,14 @@ aside.sidebar-filter
 			.panel-heading
 				h4.panel-title
 					a(data-toggle='collapse', href='#collapse1', aria-expanded='true')
-						| Total Price
+						| Price Range
 						i.fa.fa-caret-up(aria-hidden='true')
 			#collapse1.panel-collapse.collapse.in
 				.panel-body
 					input#amount1(type='text', style='border:0; color:#f6931f; font-weight:bold;')
+					span.range-divider -
 					input#amount2(type='text', style='border:0; color:#f6931f; font-weight:bold;')
+					a(href='javascript:void(0)', class='show-all') Show All
 					#slider-range
 			.panel-heading
 				h4.panel-title

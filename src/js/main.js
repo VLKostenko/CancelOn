@@ -8,7 +8,7 @@
     datepickerInput.dateRangePicker({
       startOfWeek: 'sunday',
       separator: ' ~ ',
-      singleMonth: true,
+      singleMonth: false,
       showTopbar: false,
       format: 'DD.MM.YYYY HH:mm',
       autoClose: false,
@@ -445,7 +445,9 @@
   });
 
   function sidebarPosition() {
-      $('.sidebar-filter').mCustomScrollbar();
+      $('.sidebar-filter').mCustomScrollbar({
+        autoHideScrollbar: true
+      });
     if ( $(window).width() < 768 ) {
       $('.sidebar-filter').appendTo('#filter_mobile');
     } else {
@@ -479,7 +481,9 @@
     if ( $(window).width() < 768 ) {
       $('.sidebar-filter').mCustomScrollbar();
     }
-    $('.map-item-block--wrapper').mCustomScrollbar();
+    $('.map-item-block--wrapper').mCustomScrollbar({
+      autoHideScrollbar: true
+    });
   });
 
   function initAOS() {

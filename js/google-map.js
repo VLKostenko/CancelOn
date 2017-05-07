@@ -111,6 +111,9 @@ function initialize() {
         var iwContent =
           '<div class="thumbnail" style="width: 250px;">' +
           '<div class="thumbnail-wrapper">' +
+          '<a href="javascript:void(0)" class="iw-close-btn">' +
+          '<i class="fa fa-times" aria-hidden="true"></i>' +
+          '</a>' +
           '<a href="javascript:void(0)" class="thumbnail-img">' +
           '<img src="' + locations[i][3] + '" alt="img" class="img-responsive">' +
           '<div class="thumbnail-info text-right">' +
@@ -181,10 +184,16 @@ function initialize() {
         $('.black-bg-map').fadeIn(200);
         $('.map-item-block').show("slide", { direction: "right" }, 300);
         $('body').css('overflow', 'hidden');
-        if ( $('.myonoffswitch').prop('checked') ) {
-          alert(1);
-        }
+        // if ( $('.myonoffswitch').prop('checked') ) {
+        //   alert(1);
+        // }
       });
+
+      var closeBtn = $('.iw-close-btn').get();
+      google.maps.event.addDomListener(closeBtn[0], 'click', function() {
+        infowindow.close();
+      });
+
     });
 
     $('.black-bg-map, .map-item-block .close-btn, .input-search').click(function() {
