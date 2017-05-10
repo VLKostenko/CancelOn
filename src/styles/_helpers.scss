@@ -49,7 +49,7 @@
 }
 
 .navbar-header {
-  width: 40%;
+  width: 50%;
 }
 
 .navbar-menu {
@@ -744,19 +744,12 @@ aside {
   margin-left: 15px;
   float: left;
   width: 225px;
-  //position: -webkit-sticky;
-  //position: -moz-sticky;
-  //position: -o-sticky;
-  //position: -ms-sticky;
-  //position: sticky;
-  //top: 0;
-  margin-bottom: 25px;
   &.mCustomScrollbar {
     max-height: initial;
   }
   .mCustomScrollBox {
     //max-height: calc(100vh - 60px)!important;
-    max-height: initial;
+    height: 100vh;
   }
   .mCSB_scrollTools {
     width: 10px;

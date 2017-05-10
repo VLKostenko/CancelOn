@@ -446,9 +446,9 @@
   });
 
   function sidebarPosition() {
-      // $('.sidebar-filter').mCustomScrollbar({
-      //   autoHideScrollbar: true
-      // });
+      $('.sidebar-filter').mCustomScrollbar({
+        autoHideScrollbar: true
+      });
     if ( $(window).width() < 768 ) {
       $('.sidebar-filter').appendTo('#filter_mobile');
     } else {
@@ -711,7 +711,7 @@
   function setMapWrapperHeight() {
     var mainWrapperHeight = $('.main-wrapper').height();
     $('.map-wrapper').height(mainWrapperHeight);
-    $('.sidebar-filter .panel-group').height(mainWrapperHeight);
+    // $('.sidebar-filter .panel-group').height(mainWrapperHeight);
   }
 
 

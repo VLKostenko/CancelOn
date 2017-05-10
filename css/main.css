@@ -7115,7 +7115,7 @@ input[type="text"].datepicker-input {
 }
 
 .navbar-header {
-  width: 40%;
+  width: 50%;
 }
 
 .navbar-menu {
@@ -7889,7 +7889,6 @@ aside {
   margin-left: 15px;
   float: left;
   width: 225px;
-  margin-bottom: 25px;
 }
 
 aside.mCustomScrollbar {
@@ -7897,7 +7896,7 @@ aside.mCustomScrollbar {
 }
 
 aside .mCustomScrollBox {
-  max-height: initial;
+  height: 100vh;
 }
 
 aside .mCSB_scrollTools {
@@ -9679,7 +9678,6 @@ aside.show-on-map .panel-group .panel.panel-default {
     margin-bottom: 10px;
   }
   .navbar-header {
-    width: 31%;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -9824,6 +9822,9 @@ aside.show-on-map .panel-group .panel.panel-default {
     position: relative;
     z-index: 1;
   }
+  .navbar-text {
+    padding: 5px 0;
+  }
   .navbar-header {
     width: 41%;
     padding-right: 0;
@@ -9831,7 +9832,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .navbar-header .navbar-brand {
     max-width: 210px;
-    padding: 22px 0;
+    padding: 0;
     margin-left: 15px !important;
   }
   .navbar-header .navbar-toggle {

@@ -15,7 +15,6 @@
     }
   }
   .navbar-header {
-    width: 31%;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -180,13 +179,16 @@
     position: relative;
     z-index: 1;
   }
+  .navbar-text {
+    padding: 5px 0;
+  }
   .navbar-header {
     width: 41%;
     padding-right: 0;
     padding-left: 0;
     .navbar-brand {
       max-width: 210px;
-      padding: 22px 0;
+      padding: 0;
       margin-left: 15px!important;
     }
     .navbar-toggle {
