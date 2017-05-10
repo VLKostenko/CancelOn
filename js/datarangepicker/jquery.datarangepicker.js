@@ -1255,32 +1255,32 @@
     function calcPosition() {
       if (!opt.inline) {
         var offset = $(self).offset();
-        var offsetParent = $(self).closest('.sidebar-filter').offset();
-        var parent = $(self).closest('.sidebar-filter');
+        var offsetParent = $(self).closest('.search-filter-block').offset();
+        var parent = $(self).closest('.search-filter-block');
         var parentCollapseTitle = $(self).closest('.panel-collapse').siblings('.panel-heading');
         var backupWidth = $(self).width() + $(self).parent().width();
-        if ($(opt.container).css('position') == 'relative') {
+        // if ($(opt.container).css('position') == 'relative') {
           var containerOffset = $(opt.container).offset();
           box.css({
             top: offset.top - containerOffset.top + $(self).outerHeight() + 4,
             left: offsetParent.left - containerOffset.left
           });
 
-        } else {
-          if ( $(window).width() > backupWidth ) {
-            box.css({
-              // top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
-              top: offsetParent.top + parentCollapseTitle.outerHeight() + parseInt($('body').css('border-top') || 0, 10),
-              left: offsetParent.left + parent.width()
-            });
-          } else {
-            console.log('window: ' + $(window).width() + ' < ' + 'element: ' + backupWidth);
-            box.css({
-              top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
-              left: offsetParent.left
-            });
-          }
-        }
+        // } else {
+        //   if ( $(window).width() > backupWidth ) {
+        //     box.css({
+        //       // top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
+        //       top: offsetParent.top + parentCollapseTitle.outerHeight() + parseInt($('body').css('border-top') || 0, 10),
+        //       left: offsetParent.left + parent.width()
+        //     });
+        //   } else {
+        //     console.log('window: ' + $(window).width() + ' < ' + 'element: ' + backupWidth);
+        //     box.css({
+        //       top: offset.top + $(self).outerHeight() + parseInt($('body').css('border-top') || 0, 10),
+        //       left: offsetParent.left
+        //     });
+        //   }
+        // }
       }
     }
 

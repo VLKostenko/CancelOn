@@ -292,9 +292,10 @@
   $('.owl-carousel').owlCarousel({
     loop: true,
     items: 1,
-    nav: false,
+    nav: true,
     lazyLoad: true,
-    singleItem: true
+    singleItem: true,
+    navText : ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']
   });
 
   $('.navbar-brand.dropdown.opened').click(function() {
@@ -445,9 +446,9 @@
   });
 
   function sidebarPosition() {
-      $('.sidebar-filter').mCustomScrollbar({
-        autoHideScrollbar: true
-      });
+      // $('.sidebar-filter').mCustomScrollbar({
+      //   autoHideScrollbar: true
+      // });
     if ( $(window).width() < 768 ) {
       $('.sidebar-filter').appendTo('#filter_mobile');
     } else {
@@ -484,6 +485,13 @@
     $('.map-item-block--wrapper').mCustomScrollbar({
       autoHideScrollbar: true
     });
+
+    // var stickyMap = new Sticky('#map[data-sticky]');
+    // var stickySidebar = new Sticky('.sidebar-filter .panel-group > .panel-default[data-sticky]');
+    //
+    // // and when parent change height..
+    // stickyMap.update();
+    // stickySidebar.update();
   });
 
   function initAOS() {
@@ -700,7 +708,15 @@
 
   initPhotoSwipeFromDOM('.photoswipe-block');
 
+  function setMapWrapperHeight() {
+    var mainWrapperHeight = $('.main-wrapper').height();
+    $('.map-wrapper').height(mainWrapperHeight);
+    $('.sidebar-filter .panel-group').height(mainWrapperHeight);
+  }
+
+
   $(document).ready(function() {
+    $('.sticky').Stickyfill();
     initAOS();
     if ( !$('#map-item-block').is(':visible') ) {
       sidebarPosition();
@@ -722,6 +738,8 @@
       // This is Microsoft Edge
       $('html').addClass('ie-style');
     }
+
+    setMapWrapperHeight();
 
   });
 

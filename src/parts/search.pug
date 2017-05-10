@@ -4,6 +4,47 @@
 			.col-md-12.pl-xs-0.pr-xs-0.pl-md-0.pr-md-0
 				.input-group.search-group
 					input.form-control.input-search(type='text', placeholder='What Are You Looking For?')
+					span.search-filter-block
+						.input-group.input-group-white
+							span.input-group-addon
+								i.fa.fa-calendar
+							input.form-control.datepicker-input(type='text', placeholder='July, 3th')
+							input.form-control.datepicker-output(type='text', placeholder='August, 14th')
+						.people-count
+							i.fa.fa-sliders(aria-hidden='true')
+							a#peopleCount.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+								i.fa.fa-language(aria-hidden='true')
+								| Language
+								span.bs-caret
+									span.caret
+							.dropdown-menu.languages-menu(aria-labelledby='peopleCount')
+								label.col-form-label.mt-20(for='quant[1]') Rooms
+									.input-group.mt-10
+										span.input-group-btn
+											button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
+												| -
+										input.form-control.input-number(type='text', id='quant[1]', name='quant[1]', value='1', min='1', max='10')
+										span.input-group-btn
+											button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1]')
+												| +
+								label.col-form-label.mt-20(for='quant[2]') Adults
+								.input-group.mt-10.mb-20
+									span.input-group-btn
+										button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2]')
+											| -
+									input.form-control.input-number(type='text', id='quant[2]', name='quant[2]', value='2', min='1', max='100')
+									span.input-group-btn
+										button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2]')
+											| +
+								label.col-form-label.mt-20(for='quant[2]') Children
+									.input-group.mt-10.mb-20
+										span.input-group-btn
+											button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[3]')
+												| -
+										input.form-control.input-number(type='text', id='quant[3]', name='quant[3]', value='1', min='1', max='100')
+										span.input-group-btn
+											button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[3]')
+												| +
 					span.input-search-btn.hidden-xs
 						button.btn.btn-default(type='button') SEARCH
 					span.input-search-btn.visible-xs

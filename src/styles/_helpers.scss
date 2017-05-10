@@ -632,6 +632,10 @@ footer {
       width: 150px;
       background-color: #96a4af;
       color: #ffffff;
+      border-radius: 0;
+    }
+    .form-control {
+      border-radius: 0;
     }
   }
   h1 {
@@ -740,19 +744,19 @@ aside {
   margin-left: 15px;
   float: left;
   width: 225px;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -o-sticky;
-  position: -ms-sticky;
-  position: sticky;
-  top: 0;
+  //position: -webkit-sticky;
+  //position: -moz-sticky;
+  //position: -o-sticky;
+  //position: -ms-sticky;
+  //position: sticky;
+  //top: 0;
   margin-bottom: 25px;
   &.mCustomScrollbar {
-    max-height: 100vh;
+    max-height: initial;
   }
   .mCustomScrollBox {
     //max-height: calc(100vh - 60px)!important;
-    max-height: 100vh;
+    max-height: initial;
   }
   .mCSB_scrollTools {
     width: 10px;
@@ -760,6 +764,13 @@ aside {
   }
   .mCSB_inside > .mCSB_container {
     margin-right: 10px!important;
+  }
+  .panel-group {
+    .panel {
+      width: 100%;
+      position: relative;
+      border-radius: 0;
+    }
   }
   #amount1 {
     float: left;
@@ -1340,26 +1351,38 @@ aside {
   }
 }
 
+.sticky {
+  position: -webkit-sticky!important;
+  position: sticky!important;
+  top: 0;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+}
+
 .map-wrapper {
   margin-left: 15px;
   float: left;
   height: 100%;
   min-height: 1883px;
+  position: relative;
+  //min-height: 2500px;
   background-color: grey;
   @include calc(width, '35% - 15px');
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -o-sticky;
-  position: -ms-sticky;
-  position: sticky;
-  top: 0;
   &.full-width {
     width: calc(100% - 15px)!important;
   }
   #map {
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    min-height: 1883px;
+    position: relative;
+    //&.fixedsticky-on {
+    //  top: 0;
+    //  width: calc(100% - 15px);
+    //}
+    //min-height: 1883px;
   }
 }
 

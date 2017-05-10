@@ -8,6 +8,12 @@ $(document).ready(function() {
     $('.loading-more .loading .fa-spinner').hide(200);
   }
 
+  function setMapWrapperHeight() {
+    var mainWrapperHeight = $('.main-wrapper').height();
+    $('.map-wrapper').height(mainWrapperHeight);
+    console.log('12345');
+  }
+
   // Ajax setup
   $.ajaxSetup({
     cache: false
@@ -20,6 +26,9 @@ $(document).ready(function() {
     setTimeout(function() {
       loadContent(href);
     }, 2000);
+    setTimeout(function() {
+      setMapWrapperHeight();
+    }, 2100);
   });
 
   function loadContent(url) {

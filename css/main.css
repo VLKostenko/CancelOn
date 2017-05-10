@@ -7762,6 +7762,11 @@ footer .input-group button {
   width: 150px;
   background-color: #96a4af;
   color: #ffffff;
+  border-radius: 0;
+}
+
+footer .input-group .form-control {
+  border-radius: 0;
 }
 
 footer h1 {
@@ -7884,21 +7889,15 @@ aside {
   margin-left: 15px;
   float: left;
   width: 225px;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -o-sticky;
-  position: -ms-sticky;
-  position: sticky;
-  top: 0;
   margin-bottom: 25px;
 }
 
 aside.mCustomScrollbar {
-  max-height: 100vh;
+  max-height: initial;
 }
 
 aside .mCustomScrollBox {
-  max-height: 100vh;
+  max-height: initial;
 }
 
 aside .mCSB_scrollTools {
@@ -7908,6 +7907,12 @@ aside .mCSB_scrollTools {
 
 aside .mCSB_inside > .mCSB_container {
   margin-right: 10px !important;
+}
+
+aside .panel-group .panel {
+  width: 100%;
+  position: relative;
+  border-radius: 0;
 }
 
 aside #amount1 {
@@ -8523,19 +8528,25 @@ aside.show-on-map .panel-group .panel.panel-default {
   top: 27%;
 }
 
+.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+}
+
+.sticky:before, .sticky:after {
+  content: '';
+  display: table;
+}
+
 .map-wrapper {
   margin-left: 15px;
   float: left;
   height: 100%;
   min-height: 1883px;
+  position: relative;
   background-color: grey;
   width: calc(35% - 15px);
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -o-sticky;
-  position: -ms-sticky;
-  position: sticky;
-  top: 0;
 }
 
 .map-wrapper.full-width {
@@ -8543,9 +8554,9 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .map-wrapper #map {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  min-height: 1883px;
+  position: relative;
 }
 
 .special-sign[type="text"]::-webkit-input-placeholder {
@@ -9293,6 +9304,50 @@ aside.show-on-map .panel-group .panel.panel-default {
   height: initial;
 }
 
+.map-item-block .owl-carousel .owl-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 85px;
+  opacity: .25;
+  background: rgba(255, 255, 255, 0.7);
+  transition: opacity 0.2s ease;
+}
+
+.map-item-block .owl-carousel .owl-prev:hover {
+  opacity: 1;
+}
+
+.map-item-block .owl-carousel .owl-prev i {
+  font-size: 70px;
+  line-height: 280px;
+  text-align: center;
+  width: 100%;
+}
+
+.map-item-block .owl-carousel .owl-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 85px;
+  opacity: .25;
+  background: rgba(255, 255, 255, 0.7);
+  transition: opacity 0.2s ease;
+}
+
+.map-item-block .owl-carousel .owl-next:hover {
+  opacity: 1;
+}
+
+.map-item-block .owl-carousel .owl-next i {
+  font-size: 70px;
+  line-height: 280px;
+  text-align: center;
+  width: 100%;
+}
+
 .map-item-block .owl-carousel .owl-dots {
   position: absolute;
   bottom: 20px;
@@ -9416,6 +9471,36 @@ aside.show-on-map .panel-group .panel.panel-default {
   line-height: 22px;
 }
 
+.search-filter-block {
+  position: absolute;
+  right: 140px;
+  width: 500px;
+  height: 42px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9;
+}
+
+.search-filter-block .input-group .form-control {
+  float: left;
+  width: 20%;
+  border-bottom: 2px solid #00c2ff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.search-filter-block .input-group-addon {
+  border: 0;
+  border-bottom: 2px solid #00c2ff;
+  border-radius: 0;
+}
+
+.search-filter-block .input-group-addon i {
+  color: #00c2ff;
+}
+
 .search-result {
   display: none;
   position: absolute;
@@ -9435,7 +9520,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .search-result-inner {
   max-height: 370px;
   overflow-y: auto;
-  padding: 0 25px 0 10px;
+  padding: 0;
 }
 
 .search-result .list-group {
@@ -9463,7 +9548,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .search-result .list-group-item a {
   display: block;
-  padding: 10px 0 10px 30px;
+  padding: 10px 0 10px 45px;
   border-radius: 5px;
 }
 
@@ -9473,9 +9558,12 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .search-result .list-group .category {
   text-align: right;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
   font-size: 12px;
   color: #a7a7a7;
+  padding-right: 25px;
 }
 
 .search-result .city-label {
@@ -9489,6 +9577,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   color: #a7a7a7;
   background: #fff;
   width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .search-result .result-icon {
@@ -9499,7 +9591,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   background-repeat: no-repeat;
   display: block;
   position: absolute;
-  left: 3px;
+  left: 11px;
   top: 0;
   bottom: 0;
   margin: auto;
