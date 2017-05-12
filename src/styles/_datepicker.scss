@@ -26,15 +26,20 @@
   line-height: 20px;
   color: #aaa;
   font-family: Arial, sans-serif;
-  box-shadow: 5px 0 7px 0 rgba(0, 0, 0, 0.10);
   box-sizing: initial;
   &:before {
     content: '';
-    box-shadow: inset 3px 0 5px 0 rgba(0,0,0,.1);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
     position: absolute;
-    width: 8px;
-    height: 100%;
-    z-index: 10;
+    z-index: 1;
+    top: -9px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
   &.inline-wrapper {
     position: relative;
@@ -76,7 +81,7 @@
     //@media screen and (max-width: 768px) {
     //  max-width: 270px;
     //}
-    max-width: 270px;
+    //max-width: 270px;
     table {
       width: calc(50% - 15px);
       float: left;
@@ -391,6 +396,8 @@ input[type="text"] {
   padding: 0 !important;
   border: 0;
   font-family: "Open Sans";
+  margin-top: 35px;
+  z-index: 90;
   /* Time */
   &.single-month .time {
     height: 105px;

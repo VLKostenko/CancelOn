@@ -919,7 +919,9 @@
       var isOpen = box.is(':visible');
       if (!isOpen) {
         open(opt.duration);
-        $('.black-bg-map').fadeIn(opt.duration);
+        $('.date-group').addClass('active');
+        $('.people-count').removeClass('active');
+        $('.black-bg-search').fadeIn(opt.duration);
         showDaysBorders();
       }
     }).bind('change.datepicker', function(evt) {
@@ -987,8 +989,9 @@
 
     return this;
 
-    function IsOwnDatePickerClicked(evt, selfObj) {
-      return (selfObj.contains(evt.target) || evt.target == $('.datepicker-output')[0] || evt.target == selfObj || (selfObj.childNodes != undefined && $.inArray(evt.target, selfObj.childNodes) >= 0));
+    function IsOwnDatePickerClicked(evt, selfObj, addObj) {
+      var check = selfObj.contains(evt.target) || evt.target == selfObj || evt.target == addObj || (selfObj.childNodes != undefined && $.inArray(evt.target, selfObj.childNodes) >= 0) || (addObj.childNodes != undefined && $.inArray(evt.target, addObj.childNodes) >= 0)
+      return check;
     }
 
     function init_datepicker() {
@@ -1064,7 +1067,7 @@
 
       //if user click other place of the webpage, close date range picker window
       $(document).bind('click.datepicker', function(evt) {
-        if (!IsOwnDatePickerClicked(evt, self[0])) {
+        if (!IsOwnDatePickerClicked(evt, self[0], outputDom[0])) {
           if (box.is(':visible')) closeDatePicker();
         }
       });
@@ -1254,17 +1257,23 @@
 
     function calcPosition() {
       if (!opt.inline) {
+
         var offset = $(self).offset();
-        var offsetParent = $(self).closest('.search-filter-block').offset();
-        var parent = $(self).closest('.search-filter-block');
-        var parentCollapseTitle = $(self).closest('.panel-collapse').siblings('.panel-heading');
-        var backupWidth = $(self).width() + $(self).parent().width();
+        var selfWidth = $(self).outerWidth();
+
+        var parent = $(self).parent();
+        var parentWidth = parent.outerWidth();
+        var offsetParent = parent.offset();
+
+        // var parentCollapseTitle = $(self).closest('.panel-collapse').siblings('.panel-heading');
+        // var backupWidth = $(self).width() + $(self).parent().width();
         // if ($(opt.container).css('position') == 'relative') {
           var containerOffset = $(opt.container).offset();
           box.css({
-            top: offset.top - containerOffset.top + $(self).outerHeight() + 4,
-            left: offsetParent.left - containerOffset.left
+            top: offset.top - containerOffset.top + $(self).outerHeight(),
+            left: offsetParent.left - ($('.date-picker-wrapper').outerWidth() - parentWidth) / 2
           });
+          // console.log('func', offsetParent.left - (selfWidth - parentWidth) / 2, 'calc', offsetParent.left - ($('.date-picker-wrapper').outerWidth() - $('.date-group').outerWidth())  / 2);
 
         // } else {
         //   if ( $(window).width() > backupWidth ) {
@@ -1416,8 +1425,8 @@
       box.find('.day.checked').removeClass('checked');
       box.find('.day.last-date-selected').removeClass('last-date-selected');
       box.find('.day.first-date-selected').removeClass('first-date-selected');
-      opt.setValue.call(selfDom, '');
-      opt.setValue.call(outputDom, '');
+      opt.setValue.call(selfDom.innerHTML = '');
+      opt.setValue.call(outputDom.get(0).innerHTML = '');
       checkSelectionValid();
       showSelectedInfo();
       showSelectedDays();
@@ -1751,6 +1760,8 @@
       var dateRange;
       var dateRangeStart;
       var dateRangeEnd;
+      var dateRangeStartDay;
+      var dateRangeEndDay;
       if (opt.start && opt.singleDate) {
         box.find('.apply-btn').removeClass('disabled');
         dateRange = getDateString(new Date(opt.start));
@@ -1770,15 +1781,23 @@
         // dateRange = getDateString(new Date(opt.start)) + opt.separator + getDateString(new Date(opt.end));
 
         // output all data in input
-        dateRange = moment(new Date(opt.start)).format('DD.MM.YYYY') + ' ' + startTime + opt.separator + moment(new Date(opt.end)).format('DD.MM.YYYY') + ' ' + endTime;
+        dateRange = moment(new Date(opt.start)).format(opt.format) + ' ' + startTime + opt.separator + moment(new Date(opt.end)).format(opt.format) + ' ' + endTime;
         // dateRangeStart = moment(new Date(opt.start)).format('DD.MM.YYYY') + ' ' + startTime;
         // dateRangeEnd = moment(new Date(opt.end)).format('DD.MM.YYYY') + ' ' + endTime;
-        dateRangeStart = moment(new Date(opt.start)).format('DD.MM.YYYY');
-        dateRangeEnd = moment(new Date(opt.end)).format('DD.MM.YYYY');
+        dateRangeStart = moment(new Date(opt.start)).format('MMM, Do');
+        dateRangeEnd = moment(new Date(opt.end)).format('MMM, Do');
+        dateRangeStartDay = moment(new Date(opt.start)).format('dddd');
+        dateRangeEndDay = moment(new Date(opt.end)).format('dddd');
         // opt.setValue.call(selfDom, dateRange);
+        // console.log(new Date(opt.start).format('MMM, Do'));
 
-        opt.setValue.call(selfDom, dateRangeStart);
-        opt.setValue.call(outputDom, dateRangeEnd);
+        // var org_html = document.getElementById("slidesContainer").innerHTML;
+        // var new_html = "<div id='slidesInner'>" + org_html + "</div>";
+        // document.getElementById("slidesContainer").innerHTML = new_html;
+        opt.setValue.call(selfDom.innerHTML = "<span class='date'>" + dateRangeStart + "</span>");
+        opt.setValue.call(selfDom.innerHTML += " <span class='day'>" + dateRangeStartDay + "</span>");
+        opt.setValue.call(outputDom.get(0).innerHTML = "<span class='date'>" + dateRangeEnd + "</span>");
+        opt.setValue.call(outputDom.get(0).innerHTML += " <span class='day'>" + dateRangeEndDay + "</span>");
 
         if (initiated && !silent) {
           $(self).trigger('datepicker-change', {
@@ -2035,8 +2054,12 @@
       $(self).trigger('datepicker-close', {
         relatedTarget: box
       });
-
-      $('.black-bg-map').fadeOut(opt.duration);
+      setTimeout(function() {
+        if ( $('.people-count .book-menu').is(':hidden') ) {
+          $('.black-bg-search').fadeOut(opt.duration);
+        }
+      }, 10);
+      $('.date-group').removeClass('active');
     }
 
     function redrawDatePicker() {
@@ -2488,7 +2511,11 @@
           $(this).siblings('.showing').removeClass('pm').addClass('am').text('AM');
         }
       });
-    }
 
+      $('.people-count .dropdown-toggle').click(function() {
+        closeDatePicker();
+        $('.black-bg-search').fadeIn(opt.duration);
+      });
+    }
   };
 }));

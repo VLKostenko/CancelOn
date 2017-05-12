@@ -47,8 +47,12 @@
 .block {
   display: block;
 }
-
-.navbar-header {
+nav {
+  .navbar-header {
+    width: 40%;
+  }
+}
+footer .navbar-header {
   width: 50%;
 }
 
@@ -744,6 +748,10 @@ aside {
   margin-left: 15px;
   float: left;
   width: 225px;
+  @include crossBrowser(transition, margin-left .2s);
+  &.to-left {
+    margin-left: -100%;
+  }
   &.mCustomScrollbar {
     max-height: initial;
   }
@@ -1086,11 +1094,15 @@ aside {
     background-color: #5cb85c;
   }
   &.show-on-map {
-    position: absolute;
+    position: absolute!important;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(108,118,123,.55);
+    height: 100%;
     & + .main-wrapper {
       width: calc(100% - 15px);
+    }
+    .mCustomScrollBox {
+      height: 100%;
     }
     .panel-group {
       .panel {
@@ -1339,7 +1351,7 @@ aside {
 .hidden-sidebar-filter {
   .grid-item {
     .warning {
-      top: 27%;
+      top: 24%;
     }
   }
 }
@@ -1366,6 +1378,10 @@ aside {
   @include calc(width, '35% - 15px');
   &.full-width {
     width: calc(100% - 15px)!important;
+    #map {
+      position: relative!important;
+      height: 100%;
+    }
   }
   #map {
     height: 100vh;

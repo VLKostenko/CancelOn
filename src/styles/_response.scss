@@ -7,20 +7,61 @@
     float: right;
   }
 }
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1440px) {
+  nav {
+    .navbar-header {
+      width: 42%;
+    }
+    .navbar-menu {
+      width: 58%;
+    }
+  }
+}
+
+@media screen and (max-width: 1415px) {
+  .navbar-default {
+    .navbar-nav li a {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1405px) {
   .navbar-default {
     .navbar-text {
       margin-top: -8px;
       margin-bottom: 10px;
     }
   }
+  nav {
+    .navbar-header {
+      width: 40%;
+    }
+    .navbar-menu {
+      padding: 10px 0;
+    }
+  }
+}
+@media screen and (max-width: 1399px) {
   .navbar-header {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .navbar-menu {
-    width: 69%;
-    padding: 10px 0;
+  nav {
+    .navbar-header {
+      width: 30%;
+    }
+    .navbar-menu {
+      width: 69%;
+      padding: 10px 0;
+    }
+  }
+  .navbar-default {
+    .navbar-nav li a {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
   .search-group {
     padding-left: 0;
@@ -48,6 +89,9 @@
   }
   .search-result {
     width: calc(100% - 30px);
+  }
+  .load-icon {
+    width: 145px;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -182,6 +226,13 @@
   .navbar-text {
     padding: 5px 0;
   }
+  nav {
+    .navbar-menu {
+      width: 45%;
+      float: right;
+      margin-right: 15px;
+    }
+  }
   .navbar-header {
     width: 41%;
     padding-right: 0;
@@ -278,16 +329,15 @@
   }
   .input-group {
     .input-search {
-      font-size: 40px;
-      padding-left: 80px;
+      font-size: 28px;
       &::-webkit-input-placeholder {
-        font-size: 40px;
+        font-size: 28px;
       }
       &:-ms-input-placeholder {
-        font-size: 40px;
+        font-size: 28px;
       }
       &::-moz-placeholder {
-        font-size: 40px;
+        font-size: 28px;
       }
     }
   }
@@ -526,6 +576,54 @@
       width: 60%;
     }
   }
+  .input-search {
+    padding-right: 130px;
+  }
+  .search-filter-block {
+    position: relative;
+    .date-group,
+    .people-count {
+      width: 50%;
+    }
+    .people-count {
+      margin-left: 0;
+    }
+  }
+  .load-icon {
+    top: -50px;
+  }
+  .search-result {
+    z-index: 13;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .date-picker-wrapper {
+    .month-wrapper {
+      max-width: 300px;
+      min-width: initial;
+      table {
+        clear: left;
+        margin-left: 0;
+        width: 100%;
+        &.month2 {
+          width: 100%;
+        }
+      }
+      .time {
+        .buttons {
+          width: 100%;
+          padding: 9px 0 0;
+          input {
+            width: 95%;
+            margin: 0 8px 8px;
+          }
+        }
+      }
+    }
+  }
+  nav .navbar-header {
+    width: 40%;
+  }
 }
 @media screen and (min-width: 992px) {
   footer {
@@ -584,7 +682,6 @@
     }
   }
   .search-result {
-    left: -10px;
     width: 100%;
   }
   .exclusive {
@@ -671,6 +768,14 @@
       }
     }
   }
+  nav {
+    .navbar-header {
+      width: 42%;
+    }
+    .navbar-menu {
+      width: 56%;
+    }
+  }
 }
 @media screen and (max-width: 767px) {
   body {
@@ -685,32 +790,42 @@
     &.navbar {
       min-height: initial;
     }
-  }
-  #nav_mobile {
-    li {
-      &.menu {
-        a {
-          padding: 24px 15px;
-        }
+    .navbar-header {
+      width: 100%;
+      .navbar-brand {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 22px auto !important;
+        width: 120px;
+        height: 34px;
+        max-width: initial !important;
+        padding: 0 !important;
+      }
+      .navbar-toggle {
+        width: 60px;
+        height: 78px;
+        float: right;
       }
     }
   }
-  .navbar-header {
+  .load-icon {
+    width: 50px;
+    top: -100px;
+  }
+  .search-filter-block .date-group,
+  .search-filter-block .people-count {
     width: 100%;
-    .navbar-brand {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 22px auto !important;
-      width: 120px;
-      height: 34px;
-      max-width: initial !important;
-      padding: 0 !important;
-    }
-    .navbar-toggle {
-      width: 60px;
-      height: 78px;
-      float: right;
+  }
+  #nav_mobile {
+    .nav {
+      li {
+        &.menu {
+          a {
+            padding: 24px 15px;
+          }
+        }
+      }
     }
   }
   .black-bg-map {
@@ -801,7 +916,7 @@
   }
   .sidebar-filter {
     display: none;
-    position: fixed;
+    position: fixed!important;
     top: 0;
     left: 0;
     z-index: 1005;
@@ -961,6 +1076,9 @@
     .address {
       width: 120%;
     }
+    .distance {
+      width: 100%;
+    }
     .top-wrapper {
       .left-block {
         width: 70%;
@@ -1042,7 +1160,6 @@
   .date-picker-wrapper {
     z-index: 9999999;
     margin-left: 10px;
-    margin-top: -5px;
     &:before {
       display: none;
     }

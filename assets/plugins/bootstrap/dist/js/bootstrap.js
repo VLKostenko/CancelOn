@@ -801,8 +801,13 @@ if (typeof jQuery === 'undefined') {
       if (e.isDefaultPrevented()) return
 
       $this.attr('aria-expanded', 'false')
-      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
-    })
+      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget));
+
+      if ( $('.date-picker-wrapper').is(':hidden') ) {
+        $('.black-bg-search').fadeOut(200);
+        $('.people-count').removeClass('active');
+      }
+    });
   }
 
   Dropdown.prototype.toggle = function (e) {

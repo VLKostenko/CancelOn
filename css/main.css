@@ -312,7 +312,7 @@ button[type="button"].btn:focus {
   border-radius: 0 !important;
   cursor: pointer;
   padding: 5px 5px 3px 1px;
-  height: 42px;
+  height: 50px;
   background-color: transparent;
 }
 
@@ -392,7 +392,7 @@ button[type="button"].btn:focus {
   border-radius: 0;
   padding-left: 0;
   padding-top: 10px;
-  padding-right: 120px;
+  padding-right: 660px;
 }
 
 .input-search::-webkit-input-placeholder {
@@ -952,17 +952,22 @@ h6, .h6 {
   line-height: 20px;
   color: #aaa;
   font-family: Arial, sans-serif;
-  box-shadow: 5px 0 7px 0 rgba(0, 0, 0, 0.1);
   box-sizing: initial;
 }
 
 .date-picker-wrapper:before {
   content: '';
-  box-shadow: inset 3px 0 5px 0 rgba(0, 0, 0, 0.1);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
   position: absolute;
-  width: 8px;
-  height: 100%;
-  z-index: 10;
+  z-index: 1;
+  top: -9px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .date-picker-wrapper.inline-wrapper {
@@ -1010,7 +1015,6 @@ h6, .h6 {
   position: relative;
   _overflow: hidden;
   min-width: 550px;
-  max-width: 270px;
 }
 
 .date-picker-wrapper .month-wrapper table {
@@ -1280,6 +1284,8 @@ input[type="text"].datepicker-input {
   padding: 0 !important;
   border: 0;
   font-family: "Open Sans";
+  margin-top: 35px;
+  z-index: 90;
   /* Time */
 }
 
@@ -7114,7 +7120,11 @@ input[type="text"].datepicker-input {
   display: block;
 }
 
-.navbar-header {
+nav .navbar-header {
+  width: 40%;
+}
+
+footer .navbar-header {
   width: 50%;
 }
 
@@ -7889,6 +7899,11 @@ aside {
   margin-left: 15px;
   float: left;
   width: 225px;
+  transition: margin-left 0.2s;
+}
+
+aside.to-left {
+  margin-left: -100%;
 }
 
 aside.mCustomScrollbar {
@@ -8260,13 +8275,18 @@ aside .radio-success input[type="radio"]:checked + label::after {
 }
 
 aside.show-on-map {
-  position: absolute;
+  position: absolute !important;
   z-index: 10;
   box-shadow: 0 2px 5px rgba(108, 118, 123, 0.55);
+  height: 100%;
 }
 
 aside.show-on-map + .main-wrapper {
   width: calc(100% - 15px);
+}
+
+aside.show-on-map .mCustomScrollBox {
+  height: 100%;
 }
 
 aside.show-on-map .panel-group .panel.panel-default {
@@ -8524,7 +8544,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .hidden-sidebar-filter .grid-item .warning {
-  top: 27%;
+  top: 24%;
 }
 
 .sticky {
@@ -8550,6 +8570,11 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .map-wrapper.full-width {
   width: calc(100% - 15px) !important;
+}
+
+.map-wrapper.full-width #map {
+  position: relative !important;
+  height: 100%;
 }
 
 .map-wrapper #map {
@@ -9162,26 +9187,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   visibility: visible;
 }
 
-.datepick-wrapper {
-  background: #00c2ff;
-  color: #fff;
-  margin-left: -10px;
-  margin-right: -10px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 1px;
-}
-
-.datepick-wrapper .input-group {
-  margin-bottom: 10px;
-}
-
-.datepick-wrapper .datepicker-input,
-.datepick-wrapper .datepicker-output {
-  background: #fff;
-}
-
 .map-item-block {
   display: none;
   position: absolute;
@@ -9473,18 +9478,17 @@ aside.show-on-map .panel-group .panel.panel-default {
 .search-filter-block {
   position: absolute;
   right: 140px;
-  width: 500px;
-  height: 42px;
+  height: 30px;
   top: 0;
   bottom: 0;
   margin: auto;
-  z-index: 9;
+  z-index: 13;
 }
 
 .search-filter-block .input-group .form-control {
+  border-bottom: 0;
   float: left;
-  width: 20%;
-  border-bottom: 2px solid #00c2ff;
+  width: 50%;
   font-size: 14px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
@@ -9492,19 +9496,149 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .search-filter-block .input-group-addon {
   border: 0;
-  border-bottom: 2px solid #00c2ff;
   border-radius: 0;
+  padding-top: 0;
+  pointer-events: none;
 }
 
 .search-filter-block .input-group-addon i {
   color: #00c2ff;
 }
 
+.search-filter-block .datepicker-input,
+.search-filter-block .datepicker-output {
+  background: #fff;
+}
+
+.search-filter-block .datepicker-input .date,
+.search-filter-block .datepicker-input .day,
+.search-filter-block .datepicker-output .date,
+.search-filter-block .datepicker-output .day {
+  float: left;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.search-filter-block .datepicker-input .date,
+.search-filter-block .datepicker-output .date {
+  color: #000;
+  font-size: 14px;
+}
+
+.search-filter-block .datepicker-input .day,
+.search-filter-block .datepicker-output .day {
+  color: #a3a3a3;
+  font-size: 12px;
+}
+
+.date-group {
+  width: 260px;
+  float: left;
+  border-bottom: 2px solid transparent;
+}
+
+.date-group.active {
+  border-bottom: 2px solid #00c2ff;
+}
+
+.people-count {
+  float: left;
+  width: 260px;
+  margin-left: 30px;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.people-count.active {
+  border-bottom: 2px solid #00c2ff;
+}
+
+.people-count .fa-sliders {
+  color: #00c2ff;
+  font-size: 20px;
+}
+
+.people-count #peopleCount {
+  float: left;
+  padding: 5px 5px 3px 1px;
+  height: 50px;
+  width: 100%;
+}
+
+.people-count #peopleCount .block {
+  width: 33.3333333%;
+  float: left;
+}
+
+.people-count #peopleCount .block .value,
+.people-count #peopleCount .block .col-form-label {
+  float: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.people-count #peopleCount .block .value {
+  color: #000;
+  font-size: 14px;
+}
+
+.people-count #peopleCount .block .col-form-label {
+  color: #a3a3a3;
+  font-size: 12px;
+}
+
+.people-count .book-menu {
+  width: 260px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding-bottom: 10px;
+  top: 85px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.people-count .book-menu:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  z-index: 1;
+  top: -9px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.people-count .book-menu .input-number {
+  border-bottom: 0 !important;
+  margin: 1px;
+  pointer-events: none;
+}
+
+.people-count .book-menu .col-form-label {
+  float: left;
+  width: 45%;
+  pointer-events: none;
+}
+
+.people-count .book-menu .input-group {
+  width: 55%;
+}
+
 .search-result {
   display: none;
   position: absolute;
   z-index: 11;
-  top: calc(100% + 20px);
+  top: 100%;
   left: 0;
   right: 0;
   background: #fff;
@@ -9672,18 +9806,50 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
 }
 
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1440px) {
+  nav .navbar-header {
+    width: 42%;
+  }
+  nav .navbar-menu {
+    width: 58%;
+  }
+}
+
+@media screen and (max-width: 1415px) {
+  .navbar-default .navbar-nav li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1405px) {
   .navbar-default .navbar-text {
     margin-top: -8px;
     margin-bottom: 10px;
   }
+  nav .navbar-header {
+    width: 40%;
+  }
+  nav .navbar-menu {
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 1399px) {
   .navbar-header {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .navbar-menu {
+  nav .navbar-header {
+    width: 30%;
+  }
+  nav .navbar-menu {
     width: 69%;
     padding: 10px 0;
+  }
+  .navbar-default .navbar-nav li a {
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .search-group {
     padding-left: 0;
@@ -9709,6 +9875,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .search-result {
     width: calc(100% - 30px);
+  }
+  .load-icon {
+    width: 145px;
   }
 }
 
@@ -9825,6 +9994,11 @@ aside.show-on-map .panel-group .panel.panel-default {
   .navbar-text {
     padding: 5px 0;
   }
+  nav .navbar-menu {
+    width: 45%;
+    float: right;
+    margin-right: 15px;
+  }
   .navbar-header {
     width: 41%;
     padding-right: 0;
@@ -9915,17 +10089,16 @@ aside.show-on-map .panel-group .panel.panel-default {
     padding-bottom: 10px;
   }
   .input-group .input-search {
-    font-size: 40px;
-    padding-left: 80px;
+    font-size: 28px;
   }
   .input-group .input-search::-webkit-input-placeholder {
-    font-size: 40px;
+    font-size: 28px;
   }
   .input-group .input-search:-ms-input-placeholder {
-    font-size: 40px;
+    font-size: 28px;
   }
   .input-group .input-search::-moz-placeholder {
-    font-size: 40px;
+    font-size: 28px;
   }
   .container-fluid > .container {
     padding-left: 15px;
@@ -10153,6 +10326,51 @@ aside.show-on-map .panel-group .panel.panel-default {
   footer .navbar-header {
     width: 60%;
   }
+  .input-search {
+    padding-right: 130px;
+  }
+  .search-filter-block {
+    position: relative;
+  }
+  .search-filter-block .date-group,
+  .search-filter-block .people-count {
+    width: 50%;
+  }
+  .search-filter-block .people-count {
+    margin-left: 0;
+  }
+  .load-icon {
+    top: -50px;
+  }
+  .search-result {
+    z-index: 13;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .date-picker-wrapper .month-wrapper {
+    max-width: 300px;
+    min-width: initial;
+  }
+  .date-picker-wrapper .month-wrapper table {
+    clear: left;
+    margin-left: 0;
+    width: 100%;
+  }
+  .date-picker-wrapper .month-wrapper table.month2 {
+    width: 100%;
+  }
+  .date-picker-wrapper .month-wrapper .time .buttons {
+    width: 100%;
+    padding: 9px 0 0;
+  }
+  .date-picker-wrapper .month-wrapper .time .buttons input {
+    width: 95%;
+    margin: 0 8px 8px;
+  }
+  nav .navbar-header {
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -10199,7 +10417,6 @@ aside.show-on-map .panel-group .panel.panel-default {
     min-height: 526px;
   }
   .search-result {
-    left: -10px;
     width: 100%;
   }
   .exclusive {
@@ -10276,6 +10493,12 @@ aside.show-on-map .panel-group .panel.panel-default {
   footer .navbar-footer li.open .dropdown-toggle .fa-plus-square-o {
     display: none;
   }
+  nav .navbar-header {
+    width: 42%;
+  }
+  nav .navbar-menu {
+    width: 56%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -10290,13 +10513,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   nav.navbar {
     min-height: initial;
   }
-  #nav_mobile li.menu a {
-    padding: 24px 15px;
-  }
-  .navbar-header {
+  nav .navbar-header {
     width: 100%;
   }
-  .navbar-header .navbar-brand {
+  nav .navbar-header .navbar-brand {
     position: absolute;
     left: 0;
     right: 0;
@@ -10306,10 +10526,21 @@ aside.show-on-map .panel-group .panel.panel-default {
     max-width: initial !important;
     padding: 0 !important;
   }
-  .navbar-header .navbar-toggle {
+  nav .navbar-header .navbar-toggle {
     width: 60px;
     height: 78px;
     float: right;
+  }
+  .load-icon {
+    width: 50px;
+    top: -100px;
+  }
+  .search-filter-block .date-group,
+  .search-filter-block .people-count {
+    width: 100%;
+  }
+  #nav_mobile .nav li.menu a {
+    padding: 24px 15px;
   }
   .black-bg-map {
     top: 0;
@@ -10399,7 +10630,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .sidebar-filter {
     display: none;
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     z-index: 1005;
@@ -10548,6 +10779,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   .grid-item .address {
     width: 120%;
   }
+  .grid-item .distance {
+    width: 100%;
+  }
   .grid-item .top-wrapper .left-block {
     width: 70%;
   }
@@ -10626,7 +10860,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   .date-picker-wrapper {
     z-index: 9999999;
     margin-left: 10px;
-    margin-top: -5px;
   }
   .date-picker-wrapper:before {
     display: none;
