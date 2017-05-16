@@ -396,6 +396,7 @@ button[type="button"].btn:focus {
   padding-left: 0;
   padding-top: 6px;
   padding-right: 660px;
+  border: 0;
 }
 
 .search-group .input-search::-webkit-input-placeholder {
@@ -508,7 +509,7 @@ button[type="button"].btn:focus {
 }
 
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
 
@@ -742,7 +743,7 @@ h6, .h6 {
 
 .input-search-btn {
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 36px;
   z-index: 4;
 }
@@ -7132,7 +7133,7 @@ input[type="text"].datepicker-input {
 }
 
 nav .navbar-header {
-  width: 40%;
+  width: 41%;
 }
 
 footer .navbar-header {
@@ -7140,7 +7141,7 @@ footer .navbar-header {
 }
 
 .navbar-menu {
-  width: 60%;
+  width: 59%;
   float: left;
   padding-left: 15px;
   padding-right: 15px;
@@ -8305,6 +8306,11 @@ aside.show-on-map .panel-group .panel.panel-default {
   min-height: 1883px;
 }
 
+.search-group {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .search-group.scrolled {
   position: fixed;
   top: 0;
@@ -8361,6 +8367,17 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .search-group.scrolled .people-count {
   width: 200px;
+}
+
+.search-group.scrolled .load-icon {
+  right: initial;
+  left: 275px;
+  width: 40px;
+  font-size: 26px;
+  line-height: 50px;
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 #search-line {
@@ -9144,7 +9161,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .navbar-brand {
   max-width: 225px;
   padding: 0;
-  margin: 24px 0 24px -5px !important;
+  margin: 24px 0 24px 0 !important;
 }
 
 .navbar-brand.dropdown + .dropdown-menu {
@@ -9263,7 +9280,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .map-item-block {
   display: none;
   position: absolute;
-  z-index: 10;
+  z-index: 14;
   font-family: "Roboto", sans-serif;
   right: 15px;
   width: 45%;
@@ -9714,8 +9731,8 @@ aside.show-on-map .panel-group .panel.panel-default {
   left: 0;
   right: 0;
   background: #fff;
-  border-top: 2px solid #00c2ff;
-  width: calc(100% - 15px);
+  border-top: 1px solid #1f93d7;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   margin: auto;
   overflow: hidden;
@@ -9843,7 +9860,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   height: 50px;
   line-height: 0;
   z-index: 1;
-  right: 0;
+  right: 15px;
   top: 0;
   bottom: 0;
   margin: auto;

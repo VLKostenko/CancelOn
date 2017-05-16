@@ -198,7 +198,7 @@
         }, 200);
     }
     reinitMap();
-
+    scrolledElement($(this), '.input-group.search-group', $('.grid-item').eq(2).offset().top, '#search-space', $('.grid-item').last().prev('.grid-item').andSelf().offset().top);
   });
 
   $('.collapse').on('shown.bs.collapse', function() {
@@ -460,9 +460,9 @@
   });
 
   function sidebarPosition() {
-      $('.sidebar-filter').mCustomScrollbar({
-        autoHideScrollbar: true
-      });
+      // $('.sidebar-filter').mCustomScrollbar({
+      //   autoHideScrollbar: true
+      // });
     if ( $(window).width() < 768 ) {
       $('.sidebar-filter').appendTo('#filter_mobile');
     } else {
@@ -730,6 +730,7 @@
   function setMapWrapperHeight() {
     var mainWrapperHeight = $('.main-wrapper').height();
     $('.map-wrapper').height(mainWrapperHeight);
+    $('.sidebar-filter').height(mainWrapperHeight);
     // $('.sidebar-filter .panel-group').height(mainWrapperHeight);
   }
 
@@ -784,23 +785,24 @@
   // };
 
   function scrolledElement(scrollPos, target, targetLine, targetSpace, targetEnd) {
-    if ( scrollPos.scrollTop() >= targetLine && !$(target).hasClass('closed') && scrollPos.scrollTop() <= targetEnd ) {
-      $(targetSpace).height(112);
-      $(target).addClass('scrolled');
-      // setTimeout(function() {
-      //   $(target).css({
-      //     'opacity': '1'
-      //   });
-      // }, 200);
-      // console.log('scroll position', scrollPos.scrollTop(), '> target position', targetLine);
-      console.log('scroll position > target position');
-    } else if (scrollPos.scrollTop() < targetLine || scrollPos.scrollTop() > targetEnd ) {
-      $(target).removeClass('scrolled closed');
-      $(targetSpace).height('initial');
-      // console.log('scroll position', scrollPos.scrollTop(), '< target position', targetLine);
-      console.log('scroll position < target position');
+    if ( !$('.myonoffswitch').prop('checked') ) {
+      if ( scrollPos.scrollTop() >= targetLine && !$(target).hasClass('closed') && scrollPos.scrollTop() <= targetEnd ) {
+        $(targetSpace).height(113);
+        $(target).addClass('scrolled');
+        // setTimeout(function() {
+        //   $(target).css({
+        //     'opacity': '1'
+        //   });
+        // }, 200);
+        // console.log('scroll position', scrollPos.scrollTop(), '> target position', targetLine);
+        console.log('scroll position > target position');
+      } else if ( scrollPos.scrollTop() < targetLine || scrollPos.scrollTop() > targetEnd ) {
+        $(target).removeClass('scrolled closed');
+        $(targetSpace).height('initial');
+        // console.log('scroll position', scrollPos.scrollTop(), '< target position', targetLine);
+        console.log('scroll position < target position');
+      }
     }
-
   }
 
   $(window).scroll(function() {
@@ -816,5 +818,9 @@
     $('body').css('overflow', 'hidden');
   });
 
+  $('.ui.sticky')
+    .sticky({
+      context: '#example3'
+    });
 
 })(jQuery);

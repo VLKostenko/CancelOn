@@ -49,7 +49,7 @@
 }
 nav {
   .navbar-header {
-    width: 40%;
+    width: 41%;
   }
 }
 footer .navbar-header {
@@ -57,7 +57,7 @@ footer .navbar-header {
 }
 
 .navbar-menu {
-  width: 60%;
+  width: 59%;
   float: left;
   padding-left: 15px;
   padding-right: 15px;
@@ -1117,6 +1117,8 @@ aside {
 
 .search-group {
   //transition: opacity .3s ease;
+  padding-left: 15px;
+  padding-right: 15px;
   &.scrolled {
     position: fixed;
     top: 0;
@@ -1124,7 +1126,6 @@ aside {
     left: 240px;
     padding: 0 15px;
     background: #fff;
-    //opacity: 0;
     .input-search {
       font-size: 18px;
       &::-webkit-input-placeholder {
@@ -1164,6 +1165,17 @@ aside {
     }
     .people-count {
       width: 200px;
+    }
+    .load-icon {
+      right: initial;
+      left: 275px;
+      width: 40px;
+      font-size: 26px;
+      line-height: 50px;
+      display: block;
+      opacity: 1;
+      visibility: visible;
+
     }
   }
 }

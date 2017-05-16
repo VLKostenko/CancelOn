@@ -325,6 +325,7 @@ footer {
     padding-left: 0;
     padding-top: 6px;
     padding-right: 660px;
+    border: 0;
     &::-webkit-input-placeholder {
       color: #d7d8da !important;
     }
@@ -435,6 +436,6 @@ footer {
   background: #68b925;
 }
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }

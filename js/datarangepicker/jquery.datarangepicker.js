@@ -923,6 +923,8 @@
         $('.people-count').removeClass('active');
         $('.black-bg-search').fadeIn(opt.duration);
         showDaysBorders();
+      } else {
+        closeDatePicker();
       }
     }).bind('change.datepicker', function(evt) {
       checkAndSetDefaultValue();
@@ -2058,10 +2060,10 @@
       setTimeout(function() {
         if ( $('.people-count .book-menu').is(':hidden') ) {
           $('.black-bg-search').fadeOut(opt.duration);
+          $('body').css('overflow', 'initial');
         }
       }, 10);
       $('.date-group').removeClass('active');
-      $('body').css('overflow', 'initial');
     }
 
     function redrawDatePicker() {

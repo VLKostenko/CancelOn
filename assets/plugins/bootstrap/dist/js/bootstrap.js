@@ -807,9 +807,14 @@ if (typeof jQuery === 'undefined') {
         $('.black-bg-search').fadeOut(200);
         $('.people-count').removeClass('active');
       }
-      if ( $this.attr('id') == 'peopleCount' ) {
+      if ( $this.attr('id') == 'peopleCount' && $('.date-picker-wrapper').is(':hidden') ) {
         $('body').css('overflow', 'initial');
+        console.log('initial');
       }
+      // if ( $('.date-picker-wrapper').is(':hidden') ) {
+      //   $('.black-bg-search').fadeOut(opt.duration);
+      //   $('body').css('overflow', 'initial');
+      // }
     });
   }
 
