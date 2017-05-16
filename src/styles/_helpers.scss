@@ -1115,6 +1115,62 @@ aside {
   }
 }
 
+.search-group {
+  //transition: opacity .3s ease;
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    width: 785px;
+    left: 240px;
+    padding: 0 15px;
+    background: #fff;
+    //opacity: 0;
+    .input-search {
+      font-size: 18px;
+      &::-webkit-input-placeholder {
+        font-size: 18px;
+      }
+      &:-ms-input-placeholder {
+        font-size: 18px;
+      }
+      &::-moz-placeholder {
+        font-size: 18px;
+      }
+    }
+    .close-search {
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      color: #bfbfbf;
+      z-index: 20;
+      right: 9px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 12px;
+      height: 22px;
+      font-size: 15px;
+    }
+    .input-search {
+      height: 60px;
+      padding-right: 450px;
+    }
+    .input-search-btn {
+      display: none;
+    }
+    .search-filter-block {
+      right: 15px;
+      margin: 8px auto;
+    }
+    .people-count {
+      width: 200px;
+    }
+  }
+}
+#search-line {
+  float: left;
+}
+
 .navy {
   ul {
     li {

@@ -774,4 +774,47 @@
     $(this).closest('.people-count').addClass('active');
   });
 
+  // var scrolledElement = function(target) {
+  //   var $this = this;
+  //   if( $($this).scrollTop() >= ($(target).offset().top + $(target).outerHeight()) ) {
+  //     $($this).addClass('scrolled');
+  //   } else {
+  //     $($this).removeClass('scrolled');
+  //   }
+  // };
+
+  function scrolledElement(scrollPos, target, targetLine, targetSpace, targetEnd) {
+    if ( scrollPos.scrollTop() >= targetLine && !$(target).hasClass('closed') && scrollPos.scrollTop() <= targetEnd ) {
+      $(targetSpace).height(112);
+      $(target).addClass('scrolled');
+      // setTimeout(function() {
+      //   $(target).css({
+      //     'opacity': '1'
+      //   });
+      // }, 200);
+      // console.log('scroll position', scrollPos.scrollTop(), '> target position', targetLine);
+      console.log('scroll position > target position');
+    } else if (scrollPos.scrollTop() < targetLine || scrollPos.scrollTop() > targetEnd ) {
+      $(target).removeClass('scrolled closed');
+      $(targetSpace).height('initial');
+      // console.log('scroll position', scrollPos.scrollTop(), '< target position', targetLine);
+      console.log('scroll position < target position');
+    }
+
+  }
+
+  $(window).scroll(function() {
+    scrolledElement($(this), '.input-group.search-group', $('.grid-item').eq(2).offset().top, '#search-space', $('.grid-item').last().prev('.grid-item').andSelf().offset().top);
+  });
+  $('.search-group .close-search').click(function() {
+    $('.input-group.search-group').removeClass('scrolled');
+    $('#search-space').height('initial');
+    $('.input-group.search-group').addClass('closed');
+  });
+
+  $('#peopleCount').click(function() {
+    $('body').css('overflow', 'hidden');
+  });
+
+
 })(jQuery);

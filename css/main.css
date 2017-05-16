@@ -379,7 +379,11 @@ button[type="button"].btn:focus {
   width: 95% !important;
 }
 
-.input-search {
+.search-group {
+  border-bottom: 1px solid #1f95da;
+}
+
+.search-group .input-search {
   font-size: 36px;
   font-family: Roboto, sans-serif;
   color: #102e4a;
@@ -388,26 +392,29 @@ button[type="button"].btn:focus {
   border-left: none;
   border-right: none;
   border-top: none;
-  border-bottom: 1px solid #0784d5;
   border-radius: 0;
   padding-left: 0;
-  padding-top: 10px;
+  padding-top: 6px;
   padding-right: 660px;
 }
 
-.input-search::-webkit-input-placeholder {
+.search-group .input-search::-webkit-input-placeholder {
   color: #d7d8da !important;
 }
 
-.input-search:-ms-input-placeholder {
+.search-group .input-search:-ms-input-placeholder {
   color: #d7d8da !important;
 }
 
-.input-search::-moz-placeholder {
+.search-group .input-search::-moz-placeholder {
   font-size: 54px !important;
   font-family: 'Roboto', sans-serif !important;
   color: #d7d8da !important;
   font-weight: 300 !important;
+}
+
+.search-group .close-search {
+  display: none;
 }
 
 .input-group {
@@ -7069,6 +7076,10 @@ input[type="text"].datepicker-input {
   overflow: hidden !important;
 }
 
+.op-0 {
+  opacity: 0;
+}
+
 /* end of Base sizing */
 /* 7 helper classes */
 /* CSS3 calc() function to perform calculations */
@@ -8294,6 +8305,68 @@ aside.show-on-map .panel-group .panel.panel-default {
   min-height: 1883px;
 }
 
+.search-group.scrolled {
+  position: fixed;
+  top: 0;
+  width: 785px;
+  left: 240px;
+  padding: 0 15px;
+  background: #fff;
+}
+
+.search-group.scrolled .input-search {
+  font-size: 18px;
+}
+
+.search-group.scrolled .input-search::-webkit-input-placeholder {
+  font-size: 18px;
+}
+
+.search-group.scrolled .input-search:-ms-input-placeholder {
+  font-size: 18px;
+}
+
+.search-group.scrolled .input-search::-moz-placeholder {
+  font-size: 18px;
+}
+
+.search-group.scrolled .close-search {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  color: #bfbfbf;
+  z-index: 20;
+  right: 9px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 12px;
+  height: 22px;
+  font-size: 15px;
+}
+
+.search-group.scrolled .input-search {
+  height: 60px;
+  padding-right: 450px;
+}
+
+.search-group.scrolled .input-search-btn {
+  display: none;
+}
+
+.search-group.scrolled .search-filter-block {
+  right: 15px;
+  margin: 8px auto;
+}
+
+.search-group.scrolled .people-count {
+  width: 200px;
+}
+
+#search-line {
+  float: left;
+}
+
 .navy ul li a {
   color: #b8b8b8;
 }
@@ -9478,7 +9551,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .search-filter-block {
   position: absolute;
   right: 140px;
-  height: 30px;
+  height: 40px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -9545,7 +9618,6 @@ aside.show-on-map .panel-group .panel.panel-default {
 .people-count {
   float: left;
   width: 260px;
-  margin-left: 30px;
   position: relative;
   border-bottom: 2px solid transparent;
 }

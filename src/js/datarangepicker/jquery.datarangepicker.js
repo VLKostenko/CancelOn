@@ -1321,6 +1321,7 @@
       });
       showGap();
       updateCalendarWidth();
+      $('body').css('overflow', 'hidden');
     }
 
     function checkAndSetDefaultValue() {
@@ -2060,6 +2061,7 @@
         }
       }, 10);
       $('.date-group').removeClass('active');
+      $('body').css('overflow', 'initial');
     }
 
     function redrawDatePicker() {

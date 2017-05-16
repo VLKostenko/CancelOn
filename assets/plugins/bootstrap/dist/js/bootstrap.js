@@ -807,6 +807,9 @@ if (typeof jQuery === 'undefined') {
         $('.black-bg-search').fadeOut(200);
         $('.people-count').removeClass('active');
       }
+      if ( $this.attr('id') == 'peopleCount' ) {
+        $('body').css('overflow', 'initial');
+      }
     });
   }
 
@@ -2146,6 +2149,7 @@ if (typeof jQuery === 'undefined') {
         .addClass('active')
         .find('[data-toggle="tab"]')
           .attr('aria-expanded', true)
+
 
       if (transition) {
         element[0].offsetWidth // reflow for transition
