@@ -79,18 +79,55 @@ footer .navbar-header {
   box-shadow: 0 1px 3px rgba(108, 118, 123, 0.15);
   position: relative;
   transition: transform .5s;
+  overflow: hidden;
   &:hover {
     background: rgba(175, 236, 255, 0.1);
   }
   &:nth-child(2n) {
     margin-left: 15px;
   }
-  .top-wrapper {
+  .line {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;
+  }
+  .price-line {
+    .info-label {
+      font-family: "Roboto", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      color: #fff;
+      padding: 5px 10px;
+      position: relative;
+      top: 3px;
+      &.green {
+        background: #68b925;
+      }
+      &.red {
+        background: #ff353d;
+      }
+      &.orange {
+        background: #de8c36;
+      }
+    }
+    .price {
+      position: relative;
+      top: 1px;
+      float: right;
+      .red-price {
+        margin-right: 10px;
+        position: relative;
+        top: -2px;
+        line-height: 0;
+      }
+    }
+  }
+  .top-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
     .left-block {
-      width: 75%;
+      width: 100%;
       float: left;
       &.top-block {
         .trip, .reviews {
@@ -100,6 +137,23 @@ footer .navbar-header {
       &.center-block {
         padding-top: 15px;
         padding-bottom: 10px;
+      }
+      .colored-line {
+        height: 30px;
+        float: left;
+        position: relative;
+        top: -3px;
+        cursor: pointer;
+        &:hover {
+          .number {
+            background: #00c2ff;
+            border-color: #00c2ff;
+            color: #fff;
+          }
+          .distance {
+            color: #00c2ff;
+          }
+        }
       }
     }
     .right-block {
@@ -132,8 +186,6 @@ footer .navbar-header {
   }
   .red-price {
     font-size: 12px;
-    line-height: 16px;
-    margin-right: 0;
   }
   .address {
     font-size: 14px;
@@ -152,11 +204,6 @@ footer .navbar-header {
     border: 2px solid #000;
     border-radius: 50%;
     @include crossBrowser(transition, .2s ease);
-    &.clicked, &:focus {
-      background: #00c2ff;
-      border-color: #00c2ff;
-      color: #fff;
-    }
   }
   .distance {
     font-size: 14px;
@@ -164,12 +211,8 @@ footer .navbar-header {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 30px;
-    cursor: pointer;
     width: 102%;
     @include crossBrowser(transition, .2s ease);
-    &.clicked, &:focus {
-      color: #00c2ff;
-    }
     .distance-color {
       color: #00c2ff;
     }
@@ -177,7 +220,7 @@ footer .navbar-header {
   .trip {
     float: left;
     width: 115px;
-    margin-right: 20px;
+    margin-right: 5px;
     margin-top: 8px;
     margin-bottom: 8px;
   }
@@ -188,17 +231,24 @@ footer .navbar-header {
     li {
       display: inline-block;
       float: left;
-      margin-right: 15px;
+      margin-right: 10px;
       i {
-        font-size: 20px;
+        font-size: 18px;
+        color: #0c8a96;
+        position: relative;
+        top: 2px;
+      }
+      .more-items {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 12px;
         color: #0c8a96;
       }
     }
   }
   .reviews {
     font-size: 10px;
-    margin: 5px 0;
-    margin-left: 2px;
+    margin: 13px 0 0 2px;
     text-decoration: underline!important;
     color: #00c2ff;
   }
@@ -231,7 +281,7 @@ footer .navbar-header {
     font-size: 12px;
     text-transform: uppercase;
     position: absolute;
-    bottom: 63px;
+    bottom: 57px;
     right: 15px;
     .left {
       float: right;
@@ -276,11 +326,13 @@ footer .navbar-header {
     font-size: 12px;
     font-weight: 400;
     margin-top: 15px;
+    color: #575757;
     span {
       font-weight: 700;
     }
   }
   .number {
+    margin-top: 2px;
     img {
       width: 25px;
       height: 25px;
@@ -322,9 +374,27 @@ footer .navbar-header {
     &:nth-child(2n) {
       margin-left: 0;
     }
+    .line {
+      float: right;
+      padding-top: 0;
+    }
+    .price-line {
+      .info-label {
+        position: absolute;
+        left: 0;
+        top: 25px;
+      }
+      .price {
+        .red-price {
+          position: absolute;
+          left: -50px;
+          top: 22px;
+        }
+      }
+    }
     .top-wrapper {
       .left-block {
-        width: 50%;
+        width: 55%;
         padding-left: 15px;
         &.top-block {
           .trip, .reviews {
@@ -341,6 +411,8 @@ footer .navbar-header {
               .rate-image {
                 margin-left: 0;
                 max-width: 100px;
+                position: relative;
+                top: -1px;
               }
             }
           }
@@ -349,6 +421,7 @@ footer .navbar-header {
             width: 20%;
             margin-left: 0;
             color: #00c2ff;
+            margin-top: 6px;
             &:hover {
               text-decoration: initial!important;
             }
@@ -358,9 +431,12 @@ footer .navbar-header {
           padding-top: 0;
           padding-bottom: 0;
         }
+        .colored-line {
+          top: 5px;
+        }
       }
       .right-block {
-        width: 25%;
+        width: 20%;
         margin-left: 7px;
       }
     }
@@ -377,11 +453,11 @@ footer .navbar-header {
       float: right;
     }
     .booked {
-      margin-top: -5px;
+      margin-top: 0;
       margin-bottom: 0;
     }
     .views {
-      bottom: 63px;
+      bottom: 66px;
     }
     .title {
       font-size: 26px;
@@ -398,6 +474,7 @@ footer .navbar-header {
       margin-bottom: 0;
       margin-top: 7px;
       clear: right;
+      color: #575757;
       span {
         font-weight: 700;
       }
@@ -410,7 +487,6 @@ footer .navbar-header {
     .distance {
       font-size: 14px;
       font-weight: 500;
-      margin-top: 3px;
       margin-bottom: 0;
       width: 100%;
     }
@@ -437,7 +513,8 @@ footer .navbar-header {
     }
     .features {
       margin-left: 19px;
-      margin-top: 17px;
+      margin-top: 18px;
+
       margin-bottom: 0;
       margin-right: 150px;
     }
@@ -446,7 +523,7 @@ footer .navbar-header {
       float: right;
       font-weight: 600;
       font-size: 14px;
-      margin-top: 5px;
+      margin-top: 8px;
       clear: right;
     }
   }
@@ -472,9 +549,10 @@ footer .navbar-header {
 }
 
 .reviews {
-  width: 50%;
+  width: 30%;
   float: left;
   margin-left: 10px;
+  font-weight: 500;
   li {
     display: inline-block;
     float: left;
@@ -1108,7 +1186,6 @@ aside {
       .panel {
         &.panel-default {
           height: 100%;
-          min-height: 1883px;
         }
       }
     }
@@ -1116,16 +1193,19 @@ aside {
 }
 
 .search-group {
-  //transition: opacity .3s ease;
   padding-left: 15px;
   padding-right: 15px;
   &.scrolled {
     position: fixed;
     top: 0;
-    width: 785px;
+    width: calc(54% + 8px);
     left: 240px;
     padding: 0 15px;
     background: #fff;
+    &.hidden-sidebar-filter {
+      width: calc(50% + 8px);
+      left: 0;
+    }
     .input-search {
       font-size: 18px;
       &::-webkit-input-placeholder {
@@ -1165,6 +1245,9 @@ aside {
     }
     .people-count {
       width: 200px;
+      .book-menu {
+        width: 200px;
+      }
     }
     .load-icon {
       right: initial;
@@ -1529,10 +1612,18 @@ aside {
       font-size: 14px;
     }
   }
+  &-img {
+    .image {
+      height: 150px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 80% 50%;
+    }
+  }
   .iw-close-btn {
     position: absolute;
     z-index: 1;
-    right: 1px;
+    right: 0;
     width: 25px;
     height: 25px;
     background: #ff353d;
@@ -1587,17 +1678,6 @@ aside {
       &:hover {
         background-color: #de8c36;
       }
-    }
-  }
-  a {
-    & > img {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      min-height: 100px;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 }

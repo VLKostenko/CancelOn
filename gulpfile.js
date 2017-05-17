@@ -1,6 +1,3 @@
-/**
- * Created by buyandfly on 10.04.17.
- */
 'use strict';
 
 var gulp = require('gulp'),

@@ -19,7 +19,7 @@ function initialize() {
       'Soho, Soma-Bay Resort',
       '485 Clawson St, Staten Island, NY 10306',
       '4.8',
-      'images/room4.png',
+      'images/room1.png',
       38.885765,
       -77.047563,
       '8',
@@ -59,7 +59,7 @@ function initialize() {
       'St Martins Lane London',
       'Amsterdam Schiphol, Netherlands',
       '4.97',
-      'images/room4.png',
+      'images/room5.png',
       38.823484,
       -77.008872,
       ' ',
@@ -115,7 +115,7 @@ function initialize() {
           '<i class="fa fa-times" aria-hidden="true"></i>' +
           '</a>' +
           '<a href="javascript:void(0)" class="thumbnail-img">' +
-          '<img src="' + locations[i][3] + '" alt="img" class="img-responsive">' +
+          '<div style="background-image:url(' + locations[i][3] + ');" class="image"></div>' +
           '<div class="thumbnail-info text-right">' +
           '<span class="label">Rate ' + locations[i][2] + '</span>' +
           '</div>' +

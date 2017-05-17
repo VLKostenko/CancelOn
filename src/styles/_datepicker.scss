@@ -107,8 +107,12 @@
       }
       div.day {
         &.lastMonth, &.nextMonth {
-          color: #999;
+          color: #fff;
           cursor: default;
+          display: block;
+          &.hovering {
+            background-color: rgba(0,0,77,.5);
+          }
         }
       }
       .day.checked {
@@ -396,7 +400,7 @@ input[type="text"] {
   padding: 0 !important;
   border: 0;
   font-family: "Open Sans";
-  margin-top: 35px;
+  margin-top: 40px;
   z-index: 90;
   /* Time */
   &.single-month .time {
@@ -665,4 +669,9 @@ input[type="text"] {
       bottom: 10px;
     }
   }
+}
+.date-picker-wrapper .month-wrapper table .day.nextMonth,
+.date-picker-wrapper .month-wrapper table .day.lastMonth {
+  display: block;
+  color: #fff!important;
 }

@@ -11,7 +11,7 @@ $(document).ready(function() {
   function setMapWrapperHeight() {
     var mainWrapperHeight = $('.main-wrapper').height();
     $('.map-wrapper').height(mainWrapperHeight);
-    console.log('12345');
+    $('.sidebar-filter').height(mainWrapperHeight);
   }
 
   // Ajax setup
