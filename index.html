@@ -60,8 +60,7 @@
     <nav class="navbar navbar-default mb-0">
       <div class="container">
         <div class="row">
-          <div class="navbar-header">
-            <button class="navbar-toggle" id="menu-button" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand dropdown" href="."><img class="img-responsive" alt="logo" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
+          <div class="navbar-header"><a class="navbar-brand dropdown" href="."><img class="img-responsive" alt="logo" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
             <div class="dropdown-menu">
               <div class="logo-info">
                 <div class="info">
@@ -90,27 +89,28 @@
             <p class="navbar-text small-text font-weight-200 visible-lg"><i class="fa fa-info-circle" aria-hidden="true"></i>	Sell and Buy Non-Refundable Hotel Reservations</p>
             <div class="navbar-mobile hidden-lg" id="nav_mobile">
               <ul class="nav navbar-nav">
-                <li class="menu"><a href="javascript:void(0)">Menu</a></li>
+                <li class="back"><a href="javascript:void(0)"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</a></li>
                 <li><a href="javascript:void(0)">Home</a></li>
                 <li><a href="javascript:void(0)">About</a></li>
                 <li><a href="javascript:void(0)">Support</a></li>
                 <li><a href="javascript:void(0)">Alert Me</a></li>
-                <li class="visible-xs"><a href="javascript:void(0)"><i aria-hidden="true"></i>Explore</a></li>
-                <li class="visible-xs"><a href="javascript:void(0)"><i aria-hidden="true"></i>Sign In</a></li>
-                <li class="visible-xs"><a href="javascript:void(0)"><i aria-hidden="true"></i>Sign Up</a></li>
-                <li class="visible-xs"><a href="javascript:void(0)"><i aria-hidden="true"></i>USD</a></li>
-                <li class="visible-xs"><a href="javascript:void(0)"><i aria-hidden="true"></i>Language</a></li>
+                <li><a href="javascript:void(0)">Explore</a></li>
+                <li><a href="javascript:void(0)">Sign In</a></li>
+                <li><a href="javascript:void(0)">Sign Up</a></li>
+                <li><a href="javascript:void(0)">USD</a></li>
+                <li><a href="javascript:void(0)">Language</a></li>
                 <li class="visible-xs"><a class="blue-btn" href="javascript:void(0)">Unlock special prices</a></li>
                 <li class="visible-xs"><a class="green-btn" href="javascript:void(0)">Buy hotel reservation</a></li>
               </ul>
             </div>
             <div class="navbar-filter hidden-lg" id="filter_mobile"></div>
           </div>
+          <button class="navbar-toggle" id="menu-button" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
           <div class="navbar-menu hidden-xs">
             <ul class="nav navbar-nav navbar-right">
               <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
               <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-fire" aria-hidden="true"></i>Sell</a></li>
-              <li class="dropdown show"><a class="dropdown-toggle mnr-10" id="dropdownMenuLink1" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>Sign In<span class="bs-caret"><span class="caret"></span></span></a>
+              <li class="dropdown show visible-lg"><a class="dropdown-toggle mnr-10" id="dropdownMenuLink1" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>Sign In<span class="bs-caret"><span class="caret"></span></span></a>
                 <div class="dropdown-menu sign-in-menu" aria-labelledby="dropdownMenuLink1">
                   <div class="col-md-12">
                     <p class="pull-left w-30 big-text font-weight-500">Login</p><a class="pull-right w-70 extra-small" href="javascript:void(0)">Not registered? Sign Up</a>
@@ -124,8 +124,8 @@
               </li>
               <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-life-ring" aria-hidden="true"></i>Support</a></li>
               <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-info-circle" aria-hidden="true"></i>Alert Me</a></li>
-              <li><a href="javascript:void(0)"><i class="fa fa-map" aria-hidden="true"></i>Explore</a></li>
-              <li class="form-group">
+              <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-map" aria-hidden="true"></i>Explore</a></li>
+              <li class="form-group visible-lg">
                 <select class="selectpicker currency-menu" id="sel1">
                   <option>(USD) $</option>
                   <option>(EUR) &euro;</option>
@@ -142,7 +142,7 @@
                   <option>(BMD) $</option>
                 </select>
               </li>
-              <li class="dropdown show"><a class="dropdown-toggle" id="dropdownMenuLink2" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-language" aria-hidden="true"></i>Language<span class="bs-caret"><span class="caret"></span></span></a>
+              <li class="dropdown show visible-lg"><a class="dropdown-toggle" id="dropdownMenuLink2" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-language" aria-hidden="true"></i>Language<span class="bs-caret"><span class="caret"></span></span></a>
                 <div class="dropdown-menu languages-menu" aria-labelledby="dropdownMenuLink2">
                   <div class="col-md-12 languages"><a href="javascript:void(0)"><img width="25" src="images/icons/flag.svg" alt="">English</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag1.svg" alt="">Deutch</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag2.svg" alt="">French</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag3.svg" alt="">Spanish</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag4.svg" alt="">Italiano</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag5.svg" alt="">Russian</a></div>
                 </div>
@@ -433,7 +433,7 @@
           </div>
         </div>
       </aside>
-      <div class="main-wrapper" id="example3">
+      <div class="main-wrapper" id="sticky-wrap">
         <div class="content-wrapper">
           <div class="check">
             <div class="grid mt-10 list-view">
@@ -445,7 +445,7 @@
                   <div class="price-line line clearfix"><span class="info-label green">Best Price Guaranteed</span><span class="price"><span class="red-price">$520</span>$468<span class="regular-text">/Day</span></span></div>
                   <div class="top-wrapper clearfix">
                     <div class="left-block top-block">
-                      <h2 class="title"><a href="javascript:void(0)">Mandapa, A Ritz-Carlton Resort</a></h2>
+                      <h2 class="title long"><a href="javascript:void(0)">Mandapa, A Ritz-Carlton Resort</a></h2>
                       <ul class="stars stars-hotel" data-stars="4.47">
                         <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
                         <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
@@ -531,7 +531,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -582,7 +582,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -633,7 +633,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -684,7 +684,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -735,7 +735,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -753,7 +753,7 @@
                   <div class="price-line line clearfix"><span class="info-label green">Best Price Guaranteed</span><span class="price"><span class="red-price">$520</span>$468<span class="regular-text">/Day</span></span></div>
                   <div class="top-wrapper clearfix">
                     <div class="left-block top-block">
-                      <h2 class="title"><a href="javascript:void(0)">Mandapa, A Ritz-Carlton Resort</a></h2>
+                      <h2 class="title long"><a href="javascript:void(0)">Mandapa, A Ritz-Carlton Resort</a></h2>
                       <ul class="stars stars-hotel" data-stars="4.47">
                         <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
                         <li class="hidden"><i class="fa orange-text fa-star" aria-hidden="true"></i></li>
@@ -839,7 +839,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -890,7 +890,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -941,7 +941,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -992,7 +992,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>
@@ -1043,7 +1043,7 @@
                       <li><i class="icon-old-typical-phone"></i></li>
                       <li><i class="icon-television"></i></li>
                       <li><i class="icon-shower-head"></i></li>
-                      <li><span>+10 items</span></li>
+                      <li><a class="open-map-item more-items" href="javascript:void(0)">+10 items</a></li>
                     </ul>
                     <div class="views-bottom visible-xs"><i class="fa fa-eye" aria-hidden="true"></i>5</div>
                     <p class="booked pull-right">Booked<span> 30</span> Times Today</p>

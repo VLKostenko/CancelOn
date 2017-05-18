@@ -2,10 +2,6 @@ nav.navbar.navbar-default.mb-0
 	.container
 		.row
 			.navbar-header
-				button#menu-button.navbar-toggle(type='button')
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
 				a.navbar-brand.dropdown(href='.')
 					img.img-responsive(alt='logo', src='images/logo.png')
 				.dropdown-menu
@@ -45,9 +41,10 @@ nav.navbar.navbar-default.mb-0
 					|	Sell and Buy Non-Refundable Hotel Reservations
 				#nav_mobile.navbar-mobile.hidden-lg
 					ul.nav.navbar-nav
-						li.menu
+						li.back
 							a(href='javascript:void(0)')
-								| Menu
+								i.fa.fa-angle-left(aria-hidden='true')
+								| Back
 						li
 							a(href='javascript:void(0)')
 								| Home
@@ -60,31 +57,30 @@ nav.navbar.navbar-default.mb-0
 						li
 							a(href='javascript:void(0)')
 								| Alert Me
-						li.visible-xs
+						li
 							a(href='javascript:void(0)')
-								i(aria-hidden='true')
 								| Explore
-						li.visible-xs
+						li
 							a(href='javascript:void(0)')
-								i(aria-hidden='true')
 								| Sign In
-						li.visible-xs
+						li
 							a(href='javascript:void(0)')
-								i(aria-hidden='true')
 								| Sign Up
-						li.visible-xs
+						li
 							a(href='javascript:void(0)')
-								i(aria-hidden='true')
 								| USD
-						li.visible-xs
+						li
 							a(href='javascript:void(0)')
-								i(aria-hidden='true')
 								| Language
 						li.visible-xs
 							a.blue-btn(href='javascript:void(0)') Unlock special prices
 						li.visible-xs
 							a.green-btn(href='javascript:void(0)') Buy hotel reservation
 				#filter_mobile.navbar-filter.hidden-lg
+			button#menu-button.navbar-toggle(type='button')
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
 			.navbar-menu.hidden-xs
 				ul.nav.navbar-nav.navbar-right
 					li.visible-lg
@@ -95,7 +91,7 @@ nav.navbar.navbar-default.mb-0
 						a(href='javascript:void(0)')
 							i.fa.fa-fire(aria-hidden='true')
 							| Sell
-					li.dropdown.show
+					li.dropdown.show.visible-lg
 						a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 							i.fa.fa-user(aria-hidden='true')
 							| Sign In
@@ -126,11 +122,11 @@ nav.navbar.navbar-default.mb-0
 						a(href='javascript:void(0)')
 							i.fa.fa-info-circle(aria-hidden='true')
 							| Alert Me
-					li
+					li.visible-lg
 						a(href='javascript:void(0)')
 							i.fa.fa-map(aria-hidden='true')
 							| Explore
-					li.form-group
+					li.form-group.visible-lg
 						select#sel1.selectpicker.currency-menu
 							option (USD) $
 							option (EUR) &euro;
@@ -145,7 +141,7 @@ nav.navbar.navbar-default.mb-0
 							option (BDT) Tk
 							option (BBD) $
 							option (BMD) $
-					li.dropdown.show
+					li.dropdown.show.visible-lg
 						a#dropdownMenuLink2.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 							i.fa.fa-language(aria-hidden='true')
 							| Language

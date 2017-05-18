@@ -178,6 +178,7 @@ footer .navbar-header {
     font-weight: 500;
     a {
       color: #000;
+      position: relative;
       &:hover,
       &:focus {
         text-decoration: underline!important;
@@ -514,9 +515,8 @@ footer .navbar-header {
     .features {
       margin-left: 19px;
       margin-top: 18px;
-
       margin-bottom: 0;
-      margin-right: 150px;
+      margin-right: 50px;
     }
     .warning-list {
       display: block;
@@ -692,6 +692,10 @@ footer .navbar-header {
       background-color: #de8c36;
     }
   }
+}
+
+.dropdown-menu {
+  border-radius: 0!important;
 }
 
 .btrans {
@@ -1480,10 +1484,10 @@ aside {
   &.hidden-sidebar-filter {
     @include calc(width, '100% - 15px');
     .content-wrapper {
-      @include calc(width, '50% - 15px');
+      @include calc(width, '60% - 15px');
     }
     .map-wrapper {
-      @include calc(width, '50% - 15px');
+      @include calc(width, '40% - 15px');
     }
   }
 }
@@ -1577,6 +1581,10 @@ aside {
 /* image icon inside close button */
 .gm-style > div:first-child > div + div > div:last-child > div > div:last-child > img {
   display: none!important;
+}
+
+.gm-style-iw + div {
+  display: none;
 }
 
 /* positioning of infowindow */
