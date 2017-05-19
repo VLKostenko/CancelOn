@@ -25,6 +25,7 @@ $(document).ready(function() {
     addSpinnerSpin();
     setTimeout(function() {
       loadContent(href);
+      console.log('content loaded');
     }, 2000);
     setTimeout(function() {
       setMapWrapperHeight();
@@ -40,9 +41,12 @@ $(document).ready(function() {
       success: function(data) {
         removeSpinnerSpin();
         $('.main-wrapper .content-wrapper .check').append(data);
-        // if ( !$('.main-wrapper .content-wrapper .check .grid:first-child').hasClass('list-view') ) {
-        //   $('.main-wrapper .content-wrapper .check .grid:last-child').removeClass('list-view');
-        // }
+        $('.main-wrapper .content-wrapper .check .grid').removeClass('placeholder-show');
+        if ( !$('.main-wrapper .content-wrapper .check .grid:first-child').hasClass('list-view') ) {
+          $('.main-wrapper .content-wrapper .check .grid:last-child').removeClass('list-view');
+        }
+        $('.stars-hotel').stars();
+        $('.rate').rate();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         alert(textStatus + ': ' + errorThrown + ' please, try again later');

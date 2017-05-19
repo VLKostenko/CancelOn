@@ -508,11 +508,11 @@
       overflow-y: hidden!important;
       position: relative!important;
     }
-    &.opened-filter {
-      left: 275px;
-      overflow-y: hidden!important;
-      position: relative!important;
-    }
+    //&.opened-filter {
+    //  left: 275px;
+    //  overflow-y: hidden!important;
+    //  position: relative!important;
+    //}
   }
 
   #nav_mobile {
@@ -611,13 +611,12 @@
       visibility: visible;
       height: 100%;
       max-height: 100vh;
-      left: -275px;
+      left: -100vw;
       right: auto;
       top: 0;
-      overflow-y: auto;
       position: fixed;
       z-index: 10002;
-      width: 275px;
+      width: 100vw;
       background: #002a4a;
       box-shadow: none;
       overflow: hidden;
@@ -631,6 +630,16 @@
         width: 10px;
         @include crossBrowser(box-shadow, inset -0.35em 0 0.3em 0 rgba(0, 0, 0, 0.2));
       }
+    }
+    #filter-done {
+      left: -100vw;
+      top: 15px;
+      right: auto;
+      position: absolute;
+      z-index: 99999;
+      color: #00c2ff;
+      font-family: "Roboto", sans-serif;
+      @include crossBrowser(transition, left .3s);
     }
   }
   .open-menu {
@@ -651,7 +660,7 @@
     &.open-filter {
       #filter_mobile {
         .sidebar-filter {
-          left: 0;
+          //left: 0;
           li {
             &.menu {
               a {
@@ -659,6 +668,9 @@
               }
             }
           }
+        }
+        #filter-done {
+          left: -40px;
         }
       }
     }
@@ -744,6 +756,7 @@
 @media screen and (max-width: 991px) {
   body {
     position: relative!important;
+    overflow-x: hidden!important;
   }
   .map-item-block {
     width: 90%;
@@ -774,13 +787,25 @@
   .main-wrapper {
     &.hidden-sidebar-filter {
       .grid-item {
+        @include calc(width, '(100% - 15px)/ 2');
+        margin-left: 0;
+        &:nth-child(2n) {
+          margin-left: 15px;
+        }
+        .top-wrapper {
+          .left-block {
+            &.center-block {
+              padding-bottom: 45px;
+            }
+          }
+        }
         .preview {
           .image {
-            height: 260px;
+            height: 200px;
           }
         }
         .warning {
-          top: 38%;
+          top: 28%;
         }
       }
       .exclusive {
@@ -789,9 +814,6 @@
         }
       }
     }
-  }
-  .search-result {
-    width: 100%;
   }
   .exclusive {
     width: 100%;
@@ -877,12 +899,18 @@
       }
     }
   }
+
   nav {
     .navbar-header {
       width: 30%;
     }
     .navbar-menu {
       width: 56%;
+    }
+  }
+  .map-wrapper {
+    &.full-width {
+      min-height: 1400px;
     }
   }
   .date-picker-wrapper {
@@ -893,40 +921,61 @@
       margin: auto;
     }
   }
+  .input-group {
+    .input-search {
+      width: calc(100% - 6px);
+    }
+  }
+  .load-icon {
+    right: 3px;
+    width: 120px;
+    top: -88px;
+  }
+  .input-search-btn {
+    right: 6px;
+  }
   .search-group {
     border-bottom: 0;
   }
   .search-result {
     z-index: 15;
     top: 112px;
+    left: -10px;
+    width: calc(100% - 5px);
   }
   .black-bg-search {
-    width: calc(100% + 20px);
-    left: -10px;
+    height: calc(100% + 160px);
+    left: -50vw;
     top: -160px;
+    width: 150vw;
   }
-  .opened-menu {
+  .black-bg-map {
+    width: 150vw;
+    left: -50vw;
+    z-index: 10;
+    &.no-filter {
+      width: calc(150vw - 33px);
+    }
+  }
+  .opened-menu,
+  .opened-filter {
     .black-bg-search {
       top: 0;
       height: 100vh;
     }
   }
-  .load-icon {
-    right: -2px;
-    width: 120px;
-    top: -88px;
+  .bootstrap-select.btn-group .dropdown-toggle .caret {
+    right: 7px;
   }
   .search-filter-block {
     position: relative;
     left: 0;
     right: 0;
     display: block;
-    margin-left: -30px;
-    margin-right: -18px;
+    margin-right: 5px;
     margin-top: 112px;
     height: 90px;
     background: #1d4f62;
-    padding: 0 10px;
     .input-group-addon,
     .form-control {
       background: #1d4f62;
@@ -979,9 +1028,6 @@
       }
     }
   }
-  .black-bg-map {
-    width: 100%;
-  }
   .search-group {
     .input-search {
       padding-right: 115px;
@@ -1006,6 +1052,13 @@
   body {
     position: relative!important;
     min-width: 320px;
+    @include crossBrowser(transition, .5s ease);
+    &.opened-menu {
+      left: -100vw;
+    }
+    &.opened-filter {
+      transform: translateX(100vw);
+    }
   }
   .navbar-brand.dropdown.opened+.dropdown-menu,
   .navbar-brand.dropdown + .dropdown-menu {
@@ -1021,9 +1074,9 @@
         position: absolute;
         left: 0;
         right: 0;
-        margin: 22px auto !important;
-        width: 120px;
-        height: 34px;
+        margin: 14px auto !important;
+        width: 130px;
+        height: 37px;
         max-width: initial !important;
         padding: 0 !important;
       }
@@ -1034,16 +1087,43 @@
       }
     }
   }
-  .load-icon {
-    width: 50px;
-    top: -100px;
-  }
-  .search-filter-block .date-group,
-  .search-filter-block .people-count {
-    width: 100%;
+  .search-filter-block {
+    margin-top: 80px;
+    height: initial;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0;
+    .date-group {
+      width: 100%;
+      height: 60px;
+      background: #1a4e63;
+      .form-control {
+        margin-top: 8px;
+      }
+    }
+    .people-count {
+      width: 100%;
+      height: 60px;
+      background: #1e566d;
+      .input-group-addon {
+        background: #1e566d;
+      }
+      .dropdown-toggle {
+        margin-top: 18px;
+        height: 35px!important;
+      }
+      .book-menu {
+        top: 70px;
+        &:before {
+          display: none;
+        }
+      }
+    }
   }
   #nav_mobile {
     .nav {
+      width: 100vw;
+      right: -100vw;
       li {
         &.menu {
           a {
@@ -1139,6 +1219,9 @@
       width: 50%;
     }
   }
+  .black-bg-search {
+    top: 0;
+  }
   .sidebar-filter {
     display: none;
     position: fixed!important;
@@ -1150,6 +1233,14 @@
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 100vh;
+    &:after {
+      display: none;
+    }
+    .panel-group {
+      height: 100vh!important;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
     .mCSB_inside > .mCSB_container {
       margin-right: 15px;
     }
@@ -1159,19 +1250,41 @@
       z-index: 1005;
     }
   }
+  .navbar-toggle {
+    margin: 20px 20px 20px 10px;
+  }
+  .remove-padding-md {
+    display: none;
+  }
+  #nav_mobile .nav li a {
+    &.blue-btn {
+      text-align: center;
+      padding: 7px 10px !important;
+      &:before {
+        display: none;
+      }
+    }
+    &.green-btn {
+      text-align: center;
+      padding: 7px 10px !important;
+    }
+  }
   .filter-icon {
     position: absolute;
-    left: 0;
-    width: 60px;
-    height: 78px;
-    top: 0;
-    color: #102e4a;
-    background: #d9dfe4;
-    font-size: 46px;
-    line-height: 76px;
+    width: 30px;
+    height: 32px;
+    top: 17px;
+    left: 17px;
+    color: #fff;
+    background: transparent;
+    font-size: 32px;
+    line-height: 0;
     text-align: center;
     z-index: 10;
     cursor: pointer;
+    .fa-sliders {
+      @include crossBrowser(transform, rotate(-90deg));
+    }
   }
   .mobile-filter-line {
     position: absolute;
@@ -1259,18 +1372,30 @@
       }
     }
   }
+  .pagination {
+    ul {
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
   .search-result {
     border-radius: 0;
-    left: 0;
     top: 78px;
+    width: calc(100% + 30px);
+    left: -15px;
     .search-result-inner {
       padding: 0 10px 0 10px;
     }
   }
   .load-icon {
     z-index: 100;
-    right: 10px;
+    right: 0;
     left: auto;
+    top: -118px;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
   }
   .filter-top {
     height: 85px;
@@ -1294,8 +1419,13 @@
     }
   }
   .grid-item {
+    .preview {
+      .image {
+        height: 165px;
+      }
+    }
     .warning {
-      top: 35%;
+      top: 24%;
       width: 55%;
     }
     .address {
@@ -1306,9 +1436,10 @@
     }
     .top-wrapper {
       .left-block {
-        width: 70%;
+        width: 100%;
         &.center-block {
           width: 100%;
+          padding-bottom: 55px;
         }
       }
       .right-block {
@@ -1320,7 +1451,7 @@
       margin-bottom: 0;
     }
     .reviews {
-      margin-top: 10px;
+      margin-top: 15px;
     }
     .views {
       bottom: 58px;
@@ -1384,7 +1515,7 @@
   }
   .date-picker-wrapper {
     z-index: 9999999;
-    margin-left: 10px;
+    margin-top: 10px;
     &:before {
       display: none;
     }

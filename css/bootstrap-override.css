@@ -24,7 +24,7 @@ button[type="button"].btn:focus {
 }
 
 .navbar-default {
-  background-image: url("../images/navbar-bg.png");
+  background-image: url("../images/navbar-bg.jpg");
   background-size: cover;
   border: 0;
 }

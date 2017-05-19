@@ -220,6 +220,7 @@ footer .navbar-header {
   }
   .trip {
     float: left;
+    clear: left;
     width: 115px;
     margin-right: 5px;
     margin-top: 8px;
@@ -408,6 +409,7 @@ footer .navbar-header {
           }
           .trip {
             margin: 0;
+            clear: initial;
             .rate {
               .rate-image {
                 margin-left: 0;
@@ -826,7 +828,7 @@ footer {
 
 aside {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
+  background: transparent;
   margin-left: 15px;
   float: left;
   width: 225px;
@@ -1209,6 +1211,9 @@ aside {
     &.hidden-sidebar-filter {
       width: calc(50% + 8px);
       left: 0;
+      .load-icon {
+        left: 330px;
+      }
     }
     .input-search {
       font-size: 18px;
@@ -1255,7 +1260,7 @@ aside {
     }
     .load-icon {
       right: initial;
-      left: 275px;
+      left: 245px;
       width: 40px;
       font-size: 26px;
       line-height: 50px;
@@ -1526,9 +1531,7 @@ aside {
   margin-left: 15px;
   float: left;
   height: 100%;
-  min-height: 1883px;
   position: relative;
-  //min-height: 2500px;
   background-color: grey;
   @include calc(width, '35% - 15px');
   &.full-width {

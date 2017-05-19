@@ -1,0 +1,293 @@
+/* Placeholders */
+
+$placeholder: #e7e7ea;
+
+body {
+  &.placeholder {
+    overflow: hidden!important;
+    .filter-top {
+      pointer-events: none;
+    }
+    //.sidebar-filter {
+    //  .panel-group {
+    //    pointer-events: none;
+    //  }
+    //}
+    .main-wrapper {
+      pointer-events: none;
+    }
+  }
+}
+.placeholder-hr {
+  width: 100%;
+  height: 1px;
+  background: $placeholder;
+}
+.placeholder-item {
+  background: linear-gradient(
+                  to right,
+                  rgba(236, 236, 238, 0.7) 30%,
+                  rgba(225, 225, 229, 0.7) 50%,
+                  rgba(235, 235, 237, 0.7) 70%)!important;
+  background-size: 800px 104px!important;
+  animation-duration: 2s!important;
+  animation-fill-mode: forwards!important;
+  animation-iteration-count: infinite!important;
+  animation-name: placeholderGradient!important;
+  animation-timing-function: linear!important;
+}
+
+.loading-search-cover {
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid $placeholder;
+  background: linear-gradient(
+                  to right,
+                  rgba(236, 236, 238, 0.7) 30%,
+                  rgba(225, 225, 229, 0.7) 50%,
+                  rgba(235, 235, 237, 0.7) 70%);
+  background-size: 800px 104px;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholderGradient;
+  animation-timing-function: linear;
+  .loading-search {
+    height: 48px;
+    line-height: 48px;
+    width: 48px;
+    margin: 32px auto 0;
+    background-image: url('../images/icons/loading-icon.gif');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.sidebar-filter {
+  height: 2475px;
+}
+
+.map-wrapper {
+  height: 2475px;
+  .loading-search-cover {
+    .loading-search {
+      margin: 120px auto 0;
+    }
+  }
+}
+
+.placeholder-map {
+  background: $placeholder;
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.placeholder-grid {
+  .placeholder-grid-item {
+    &:hover {
+      background: #fff;
+    }
+    .block-wrapper {
+      float: left;
+      width: 100%;
+      .placeholder {
+        &-left-block {
+          float: left;
+          width: 70%;
+          padding: 15px;
+        }
+        &-right-block {
+          float: left;
+          width: 30%;
+          padding: 15px;
+          padding-bottom: 0;
+          .placeholder-item {
+            float: right;
+          }
+        }
+        &-item {
+          height: 13px;
+          margin-bottom: 18px;
+        }
+        &-title {
+          width: 80%;
+        }
+        &-rating {
+          width: 20%;
+        }
+        &-address {
+          width: 55%;
+        }
+        &-distance {
+          width: 70%;
+        }
+        &-icons {
+          .placeholder-icon {
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            margin-bottom: 0;
+          }
+        }
+        &-button {
+          width: 110px;
+          height: 30px;
+          margin-top: 50px;
+          @media screen and (max-width: 767px) {
+            margin-top: 15px;
+          }
+        }
+        &-booked {
+          width: 130px;
+        }
+        &-views {
+          width: 150px;
+          @media screen and (max-width: 767px) {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+  &.list-view {
+    .placeholder-grid-item {
+      .block-wrapper {
+        width: 75%;
+      }
+    }
+  }
+}
+
+.placeholder-panel-group {
+  background: #fff;
+  padding: 15px;
+  .placeholder-item {
+    height: 13px;
+    margin-bottom: 15px;
+  }
+  .placeholder-checkbox {
+    float: right;
+    width: 13px;
+    height: 13px;
+  }
+  .placeholder-price-range {
+    &-price {
+      width: 35%;
+    }
+    &-price2 {
+      width: 45%;
+    }
+    &-price3 {
+      width: 55%;
+    }
+  }
+  .placeholder-stars {
+    &-stars5 {
+      width: 50%;
+      float: left;
+    }
+    &-stars4 {
+      width: 40%;
+      float: left;
+    }
+    &-stars3 {
+      width: 30%;
+      float: left;
+    }
+    &-stars2 {
+      width: 20%;
+      float: left;
+    }
+    &-stars1 {
+      width: 10%;
+      float: left;
+    }
+    &-any {
+      width: 15%;
+      float: left;
+    }
+  }
+  .placeholder-exclusives {
+    .placeholder-item {
+      float: left;
+    }
+    .placeholder-checkbox {
+      float: right;
+    }
+  }
+  .placeholder-facilities {
+    .placeholder-item {
+      float: left;
+      &.show {
+        margin-left: 23px;
+      }
+    }
+    .placeholder-checkbox {
+      float: right;
+      margin-right: 0;
+    }
+    &-icon {
+      float: left;
+      width: 13px;
+      height: 13px;
+      margin-right: 10px;
+    }
+  }
+  .placeholder-accommodation {
+    .placeholder-item {
+      float: left;
+    }
+    .placeholder-checkbox {
+      float: right;
+    }
+  }
+}
+
+.placeholder-show {
+  display: none!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes placeholderGradient {
+  0% {
+    background-position: 115% 0;
+  }
+
+  100% {
+    background-position: -115% 0;
+  }
+}

@@ -795,25 +795,27 @@ if (typeof jQuery === 'undefined') {
       if (!$parent.hasClass('open')) return
 
       if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return
-
       $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
 
       if (e.isDefaultPrevented()) return
 
-      $this.attr('aria-expanded', 'false')
-      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget));
-
       if ( $('.date-picker-wrapper').is(':hidden') ) {
-        $('.black-bg-search').fadeOut(200);
+        // if ( !$('.languages-menu').is(':hidden') ) {
+        //   alert(1);
+        //   $('.black-bg-search').fadeOut(200);
+        // }
+        if ( $('.people-count').hasClass('active') && $('.languages-menu').is(':hidden') ) {
+          $('.black-bg-search').fadeOut(200);
+        }
         $('.people-count').removeClass('active');
       }
       if ( $this.attr('id') == 'peopleCount' && $('.date-picker-wrapper').is(':hidden') ) {
         $('body').css('overflow', 'initial');
       }
-      // if ( $('.date-picker-wrapper').is(':hidden') ) {
-      //   $('.black-bg-search').fadeOut(opt.duration);
-      //   $('body').css('overflow', 'initial');
-      // }
+
+      $this.attr('aria-expanded', 'false')
+      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget));
+
     });
   }
 

@@ -1,5 +1,7 @@
 .content-wrapper
 	.check
+		include content-placeholder
+		include content-placeholder
 		include content-grid
 		include content-grid
 	.loading-more
@@ -24,4 +26,7 @@
 				li
 					a(href='javascript:void(0)') Next
 .map-wrapper
-	#map.sticky
+	.loading-search-cover
+		.loading-search
+	.placeholder-map
+	#map.sticky.placeholder-show

@@ -105,7 +105,7 @@ function initialize() {
         fontSize: '14px'
       }
     });
-    
+
     var handleMarkerClick = (function(marker, i) {
 
         var iwContent =

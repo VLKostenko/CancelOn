@@ -22,7 +22,7 @@ button[type="button"] {
 .navbar-default {
   position: relative;
   z-index: 150;
-  @include background-image-retina('../images/navbar-bg', png);
+  @include background-image-retina('../images/navbar-bg', jpg);
   background-size: cover;
   background-position: 50% 50%;
   border: 0;
@@ -436,6 +436,6 @@ footer {
   background: #68b925;
 }
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
