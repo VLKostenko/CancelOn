@@ -191,24 +191,8 @@
     position: relative;
     z-index: 13;
   }
-  .remove-padding-md {
-    //position: relative;
-    //z-index: 1;
-  }
 }
 @media screen and (max-width: 1280px) {
-  .list-view {
-    .grid-item {
-      .title.long {
-        a {
-          &:before {
-            //content: '';
-            //display: none;
-          }
-        }
-      }
-    }
-  }
   .grid-item {
     .trip {
       margin-top: 7px;
@@ -426,7 +410,6 @@
   }
   .list-btn {
     position: relative;
-    top: 1px;
   }
   .filter-top .content-settings {
     margin-left: 0;
@@ -686,22 +669,6 @@
   .input-search {
     padding-right: 130px;
   }
-  //.search-filter-block {
-  //  position: relative;
-  //  .date-group,
-  //  .people-count {
-  //    width: 50%;
-  //  }
-  //  .people-count {
-  //    margin-left: 0;
-  //  }
-  //}
-  //.load-icon {
-  //  top: -50px;
-  //}
-  //.search-result {
-  //  z-index: 13;
-  //}
 }
 @media screen and (max-width: 1060px) {
   .date-picker-wrapper {
@@ -709,8 +676,6 @@
       max-width: 300px;
       width: 100%!important;
       min-width: initial;
-      max-height: 338px;
-      overflow: auto;
       table {
         clear: left;
         margin-left: 0;
@@ -846,7 +811,14 @@
         clear: left;
         width: 100%;
         .dropdown-menu {
+          position: static;
+          float: none;
+          width: auto;
+          margin-top: 0;
           background: #282d36;
+          border: 0;
+          -webkit-box-shadow: none;
+          box-shadow: none;
         }
         .dropdown-toggle {
           width: 100%;
@@ -1047,10 +1019,28 @@
       }
     }
   }
+  .search-filter-block {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100vw;
+      height: 90px;
+      background: #1d4f62;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: -100vw;
+      width: 100vw;
+      height: 90px;
+      background: #1d4f62;
+    }
+  }
 }
 @media screen and (max-width: 767px) {
   body {
-    position: relative!important;
+    position: relative !important;
     min-width: 320px;
     @include crossBrowser(transition, .5s ease);
     &.opened-menu {
@@ -1060,7 +1050,7 @@
       transform: translateX(100vw);
     }
   }
-  .navbar-brand.dropdown.opened+.dropdown-menu,
+  .navbar-brand.dropdown.opened + .dropdown-menu,
   .navbar-brand.dropdown + .dropdown-menu {
     display: none;
   }
@@ -1110,13 +1100,10 @@
       }
       .dropdown-toggle {
         margin-top: 18px;
-        height: 35px!important;
+        height: 35px !important;
       }
       .book-menu {
         top: 70px;
-        &:before {
-          display: none;
-        }
       }
     }
   }
@@ -1204,12 +1191,12 @@
       right: 0;
       margin: auto;
       z-index: 2;
-      background: #68b925!important;
+      background: #68b925 !important;
       text-transform: uppercase;
       width: 200px;
       height: 50px;
-      line-height: 51px!important;
-      padding: 0!important;
+      line-height: 51px !important;
+      padding: 0 !important;
       text-align: center;
       @media screen and (max-width: 353px) {
         top: -196px;
@@ -1224,7 +1211,7 @@
   }
   .sidebar-filter {
     display: none;
-    position: fixed!important;
+    position: fixed !important;
     top: 0;
     left: 0;
     z-index: 1005;
@@ -1237,7 +1224,7 @@
       display: none;
     }
     .panel-group {
-      height: 100vh!important;
+      height: 100vh !important;
       overflow-x: hidden;
       overflow-y: auto;
     }
@@ -1245,7 +1232,7 @@
       margin-right: 15px;
     }
     &.show-on-map {
-      display: none!important;
+      display: none !important;
       position: fixed;
       z-index: 1005;
     }
@@ -1466,7 +1453,7 @@
       display: none;
     }
     .views-bottom {
-      font-family: "Roboto",sans-serif;
+      font-family: "Roboto", sans-serif;
       color: #68b925;
       font-size: 12px;
       text-transform: uppercase;
@@ -1478,8 +1465,8 @@
     }
   }
   .exclusive {
-    padding-left: 0!important;
-    padding-right: 0!important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     width: calc(100% + 30px);
     position: relative;
     left: -15px;
@@ -1515,9 +1502,11 @@
   }
   .date-picker-wrapper {
     z-index: 9999999;
-    margin-top: 10px;
-    &:before {
-      display: none;
+    margin-top: 15px;
+    .month-wrapper {
+      max-height: 338px;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
   }
   .datepicker-input,

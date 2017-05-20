@@ -58,7 +58,6 @@
     var center = map.getCenter();
     google.maps.event.trigger(map, "resize");
     map.setCenter(center);
-    setMapWrapperHeight();
   }
 
   function hideMobileNav() {
@@ -636,6 +635,7 @@
         .animate({
           'opacity': 0
         }, 200);
+      console.log('123')
     } else {
       $('.map-wrapper').removeClass('full-width');
       $('.black-bg-map').removeClass('no-filter');
@@ -797,6 +797,7 @@
 
       // window loaded functions
       reinitMap();
+      setMapWrapperHeight();
       $('.stars-hotel').stars();
       $('.rate').rate();
       $('.map-item-block--wrapper').mCustomScrollbar({

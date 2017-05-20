@@ -8436,6 +8436,7 @@ aside.show-on-map {
   z-index: 10;
   box-shadow: 0 2px 5px rgba(108, 118, 123, 0.55);
   height: 100%;
+  max-height: 2475px;
 }
 
 aside.show-on-map + .main-wrapper {
@@ -8811,6 +8812,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   height: 100%;
   position: relative;
   background-color: grey;
+  max-height: 2475px;
   width: calc(35% - 15px);
 }
 
@@ -10035,7 +10037,6 @@ aside.show-on-map .panel-group .panel.panel-default {
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 1400px) {
   .list-btn {
     position: relative;
-    top: 1px;
   }
 }
 
@@ -10408,7 +10409,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .list-btn {
     position: relative;
-    top: 1px;
   }
   .filter-top .content-settings {
     margin-left: 0;
@@ -10635,8 +10635,6 @@ aside.show-on-map .panel-group .panel.panel-default {
     max-width: 300px;
     width: 100% !important;
     min-width: initial;
-    max-height: 338px;
-    overflow: auto;
   }
   .date-picker-wrapper .month-wrapper table {
     clear: left;
@@ -10749,7 +10747,13 @@ aside.show-on-map .panel-group .panel.panel-default {
     width: 100%;
   }
   footer .navbar-footer li .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
     background: #282d36;
+    border: 0;
+    box-shadow: none;
   }
   footer .navbar-footer li .dropdown-toggle {
     width: 100%;
@@ -10921,6 +10925,22 @@ aside.show-on-map .panel-group .panel.panel-default {
   .navbar-menu .nav.down-menu .blue-btn:before {
     display: none;
   }
+  .search-filter-block:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 90px;
+    background: #1d4f62;
+  }
+  .search-filter-block:after {
+    content: '';
+    position: absolute;
+    left: -100vw;
+    width: 100vw;
+    height: 90px;
+    background: #1d4f62;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -10990,9 +11010,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .search-filter-block .people-count .book-menu {
     top: 70px;
-  }
-  .search-filter-block .people-count .book-menu:before {
-    display: none;
   }
   #nav_mobile .nav {
     width: 100vw;
@@ -11314,7 +11331,7 @@ aside.show-on-map .panel-group .panel.panel-default {
     display: none;
   }
   .grid-item .views-bottom {
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #68b925;
     font-size: 12px;
     text-transform: uppercase;
@@ -11362,10 +11379,12 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .date-picker-wrapper {
     z-index: 9999999;
-    margin-top: 10px;
+    margin-top: 15px;
   }
-  .date-picker-wrapper:before {
-    display: none;
+  .date-picker-wrapper .month-wrapper {
+    max-height: 338px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .datepicker-input,
   .datepicker-output {
