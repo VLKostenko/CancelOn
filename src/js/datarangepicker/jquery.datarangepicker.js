@@ -921,7 +921,9 @@
         open(opt.duration);
         $('.date-group').addClass('active');
         $('.people-count').removeClass('active');
-        $('.black-bg-search').fadeIn(opt.duration);
+        if ( $(window).width() > 767 ) {
+          $('.black-bg-search').fadeIn(opt.duration);
+        }
         showDaysBorders();
       } else {
         closeDatePicker();
@@ -2518,7 +2520,9 @@
 
       $('.people-count .dropdown-toggle').click(function() {
         closeDatePicker();
-        $('.black-bg-search').fadeIn(opt.duration);
+        if ( $(window).width() > 767 ) {
+          $('.black-bg-search').fadeIn(opt.duration);
+        }
       });
     }
   };

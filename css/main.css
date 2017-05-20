@@ -11381,11 +11381,6 @@ aside.show-on-map .panel-group .panel.panel-default {
     z-index: 9999999;
     margin-top: 15px;
   }
-  .date-picker-wrapper .month-wrapper {
-    max-height: 338px;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
   .datepicker-input,
   .datepicker-output {
     padding-left: 15px;

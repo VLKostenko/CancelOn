@@ -1503,11 +1503,11 @@
   .date-picker-wrapper {
     z-index: 9999999;
     margin-top: 15px;
-    .month-wrapper {
-      max-height: 338px;
-      overflow-y: auto;
-      overflow-x: hidden;
-    }
+    //.month-wrapper {
+    //  max-height: 338px;
+    //  overflow-y: auto;
+    //  overflow-x: hidden;
+    //}
   }
   .datepicker-input,
   .datepicker-output {

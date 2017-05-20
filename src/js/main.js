@@ -518,7 +518,9 @@
   });
 
   $('.people-count #peopleCount').click(function() {
-    $('.black-bg-search').fadeIn(200);
+    if ( $(window).width() > 767 ) {
+      $('.black-bg-search').fadeIn(200);
+    }
     $(this).closest('.people-count').addClass('active');
   });
 
