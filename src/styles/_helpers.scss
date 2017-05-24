@@ -1234,8 +1234,8 @@ aside {
       cursor: pointer;
       color: #bfbfbf;
       z-index: 20;
-      right: 9px;
-      top: 0;
+      right: 2px;
+      top: -5px;
       bottom: 0;
       margin: auto;
       width: 12px;
@@ -1245,6 +1245,9 @@ aside {
     .input-search {
       height: 60px;
       padding-right: 450px;
+      &.icon {
+        background-position: 6px 22px;
+      }
     }
     .input-search-btn {
       display: none;
@@ -1252,6 +1255,10 @@ aside {
     .search-filter-block {
       right: 15px;
       margin: 8px auto;
+      .search-divider {
+        height: 64px;
+        left: 60px;
+      }
     }
     .people-count {
       width: 200px;
@@ -1534,9 +1541,9 @@ aside {
   height: 100%;
   position: relative;
   background-color: grey;
-  max-height: 2475px;
   @include calc(width, '35% - 15px');
   &.full-width {
+    max-height: 2475px;
     width: calc(100% - 15px)!important;
     #map {
       position: relative!important;

@@ -540,6 +540,16 @@
     $('body').css('overflow', 'hidden');
   });
 
+  $('.search-result .result-item').click(function() {
+    var title = $(this).find('h4').text();
+    var icon = $(this).find('.result-icon').attr('class');
+    $('.search-group .input-search').val(title);
+    $('.search-group .input-search')
+      .removeAttr('class')
+      .attr('class', 'form-control input-search')
+      .addClass(icon + ' icon');
+  });
+
   /*
    * Initialization
    */

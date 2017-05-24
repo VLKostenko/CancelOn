@@ -617,9 +617,9 @@ input[type="text"] {
         }
         &.real-today {
           border-radius: 0;
-          background: #00004d;
+          background: #68b925;
           &.checked, &.hovering {
-            background: #00004d;
+            background: #68b925;
           }
         }
         &.checked {
@@ -672,6 +672,6 @@ input[type="text"] {
 }
 .date-picker-wrapper .month-wrapper table .day.nextMonth,
 .date-picker-wrapper .month-wrapper table .day.lastMonth {
-  display: block;
-  color: #fff!important;
+  display: none!important;
+  color: transparent!important;
 }

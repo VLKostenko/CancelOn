@@ -407,6 +407,18 @@
   bottom: 0;
   margin: auto;
   z-index: 13;
+  .search-divider {
+    position: absolute;
+    z-index: 2;
+    height: 112px;
+    width: 1px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e3e3e3;
+  }
   .input-group {
     .form-control {
       border-bottom: 0;
@@ -451,6 +463,8 @@
   width: 260px;
   float: left;
   border-bottom: 2px solid transparent;
+  //border-left: 2px solid #00c2ff;
+  //border-right: 2px solid #00c2ff;
   &.active {
     border-bottom: 2px solid #00c2ff;
   }
@@ -461,12 +475,21 @@
   width: 260px;
   position: relative;
   border-bottom: 2px solid transparent;
+  padding-left: 13px;
   &.active {
     border-bottom: 2px solid #00c2ff;
   }
   .fa-sliders {
     color: #00c2ff;
     font-size: 20px;
+  }
+  .down-arrow {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    top: 0;
+    height: 28px;
+    margin: auto;
   }
   #peopleCount {
     float: left;

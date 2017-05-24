@@ -384,7 +384,7 @@ button[type="button"].btn:focus {
 }
 
 .search-group .input-search {
-  font-size: 36px;
+  font-size: 30px;
   font-family: Roboto, sans-serif;
   color: #102e4a;
   font-weight: 300;
@@ -412,6 +412,29 @@ button[type="button"].btn:focus {
   font-family: 'Roboto', sans-serif !important;
   color: #d7d8da !important;
   font-weight: 300 !important;
+}
+
+.search-group .input-search.icon {
+  background-repeat: no-repeat;
+  background-position: 6px 49px;
+  -webkit-border-radius: 5px;
+  padding-left: 30px;
+}
+
+.search-group .input-search.marker {
+  background-image: url("../images/icons/location-outline.svg");
+}
+
+.search-group .input-search.home {
+  background-image: url("../images/icons/home-outline.svg");
+}
+
+.search-group .input-search.info {
+  background-image: url("../images/icons/info-large-outline.svg");
+}
+
+.search-group .input-search.plane {
+  background-image: url("../images/icons/plane-outline.svg");
 }
 
 .search-group .close-search {
@@ -1533,11 +1556,11 @@ input[type="text"].datepicker-input {
 
 .date-picker-wrapper .month-wrapper table .day.real-today {
   border-radius: 0;
-  background: #00004d;
+  background: #68b925;
 }
 
 .date-picker-wrapper .month-wrapper table .day.real-today.checked, .date-picker-wrapper .month-wrapper table .day.real-today.hovering {
-  background: #00004d;
+  background: #68b925;
 }
 
 .date-picker-wrapper .month-wrapper table .day.checked {
@@ -1587,8 +1610,8 @@ input[type="text"].datepicker-input {
 
 .date-picker-wrapper .month-wrapper table .day.nextMonth,
 .date-picker-wrapper .month-wrapper table .day.lastMonth {
-  display: block;
-  color: #fff !important;
+  display: none !important;
+  color: transparent !important;
 }
 
 /* end of Datapicker */
@@ -8496,8 +8519,8 @@ aside.show-on-map .panel-group .panel.panel-default {
   cursor: pointer;
   color: #bfbfbf;
   z-index: 20;
-  right: 9px;
-  top: 0;
+  right: 2px;
+  top: -5px;
   bottom: 0;
   margin: auto;
   width: 12px;
@@ -8510,6 +8533,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   padding-right: 450px;
 }
 
+.search-group.scrolled .input-search.icon {
+  background-position: 6px 22px;
+}
+
 .search-group.scrolled .input-search-btn {
   display: none;
 }
@@ -8517,6 +8544,11 @@ aside.show-on-map .panel-group .panel.panel-default {
 .search-group.scrolled .search-filter-block {
   right: 15px;
   margin: 8px auto;
+}
+
+.search-group.scrolled .search-filter-block .search-divider {
+  height: 64px;
+  left: 60px;
 }
 
 .search-group.scrolled .people-count {
@@ -8812,11 +8844,11 @@ aside.show-on-map .panel-group .panel.panel-default {
   height: 100%;
   position: relative;
   background-color: grey;
-  max-height: 2475px;
   width: calc(35% - 15px);
 }
 
 .map-wrapper.full-width {
+  max-height: 2475px;
   width: calc(100% - 15px) !important;
 }
 
@@ -9735,6 +9767,19 @@ aside.show-on-map .panel-group .panel.panel-default {
   z-index: 13;
 }
 
+.search-filter-block .search-divider {
+  position: absolute;
+  z-index: 2;
+  height: 112px;
+  width: 1px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e3e3e3;
+}
+
 .search-filter-block .input-group .form-control {
   border-bottom: 0;
   float: left;
@@ -9797,6 +9842,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   width: 260px;
   position: relative;
   border-bottom: 2px solid transparent;
+  padding-left: 13px;
 }
 
 .people-count.active {
@@ -9806,6 +9852,15 @@ aside.show-on-map .panel-group .panel.panel-default {
 .people-count .fa-sliders {
   color: #00c2ff;
   font-size: 20px;
+}
+
+.people-count .down-arrow {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  top: 0;
+  height: 28px;
+  margin: auto;
 }
 
 .people-count #peopleCount {

@@ -62,8 +62,8 @@ function initialize() {
       'images/room5.png',
       38.823484,
       -77.008872,
-      ' ',
-      'images/icons/heart.svg'
+      '6',
+      'images/icons/black-marker.png'
     ]
   ];
 

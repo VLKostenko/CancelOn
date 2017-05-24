@@ -47,6 +47,10 @@ $(document).ready(function() {
         }
         $('.stars-hotel').stars();
         $('.rate').rate();
+        $('.ui.sticky').sticky({
+          context: '#sticky-wrap',
+          silent: true
+        });
       },
       error: function(jqXHR, textStatus, errorThrown) {
         alert(textStatus + ': ' + errorThrown + ' please, try again later');

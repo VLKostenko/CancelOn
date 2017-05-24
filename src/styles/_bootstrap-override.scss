@@ -313,7 +313,7 @@ footer {
 .search-group {
   border-bottom: 1px solid #1f95da;
   .input-search {
-    font-size: 36px;
+    font-size: 30px;
     font-family: Roboto, sans-serif;
     color: #102e4a;
     font-weight: 300;
@@ -337,6 +337,24 @@ footer {
       font-family: 'Roboto', sans-serif !important;
       color: #d7d8da !important;
       font-weight: 300 !important;
+    }
+    &.icon {
+      background-repeat: no-repeat;
+      background-position: 6px 49px;
+      -webkit-border-radius: 5px;
+      padding-left: 30px;
+    }
+    &.marker {
+      background-image: url('../images/icons/location-outline.svg');
+    }
+    &.home {
+      background-image: url('../images/icons/home-outline.svg');
+    }
+    &.info {
+      background-image: url('../images/icons/info-large-outline.svg');
+    }
+    &.plane {
+      background-image: url('../images/icons/plane-outline.svg');
     }
   }
   .close-search {
