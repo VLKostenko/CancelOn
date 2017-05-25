@@ -8479,6 +8479,15 @@ aside.show-on-map .panel-group .panel.panel-default {
   padding-right: 15px;
 }
 
+.search-group > .location {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  top: 75px;
+  font-family: "Roboto",sans-serif;
+  color: #9d9d9d;
+}
+
 .search-group.scrolled {
   position: fixed;
   top: 0;
@@ -8488,13 +8497,19 @@ aside.show-on-map .panel-group .panel.panel-default {
   background: #fff;
 }
 
+.search-group.scrolled > .location {
+  left: 45px;
+  top: 40px;
+  font-size: 12px;
+}
+
 .search-group.scrolled.hidden-sidebar-filter {
   width: calc(50% + 8px);
   left: 0;
 }
 
 .search-group.scrolled.hidden-sidebar-filter .load-icon {
-  left: 330px;
+  left: 350px;
 }
 
 .search-group.scrolled .input-search {
@@ -8519,7 +8534,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   cursor: pointer;
   color: #bfbfbf;
   z-index: 20;
-  right: 2px;
+  right: 10px;
   top: -5px;
   bottom: 0;
   margin: auto;
@@ -8548,11 +8563,14 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .search-group.scrolled .search-filter-block .search-divider {
   height: 64px;
-  left: 60px;
 }
 
 .search-group.scrolled .people-count {
   width: 200px;
+}
+
+.search-group.scrolled .people-count .down-arrow {
+  right: -5px;
 }
 
 .search-group.scrolled .people-count .book-menu {
@@ -8561,7 +8579,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .search-group.scrolled .load-icon {
   right: initial;
-  left: 245px;
+  left: 265px;
   width: 40px;
   font-size: 26px;
   line-height: 50px;
@@ -9361,10 +9379,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   visibility: hidden;
   transition: opacity .2s ease, visibility .2s ease;
   margin: 0;
-  padding: 0;
-  padding-top: 15px;
+  padding: 40px 0 0;
   left: 15px;
-  top: 100%;
+  top: calc(100% - 25px);
   background: transparent;
   box-shadow: none;
   width: 620px;
@@ -9774,10 +9791,16 @@ aside.show-on-map .panel-group .panel.panel-default {
   width: 1px;
   margin: auto;
   top: 0;
-  left: 0;
+  left: -21px;
   right: 0;
   bottom: 0;
   background: #e3e3e3;
+}
+
+@media screen and (max-width: 991px) {
+  .search-filter-block .search-divider {
+    display: none;
+  }
 }
 
 .search-filter-block .input-group .form-control {
@@ -9828,9 +9851,10 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .date-group {
-  width: 260px;
+  width: 200px;
   float: left;
   border-bottom: 2px solid transparent;
+  margin-right: 20px;
 }
 
 .date-group.active {
@@ -9839,10 +9863,10 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .people-count {
   float: left;
-  width: 260px;
+  width: 200px;
   position: relative;
   border-bottom: 2px solid transparent;
-  padding-left: 13px;
+  margin-right: 20px;
 }
 
 .people-count.active {
@@ -9856,7 +9880,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .people-count .down-arrow {
   position: absolute;
-  right: 5px;
+  right: 0;
   bottom: 0;
   top: 0;
   height: 28px;
@@ -9895,7 +9919,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .people-count .book-menu {
-  width: 260px;
+  width: 200px;
   padding: 0 20px;
   border: 0;
   border-radius: 0;
@@ -10182,6 +10206,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .load-icon {
     width: 145px;
+    right: -10px;
   }
 }
 
@@ -10322,6 +10347,12 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .search-group.scrolled {
     width: calc(80% + 2px);
+  }
+  .search-group.scrolled .load-icon {
+    left: 515px;
+  }
+  .search-group.scrolled.hidden-sidebar-filter .load-icon {
+    left: 760px;
   }
 }
 
@@ -10716,6 +10747,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   .grid-item .top-wrapper .left-block.center-block {
     padding-bottom: 45px;
   }
+  .search-filter-block .search-divider {
+    left: -12px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -10953,6 +10987,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   .search-filter-block .people-count .book-menu .input-number {
     background: #fff;
   }
+  .search-filter-block .people-count .down-arrow {
+    color: #fff;
+    height: 15px;
+  }
   .search-filter-block .people-count .dropdown-toggle {
     margin-top: 34px;
   }
@@ -11055,6 +11093,9 @@ aside.show-on-map .panel-group .panel.panel-default {
     width: 100%;
     height: 60px;
     background: #1e566d;
+  }
+  .search-filter-block .people-count .down-arrow {
+    right: 15px;
   }
   .search-filter-block .people-count .input-group-addon {
     background: #1e566d;
@@ -11259,6 +11300,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   .signup .white-text.large {
     font-size: 18px;
   }
+  .search-group > .location {
+    top: 50px;
+  }
   .input-group .search-icon {
     display: none;
   }
@@ -11268,6 +11312,9 @@ aside.show-on-map .panel-group .panel.panel-default {
     border-width: 2px;
     padding-right: 5px;
     padding-left: 5px;
+  }
+  .input-group .input-search.icon {
+    background-position: 6px 30px;
   }
   .input-group .input-search::-webkit-input-placeholder {
     font-size: 24px;

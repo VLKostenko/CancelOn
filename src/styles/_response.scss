@@ -93,6 +93,7 @@
   }
   .load-icon {
     width: 145px;
+    right: -10px;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -261,6 +262,14 @@
   }
   .search-group.scrolled {
     width: calc(80% + 2px);
+    .load-icon {
+      left: 515px;
+    }
+    &.hidden-sidebar-filter {
+      .load-icon {
+        left: 760px;
+      }
+    }
   }
 }
 @media screen and (max-width: 1199px) {
@@ -710,6 +719,9 @@
       }
     }
   }
+  .search-filter-block .search-divider {
+    left: -12px;
+  }
 }
 @media screen and (min-width: 992px) {
   footer {
@@ -981,6 +993,10 @@
           background: #fff;
         }
       }
+      .down-arrow {
+        color: #fff;
+        height: 15px;
+      }
       .dropdown-toggle {
         margin-top: 34px;
         .block {
@@ -1095,6 +1111,9 @@
       width: 100%;
       height: 60px;
       background: #1e566d;
+      .down-arrow {
+        right: 15px;
+      }
       .input-group-addon {
         background: #1e566d;
       }
@@ -1313,6 +1332,11 @@
       }
     }
   }
+  .search-group {
+    & > .location {
+      top: 50px;
+    }
+  }
   .input-group {
     .search-icon {
       display: none;
@@ -1323,6 +1347,9 @@
       border-width: 2px;
       padding-right: 5px;
       padding-left: 5px;
+      &.icon {
+        background-position: 6px 30px;
+      }
       &::-webkit-input-placeholder {
         font-size: 24px;
       }

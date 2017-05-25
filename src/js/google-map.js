@@ -183,7 +183,7 @@ function initialize() {
       $('.open-map-item').click(function() {
         $('.black-bg-map').fadeIn(200);
         $('.map-item-block').show("slide", { direction: "right" }, 300);
-        $('body').css('overflow', 'hidden');
+        $(window).disablescroll();
         // if ( $('.myonoffswitch').prop('checked') ) {
         //   alert(1);
         // }
@@ -199,7 +199,7 @@ function initialize() {
     $('.black-bg-map, .map-item-block .close-btn, .input-search').click(function() {
       $('.black-bg-map').fadeOut(200);
       $('.map-item-block').hide("slide", { direction: "right" }, 200);
-      $('body').css('overflow', 'initial');
+      $(window).disablescroll('undo');
     });
 
     google.maps.event.addListener(map, 'click', function() {

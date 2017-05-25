@@ -1202,6 +1202,14 @@ aside {
 .search-group {
   padding-left: 15px;
   padding-right: 15px;
+  & > .location {
+    position: absolute;
+    z-index: 2;
+    left: 30px;
+    top: 75px;
+    font-family: "Roboto",sans-serif;
+    color: #9d9d9d;
+  }
   &.scrolled {
     position: fixed;
     top: 0;
@@ -1209,11 +1217,16 @@ aside {
     left: 240px;
     padding: 0 15px;
     background: #fff;
+    & > .location {
+      left: 45px;
+      top: 40px;
+      font-size: 12px;
+    }
     &.hidden-sidebar-filter {
       width: calc(50% + 8px);
       left: 0;
       .load-icon {
-        left: 330px;
+        left: 350px;
       }
     }
     .input-search {
@@ -1234,7 +1247,7 @@ aside {
       cursor: pointer;
       color: #bfbfbf;
       z-index: 20;
-      right: 2px;
+      right: 10px;
       top: -5px;
       bottom: 0;
       margin: auto;
@@ -1257,18 +1270,20 @@ aside {
       margin: 8px auto;
       .search-divider {
         height: 64px;
-        left: 60px;
       }
     }
     .people-count {
       width: 200px;
+      .down-arrow {
+        right: -5px;
+      }
       .book-menu {
         width: 200px;
       }
     }
     .load-icon {
       right: initial;
-      left: 245px;
+      left: 265px;
       width: 40px;
       font-size: 26px;
       line-height: 50px;

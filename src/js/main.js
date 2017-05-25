@@ -531,23 +531,41 @@
   });
 
   $('#peopleCount').click(function() {
-    $('body').css('overflow', 'hidden');
+    $(window).disablescroll();
   });
 
   $('.open-map-item').click(function() {
     $('.black-bg-map').fadeIn(200);
     $('.map-item-block').show("slide", { direction: "right" }, 300);
-    $('body').css('overflow', 'hidden');
+    $(window).disablescroll();
   });
 
   $('.search-result .result-item').click(function() {
     var title = $(this).find('h4').text();
     var icon = $(this).find('.result-icon').attr('class');
+    var location = $(this).find('.location');
     $('.search-group .input-search').val(title);
     $('.search-group .input-search')
       .removeAttr('class')
       .attr('class', 'form-control input-search')
       .addClass(icon + ' icon');
+    if ( $('.search-group > .location').length ) {
+      if ( location.text() !== $('.search-group > .location').text() ) {
+        $('.search-group > .location').remove();
+        location.clone().appendTo('.search-group');
+      }
+    } else {
+      location.clone().appendTo('.search-group');
+    }
+  });
+
+  $('.input-search').keyup(function() {
+    if ( $(this).val() == '' ) {
+      $('.search-group > .location').remove();
+      $('.search-group .input-search')
+        .removeAttr('class')
+        .attr('class', 'form-control input-search');
+    }
   });
 
   /*

@@ -1325,7 +1325,7 @@
       });
       showGap();
       updateCalendarWidth();
-      $('body').css('overflow', 'hidden');
+      $(window).disablescroll();
     }
 
     function checkAndSetDefaultValue() {
@@ -2062,7 +2062,7 @@
       setTimeout(function() {
         if ( $('.people-count .book-menu').is(':hidden') ) {
           $('.black-bg-search').fadeOut(opt.duration);
-          $('body').css('overflow', 'initial');
+          $(window).disablescroll('undo');
         }
       }, 10);
       $('.date-group').removeClass('active');

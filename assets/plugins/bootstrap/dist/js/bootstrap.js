@@ -810,7 +810,7 @@ if (typeof jQuery === 'undefined') {
         $('.people-count').removeClass('active');
       }
       if ( $this.attr('id') == 'peopleCount' && $('.date-picker-wrapper').is(':hidden') ) {
-        $('body').css('overflow', 'initial');
+        $(window).disablescroll('undo');
       }
 
       $this.attr('aria-expanded', 'false')

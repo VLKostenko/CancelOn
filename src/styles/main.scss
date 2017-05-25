@@ -42,10 +42,9 @@
       visibility: hidden;
       transition: opacity .2s ease, visibility .2s ease;
       margin: 0;
-      padding: 0;
-      padding-top: 15px;
+      padding: 40px 0 0;
       left: 15px;
-      top: 100%;
+      top: calc(100% - 25px);
       background: transparent;
       box-shadow: none;
       width: 620px;
@@ -414,10 +413,13 @@
     width: 1px;
     margin: auto;
     top: 0;
-    left: 0;
+    left: -21px;
     right: 0;
     bottom: 0;
     background: #e3e3e3;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
   }
   .input-group {
     .form-control {
@@ -460,11 +462,10 @@
 }
 
 .date-group {
-  width: 260px;
+  width: 200px;
   float: left;
   border-bottom: 2px solid transparent;
-  //border-left: 2px solid #00c2ff;
-  //border-right: 2px solid #00c2ff;
+  margin-right: 20px;
   &.active {
     border-bottom: 2px solid #00c2ff;
   }
@@ -472,10 +473,10 @@
 
 .people-count {
   float: left;
-  width: 260px;
+  width: 200px;
   position: relative;
   border-bottom: 2px solid transparent;
-  padding-left: 13px;
+  margin-right: 20px;
   &.active {
     border-bottom: 2px solid #00c2ff;
   }
@@ -485,7 +486,7 @@
   }
   .down-arrow {
     position: absolute;
-    right: 5px;
+    right: 0;
     bottom: 0;
     top: 0;
     height: 28px;
@@ -518,7 +519,7 @@
     }
   }
   .book-menu {
-    width: 260px;
+    width: 200px;
     padding: 0 20px;
     border: 0;
     border-radius: 0;
