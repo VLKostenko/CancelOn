@@ -180,7 +180,8 @@ function initialize() {
     google.maps.event.addListener(marker, "mouseout", handleMarkerMouseLeave);
 
     google.maps.event.addListener(infowindow, 'domready', function() {
-      $('.open-map-item').click(function() {
+      $('.map-item-block .open-map-item,' +
+        '.features .open-map-item').click(function() {
         $('.black-bg-map').fadeIn(200);
         $('.map-item-block').show("slide", { direction: "right" }, 300);
         $(window).disablescroll();

@@ -173,6 +173,41 @@
   -moz-user-select: none;
   -ms-user-select: none;
 }
+.onoffswitch-gallery-wrapper {
+  position: absolute;
+  z-index: 5;
+  right: 25px;
+  top: 10px;
+  width: 175px;
+  height: 50px;
+  background: #fff;
+  padding: 13px 16px 13px 13px;
+  &.checked {
+    box-shadow: 0 1px 3px rgba(108,118,123,.15);
+  }
+}
+.onoffswitch-gallery {
+  &:before {
+    content: 'Gallery';
+    position: absolute;
+    left: -50px;
+    top: 2px;
+    font-family: Roboto, sans-serif;
+  }
+  &:after {
+    content: 'Map';
+    position: absolute;
+    right: -33px;
+    top: 2px;
+    font-family: Roboto, sans-serif;
+  }
+  margin-right: 35px;
+  position: relative;
+  width: 54px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
 
 .onoffswitch-checkbox {
   display: none;

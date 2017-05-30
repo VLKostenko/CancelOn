@@ -37,7 +37,8 @@ body {
   animation-timing-function: linear!important;
 }
 
-.loading-search-cover {
+.loading-search-cover,
+.loading-title-cover {
   position: absolute;
   z-index: 99;
   right: 0;
@@ -56,7 +57,8 @@ body {
   animation-iteration-count: infinite;
   animation-name: placeholderGradient;
   animation-timing-function: linear;
-  .loading-search {
+  .loading-search,
+  .loading-title {
     height: 48px;
     line-height: 48px;
     width: 48px;
@@ -65,6 +67,9 @@ body {
     background-size: 40px 40px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+  .loading-title {
+    margin: 68px auto 0;
   }
 }
 

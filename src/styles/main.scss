@@ -238,80 +238,6 @@
       margin-right: 10px;
     }
   }
-  .owl-carousel {
-    .owl-item {
-      img {
-        display: block;
-        width: 100%;
-        height: initial;
-      }
-    }
-    .owl-prev {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 85px;
-      opacity: .25;
-      background: rgba(255, 255, 255, .7);
-      @include crossBrowser(transition, opacity .2s ease);
-      &:hover {
-        opacity: 1;
-      }
-      i {
-        font-size: 70px;
-        line-height: 280px;
-        text-align: center;
-        width: 100%;
-      }
-    }
-    .owl-next {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 85px;
-      opacity: .25;
-      background: rgba(255, 255, 255, .7);
-      @include crossBrowser(transition, opacity .2s ease);
-      &:hover {
-        opacity: 1;
-      }
-      i {
-        font-size: 70px;
-        line-height: 280px;
-        text-align: center;
-        width: 100%;
-      }
-    }
-    .owl-dots {
-      position: absolute;
-      bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      left: 0;
-      .owl-dot {
-        float: left;
-        margin-right: 5px;
-        span {
-          background: #fff;
-          width: 12px;
-          height: 12px;
-          border-radius: 50%;
-          display: block;
-          @include crossBrowser(transition, background .2s ease);
-        }
-        &.active,
-        &:hover {
-          span {
-            background: #2f8ce8;
-          }
-        }
-      }
-    }
-  }
   .main-price {
     float: right;
     padding: 13px 15px 8px;
@@ -683,6 +609,80 @@
   &.writing {
     opacity: 1;
     z-index: 10;
+  }
+}
+.owl-carousel {
+  .owl-item {
+    img {
+      display: block;
+      width: 100%;
+      height: initial;
+    }
+  }
+  .owl-prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 85px;
+    opacity: .25;
+    background: rgba(255, 255, 255, .7);
+    @include crossBrowser(transition, opacity .2s ease);
+    &:hover {
+      opacity: 1;
+    }
+    i {
+      font-size: 70px;
+      line-height: 280px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .owl-next {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 85px;
+    opacity: .25;
+    background: rgba(255, 255, 255, .7);
+    @include crossBrowser(transition, opacity .2s ease);
+    &:hover {
+      opacity: 1;
+    }
+    i {
+      font-size: 70px;
+      line-height: 280px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    .owl-dot {
+      float: left;
+      margin-right: 5px;
+      span {
+        background: #fff;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: block;
+        @include crossBrowser(transition, background .2s ease);
+      }
+      &.active,
+      &:hover {
+        span {
+          background: #2f8ce8;
+        }
+      }
+    }
   }
 }
 @import "landing";

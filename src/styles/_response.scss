@@ -1175,20 +1175,6 @@
         }
       }
     }
-    .owl-carousel {
-      .owl-dots {
-        left: 0;
-        right: 0;
-        margin: auto;
-        text-align: center;
-        width: 170px;
-        min-width: 170px;
-      }
-      .owl-item img {
-        width: initial;
-        height: 100%;
-      }
-    }
     .main-price {
       position: absolute;
       left: 0;
@@ -1243,6 +1229,20 @@
   }
   .remove-padding-md {
     display: none;
+  }
+  .owl-carousel {
+    .owl-dots {
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      width: 170px;
+      min-width: 170px;
+    }
+    .owl-item img {
+      width: initial;
+      height: 100%;
+    }
   }
   #nav_mobile .nav li a {
     &.blue-btn {

@@ -1,8 +1,12 @@
 extends parts/_layout
 block vars
-   - page = {name: 'landing', classes: '', title: 'Express Hotel Suites Las Vegas'}
+   - page = {name: 'landing', classes: 'landing placeholder', title: 'Express Hotel Suites Las Vegas'}
 block main
    include parts/navigation
    include parts/landing/hotel-title
+   .container.information-block-wrapper
+      .row
+         include parts/landing/information-block
    .container.pos-rel.booking-wrapper
-      include parts/landing/booking-table
+      .row
+         include parts/landing/booking-table

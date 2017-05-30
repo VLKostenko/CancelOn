@@ -1,0 +1,57 @@
+.information-block.clearfix
+   .onoffswitch-gallery-wrapper
+      .onoffswitch-gallery.pull-right
+         input#myonoffswitch2.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch2')
+         label.onoffswitch-label(for='myonoffswitch2')
+            span.onoffswitch-inner
+            span.onoffswitch-switch
+   .slider-block.clearfix
+      .owl-carousel.full.photoswipe-block(data-slider-id='1')
+         - for(var i = 1; i < 16; i++)
+            figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+               a(href='images/hotel-image.png', itemprop='contentUrl', data-size='1086x908')
+                  img(src='images/hotel-image.png', alt='Alt ' + i)
+         - for(var i = 1; i < 16; i++)
+            figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+               a(href='images/hotel-image.png', itemprop='contentUrl', data-size='1086x908')
+                  img(src='images/hotel-image.png', alt='Alt ' + i)
+      .owl-thumbs(data-slider-id='1')
+         - for(var i = 1; i < 16; i++)
+            button.owl-thumb-item.same-height
+               img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
+         - for(var i = 1; i < 16; i++)
+            button.owl-thumb-item.same-height
+               img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
+   .sidebar-block
+      .sidebar-wrapper
+         .sidebar-logo
+            img(src='images/tripadvisor-logo.svg', alt='tripadvisor logo')
+            span Know better. Book better. Go better.
+         .sidebar-info
+            .sidebar-info_name-rating
+               .sidebar-info_name-rating_title
+                  div Holiday Inn Express Hotel Suites Las Vegas I-215 S. Beltway
+               .sidebar-info_name-rating_rating
+                  .title TripAdvisor Traveller Rating
+                  img(src='./images/icons/rate/5.0.svg')
+                  .text Based on 1,241 traveller reviews
+            .sidebar-info_ranking
+               .title TripAdvisor Ranking
+               .text #
+                  b 139 of 697
+                  |  hotels in Hong Kong
+            .sidebar-info_comments
+               .sidebar-info_comments-title
+                  span Most Recent Traveller Reviews
+               .sidebar-info_comments-comment
+                  span 24 Apr 2017: “Don't know why it gets such bad...”
+               .sidebar-info_comments-comment
+                  span 6 Mar 2017: “Syringe in parking lot, triple charged, run...”
+               .sidebar-info_comments-comment
+                  span 18 Jan 2017: “Last night in town during a conference”
+               .sidebar-info_comments-comment
+                  span 29 Dec 2016: “Rigid Cancellation Policy”
+               .sidebar-info_comments-comment
+                  span 4 Dec 2016: “Online Rip-off”
+   .gallery-map-wrapper
+      #map.hidden
