@@ -1,15 +1,12 @@
-doctype html
-html(lang='en')
-   //body
-   include parts/head
-   body.placeholder
-      include parts/navigation
-      include parts/search
-      include parts/search-top-options
-      .container.pl-0.pr-0.pos-rel
-         include parts/aside
-         .main-wrapper#sticky-wrap
-            include parts/content
-            include parts/map-item
-      include parts/footer
-      include parts/scripts
+extends parts/_layout
+block vars
+   - page = {name: 'index', classes: 'placeholder', title: 'Booking Service'}
+block main
+   include parts/navigation
+   include parts/search
+   include parts/search-top-options
+   .container.pl-0.pr-0.pos-rel
+      include parts/aside
+      .main-wrapper#sticky-wrap
+         include parts/content
+         include parts/map-item

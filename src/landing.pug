@@ -1,0 +1,8 @@
+extends parts/_layout
+block vars
+   - page = {name: 'landing', classes: '', title: 'Express Hotel Suites Las Vegas'}
+block main
+   include parts/navigation
+   include parts/landing/hotel-title
+   .container.pos-rel.booking-wrapper
+      include parts/landing/booking-table

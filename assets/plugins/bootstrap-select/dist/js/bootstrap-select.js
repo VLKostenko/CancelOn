@@ -806,7 +806,7 @@
 
       //strip all HTML tags and trim the result, then unescape any escaped tags
       this.$button.attr('title', htmlUnescape($.trim(title.replace(/<[^>]*>?/g, ''))));
-      if ( this.$button.parent().parent().parent().is('.nav') ) {
+      if ( this.$button.parent().parent().parent().is('.nav') || this.$button.parent().parent().parent().is('.search-filter-block') ) {
         this.$button.children('.filter-option').html(title.replace(/[^a-zA-Z0-9]+/g, ""));
       } else {
         this.$button.children('.filter-option').html(title);

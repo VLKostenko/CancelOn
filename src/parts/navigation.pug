@@ -36,9 +36,15 @@ nav.navbar.navbar-default.mb-0
 								img(src='images/messages.png')
 				.filter-icon.visible-xs
 					i.fa.fa-sliders(aria-hidden='true')
-				p.navbar-text.small-text.font-weight-200.visible-lg
-					i.fa.fa-info-circle(aria-hidden='true')
-					|	Sell and Buy Non-Refundable Hotel Reservations
+				if ( page.name == 'landing' )
+					p.navbar-text-landing.small-text.font-weight-200.visible-lg
+						| As seen on
+					a(href='javascript:void(0)').secondary-logo
+						img(src='../images/trivago-logo.png', alt='trivago')
+				else
+					p.navbar-text.small-text.font-weight-200.visible-lg
+						i.fa.fa-info-circle(aria-hidden='true')
+						|  Sell and Buy Non-Refundable Hotel Reservations
 				#nav_mobile.navbar-mobile.hidden-lg
 					ul.nav.navbar-nav
 						li.back
@@ -117,10 +123,6 @@ nav.navbar.navbar-default.mb-0
 										i.fa.fa-twitter(aria-hidden='true')
 					li.visible-lg
 						a(href='javascript:void(0)')
-							i.fa.fa-life-ring(aria-hidden='true')
-							| Support
-					li.visible-lg
-						a(href='javascript:void(0)')
 							i.fa.fa-info-circle(aria-hidden='true')
 							| Alert Me
 					li.visible-lg
@@ -169,6 +171,10 @@ nav.navbar.navbar-default.mb-0
 									img(width='25', src='images/icons/flag5.svg', alt='')
 									| Russian
 				ul.nav.navbar-nav.navbar-right.down-menu
+					li.visible-lg
+						a(href='javascript:void(0)')
+							i.fa.fa-life-ring(aria-hidden='true')
+							| Support
 					li.visible-lg
 						a(href='javascript:void(0)') About
 					//li

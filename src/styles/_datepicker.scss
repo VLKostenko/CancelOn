@@ -41,6 +41,13 @@
     right: 0;
     margin: auto;
   }
+  &.booking-datepicker {
+    left: 15px!important;
+    margin-top: 10px;
+    &:before {
+      display: none;
+    }
+  }
   &.inline-wrapper {
     position: relative;
     box-shadow: none;

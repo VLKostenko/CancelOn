@@ -111,6 +111,20 @@ button[type="button"] {
     margin-bottom: 47px;
     margin-left: 9px;
   }
+  .navbar-text-landing {
+    color: #ffffff;
+    margin: 47px 15px;
+    float: left;
+  }
+  .secondary-logo {
+    max-width: 125px;
+    float: left;
+    margin-top: 36px;
+    margin-bottom: 33px;
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .navbar-toggle {
@@ -456,4 +470,12 @@ footer {
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+}
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  padding: 15px;
 }

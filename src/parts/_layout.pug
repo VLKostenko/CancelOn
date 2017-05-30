@@ -1,0 +1,12 @@
+doctype html
+//- Global variables
+- var page
+block vars
+//- Template
+html(lang="en")
+   head
+      include ../parts/head
+   body(class=page.classes)
+      block main
+   include ../parts/footer
+   include ../parts/scripts

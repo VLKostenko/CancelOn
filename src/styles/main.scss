@@ -348,17 +348,6 @@
           text-decoration: underline!important;
         }
       }
-      .book-btn {
-        padding: 15px 55px;
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        background: $dark-blue;
-        line-height: 50px;
-        &:hover {
-          background: $main-blue;
-        }
-      }
     }
     .bottom-info {
       .nav-pills {
@@ -696,7 +685,7 @@
     z-index: 10;
   }
 }
-
+@import "landing";
 @import "conditions";
 @import "response";
 @import "compatibility";

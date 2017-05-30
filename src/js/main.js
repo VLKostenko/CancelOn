@@ -8,7 +8,8 @@
   var search = $('.input-search');
   var searchResult = $('.search-result');
   var loadIcon = $('.load-icon');
-  var datepickerInput = $('.datepicker-input');
+  var datepickerInput = $('.search-group .datepicker-input');
+  var datepickerInputLanding = $('.booking-table .datepicker-input');
   var input = $('.input-number');
 
   /*
@@ -55,9 +56,11 @@
    */
 
   function reinitMap() {
-    var center = map.getCenter();
-    google.maps.event.trigger(map, "resize");
-    map.setCenter(center);
+    if ( $('#map').length ) {
+      var center = map.getCenter();
+      google.maps.event.trigger(map, "resize");
+      map.setCenter(center);
+    }
   }
 
   function hideMobileNav() {
@@ -120,25 +123,25 @@
     if ( $('.sidebar-filter').hasClass('to-left') ) {
       left = $('.grid').offset().left;
     } else {
-      left = $('.sidebar-filter').offset().left + $('.sidebar-filter').width() + 15 ; // +15 — move left on half of padding
+      left = $('.sidebar-filter').offset().left + $('.sidebar-filter').width() + 15; // +15 — move left on half of padding
     }
     if ( !$('.myonoffswitch').prop('checked') ) {
-      if ( scrollPos.scrollTop() >= targetLine && !$(target).hasClass('closed') && scrollPos.scrollTop() <= targetEnd ) {
-        $(targetSpace).height(113);
-        $(target).addClass('scrolled').css({
-          left: left,
-          width: width
-        });
-        console.log('scroll position > target position');
-      } else if ( scrollPos.scrollTop() < targetLine || scrollPos.scrollTop() > targetEnd ) {
-        $(target).removeClass('scrolled closed').css({
-          left: 'initial',
-          width: '100%'
-        });
-        $(targetSpace).height('initial');
-        console.log('scroll position < target position');
+        if ( scrollPos.scrollTop() >= targetLine && !$(target).hasClass('closed') && scrollPos.scrollTop() <= targetEnd ) {
+          $(targetSpace).height(113);
+          $(target).addClass('scrolled').css({
+            left: left,
+            width: width
+          });
+          console.log('scroll position > target position');
+        } else if ( scrollPos.scrollTop() < targetLine || scrollPos.scrollTop() > targetEnd ) {
+          $(target).removeClass('scrolled closed').css({
+            left: 'initial',
+            width: '100%'
+          });
+          $(targetSpace).height('initial');
+          console.log('scroll position < target position');
+        }
       }
-    }
   }
 
   function destroyScrolledElement(target, targetSpace) {
@@ -568,6 +571,14 @@
     }
   });
 
+  var hotelButton = $('.booking-table .room-type_info-open-btn .hotel-button');
+  hotelButton.click(function() {
+    $(this)
+      .toggleClass('opened closed')
+      .closest('.row-info')
+      .toggleClass('opened closed');
+  });
+
   /*
    * Initialization
    */
@@ -587,6 +598,31 @@
       time: {
         enabled: true
       },
+      defaultTime: moment().startOf('day').toDate(),
+      defaultEndTime: moment().endOf('day').toDate(),
+      language: 'en',
+      applyBtnClass: 'save-time',
+      customOpenAnimation: function(cb) {
+        $(this).fadeIn(300, cb);
+      },
+      customCloseAnimation: function(cb) {
+        $(this).fadeOut(300, cb);
+      }
+    });
+  }
+
+  if ( datepickerInputLanding.length ) {
+    datepickerInputLanding.dateRangePicker({
+      startOfWeek: 'sunday',
+      separator: ' ~ ',
+      singleMonth: false,
+      showTopbar: false,
+      format: 'MMM Do dddd',
+      autoClose: false,
+      time: {
+        enabled: true
+      },
+      extraClass: 'booking-datepicker',
       defaultTime: moment().startOf('day').toDate(),
       defaultEndTime: moment().endOf('day').toDate(),
       language: 'en',
@@ -695,7 +731,9 @@
     }
     reinitMap();
     if ( $(window).width() > 1199 ) {
-      scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
+      if ( $('.input-group.search-group').length ) {
+        scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
+      }
     } else {
       destroyScrolledElement('.input-group.search-group', '#search-space');
     }
@@ -775,10 +813,12 @@
       }
     }
     if ( $(window).width() > 1199 ) {
-      scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
-      $(window).scroll(function() {
+      if ( $('.input-group.search-group').length ) {
         scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
-      });
+        $(window).scroll(function() {
+          scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
+        });
+      }
     } else {
       destroyScrolledElement('.input-group.search-group', '#search-space');
       $(window).scroll(function() {
@@ -838,9 +878,11 @@
         silent: true
       });
       if ( $(window).width() > 1199 ) {
-        $(window).scroll(function() {
-          scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
-        });
+        if ( $('.input-group.search-group').length ) {
+          $(window).scroll(function() {
+            scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
+          });
+        }
       } else {
         destroyScrolledElement('.input-group.search-group', '#search-space');
       }

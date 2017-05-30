@@ -924,7 +924,7 @@
         if ( $(window).width() > 767 ) {
           $('.black-bg-search').fadeIn(opt.duration);
         }
-        showDaysBorders();
+        // showDaysBorders();
       } else {
         closeDatePicker();
       }
@@ -1091,7 +1091,7 @@
         if (!opt.singleMonth && !opt.singleDate && !isMonth2 && compare_month(month, opt.month2) >= 0 || isMonthOutOfBounds(month)) return;
         showMonth(month, isMonth2 ? 'month2' : 'month1');
         showGap();
-        showDaysBorders();
+        // showDaysBorders();
       }
 
       function gotoNextMonth_stickily(self) {
@@ -1120,7 +1120,7 @@
         if (isMonth2 && compare_month(month, opt.month1) <= 0 || isMonthOutOfBounds(month)) return;
         showMonth(month, isMonth2 ? 'month2' : 'month1');
         showGap();
-        showDaysBorders();
+        // showDaysBorders();
       }
 
       function gotoPrevMonth_stickily(self) {
@@ -1535,7 +1535,7 @@
       checkSelectionValid();
       showSelectedInfo();
       showSelectedDays();
-      showDaysBorders();
+      // showDaysBorders();
       // autoclose();
     }
 
@@ -1902,7 +1902,7 @@
       checkSelectionValid();
       showSelectedInfo(false, silent);
       // show borders when open after save
-      showDaysBorders();
+      // showDaysBorders();
       autoclose();
     }
 
