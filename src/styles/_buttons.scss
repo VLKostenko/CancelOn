@@ -209,6 +209,33 @@
   -ms-user-select: none;
 }
 
+.onoffswitch-hotel-info {
+  &:before,
+  &:after {
+    position: absolute;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    text-transform: initial;
+    font-weight: 400;
+  }
+  &:before {
+    content: 'Hide map';
+    left: -67px;
+    top: 2px;
+  }
+  &:after {
+    content: 'Map';
+    right: -33px;
+    top: 2px;
+  }
+  margin-right: 35px;
+  position: relative;
+  width: 54px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 .onoffswitch-checkbox {
   display: none;
 }

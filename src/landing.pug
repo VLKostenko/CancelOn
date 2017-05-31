@@ -10,3 +10,17 @@ block main
    .container.pos-rel.booking-wrapper
       .row
          include parts/landing/booking-table
+         .popup.green
+            .popup_title
+               span Hurry, if you don't book our amazing deals could be gone! Book now.
+            a.popup_close(href='javascript:void(0)')
+               i.fa.fa-close
+         include parts/landing/hotel-facilities
+         .popup.green
+            .popup_title
+               span.fs-m Tip: Stay Flexible
+            .popup_text
+               span Since your dates are a while from now, pick free cancelation to stay flexible.  A change of plans is a breeze when you have free cancellation!
+            a.popup_close(href='javascript:void(0)')
+               i.fa.fa-close
+         include parts/landing/hotel-information

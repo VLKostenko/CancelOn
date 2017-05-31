@@ -18,7 +18,8 @@ var gulp = require('gulp'),
   saveLicense = require('uglify-save-license'),
   lessToScss = require('gulp-less-to-scss'),
   imgRetina = require('gulp-img-retina'),
-  pug = require('gulp-pug');
+  pug = require('gulp-pug'),
+  gutil = require('gulp-util');
 
 var retinaOpts = {};
 
@@ -97,7 +98,7 @@ gulp.task('browser:sync', function() {
 gulp.task('html:build', function () {
   gulp.src(path.src.pugPart)
     .pipe(rigger())
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({ pretty: true }).on('error', gutil.log))
     .pipe(imgRetina(retinaOpts))
     .pipe(gulp.dest(path.build.partHtml));
 });
@@ -105,7 +106,7 @@ gulp.task('html:build', function () {
 gulp.task('pug:build', function () {
   gulp.src(path.src.pug)
     .pipe(rigger())
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({ pretty: true }).on('error', gutil.log))
     .pipe(imgRetina(retinaOpts))
     .pipe(gulp.dest(path.build.html));
 });
@@ -156,7 +157,7 @@ gulp.task('js:build', function () {
       output: {
         comments: saveLicense
       }
-    }))
+    }).on('error', gutil.log))
     .pipe(gulp.dest(path.build.js_ds_scripts));
 });
 
@@ -168,7 +169,7 @@ gulp.task('styles:build', function () {
       outputStyle: 'expanded',
       sourceMap: true,
       errLogToConsole: true
-    }))
+    }).on('error', gutil.log))
     .pipe(prefixer())
     .pipe(gulp.dest(path.build.css_template))
     .pipe(rename({ extname: '.min.css' }))

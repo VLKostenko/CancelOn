@@ -537,6 +537,10 @@
     $(window).disablescroll();
   });
 
+  $('.popup .popup_close').click(function() {
+    $(this).closest('.popup').fadeOut();
+  });
+
   $('.map-item-block .open-map-item,' +
     '.features .open-map-item').click(function() {
     $('.black-bg-map').fadeIn(200);

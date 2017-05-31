@@ -933,6 +933,35 @@ h6, .h6 {
   font-family: Roboto, sans-serif;
 }
 
+.onoffswitch-hotel-info {
+  margin-right: 35px;
+  position: relative;
+  width: 54px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-hotel-info:before, .onoffswitch-hotel-info:after {
+  position: absolute;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  text-transform: initial;
+  font-weight: 400;
+}
+
+.onoffswitch-hotel-info:before {
+  content: 'Hide map';
+  left: -67px;
+  top: 2px;
+}
+
+.onoffswitch-hotel-info:after {
+  content: 'Map';
+  right: -33px;
+  top: 2px;
+}
+
 .onoffswitch-checkbox {
   display: none;
 }
@@ -7264,7 +7293,7 @@ input[type="text"].datepicker-input {
 }
 
 .orange-text {
-  color: #f68d2a;
+  color: #f99e3e;
 }
 
 .red-text {
@@ -7854,7 +7883,7 @@ footer .navbar-header {
 }
 
 .stars li i.fa-star {
-  color: #f68d2a;
+  color: #f99e3e;
   font-size: 14px;
   margin-left: 1px;
   margin-right: 3px;
@@ -8077,7 +8106,7 @@ footer .form-control::-moz-placeholder {
 
 footer .navbar-text {
   color: #ffffff;
-  margin-top: 38px;
+  margin-top: 42px;
   font-weight: 400;
   font-size: 14px;
   font-family: 'Montserat', sans-serif;
@@ -8984,7 +9013,8 @@ aside.show-on-map .panel-group .panel.panel-default {
   color: #9d9d9d;
 }
 
-#map .gm-style-iw .thumbnail {
+#map .gm-style-iw .thumbnail,
+#map1 .gm-style-iw .thumbnail {
   margin: 0;
 }
 
@@ -9296,6 +9326,73 @@ aside.show-on-map .panel-group .panel.panel-default {
   background: #00b9f1;
   background: #0cc6ff;
   color: #fff;
+}
+
+.popup {
+  padding: 30px 25px;
+  box-shadow: 0 1px 3px rgba(108, 118, 123, 0.15);
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.popup_title {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.popup_text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.popup_close {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 16px;
+  height: 22px;
+  opacity: .5;
+}
+
+.popup_close:hover {
+  opacity: 1;
+}
+
+.popup.green {
+  background: #eff5e6;
+}
+
+.popup.green .popup_title {
+  color: #5d952e;
+}
+
+.popup.green .popup_text {
+  color: #4a7624;
+}
+
+.popup.green .popup_close {
+  color: #5d952e;
+}
+
+.popup.blue {
+  background: #eef6ff;
+}
+
+.popup.blue .popup_title {
+  color: #00c2ff;
+}
+
+.popup.blue .popup_text {
+  color: #00a3d6;
+}
+
+.popup.blue .popup_close {
+  color: #00c2ff;
 }
 
 /* end of helper classes */
@@ -10500,20 +10597,35 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .information-block .slider-block .owl-thumbs .mCSB_outside + .mCSB_scrollTools {
-  right: -14px;
+  right: -15px;
 }
 
 .information-block .slider-block .owl-thumbs .owl-thumb-item {
   background: 0 0;
-  border: 3px solid transparent;
   padding: 0;
   width: 30%;
   float: left;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
+  position: relative;
+  border: 0;
+}
+
+.information-block .slider-block .owl-thumbs .owl-thumb-item:before {
+  content: '';
+  position: absolute;
+  border: 3px solid;
+  border-color: transparent;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   transition: 0.2s ease;
 }
 
-.information-block .slider-block .owl-thumbs .owl-thumb-item:hover, .information-block .slider-block .owl-thumbs .owl-thumb-item.active {
+.information-block .slider-block .owl-thumbs .owl-thumb-item:hover:before, .information-block .slider-block .owl-thumbs .owl-thumb-item.active:before {
   border-color: #00c2ff;
 }
 
@@ -10560,6 +10672,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   font-weight: 600;
   margin-bottom: 5px;
   margin-top: 10px;
+  text-decoration: underline !important;
 }
 
 .information-block .sidebar-block .sidebar-wrapper .sidebar-info_name-rating_rating .title {
@@ -10617,6 +10730,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .booking-table {
   width: 100%;
+  margin-bottom: 15px;
 }
 
 .booking-table .search-filter-block {
@@ -10811,6 +10925,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .booking-table table {
   width: 100%;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
 }
 
 .booking-table table .info-label {
@@ -11325,6 +11440,200 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .row-info.closed .right-part_info .variant .conditions {
   background: none;
+}
+
+.hotel-facilities {
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(108, 118, 123, 0.15);
+}
+
+.hotel-facilities_title {
+  background: #1a4e63;
+  padding: 20px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.hotel-facilities_block {
+  background: #fff;
+  padding: 20px 15px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.hotel-facilities_block-item {
+  margin-bottom: 30px;
+}
+
+.hotel-facilities_block-item h3 {
+  font-size: 18px;
+  color: #335061;
+}
+
+.hotel-facilities_block-item ul li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.hotel-facilities_block-item ul li .fa {
+  color: #74ce2a;
+  padding-right: 10px;
+}
+
+.hotel-information {
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(108, 118, 123, 0.15);
+}
+
+.hotel-information_title {
+  background: #1a4e63;
+  padding: 20px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.hotel-information_block {
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.hotel-information_block-tabs {
+  padding: 20px 0 15px 15px;
+  width: 60%;
+  margin-right: 15px;
+  float: left;
+}
+
+.hotel-information_block-tabs .nav-tabs {
+  border: 0;
+  width: 15%;
+  float: left;
+}
+
+.hotel-information_block-tabs .nav-tabs li {
+  float: left;
+  clear: left;
+  width: 100px;
+  height: 100px;
+}
+
+.hotel-information_block-tabs .nav-tabs li a {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #00c2ff;
+}
+
+.hotel-information_block-tabs .tab-content {
+  width: 85%;
+  float: left;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.hotel-information_block-tabs .tab-content h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.hotel-information_block-tabs .tab-content .main {
+  margin-bottom: 25px;
+}
+
+.hotel-information_block-tabs .tab-content p {
+  line-height: 30px;
+  margin-bottom: 0;
+}
+
+.hotel-information_block-tabs .tab-content b {
+  margin-bottom: 5px;
+}
+
+.hotel-information_block-tabs .tab-content .attractions_gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 15px;
+  margin-top: 35px;
+}
+
+.hotel-information_block-tabs .tab-content .attractions_gallery-item {
+  width: 30%;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.hotel-information_block-tabs .tab-content .attractions_gallery-item .image img {
+  width: 100%;
+}
+
+.hotel-information_block-tabs .tab-content .attractions_gallery-item .title {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.hotel-information_block-tabs .tab-content .attractions_gallery-item .distance {
+  color: #00c2ff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hotel-information_block-tabs .tab-content .good-to-know_payments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.hotel-information_block-tabs .tab-content .divider {
+  margin: 10px 0;
+}
+
+.hotel-information_block-tabs .tab-content .review-block_rating .stars-hotel {
+  width: 15%;
+  float: left;
+  position: relative;
+  top: 1px;
+}
+
+.hotel-information_block-tabs .tab-content .review-block_rating .rating {
+  font-size: 14px;
+  color: #f99e3e;
+  font-weight: 500;
+}
+
+.hotel-information_block-tabs .tab-content .review-block_rating .see-all {
+  color: #00c2ff;
+  padding-left: 15px;
+  font-weight: 500;
+  text-decoration: underline !important;
+}
+
+.hotel-information_block-map {
+  width: calc(40% - 15px);
+  float: left;
+}
+
+.hotel-information_block-map #map1 {
+  width: 100%;
+  height: 100%;
 }
 
 /* Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
