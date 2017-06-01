@@ -45,6 +45,12 @@ $(document).ready(function() {
         if ( !$('.main-wrapper .content-wrapper .check .grid:first-child').hasClass('list-view') ) {
           $('.main-wrapper .content-wrapper .check .grid:last-child').removeClass('list-view');
         }
+        if ( $('#reviews .review-block_comments').length ) {
+          $('#reviews .review-block_comments').append(data);
+          $('#reviews .review-block_comments').mCustomScrollbar({
+            scrollbarPosition: "outside"
+          });
+        }
         $('.stars-hotel').stars();
         $('.rate').rate();
         $('.ui.sticky').sticky({

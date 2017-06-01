@@ -10,17 +10,23 @@
 		.hotel-information_block-tabs.same-height
 			ul.nav.nav-tabs
 				li
-					a(href='#location', data-toggle='tab') 1
+					a(href='#location', data-toggle='tab')
+						i.icon-placeholders
 				li
-					a(href='#attractions', data-toggle='tab') 2
+					a(href='#attractions', data-toggle='tab')
+						i.icon-skyline
 				li
-					a(href='#good-to-know', data-toggle='tab') 3
+					a(href='#good-to-know', data-toggle='tab')
+						i.icon-credit-card-1
 				li.active
-					a(href='#reviews', data-toggle='tab') 4
+					a(href='#reviews', data-toggle='tab')
+						i.icon-like
 				li
-					a(href='#analytics', data-toggle='tab') 5
+					a(href='#analytics', data-toggle='tab')
+						i.icon-line-chart
 				li
-					a(href='#contacts', data-toggle='tab') 6
+					a(href='#contacts', data-toggle='tab')
+						i.icon-speech-bubble
 			.tab-content
 				#location.tab-pane
 					h3 Location
@@ -140,7 +146,7 @@
 							p Hover over the cards for more info.
 				#reviews.tab-pane.active
 					h3 Newest Reviews for Holiday Inn Express Hotel Suites Las Vegas
-					.reviews-block
+					.review-block
 						.review-block_rating
 							ul.stars.stars-hotel(data-stars='4.3')
 								li.hidden
@@ -157,6 +163,106 @@
 									i.fa.orange-text.fa-star-half(aria-hidden='true')
 							span.rating 4,3 / 5
 							a.see-all(href='javascript:void(0)') See all guest reviews
+							.review-block_rating-like
+								.review-block_rating-like-up
+									a(href='javascript:void(0)')
+										i.icon-like
+									span.like +1
+								.review-block_rating-like-down
+									a(href='javascript:void(0)')
+										i.icon-like
+									span.like -1
+						.review-block_comments
+							.review-block_comments-block
+								.name
+									span Adam
+								.country
+									span.flag
+										img(src='/images/icons/usa.png', alt='usa')
+									span USA
+								.date
+									span May 5th, 2017
+								.comment.clearfix
+									ul.stars.stars-hotel
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+									p.comment-rating Perfect
+									p.comment-text Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell.
+							.review-block_comments-block
+								.name
+									span Geralt
+								.country
+									span.flag
+										img(src='/images/icons/usa.png', alt='usa')
+									span USA
+								.date
+									span June 25th, 2017
+								.comment.clearfix
+									ul.stars.stars-hotel
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+									p.comment-rating Good
+									p.comment-text Am terminated it excellence invitation projection as.
+							.review-block_comments-block
+								.name
+									span Anna Maria
+								.country
+									span.flag
+										img(src='/images/icons/usa.png', alt='usa')
+									span USA
+								.date
+									span June 27th, 2017
+								.comment.clearfix
+									ul.stars.stars-hotel
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+										li
+											i.fa.orange-text.fa-star(aria-hidden='true')
+									p.comment-rating Perfect
+									p.comment-text Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell.
+						.loading-more
+							.loading
+								i.fa.fa-spinner.fa-spin(aria-hidden='true')
+								a(href='/partial/content-comments.html').text-uppercase Load Next 6 Comments
+						.pagination-wrapper
+							.pagination
+								ul
+									li
+										a(href='javascript:void(0)') Previous
+									li.numbers
+										a(href='javascript:void(0)') 1
+									li.numbers
+										a(href='javascript:void(0)') 2
+									li.numbers.active
+										a(href='javascript:void(0)') 3
+									li.numbers
+										a(href='javascript:void(0)') 4
+									li.numbers
+										a(href='javascript:void(0)') 5
+									li
+										a(href='javascript:void(0)') Next
 				#analytics.tab-pane
 					h3 Analytics
 				#contacts.tab-pane

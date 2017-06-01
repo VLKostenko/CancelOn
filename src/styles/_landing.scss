@@ -626,12 +626,12 @@
       &-open-btn {
         .hotel-button {
           position: absolute;
-          left: -15px;
+          left: -20px;
           top: 20px;
           cursor: pointer;
           z-index: 10;
-          width: 15px;
-          height: 15px;
+          width: 20px;
+          height: 20px;
           color: #fff;
           text-align: center;
           overflow: hidden;
@@ -1064,12 +1064,46 @@
           clear: left;
           width: 100px;
           height: 100px;
+          &.active {
+            a {
+              border: 0;
+              background: 0 0;
+              i {
+                color: $main-blue;
+              }
+            }
+          }
           a {
             display: block;
             margin: auto;
             width: 100%;
             height: 100%;
-            border: 1px solid $main-blue;
+            border: 0;
+            &:hover, &:focus {
+              background: 0 0;
+              border: 0;
+              i {
+                color: #00c2ff;
+              }
+            }
+            i {
+              display: block;
+              font-size: 50px;
+              text-align: center;
+              width: 70px;
+              height: 50px;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              color: #9099a6;
+              @include crossBrowser(transition, color .2s ease);
+              span {
+                color: #9099a6;
+              }
+            }
           }
         }
       }
@@ -1131,6 +1165,7 @@
           margin: 10px 0;
         }
         .review-block {
+          padding-right: 5px;
           &_rating {
             .stars-hotel {
               width: 15%;
@@ -1148,6 +1183,127 @@
               padding-left: 15px;
               font-weight: 500;
               text-decoration: underline!important;
+              &:hover {
+                text-decoration: initial!important;
+              }
+            }
+            &-like {
+              float: right;
+              &-up,
+              &-down {
+                position: relative;
+                a {
+                  font-size: 20px;
+                  display: block;
+                  width: 40px;
+                }
+                .like {
+                  font-size: 14px;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  margin: auto;
+                  height: 18px;
+                  display: none;
+                }
+              }
+              &-up {
+                float: left;
+                margin-right: 20px;
+                a {
+                  color: #5d952e;
+                }
+                .like {
+                  color: #5d952e;
+                }
+              }
+              &-down {
+                float: left;
+                a {
+                  color: #ff4f55;
+                  @include crossBrowser(transform, scale(1, -1));
+                }
+                .like {
+                  color: #ff4f55;
+                  right: 4px;
+                }
+              }
+            }
+          }
+          &_comments {
+            max-height: 550px;
+            overflow: hidden;
+            overflow-y: auto;
+            width: 100%;
+            .mCustomScrollBox {
+              width: 100%;
+            }
+            .mCSB_outside + .mCSB_scrollTools {
+              right: -18px;
+            }
+            &-block {
+              margin-top: 20px;
+              .name {
+                font-weight: 600;
+                font-size: 14px;
+              }
+              .country {
+                font-size: 10px;
+                .flag {
+                  width: 10px;
+                  display: block;
+                  float: left;
+                  margin-right: 3px;
+                  position: relative;
+                  top: -1px;
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
+              .date {
+                width: 100%;
+                text-align: right;
+                font-size: 12px;
+                color: #6d6d6d;
+                font-weight: 600;
+              }
+              .comment {
+                background: #f3f4f5;
+                border: 1px solid #e8e8e8;
+                padding: 10px 20px 15px;
+                position: relative;
+                &:before {
+                  content: '';
+                  position: absolute;
+                  left: 9px;
+                  top: -12px;
+                  width: 0;
+                  height: 0;
+                  border-left: 12px solid transparent;
+                  border-right: 12px solid transparent;
+                  border-bottom: 12px solid #f3f4f5;
+                }
+                .stars {
+                  width: 85px;
+                }
+                &-rating {
+                  float: left;
+                  margin-left: 10px;
+                  line-height: 22px;
+                  font-size: 14px;
+                  font-weight: 500;
+                }
+                &-text {
+                  float: left;
+                  clear: left;
+                  line-height: 24px;
+                  font-size: 16px;
+                  font-weight: 400;
+                  margin-top: 5px;
+                }
+              }
             }
           }
         }

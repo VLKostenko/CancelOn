@@ -541,6 +541,18 @@
     $(this).closest('.popup').fadeOut();
   });
 
+  $('.review-block_rating-like .review-block_rating-like-up,' +
+    '.review-block_rating-like .review-block_rating-like-down').click(function() {
+    var $this = $(this).find('.like');
+    var $thisSibling = $(this).siblings('.review-block_rating-like-down, .review-block_rating-like-up');
+    $this.fadeIn(200);
+    $thisSibling.css('pointer-events', 'none');
+    setTimeout(function() {
+      $this.fadeOut(200);
+      $thisSibling.css('pointer-events', 'initial');
+    }, 2000)
+  });
+
   $('.map-item-block .open-map-item,' +
     '.features .open-map-item').click(function() {
     $('.black-bg-map').fadeIn(200);
