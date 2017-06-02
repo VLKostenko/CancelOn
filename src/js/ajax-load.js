@@ -46,10 +46,14 @@ $(document).ready(function() {
           $('.main-wrapper .content-wrapper .check .grid:last-child').removeClass('list-view');
         }
         if ( $('#reviews .review-block_comments').length ) {
-          $('#reviews .review-block_comments').append(data);
-          $('#reviews .review-block_comments').mCustomScrollbar({
-            scrollbarPosition: "outside"
-          });
+          if ( !$('#reviews .review-block_comments').hasClass('mCustomScrollbar') ) {
+            $('#reviews .review-block_comments').append(data);
+            $('#reviews .review-block_comments').mCustomScrollbar({
+              scrollbarPosition: "outside"
+            });
+          } else {
+            $('#reviews .review-block_comments.mCustomScrollbar .mCustomScrollBox .mCSB_container').append(data);
+          }
         }
         $('.stars-hotel').stars();
         $('.rate').rate();

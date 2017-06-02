@@ -960,17 +960,17 @@
             </div>
           </div>
           <div class="hotel-information_block clearfix">
-            <div class="hotel-information_block-tabs same-height">
+            <div class="hotel-information_block-tabs same-height-map">
               <ul class="nav nav-tabs">
-                <li><a href="#location" data-toggle="tab"><i class="icon-placeholders"></i></a></li>
+                <li class="active"><a href="#location" data-toggle="tab"><i class="icon-placeholders"></i></a></li>
                 <li><a href="#attractions" data-toggle="tab"><i class="icon-skyline"></i></a></li>
                 <li><a href="#good-to-know" data-toggle="tab"><i class="icon-credit-card-1"></i></a></li>
-                <li class="active"><a href="#reviews" data-toggle="tab"><i class="icon-like"></i></a></li>
+                <li><a class="likes-counter" href="#reviews" data-toggle="tab"><i class="icon-like"></i><span class="negative">256</span><span class="positive">726</span></a></li>
                 <li><a href="#analytics" data-toggle="tab"><i class="icon-line-chart"></i></a></li>
                 <li><a href="#contacts" data-toggle="tab"><i class="icon-speech-bubble"></i></a></li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane" id="location">
+                <div class="tab-pane active" id="location">
                   <h3>Location</h3>
                   <p class="main">Our Las Vegas Hotel Offers Close Access To Mccarran International Airport Ideally Located Near Mccarran International Airport Las), Our Holiday Inn Express Hotel Suites In Las Vegas Provides Access To Local Businesses, As Well As To The Famous Las Vegas Strip. Our Hotel Is Minutes From The Las Vegas Strip And Fremont Street, Where You Will Find The World's Best Dining, Shopping And Entertainment. Nature Lovers Can Take A Short Drive To The Beautiful Red Rock Recreation Area, And Avid Shoppers Can Enjoy The Las Vegas Outlet Mall Or The Fashion Show Mall.</p>
                   <p><b>General:</b></p>
@@ -1084,7 +1084,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane active" id="reviews">
+                <div class="tab-pane" id="reviews">
                   <h3>Newest Reviews for Holiday Inn Express Hotel Suites Las Vegas</h3>
                   <div class="review-block">
                     <div class="review-block_rating">
@@ -1170,14 +1170,44 @@
                   </div>
                 </div>
                 <div class="tab-pane" id="analytics">
-                  <h3>Analytics</h3>
+                  <h3>Analyst views and reservations</h3>
                 </div>
                 <div class="tab-pane" id="contacts">
-                  <h3>Contacts</h3>
+                  <h3>Contact Us</h3>
+                  <p class="main">Dissuade ecstatic and properly saw entirely sir why laughter endeavor. In on my jointure horrible margaret suitable he followed speedily. Indeed vanity excuse or mr lovers of on. By offer scale an stuff. Blush be sorry no sight. Sang lose of hour then he left find.</p>
+                  <div class="contacts">
+                    <div class="contacts_form">
+                      <form data-toggle="validator" role="form">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <input class="form-control contacts_form-name" id="inputName" type="text" placeholder="Your Name" data-error="Something wrong" required>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <input class="form-control contacts_form-email" id="inputEmail" type="email" placeholder="Your Email" data-error="Something wrong" required>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <textarea class="form-control contacts_form-message" id="textareaMessage" placeholder="Message" rows="8" data-error="Something wrong" required></textarea>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <button class="book-btn" type="submit">Send Message</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="hotel-information_block-map same-height">
+            <div class="hotel-information_block-map same-height-map">
               <div id="map1"></div>
             </div>
           </div>
@@ -1541,6 +1571,7 @@
   <script type="text/javascript" src="js/datarangepicker/jquery.datarangepicker.min.js"></script>
   <script type="text/javascript" src="assets/plugins/bootstrap-dropdown-hover/dist/jquery.bootstrap-dropdown-hover.min.js"></script>
   <script type="text/javascript" src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.js"></script>
+  <script type="text/javascript" src="assets/plugins/bootstrap-validator/dist/validator.min.js"></script>
   <script type="text/javascript" src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
   <script type="text/javascript" src="assets/plugins/owl.carousel/dist/owl.carousel.min.js"></script>
   <script type="text/javascript" src="assets/plugins/owl.carousel2.thumbs/dist/owl.carousel2.thumbs.js"></script>

@@ -166,6 +166,28 @@
       $('.black-bg-search').fadeOut(200);
     }
   }
+  
+  function likesCounter(bool) {
+    var negative = $('.likes-counter .negative');
+    var positive = $('.likes-counter .positive');
+    if ( bool ) {
+      $(positive).html(function(i, val) {
+        return +val + 1
+      });
+      $(positive).addClass('pulse');
+      setTimeout(function() {
+        $(positive).removeClass('pulse');
+      }, 3000);
+    } else {
+      $(negative).html(function(i, val) {
+        return +val + 1
+      });
+      $(negative).addClass('pulse');
+      setTimeout(function() {
+        $(negative).removeClass('pulse');
+      }, 3000);
+    }
+  }
 
   // photoswipe
   var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -543,12 +565,20 @@
 
   $('.review-block_rating-like .review-block_rating-like-up,' +
     '.review-block_rating-like .review-block_rating-like-down').click(function() {
-    var $this = $(this).find('.like');
+    if ( $(this).hasClass('review-block_rating-like-up') ) {
+      likesCounter(true);
+    } else {
+      likesCounter(false);
+    }
+    var $this = $(this);
+    var $thisLike = $(this).find('.like');
     var $thisSibling = $(this).siblings('.review-block_rating-like-down, .review-block_rating-like-up');
-    $this.fadeIn(200);
+    $this.css('pointer-events', 'none');
+    $thisLike.fadeIn(200);
     $thisSibling.css('pointer-events', 'none');
     setTimeout(function() {
-      $this.fadeOut(200);
+      $this.css('pointer-events', 'initial');
+      $thisLike.fadeOut(200);
       $thisSibling.css('pointer-events', 'initial');
     }, 2000)
   });
@@ -690,6 +720,7 @@
   });
 
   $('.same-height').matchHeight();
+  $('.same-height-map').matchHeight();
 
   /*
    * Events
@@ -784,13 +815,17 @@
         '.information-block .sidebar-block').removeClass('hidden');
     }
     reinitMap();
-    if ( $(window).width() > 1199 ) {
-      if ( $('.input-group.search-group').length ) {
-        scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
-      }
+  });
+
+  $('.onoffswitch-hotel-info').change(function() {
+    if ( $('.onoffswitch-hotel-info .myonoffswitch').prop('checked') ) {
+      $('.hotel-information_block-tabs').removeClass('full-width');
+      $('.hotel-information_block-map').removeClass('no-width').fadeIn(200);
     } else {
-      destroyScrolledElement('.input-group.search-group', '#search-space');
+      $('.hotel-information_block-tabs').addClass('full-width');
+      $('.hotel-information_block-map').addClass('no-width').fadeOut(200);
     }
+    reinitMap();
   });
 
   $('.collapse').on('shown.bs.collapse', function() {
@@ -930,7 +965,12 @@
       $('.map-item-block--wrapper').mCustomScrollbar({
         autoHideScrollbar: true
       });
+
       $('.owl-carousel.full + .owl-thumbs').mCustomScrollbar({
+        scrollbarPosition: "outside"
+      });
+
+      $('.attractions_gallery').mCustomScrollbar({
         scrollbarPosition: "outside"
       });
 

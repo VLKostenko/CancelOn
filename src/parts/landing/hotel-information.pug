@@ -7,9 +7,9 @@
 				span.onoffswitch-inner
 				span.onoffswitch-switch
 	.hotel-information_block.clearfix
-		.hotel-information_block-tabs.same-height
+		.hotel-information_block-tabs.same-height-map
 			ul.nav.nav-tabs
-				li
+				li.active
 					a(href='#location', data-toggle='tab')
 						i.icon-placeholders
 				li
@@ -18,9 +18,11 @@
 				li
 					a(href='#good-to-know', data-toggle='tab')
 						i.icon-credit-card-1
-				li.active
-					a(href='#reviews', data-toggle='tab')
+				li
+					a.likes-counter(href='#reviews', data-toggle='tab')
 						i.icon-like
+						span.negative 256
+						span.positive 726
 				li
 					a(href='#analytics', data-toggle='tab')
 						i.icon-line-chart
@@ -28,7 +30,7 @@
 					a(href='#contacts', data-toggle='tab')
 						i.icon-speech-bubble
 			.tab-content
-				#location.tab-pane
+				#location.tab-pane.active
 					h3 Location
 					p.main Our Las Vegas Hotel Offers Close Access To Mccarran International Airport Ideally Located Near Mccarran International Airport Las), Our Holiday Inn Express Hotel Suites In Las Vegas Provides Access To Local Businesses, As Well As To The Famous Las Vegas Strip. Our Hotel Is Minutes From The Las Vegas Strip And Fremont Street, Where You Will Find The World's Best Dining, Shopping And Entertainment. Nature Lovers Can Take A Short Drive To The Beautiful Red Rock Recreation Area, And Avid Shoppers Can Enjoy The Las Vegas Outlet Mall Or The Fashion Show Mall.
 					p
@@ -144,7 +146,7 @@
 								img(src='images/payment/android-pay.png', alt='payment')
 								img(src='images/payment/wallet.png', alt='payment')
 							p Hover over the cards for more info.
-				#reviews.tab-pane.active
+				#reviews.tab-pane
 					h3 Newest Reviews for Holiday Inn Express Hotel Suites Las Vegas
 					.review-block
 						.review-block_rating
@@ -264,8 +266,28 @@
 									li
 										a(href='javascript:void(0)') Next
 				#analytics.tab-pane
-					h3 Analytics
+					h3 Analyst views and reservations
 				#contacts.tab-pane
-					h3 Contacts
-		.hotel-information_block-map.same-height
+					h3 Contact Us
+					p.main Dissuade ecstatic and properly saw entirely sir why laughter endeavor. In on my jointure horrible margaret suitable he followed speedily. Indeed vanity excuse or mr lovers of on. By offer scale an stuff. Blush be sorry no sight. Sang lose of hour then he left find.
+					.contacts
+						.contacts_form
+							form(data-toggle='validator', role='form')
+								.row
+									.col-sm-6
+										.form-group
+											input#inputName.form-control.contacts_form-name(type='text', placeholder='Your Name', data-error='Something wrong', required='')
+											.help-block.with-errors
+									.col-sm-6
+										.form-group
+											input#inputEmail.form-control.contacts_form-email(type='email', placeholder='Your Email', data-error='Something wrong', required='')
+											.help-block.with-errors
+									.col-sm-12
+										.form-group
+											textarea#textareaMessage.form-control.contacts_form-message(placeholder='Message', rows='8', data-error='Something wrong', required='')
+											.help-block.with-errors
+								.form-group
+									button.book-btn(type='submit') Send Message
+
+		.hotel-information_block-map.same-height-map
 			#map1
