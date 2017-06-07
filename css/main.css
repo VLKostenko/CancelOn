@@ -13974,11 +13974,10 @@ aside.show-on-map .panel-group .panel.panel-default {
     position: fixed;
   }
   .main-search-wrapper {
-    padding: 0;
+    border-bottom: 1px solid #1f95da;
   }
-  .main-search-wrapper > .container {
-    max-width: 100%;
-    padding: 0;
+  .main-search-wrapper .search-group {
+    border-bottom: 0;
   }
 }
 
