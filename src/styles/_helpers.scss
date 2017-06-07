@@ -70,6 +70,122 @@ footer .navbar-header {
   right: 10px;
 }
 
+.check {
+  width: 100%;
+}
+
+.block-search {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(108,118,123,.15);
+  width: 100%;
+  padding: 40px 50px;
+  font-family: "Montserrat", sans-serif;
+  &_smile {
+    font-size: 72px;
+    font-weight: 400;
+    color: $main-blue;
+    position: relative;
+    padding-left: 15px;
+    float: left;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50px;
+      background: $main-blue;
+    }
+    &:before {
+      top: 35px;
+    }
+    &:after {
+      bottom: 28px;
+    }
+  }
+  &_text {
+    float: left;
+    padding: 24px 40px;
+    line-height: 30px;
+    &-title {
+      color: $main-blue;
+      font-size: 19px;
+      font-weight: 900;
+    }
+    &-request {
+      font-size: 16px;
+      .request {
+        color: $main-blue;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.probably-block {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  &_title {
+    font-family: "Montserrat", sans-serif;
+    h4 {
+      margin-bottom: 15px;
+    }
+  }
+  &_content {
+    margin-top: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(108,118,123,.15);
+    &:hover {
+      background: #f9f9f9;
+    }
+    &-wrapper {
+      & > div {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 28px;
+      }
+    }
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: $main-blue;
+    }
+    .rating {
+      font-size: 14px;
+      font-weight: 600;
+      .text {
+        float: left;
+        width: 40%;
+      }
+      .stars {
+        width: 60%;
+      }
+    }
+    .city {
+      color: #0a85d5;
+      font-size: 14px;
+      font-weight: 500;
+      img {
+        margin-right: 5px;
+        margin-top: 3px;
+        float: left;
+        width: 18px;
+      }
+      span {
+        display: block;
+        float: left;
+        width: calc(100% - 23px);
+      }
+    }
+    .rating-mark {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}
+
 .grid-item {
   font-family: 'Roboto', sans-serif !important;
   @include calc(width, '(100% - 15px)/2');
@@ -1524,7 +1640,7 @@ aside {
   display: block;
   float: left;
   margin-left: 15px;
-  margin-top: 5px;
+  margin-top: 15px;
   @include calc(width, '65% - 15px');
   @include crossBrowser(transition, width .2s);
   //@media screen and (min-width: 1441px) {

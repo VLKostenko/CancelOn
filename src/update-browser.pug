@@ -1,0 +1,104 @@
+extends parts/_layout
+block vars
+   - page = {name: 'update-browser', classes: 'unsupport', title: 'Update Your Browser'}
+block main
+   .update-block
+      .update-block_top-bar.clearfix
+         a.navbar-brand(href='javascript:void(0)')
+            img.img-responsive(alt='logo', src='images/logo.png')
+         .navbar-menu
+            ul.nav.navbar-nav.navbar-right
+               li.dropdown.show
+                  a#dropdownMenuLink2.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                     i.fa.fa-language(aria-hidden='true')
+                     | Language
+                     span.bs-caret
+                        span.caret
+                  .dropdown-menu.languages-menu(aria-labelledby='dropdownMenuLink2')
+                     .col-md-12.languages
+                        a(href='javascript:void(0)')
+                           img(width='25', src='images/icons/flag.svg', alt='')
+                           | English
+                        a(href='javascript:void(0)')
+                           img(width='25', src='images/icons/flag1.svg', alt='')
+                           | Deutch
+                        a(href='javascript:void(0)')
+                           img(width='25', src='images/icons/flag2.svg', alt='')
+                           | French
+                        a(href='javascript:void(0)')
+                           img(width='25', src='images/icons/flag3.svg', alt='')
+                           | Spanish
+                        a(href='javascript:void(0)')
+                           img(width='25', src='images/icons/flag4.svg', alt='')
+                           | Italiano
+                        a(href='javascript:void(0)')
+                           img(width='25', src='images/icons/flag5.svg', alt='')
+                           | Russian
+               li
+                  a(href='javascript:void(0)') Get Help
+      .update-block_content
+         h1.title Your browser is out-of-date
+         .subtitle For a better experience, keep your browser up to date. Check here for latest versions.
+         .update-block_content-browsers.clearfix
+            .browser
+               i.icon-chrome
+                  span.path1
+                  span.path2
+                  span.path3
+                  span.path4
+                  span.path5
+                  span.path6
+                  span.path7
+                  span.path8
+               .version
+                  span ver. 58
+               .download
+                  a(href='https://www.google.ru/chrome/browser/desktop/index.html', target='_blank', rel='nofollow noopener') Download
+               .support-icon
+                  i.icon-vendor-microsoft
+                  i.icon-vendor-android
+                  i.icon-vendor-apple
+            .browser
+               i.icon-opera
+                  span.path1
+                  span.path2
+               .version
+                  span ver. 45
+               .download
+                  a(href='http://www.opera.com', target='_blank', rel='nofollow noopener') Download
+               .support-icon
+                  i.icon-vendor-microsoft
+                  i.icon-vendor-android
+                  i.icon-vendor-apple
+            .browser
+               i.icon-firefox
+                  span.path1
+                  span.path2
+               .version
+                  span ver. 53
+               .download
+                  a(href='https://www.mozilla.org/ru/firefox/new', target='_blank', rel='nofollow noopener') Download
+               .support-icon
+                  i.icon-vendor-microsoft
+                  i.icon-vendor-android
+                  i.icon-vendor-apple
+            .browser
+               i.icon-edge
+               .version
+                  span ver. 11
+               .download
+                  a(href='https://www.microsoft.com/en-us/download/details.aspx?id=48126', target='_blank', rel='nofollow noopener') Download
+               .support-icon
+                  i.icon-vendor-microsoft
+            .browser
+               i.icon-safari
+                  span.path1
+                  span.path2
+               .version
+                  span ver. 10
+               .download
+                  a(href='https://safari.ru.softonic.com/', target='_blank', rel='nofollow noopener') Download
+               .support-icon
+                  i.icon-vendor-apple
+         .update-block_text
+            span For more security, speed, comfort and fun

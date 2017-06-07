@@ -9,7 +9,7 @@
 	.hotel-information_block.clearfix
 		.hotel-information_block-tabs.same-height-map
 			ul.nav.nav-tabs
-				li.active
+				li
 					a(href='#location', data-toggle='tab')
 						i.icon-placeholders
 				li
@@ -23,14 +23,14 @@
 						i.icon-like
 						span.negative 256
 						span.positive 726
-				li
+				li.active
 					a(href='#analytics', data-toggle='tab')
 						i.icon-line-chart
 				li
 					a(href='#contacts', data-toggle='tab')
 						i.icon-speech-bubble
 			.tab-content
-				#location.tab-pane.active
+				#location.tab-pane
 					h3 Location
 					p.main Our Las Vegas Hotel Offers Close Access To Mccarran International Airport Ideally Located Near Mccarran International Airport Las), Our Holiday Inn Express Hotel Suites In Las Vegas Provides Access To Local Businesses, As Well As To The Famous Las Vegas Strip. Our Hotel Is Minutes From The Las Vegas Strip And Fremont Street, Where You Will Find The World's Best Dining, Shopping And Entertainment. Nature Lovers Can Take A Short Drive To The Beautiful Red Rock Recreation Area, And Avid Shoppers Can Enjoy The Las Vegas Outlet Mall Or The Fashion Show Mall.
 					p
@@ -265,8 +265,82 @@
 										a(href='javascript:void(0)') 5
 									li
 										a(href='javascript:void(0)') Next
-				#analytics.tab-pane
+				#analytics.tab-pane.active
 					h3 Analyst views and reservations
+					.main-statistic
+						canvas#canvas.Chart.js-chart(width='450', height='200')
+					.row.pie-statistic
+						.col-sm-4
+							.text-center
+								canvas#pie1(width='150', height='150')
+								span.pie_title.pie_title1 Positive Appreciated this hotel
+						.col-sm-4
+							.text-center
+								canvas#pie2(width='150', height='150')
+								span.pie_title.pie_title2 Re-booking Rooms In This Hotel
+						.col-sm-4
+							.text-center
+								canvas#pie3(width='150', height='150')
+								span.pie_title.pie_title3 People were satisfied
+					.statistic
+						.statistic_title
+							span 3,090 people have reviewed this hotel
+						.statistic_block
+							.row
+								.col-sm-4
+									.ul-title Traveller rating
+									ul.traveller-rating
+										li.first
+											span 2,539
+										li.second
+											span 430
+										li.third
+											span 71
+										li.fourth
+											span 30
+										li.fifth
+											span 19
+								.col-sm-3
+									.ul-title See reviews for
+									ul.reviews-category
+										li
+											i.icon.icon-family-room
+											.text Families
+											.count 548
+										li
+											i.icon.icon-valentines-heart
+											.text Couples
+											.count 1621
+										li
+											i.icon.icon-man-user
+											.text Solo
+											.count 11
+										li
+											i.icon.icon-old-fashion-briefcase
+											.text Business
+											.count 172
+								.col-sm-5
+									.ul-title Rating summary
+									ul.rating-summary
+										li
+											span Location
+											img(src='./images/icons/rate/5.0.svg', alt='rating')
+										li
+											span Sleep Quality
+											img(src='./images/icons/rate/5.0.svg', alt='rating')
+										li
+											span Rooms
+											img(src='./images/icons/rate/5.0.svg', alt='rating')
+										li
+											span Service
+											img(src='./images/icons/rate/5.0.svg', alt='rating')
+										li
+											span Value
+											img(src='./images/icons/rate/5.0.svg', alt='rating')
+										li
+											span Cleanlines
+											img(src='./images/icons/rate/5.0.svg', alt='rating')
+
 				#contacts.tab-pane
 					h3 Contact Us
 					p.main Dissuade ecstatic and properly saw entirely sir why laughter endeavor. In on my jointure horrible margaret suitable he followed speedily. Indeed vanity excuse or mr lovers of on. By offer scale an stuff. Blush be sorry no sight. Sang lose of hour then he left find.

@@ -148,7 +148,9 @@ function initialize() {
         '.features .open-map-item').click(function() {
         $('.black-bg-map').fadeIn(200);
         $('.map-item-block').show("slide", { direction: "right" }, 300);
-        $(window).disablescroll();
+        if ( $(window).width() > 992 ) {
+          $(window).disablescroll();
+        }
       });
 
       var closeBtn = $('.iw-close-btn').get();
@@ -315,7 +317,9 @@ function initialize1() {
         '.features .open-map-item').click(function() {
         $('.black-bg-map').fadeIn(200);
         $('.map-item-block').show("slide", { direction: "right" }, 300);
-        $(window).disablescroll();
+        if ( $(window).width() > 992 ) {
+          $(window).disablescroll();
+        }
       });
 
       var closeBtn1 = $('.iw-close-btn').get();

@@ -1,0 +1,124 @@
+.unsupport {
+  position: relative;
+  height: 100vh;
+  background: #f5f5f5;
+}
+.update-block {
+  width: 725px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  &_top-bar {
+    .navbar-brand {
+      pointer-events: none;
+    }
+    .navbar-menu {
+      padding-bottom: 25px;
+      padding-top: 25px;
+      width: 40%;
+      ul {
+        li {
+          & > a {
+            color: #000000;
+            padding: 0;
+            line-height: 54px;
+            &:hover {
+              color: $main-blue;
+              background: 0 0;
+            }
+            .bs-caret {
+              right: 25px !important;
+            }
+            i {
+              padding-right: 5px;
+            }
+            img {
+              margin-top: -3px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &_content {
+    background: #fff;
+    padding: 30px 20px 20px;
+    box-shadow: 0 1px 3px rgba(108,118,123,.15);
+    font-family: "Roboto", sans-serif;
+    .title {
+      font-size: 38px;
+      color: #353c51;
+      font-weight: 600;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 16px;
+      text-align: center;
+      color: #353c51;
+      font-weight: 400;
+    }
+    &-browsers {
+      margin-top: 20px;
+      .browser {
+        width: 20%;
+        float: left;
+        text-align: center;
+        transition: outline .2s ease;
+        outline: 1px solid transparent;
+        position: relative;
+        padding-bottom: 5px;
+        padding-top: 15px;
+        &:hover {
+          outline: 1px solid #ccf1fc;
+        }
+        i {
+          font-size: 90px;
+        }
+        .version {
+          font-size: 12px;
+          position: absolute;
+          top: 88px;
+          left: 0;
+          right: 0;
+          width: 70px;
+          margin: auto;
+          background: #636e80;
+          color: #fff;
+          line-height: 18px;
+          border-radius: 50px;
+        }
+        .download {
+          margin-top: 20px;
+          padding: 10px 0;
+          a {
+            background: #00b9f1;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            box-shadow: 0 3px 10px 0 rgba(0,0,0,0.3);
+            @include crossBrowser(transition, .2s ease);
+            &:hover {
+              background: lighten(#00b9f1, 5%);
+            }
+          }
+        }
+        .support-icon {
+          margin-top: 10px;
+          i {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  &_text {
+    color: #b7b7b7;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+}

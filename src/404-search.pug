@@ -1,0 +1,12 @@
+extends parts/_layout
+block vars
+   - page = {name: '404-search', classes: 'wide-container placeholder', title: 'Sorry, No Hotels Found'}
+block main
+   include parts/navigation
+   include parts/search
+   include parts/search-top-options
+   .container.pl-0.pr-0.pos-rel
+      include parts/aside
+      .main-wrapper.same-height#sticky-wrap
+         include parts/content-404-search
+         include parts/map-item

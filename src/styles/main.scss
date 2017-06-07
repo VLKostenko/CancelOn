@@ -139,7 +139,8 @@
 .map-item-block {
   display: none;
   position: absolute;
-  z-index: 14;
+  z-index: 11;
+  //z-index: 14;
   font-family: "Roboto", sans-serif;
   right: 15px;
   width: 45%;
@@ -258,7 +259,7 @@
     }
   }
   .map-item-info {
-    padding-bottom: 150px;
+    padding-bottom: 300px;
     .top-info {
       padding: 15px 0;
       border-bottom: 1px solid #e8e8e8;
@@ -481,7 +482,7 @@
 .search-result {
   display: none;
   position: absolute;
-  z-index: 11;
+  z-index: 13;
   top: 100%;
   left: 0;
   right: 0;
@@ -686,6 +687,7 @@
   }
 }
 @import "landing";
+@import "unsupport";
 @import "conditions";
 @import "response";
 @import "compatibility";

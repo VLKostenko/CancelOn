@@ -1325,7 +1325,9 @@
       });
       showGap();
       updateCalendarWidth();
-      $(window).disablescroll();
+      if ( $(window).width() > 992 ) {
+        $(window).disablescroll();
+      }
     }
 
     function checkAndSetDefaultValue() {

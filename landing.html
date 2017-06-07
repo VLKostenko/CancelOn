@@ -962,15 +962,15 @@
           <div class="hotel-information_block clearfix">
             <div class="hotel-information_block-tabs same-height-map">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#location" data-toggle="tab"><i class="icon-placeholders"></i></a></li>
+                <li><a href="#location" data-toggle="tab"><i class="icon-placeholders"></i></a></li>
                 <li><a href="#attractions" data-toggle="tab"><i class="icon-skyline"></i></a></li>
                 <li><a href="#good-to-know" data-toggle="tab"><i class="icon-credit-card-1"></i></a></li>
                 <li><a class="likes-counter" href="#reviews" data-toggle="tab"><i class="icon-like"></i><span class="negative">256</span><span class="positive">726</span></a></li>
-                <li><a href="#analytics" data-toggle="tab"><i class="icon-line-chart"></i></a></li>
+                <li class="active"><a href="#analytics" data-toggle="tab"><i class="icon-line-chart"></i></a></li>
                 <li><a href="#contacts" data-toggle="tab"><i class="icon-speech-bubble"></i></a></li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane active" id="location">
+                <div class="tab-pane" id="location">
                   <h3>Location</h3>
                   <p class="main">Our Las Vegas Hotel Offers Close Access To Mccarran International Airport Ideally Located Near Mccarran International Airport Las), Our Holiday Inn Express Hotel Suites In Las Vegas Provides Access To Local Businesses, As Well As To The Famous Las Vegas Strip. Our Hotel Is Minutes From The Las Vegas Strip And Fremont Street, Where You Will Find The World's Best Dining, Shopping And Entertainment. Nature Lovers Can Take A Short Drive To The Beautiful Red Rock Recreation Area, And Avid Shoppers Can Enjoy The Las Vegas Outlet Mall Or The Fashion Show Mall.</p>
                   <p><b>General:</b></p>
@@ -1169,8 +1169,77 @@
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane" id="analytics">
+                <div class="tab-pane active" id="analytics">
                   <h3>Analyst views and reservations</h3>
+                  <div class="main-statistic">
+                    <canvas class="Chart js-chart" id="canvas" width="450" height="200"></canvas>
+                  </div>
+                  <div class="row pie-statistic">
+                    <div class="col-sm-4">
+                      <div class="text-center">
+                        <canvas id="pie1" width="150" height="150"></canvas><span class="pie_title pie_title1">Positive Appreciated this hotel</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="text-center">
+                        <canvas id="pie2" width="150" height="150"></canvas><span class="pie_title pie_title2">Re-booking Rooms In This Hotel</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="text-center">
+                        <canvas id="pie3" width="150" height="150"></canvas><span class="pie_title pie_title3">People were satisfied</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="statistic">
+                    <div class="statistic_title"><span>3,090 people have reviewed this hotel</span></div>
+                    <div class="statistic_block">
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <div class="ul-title">Traveller rating</div>
+                          <ul class="traveller-rating">
+                            <li class="first"><span>2,539</span></li>
+                            <li class="second"><span>430</span></li>
+                            <li class="third"><span>71</span></li>
+                            <li class="fourth"><span>30</span></li>
+                            <li class="fifth"><span>19</span></li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="ul-title">See reviews for</div>
+                          <ul class="reviews-category">
+                            <li><i class="icon icon-family-room"></i>
+                              <div class="text">Families</div>
+                              <div class="count">548</div>
+                            </li>
+                            <li><i class="icon icon-valentines-heart"></i>
+                              <div class="text">Couples</div>
+                              <div class="count">1621</div>
+                            </li>
+                            <li><i class="icon icon-man-user"></i>
+                              <div class="text">Solo</div>
+                              <div class="count">11</div>
+                            </li>
+                            <li><i class="icon icon-old-fashion-briefcase"></i>
+                              <div class="text">Business</div>
+                              <div class="count">172</div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="ul-title">Rating summary</div>
+                          <ul class="rating-summary">
+                            <li><span>Location</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                            <li><span>Sleep Quality</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                            <li><span>Rooms</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                            <li><span>Service</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                            <li><span>Value</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                            <li><span>Cleanlines</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="tab-pane" id="contacts">
                   <h3>Contact Us</h3>
@@ -1584,11 +1653,13 @@
   <script type="text/javascript" src="assets/plugins/Stickyfill/dist/stickyfill.min.js"></script>
   <script type="text/javascript" src="assets/plugins/semantic-ui/semantic.min.js"></script>
   <script type="text/javascript" src="assets/plugins/disableScroll/jquery.disablescroll.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/chart.js/dist/Chart.min.js"></script>
   <!-- Google Maps Api-->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvpH7_ggEW5MYLRO8EN1BbJak4u2uIvaA"></script>
   <!-- Google Maps Settings-->
   <script type="text/javascript" src="js/google-map.js"></script>
   <script type="text/javascript" src="js/ajax-load.js"></script>
+  <script type="text/javascript" src="js/charts.js"></script>
   <!-- Main JS-->
   <script type="text/javascript" src="js/main.min.js"></script>
   <!-- /Scripts-->

@@ -549,6 +549,11 @@
     $(this).closest('.people-count').addClass('active');
   });
 
+  $('.date-group, .people-count').click(function() {
+    hideMapItemBlock();
+    $('.black-bg-map').fadeOut(200);
+  });
+
   $('.search-group .close-search').click(function() {
     $('.input-group.search-group').removeClass('scrolled');
     $('#search-space').height('initial');
@@ -556,7 +561,9 @@
   });
 
   $('#peopleCount').click(function() {
-    $(window).disablescroll();
+    if ( $(window).width() > 992 ) {
+      $(window).disablescroll();
+    }
   });
 
   $('.popup .popup_close').click(function() {
@@ -587,7 +594,9 @@
     '.features .open-map-item').click(function() {
     $('.black-bg-map').fadeIn(200);
     $('.map-item-block').show("slide", { direction: "right" }, 300);
-    $(window).disablescroll();
+    if ( $(window).width() > 992 ) {
+      $(window).disablescroll();
+    }
   });
 
   $('.search-result .result-item').click(function() {
@@ -624,6 +633,30 @@
       .toggleClass('opened closed')
       .closest('.row-info')
       .toggleClass('opened closed');
+    // $(this).closest('.row-info').find('.room-type_info-preview img');
+    // if ( $(this).closest('.row-info').hasClass('closed') ) {
+    //   $(this).closest('.row-info').find('.room-type_info-preview img').fadeOut(200);
+    //   $(this).closest('.row-info').find('.room-type_info-special').fadeOut(200);
+    //   $(this).closest('.row-info').find('.room-type_info-facilities').fadeOut(200);
+    //   $(this).closest('.row-info').find('.room-type_info-button .book-btn').fadeOut(200);
+    //   $(this).closest('.row-info').find('.room-type_info-button .more-btn').fadeIn(200);
+    //   console.log($(this).closest('.row-info').find('.room-type_info-preview img'));
+    // } else {
+    //   $(this).closest('.row-info').find('.room-type_info-preview img').fadeIn(200);
+    //   $(this).closest('.row-info').find('.room-type_info-special').fadeIn(200);
+    //   $(this).closest('.row-info').find('.room-type_info-facilities').fadeIn(200);
+    //   $(this).closest('.row-info').find('.room-type_info-button .book-btn').fadeIn(200);
+    //   $(this).closest('.row-info').find('.room-type_info-button .more-btn').fadeP(200);
+    // }
+    // if ( $(this).closest('.row-info').hasClass('closed') ) {
+    //   $(this).closest('.row-info.closed').animate({
+    //     height: 144
+    //   }, 1000);
+    // } else {
+    //   $(this).closest('.row-info.opened').animate({
+    //     height: 530
+    //   }, 1000);
+    // }
   });
 
   /*
@@ -794,7 +827,7 @@
     }
     reinitMap();
     if ( $(window).width() > 1199 ) {
-      if ( $('.input-group.search-group').length ) {
+      if ( $('.input-group.search-group').length && $('.noplaceholder .grid-item').length ) {
         scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
       }
     } else {
@@ -902,7 +935,7 @@
       }
     }
     if ( $(window).width() > 1199 ) {
-      if ( $('.input-group.search-group').length ) {
+      if ( $('.input-group.search-group').length && $('.noplaceholder .grid-item').length ) {
         scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
         $(window).scroll(function() {
           scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
@@ -979,7 +1012,7 @@
         silent: true
       });
       if ( $(window).width() > 1199 ) {
-        if ( $('.input-group.search-group').length ) {
+        if ( $('.input-group.search-group').length && $('.noplaceholder .grid-item').length ) {
           $(window).scroll(function() {
             scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
           });

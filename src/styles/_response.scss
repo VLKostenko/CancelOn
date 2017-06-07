@@ -1,4 +1,17 @@
+@media screen and (min-width: 1600px) {
+  .black-bg-search {
+    position: fixed;
+  }
+  .main-search-wrapper {
+    padding: 0;
+    & > .container {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+}
 @media screen and (min-width: 1400px) {
+
   .navbar-header {
     padding-left: 15px;
     padding-right: 15px;
@@ -667,6 +680,9 @@
       }
     }
   }
+  .map-item-block {
+    z-index: 14;
+  }
   .map-item-block-wrapper .title-rating .reviews {
     width: 100%;
   }
@@ -741,6 +757,35 @@
   .remove-padding-md {
     position: relative;
     z-index: 1;
+  }
+  .block-search {
+    padding: 0 20px;
+    &_text {
+      padding: 10px 0 45px;
+      width: 100%;
+    }
+  }
+  .probably-block {
+    &_content {
+      .title {
+        padding-right: 0;
+      }
+      .rating {
+        .stars {
+          display: none;
+        }
+        .text {
+          width: 100%;
+        }
+      }
+      .city {
+        display: flex;
+        align-items: center;
+        span {
+          line-height: 14px;
+        }
+      }
+    }
   }
   .grid-item {
     width: 100%;
@@ -1412,6 +1457,24 @@
     width: 100%;
     .content-wrapper {
       width: calc(100% - 30px);
+    }
+  }
+  .probably-block {
+    &_content {
+      .title {
+        padding-top: 10px;
+      }
+      .rating,
+      .city {
+        padding-bottom: 10px;
+      }
+      .rating-mark {
+        height: 86px;
+        margin-top: -43px;
+        line-height: 78px;
+        background: $main-blue;
+        color: #fff;
+      }
     }
   }
   .grid-item {

@@ -1,0 +1,29 @@
+.content-wrapper
+	.check
+		include failed-search
+	.loading-more
+		.loading
+			i.fa.fa-spinner.fa-spin(aria-hidden='true')
+			a(href='/partial/content-grid-item.html').text-uppercase Load Probably Items
+	.pagination-wrapper
+		.pagination
+			ul
+				li
+					a(href='javascript:void(0)') Previous
+				li.numbers
+					a(href='javascript:void(0)') 1
+				li.numbers
+					a(href='javascript:void(0)') 2
+				li.numbers.active
+					a(href='javascript:void(0)') 3
+				li.numbers
+					a(href='javascript:void(0)') 4
+				li.numbers
+					a(href='javascript:void(0)') 5
+				li
+					a(href='javascript:void(0)') Next
+.map-wrapper
+	.loading-search-cover
+		.loading-search
+	.placeholder-map
+	#map.sticky.placeholder-show
