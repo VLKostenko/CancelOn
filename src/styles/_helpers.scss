@@ -163,7 +163,6 @@ footer .navbar-header {
       }
     }
     .city {
-      color: #0a85d5;
       font-size: 14px;
       font-weight: 500;
       img {
@@ -172,10 +171,14 @@ footer .navbar-header {
         float: left;
         width: 18px;
       }
-      span {
+      a {
+        color: #0a85d5;
         display: block;
         float: left;
         width: calc(100% - 23px);
+        &:hover {
+          text-decoration: underline!important;
+        }
       }
     }
     .rating-mark {
@@ -830,6 +833,9 @@ footer {
   background-color: #282d36;
   width: 100%;
   font-family: "Montserrat", sans-serif;
+  .container {
+    max-width: 1170px!important;
+  }
   .input-group {
     button {
       height: 49px;

@@ -42,8 +42,10 @@
     margin: auto;
   }
   &.booking-datepicker {
-    left: 15px!important;
     margin-top: 10px;
+    @media screen and (max-width: 1440px) {
+      left: 15px !important;
+    }
     &:before {
       display: none;
     }

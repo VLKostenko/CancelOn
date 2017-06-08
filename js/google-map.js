@@ -153,6 +153,14 @@ function initialize() {
         }
       });
 
+      $('.hotel-information .open-map-item, .gallery-map-wrapper .open-map-item').click(function() {
+        $('.black-bg-map').fadeIn(200);
+        $('.map-item-block').show().animateCss('bounceIn');
+        if ( $(window).width() > 992 ) {
+          $(window).disablescroll();
+        }
+      });
+
       var closeBtn = $('.iw-close-btn').get();
       google.maps.event.addDomListener(closeBtn[0], 'click', function() {
         infowindow.close();
@@ -160,9 +168,18 @@ function initialize() {
 
     });
 
-    $('.black-bg-map, .map-item-block .close-btn, .input-search').click(function() {
+    $('.main-wrapper .black-bg-map, .main-wrapper .map-item-block .close-btn, .input-search').click(function() {
       $('.black-bg-map').fadeOut(200);
       $('.map-item-block').hide("slide", { direction: "right" }, 200);
+      $(window).disablescroll('undo');
+    });
+
+    $('.hotel-information .black-bg-map, .hotel-information .map-item-block .close-btn, .landing-popup .black-bg-map, .landing-popup .map-item-block .close-btn').click(function() {
+      $('.black-bg-map').fadeOut(200);
+      $('.map-item-block').fadeOut(750).animateCss('bounceOut');
+      setTimeout(function() {
+        $('.map-item-block').removeClass('animated bounceOut');
+      }, 750);
       $(window).disablescroll('undo');
     });
 
@@ -322,6 +339,14 @@ function initialize1() {
         }
       });
 
+      $('.hotel-information .open-map-item, .gallery-map-wrapper .open-map-item').click(function() {
+        $('.black-bg-map').fadeIn(200);
+        $('.map-item-block').show().animateCss('bounceIn');
+        if ( $(window).width() > 992 ) {
+          $(window).disablescroll();
+        }
+      });
+
       var closeBtn1 = $('.iw-close-btn').get();
       google.maps.event.addDomListener(closeBtn1[0], 'click', function() {
         infowindow1.close();
@@ -329,9 +354,18 @@ function initialize1() {
 
     });
 
-    $('.black-bg-map, .map-item-block .close-btn, .input-search').click(function() {
+    $('.main-wrapper .black-bg-map, .main-wrapper .map-item-block .close-btn, .input-search').click(function() {
       $('.black-bg-map').fadeOut(200);
       $('.map-item-block').hide("slide", { direction: "right" }, 200);
+      $(window).disablescroll('undo');
+    });
+
+    $('.hotel-information .black-bg-map, .hotel-information .map-item-block .close-btn, .landing-popup .black-bg-map, .landing-popup .map-item-block .close-btn').click(function() {
+      $('.black-bg-map').fadeOut(200);
+      $('.map-item-block').fadeOut(750).animateCss('bounceOut');
+      setTimeout(function() {
+        $('.map-item-block').removeClass('animated bounceOut');
+      }, 750);
       $(window).disablescroll('undo');
     });
 

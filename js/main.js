@@ -51,6 +51,18 @@
     );
   };
 
+  $.fn.extend({
+    animateCss: function (animationName, destroy) {
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      this.addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName);
+      });
+      // if ( destroy == 'destroy' ) {
+      //   this.removeClass('animated' + animationName);
+      // }
+    }
+  });
+
   /*
    * Main Functions
    */
@@ -950,6 +962,7 @@
   });
 
   $(document).ready(function() {
+
     $('.sticky').Stickyfill();
     initAOS();
     $('.gallery-map-wrapper #map').height($('.information-block').height());

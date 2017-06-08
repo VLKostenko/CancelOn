@@ -138,18 +138,19 @@
 
 .map-item-block {
   display: none;
-  position: absolute;
-  z-index: 11;
-  //z-index: 14;
+  position: fixed;
+  //z-index: 11;
+  z-index: 14;
   font-family: "Roboto", sans-serif;
-  right: 15px;
+  right: 0;
+  top: 0;
   width: 45%;
   height: 100%;
   background: #fff;
   box-shadow:  -25px 0 60px 0 rgba(0, 0, 0, 0.21);
   &-wrapper {
-    position: sticky;
-    top: 0;
+    //position: sticky;
+    //top: 0;
     .close-line {
       padding: 15px;
       background: #f3f3f3;

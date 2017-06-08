@@ -1113,8 +1113,13 @@ h6, .h6 {
 }
 
 .date-picker-wrapper.booking-datepicker {
-  left: 15px !important;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .date-picker-wrapper.booking-datepicker {
+    left: 15px !important;
+  }
 }
 
 .date-picker-wrapper.booking-datepicker:before {
@@ -7461,7 +7466,6 @@ footer .navbar-header {
 }
 
 .probably-block_content .city {
-  color: #0a85d5;
   font-size: 14px;
   font-weight: 500;
 }
@@ -7473,10 +7477,15 @@ footer .navbar-header {
   width: 18px;
 }
 
-.probably-block_content .city span {
+.probably-block_content .city a {
+  color: #0a85d5;
   display: block;
   float: left;
   width: calc(100% - 23px);
+}
+
+.probably-block_content .city a:hover {
+  text-decoration: underline !important;
 }
 
 .probably-block_content .rating-mark {
@@ -8199,6 +8208,10 @@ footer {
   background-color: #282d36;
   width: 100%;
   font-family: "Montserrat", sans-serif;
+}
+
+footer .container {
+  max-width: 1170px !important;
 }
 
 footer .input-group button {
@@ -11347,20 +11360,15 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .map-item-block {
   display: none;
-  position: absolute;
-  z-index: 11;
+  position: fixed;
+  z-index: 14;
   font-family: "Roboto", sans-serif;
-  right: 15px;
+  right: 0;
+  top: 0;
   width: 45%;
   height: 100%;
   background: #fff;
   box-shadow: -25px 0 60px 0 rgba(0, 0, 0, 0.21);
-}
-
-.map-item-block-wrapper {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 
 .map-item-block-wrapper .close-line {
@@ -13814,6 +13822,29 @@ aside.show-on-map .panel-group .panel.panel-default {
   100% {
     box-shadow: 0 0 0 0 rgba(255, 79, 85, 0);
   }
+}
+
+.landing-popup .black-bg-map {
+  position: fixed;
+  z-index: 13;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.landing-popup .map-item-block {
+  left: 0;
+  margin: auto;
+  height: 95vh;
+  bottom: 0;
+}
+
+.landing-popup .map-item-block--wrapper {
+  max-height: 95vh;
+}
+
+.landing-popup .map-item-block .map-item-info {
+  padding-bottom: 0;
 }
 
 .unsupport {

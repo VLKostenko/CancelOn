@@ -1634,3 +1634,24 @@
     box-shadow: 0 0 0 0 rgba(255, 79, 85, 0);
   }
 }
+.landing-popup {
+  .black-bg-map {
+    position: fixed;
+    z-index: 13;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .map-item-block {
+    left: 0;
+    margin: auto;
+    height: 95vh;
+    bottom: 0;
+    &--wrapper {
+      max-height: 95vh;
+    }
+    .map-item-info {
+      padding-bottom: 0;
+    }
+  }
+}
