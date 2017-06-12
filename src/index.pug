@@ -6,7 +6,12 @@ block main
    include parts/search
    include parts/search-top-options
    .container.pl-0.pr-0.pos-rel
-      include parts/aside
+      aside.sidebar-filter.same-height
+         .mobile-filter-line.visible-xs
+            i.fa.fa-filter(aria-hidden='true')
+            | Search filter
+         .panel-group.mb-0.mt-xs-50.ui.sticky
+            include parts/aside
       .main-wrapper#sticky-wrap
          include parts/content
          .black-bg-search

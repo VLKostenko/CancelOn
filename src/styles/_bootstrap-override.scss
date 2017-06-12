@@ -115,12 +115,25 @@ button[type="button"] {
     color: #ffffff;
     margin: 47px 15px;
     float: left;
+    @media screen and (min-width: 1200px) and (max-width: 1400px) {
+      clear: left;
+      margin-top: -12px;
+      margin-bottom: 0;
+    }
   }
   .secondary-logo {
     max-width: 125px;
     float: left;
     margin-top: 36px;
     margin-bottom: 33px;
+    @media screen and (min-width: 1200px) and (max-width: 1400px) {
+      max-width: 120px;
+      margin-top: -22px;
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 992px) {
+      margin-left: 15px;
+    }
     img {
       width: 100%;
     }

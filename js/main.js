@@ -863,6 +863,11 @@
   });
 
   $('.onoffswitch-hotel-info').change(function() {
+    setTimeout(function() {
+      $('.pie-statistic .setsize').each(function() {
+        $(this).height($(this).width());
+      });
+    }, 200);
     if ( $('.onoffswitch-hotel-info .myonoffswitch').prop('checked') ) {
       $('.hotel-information_block-tabs').removeClass('full-width');
       $('.hotel-information_block-map').removeClass('no-width').fadeIn(200);
@@ -934,6 +939,11 @@
   });
 
   $(window).resize(function() {
+
+    $('.pie-statistic .setsize').each(function() {
+      $(this).height($(this).width());
+    });
+
     initAOS();
     if ( $(window).width() < 992 ) {
       gridView();
@@ -962,6 +972,10 @@
   });
 
   $(document).ready(function() {
+
+    $('.pie-statistic .setsize').each(function() {
+      $(this).height($(this).width());
+    });
 
     $('.sticky').Stickyfill();
     initAOS();

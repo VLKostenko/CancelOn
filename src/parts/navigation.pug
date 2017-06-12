@@ -37,10 +37,10 @@ nav.navbar.navbar-default.mb-0
 				.filter-icon.visible-xs
 					i.fa.fa-sliders(aria-hidden='true')
 				if ( page.name == 'landing' )
-					p.navbar-text-landing.small-text.font-weight-200.visible-lg
+					p.navbar-text-landing.small-text.font-weight-200.visible-lg.visible-md
 						| As seen on
-					a(href='javascript:void(0)').secondary-logo
-						img(src='../images/trivago-logo.png', alt='trivago')
+					a(href='javascript:void(0)').secondary-logo.hidden-xs
+						img(src='./images/trivago-logo.png', alt='trivago')
 				else
 					p.navbar-text.small-text.font-weight-200.visible-lg
 						i.fa.fa-info-circle(aria-hidden='true')

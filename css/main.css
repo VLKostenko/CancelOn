@@ -204,11 +204,33 @@ button[type="button"].btn:focus {
   float: left;
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .navbar-default .navbar-text-landing {
+    clear: left;
+    margin-top: -12px;
+    margin-bottom: 0;
+  }
+}
+
 .navbar-default .secondary-logo {
   max-width: 125px;
   float: left;
   margin-top: 36px;
   margin-bottom: 33px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .navbar-default .secondary-logo {
+    max-width: 120px;
+    margin-top: -22px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-default .secondary-logo {
+    margin-left: 15px;
+  }
 }
 
 .navbar-default .secondary-logo img {
@@ -896,7 +918,7 @@ h6, .h6 {
 .onoffswitch-gallery-wrapper {
   position: absolute;
   z-index: 5;
-  right: 25px;
+  right: 57px;
   top: 10px;
   width: 175px;
   height: 50px;
@@ -1114,12 +1136,7 @@ h6, .h6 {
 
 .date-picker-wrapper.booking-datepicker {
   margin-top: 10px;
-}
-
-@media screen and (max-width: 1440px) {
-  .date-picker-wrapper.booking-datepicker {
-    left: 15px !important;
-  }
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 
 .date-picker-wrapper.booking-datepicker:before {
@@ -12383,6 +12400,8 @@ aside.show-on-map .panel-group .panel.panel-default {
   background: #1a4e63;
   width: 100%;
   display: block;
+  padding-left: 16px;
+  padding-right: 45px;
 }
 
 .booking-table .search-filter-block:before {
@@ -12468,8 +12487,10 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .booking-table .search-filter-block .people-count .book-menu {
-  width: 285px;
+  width: 243px;
   top: 60px;
+  left: -20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 
 .booking-table .search-filter-block .people-count .book-menu:before {
@@ -12573,7 +12594,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   font-size: 12px;
   font-weight: 500;
   color: #fff;
-  padding: 8px 10px;
+  padding: 3px 10px 2px;
   margin-right: 10px;
   float: right;
 }
@@ -12831,6 +12852,8 @@ aside.show-on-map .panel-group .panel.panel-default {
   left: 0;
   right: 0;
   bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .booking-table .room-type_info-button .more-btn {
@@ -13593,12 +13616,379 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-bottom: 50px;
 }
 
+.pie-statistic .progress-radial,
+.pie-statistic .progress-radial * {
+  box-sizing: content-box;
+}
+
+.pie-statistic .progress-radial {
+  position: relative;
+  width: 100%;
+  border-radius: 50%;
+  max-width: 200px;
+  margin: auto;
+}
+
+.pie-statistic .progress-radial.first .overlay {
+  color: #4b79bb;
+}
+
+.pie-statistic .progress-radial.second .overlay {
+  color: #658b2c;
+}
+
+.pie-statistic .progress-radial.third .overlay {
+  color: #bd2cd7;
+}
+
+.pie-statistic .progress-radial .overlay {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 38px;
+  font-weight: 600;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.pie-statistic .progress-radial .overlay p {
+  position: absolute;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.pie-statistic .progress-radial.first.progress-0 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(90deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(0deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-0 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(90deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(0deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-0 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(90deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(0deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-5 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(108deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(342deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-5 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(108deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(342deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-5 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(108deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(342deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-10 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(126deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(324deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-10 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(126deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(324deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-10 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(126deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(324deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-15 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(144deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(306deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-15 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(144deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(306deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-15 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(144deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(306deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-20 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(162deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(288deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-20 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(162deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(288deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-20 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(162deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(288deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-25 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-25 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-25 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-30 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(198deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(252deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-30 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(198deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(252deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-30 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(198deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(252deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-35 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(216deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(234deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-35 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(216deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(234deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-35 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(216deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(234deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-40 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(234deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(216deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-40 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(234deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(216deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-40 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(234deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(216deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-45 {
+  background-image: linear-gradient(90deg, #bfe6ff 50%, transparent 50%, transparent), linear-gradient(252deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #bfe6ff 50%, transparent 50%, transparent), -webkit-linear-gradient(198deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-45 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(252deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #ceef9d 50%, transparent 50%, transparent), -webkit-linear-gradient(198deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-45 {
+  background-image: linear-gradient(90deg, #fbd5ff 50%, transparent 50%, transparent), linear-gradient(252deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #fbd5ff 50%, transparent 50%, transparent), -webkit-linear-gradient(198deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-50 {
+  background-image: linear-gradient(-90deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(180deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-50 {
+  background-image: linear-gradient(-90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(180deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-50 {
+  background-image: linear-gradient(-90deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(180deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-55 {
+  background-image: linear-gradient(-72deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(162deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-55 {
+  background-image: linear-gradient(-72deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(162deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-55 {
+  background-image: linear-gradient(-72deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(162deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-60 {
+  background-image: linear-gradient(-54deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(144deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-60 {
+  background-image: linear-gradient(-54deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(144deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-60 {
+  background-image: linear-gradient(-54deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(144deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-65 {
+  background-image: linear-gradient(-36deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(126deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-65 {
+  background-image: linear-gradient(-36deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(126deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-65 {
+  background-image: linear-gradient(-36deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(126deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-70 {
+  background-image: linear-gradient(-18deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(108deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-70 {
+  background-image: linear-gradient(-18deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(108deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-70 {
+  background-image: linear-gradient(-18deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(108deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-75 {
+  background-image: linear-gradient(0deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(90deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-75 {
+  background-image: linear-gradient(0deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-75 {
+  background-image: linear-gradient(0deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(90deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-80 {
+  background-image: linear-gradient(18deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(72deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-80 {
+  background-image: linear-gradient(18deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(72deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-80 {
+  background-image: linear-gradient(18deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(72deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-85 {
+  background-image: linear-gradient(36deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(54deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-85 {
+  background-image: linear-gradient(36deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(54deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-85 {
+  background-image: linear-gradient(36deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(54deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-90 {
+  background-image: linear-gradient(54deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(36deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-90 {
+  background-image: linear-gradient(54deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(36deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-90 {
+  background-image: linear-gradient(54deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(36deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-95 {
+  background-image: linear-gradient(72deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(18deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-95 {
+  background-image: linear-gradient(72deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(18deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-95 {
+  background-image: linear-gradient(72deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(18deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
+.pie-statistic .progress-radial.first.progress-100 {
+  background-image: linear-gradient(90deg, #4b79bb 50%, transparent 50%, transparent), linear-gradient(270deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+  background-image: -webkit-linear-gradient(0deg, #4b79bb 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #4b79bb 50%, #bfe6ff 50%, #bfe6ff);
+}
+
+.pie-statistic .progress-radial.second.progress-100 {
+  background-image: linear-gradient(90deg, #658b2c 50%, transparent 50%, transparent), linear-gradient(270deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+  background-image: -webkit-linear-gradient(0deg, #658b2c 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #658b2c 50%, #ceef9d 50%, #ceef9d);
+}
+
+.pie-statistic .progress-radial.third.progress-100 {
+  background-image: linear-gradient(90deg, #bd2cd7 50%, transparent 50%, transparent), linear-gradient(270deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+  background-image: -webkit-linear-gradient(0deg, #bd2cd7 50%, transparent 50%, transparent), -webkit-linear-gradient(180deg, #bd2cd7 50%, #fbd5ff 50%, #fbd5ff);
+}
+
 .pie-statistic .pie_title {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
   display: block;
-  margin-top: 10px;
+  margin-top: 20px;
+  float: left;
+  text-align: center;
+  width: 100%;
 }
 
 .pie-statistic .pie_title.pie_title1 {
@@ -13845,6 +14235,90 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .landing-popup .map-item-block .map-item-info {
   padding-bottom: 0;
+}
+
+.main-statistic {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.main-statistic #chart-legends {
+  float: left;
+  width: 22%;
+  height: 173px;
+}
+
+.main-statistic #chart-legends .chart-legends-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  position: relative;
+  right: -3px;
+}
+
+.main-statistic #chart-legends .chart-legends-wrapper .chart-name {
+  position: relative;
+  padding-left: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-statistic #chart-legends .chart-legends-wrapper .chart-name:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.main-statistic #chart-legends .chart-legends-wrapper .chart-name:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.main-statistic #chart-legends .chart-legends-wrapper .chart-name .label-name {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.main-statistic #chart-legends .chart-legends-wrapper .chart-name .label-value {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.main-statistic #chart-legends .chart-legends-wrapper .chart-name .label-value.rating {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.main-statistic #chart-legends .chart-legends-wrapper .chart-name .label-point {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  border-style: solid;
+  border-radius: 50px;
+}
+
+.main-statistic .main-chart-wrapper {
+  width: 78%;
+  float: left;
 }
 
 .unsupport {
@@ -14270,7 +14744,7 @@ aside.show-on-map .panel-group .panel.panel-default {
     padding: 5px 0;
   }
   nav .navbar-menu {
-    width: 45%;
+    width: 20%;
     float: right;
     margin-right: 15px;
     padding: 37px 0;
@@ -14319,7 +14793,7 @@ aside.show-on-map .panel-group .panel.panel-default {
     left: -4px;
   }
   .navbar-header {
-    width: 41%;
+    width: 60% !important;
     padding-right: 0;
     padding-left: 0;
   }
@@ -14809,7 +15283,7 @@ aside.show-on-map .panel-group .panel.panel-default {
     width: 30%;
   }
   nav .navbar-menu {
-    width: 56%;
+    width: 25%;
   }
   .map-wrapper.full-width {
     min-height: 1400px;

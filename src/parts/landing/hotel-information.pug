@@ -180,7 +180,7 @@
 									span Adam
 								.country
 									span.flag
-										img(src='/images/icons/usa.png', alt='usa')
+										img(src='./images/icons/usa.png', alt='usa')
 									span USA
 								.date
 									span May 5th, 2017
@@ -203,7 +203,7 @@
 									span Geralt
 								.country
 									span.flag
-										img(src='/images/icons/usa.png', alt='usa')
+										img(src='./images/icons/usa.png', alt='usa')
 									span USA
 								.date
 									span June 25th, 2017
@@ -226,7 +226,7 @@
 									span Anna Maria
 								.country
 									span.flag
-										img(src='/images/icons/usa.png', alt='usa')
+										img(src='./images/icons/usa.png', alt='usa')
 									span USA
 								.date
 									span June 27th, 2017
@@ -267,20 +267,28 @@
 										a(href='javascript:void(0)') Next
 				#analytics.tab-pane.active
 					h3 Analyst views and reservations
-					.main-statistic
-						canvas#canvas(width='450', height='200')
+					.main-statistic.clearfix
+						#chart-legends
+						.main-chart-wrapper
+							canvas#canvas(width='443', height='200')
 					.row.pie-statistic
 						.col-sm-4
 							.text-center
-								canvas#pie1(width='150', height='150')
+								.progress-radial.progress-90.setsize.first
+									.overlay
+										p 92%
 								span.pie_title.pie_title1 Positive Appreciated this hotel
 						.col-sm-4
 							.text-center
-								canvas#pie2(width='150', height='150')
+								.progress-radial.progress-60.setsize.second
+									.overlay
+										p 1253
 								span.pie_title.pie_title2 Re-booking Rooms In This Hotel
 						.col-sm-4
 							.text-center
-								canvas#pie3(width='150', height='150')
+								.progress-radial.progress-75.setsize.third
+									.overlay
+										p 16 421
 								span.pie_title.pie_title3 People were satisfied
 					.statistic
 						.statistic_title

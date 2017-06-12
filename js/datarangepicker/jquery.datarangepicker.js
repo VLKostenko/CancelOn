@@ -1273,10 +1273,18 @@
         // var backupWidth = $(self).width() + $(self).parent().width();
         // if ($(opt.container).css('position') == 'relative') {
           var containerOffset = $(opt.container).offset();
-          box.css({
-            top: offset.top - containerOffset.top + $(self).outerHeight(),
-            left: offsetParent.left - ($('.date-picker-wrapper').outerWidth() - parentWidth) / 2
-          });
+          if ( opt.extraClass == 'booking-datepicker' ) {
+            box.css({
+              top: offset.top - containerOffset.top + $(self).outerHeight(),
+              left: offsetParent.left
+            });
+            console.log(offsetParent.left);
+          } else {
+            box.css({
+              top: offset.top - containerOffset.top + $(self).outerHeight(),
+              left: offsetParent.left - ($('.date-picker-wrapper').outerWidth() - parentWidth) / 2
+            });
+          }
           // console.log('func', offsetParent.left - (selfWidth - parentWidth) / 2, 'calc', offsetParent.left - ($('.date-picker-wrapper').outerWidth() - $('.date-group').outerWidth())  / 2);
 
         // } else {
