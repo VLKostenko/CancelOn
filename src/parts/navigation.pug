@@ -63,9 +63,10 @@ nav.navbar.navbar-default.mb-0
 						li
 							a(href='javascript:void(0)')
 								| Alert Me
-						li
-							a(href='javascript:void(0)')
-								| Explore
+						if ( page.name !== 'landing' )
+							li
+								a(href='javascript:void(0)')
+									| Explore
 						li
 							a(href='javascript:void(0)')
 								| Sign In
@@ -125,10 +126,11 @@ nav.navbar.navbar-default.mb-0
 						a(href='javascript:void(0)')
 							i.fa.fa-info-circle(aria-hidden='true')
 							| Alert Me
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-map(aria-hidden='true')
-							| Explore
+					if ( page.name !== 'landing' )
+						li.visible-lg
+							a(href='javascript:void(0)')
+								i.fa.fa-map(aria-hidden='true')
+								| Explore
 					li.form-group.visible-lg
 						select#sel1.selectpicker.currency-menu
 							option (USD) $

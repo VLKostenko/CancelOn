@@ -1033,6 +1033,9 @@
       width: 265px;
       .book-menu {
         width: 265px;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        padding: 12px 20px 22px;
         .input-number {
           background: #fff;
         }
@@ -1167,6 +1170,7 @@
       }
       .book-menu {
         top: 70px;
+        width: 290px;
       }
     }
   }

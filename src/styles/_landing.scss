@@ -533,6 +533,7 @@
     width: 100%;
     font-family: "Roboto", sans-serif;
     margin-bottom: 0;
+    table-layout: fixed;
     .info-label {
       font-size: 12px;
       font-weight: 500;
@@ -700,13 +701,27 @@
         }
       }
       &-preview {
+        position: relative;
         img {
           width: 100%;
         }
         .info-label {
           position: absolute;
-          top: 20px;
-          left: 15px;
+          top: 0;
+          left: 0;
+        }
+        .counter {
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          text-align: center;
+          width: 50px;
+          height: 22px;
+          line-height: 22px;
+          font-size: 12px;
+          position: absolute;
+          z-index: 1;
+          right: 5px;
+          bottom: 6px;
         }
       }
       &-name {
@@ -938,9 +953,12 @@
           img {
             display: none;
           }
+          .counter {
+            display: none;
+          }
           .info-label {
-            top: 0;
-            left: 0;
+            top: -20px;
+            left: -15px;
             font-size: 11px;
             padding: 3px 10px;
             &.red {
@@ -1447,8 +1465,10 @@
     position: relative;
     width: 100%;
     border-radius: 50%;
-    max-width: 200px;
+    max-width: 170px;
+    min-width: 170px;
     margin: auto;
+    height: 170px;
     &.first {
       .overlay {
         color: #4b79bb;
@@ -1745,7 +1765,7 @@
 .landing-popup {
   .black-bg-map {
     position: fixed;
-    z-index: 13;
+    z-index: 155;
     top: 0;
     left: 0;
     width: 100%;
@@ -1755,6 +1775,7 @@
     margin: auto;
     height: 95vh;
     bottom: 0;
+    z-index: 160;
     &--wrapper {
       max-height: 95vh;
     }

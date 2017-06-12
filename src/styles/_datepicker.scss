@@ -397,6 +397,14 @@
       font-weight: bold;
     }
   }
+  &.search-datepicker {
+    @media (max-width: 767px) {
+      .month-wrapper {
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      }
+    }
+  }
 }
 
 /* datarangepicker end */

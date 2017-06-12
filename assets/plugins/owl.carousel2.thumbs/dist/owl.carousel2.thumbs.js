@@ -123,8 +123,8 @@
             this._thumbcontent._thumbcontainer = $('.' + options.thumbContainerClass);
         }
 
-        //check what thumbitem has been clicked and move slider to that item
-        $(this._thumbcontent._thumbcontainer).on('click', this._thumbcontent._thumbcontainer.find('.' + options.thumbItemClass), $.proxy(function (e) {
+        //check what thumb item has been clicked and move slider to that item
+        $(this._thumbcontent._thumbcontainer).children().on('click', this._thumbcontent._thumbcontainer.find('.' + options.thumbItemClass), $.proxy(function (e) {
             // find relative slider
             this._identifier = $(e.target).closest('.' + options.thumbContainerClass).data('slider-id');
 

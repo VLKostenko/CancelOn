@@ -1278,7 +1278,6 @@
               top: offset.top - containerOffset.top + $(self).outerHeight(),
               left: offsetParent.left
             });
-            console.log(offsetParent.left);
           } else {
             box.css({
               top: offset.top - containerOffset.top + $(self).outerHeight(),
