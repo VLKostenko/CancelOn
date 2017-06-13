@@ -6,7 +6,8 @@
             span.onoffswitch-inner
             span.onoffswitch-switch
    .slider-block.clearfix
-      .owl-carousel.full.photoswipe-block(data-slider-id='1')
+      include placeholder/information-block-slider
+      .owl-carousel.owl-carousel-full.photoswipe-block.placeholder-show(data-slider-id='1')
          - for(var i = 1; i < 16; i++)
             figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
                a(href='images/hotel-image' + i + '.jpg', itemprop='contentUrl', data-size='1086x908')
@@ -15,19 +16,20 @@
             figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
                a(href='images/hotel-image' + i + '.jpg', itemprop='contentUrl', data-size='1086x908')
                   img(src='images/hotel-image' + i + '.jpg', alt='Alt ' + i)
-      .owl-thumbs(data-slider-id='1')
+      .owl-thumbs.placeholder-show(data-slider-id='1')
          - for(var i = 1; i < 16; i++)
-            button.owl-thumb-item.same-height
+            button.owl-thumb-item
                img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
          - for(var i = 1; i < 16; i++)
-            button.owl-thumb-item.same-height
+            button.owl-thumb-item
                img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
    .sidebar-block
       .sidebar-wrapper
-         .sidebar-logo
+         include placeholder/information-block-sidebar
+         .sidebar-logo.placeholder-show
             img(src='images/tripadvisor-logo.svg', alt='tripadvisor logo')
             span Know better. Book better. Go better.
-         .sidebar-info
+         .sidebar-info.placeholder-show
             .sidebar-info_name-rating
                .sidebar-info_name-rating_title
                   div Holiday Inn Express Hotel Suites Las Vegas I-215 S. Beltway

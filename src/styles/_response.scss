@@ -695,31 +695,31 @@
   }
 }
 @media screen and (max-width: 1060px) {
-  .date-picker-wrapper {
-    .month-wrapper {
-      max-width: 300px;
-      width: 100%!important;
-      min-width: initial;
-      table {
-        clear: left;
-        margin-left: 0;
-        width: 100%;
-        &.month2 {
-          width: 100%;
-        }
-      }
-      .time {
-        .buttons {
-          width: 100%;
-          padding: 9px 0 0;
-          input {
-            width: 95%;
-            margin: 0 8px 8px;
-          }
-        }
-      }
-    }
-  }
+  //.date-picker-wrapper {
+  //  .month-wrapper {
+  //    max-width: 300px;
+  //    width: 100%!important;
+  //    min-width: initial;
+  //    table {
+  //      clear: left;
+  //      margin-left: 0;
+  //      width: 100%;
+  //      &.month2 {
+  //        width: 100%;
+  //      }
+  //    }
+  //    .time {
+  //      .buttons {
+  //        width: 100%;
+  //        padding: 9px 0 0;
+  //        input {
+  //          width: 95%;
+  //          margin: 0 8px 8px;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
   nav .navbar-header {
     width: 40%;
   }
@@ -1066,6 +1066,31 @@
   .search-group {
     .input-search {
       padding-right: 115px;
+    }
+  }
+  .date-picker-wrapper {
+    .month-wrapper {
+      max-width: 300px;
+      width: 100%!important;
+      min-width: initial;
+      table {
+        clear: left;
+        margin-left: 0;
+        width: 100%;
+        &.month2 {
+          width: 100%;
+        }
+      }
+      .time {
+        .buttons {
+          width: 100%;
+          padding: 9px 0 0;
+          input {
+            width: 95%;
+            margin: 0 8px 8px;
+          }
+        }
+      }
     }
   }
 }

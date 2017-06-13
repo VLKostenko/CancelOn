@@ -2533,6 +2533,15 @@
           $('.black-bg-search').fadeIn(opt.duration);
         }
       });
+      $(window).resize(function() {
+        if ( box.is(':visible') ) {
+          if ( $(window).width() > 767 ) {
+            $('.black-bg-search').fadeIn(opt.duration);
+          } else {
+            $('.black-bg-search').fadeOut(opt.duration);
+          }
+        }
+      });
     }
   };
 }));
