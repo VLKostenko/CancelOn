@@ -5,6 +5,8 @@
          label.onoffswitch-label(for='myonoffswitch2')
             span.onoffswitch-inner
             span.onoffswitch-switch
+   .tripadvisor-logo.visible-sm
+      img(src='images/tripadvisor-logo.svg', alt='tripadvisor logo')
    .slider-block.clearfix
       include placeholder/information-block-slider
       .owl-carousel.owl-carousel-full.photoswipe-block.placeholder-show(data-slider-id='1')
@@ -23,7 +25,7 @@
          - for(var i = 1; i < 16; i++)
             button.owl-thumb-item
                img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
-   .sidebar-block
+   .sidebar-block.hidden-sm
       .sidebar-wrapper
          include placeholder/information-block-sidebar
          .sidebar-logo.placeholder-show

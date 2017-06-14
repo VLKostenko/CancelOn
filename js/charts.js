@@ -41,7 +41,7 @@ $(document).ready(function () {
     }
   });
   if ( $('#pie1').length && $('#pie2').length && $('#pie3').length ) {
-    var config = {
+    var configPie = {
       type: 'doughnut',
       data: {
         datasets: [{
@@ -73,9 +73,9 @@ $(document).ready(function () {
     var ctx1 = document.getElementById("pie1").getContext("2d");
     var ctx2 = document.getElementById("pie2").getContext("2d");
     var ctx3 = document.getElementById("pie3").getContext("2d");
-    var pie1 = new Chart(ctx1, config);
-    var pie2 = new Chart(ctx2, config);
-    var pie3 = new Chart(ctx3, config);
+    var pie1 = new Chart(ctx1, configPie);
+    var pie2 = new Chart(ctx2, configPie);
+    var pie3 = new Chart(ctx3, configPie);
   }
   if ( $('canvas').length ) {
 
@@ -93,16 +93,6 @@ $(document).ready(function () {
         "Oct",
         "Nov",
         "Dec"],
-      // datasets: [{
-      //   label: "My First dataset",
-      //   backgroundColor: window.chartColors.red,
-      //   borderColor: window.chartColors.red,
-      //   data: [10, 23, 5, 99, 67, 43, 0],
-      //   fill: false,
-      //   pointRadius: 10,
-      //   pointHoverRadius: 15,
-      //   showLine: false // no line shown
-      // }]
       datasets: [
         {
           backgroundColor: '#8ecdf6',
@@ -152,7 +142,9 @@ $(document).ready(function () {
     };
 
     var options = {
-      responsive: true,
+      global: {
+        responsive: true
+      },
       tooltips: {
         position: "nearest",
         xPadding: 20,
@@ -204,15 +196,12 @@ $(document).ready(function () {
         var text = [];
         text.push('<ul class="chart-legends-wrapper">');
         for ( var i = 0; i < chart.data.datasets.length; i++ ) {
-          // console.log(chart.data.datasets[i].hidden);
-          // console.log(averageData(chart.data.datasets[i].data));
           text.push('<li class="chart-name" id="' + chart.data.datasets[i].label.toLowerCase() + '" onclick="updateDataset(event, ' + '\'' + chart.legend.legendItems[i].datasetIndex + '\'' + ')">');
           if ( chart.data.datasets[i].label !== "Rating" ) {
             text.push('<div class="label-name" style="color: #000;">' + chart.data.datasets[i].label + '</div>');
             text.push('<div class="label-value" style="color: ' + chart.data.datasets[i].pointBackgroundColor + ';">' + Math.floor(averageData(chart.data.datasets[i].data)) + '</div>');
             text.push('<div class="label-point" style="background: ' + chart.data.datasets[i].pointBackgroundColor + ';border-color: ' + chart.data.datasets[i].pointBorderColor + ';border-width: ' + chart.data.datasets[i].pointBorderWidth + 'px;"></div>');
           } else {
-            // console.log(chart.data.datasets[i].hidden);
             if ( chart.data.datasets[i].hidden ) {
               text.push('<div class="label-value rating" style="color: ' + chart.data.datasets[i].pointBackgroundColor + '; text-decoration: line-through;">' + averageData(chart.data.datasets[i].data).toFixed(1) + ' /5</div>');
             } else {
@@ -256,6 +245,9 @@ $(document).ready(function () {
 
     var ctx = document.getElementById('canvas').getContext('2d');
     window.mainChart = new Chart(ctx, config);
+    var parent = document.getElementById('parentCanvas');
+    ctx.width = parentCanvas.offsetWidth;
+    ctx.height = parentCanvas.offsetHeight;
     document.getElementById('chart-legends').innerHTML = mainChart.generateLegend();
 
   }
@@ -267,10 +259,6 @@ $(document).ready(function () {
     }
     return (sum/array.length);
   }
-  // Chart.Tooltip.positioners.customPos = function(unused, position) {
-  //   // return { x: position.x, y: 25 };
-  //   return { x: this.chart.width / 2, y: 25 };
-  // }
 });
 
 

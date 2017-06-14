@@ -68,7 +68,7 @@
    */
 
   function reinitMap() {
-    if ( $('#map').length && !$('#map').length ) {
+    if ( $('#map').length && !$('#map1').length ) {
       var center = map.getCenter();
       google.maps.event.trigger(map, "resize");
       map.setCenter(center);
@@ -155,14 +155,12 @@
           left: left,
           width: width
         });
-        console.log('scroll position > target position');
       } else if ( scrollPos.scrollTop() < targetLine || scrollPos.scrollTop() > targetEnd ) {
         $(target).removeClass('scrolled closed').css({
           left: 'initial',
           width: '100%'
         });
         $(targetSpace).height('initial');
-        console.log('scroll position < target position');
       }
     }
   }
@@ -1067,6 +1065,17 @@
 
     setMapWrapperHeight();
 
+    if ( $('#map1').length ) {
+      if ( $(window).width() < 1200 ) {
+        if ( $('.onoffswitch-hotel-info .myonoffswitch').prop('checked') ) {
+          $('.onoffswitch-hotel-info .myonoffswitch').prop('checked', false);
+          $('.hotel-information_block-tabs').addClass('full-width');
+          $('.hotel-information_block-map').addClass('no-width').hide();
+          window.mainChart.height = 173;
+        }
+      }
+    }
+
   });
 
   window.addEventListener('load', function() {
@@ -1086,13 +1095,33 @@
       setMapWrapperHeight();
       $('.stars-hotel').stars();
       $('.rate').rate();
-      $('.map-item-block--wrapper').mCustomScrollbar({
+      $('.main-wrapper .map-item-block--wrapper').mCustomScrollbar({
         autoHideScrollbar: true
       });
 
-      $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar({
+      $('.landing-popup .map-item-block--wrapper').mCustomScrollbar({
         scrollbarPosition: "outside"
       });
+
+      if ( $(window).width() > 1199 ) {
+        $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar({
+          scrollbarPosition: "outside"
+        });
+      } else {
+        $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar({
+          scrollbarPosition: "outside",
+          axis: "x",
+          // snapAmount: [0, 85 * 7 + 14],
+          mouseWheel:{
+            scrollAmount: 85 * 7 + 14
+          },
+          // mouseWheel: {
+          //   enable: true,
+          //   scrollAmount: 85 * 7 + 14
+          // },
+          advanced: { autoExpandHorizontalScroll: true }
+        });
+      }
 
       $('.attractions_gallery').mCustomScrollbar({
         scrollbarPosition: "outside"

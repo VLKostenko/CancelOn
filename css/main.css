@@ -11384,7 +11384,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .map-item-block {
   display: none;
   position: fixed;
-  z-index: 14;
+  z-index: 160;
   font-family: "Roboto", sans-serif;
   right: 0;
   top: 0;
@@ -12835,6 +12835,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   display: none;
 }
 
+.booking-table .room-type_info-preview .owl-dots {
+  display: none;
+}
+
 .booking-table .room-type_info-name {
   font-size: 16px;
   font-weight: 600;
@@ -13420,6 +13424,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .hotel-information_block-tabs .tab-content .review-block_rating .stars-hotel {
   width: 15%;
+  max-width: 90px;
   float: left;
   position: relative;
   top: 1px;
@@ -14289,6 +14294,14 @@ aside.show-on-map .panel-group .panel.panel-default {
   max-height: 95vh;
 }
 
+.landing-popup .map-item-block--wrapper .mCSB_outside + .mCSB_scrollTools {
+  right: -7px;
+}
+
+.landing-popup .map-item-block--wrapper .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  border-radius: 0;
+}
+
 .landing-popup .map-item-block .map-item-info {
   padding-bottom: 0;
 }
@@ -15136,6 +15149,102 @@ aside.show-on-map .panel-group .panel.panel-default {
   .input-search {
     padding-right: 130px;
   }
+  .hotel-info-wrapper > .container {
+    padding-right: 8px !important;
+  }
+  .hotel-info-wrapper .hotel-info .top-wrapper .left-block {
+    width: 80%;
+  }
+  .hotel-info-wrapper .hotel-info .top-wrapper .right-block {
+    width: 20%;
+  }
+  .hotel-info-wrapper .hotel-info .top-wrapper .right-block.middle-block .book-btn {
+    padding: 13px 23px;
+  }
+  .information-block .slider-block {
+    width: 65%;
+  }
+  .information-block .slider-block .owl-carousel {
+    width: 100%;
+  }
+  .information-block .slider-block .owl-thumbs {
+    width: 100%;
+    height: 80px;
+    margin-top: 15px;
+  }
+  .information-block .slider-block .owl-thumbs .mCSB_outside + .mCSB_scrollTools {
+    right: 0;
+    bottom: -16px;
+  }
+  .information-block .slider-block .owl-thumbs .owl-thumb-item {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-right: 7px;
+  }
+  .information-block .slider-block .owl-thumbs .owl-thumb-item:last-child {
+    margin-right: 0;
+  }
+  .information-block .slider-block .owl-thumbs .mCSB_container {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .information-block .sidebar-block {
+    width: calc(35% - 15px);
+    height: 575px;
+  }
+  .booking-table .room-type_info-open-btn .hotel-button {
+    width: 15px;
+    height: 15px;
+    left: -15px;
+  }
+  .onoffswitch-gallery-wrapper {
+    right: 75px;
+  }
+  .main-statistic .main-chart-wrapper {
+    max-height: 150px;
+  }
+  .main-statistic #parentCanvas {
+    max-width: 443px;
+  }
+  .hotel-information_block-map {
+    width: 100%;
+    position: absolute;
+  }
+  .hotel-information_block-tabs {
+    width: 100%;
+  }
+  .hotel-information_block-tabs .nav-tabs {
+    width: 10%;
+  }
+  .hotel-information_block-tabs .nav-tabs li a i {
+    font-size: 38px;
+  }
+  .hotel-information_block-tabs .tab-content {
+    width: 90%;
+  }
+  .hotel-info .red-price {
+    line-height: 16px;
+    margin-top: 5px;
+    margin-right: -95px;
+  }
+  .hotel-info .price {
+    margin-bottom: 0;
+    margin-top: 15px;
+    position: relative;
+    left: -40px;
+  }
+  .hotel-info .top-wrapper {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  .main-statistic {
+    margin-bottom: 70px;
+  }
+  .booking-table table .right-part_info > table {
+    min-height: 405px;
+  }
 }
 
 @media screen and (max-width: 1060px) {
@@ -15459,6 +15568,172 @@ aside.show-on-map .panel-group .panel.panel-default {
   .date-picker-wrapper .month-wrapper .time .buttons input {
     width: 95%;
     margin: 0 8px 8px;
+  }
+  .hotel-info .show-street-view {
+    float: right;
+  }
+  .hotel-info .labels {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .hotel-info .red-price {
+    margin-right: 0;
+    line-height: 46px;
+    float: left;
+    left: -105px;
+    position: relative;
+  }
+  .hotel-info .price {
+    float: left;
+    margin-top: 5px;
+    left: 45px;
+  }
+  .hotel-info .book-btn {
+    float: left;
+  }
+  .hotel-info .top-wrapper .right-block {
+    top: 153px;
+  }
+  .hotel-info-wrapper .hotel-info .top-wrapper .left-block {
+    width: 100%;
+  }
+  .hotel-info-wrapper .hotel-info .top-wrapper .right-block {
+    width: 40%;
+  }
+  .information-block .slider-block {
+    width: 100%;
+  }
+  .information-block .slider-block .owl-thumbs .owl-thumb-item {
+    display: inline-block;
+    width: 81px;
+    height: 81px;
+    margin-right: 10px;
+  }
+  .information-block .slider-block .owl-thumbs .mCSB_outside + .mCSB_scrollTools {
+    right: 2px;
+  }
+  .information-block .tripadvisor-logo {
+    width: 155px;
+    height: 50px;
+    float: left;
+    margin-left: 25px;
+    line-height: 50px;
+  }
+  .onoffswitch-gallery-wrapper {
+    position: relative;
+    float: left;
+    margin-bottom: 15px;
+    left: 0;
+    top: 0;
+    right: initial;
+  }
+  .booking-table .search-filter-block {
+    margin-top: 0;
+    height: 90px;
+  }
+  .booking-table .search-filter-block:before, .booking-table .search-filter-block:after {
+    display: none;
+  }
+  .booking-table .search-filter-block .date-group .form-control {
+    margin-top: 15px;
+  }
+  .booking-table .search-filter-block .date-group .input-group-addon {
+    padding-top: 22px;
+  }
+  .booking-table .search-filter-block .people-count .dropdown-toggle {
+    margin-top: 28px;
+  }
+  .booking-table .search-filter-block .people-count .down-arrow {
+    height: 3px;
+    right: 10px;
+  }
+  .booking-table .search-filter-block .currency {
+    margin-top: 32px;
+  }
+  .booking-table table thead th {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+  }
+  .booking-table table thead th table .conditions_th {
+    width: 28%;
+  }
+  .booking-table table thead th table .per-night_th {
+    width: 16%;
+  }
+  .booking-table table thead th table .total-price_th {
+    width: 15%;
+  }
+  .booking-table table thead th table .book-column_th {
+    width: 20%;
+  }
+  .booking-table table thead .room-type_th {
+    display: none;
+  }
+  .booking-table table tbody .row-info.opened > td {
+    background: #e5eef1;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+    border-bottom: 15px solid #e5eef1;
+    background: #e5eef1;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-open-btn .hotel-button {
+    top: 0;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-preview {
+    width: 33%;
+    float: left;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-preview .info-label {
+    padding: 6px 10px 5px;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-name, .booking-table table tbody .room-type_info-mobile .room-type_info-size, .booking-table table tbody .room-type_info-mobile .room-type_info-special {
+    width: 38%;
+    float: left;
+    padding-left: 15px;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-size {
+    margin-bottom: 5px;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-facilities {
+    width: 29%;
+    float: right;
+    margin-top: -55px;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-facilities ul li i {
+    font-size: 14px;
+    padding-right: 7px;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-button .book-btn {
+    left: 251px;
+    width: 200px;
+    margin-top: 80px;
+    bottom: 0;
+  }
+  .booking-table table tbody .thead-mobile td {
+    border: 0;
+  }
+  .booking-table table tbody .thead-mobile th {
+    background: #d1d7e0;
+    font-weight: 600;
+    color: #5c5c5c;
+    padding: 15px 0;
+    vertical-align: middle;
+    border: 0;
+    text-align: center;
+  }
+  .booking-table table tbody .right-part_info > table {
+    border-left: 1px solid #e5e5e5;
+  }
+  .booking-table table .room-type_info {
+    width: 100%;
+  }
+  .booking-table table .info-label {
+    margin-right: 20px;
   }
 }
 

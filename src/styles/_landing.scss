@@ -744,6 +744,9 @@
         .owl-nav {
           display: none;
         }
+        .owl-dots {
+          display: none;
+        }
       }
       &-name {
         font-size: 16px;
@@ -1263,6 +1266,7 @@
           &_rating {
             .stars-hotel {
               width: 15%;
+              max-width: 90px;
               float: left;
               position: relative;
               top: 1px;
@@ -1805,6 +1809,18 @@
     z-index: 160;
     &--wrapper {
       max-height: 95vh;
+      .mCSB_outside {
+        & + .mCSB_scrollTools {
+          right: -7px;
+        }
+      }
+      .mCSB_scrollTools {
+        .mCSB_dragger {
+          .mCSB_dragger_bar {
+            border-radius: 0;
+          }
+        }
+      }
     }
     .map-item-info {
       padding-bottom: 0;
