@@ -3,10 +3,12 @@
 		span Hotel Facilities
 	include placeholder/hotel-facilities-block
 	.hotel-facilities_block.placeholder-show
-		.row
+		.row.hidden-sm.hidden-xs
 			.col-md-3.col-sm-6
 				.hotel-facilities_block-item
-					h3 Internet
+					h3
+						i.icon-wifi
+						| Internet
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -15,7 +17,9 @@
 							i.fa.fa-check-circle-o(aria-hidden='true')
 							| DSL Cable
 				.hotel-facilities_block-item
-					h3 Bathroom
+					h3
+						i.icon-bathrom
+						| Bathroom
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -36,7 +40,9 @@
 							i.fa.fa-check-circle-o(aria-hidden='true')
 							| Shower
 				.hotel-facilities_block-item
-					h3 Front Desk Services
+					h3
+						i.icon-reception
+						| Front Desk Services
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -58,7 +64,9 @@
 							| 24-Hour Front Desk
 			.col-md-3.col-sm-6
 				.hotel-facilities_block-item
-					h3 General
+					h3
+						i.icon-warning
+						| General
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -103,7 +111,9 @@
 							i.fa.fa-check-circle-o(aria-hidden='true')
 							| Newspapers
 				.hotel-facilities_block-item
-					h3 Business Facilities
+					h3
+						i.icon-old-fashion-briefcase
+						| Business Facilities
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -113,7 +123,9 @@
 							| Meeting/Banquet Facilities
 			.col-md-3.col-sm-6.cleft-sm
 				.hotel-facilities_block-item
-					h3 Media & Technology
+					h3
+						i.icon-device-desktop
+						| Media & Technology
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -137,7 +149,9 @@
 							i.fa.fa-check-circle-o(aria-hidden='true')
 							| Pay-per-view channels
 				.hotel-facilities_block-item
-					h3 Cleaning Services
+					h3
+						i.icon-wet-floot
+						| Cleaning Services
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -159,7 +173,9 @@
 							| Laundry
 			.col-md-3.col-sm-6
 				.hotel-facilities_block-item
-					h3 Food & Drink
+					h3
+						i.icon-beer
+						| Food & Drink
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -186,7 +202,9 @@
 							i.fa.fa-check-circle-o(aria-hidden='true')
 							| Good Coffee!
 				.hotel-facilities_block-item
-					h3 Pool & Spa
+					h3
+						i.icon-wet-floot
+						| Pool & Spa
 					ul
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
@@ -200,3 +218,234 @@
 						li
 							i.fa.fa-check-circle-o(aria-hidden='true')
 							| Fitness Center
+		.row.visible-sm.visible-xs
+			.col-sm-12
+				ul.mobile-home-facilities
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-wifi.icon-title
+							| Internet
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Wi-Fi
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| DSL Cable
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-bathrom.icon-title
+							| Bathroom
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Linens
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Towels
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Toilet
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Free toiletries
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Hairdryer
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Shower
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-reception.icon-title
+							| Front Desk Services
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Concierge Service
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| ATM On Site
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Baggage Storage
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Currency Exchange
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Express Check-in/Check-out
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| 24-Hour Front Desk
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-warning.icon-title
+							| General
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Facilities for Disabled Guests
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Non-Smoking Rooms
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Air Conditioning
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Wake-up service
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Safe
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Elevator
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| VIP Room Facilities
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Family Rooms
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Facilities for Disabled Guests
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Ironing facilities
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Airport Shuttle
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Non-Smoking Rooms
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Iron
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Newspapers
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-old-fashion-briefcase.icon-title
+							| Business Facilities
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Fax/Photocopying
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Meeting/Banquet Facilities
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-device-desktop.icon-title
+							| Media & Technology
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Flat-screen TV
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Cable channels
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Satellite channels
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Radio
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Telephone
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| TV
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Pay-per-view channels
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-wet-floot.icon-title
+							| Cleaning Services
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Daily Housekeeping
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Suit Press
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Shoeshine
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Ironing Service
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Dry Cleaning
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Laundry
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-beer.icon-title
+							| Food & Drink
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Kids' Meals
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Special Diet Meals (upon request)
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Restaurant With Dining Menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Breakfast in the Room
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Bar
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Restaurant
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Minibar
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Good Coffee!
+					li.dropdown
+						button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+							i.fa.fa-plus-square-o(aria-hidden='true')
+							i.fa.fa-minus-square-o(aria-hidden='true')
+							i.icon-wet-floot.icon-title
+							| Pool & Spa
+						ul.dropdown-menu
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Turkish/Steam Bath
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Massage
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Spa
+							li
+								i.fa.fa-check-circle-o(aria-hidden='true')
+								| Fitness Center

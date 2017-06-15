@@ -1,5 +1,5 @@
 .information-block.clearfix
-   .onoffswitch-gallery-wrapper
+   .onoffswitch-gallery-wrapper.hidden-xs
       .onoffswitch-gallery.pull-right
          input#myonoffswitch2.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch2')
          label.onoffswitch-label(for='myonoffswitch2')
@@ -25,7 +25,7 @@
          - for(var i = 1; i < 16; i++)
             button.owl-thumb-item
                img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
-   .sidebar-block.hidden-sm
+   .sidebar-block.hidden-sm.hidden-xs
       .sidebar-wrapper
          include placeholder/information-block-sidebar
          .sidebar-logo.placeholder-show

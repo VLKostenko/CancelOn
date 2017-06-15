@@ -1135,6 +1135,10 @@
     .date-group {
       background: #1d4f62;
       height: 100%;
+      &:before {
+        bottom: -5px;
+        z-index: 3;
+      }
       .form-control {
         margin-top: 25px;
         .date {
@@ -1154,6 +1158,7 @@
         -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
         box-shadow: 0 6px 12px rgba(0,0,0,.175);
         padding: 12px 20px 22px;
+        top: 78px;
         .input-number {
           background: #fff;
         }
@@ -1424,6 +1429,138 @@
       }
       .info-label {
         margin-right: 20px;
+      }
+    }
+  }
+  .hotel-facilities_block {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .mobile-home-facilities {
+    .dropdown-toggle {
+      width: 100%;
+      color: #000;
+      background: #d0d8e1;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 2px solid #fff;
+      text-align: left;
+      padding: 13px 30px 10px 50px;
+      font-size: 18px;
+      position: relative;
+      z-index: 10;
+      &:active {
+        &:hover {
+          background: #d0d8e1;
+          border-color: #fff;
+          color: #000;
+        }
+      }
+      i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 50px;
+        height: 15px;
+        text-align: center;
+        .fa-minus-square-o {
+          display: none;
+        }
+      }
+      .icon-title {
+        position: relative;
+        color: #68b926;
+        padding-right: 10px;
+      }
+    }
+    li {
+      &.dropdown {
+        .dropdown-menu {
+          position: static;
+          padding: 25px 15px;
+          float: none;
+          width: auto;
+          margin-top: 0;
+          background: #f6f6f6;
+          border: 0;
+          box-shadow: none;
+          li {
+            font-size: 16px;
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          .fa {
+            color: #74ce2a;
+            padding-right: 10px;
+          }
+        }
+        &.open {
+          .dropdown-toggle {
+            background: #d0d8e1;
+            border-color: #d0d8e1;
+            color: #000;
+            .fa-plus-square-o {
+              display: none;
+            }
+            .fa-minus-square-o {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .popup {
+    padding-right: 60px;
+    &_title {
+      margin-bottom: 8px;
+    }
+    &_text {
+      line-height: 30px;
+    }
+    &_close {
+      height: 18px;
+    }
+  }
+  .hotel-information_block-tabs {
+    .nav-tabs {
+      display: flex;
+      align-items: center;
+      width: 75%;
+      margin: 0 auto;
+      float: none;
+      li {
+        a {
+          i {
+            font-size: 35px;
+            height: 35px;
+          }
+          .positive,
+          .negative {
+            top: 15px;
+          }
+        }
+      }
+    }
+    .tab-content {
+      width: 100%;
+      .review-block_rating {
+        margin-top: 10px;
+      }
+      .review-block_comments-block {
+        .date {
+          margin-bottom: 3px;
+        }
+        .comment {
+          padding-bottom: 30px;
+          &:before {
+            left: 5px;
+          }
+        }
       }
     }
   }
@@ -1957,5 +2094,174 @@
       width: 269px;
       height: 55px;
     }
+  }
+  .hotel-info-wrapper {
+    & > .container {
+      padding-right: 0!important;
+    }
+  }
+  .hotel-info {
+    .block-wrapper {
+      padding-bottom: 130px;
+      .top-wrapper {
+        padding-right: 14px;
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column-reverse;
+        .left-block {
+          &.bottom-block {
+            padding-bottom: 5px;
+          }
+        }
+        .right-block {
+          width: 100%;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          top: initial;
+          .book-btn {
+            bottom: 15px;
+            top: initial;
+            width: calc(100% - 30px);
+            background: #00b9f1!important;
+            &:hover {
+              background: #0cc6ff!important;
+            }
+          }
+        }
+      }
+      .stars {
+        width: 30%;
+      }
+      .reviews {
+        width: 25%;
+      }
+      .title {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      .labels {
+        margin-top: 0;
+      }
+      .price {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        right: -50px;
+        bottom: initial;
+        margin: 0;
+        text-align: center;
+      }
+      .red-price {
+        position: absolute;
+        left: -115px;
+        right: 0;
+        bottom: 0;
+        top: -13px;
+        margin: 0;
+        line-height: 10px;
+        text-align: center;
+      }
+    }
+  }
+  .information-block {
+    padding: 0 15px;
+    .slider-block {
+      .owl-carousel {
+        .owl-prev,
+        .owl-next {
+          width: 50px;
+        }
+        .owl-item {
+          figure {
+            max-height: 200px;
+          }
+          img {
+            height: 100%;
+            max-width: 260px;
+            max-height: 200px;
+          }
+        }
+      }
+      .owl-thumbs {
+        .owl-thumb-item {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+  .booking-table {
+    .search-filter-block {
+      height: initial;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding: 0;
+      .date-group {
+        width: 100%;
+        height: 60px;
+        background: #1a4e63;
+        margin-left: 15px;
+        &:before {
+          bottom: 0;
+          z-index: 3;
+        }
+        .input-group-addon {
+          padding-top: 0;
+        }
+        .form-control {
+          margin-top: 8px;
+          padding-left: 15px;
+        }
+      }
+      .people-count {
+        width: 100%;
+        height: 60px;
+        margin-left: 15px;
+        &:before {
+          bottom: 0;
+          width: 100%;
+          left: 0;
+        }
+        .book-menu {
+          top: 70px;
+          width: 290px;
+          left: 0;
+        }
+        .input-group-addon {
+          padding-top: 0;
+        }
+        .form-control {
+          margin-top: 8px;
+          padding-left: 15px;
+        }
+        #peopleCount {
+          padding: 5px 5px 3px 1px;
+          margin-top: 18px;
+        }
+        .down-arrow {
+          height: 15px;
+          right: 15px;
+        }
+      }
+      .datepicker-input,
+      .datepicker-output {
+        padding: 5px 5px 3px 1px;
+      }
+    }
+  }
+  .date-picker-wrapper {
+    &.booking-datepicker {
+      right: 0;
+      .month-wrapper {
+        max-width: 270px;
+      }
+    }
+  }
+  .popup {
+    margin: 0 15px 15px;
+  }
+  .hotel-facilities {
+    margin: 0 15px 15px;
   }
 }
