@@ -1298,6 +1298,9 @@
         display: none;
       }
       .date-group {
+        &:before {
+          bottom: -5px;
+        }
         .form-control {
           margin-top: 15px;
         }
@@ -1306,6 +1309,12 @@
         }
       }
       .people-count {
+        &:before {
+          bottom: 8px;
+        }
+        .book-menu {
+          top: 75px;
+        }
         .dropdown-toggle {
           margin-top: 28px;
         }
@@ -1320,6 +1329,7 @@
     }
     table {
       thead {
+        display: none;
         th {
           width: 100%;
           text-align: center;
@@ -1345,10 +1355,44 @@
         }
       }
       tbody {
+        td {
+          border-top: 0;
+        }
         .row-info {
           &.opened {
             & > td {
               background: #e5eef1;
+            }
+          }
+          &.closed {
+            td {
+              padding: 0;
+            }
+            .room-type_info-mobile-wrapper {
+              border-bottom: 0;
+              border-left: 0;
+              border-right: 0;
+            }
+            .thead-mobile {
+              display: none;
+            }
+            .room-type_info {
+              width: 36%;
+              padding: 25px 0;
+              padding-left: 15px;
+            }
+            .right-part_info {
+              .variant {
+                .conditions {
+                  display: none;
+                }
+              }
+            }
+            .room-type_info-preview {
+              .info-label {
+                top: -25px;
+                left: -15px;
+              }
             }
           }
         }
@@ -1369,6 +1413,14 @@
               float: left;
               .info-label {
                 padding: 6px 10px 5px;
+              }
+              .owl-carousel {
+                .owl-item {
+                  img {
+                    max-width: 250px;
+                    max-height: 180px;
+                  }
+                }
               }
             }
             &-name,
@@ -1515,6 +1567,7 @@
     }
   }
   .popup {
+    padding: 40px 25px 25px;
     padding-right: 60px;
     &_title {
       margin-bottom: 8px;

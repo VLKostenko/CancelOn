@@ -11,6 +11,7 @@
   var datepickerInput = $('.search-group .datepicker-input');
   var datepickerInputLanding = $('.booking-table .datepicker-input');
   var input = $('.input-number');
+  var hotelButton = $('.booking-table .room-type_info-open-btn .hotel-button');
 
   /*
    * Custom Functions
@@ -413,6 +414,39 @@
     }
   };
 
+  function buildBookingTable() {
+    $('[data-table="thead-item"]')
+      .wrap("<tr class='thead-mobile'><td><table><tbody></tbody></table></td></tr>");
+    var theadMobile = $('.thead-mobile');
+
+    $('.room-type_info').wrap("<td class='room-type_info-mobile-wrapper'></td>").wrap("<table></table>").wrap("<tbody></tbody>").wrap("<tr class='room-type_info-mobile'></tr>");
+    $('.right-part_info').wrap("<tr></tr>").each(function() {
+      $(this).parent().appendTo($(this).parent().siblings('.room-type_info-mobile-wrapper').find('tbody'));
+    });
+    $('.room-type_info-mobile').after(theadMobile);
+  }
+
+  function unbuildBookingTable() {
+    $('[data-table="thead-item"]').eq(0).appendTo('.room-last_th table tbody');
+    $('.room-type_info-mobile-wrapper .thead-mobile').remove();
+    $('.room-type_info-mobile .room-type_info').each(function() {
+      $(this).appendTo($(this).closest('.row-info'));
+    });
+    $('.right-part_info').each(function() {
+       $(this).appendTo($(this).closest('.row-info'));
+    });
+    $('.room-type_info-mobile-wrapper').remove();
+  }
+
+  function buildBookingTableRow() {
+
+  }
+
+  // function unbuildBookingTableRow(el) {
+  //   console.log(el);
+  //   $('.room-type_info-mobile .room-type_info').appendTo('.right-part_info .variant.variant1');
+  // }
+
   /*
    * Click Functions
    */
@@ -662,36 +696,27 @@
     }
   });
 
-  var hotelButton = $('.booking-table .room-type_info-open-btn .hotel-button');
-  hotelButton.click(function() {
-    $(this)
-      .toggleClass('opened closed')
-      .closest('.row-info')
-      .toggleClass('opened closed');
-    // $(this).closest('.row-info').find('.room-type_info-preview img');
-    // if ( $(this).closest('.row-info').hasClass('closed') ) {
-    //   $(this).closest('.row-info').find('.room-type_info-preview img').fadeOut(200);
-    //   $(this).closest('.row-info').find('.room-type_info-special').fadeOut(200);
-    //   $(this).closest('.row-info').find('.room-type_info-facilities').fadeOut(200);
-    //   $(this).closest('.row-info').find('.room-type_info-button .book-btn').fadeOut(200);
-    //   $(this).closest('.row-info').find('.room-type_info-button .more-btn').fadeIn(200);
-    //   console.log($(this).closest('.row-info').find('.room-type_info-preview img'));
-    // } else {
-    //   $(this).closest('.row-info').find('.room-type_info-preview img').fadeIn(200);
-    //   $(this).closest('.row-info').find('.room-type_info-special').fadeIn(200);
-    //   $(this).closest('.row-info').find('.room-type_info-facilities').fadeIn(200);
-    //   $(this).closest('.row-info').find('.room-type_info-button .book-btn').fadeIn(200);
-    //   $(this).closest('.row-info').find('.room-type_info-button .more-btn').fadeP(200);
-    // }
-    // if ( $(this).closest('.row-info').hasClass('closed') ) {
-    //   $(this).closest('.row-info.closed').animate({
-    //     height: 144
-    //   }, 1000);
-    // } else {
-    //   $(this).closest('.row-info.opened').animate({
-    //     height: 530
-    //   }, 1000);
-    // }
+  $('.booking-table .room-type_info-open-btn .hotel-button').click(function() {
+    if ( $(window).width() > 991 ) {
+      $(this)
+        .toggleClass('opened closed')
+        .closest('.row-info')
+        .toggleClass('opened closed');
+    } else {
+      $(this)
+        .toggleClass('opened closed')
+        .closest('.row-info')
+        .toggleClass('opened closed');
+      if ( $(this).closest('.row-info').hasClass('opened') ) {
+        $(this).closest('.room-type_info')
+          .appendTo($(this).closest('.room-type_info-mobile-wrapper').find('.room-type_info-mobile'));
+      } else {
+        $(this).closest('.room-type_info')
+          .prependTo($(this)
+            .closest('.room-type_info-mobile-wrapper')
+            .find('.right-part_info .variant1'));
+      }
+    }
   });
 
   /*
@@ -997,6 +1022,13 @@
 
   $(window).resize(function() {
 
+    // booking table response
+    if ( $(window).width() > 767 && $(window).width() < 992 ) {
+      buildBookingTable();
+    } else {
+      unbuildBookingTable();
+    }
+
     if ( $('.people-count .book-menu').is(':visible') ) {
       if ( $(window).width() > 767 ) {
         $('.black-bg-search').fadeIn(200);
@@ -1033,10 +1065,6 @@
   });
 
   $(document).ready(function() {
-
-    // $('.pie-statistic .setsize').each(function() {
-    //   $(this).height($(this).width());
-    // });
 
     $('.sticky').Stickyfill();
     initAOS();
@@ -1076,6 +1104,13 @@
       }
     }
 
+    // booking table response
+    if ( $(window).width() > 767 && $(window).width() < 992 ) {
+      buildBookingTable();
+    } else {
+      unbuildBookingTable();
+    }
+
   });
 
   window.addEventListener('load', function() {
@@ -1090,6 +1125,20 @@
 
 
       // window loaded functions
+
+      $('.booking-table .room-type_info-open-btn .hotel-button').each(function() {
+        if ( $(window).width() < 992 ) {
+          if ( $(this).closest('.row-info').hasClass('opened') ) {
+            $(this).closest('.room-type_info')
+              .appendTo($(this).closest('.room-type_info-mobile-wrapper').find('.room-type_info-mobile'));
+          } else {
+            $(this).closest('.room-type_info')
+              .prependTo($(this)
+                .closest('.room-type_info-mobile-wrapper')
+                .find('.right-part_info .variant1'));
+          }
+        }
+      });
 
       reinitMap();
       setMapWrapperHeight();

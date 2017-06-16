@@ -15643,11 +15643,20 @@ aside.show-on-map .panel-group .panel.panel-default {
   .booking-table .search-filter-block:before, .booking-table .search-filter-block:after {
     display: none;
   }
+  .booking-table .search-filter-block .date-group:before {
+    bottom: -5px;
+  }
   .booking-table .search-filter-block .date-group .form-control {
     margin-top: 15px;
   }
   .booking-table .search-filter-block .date-group .input-group-addon {
     padding-top: 22px;
+  }
+  .booking-table .search-filter-block .people-count:before {
+    bottom: 8px;
+  }
+  .booking-table .search-filter-block .people-count .book-menu {
+    top: 75px;
   }
   .booking-table .search-filter-block .people-count .dropdown-toggle {
     margin-top: 28px;
@@ -15658,6 +15667,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .booking-table .search-filter-block .currency {
     margin-top: 32px;
+  }
+  .booking-table table thead {
+    display: none;
   }
   .booking-table table thead th {
     width: 100%;
@@ -15680,8 +15692,34 @@ aside.show-on-map .panel-group .panel.panel-default {
   .booking-table table thead .room-type_th {
     display: none;
   }
+  .booking-table table tbody td {
+    border-top: 0;
+  }
   .booking-table table tbody .row-info.opened > td {
     background: #e5eef1;
+  }
+  .booking-table table tbody .row-info.closed td {
+    padding: 0;
+  }
+  .booking-table table tbody .row-info.closed .room-type_info-mobile-wrapper {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  .booking-table table tbody .row-info.closed .thead-mobile {
+    display: none;
+  }
+  .booking-table table tbody .row-info.closed .room-type_info {
+    width: 36%;
+    padding: 25px 0;
+    padding-left: 15px;
+  }
+  .booking-table table tbody .row-info.closed .right-part_info .variant .conditions {
+    display: none;
+  }
+  .booking-table table tbody .row-info.closed .room-type_info-preview .info-label {
+    top: -25px;
+    left: -15px;
   }
   .booking-table table tbody .room-type_info-mobile .room-type_info {
     padding-top: 0;
@@ -15699,6 +15737,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .booking-table table tbody .room-type_info-mobile .room-type_info-preview .info-label {
     padding: 6px 10px 5px;
+  }
+  .booking-table table tbody .room-type_info-mobile .room-type_info-preview .owl-carousel .owl-item img {
+    max-width: 250px;
+    max-height: 180px;
   }
   .booking-table table tbody .room-type_info-mobile .room-type_info-name, .booking-table table tbody .room-type_info-mobile .room-type_info-size, .booking-table table tbody .room-type_info-mobile .room-type_info-special {
     width: 38%;
@@ -15817,6 +15859,7 @@ aside.show-on-map .panel-group .panel.panel-default {
     display: block;
   }
   .popup {
+    padding: 40px 25px 25px;
     padding-right: 60px;
   }
   .popup_title {

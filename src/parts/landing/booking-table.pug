@@ -73,10 +73,10 @@
       thead
          tr
             th.room-type_th Room type
-            th
+            th.room-last_th
                table
                   tbody
-                     tr
+                     tr(data-table='thead-item')
                         th.conditions_th Conditions
                         th.per-night_th Per Night
                         th.total-price_th Total Price
@@ -84,136 +84,122 @@
                            span.info-label.green.down-triangle Best Price Guaranteed
       tbody
          tr.row-info.opened
-            td
+            td.room-type_info
+               .room-type_info-open-btn
+                  .hotel-button.opened
+                     span.minus -
+                     span.plus +
+               .room-type_info-preview
+                  .owl-carousel.owl-carousel-table-slider
+                     img(src='./images/table-preview2.png', alt='room type image')
+                     img(src='./images/table-preview1.png', alt='room type image')
+                     img(src='./images/table-preview1.png', alt='room type image')
+                     img(src='./images/table-preview2.png', alt='room type image')
+                  .counter
+                  span.info-label.red Only 3 rooms left!
+               .room-type_info-name
+                  span Deluxe Room
+               .room-type_info-size
+                  span 161 square feet
+               .room-type_info-special
+                  ul
+                     li 1 Double Bed or 2 Twin Beds
+                     li Room sleeps 2 guests
+               .room-type_info-facilities
+                  ul
+                     li
+                        i.blue-text.icon-wifi
+                        |  Free Wi-Fi
+                     li
+                        i.blue-text.icon-television
+                        |  TV
+                     li
+                        i.blue-text.icon-shower-head
+                        |  Shower
+               .room-type_info-button
+                  a.book-btn.show-popup(href='javascript:void(0)') Show room information
+                  a.more-btn.show-popup(href='javascript:void(0)') More Details
+            td.right-part_info
                table
                   tbody
-                     tr.room-type_info-mobile
-                        td.room-type_info
-                           .room-type_info-open-btn
-                              .hotel-button.opened
-                                 span.minus -
-                                 span.plus +
-                           .room-type_info-preview
-                              .owl-carousel.owl-carousel-table-slider
-                                 img(src='./images/table-preview2.png', alt='room type image')
-                                 img(src='./images/table-preview1.png', alt='room type image')
-                                 img(src='./images/table-preview1.png', alt='room type image')
-                                 img(src='./images/table-preview2.png', alt='room type image')
-                              .counter
-                              span.info-label.red Only 3 rooms left!
-                           .room-type_info-name
-                              span Deluxe Room
-                           .room-type_info-size
-                              span 161 square feet
-                           .room-type_info-special
+                     tr.variant.variant1.best-variant
+                        td.conditions
+                           .conditions_refund.non
+                              span Non-refundable
+                           .conditions_facilities
                               ul
-                                 li 1 Double Bed or 2 Twin Beds
-                                 li Room sleeps 2 guests
-                           .room-type_info-facilities
-                              ul
-                                 li
-                                    i.blue-text.icon-wifi
+                                 li.green-text
+                                    i.icon-wifi
                                     |  Free Wi-Fi
-                                 li
-                                    i.blue-text.icon-television
-                                    |  TV
-                                 li
-                                    i.blue-text.icon-shower-head
-                                    |  Shower
-                           .room-type_info-button
-                              a.book-btn.show-popup(href='javascript:void(0)') Show room information
-                              a.more-btn.show-popup(href='javascript:void(0)') More Details
-                     tr.thead-mobile
-                        td
-                           table
-                              body
-                                 th.conditions_th Conditions
-                                 th.per-night_th Per Night
-                                 th.total-price_th Total Price
-                                 th.book-column_th
-                                    span.info-label.green.down-triangle Best Price Guaranteed
-                     tr
-                        td.right-part_info
-                           table
-                              tbody
-                                 tr.variant.variant1.best-variant
-                                    td.conditions
-                                       .conditions_refund.non
-                                          span Non-refundable
-                                       .conditions_facilities
-                                          ul
-                                             li.green-text
-                                                i.icon-wifi
-                                                |  Free Wi-Fi
-                                             li.green-text
-                                                i.icon-cup-of-hot-chocolate
-                                                |  Breakfast Included
-                                       .conditions_trivago.no
-                                          img(src='./images/trivago-logo.png', alt='trivago')
-                                    td.per-night
-                                       .per-night_price
-                                          span $160/Night
-                                    td.total-price
-                                       .total-price_range
-                                          span For 7 Days
-                                       .total-price_price
-                                          span $1 120
-                                    td.book-column
-                                       .book-column_button
-                                          a.book-btn(href='javascript:void(0)') Let's Book
-                                 tr.variant.variant2
-                                    td.conditions
-                                       .conditions_refund.free
-                                          span FREE Cancellation
-                                       .conditions_date
-                                          span Until July 9th, 2017
-                                       .conditions_facilities
-                                          ul
-                                             li.green-text
-                                                i.icon-wifi
-                                                |  Free Wi-Fi
-                                             li.green-text
-                                                i.icon-checked
-                                                |  Reserve now, pay later
-                                    td.per-night
-                                       .per-night_price
-                                          span $180/Night
-                                    td.total-price
-                                       .total-price_range
-                                          span For 7 Days
-                                       .total-price_price
-                                          span $1 260
-                                    td.book-column
-                                       .book-column_button
-                                          a.book-btn(href='javascript:void(0)') Let's Book
-                                 tr.variant.variant3
-                                    td.conditions
-                                       .conditions_refund.free
-                                          span FREE Cancellation
-                                       .conditions_date
-                                          span Until July 9th, 2017
-                                       .conditions_facilities
-                                          ul
-                                             li.green-text
-                                                i.icon-wifi
-                                                |  Free Wi-Fi
-                                             li.green-text
-                                                i.icon-cup-of-hot-chocolate
-                                                |  Breakfast Included
-                                             li.green-text
-                                                i.icon-checked
-                                                |  Reserve now, pay later
-                                    td.per-night
-                                       .per-night_price
-                                          span $190/Night
-                                    td.total-price
-                                       .total-price_range
-                                          span For 7 Days
-                                       .total-price_price
-                                          span $1 330
-                                    td.book-column
-                                       .book-column_button
-                                          a.book-btn(href='javascript:void(0)') Let's Book
+                                 li.green-text
+                                    i.icon-cup-of-hot-chocolate
+                                    |  Breakfast Included
+                           .conditions_trivago.no
+                              img(src='./images/trivago-logo.png', alt='trivago')
+                        td.per-night
+                           .per-night_price
+                              span $160/Night
+                        td.total-price
+                           .total-price_range
+                              span For 7 Days
+                           .total-price_price
+                              span $1 120
+                        td.book-column
+                           .book-column_button
+                              a.book-btn(href='javascript:void(0)') Let's Book
+                     tr.variant.variant2
+                        td.conditions
+                           .conditions_refund.free
+                              span FREE Cancellation
+                           .conditions_date
+                              span Until July 9th, 2017
+                           .conditions_facilities
+                              ul
+                                 li.green-text
+                                    i.icon-wifi
+                                    |  Free Wi-Fi
+                                 li.green-text
+                                    i.icon-checked
+                                    |  Reserve now, pay later
+                        td.per-night
+                           .per-night_price
+                              span $180/Night
+                        td.total-price
+                           .total-price_range
+                              span For 7 Days
+                           .total-price_price
+                              span $1 260
+                        td.book-column
+                           .book-column_button
+                              a.book-btn(href='javascript:void(0)') Let's Book
+                     tr.variant.variant3
+                        td.conditions
+                           .conditions_refund.free
+                              span FREE Cancellation
+                           .conditions_date
+                              span Until July 9th, 2017
+                           .conditions_facilities
+                              ul
+                                 li.green-text
+                                    i.icon-wifi
+                                    |  Free Wi-Fi
+                                 li.green-text
+                                    i.icon-cup-of-hot-chocolate
+                                    |  Breakfast Included
+                                 li.green-text
+                                    i.icon-checked
+                                    |  Reserve now, pay later
+                        td.per-night
+                           .per-night_price
+                              span $190/Night
+                        td.total-price
+                           .total-price_range
+                              span For 7 Days
+                           .total-price_price
+                              span $1 330
+                        td.book-column
+                           .book-column_button
+                              a.book-btn(href='javascript:void(0)') Let's Book
          tr.row-info.closed
             td.room-type_info
                .room-type_info-open-btn
