@@ -1363,10 +1363,27 @@
             & > td {
               background: #e5eef1;
             }
+            .room-type_info-open-btn {
+              .hotel-button {
+                width: 25px;
+                height: 25px;
+              }
+            }
           }
           &.closed {
             td {
               padding: 0;
+            }
+            .room-type_info-open-btn {
+              .hotel-button {
+                left: initial;
+                right: 20px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 25px;
+                height: 25px;
+              }
             }
             .room-type_info-mobile-wrapper {
               border-bottom: 0;
@@ -1406,6 +1423,8 @@
             &-open-btn {
               .hotel-button {
                 top: 0;
+                left: initial;
+                right: 0;
               }
             }
             &-preview {
@@ -1614,6 +1633,9 @@
             left: 5px;
           }
         }
+      }
+      .attractions_map {
+        height: 350px;
       }
     }
   }

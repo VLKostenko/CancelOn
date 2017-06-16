@@ -1442,15 +1442,15 @@
           <div class="hotel-information_block clearfix">
             <div class="hotel-information_block-tabs same-height-map">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#location" data-toggle="tab"><i class="icon-placeholders"></i></a></li>
-                <li><a href="#attractions" data-toggle="tab"><i class="icon-skyline"></i></a></li>
+                <li><a href="#location" data-toggle="tab"><i class="icon-placeholders"></i></a></li>
+                <li class="active"><a href="#attractions" data-toggle="tab"><i class="icon-skyline"></i></a></li>
                 <li><a href="#good-to-know" data-toggle="tab"><i class="icon-credit-card-1"></i></a></li>
                 <li><a class="likes-counter" href="#reviews" data-toggle="tab"><i class="icon-like"></i><span class="negative">256</span><span class="positive">726</span></a></li>
                 <li><a href="#analytics" data-toggle="tab"><i class="icon-line-chart"></i></a></li>
                 <li><a href="#contacts" data-toggle="tab"><i class="icon-speech-bubble"></i></a></li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane active" id="location">
+                <div class="tab-pane" id="location">
                   <h3>Location</h3>
                   <p class="main">Our Las Vegas Hotel Offers Close Access To Mccarran International Airport Ideally Located Near Mccarran International Airport Las), Our Holiday Inn Express Hotel Suites In Las Vegas Provides Access To Local Businesses, As Well As To The Famous Las Vegas Strip. Our Hotel Is Minutes From The Las Vegas Strip And Fremont Street, Where You Will Find The World's Best Dining, Shopping And Entertainment. Nature Lovers Can Take A Short Drive To The Beautiful Red Rock Recreation Area, And Avid Shoppers Can Enjoy The Las Vegas Outlet Mall Or The Fashion Show Mall.</p>
                   <p><b>General:</b></p>
@@ -1464,8 +1464,11 @@
                   <p>-1 km to the nearest fair site (?)</p>
                   <p>Close to the beach</p>
                 </div>
-                <div class="tab-pane" id="attractions">
+                <div class="tab-pane active" id="attractions">
                   <h3>Attractions</h3>
+                  <div class="attractions_map">
+                    <div id="map2"></div>
+                  </div>
                   <div class="attractions_gallery">
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image1.png" alt="attractions image" srcset="images/attractions-image1.png 1x, images/attractions-image1@2x.png 2x, images/attractions-image1@3x.png 3x"></a></div>
@@ -1507,7 +1510,7 @@
                       <div class="title">Liberty of London Department Store</div>
                       <div class="distance">0.2 km</div>
                     </div>
-                    <div class="attractions_gallery-item visible-md visible-lg">
+                    <div class="attractions_gallery-item visible-lg">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image3.png" alt="attractions image" srcset="images/attractions-image3.png 1x, images/attractions-image3@2x.png 2x, images/attractions-image3@3x.png 3x"></a></div>
                       <div class="title">Carnaby Street</div>
                       <div class="distance">0.3 km</div>

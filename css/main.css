@@ -13362,9 +13362,33 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-bottom: 5px;
 }
 
+.hotel-information_block-tabs .tab-content .attractions_map {
+  height: 250px;
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .hotel-information_block-tabs .tab-content .attractions_map {
+    display: block;
+  }
+}
+
+.hotel-information_block-tabs .tab-content .attractions_map #map2 {
+  width: 100%;
+  height: 100%;
+}
+
+.hotel-information_block-tabs .tab-content .attractions_map #map2 .thumbnail {
+  margin-bottom: 0;
+}
+
+.hotel-information_block-tabs .tab-content .attractions_map #map2 .thumbnail .caption {
+  padding: 25px 35px 20px 15px;
+}
+
 .hotel-information_block-tabs .tab-content .attractions_gallery {
-  padding-right: 15px;
-  margin-top: 35px;
+  padding-right: 0;
+  margin-top: 25px;
   max-height: 750px;
 }
 
@@ -15698,8 +15722,21 @@ aside.show-on-map .panel-group .panel.panel-default {
   .booking-table table tbody .row-info.opened > td {
     background: #e5eef1;
   }
+  .booking-table table tbody .row-info.opened .room-type_info-open-btn .hotel-button {
+    width: 25px;
+    height: 25px;
+  }
   .booking-table table tbody .row-info.closed td {
     padding: 0;
+  }
+  .booking-table table tbody .row-info.closed .room-type_info-open-btn .hotel-button {
+    left: initial;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 25px;
+    height: 25px;
   }
   .booking-table table tbody .row-info.closed .room-type_info-mobile-wrapper {
     border-bottom: 0;
@@ -15730,6 +15767,8 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .booking-table table tbody .room-type_info-mobile .room-type_info-open-btn .hotel-button {
     top: 0;
+    left: initial;
+    right: 0;
   }
   .booking-table table tbody .room-type_info-mobile .room-type_info-preview {
     width: 33%;
@@ -15904,6 +15943,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .hotel-information_block-tabs .tab-content .review-block_comments-block .comment:before {
     left: 5px;
+  }
+  .hotel-information_block-tabs .tab-content .attractions_map {
+    height: 350px;
   }
 }
 
