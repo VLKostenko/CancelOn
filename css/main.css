@@ -9565,6 +9565,31 @@ aside.show-on-map .panel-group .panel.panel-default {
   color: #00c2ff;
 }
 
+@media screen and (max-width: 767px) {
+  /* .draggable navs */
+  .draggable-container {
+    /* no selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .draggable {
+    width: 9999999px;
+    white-space: nowrap;
+    /* all on same line */
+    font-size: 0;
+    /* fix inline block spacing */
+  }
+  .draggable li p {
+    font-size: 14px;
+  }
+  .draggable.nav > li > a {
+    font-size: 14px;
+  }
+}
+
 /* end of helper classes */
 /* 8 icomoon */
 @font-face {
@@ -16580,6 +16605,164 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .hotel-facilities {
     margin: 0 15px 15px;
+  }
+  .hotel-facilities_title {
+    font-size: 18px;
+  }
+  .hotel-information {
+    margin: 0 15px 15px;
+    overflow: hidden;
+  }
+  .hotel-information_title {
+    font-size: 18px;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item {
+    width: 47%;
+    position: relative;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item .image {
+    margin-bottom: 0;
+    transition: margin-bottom 0.4s ease;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item .description-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% * 2 + 13%);
+    background: #194f62;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    padding: 15px 10px;
+    position: absolute;
+    height: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item .description-wrapper:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #194f62;
+    position: absolute;
+    z-index: 1;
+    top: -9px;
+    left: calc(48% / 2 - 12px);
+    right: initial;
+    margin: auto;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item .description-wrapper .title {
+    margin-top: 0;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item .description-wrapper .distance {
+    color: #fff;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item .active {
+    margin-bottom: 105px;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item .active + .description-wrapper {
+    opacity: 1;
+    visibility: visible;
+    height: 90px;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item:nth-child(2n) .description-wrapper {
+    left: calc(-100% - 13%);
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item:nth-child(2n) .description-wrapper:before {
+    left: initial;
+    right: calc(48% / 2 - 12px);
+  }
+  .hotel-information_block-tabs .nav-tabs {
+    min-width: 490px;
+  }
+  .hotel-information_block-tabs .nav-tabs li {
+    opacity: .2;
+    transition: opacity 0.2s ease;
+  }
+  .hotel-information_block-tabs .nav-tabs li.active {
+    opacity: 1;
+  }
+  .hotel-information_block-tabs .nav-tabs li.active p {
+    opacity: 1;
+  }
+  .hotel-information_block-tabs .nav-tabs li a .positive {
+    right: 0;
+  }
+  .hotel-information_block-tabs .nav-tabs li a .negative {
+    left: 0;
+  }
+  .hotel-information_block-tabs .nav-tabs li p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    top: -25px;
+    color: #29b0ff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .hotel-information_block-tabs .tab-content {
+    padding-left: 0;
+    min-height: 700px;
+  }
+  .hotel-information_block-tabs .tab-content h3 {
+    line-height: 36px;
+    padding-right: 120px;
+  }
+  .hotel-information_block-tabs .tab-content .review-block_rating .stars-hotel {
+    width: 90px;
+  }
+  .hotel-information_block-tabs .tab-content .mobile-analytics {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 700px;
+  }
+  .hotel-information_block-tabs .tab-content .mobile-analytics a, .hotel-information_block-tabs .tab-content .mobile-analytics p {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  .hotel-information_block-tabs .tab-content .mobile-analytics a {
+    color: #34b3ff;
+    text-decoration: underline !important;
+  }
+  .hotel-information_block-tabs .tab-content .contacts_form .form-group .book-btn {
+    position: static;
+    background: #00b9f1 !important;
+  }
+  .hotel-information_block-tabs .tab-content .good-to-know_payments {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .hotel-information_block-tabs .tab-content .good-to-know_payments img {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .hotel-information_block-map {
+    display: none;
   }
 }
 

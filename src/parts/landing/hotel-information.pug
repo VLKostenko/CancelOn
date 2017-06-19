@@ -1,34 +1,41 @@
 .hotel-information
 	.hotel-information_title
 		span Hotel information
-		.onoffswitch-hotel-info.pull-right
+		.onoffswitch-hotel-info.pull-right.hidden-xs
 			input#myonoffswitch3.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch2', checked='checked')
 			label.onoffswitch-label(for='myonoffswitch3')
 				span.onoffswitch-inner
 				span.onoffswitch-switch
 	.hotel-information_block.clearfix
 		.hotel-information_block-tabs.same-height-map
-			ul.nav.nav-tabs
-				li
-					a(href='#location', data-toggle='tab')
-						i.icon-placeholders
-				li.active
-					a(href='#attractions', data-toggle='tab')
-						i.icon-skyline
-				li
-					a(href='#good-to-know', data-toggle='tab')
-						i.icon-credit-card-1
-				li
-					a.likes-counter(href='#reviews', data-toggle='tab')
-						i.icon-like
-						span.negative 256
-						span.positive 726
-				li
-					a(href='#analytics', data-toggle='tab')
-						i.icon-line-chart
-				li
-					a(href='#contacts', data-toggle='tab')
-						i.icon-speech-bubble
+			.draggable-container
+				ul.nav.nav-tabs.draggable.draggable-center
+					li
+						a(href='#location', data-toggle='tab')
+							i.icon-placeholders
+						p.visible-xs Location
+					li.active
+						a(href='#attractions', data-toggle='tab')
+							i.icon-skyline
+						p.visible-xs Attractions
+					li
+						a(href='#good-to-know', data-toggle='tab')
+							i.icon-credit-card-1
+						p.visible-xs Good To Know
+					li
+						a.likes-counter(href='#reviews', data-toggle='tab')
+							i.icon-like
+							span.negative 256
+							span.positive 726
+						p.visible-xs Reviews
+					li
+						a(href='#analytics', data-toggle='tab')
+							i.icon-line-chart
+						p.visible-xs Analytics
+					li
+						a(href='#contacts', data-toggle='tab')
+							i.icon-speech-bubble
+						p.visible-xs Contacts
 			.tab-content
 				#location.tab-pane
 					h3 Location
@@ -56,66 +63,75 @@
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image1.png', alt='attractions image')
-							.title London Palladium
-							.distance 0.1 km
+							.description-wrapper
+								.title London Palladium
+								.distance 0.1 km
 						.attractions_gallery-item
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image2.png', alt='attractions image')
-							.title Liberty of London Department Store
-							.distance 0.2 km
+							.description-wrapper
+								.title Liberty of London Department Store
+								.distance 0.2 km
 						.attractions_gallery-item
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image3.png', alt='attractions image')
-							.title Carnaby Street
-							.distance 0.3 km
+							.description-wrapper
+								.title Carnaby Street
+								.distance 0.3 km
 						.attractions_gallery-item
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image4.png', alt='attractions image')
-							.title Hamleys Toy Store
-							.distance 0.36 km
+							.description-wrapper
+								.title Hamleys Toy Store
+								.distance 0.36 km
 						.attractions_gallery-item
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image5.png', alt='attractions image')
-							.title Regent Street
-							.distance 0.9 km
+							.description-wrapper
+								.title Regent Street
+								.distance 0.9 km
 						.attractions_gallery-item
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image6.png', alt='attractions image')
-							.title Big Ben
-							.distance 0.4 km
+							.description-wrapper
+								.title Big Ben
+								.distance 0.4 km
 						.attractions_gallery-item
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image1.png', alt='attractions image')
-							.title London Palladium
-							.distance 0.1 km
+							.description-wrapper
+								.title London Palladium
+								.distance 0.1 km
 						.attractions_gallery-item
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image2.png', alt='attractions image')
-							.title Liberty of London Department Store
-							.distance 0.2 km
+							.description-wrapper
+								.title Liberty of London Department Store
+								.distance 0.2 km
 						.attractions_gallery-item.visible-lg
 							.image
 								a(href='javascript:void(0)')
 									img(src='images/attractions-image3.png', alt='attractions image')
-							.title Carnaby Street
-							.distance 0.3 km
+							.description-wrapper
+								.title Carnaby Street
+								.distance 0.3 km
 
 				#good-to-know.tab-pane
 					h3 Good to Know
 					.row.mt-15
-						.col-sm-3
+						.col-sm-3.col-xs-6
 							p
 								b Check In
 							p
 								b Check Out
-						.col-sm-9
+						.col-sm-9.col-xs-6
 							p 14:00 - 00:00
 							p Until 12:00
 					.divider.pull-left
@@ -123,7 +139,7 @@
 						.col-sm-3
 							p
 								b Cancellation/
-								br
+								br.hidden-xs
 								b prepayment
 						.col-sm-9
 							p Cancellation and prepayment policies vary according to room type. Please check what room conditions may apply when selecting your room above.
@@ -270,97 +286,102 @@
 										a(href='javascript:void(0)') 2
 									li.numbers.active
 										a(href='javascript:void(0)') 3
-									li.numbers
+									li.numbers.hidden-xs
 										a(href='javascript:void(0)') 4
-									li.numbers
+									li.numbers.hidden-xs
 										a(href='javascript:void(0)') 5
-									li
+									li.hidden-xs
 										a(href='javascript:void(0)') Next
 				#analytics.tab-pane
-					h3 Analyst views and reservations
-					.main-statistic.clearfix
-						#chart-legends
-						.main-chart-wrapper
-							#parentCanvas
-								canvas#canvas(width='443', height='200')
-					.row.pie-statistic
-						.col-sm-4
-							.text-center
-								.progress-radial.progress-90.setsize.first
-									.overlay
-										p 92%
-								span.pie_title.pie_title1 Positive Appreciated this hotel
-						.col-sm-4
-							.text-center
-								.progress-radial.progress-60.setsize.second
-									.overlay
-										p 1253
-								span.pie_title.pie_title2 Re-booking Rooms In This Hotel
-						.col-sm-4
-							.text-center
-								.progress-radial.progress-75.setsize.third
-									.overlay
-										p 16 421
-								span.pie_title.pie_title3 People were satisfied
-					.statistic
-						.statistic_title
-							span 3,090 people have reviewed this hotel
-						.statistic_block
-							.row
-								.col-sm-4
-									.ul-title Traveller rating
-									ul.traveller-rating
-										li.first
-											span 2,539
-										li.second
-											span 430
-										li.third
-											span 71
-										li.fourth
-											span 30
-										li.fifth
-											span 19
-								.col-sm-3
-									.ul-title See reviews for
-									ul.reviews-category
-										li
-											i.icon.icon-family-room
-											.text Families
-											.count 548
-										li
-											i.icon.icon-valentines-heart
-											.text Couples
-											.count 1621
-										li
-											i.icon.icon-man-user
-											.text Solo
-											.count 11
-										li
-											i.icon.icon-old-fashion-briefcase
-											.text Business
-											.count 172
-								.col-sm-5
-									.ul-title Rating summary
-									ul.rating-summary
-										li
-											span Location
-											img(src='./images/icons/rate/5.0.svg', alt='rating')
-										li
-											span Sleep Quality
-											img(src='./images/icons/rate/5.0.svg', alt='rating')
-										li
-											span Rooms
-											img(src='./images/icons/rate/5.0.svg', alt='rating')
-										li
-											span Service
-											img(src='./images/icons/rate/5.0.svg', alt='rating')
-										li
-											span Value
-											img(src='./images/icons/rate/5.0.svg', alt='rating')
-										li
-											span Cleanlines
-											img(src='./images/icons/rate/5.0.svg', alt='rating')
+					.hidden-xs
+						h3 Analyst views and reservations
+						.main-statistic.clearfix
+							#chart-legends
+							.main-chart-wrapper
+								#parentCanvas
+									canvas#canvas(width='443', height='200')
+						.row.pie-statistic
+							.col-sm-4
+								.text-center
+									.progress-radial.progress-90.setsize.first
+										.overlay
+											p 92%
+									span.pie_title.pie_title1 Positive Appreciated this hotel
+							.col-sm-4
+								.text-center
+									.progress-radial.progress-60.setsize.second
+										.overlay
+											p 1253
+									span.pie_title.pie_title2 Re-booking Rooms In This Hotel
+							.col-sm-4
+								.text-center
+									.progress-radial.progress-75.setsize.third
+										.overlay
+											p 16 421
+									span.pie_title.pie_title3 People were satisfied
+						.statistic
+							.statistic_title
+								span 3,090 people have reviewed this hotel
+							.statistic_block
+								.row
+									.col-sm-4
+										.ul-title Traveller rating
+										ul.traveller-rating
+											li.first
+												span 2,539
+											li.second
+												span 430
+											li.third
+												span 71
+											li.fourth
+												span 30
+											li.fifth
+												span 19
+									.col-sm-3
+										.ul-title See reviews for
+										ul.reviews-category
+											li
+												i.icon.icon-family-room
+												.text Families
+												.count 548
+											li
+												i.icon.icon-valentines-heart
+												.text Couples
+												.count 1621
+											li
+												i.icon.icon-man-user
+												.text Solo
+												.count 11
+											li
+												i.icon.icon-old-fashion-briefcase
+												.text Business
+												.count 172
+									.col-sm-5
+										.ul-title Rating summary
+										ul.rating-summary
+											li
+												span Location
+												img(src='./images/icons/rate/5.0.svg', alt='rating')
+											li
+												span Sleep Quality
+												img(src='./images/icons/rate/5.0.svg', alt='rating')
+											li
+												span Rooms
+												img(src='./images/icons/rate/5.0.svg', alt='rating')
+											li
+												span Service
+												img(src='./images/icons/rate/5.0.svg', alt='rating')
+											li
+												span Value
+												img(src='./images/icons/rate/5.0.svg', alt='rating')
+											li
+												span Cleanlines
+												img(src='./images/icons/rate/5.0.svg', alt='rating')
 
+					.visible-xs
+						.mobile-analytics
+							p If you want to see Analytics System please
+							a(href='javascript:void(0)') Open Desktop Version
 				#contacts.tab-pane
 					h3 Contact Us
 					p.main Dissuade ecstatic and properly saw entirely sir why laughter endeavor. In on my jointure horrible margaret suitable he followed speedily. Indeed vanity excuse or mr lovers of on. By offer scale an stuff. Blush be sorry no sight. Sang lose of hour then he left find.

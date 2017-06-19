@@ -1434,21 +1434,35 @@
         </div>
         <div class="hotel-information">
           <div class="hotel-information_title"><span>Hotel information</span>
-            <div class="onoffswitch-hotel-info pull-right">
+            <div class="onoffswitch-hotel-info pull-right hidden-xs">
               <input class="myonoffswitch onoffswitch-checkbox" id="myonoffswitch3" type="checkbox" name="onoffswitch2" checked="checked">
               <label class="onoffswitch-label" for="myonoffswitch3"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
             </div>
           </div>
           <div class="hotel-information_block clearfix">
             <div class="hotel-information_block-tabs same-height-map">
-              <ul class="nav nav-tabs">
-                <li><a href="#location" data-toggle="tab"><i class="icon-placeholders"></i></a></li>
-                <li class="active"><a href="#attractions" data-toggle="tab"><i class="icon-skyline"></i></a></li>
-                <li><a href="#good-to-know" data-toggle="tab"><i class="icon-credit-card-1"></i></a></li>
-                <li><a class="likes-counter" href="#reviews" data-toggle="tab"><i class="icon-like"></i><span class="negative">256</span><span class="positive">726</span></a></li>
-                <li><a href="#analytics" data-toggle="tab"><i class="icon-line-chart"></i></a></li>
-                <li><a href="#contacts" data-toggle="tab"><i class="icon-speech-bubble"></i></a></li>
-              </ul>
+              <div class="draggable-container">
+                <ul class="nav nav-tabs draggable draggable-center">
+                  <li><a href="#location" data-toggle="tab"><i class="icon-placeholders"></i></a>
+                    <p class="visible-xs">Location</p>
+                  </li>
+                  <li class="active"><a href="#attractions" data-toggle="tab"><i class="icon-skyline"></i></a>
+                    <p class="visible-xs">Attractions</p>
+                  </li>
+                  <li><a href="#good-to-know" data-toggle="tab"><i class="icon-credit-card-1"></i></a>
+                    <p class="visible-xs">Good To Know</p>
+                  </li>
+                  <li><a class="likes-counter" href="#reviews" data-toggle="tab"><i class="icon-like"></i><span class="negative">256</span><span class="positive">726</span></a>
+                    <p class="visible-xs">Reviews</p>
+                  </li>
+                  <li><a href="#analytics" data-toggle="tab"><i class="icon-line-chart"></i></a>
+                    <p class="visible-xs">Analytics</p>
+                  </li>
+                  <li><a href="#contacts" data-toggle="tab"><i class="icon-speech-bubble"></i></a>
+                    <p class="visible-xs">Contacts</p>
+                  </li>
+                </ul>
+              </div>
               <div class="tab-content">
                 <div class="tab-pane" id="location">
                   <h3>Location</h3>
@@ -1472,59 +1486,77 @@
                   <div class="attractions_gallery">
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image1.png" alt="attractions image" srcset="images/attractions-image1.png 1x, images/attractions-image1@2x.png 2x, images/attractions-image1@3x.png 3x"></a></div>
-                      <div class="title">London Palladium</div>
-                      <div class="distance">0.1 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">London Palladium</div>
+                        <div class="distance">0.1 km</div>
+                      </div>
                     </div>
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image2.png" alt="attractions image" srcset="images/attractions-image2.png 1x, images/attractions-image2@2x.png 2x, images/attractions-image2@3x.png 3x"></a></div>
-                      <div class="title">Liberty of London Department Store</div>
-                      <div class="distance">0.2 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">Liberty of London Department Store</div>
+                        <div class="distance">0.2 km</div>
+                      </div>
                     </div>
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image3.png" alt="attractions image" srcset="images/attractions-image3.png 1x, images/attractions-image3@2x.png 2x, images/attractions-image3@3x.png 3x"></a></div>
-                      <div class="title">Carnaby Street</div>
-                      <div class="distance">0.3 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">Carnaby Street</div>
+                        <div class="distance">0.3 km</div>
+                      </div>
                     </div>
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image4.png" alt="attractions image" srcset="images/attractions-image4.png 1x, images/attractions-image4@2x.png 2x, images/attractions-image4@3x.png 3x"></a></div>
-                      <div class="title">Hamleys Toy Store</div>
-                      <div class="distance">0.36 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">Hamleys Toy Store</div>
+                        <div class="distance">0.36 km</div>
+                      </div>
                     </div>
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image5.png" alt="attractions image" srcset="images/attractions-image5.png 1x, images/attractions-image5@2x.png 2x, images/attractions-image5@3x.png 3x"></a></div>
-                      <div class="title">Regent Street</div>
-                      <div class="distance">0.9 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">Regent Street</div>
+                        <div class="distance">0.9 km</div>
+                      </div>
                     </div>
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image6.png" alt="attractions image" srcset="images/attractions-image6.png 1x, images/attractions-image6@2x.png 2x, images/attractions-image6@3x.png 3x"></a></div>
-                      <div class="title">Big Ben</div>
-                      <div class="distance">0.4 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">Big Ben</div>
+                        <div class="distance">0.4 km</div>
+                      </div>
                     </div>
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image1.png" alt="attractions image" srcset="images/attractions-image1.png 1x, images/attractions-image1@2x.png 2x, images/attractions-image1@3x.png 3x"></a></div>
-                      <div class="title">London Palladium</div>
-                      <div class="distance">0.1 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">London Palladium</div>
+                        <div class="distance">0.1 km</div>
+                      </div>
                     </div>
                     <div class="attractions_gallery-item">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image2.png" alt="attractions image" srcset="images/attractions-image2.png 1x, images/attractions-image2@2x.png 2x, images/attractions-image2@3x.png 3x"></a></div>
-                      <div class="title">Liberty of London Department Store</div>
-                      <div class="distance">0.2 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">Liberty of London Department Store</div>
+                        <div class="distance">0.2 km</div>
+                      </div>
                     </div>
                     <div class="attractions_gallery-item visible-lg">
                       <div class="image"><a href="javascript:void(0)"><img src="images/attractions-image3.png" alt="attractions image" srcset="images/attractions-image3.png 1x, images/attractions-image3@2x.png 2x, images/attractions-image3@3x.png 3x"></a></div>
-                      <div class="title">Carnaby Street</div>
-                      <div class="distance">0.3 km</div>
+                      <div class="description-wrapper">
+                        <div class="title">Carnaby Street</div>
+                        <div class="distance">0.3 km</div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane" id="good-to-know">
                   <h3>Good to Know</h3>
                   <div class="row mt-15">
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-xs-6">
                       <p><b>Check In</b></p>
                       <p><b>Check Out</b></p>
                     </div>
-                    <div class="col-sm-9">
+                    <div class="col-sm-9 col-xs-6">
                       <p>14:00 - 00:00</p>
                       <p>Until 12:00</p>
                     </div>
@@ -1532,7 +1564,7 @@
                   <div class="divider pull-left"></div>
                   <div class="row">
                     <div class="col-sm-3">
-                      <p><b>Cancellation/</b><br><b>prepayment</b></p>
+                      <p><b>Cancellation/</b><br class="hidden-xs"><b>prepayment</b></p>
                     </div>
                     <div class="col-sm-9">
                       <p>Cancellation and prepayment policies vary according to room type. Please check what room conditions may apply when selecting your room above.</p>
@@ -1644,100 +1676,107 @@
                           <li class="numbers"><a href="javascript:void(0)">1</a></li>
                           <li class="numbers"><a href="javascript:void(0)">2</a></li>
                           <li class="numbers active"><a href="javascript:void(0)">3</a></li>
-                          <li class="numbers"><a href="javascript:void(0)">4</a></li>
-                          <li class="numbers"><a href="javascript:void(0)">5</a></li>
-                          <li><a href="javascript:void(0)">Next</a></li>
+                          <li class="numbers hidden-xs"><a href="javascript:void(0)">4</a></li>
+                          <li class="numbers hidden-xs"><a href="javascript:void(0)">5</a></li>
+                          <li class="hidden-xs"><a href="javascript:void(0)">Next</a></li>
                         </ul>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane" id="analytics">
-                  <h3>Analyst views and reservations</h3>
-                  <div class="main-statistic clearfix">
-                    <div id="chart-legends"></div>
-                    <div class="main-chart-wrapper">
-                      <div id="parentCanvas">
-                        <canvas id="canvas" width="443" height="200"></canvas>
+                  <div class="hidden-xs">
+                    <h3>Analyst views and reservations</h3>
+                    <div class="main-statistic clearfix">
+                      <div id="chart-legends"></div>
+                      <div class="main-chart-wrapper">
+                        <div id="parentCanvas">
+                          <canvas id="canvas" width="443" height="200"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row pie-statistic">
+                      <div class="col-sm-4">
+                        <div class="text-center">
+                          <div class="progress-radial progress-90 setsize first">
+                            <div class="overlay">
+                              <p>92%</p>
+                            </div>
+                          </div><span class="pie_title pie_title1">Positive Appreciated this hotel</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="text-center">
+                          <div class="progress-radial progress-60 setsize second">
+                            <div class="overlay">
+                              <p>1253</p>
+                            </div>
+                          </div><span class="pie_title pie_title2">Re-booking Rooms In This Hotel</span>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="text-center">
+                          <div class="progress-radial progress-75 setsize third">
+                            <div class="overlay">
+                              <p>16 421</p>
+                            </div>
+                          </div><span class="pie_title pie_title3">People were satisfied</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="statistic">
+                      <div class="statistic_title"><span>3,090 people have reviewed this hotel</span></div>
+                      <div class="statistic_block">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <div class="ul-title">Traveller rating</div>
+                            <ul class="traveller-rating">
+                              <li class="first"><span>2,539</span></li>
+                              <li class="second"><span>430</span></li>
+                              <li class="third"><span>71</span></li>
+                              <li class="fourth"><span>30</span></li>
+                              <li class="fifth"><span>19</span></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3">
+                            <div class="ul-title">See reviews for</div>
+                            <ul class="reviews-category">
+                              <li><i class="icon icon-family-room"></i>
+                                <div class="text">Families</div>
+                                <div class="count">548</div>
+                              </li>
+                              <li><i class="icon icon-valentines-heart"></i>
+                                <div class="text">Couples</div>
+                                <div class="count">1621</div>
+                              </li>
+                              <li><i class="icon icon-man-user"></i>
+                                <div class="text">Solo</div>
+                                <div class="count">11</div>
+                              </li>
+                              <li><i class="icon icon-old-fashion-briefcase"></i>
+                                <div class="text">Business</div>
+                                <div class="count">172</div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-5">
+                            <div class="ul-title">Rating summary</div>
+                            <ul class="rating-summary">
+                              <li><span>Location</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                              <li><span>Sleep Quality</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                              <li><span>Rooms</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                              <li><span>Service</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                              <li><span>Value</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                              <li><span>Cleanlines</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row pie-statistic">
-                    <div class="col-sm-4">
-                      <div class="text-center">
-                        <div class="progress-radial progress-90 setsize first">
-                          <div class="overlay">
-                            <p>92%</p>
-                          </div>
-                        </div><span class="pie_title pie_title1">Positive Appreciated this hotel</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="text-center">
-                        <div class="progress-radial progress-60 setsize second">
-                          <div class="overlay">
-                            <p>1253</p>
-                          </div>
-                        </div><span class="pie_title pie_title2">Re-booking Rooms In This Hotel</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="text-center">
-                        <div class="progress-radial progress-75 setsize third">
-                          <div class="overlay">
-                            <p>16 421</p>
-                          </div>
-                        </div><span class="pie_title pie_title3">People were satisfied</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="statistic">
-                    <div class="statistic_title"><span>3,090 people have reviewed this hotel</span></div>
-                    <div class="statistic_block">
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <div class="ul-title">Traveller rating</div>
-                          <ul class="traveller-rating">
-                            <li class="first"><span>2,539</span></li>
-                            <li class="second"><span>430</span></li>
-                            <li class="third"><span>71</span></li>
-                            <li class="fourth"><span>30</span></li>
-                            <li class="fifth"><span>19</span></li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-3">
-                          <div class="ul-title">See reviews for</div>
-                          <ul class="reviews-category">
-                            <li><i class="icon icon-family-room"></i>
-                              <div class="text">Families</div>
-                              <div class="count">548</div>
-                            </li>
-                            <li><i class="icon icon-valentines-heart"></i>
-                              <div class="text">Couples</div>
-                              <div class="count">1621</div>
-                            </li>
-                            <li><i class="icon icon-man-user"></i>
-                              <div class="text">Solo</div>
-                              <div class="count">11</div>
-                            </li>
-                            <li><i class="icon icon-old-fashion-briefcase"></i>
-                              <div class="text">Business</div>
-                              <div class="count">172</div>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-sm-5">
-                          <div class="ul-title">Rating summary</div>
-                          <ul class="rating-summary">
-                            <li><span>Location</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
-                            <li><span>Sleep Quality</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
-                            <li><span>Rooms</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
-                            <li><span>Service</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
-                            <li><span>Value</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
-                            <li><span>Cleanlines</span><img src="./images/icons/rate/5.0.svg" alt="rating"></li>
-                          </ul>
-                        </div>
-                      </div>
+                  <div class="visible-xs">
+                    <div class="mobile-analytics">
+                      <p>If you want to see Analytics System please</p><a href="javascript:void(0)">Open Desktop Version</a>
                     </div>
                   </div>
                 </div>
