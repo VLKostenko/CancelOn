@@ -130,8 +130,8 @@ $(document).ready(function() {
           console.log('Time of loading table', request_time + ' milliseconds');
           console.log('Size of loaded table', xhr.getResponseHeader('Content-Length') + ' bytes');
         },
-        error: function(jqXHR, textStatus, errorThrown) {
-          alert(textStatus + ': ' + errorThrown + ' please, try again later');
+        error: function() {
+          alert('Tables loading failed, please, use server');
         }
       });
     }
