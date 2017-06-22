@@ -24,7 +24,7 @@ $(document).ready(function() {
     event.preventDefault();
     addSpinnerSpin();
     setTimeout(function() {
-      loadContent(href);
+      loadContentSearch(href);
       console.log('content loaded');
     }, 2000);
     setTimeout(function() {
@@ -32,7 +32,7 @@ $(document).ready(function() {
     }, 2100);
   });
 
-  function loadContent(url) {
+  function loadContentSearch(url) {
     $.ajax({
       url: url,
       type: 'GET',
@@ -66,5 +66,74 @@ $(document).ready(function() {
         alert(textStatus + ': ' + errorThrown + ' please, try again later');
       }
     });
+  }
+
+  $(window).load(function() {
+    if ( $(window).width() < 768 ) {
+      loadContentTable('table-mobile');
+    } else if ( $(window).width() > 768 && $(window).width() < 992 ) {
+      loadContentTable('table-tablet');
+    } else {
+      loadContentTable('table-desktop');
+    }
+  });
+
+  $(window).resize(function() {
+    if ( $(window).width() < 768 ) {
+      loadContentTable('table-mobile');
+    } else if ( $(window).width() > 768 && $(window).width() < 992 ) {
+      loadContentTable('table-tablet');
+    } else {
+      loadContentTable('table-desktop');
+    }
+  });
+
+  function loadContentTable(tableType) {
+    var existing = $('.booking-table table.table.table-responsive').hasClass(tableType);
+    if ( !existing ) {
+      var xhr = $.ajax({
+        url: '/partial/' + tableType + '.html',
+        type: 'GET',
+        beforeSend: function() {
+          start_time = new Date().getTime();
+        },
+        success: function(data) {
+          $('.booking-table table.table.table-responsive').remove();
+          $('.booking-table').append(data);
+          var owlCarouselTableSlider = $('.owl-carousel-table-slider');
+
+          owlCarouselTableSlider.on('initialized.owl.carousel', function(event) {
+            event.relatedTarget.$element.context.nextElementSibling.innerHTML = "1/" + event.item.count;
+          });
+
+          // this carousel must have .counter in html right after .owl-carousel (sibling)
+          owlCarouselTableSlider.owlCarousel({
+            loop: false,
+            items: 1,
+            nav: true,
+            dots: false,
+            // lazyLoad: true,
+            singleItem: true
+          });
+
+          owlCarouselTableSlider.on('changed.owl.carousel', function(event) {
+            // this code now return current slide for looped carousel
+            // it is the fix of default owl method that returns wrong value
+            var current = (event.item.index + 1) - event.relatedTarget._clones.length / 2;
+            var allItems = event.item.count;
+            if (current > allItems || current == 0) {
+              current = allItems - (current % allItems);
+            }
+            event.relatedTarget.$element.context.nextElementSibling.innerHTML = current + "/" + event.item.count;
+          });
+          var request_time = new Date().getTime() - start_time;
+          console.log('Time of loading table', request_time + ' milliseconds');
+          console.log('Size of loaded table', xhr.getResponseHeader('Content-Length') + ' bytes');
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          alert(textStatus + ': ' + errorThrown + ' please, try again later');
+        }
+      });
+    }
   }
 });

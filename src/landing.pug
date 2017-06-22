@@ -31,6 +31,20 @@ block main
       aside.sidebar-filter.same-height
          .mobile-filter-line.visible-xs
             i.fa.fa-filter(aria-hidden='true')
-            | Search filter
-         .panel-group.mb-0.mt-xs-50
-            include parts/aside
+            | Settings
+         .mobile-filter-landing.panel-group.mb-0.mt-xs-50.pt-xs-30
+            .onoffswitch-mobile-wrapper.clearfix
+               .onoffswitch-mobile.onoffswitch-mobile-gallery
+                  span Gallery
+                  input#myonoffswitch-mobile-gallery.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='myonoffswitch-mobile-gallery', checked='checked')
+                  label.onoffswitch-label(for='myonoffswitch-mobile-gallery')
+                     span.onoffswitch-inner
+                     span.onoffswitch-switch
+               .onoffswitch-mobile.onoffswitch-mobile-map
+                  span Map
+                  input#myonoffswitch-mobile-map.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='myonoffswitch-mobile-map')
+                  label.onoffswitch-label(for='myonoffswitch-mobile-map')
+                     span.onoffswitch-inner
+                     span.onoffswitch-switch
+            .tripadvisor-logo
+               img(src='images/tripadvisor-logo.svg', alt='tripadvisor logo')

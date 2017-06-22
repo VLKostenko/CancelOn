@@ -331,6 +331,29 @@ body {
       }
     }
   }
+  @media screen and (max-width: 1199px) {
+    .placeholder-slider {
+      width: 100%;
+    }
+    .placeholder-thumbs {
+      width: 100%;
+      height: 80px;
+      margin-top: 15px;
+      button {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .placeholder-thumbs {
+      button {
+        margin-right: 1px;
+      }
+    }
+  }
 }
 
 .hotel-facilities {

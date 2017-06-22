@@ -443,7 +443,7 @@ function initialize2() {
     }
   };
 
-  map = new google.maps.Map(document.getElementById('map2'), options);
+  map2 = new google.maps.Map(document.getElementById('map2'), options);
 
   var infowindow = new google.maps.InfoWindow();
 
@@ -452,7 +452,7 @@ function initialize2() {
   for ( i = 0; i < locations.length; i++ ) {
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i][4], locations[i][5]),
-      map: map,
+      map: map2,
       icon: {
         url: locations[i][7],
         labelOrigin: new google.maps.Point(14, 14)
@@ -489,7 +489,7 @@ function initialize2() {
         '</div>';
       return function() {
         infowindow.setContent(iwContent);
-        infowindow.open(map, marker);
+        infowindow.open(map2, marker);
       }
     })(marker, i);
 
@@ -555,7 +555,7 @@ function initialize2() {
       $(window).disablescroll('undo');
     });
 
-    google.maps.event.addListener(map, 'click', function() {
+    google.maps.event.addListener(map2, 'click', function() {
       infowindow.close();
     });
   }
