@@ -538,7 +538,7 @@
   $('.datepicker-output').on('click', function() {
     $('.datepicker-input').click();
   });
-
+  // TODO fix map width/left on hide-filter click
   $('.hide-filter').click(function() {
     if ( $(this).hasClass('hidden-filter') ) {
       $(this).removeClass('hidden-filter');
@@ -560,7 +560,10 @@
         $('.black-bg-map').addClass('no-filter');
         $('.black-bg-search').addClass('no-filter');
       }
+      // $('#map').parent()
+      // $('#map').parent().css('left', $('#map').parent().offset().left - $('#map').parent().width() + '!important');
     }
+    // $('#map').parent().width($('#map').parent().parent().width());
     reinitMap();
   });
 
@@ -1007,7 +1010,7 @@
       $('.search-filter .menu-icon').removeClass('active').parent('.hide-filter').addClass('hidden-filter');
       $('.sidebar-filter').addClass('show-on-map');
 
-      $('#map').parent('.ui').removeClass('sticky').removeAttr('style').height('100%');
+      $('#map').parent('.ui').removeClass('sticky').removeAttr('style');
       $('.map-wrapper.full-width').height(1690);
 
       $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
@@ -1049,7 +1052,6 @@
           'opacity': 1
         }, 200);
     }
-    reinitMap();
     if ( $(window).width() > 1199 ) {
       if ( $('.input-group.search-group').length && $('.noplaceholder .grid-item').length ) {
         scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
@@ -1057,6 +1059,7 @@
     } else {
       destroyScrolledElement('.input-group.search-group', '#search-space');
     }
+    reinitMap();
   });
 
   $('.onoffswitch-gallery').change(function() {

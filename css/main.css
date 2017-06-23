@@ -9236,8 +9236,12 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .map-wrapper.full-width {
-  max-height: 2475px;
+  max-height: 1810px;
   width: calc(100% - 15px) !important;
+}
+
+.map-wrapper.full-width .ui {
+  height: 100%;
 }
 
 .map-wrapper.full-width #map {
@@ -12689,6 +12693,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   border-right: 2.5px solid transparent;
   border-left: 2.5px solid transparent;
   border-bottom: 0;
+}
+
+.booking-table .search-filter-block .currency-menu .dropdown-menu {
+  left: 10px;
 }
 
 .booking-table .search-filter-block .currency-menu .dropdown-menu li {

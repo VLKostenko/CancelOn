@@ -1732,8 +1732,11 @@ aside {
   background-color: grey;
   @include calc(width, '35% - 15px');
   &.full-width {
-    max-height: 2475px;
+    max-height: 1810px;
     width: calc(100% - 15px)!important;
+    .ui {
+      height: 100%;
+    }
     #map {
       position: relative!important;
       height: 100%;
