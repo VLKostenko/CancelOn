@@ -185,7 +185,7 @@
       $('.black-bg-search').fadeOut(200);
     }
   }
-  
+
   function likesCounter(bool) {
     var negative = $('.likes-counter .negative');
     var positive = $('.likes-counter .positive');
@@ -1290,7 +1290,7 @@
 
   $(document).ready(function() {
 
-    $('.sticky').Stickyfill();
+    // $('.sticky').Stickyfill();
     initAOS();
     $('.gallery-map-wrapper #map').height($('.information-block').height());
     $('.loading-search-cover').fadeOut(200).removeClass('showing');

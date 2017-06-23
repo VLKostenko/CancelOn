@@ -8412,6 +8412,11 @@ aside.to-left {
   margin-left: -100%;
 }
 
+aside.to-left .panel-group {
+  opacity: 0;
+  visibility: hidden;
+}
+
 aside.mCustomScrollbar {
   max-height: initial;
 }
@@ -8427,6 +8432,10 @@ aside .mCSB_scrollTools {
 
 aside .mCSB_inside > .mCSB_container {
   margin-right: 10px !important;
+}
+
+aside .panel-group {
+  transition: opacity .2s ease, visibility .2s ease;
 }
 
 aside .panel-group .panel {
@@ -9171,15 +9180,50 @@ aside.show-on-map .panel-group .panel.panel-default {
   top: 24%;
 }
 
-.sticky {
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  top: 0;
+.ui.sticky {
+  position: static;
+  transition: none;
+  z-index: 11;
 }
 
-.sticky:before, .sticky:after {
-  content: '';
-  display: table;
+.ui.sticky.bound {
+  position: absolute;
+  left: auto;
+  right: auto;
+}
+
+.ui.sticky.bound.top {
+  top: 0;
+  bottom: auto;
+}
+
+.ui.sticky.bound.bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.ui.sticky.fixed {
+  position: fixed;
+  left: auto;
+  right: auto;
+}
+
+.ui.sticky.fixed.top {
+  top: 0;
+  bottom: auto;
+}
+
+.ui.sticky.fixed.bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.ui.native .sticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
 }
 
 .map-wrapper {

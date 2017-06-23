@@ -957,6 +957,10 @@ aside {
   @include crossBrowser(transition, margin-left .2s);
   &.to-left {
     margin-left: -100%;
+    .panel-group {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
   &.mCustomScrollbar {
     max-height: initial;
@@ -978,6 +982,11 @@ aside {
       position: relative;
       border-radius: 0;
     }
+    -webkit-transition: opacity .2s ease, visibility .2s ease!important;
+    -moz-transition: opacity .2s ease, visibility .2s ease;
+    -ms-transition: opacity .2s ease, visibility .2s ease;
+    -o-transition: opacity .2s ease, visibility .2s ease;
+    transition: opacity .2s ease, visibility .2s ease;
   }
   #amount1 {
     float: left;
@@ -1661,14 +1670,57 @@ aside {
   }
 }
 
-.sticky {
-  position: -webkit-sticky!important;
-  position: sticky!important;
-  top: 0;
-  &:before,
-  &:after {
-    content: '';
-    display: table;
+//.sticky {
+//  position: -webkit-sticky!important;
+//  position: sticky!important;
+//  top: 0;
+//  &:before,
+//  &:after {
+//    content: '';
+//    display: table;
+//  }
+//}
+.ui {
+  &.sticky {
+    position: static;
+    -webkit-transition: none;
+    transition: none;
+    z-index: 11;
+    &.bound {
+      position: absolute;
+      left: auto;
+      right: auto;
+      &.top {
+        top: 0;
+        bottom: auto;
+      }
+      &.bottom {
+        top: auto;
+        bottom: 0;
+      }
+    }
+    &.fixed {
+      position: fixed;
+      left: auto;
+      right: auto;
+      &.top {
+        top: 0;
+        bottom: auto;
+      }
+      &.bottom {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+  &.native{
+    .sticky {
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
+      position: sticky;
+    }
   }
 }
 
