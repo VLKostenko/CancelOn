@@ -1006,6 +1006,10 @@
       $('.sidebar-filter').addClass('to-left');
       $('.search-filter .menu-icon').removeClass('active').parent('.hide-filter').addClass('hidden-filter');
       $('.sidebar-filter').addClass('show-on-map');
+
+      $('#map').parent('.ui').removeClass('sticky').removeAttr('style').height('100%');
+      $('.map-wrapper.full-width').height(1690);
+
       $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
         .css({
           'opacity': 1,
@@ -1032,6 +1036,10 @@
         $('.search-group').removeClass('hidden-sidebar-filter');
       }
       $('.sidebar-filter').removeClass('show-on-map');
+
+      $('#map').parent('.ui').addClass('sticky').width($('#map').parent().width()).height('auto');
+      $('.map-wrapper').height($('.sidebar-filter').height());
+
       $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
         .css({
           'opacity': 0,
