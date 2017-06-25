@@ -1688,7 +1688,7 @@ aside {
     z-index: 11;
     &.bound {
       position: absolute;
-      left: auto;
+      left: auto!important;
       right: auto;
       &.top {
         top: 0;

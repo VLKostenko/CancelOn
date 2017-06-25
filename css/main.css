@@ -9188,7 +9188,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .ui.sticky.bound {
   position: absolute;
-  left: auto;
+  left: auto !important;
   right: auto;
 }
 
