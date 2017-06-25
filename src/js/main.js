@@ -1,21 +1,34 @@
 ;(function($) {
   "use strict";
 
-  /*
+  /**
+   * ------------------------------------------------------------------------------------------------------
    * Global Variables
-   */
+   * ------------------------------------------------------------------------------------------------------
+   **/
 
-  var search = $('.input-search');
-  var searchResult = $('.search-result');
-  var loadIcon = $('.load-icon');
-  var datepickerInput = $('.search-group .datepicker-input');
-  var datepickerInputLanding = $('.booking-table .datepicker-input');
-  var input = $('.input-number');
-  var hotelButton = $('.booking-table .room-type_info-open-btn .hotel-button');
+  var
+  search = $('.input-search'),
+  searchResult = $('.search-result'),
+  loadIcon = $('.load-icon'),
+  datepickerInput = $('.search-group .datepicker-input'),
+  datepickerInputLanding = $('.booking-table .datepicker-input'),
+  input = $('.input-number'),
+  owlCarouselFull = $('.owl-carousel-full'),
+  owlCarouselTableSlider = $('.owl-carousel-table-slider'),
+  owlCarouselShort = $('.owl-carousel-short'),
+  delayResize = 100,
+  throttledResize = false,
+  callsResize = 0,
+  delayScroll = 100,
+  throttledScroll = false,
+  callsScroll = 0;
 
-  /*
+  /**
+   * ------------------------------------------------------------------------------------------------------
    * Custom Functions
-   */
+   * ------------------------------------------------------------------------------------------------------
+   **/
 
   $.fn.rate = function() {
     return this.each(
@@ -61,26 +74,56 @@
     }
   });
 
-  /*
+  /**
+   * ------------------------------------------------------------------------------------------------------
    * Main Functions
-   */
+   * ------------------------------------------------------------------------------------------------------
+   **/
 
   function reinitMap() {
-    if ( $('#map').length && !$('#map1').length ) {
+    if ( $('#map').length && !$('#map1').length && !$('#map2').length ) {
       var center = map.getCenter();
       google.maps.event.trigger(map, "resize");
       map.setCenter(center);
-    } else if ( $('#map').length && $('#map1').length ) {
+    } else if ( $('#map').length && $('#map1').length && !$('#map2').length ) {
       var center0 = map.getCenter();
       var center1 = map1.getCenter();
       google.maps.event.trigger(map, "resize");
       google.maps.event.trigger(map1, "resize");
       map.setCenter(center0);
       map1.setCenter(center1);
-    } else if ( !$('#map').length && $('#map1').length ) {
+    } else if ( !$('#map').length && $('#map1').length && !$('#map2').length ) {
       var center = map1.getCenter();
       google.maps.event.trigger(map1, "resize");
       map1.setCenter(center);
+    } else if ( $('#map').length && !$('#map1').length && $('#map2').length ) {
+      var center0 = map.getCenter();
+      var center2 = map2.getCenter();
+      google.maps.event.trigger(map, "resize");
+      google.maps.event.trigger(map2, "resize");
+      map.setCenter(center0);
+      map2.setCenter(center2);
+    } else if ( !$('#map').length && $('#map1').length && $('#map2').length ) {
+      var center1 = map.getCenter();
+      var center2 = map2.getCenter();
+      google.maps.event.trigger(map1, "resize");
+      google.maps.event.trigger(map2, "resize");
+      map1.setCenter(center1);
+      map2.setCenter(center2);
+    } else if ( !$('#map').length && !$('#map1').length && $('#map2').length ) {
+      var center2 = map.getCenter();
+      google.maps.event.trigger(map2, "resize");
+      map2.setCenter(center2);
+    } else if ( $('#map').length && $('#map1').length && $('#map2').length ) {
+      var center0 = map.getCenter();
+      var center1 = map1.getCenter();
+      var center2 = map2.getCenter();
+      google.maps.event.trigger(map, "resize");
+      google.maps.event.trigger(map1, "resize");
+      google.maps.event.trigger(map2, "resize");
+      map.setCenter(center0);
+      map1.setCenter(center1);
+      map2.setCenter(center2);
     }
   }
 
@@ -206,6 +249,71 @@
         $(negative).removeClass('pulse');
       }, 3000);
     }
+  }
+
+  function checkMobileFilter(first, second) {
+    if ( $(window).width() < 768 ) {
+      $(first).change(function() {
+        if ( $(this).prop('checked') ) {
+          $(second).prop('checked', false);
+          $('.gallery-map-wrapper #map').addClass('hidden');
+          $('.slider-block').removeClass('hidden');
+        } else {
+          $(second).prop('checked', true);
+          $('.gallery-map-wrapper #map').removeClass('hidden');
+          $('.slider-block').addClass('hidden');
+        }
+        reinitMap();
+      });
+      $(second).change(function() {
+        if ( $(this).prop('checked') ) {
+          $(first).prop('checked', false);
+
+          $('.gallery-map-wrapper #map').removeClass('hidden');
+          $('.slider-block').addClass('hidden');
+        } else {
+          $(first).prop('checked', true);
+          $('.gallery-map-wrapper #map').addClass('hidden');
+          $('.slider-block').removeClass('hidden');
+        }
+        reinitMap();
+      });
+    }
+  }
+
+  // window.resize callback function
+  function getDimensionsResize() {
+    callsResize += 1;
+  }
+
+  // window.scroll callback function
+  function getDimensionsScroll() {
+    callsScroll += 1;
+  }
+
+  // jquery draggable also on touch devices
+  // http://stackoverflow.com/questions/5186441/javascript-drag-and-drop-for-touch-devices
+  function touchHandler(e) {
+    var touch = e.originalEvent.changedTouches[0];
+    var simulatedEvent = document.createEvent("MouseEvent");
+    simulatedEvent.initMouseEvent({
+        touchstart: "mousedown",
+        touchmove: "mousemove",
+        touchend: "mouseup"
+      }[e.type], true, true, window, 1,
+      touch.screenX, touch.screenY,
+      touch.clientX, touch.clientY, false,
+      false, false, false, 0, null);
+    touch.target.dispatchEvent(simulatedEvent);
+  }
+
+  function preventPageScroll(e) {
+    e.preventDefault();
+  }
+
+  function initTouchHandler($element) {
+    $element.on("touchstart touchmove touchend touchcancel", touchHandler);
+    $element.on("touchmove", preventPageScroll);
   }
 
   // photoswipe
@@ -411,71 +519,11 @@
     }
   };
 
-  function buildBookingTable() {
-    $('.booking-table').addClass('for-tablet');
-    $('[data-table="thead-item"]')
-      .wrap("<tr class='thead-mobile'><td><table><tbody></tbody></table></td></tr>");
-    var theadMobile = $('.thead-mobile');
-
-    $('.room-type_info').wrap("<td class='room-type_info-mobile-wrapper'></td>").wrap("<table></table>").wrap("<tbody></tbody>").wrap("<tr class='room-type_info-mobile'></tr>");
-    $('.right-part_info').wrap("<tr></tr>").each(function() {
-      $(this).parent().appendTo($(this).parent().siblings('.room-type_info-mobile-wrapper').find('tbody'));
-    });
-    $('.room-type_info-mobile').after(theadMobile);
-  }
-
-  function unbuildBookingTable() {
-    $('.booking-table').removeClass('for-tablet');
-    $('[data-table="thead-item"]').eq(0).appendTo('.room-last_th table tbody');
-    $('.room-type_info-mobile-wrapper .thead-mobile').remove();
-    $('.room-type_info-mobile .room-type_info').each(function() {
-      $(this).appendTo($(this).closest('.row-info'));
-    });
-    $('.right-part_info').each(function() {
-       $(this).appendTo($(this).closest('.row-info'));
-    });
-    $('.room-type_info-mobile-wrapper').remove();
-  }
-
-  /*
+  /**
+   * ------------------------------------------------------------------------------------------------------
    * Click Functions
-   */
-
-  // $('a[href="#analytics"]').click(function() {
-  //   $('.pie-statistic .setsize').each(function() {
-  //     $(this).height($(this).width());
-  //   });
-  // });
-
-  function checkMobileFilter(first, second) {
-    if ( $(window).width() < 768 ) {
-      $(first).change(function() {
-        if ( $(this).prop('checked') ) {
-          $(second).prop('checked', false);
-          $('.gallery-map-wrapper #map').addClass('hidden');
-          $('.slider-block').removeClass('hidden');
-        } else {
-          $(second).prop('checked', true);
-          $('.gallery-map-wrapper #map').removeClass('hidden');
-          $('.slider-block').addClass('hidden');
-        }
-        reinitMap();
-      });
-      $(second).change(function() {
-        if ( $(this).prop('checked') ) {
-          $(first).prop('checked', false);
-
-          $('.gallery-map-wrapper #map').removeClass('hidden');
-          $('.slider-block').addClass('hidden');
-        } else {
-          $(first).prop('checked', true);
-          $('.gallery-map-wrapper #map').addClass('hidden');
-          $('.slider-block').removeClass('hidden');
-        }
-        reinitMap();
-      });
-    }
-  }
+   * ------------------------------------------------------------------------------------------------------
+   **/
 
   if ( $(window).width() < 768 ) {
     $('.attractions_gallery-item a').click(function() {
@@ -538,7 +586,7 @@
   $('.datepicker-output').on('click', function() {
     $('.datepicker-input').click();
   });
-  // TODO fix map width/left on hide-filter click
+
   $('.hide-filter').click(function() {
     if ( $(this).hasClass('hidden-filter') ) {
       $(this).removeClass('hidden-filter');
@@ -667,6 +715,12 @@
     $(this).closest('.popup').fadeOut();
   });
 
+  $('.hotel-information_block-tabs .nav-tabs li a').click(function() {
+    setTimeout(function() {
+      reinitMap();
+    }, 50);
+  });
+
   $(document).on('click', '.show-popup', function() {
     $('.black-bg-map').fadeIn(200);
     $('.map-item-block').show().animateCss('bounceIn');
@@ -723,7 +777,7 @@
     }
   });
 
-  $('.input-search').keyup(function() {
+  search.keyup(function() {
     if ( $(this).val() == '' ) {
       $('.search-group > .location').remove();
       $('.search-group .input-search')
@@ -731,6 +785,7 @@
         .attr('class', 'form-control input-search');
     }
   });
+
   $(document).on('click', '.booking-table .room-type_info-open-btn .hotel-button', function() {
   if ( $(window).width() > 991 ) {
     $(this)
@@ -756,21 +811,6 @@
       .toggleClass('opened closed')
       .closest('.row-info')
       .toggleClass('opened closed');
-    // if ( $(this).closest('.row-info').hasClass('opened') ) {
-    //   if ( !$(this).closest('.row-info').find('.room-type_info .room-type_info-price span').length ) {
-    //     console.log('if')
-    //     $(this).closest('.row-info').find('.room-type_info .room-type_info-price span')
-    //       .appendTo($(this).closest('.row-info').find('.right-part_info .variant1 .more-info-wrapper .total-price_price'));
-    //   }
-    // } else {
-    //   if ( !$(this).closest('.row-info').find('.right-part_info .variant1 .more-info-wrapper .total-price_price span').length ) {
-    //     console.log('else')
-    //     $(this).closest('.row-info').find('.right-part_info .variant1 .more-info-wrapper .total-price_price span')
-    //       .appendTo($(this)
-    //         .closest('.row-info')
-    //         .find('.room-type_info .room-type_info-price'));
-    //   }
-    // }
   }
 });
 
@@ -778,12 +818,13 @@
     $(this).closest('.variant').toggleClass('opened closed');
   });
 
-  /*
+  /**
+   * ------------------------------------------------------------------------------------------------------
    * Initialization
-   */
+   * ------------------------------------------------------------------------------------------------------
+   **/
 
   // jquery ui draggable
-
   $(".draggable").draggable({
     axis: 'x', // only horizontally
     drag: function(e, ui) {
@@ -815,32 +856,6 @@
       }
     }
   });
-
-  // jquery draggable also on touch devices
-  // http://stackoverflow.com/questions/5186441/javascript-drag-and-drop-for-touch-devices
-
-  function touchHandler(e) {
-    var touch = e.originalEvent.changedTouches[0];
-    var simulatedEvent = document.createEvent("MouseEvent");
-    simulatedEvent.initMouseEvent({
-        touchstart: "mousedown",
-        touchmove: "mousemove",
-        touchend: "mouseup"
-      }[e.type], true, true, window, 1,
-      touch.screenX, touch.screenY,
-      touch.clientX, touch.clientY, false,
-      false, false, false, 0, null);
-    touch.target.dispatchEvent(simulatedEvent);
-  }
-
-  function preventPageScroll(e) {
-    e.preventDefault();
-  }
-
-  function initTouchHandler($element) {
-    $element.on("touchstart touchmove touchend touchcancel", touchHandler);
-    $element.on("touchmove", preventPageScroll);
-  }
 
   initTouchHandler($(".draggable"));
 
@@ -911,7 +926,6 @@
     }
   });
 
-  var owlCarouselFull = $('.owl-carousel-full');
   owlCarouselFull.owlCarousel({
     loop: true,
     items: 1,
@@ -926,9 +940,6 @@
     thumbContainerClass: 'owl-thumbs',
     thumbItemClass: 'owl-thumb-item'
   });
-
-
-  var owlCarouselTableSlider = $('.owl-carousel-table-slider');
 
   owlCarouselTableSlider.on('initialized.owl.carousel', function(event) {
     event.relatedTarget.$element.context.nextElementSibling.innerHTML = "1/" + event.item.count;
@@ -955,7 +966,6 @@
     event.relatedTarget.$element.context.nextElementSibling.innerHTML = current + "/" + event.item.count;
   });
 
-  var owlCarouselShort = $('.owl-carousel-short');
   owlCarouselShort.owlCarousel({
     loop: true,
     items: 1,
@@ -973,9 +983,11 @@
     $('.same-height-map').matchHeight();
   }
 
-  /*
+  /**
+   * ------------------------------------------------------------------------------------------------------
    * Events
-   */
+   * ------------------------------------------------------------------------------------------------------
+   **/
 
   $("#amount1").val("$" + $("#slider-range").slider("values", 0));
 
@@ -1147,160 +1159,8 @@
     }
   });
 
-  $(window).resize(function() {
-    if ( $(window).width() > 1199 ) {
-      $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar('destroy');
-      $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar({
-        scrollbarPosition: "outside"
-      });
-    } else {
-      $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar('destroy');
-      $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar({
-        scrollbarPosition: "outside",
-        axis: "x",
-        advanced: { autoExpandHorizontalScroll: true }
-      });
-    }
-
-    if ( $(window).width() < 1200 ) {
-      if ( $('.onoffswitch-hotel-info .myonoffswitch').prop('checked') ) {
-        $('.onoffswitch-hotel-info .myonoffswitch').prop('checked', false);
-        $('.hotel-information_block-tabs').addClass('full-width');
-        $('.hotel-information_block-map').addClass('no-width').hide();
-        window.mainChart.height = 173;
-      }
-    } else {
-      if ( !$('.onoffswitch-hotel-info .myonoffswitch').prop('checked') ) {
-        $('.onoffswitch-hotel-info .myonoffswitch').prop('checked', true);
-        $('.hotel-information_block-tabs').removeClass('full-width');
-        $('.hotel-information_block-map').removeClass('no-width').show();
-        $('.same-height-map').matchHeight();
-        reinitMap();
-      }
-    }
-    // } else {
-    //   if ( !$('.onoffswitch-hotel-info .myonoffswitch').prop('checked') ) {
-    //     console.log(1);
-    //     $('.onoffswitch-hotel-info .myonoffswitch').prop('checked', false);
-    //     $('.hotel-information_block-tabs').removeClass('full-width');
-    //     $('.hotel-information_block-map').removeClass('no-width').show();
-    //   }
-    // }
-    // booking table response
-    // if ( $(window).width() > 767 && $(window).width() < 992 ) {
-    //   if ( !$('.booking-table').hasClass('for-tablet') ) {
-    //     // buildBookingTable();
-    //     clearTimeout(id);
-    //     id = setTimeout(buildBookingTable, 500);
-    //   }
-    // } else if ( $(window).width() < 768 ) {
-    //   if ( !$('.booking-table').hasClass('for-mobile') ) {
-    //     // buildBookingTable();
-    //     clearTimeout(id);
-    //     id = setTimeout(buildBookingTable, 500);
-    //   }
-    // } else {
-    //   if ( $('.booking-table').hasClass('for-tablet') ) {
-    //     unbuildBookingTable();
-    //   }
-    // }
-    // clearTimeout(id);
-    // id = setTimeout(hotelButtonRebuild, 500);
-    // function hotelButtonRebuild() {
-    //   console.log('resize');
-    //   $('.booking-table .room-type_info-open-btn .hotel-button').each(function() {
-    //     console.log('jopa')
-    //     if ( $(window).width() < 992 && $(window).width() > 767 ) {
-    //       if ( !$('.booking-table').hasClass('for-tablet') ) {
-    //         buildBookingTable();
-    //       }
-    //       if ( $(this).closest('.row-info').hasClass('opened') ) {
-    //         $(this).closest('.room-type_info')
-    //           .appendTo($(this).closest('.room-type_info-mobile-wrapper').find('.room-type_info-mobile'));
-    //       } else {
-    //         $(this).closest('.room-type_info')
-    //           .prependTo($(this)
-    //             .closest('.room-type_info-mobile-wrapper')
-    //             .find('.right-part_info .variant1'));
-    //       }
-    //     } else if ( $(window).width() < 768 ) {
-    //       $(this).parent().appendTo($(this).closest('.room-type_info').siblings('.total-price'));
-    //       console.log('hellow')
-    //     } else {
-    //       if ( $(this).closest('.row-info').hasClass('closed') ) {
-    //         $(this).closest('.room-type_info')
-    //           .prependTo($(this).closest('.row-info'));
-    //       }
-    //     }
-    //   });
-    // }
-    //
-    // if ( $(window).width() < 992 && $(window).width() > 767 ) {
-    //   $('.booking-table .room-type_info-open-btn .hotel-button').each(function() {
-    //     if ( !$('.booking-table').hasClass('for-tablet') ) {
-    //       buildBookingTable();
-    //     }
-    //     if ( $(this).closest('.row-info').hasClass('opened') ) {
-    //       $(this).closest('.room-type_info')
-    //         .appendTo($(this).closest('.room-type_info-mobile-wrapper').find('.room-type_info-mobile'));
-    //     } else {
-    //       $(this).closest('.room-type_info')
-    //         .prependTo($(this)
-    //           .closest('.room-type_info-mobile-wrapper')
-    //           .find('.right-part_info .variant1'));
-    //     }
-    //   });
-    // } else if ( $(window).width() < 768 ) {
-    //   $('.booking-table .room-type_info-open-btn .hotel-button').each(function() {
-    //     $(this).parent().appendTo($(this).closest('.room-type_info').siblings('.total-price'));
-    //   });
-    // } else {
-    //   $('.booking-table .room-type_info-open-btn .hotel-button').each(function() {
-    //     if ( $(this).closest('.row-info').hasClass('closed') ) {
-    //       $(this).closest('.room-type_info')
-    //         .prependTo($(this).closest('.row-info'));
-    //     }
-    //   });
-    // }
-
-    if ( $('.people-count .book-menu').is(':visible') ) {
-      if ( $(window).width() > 767 ) {
-        $('.black-bg-search').fadeIn(200);
-      } else {
-        $('.black-bg-search').fadeOut(200);
-      }
-    }
-
-    initAOS();
-    if ( $(window).width() < 992 ) {
-      gridView();
-    }
-    if ( !$('#map-item-block').is(':visible') ) {
-      sidebarPosition();
-    }
-    if ( $(window).width() > 767 ) {
-      if ( $('.sidebar-filter').css('left') == 0 ) {
-        hideMobileFilter();
-      }
-    }
-    if ( $(window).width() > 1199 ) {
-      if ( $('.input-group.search-group').length && $('.noplaceholder .grid-item').length ) {
-        scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
-        $(window).scroll(function() {
-          scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
-        });
-      }
-    } else {
-      destroyScrolledElement('.input-group.search-group', '#search-space');
-      $(window).scroll(function() {
-        destroyScrolledElement('.input-group.search-group', '#search-space');
-      });
-    }
-  });
-
   $(document).ready(function() {
 
-    // $('.sticky').Stickyfill();
     initAOS();
     $('.gallery-map-wrapper #map').height($('.information-block').height());
     $('.loading-search-cover').fadeOut(200).removeClass('showing');
@@ -1344,18 +1204,107 @@
       }
     }
 
-    // booking table response
-    // if ( $(window).width() > 767 && $(window).width() < 992 ) {
-    //   if ( !$('.booking-table').hasClass('for-tablet') ) {
-    //     buildBookingTable();
-    //   }
-    // } else {
-    //   if ( $('.booking-table').hasClass('for-tablet') ) {
-    //     unbuildBookingTable();
-    //   }
-    // }
-
   });
+
+  window.addEventListener('resize', function() {
+    if (!throttledResize) {
+      // actual callback action
+      getDimensionsResize();
+
+      // actions on resize
+      if ( $(window).width() > 1199 ) {
+        $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar('destroy');
+        $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar({
+          scrollbarPosition: "outside"
+        });
+      } else {
+        $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar('destroy');
+        $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar({
+          scrollbarPosition: "outside",
+          axis: "x",
+          advanced: { autoExpandHorizontalScroll: true }
+        });
+      }
+
+      if ( $(window).width() < 1200 ) {
+        if ( $('.onoffswitch-hotel-info .myonoffswitch').prop('checked') ) {
+          $('.onoffswitch-hotel-info .myonoffswitch').prop('checked', false);
+          $('.hotel-information_block-tabs').addClass('full-width');
+          $('.hotel-information_block-map').addClass('no-width').hide();
+          window.mainChart.height = 173;
+        }
+      } else {
+        if ( !$('.onoffswitch-hotel-info .myonoffswitch').prop('checked') ) {
+          $('.onoffswitch-hotel-info .myonoffswitch').prop('checked', true);
+          $('.hotel-information_block-tabs').removeClass('full-width');
+          $('.hotel-information_block-map').removeClass('no-width').show();
+          $('.same-height-map').matchHeight();
+          reinitMap();
+        }
+      }
+
+      if ( $(window).width() < 768 ) {
+        $('#reviews .review-block_comments').mCustomScrollbar({
+          scrollbarPosition: "outside"
+        });
+      }
+
+      if ( $('.people-count .book-menu').is(':visible') ) {
+        if ( $(window).width() > 767 ) {
+          $('.black-bg-search').fadeIn(200);
+        } else {
+          $('.black-bg-search').fadeOut(200);
+        }
+      }
+
+      initAOS();
+      checkMobileFilter('#myonoffswitch-mobile-gallery', '#myonoffswitch-mobile-map');
+      if ( $(window).width() < 992 ) {
+        gridView();
+      }
+      if ( !$('#map-item-block').is(':visible') ) {
+        sidebarPosition();
+      }
+      if ( $(window).width() > 767 ) {
+        if ( $('.sidebar-filter').css('left') == 0 ) {
+          hideMobileFilter();
+        }
+      }
+      reinitMap();
+      // we're throttled!
+      throttledResize = true;
+      // set a timeout to un-throttle
+      setTimeout(function() {
+        throttledResize = false;
+      }, delayResize);
+    }
+  });
+
+  getDimensionsResize();
+
+  window.addEventListener('scroll', function() {
+    if (!throttledScroll) {
+      // actual callback action
+      getDimensionsScroll();
+
+      // actions on resize
+      if ( $(window).width() > 1199 ) {
+        if ( $('.input-group.search-group').length && $('.noplaceholder .grid-item').length ) {
+          scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
+        }
+      } else {
+        destroyScrolledElement('.input-group.search-group', '#search-space');
+      }
+      // we're throttled!
+      throttledScroll = true;
+      // set a timeout to un-throttle
+      setTimeout(function() {
+        throttledScroll = false;
+      }, delayScroll);
+    }
+  });
+
+  getDimensionsScroll();
 
   window.addEventListener('load', function() {
     setTimeout(function() {
@@ -1371,7 +1320,6 @@
       // window loaded functions
 
       checkMobileFilter('#myonoffswitch-mobile-gallery', '#myonoffswitch-mobile-map');
-
       reinitMap();
       setMapWrapperHeight();
       $('.stars-hotel').stars();
@@ -1383,6 +1331,17 @@
       $('.landing-popup .map-item-block--wrapper').mCustomScrollbar({
         scrollbarPosition: "outside"
       });
+
+      if ( $(window).width() > 1199 ) {
+        if ( $('.input-group.search-group').length && $('.noplaceholder .grid-item').length ) {
+          scrolledElement($(this), '.input-group.search-group',
+            $('.noplaceholder .grid-item').eq(2)
+              .offset().top, '#search-space', $('.noplaceholder .grid-item')
+              .last().prev('.grid-item').andSelf().offset().top);
+        }
+      } else {
+        destroyScrolledElement('.input-group.search-group', '#search-space');
+      }
 
       if ( $(window).width() > 1199 ) {
         $('.owl-carousel-full.photoswipe-block + .owl-thumbs').mCustomScrollbar({
@@ -1400,6 +1359,12 @@
         scrollbarPosition: "outside"
       });
 
+      if ( $(window).width() < 768 ) {
+        $('#reviews .review-block_comments').mCustomScrollbar({
+          scrollbarPosition: "outside"
+        });
+      }
+
       $('.map-wrapper .ui.sticky').sticky({
         context: '#sticky-wrap',
         silent: true,
@@ -1414,15 +1379,6 @@
         context: '#sticky-wrap',
         silent: true
       });
-      if ( $(window).width() > 1199 ) {
-        if ( $('.input-group.search-group').length && $('.noplaceholder .grid-item').length ) {
-          $(window).scroll(function() {
-            scrolledElement($(this), '.input-group.search-group', $('.noplaceholder .grid-item').eq(2).offset().top, '#search-space', $('.noplaceholder .grid-item').last().prev('.grid-item').andSelf().offset().top);
-          });
-        }
-      } else {
-        destroyScrolledElement('.input-group.search-group', '#search-space');
-      }
     }, 1500);
     // remove all placeholders
     setTimeout(function() {

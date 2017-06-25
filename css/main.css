@@ -16038,6 +16038,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   .popup_close {
     height: 18px;
   }
+  .hotel-information_block-tabs.full-width {
+    padding-left: 0;
+  }
   .hotel-information_block-tabs .nav-tabs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -16074,6 +16077,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .hotel-information_block-tabs .tab-content .attractions_map {
     height: 350px;
+  }
+  .hotel-information_block-tabs .tab-content .attractions_gallery {
+    max-height: 405px !important;
   }
 }
 
@@ -16762,6 +16768,18 @@ aside.show-on-map .panel-group .panel.panel-default {
   .hotel-information_title {
     font-size: 18px;
   }
+  .hotel-information_block-tabs.full-width {
+    padding-left: 15px;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .review-block {
+    padding-right: 0;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .review-block_comments {
+    max-height: 500px;
+  }
+  .hotel-information_block-tabs.full-width .tab-content .review-block_comments .mCSB_outside + .mCSB_scrollTools {
+    right: -16px;
+  }
   .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item {
     width: 47%;
     position: relative;
@@ -16827,6 +16845,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   .hotel-information_block-tabs.full-width .tab-content .attractions_gallery-item:nth-child(2n) .description-wrapper:before {
     left: initial;
     right: calc(48% / 2 - 12px);
+  }
+  .hotel-information_block-tabs.full-width .tab-content .attractions_map #map2 .thumbnail .caption {
+    padding: 15px;
   }
   .hotel-information_block-tabs .nav-tabs {
     min-width: 490px;

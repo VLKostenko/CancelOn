@@ -1599,6 +1599,9 @@
     }
   }
   .hotel-information_block-tabs {
+    &.full-width {
+      padding-left: 0;
+    }
     .nav-tabs {
       display: flex;
       align-items: center;
@@ -1636,6 +1639,9 @@
       }
       .attractions_map {
         height: 350px;
+      }
+      .attractions_gallery {
+        max-height: 405px!important;
       }
     }
   }
@@ -2402,8 +2408,18 @@
     &_block {
       &-tabs {
         &.full-width {
+          padding-left: 15px;
           .tab-content {
-            .attractions{
+            .review-block {
+              padding-right: 0;
+              &_comments {
+                max-height: 500px;
+                .mCSB_outside + .mCSB_scrollTools {
+                  right: -16px;
+                }
+              }
+            }
+            .attractions {
               &_gallery-item {
                 width: 47%;
                 position: relative;
@@ -2463,6 +2479,11 @@
                       right: calc(48% / 2 - 12px);
                     }
                   }
+                }
+              }
+              &_map {
+                #map2 .thumbnail .caption {
+                  padding: 15px;
                 }
               }
             }
