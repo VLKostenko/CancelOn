@@ -432,13 +432,13 @@ button[type="button"].btn:focus {
   margin-left: 4px;
   margin-right: 5px;
   width: 95% !important;
+  -moz-appearance: textfield;
+  padding: 0;
 }
 
 .input-number::-webkit-outer-spin-button, .input-number::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .search-group {
@@ -7724,6 +7724,7 @@ footer .navbar-header {
 }
 
 .grid-item .distance {
+  display: block;
   font-size: 14px;
   font-weight: 600;
   margin-top: 5px;
@@ -8871,7 +8872,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .search-group.scrolled .input-search::-moz-placeholder {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .search-group.scrolled .close-search {
@@ -14391,18 +14392,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   100% {
     -webkit-box-shadow: 0 0 0 0 rgba(116, 206, 42, 0);
-  }
-}
-
-@-webkit-keyframes pulse-positive {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 79, 85, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 18px rgba(255, 79, 85, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 79, 85, 0);
   }
 }
 

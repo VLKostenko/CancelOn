@@ -331,6 +331,7 @@ footer .navbar-header {
     @include crossBrowser(transition, .2s ease);
   }
   .distance {
+    display: block;
     font-size: 14px;
     font-weight: 600;
     margin-top: 5px;
@@ -1374,7 +1375,7 @@ aside {
         font-size: 18px;
       }
       &::-moz-placeholder {
-        font-size: 18px;
+        font-size: 18px!important;
       }
     }
     .close-search {
