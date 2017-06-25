@@ -1978,8 +1978,8 @@
       width: 45px;
       height: 45px;
       position: absolute;
-      right: 0;
-      top: -15px;
+      right: -8px;
+      top: -18px;
       &:hover, &:focus, &:active {
         background: transparent;
       }
@@ -1990,7 +1990,7 @@
         margin: auto;
         left: 0;
         right: 0;
-        display: none;
+        display: block;
       }
     }
   }

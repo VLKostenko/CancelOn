@@ -1,6 +1,6 @@
 .booking-table
    span.search-filter-block
-      .input-group.input-group-white.date-group
+      span.input-group.input-group-white.date-group
          span.input-group-addon
             i.fa.fa-calendar
          span.form-control.datepicker-input
@@ -9,50 +9,50 @@
          span.form-control.datepicker-output
             span.date Jun, 14th
             span.day Wednesday
-      .input-group.input-group-white.people-count
+      span.input-group.input-group-white.people-count
          span.input-group-addon
             i.fa.fa-sliders(aria-hidden='true')
          a#peopleCount.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            .block
+            span.block
                span.value#rooms 3
                span.col-form-label Rooms
-            .block
+            span.block
                span.value#adults 4
                span.col-form-label Adults
-            .block
+            span.block
                span.value#children 0
                span.col-form-label Children
          span.down-arrow
             i.fa.fa-caret-down(aria-hidden='true')
-         .dropdown-menu.book-menu(aria-labelledby='peopleCount')
+         span.dropdown-menu.book-menu(aria-labelledby='peopleCount')
             label.col-form-label.mt-20(for='quant[1]') Rooms
-            .input-group.mt-10
+            span.input-group.mt-10
                span.input-group-btn
                   button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[1]')
                      | -
-               input.form-control.input-number(type='text', id='quant[1]', name='quant[1]', value='3', min='1', max='10', data-id='rooms')
+               input.form-control.input-number(type='number', id='quant[1]', name='quant[1]', value='3', min='1', max='10', data-id='rooms')
                span.input-group-btn
                   button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1]')
                      | +
             label.col-form-label.mt-20(for='quant[2]') Adults
-            .input-group.mt-10
+            span.input-group.mt-10
                span.input-group-btn
                   button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2]')
                      | -
-               input.form-control.input-number(type='text', id='quant[2]', name='quant[2]', value='4', min='1', max='99', data-id='adults')
+               input.form-control.input-number(type='number', id='quant[2]', name='quant[2]', value='4', min='1', max='99', data-id='adults')
                span.input-group-btn
                   button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2]')
                      | +
             label.col-form-label.mt-20(for='quant[2]') Children
-            .input-group.mt-10
+            span.input-group.mt-10
                span.input-group-btn
                   button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[3]')
                      | -
-               input.form-control.input-number(type='text', id='quant[3]', name='quant[3]', value='0', min='0', max='99', data-id='children')
+               input.form-control.input-number(type='number', id='quant[3]', name='quant[3]', value='0', min='0', max='99', data-id='children')
                span.input-group-btn
                   button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[3]')
                      | +
-      .input-group.currency.hidden-xs
+      span.input-group.currency.hidden-xs
          select#sel2.selectpicker.currency-menu
             option (USD) $
             option (EUR) &euro;

@@ -358,13 +358,19 @@ footer {
   margin-left: 4px;
   margin-right: 5px;
   width: 95% !important;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
 }
 
 .search-group {
   border-bottom: 1px solid #1f95da;
   .input-search {
     font-size: 30px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #102e4a;
     font-weight: 300;
     height: 112px;
@@ -383,7 +389,7 @@ footer {
       color: #d7d8da !important;
     }
     &::-moz-placeholder {
-      font-size: 54px !important;
+      font-size: 30px !important;
       font-family: 'Roboto', sans-serif !important;
       color: #d7d8da !important;
       font-weight: 300 !important;

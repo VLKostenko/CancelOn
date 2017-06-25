@@ -9,7 +9,7 @@
       img(src='images/tripadvisor-logo.svg', alt='tripadvisor logo')
    .slider-block.clearfix
       include placeholder/information-block-slider
-      .owl-carousel.owl-carousel-full.photoswipe-block.placeholder-show(data-slider-id='1')
+      .owl-carousel.owl-carousel-full.photoswipe-block.placeholder-show(data-slider-id='1', itemscope, itemtype="http://schema.org/ImageGallery")
          - for(var i = 1; i < 16; i++)
             figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
                a(href='images/hotel-image' + i + '.jpg', itemprop='contentUrl', data-size='1086x908')
@@ -37,7 +37,7 @@
                   div Holiday Inn Express Hotel Suites Las Vegas I-215 S. Beltway
                .sidebar-info_name-rating_rating
                   .title TripAdvisor Traveller Rating
-                  img(src='./images/icons/rate/5.0.svg')
+                  img(src='./images/icons/rate/5.0.svg', alt='rating')
                   .text Based on 1,241 traveller reviews
             .sidebar-info_ranking
                .title TripAdvisor Ranking

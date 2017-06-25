@@ -290,6 +290,9 @@ body {
       margin-bottom: 13px;
       position: relative;
       border: 0;
+      & > * {
+        display: block;
+      }
       &:before {
         display: none;
       }

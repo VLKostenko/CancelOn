@@ -8,6 +8,6 @@ html(lang="en")
       include ../parts/head
    body(class=page.classes)
       block main
-   if page.name != 'update-browser'
-      include ../parts/footer
-   include ../parts/scripts
+      if page.name != 'update-browser'
+         include ../parts/footer
+      include ../parts/scripts

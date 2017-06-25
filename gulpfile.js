@@ -19,11 +19,13 @@ var gulp = require('gulp'),
   lessToScss = require('gulp-less-to-scss'),
   imgRetina = require('gulp-img-retina'),
   pug = require('gulp-pug'),
-  gutil = require('gulp-util');
+  gutil = require('gulp-util'),
+  concat = require('gulp-concat');
 
 var retinaOpts = {};
 
 var folders = {
+  assets: 'assets/plugins/',
   src: 'src/',
   dst: ''
 };
@@ -32,10 +34,8 @@ var path = {
   build: {
     html: folders.dst,
     partHtml: folders.dst + 'partial/',
-    js_bootstrap: folders.dst + 'js/',
-    js_ds_custom: folders.dst + 'js/',
-    js_ds_plugins: folders.dst + 'js/',
-    js_ds_scripts: folders.dst + 'js/',
+    js_scripts: folders.dst + 'js/',
+    js_assets: folders.dst + 'js/',
     css: folders.dst + 'css/',
     css_template: folders.dst + 'css/',
     css_base_sizing: folders.dst + 'css/',
@@ -50,12 +50,29 @@ var path = {
     html: folders.src + '*.html',
     pug: folders.src + '*.pug',
     pugPart: folders.src + 'parts/partial/*.pug',
-    //js
-    js_bootstrap: folders.src + 'js/bootstrap.js',
-    js_ds_custom: folders.src + 'js/ds-custom.js',
-    js_ds_plugins: folders.src + 'js/ds-plugins.js',
-    js_ds_scripts: folders.src + 'js/**/*.js',
-    //css
+    js_scripts: folders.src + 'js/**/*.js',
+    // js_assets: folders.assets + '**/*.min.js',
+    js_assets: [
+      'assets/plugins/jquery/dist/jquery.min.js',
+      'assets/plugins/bootstrap/dist/js/bootstrap.js',
+      'assets/plugins/moment/min/moment.min.js',
+      'assets/plugins/datarangepicker/jquery.datarangepicker.js',
+      'assets/plugins/bootstrap-dropdown-hover/dist/jquery.bootstrap-dropdown-hover.min.js',
+      'assets/plugins/bootstrap-select/dist/js/bootstrap-select.js',
+      'assets/plugins/bootstrap-validator/dist/validator.min.js',
+      'assets/plugins/jquery-ui/jquery-ui.min.js',
+      'assets/plugins/owl.carousel/dist/owl.carousel.min.js',
+      'assets/plugins/owl.carousel2.thumbs/dist/owl.carousel2.thumbs.js',
+      'assets/plugins/matchHeight/dist/jquery.matchHeight-min.js',
+      'assets/plugins/modernizr/modernizr.js',
+      'assets/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+      'assets/plugins/aos/dist/aos.js',
+      'assets/plugins/photoswipe/dist/photoswipe.min.js',
+      'assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js',
+      'assets/plugins/semantic-ui/semantic.min.js',
+      'assets/plugins/disableScroll/jquery.disablescroll.min.js',
+      'assets/plugins/chart.js/dist/Chart.min.js'
+    ],
     css: folders.src + 'styles/**/*.scss',
     less: folders.src + 'styles/**/*.less',
     img: [
@@ -68,10 +85,8 @@ var path = {
     pug: folders.src + '**/*.pug',
     css: folders.src + 'styles/**/*.scss',
     less: folders.src + 'styles/**/*.less',
-    js_bootstrap: folders.src + 'js/**/*.js',
-    js_ds_custom: folders.src + 'js/**/*.js',
-    js_ds_plugins: folders.src + 'js/**/*.js',
-    js_ds_scripts: folders.src + 'js/**/*.js',
+    js_scripts: folders.src + 'js/**/*.js',
+    js_assets: folders.assets + '**/*.js',
     img: [
       folders.src + 'images/**/*.*'
     ],
@@ -111,46 +126,16 @@ gulp.task('pug:build', function () {
     .pipe(gulp.dest(path.build.html));
 });
 
+gulp.task('js-assets:build', function() {
+  gulp.src(path.src.js_assets)
+    .pipe(concat('assets.min.js'))
+    .pipe(gulp.dest(path.build.js_assets));
+});
+
 gulp.task('js:build', function () {
-  gulp.src(path.src.js_bootstrap)
+  gulp.src(path.src.js_scripts)
     .pipe(clip())
-    .pipe(gulp.dest(path.build.js_bootstrap))
-    .pipe(rigger())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(uglify({
-      output: {
-        comments: saveLicense
-      }
-    }))
-    .pipe(gulp.dest(path.build.js_bootstrap));
-
-  gulp.src(path.src.js_ds_custom)
-    .pipe(clip())
-    .pipe(gulp.dest(path.build.js_ds_custom))
-    .pipe(rigger())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(uglify({
-      output: {
-        comments: saveLicense
-      }
-    }))
-    .pipe(gulp.dest(path.build.js_ds_custom));
-
-  gulp.src(path.src.js_ds_plugins)
-    .pipe(clip())
-    .pipe(gulp.dest(path.build.js_ds_plugins))
-    .pipe(rigger())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(uglify({
-      output: {
-        comments: saveLicense
-      }
-    }))
-    .pipe(gulp.dest(path.build.js_ds_plugins));
-
-  gulp.src(path.src.js_ds_scripts)
-    .pipe(clip())
-    .pipe(gulp.dest(path.build.js_ds_scripts))
+    .pipe(gulp.dest(path.build.js_scripts))
     .pipe(rigger())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(uglify({
@@ -158,7 +143,7 @@ gulp.task('js:build', function () {
         comments: saveLicense
       }
     }).on('error', gutil.log))
-    .pipe(gulp.dest(path.build.js_ds_scripts));
+    .pipe(gulp.dest(path.build.js_scripts));
 });
 
 gulp.task('styles:build', function () {
@@ -182,12 +167,12 @@ gulp.task('styles:build', function () {
 
 gulp.task('images:build', function () {
   gulp.src(path.src.img)
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant()],
-      interlaced: true
-    }))
+    // .pipe(imagemin({
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}],
+    //   use: [pngquant()],
+    //   interlaced: true
+    // }))
     .pipe(gulp.dest(path.build.img));
 });
 
@@ -200,6 +185,7 @@ gulp.task('build', [
   'pug:build',
   'html:build',
   'styles:build',
+  'js-assets:build',
   'js:build',
   'fonts:build',
   'images:build',
@@ -210,21 +196,13 @@ gulp.task('watch', function () {
   gulp.watch([path.watch.pug], function (event, cb) {
     gulp.start('pug:build', 'html:build');
   });
-  //css
   gulp.watch([path.watch.css], function (event, cb) {
     gulp.start('styles:build');
   });
-  //js
-  gulp.watch([path.watch.js_bootstrap], function (event, cb) {
-    gulp.start('js:build');
+  gulp.watch([path.watch.js_assets], function (event, cb) {
+    gulp.start('js-assets:build');
   });
-  gulp.watch([path.watch.js_ds_custom], function (event, cb) {
-    gulp.start('js:build');
-  });
-  gulp.watch([path.watch.js_ds_plugins], function (event, cb) {
-    gulp.start('js:build');
-  });
-  gulp.watch([path.watch.js_ds_scripts], function (event, cb) {
+  gulp.watch([path.watch.js_scripts], function (event, cb) {
     gulp.start('js:build');
   });
   gulp.watch([path.watch.img], function (event, cb) {

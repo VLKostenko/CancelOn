@@ -25,7 +25,7 @@
          .title-rating
             .row.pl-16.pr-16
                .col-sm-1.col-xs-3
-                  img(src='images/icons/map-item.png', alt='')
+                  img(src='images/icons/map-item.png', alt='map-item')
                .col-sm-3.col-xs-9.pl-10
                   h2.main-title Joint Base
                   ul.stars.stars-hotel(data-stars='4.47')
@@ -45,7 +45,7 @@
                   .trip
                      .rate(data-rate='4.54')
                   a.reviews(href='javascript:void(0)') 142 Reviews
-         .owl-carousel.owl-carousel-short.photoswipe-block
+         .owl-carousel.owl-carousel-short.photoswipe-block(itemscope, itemtype="http://schema.org/ImageGallery")
             figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
                a(href='images/map-item-image.png', itemprop='contentUrl', data-size='1296x570')
                   img(src='images/map-item-image.png', alt='Alt 1')
@@ -100,55 +100,55 @@
                         #hotel-details.tab-pane.active
                            .clearfix
                            ul
-                              span
+                              li
                                  i.distance-blue.icon-wifi
                                  | Free Wf-Fi
-                              span
+                              li
                                  i.distance-blue.icon-parking
                                  | Parking
-                              span
+                              li
                                  i.distance-blue.icon-air-conditioner
                                  | Air Conditioner
-                              span
+                              li
                                  i.distance-blue.icon-old-typical-phone
                                  | Phone
                            ul
-                              span
+                              li
                                  i.distance-blue.icon-television
                                  |  TV
-                              span
+                              li
                                  i.distance-blue.icon-shower-head
                                  |  Shower
-                              span
+                              li
                                  i.distance-blue.icon-valet-head
                                  | Valet
-                              span
+                              li
                                  i.distance-blue.icon-single-bed
                                  | Single bed
                            ul
-                              span
+                              li
                                  i.distance-blue.icon-sweeping-broom
                                  | Sweeping broom
-                              span
+                              li
                                  i.distance-blue.icon-double-bed
                                  | Double bed
-                              span
+                              li
                                  i.distance-blue.icon-hotel-keycard
                                  | Hotel keycard
-                              span
+                              li
                                  i.distance-blue.icon-surveillance-camera
                                  | Camera
                            ul
-                              span
+                              li
                                  i.distance-blue.icon-no-smoking-sign
                                  | No smoking
-                              span
+                              li
                                  i.distance-blue.icon-hotel-do-not-disturb-door-hanger
                                  | Do not disturb
-                              span
+                              li
                                  i.distance-blue.icon-briefcase-with-plus-symbol
                                  | Medic
-                              span
+                              li
                                  i.distance-blue.icon-cigar-with-smoke
                                  | Smoke free
                            .clearfix
