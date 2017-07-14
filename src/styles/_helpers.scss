@@ -987,6 +987,7 @@ aside {
       width: 100%;
       position: relative;
       border-radius: 0;
+      margin-bottom: 15px;
     }
     -webkit-transition: opacity .2s ease, visibility .2s ease!important;
     -moz-transition: opacity .2s ease, visibility .2s ease;
@@ -1354,6 +1355,7 @@ aside {
     left: 240px;
     padding: 0 15px;
     background: #fff;
+    box-shadow: 0 5px 20px -5px rgba(0,0,0,0.4);
     & > .location {
       left: 45px;
       top: 40px;

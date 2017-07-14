@@ -1,0 +1,704 @@
+//- var countriesList = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cruise Ship", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyz Republic", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Mauritania", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Namibia", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Satellite", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "South Africa", "South Korea", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "St. Lucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
+-
+   var countriesList = [{
+   code: "+7 840",
+   name: "Abkhazia"
+   }, {
+   code: "+93",
+   name: "Afghanistan"
+   }, {
+   code: "+355",
+   name: "Albania"
+   }, {
+   code: "+213",
+   name: "Algeria"
+   }, {
+   code: "+376",
+   name: "Andorra"
+   }, {
+   code: "+244",
+   name: "Angola"
+   }, {
+   code: "+1 268",
+   name: "Antigua and Barbuda"
+   }, {
+   code: "+54",
+   name: "Argentina"
+   }, {
+   code: "+374",
+   name: "Armenia"
+   }, {
+   code: "+61",
+   name: "Australia"
+   }, {
+   code: "+43",
+   name: "Austria"
+   }, {
+   code: "+994",
+   name: "Azerbaijan"
+   }, {
+   code: "+1 242",
+   name: "Bahamas"
+   }, {
+   code: "+973",
+   name: "Bahrain"
+   }, {
+   code: "+880",
+   name: "Bangladesh"
+   }, {
+   code: "+1 246",
+   name: "Barbados"
+   }, {
+   code: "+375",
+   name: "Belarus"
+   }, {
+   code: "+32",
+   name: "Belgium"
+   }, {
+   code: "+501",
+   name: "Belize"
+   }, {
+   code: "+229",
+   name: "Benin"
+   }, {
+   code: "+975",
+   name: "Bhutan"
+   }, {
+   code: "+591",
+   name: "Bolivia"
+   }, {
+   code: "+387",
+   name: "Bosnia and Herzegovina"
+   }, {
+   code: "+267",
+   name: "Botswana"
+   }, {
+   code: "+55",
+   name: "Brazil"
+   }, {
+   code: "+673",
+   name: "Brunei"
+   }, {
+   code: "+359",
+   name: "Bulgaria"
+   }, {
+   code: "+226",
+   name: "Burkina Faso"
+   }, {
+   code: "+257",
+   name: "Burundi"
+   }, {
+   code: "+855",
+   name: "Cambodia"
+   }, {
+   code: "+237",
+   name: "Cameroon"
+   }, {
+   code: "+1",
+   name: "Canada"
+   }, {
+   code: "+238",
+   name: "Cape Verde"
+   }, {
+   code: "+236",
+   name: "Central African Republic"
+   }, {
+   code: "+235",
+   name: "Chad"
+   }, {
+   code: "+56",
+   name: "Chile"
+   }, {
+   code: "+86",
+   name: "China"
+   }, {
+   code: "+57",
+   name: "Colombia"
+   }, {
+   code: "+269",
+   name: "Comoros"
+   }, {
+   code: "+682",
+   name: "Cook Islands"
+   }, {
+   code: "+506",
+   name: "Costa Rica"
+   }, {
+   code: "+385",
+   name: "Croatia"
+   }, {
+   code: "+53",
+   name: "Cuba"
+   }, {
+   code: "+537",
+   name: "Cyprus"
+   }, {
+   code: "+420",
+   name: "Czech Republic"
+   }, {
+   code: "+45",
+   name: "Denmark"
+   }, {
+   code: "+253",
+   name: "Djibouti"
+   }, {
+   code: "+1 767",
+   name: "Dominica"
+   }, {
+   code: "+1 809",
+   name: "Dominican Republic"
+   }, {
+   code: "+670",
+   name: "East Timor"
+   }, {
+   code: "+593",
+   name: "Ecuador"
+   }, {
+   code: "+20",
+   name: "Egypt"
+   }, {
+   code: "+503",
+   name: "El Salvador"
+   }, {
+   code: "+240",
+   name: "Equatorial Guinea"
+   }, {
+   code: "+291",
+   name: "Eritrea"
+   }, {
+   code: "+372",
+   name: "Estonia"
+   }, {
+   code: "+251",
+   name: "Ethiopia"
+   }, {
+   code: "+679",
+   name: "Fiji"
+   }, {
+   code: "+358",
+   name: "Finland"
+   }, {
+   code: "+33",
+   name: "France"
+   }, {
+   code: "+241",
+   name: "Gabon"
+   }, {
+   code: "+220",
+   name: "Gambia"
+   }, {
+   code: "+995",
+   name: "Georgia"
+   }, {
+   code: "+49",
+   name: "Germany"
+   }, {
+   code: "+233",
+   name: "Ghana"
+   }, {
+   code: "+30",
+   name: "Greece"
+   }, {
+   code: "+1 473",
+   name: "Grenada"
+   }, {
+   code: "+502",
+   name: "Guatemala"
+   }, {
+   code: "+224",
+   name: "Guinea"
+   }, {
+   code: "+245",
+   name: "Guinea-Bissau"
+   }, {
+   code: "+595",
+   name: "Guyana"
+   }, {
+   code: "+509",
+   name: "Haiti"
+   }, {
+   code: "+504",
+   name: "Honduras"
+   }, {
+   code: "+36",
+   name: "Hungary"
+   }, {
+   code: "+354",
+   name: "Iceland"
+   }, {
+   code: "+91",
+   name: "India"
+   }, {
+   code: "+62",
+   name: "Indonesia"
+   }, {
+   code: "+98",
+   name: "Iran"
+   }, {
+   code: "+964",
+   name: "Iraq"
+   }, {
+   code: "+353",
+   name: "Ireland"
+   }, {
+   code: "+972",
+   name: "Israel"
+   }, {
+   code: "+39",
+   name: "Italy"
+   }, {
+   code: "+225",
+   name: "Ivory Coast"
+   }, {
+   code: "+1 876",
+   name: "Jamaica"
+   }, {
+   code: "+81",
+   name: "Japan"
+   }, {
+   code: "+962",
+   name: "Jordan"
+   }, {
+   code: "+7 7",
+   name: "Kazakhstan"
+   }, {
+   code: "+254",
+   name: "Kenya"
+   }, {
+   code: "+686",
+   name: "Kiribati"
+   }, {
+   code: "+965",
+   name: "Kuwait"
+   }, {
+   code: "+996",
+   name: "Kyrgyzstan"
+   }, {
+   code: "+856",
+   name: "Laos"
+   }, {
+   code: "+371",
+   name: "Latvia"
+   }, {
+   code: "+961",
+   name: "Lebanon"
+   }, {
+   code: "+266",
+   name: "Lesotho"
+   }, {
+   code: "+231",
+   name: "Liberia"
+   }, {
+   code: "+218",
+   name: "Libya"
+   }, {
+   code: "+423",
+   name: "Liechtenstein"
+   }, {
+   code: "+370",
+   name: "Lithuania"
+   }, {
+   code: "+352",
+   name: "Luxembourg"
+   }, {
+   code: "+389",
+   name: "Macedonia"
+   }, {
+   code: "+261",
+   name: "Madagascar"
+   }, {
+   code: "+265",
+   name: "Malawi"
+   }, {
+   code: "+60",
+   name: "Malaysia"
+   }, {
+   code: "+960",
+   name: "Maldives"
+   }, {
+   code: "+223",
+   name: "Mali"
+   }, {
+   code: "+356",
+   name: "Malta"
+   }, {
+   code: "+692",
+   name: "Marshall Islands"
+   }, {
+   code: "+222",
+   name: "Mauritania"
+   }, {
+   code: "+230",
+   name: "Mauritius"
+   }, {
+   code: "+52",
+   name: "Mexico"
+   }, {
+   code: "+373",
+   name: "Moldova"
+   }, {
+   code: "+377",
+   name: "Monaco"
+   }, {
+   code: "+976",
+   name: "Mongolia"
+   }, {
+   code: "+382",
+   name: "Montenegro"
+   }, {
+   code: "+212",
+   name: "Morocco"
+   }, {
+   code: "+95",
+   name: "Myanmar"
+   }, {
+   code: "+264",
+   name: "Namibia"
+   }, {
+   code: "+674",
+   name: "Nauru"
+   }, {
+   code: "+977",
+   name: "Nepal"
+   }, {
+   code: "+31",
+   name: "Netherlands"
+   }, {
+   code: "+64",
+   name: "New Zealand"
+   }, {
+   code: "+505",
+   name: "Nicaragua"
+   }, {
+   code: "+227",
+   name: "Niger"
+   }, {
+   code: "+234",
+   name: "Nigeria"
+   }, {
+   code: "+683",
+   name: "Niue"
+   }, {
+   code: "+850",
+   name: "North Korea"
+   }, {
+   code: "+47",
+   name: "Norway"
+   }, {
+   code: "+968",
+   name: "Oman"
+   }, {
+   code: "+92",
+   name: "Pakistan"
+   }, {
+   code: "+680",
+   name: "Palau"
+   }, {
+   code: "+970",
+   name: "Palestine"
+   }, {
+   code: "+507",
+   name: "Panama"
+   }, {
+   code: "+675",
+   name: "Papua New Guinea"
+   }, {
+   code: "+595",
+   name: "Paraguay"
+   }, {
+   code: "+51",
+   name: "Peru"
+   }, {
+   code: "+63",
+   name: "Philippines"
+   }, {
+   code: "+48",
+   name: "Poland"
+   }, {
+   code: "+351",
+   name: "Portugal"
+   }, {
+   code: "+974",
+   name: "Qatar"
+   }, {
+   code: "+40",
+   name: "Romania"
+   }, {
+   code: "+7",
+   name: "Russia"
+   }, {
+   code: "+250",
+   name: "Rwanda"
+   }, {
+   code: "+685",
+   name: "Samoa"
+   }, {
+   code: "+378",
+   name: "San Marino"
+   }, {
+   code: "+966",
+   name: "Saudi Arabia"
+   }, {
+   code: "+221",
+   name: "Senegal"
+   }, {
+   code: "+381",
+   name: "Serbia"
+   }, {
+   code: "+248",
+   name: "Seychelles"
+   }, {
+   code: "+232",
+   name: "Sierra Leone"
+   }, {
+   code: "+65",
+   name: "Singapore"
+   }, {
+   code: "+421",
+   name: "Slovakia"
+   }, {
+   code: "+386",
+   name: "Slovenia"
+   }, {
+   code: "+677",
+   name: "Solomon Islands"
+   }, {
+   code: "+27",
+   name: "South Africa"
+   }, {
+   code: "+82",
+   name: "South Korea"
+   }, {
+   code: "+34",
+   name: "Spain"
+   }, {
+   code: "+94",
+   name: "Sri Lanka"
+   }, {
+   code: "+249",
+   name: "Sudan"
+   }, {
+   code: "+597",
+   name: "Suriname"
+   }, {
+   code: "+268",
+   name: "Swaziland"
+   }, {
+   code: "+46",
+   name: "Sweden"
+   }, {
+   code: "+41",
+   name: "Switzerland"
+   }, {
+   code: "+963",
+   name: "Syria"
+   }, {
+   code: "+992",
+   name: "Tajikistan"
+   }, {
+   code: "+255",
+   name: "Tanzania"
+   }, {
+   code: "+66",
+   name: "Thailand"
+   }, {
+   code: "+228",
+   name: "Togo"
+   }, {
+   code: "+676",
+   name: "Tonga"
+   }, {
+   code: "+1 868",
+   name: "Trinidad and Tobago"
+   }, {
+   code: "+216",
+   name: "Tunisia"
+   }, {
+   code: "+90",
+   name: "Turkey"
+   }, {
+   code: "+993",
+   name: "Turkmenistan"
+   }, {
+   code: "+688",
+   name: "Tuvalu"
+   }, {
+   code: "+256",
+   name: "Uganda"
+   }, {
+   code: "+380",
+   name: "Ukraine"
+   }, {
+   code: "+971",
+   name: "United Arab Emirates"
+   }, {
+   code: "+44",
+   name: "United Kingdom"
+   }, {
+   code: "+1",
+   name: "United States"
+   }, {
+   code: "+598",
+   name: "Uruguay"
+   }, {
+   code: "+998",
+   name: "Uzbekistan"
+   }, {
+   code: "+678",
+   name: "Vanuatu"
+   }, {
+   code: "+58",
+   name: "Venezuela"
+   }, {
+   code: "+84",
+   name: "Vietnam"
+   }, {
+   code: "+967",
+   name: "Yemen"
+   }, {
+   code: "+260",
+   name: "Zambia"
+   }, {
+   code: "+263",
+   name: "Zimbabwe"
+   }]
+.payment-details.clearfix
+   .sidebar-block-wrapper
+      .sidebar-block.ui.sticky
+         .panel.panel-default
+            .panel-heading
+               h4.panel-title Your Price Summary
+            .panel-body
+               p Room
+               p 20% VAT
+            .panel-body.payment-details-full
+               .price
+                  span.text Price
+                  span.number $2,688.86
+               .old-price
+                  span Old price $4,872.00
+               .room-details
+                  span For 2 Guests, 0 Child and 2 Nights
+               .change-details.clearfix
+                  a(href='javascript:void(0)') Change your selection
+         .panel.panel-default
+            .panel-body.payment-details-info
+               .block-slider.clearfix
+                  .owl-carousel.owl-carousel-info-payment.photoswipe-block(data-slider-id='1', itemscope, itemtype="http://schema.org/ImageGallery")
+                     - for(var i = 1; i < 4; i++)
+                        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+                           a(href='images/hotel-image' + i + '.jpg', itemprop='contentUrl', data-size='1086x908')
+                              img(src='images/hotel-image' + i + '.jpg', alt='Alt ' + i)
+                  .owl-thumbs.owl-thumbs-info-payment(data-slider-id='1')
+                     - for(var i = 1; i < 4; i++)
+                        button.owl-thumb-item
+                           img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
+               span.info-label.green Best Price Guaranteed
+               h2.title
+                  a(href='javascript:void(0)') Holiday Inn Express Hotel Suites Las Vegas I-215 S. Beltway
+               ul.stars.stars-hotel(data-stars='4.47')
+                  li
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li
+                     i.fa.orange-text.fa-star-half(aria-hidden='true')
+               .trip
+                  .rate(data-rate='4.54')
+                     img.rate-image(src='./images/icons/rate/4.5.svg', alt='rate')
+               a.reviews(href='javascript:void(0)') 142 Reviews
+               .address
+                  span 6220 S. Rainbow Boulevard, Las Vegas Nevada, Nv , United States
+            .panel-body.change-room
+               .change-room-button
+                  span.type Room: Superior Room
+                  a(href='javascript:void(0)') Change
+         .order-another
+            .title
+               span.text Order Another Item?
+               span.arrow
+                  span.icon-arrow-right
+            .hotel-name
+               span ALFAVITO Kyiv Hotel
+         .panel.panel-default
+            .panel-heading
+               h4.panel-title Your Booking Details
+            .panel-body.payment-booking-details
+               .days-details
+                  p Check-in:
+                  p Friday 21 July 2017 from 14:00
+                  br
+                  p Check-out:
+                  p Friday 21 July 2017 from 14:00
+                  br
+                  p Total length of stay:
+                  p 2 nights
+               .change-dates-button.clearfix
+                  a(href='javascript:void(0)') Change Dates
+
+   .payment-block#sticky-wrap
+      .step.first-step
+         .step-header
+            .step-number
+               span 1
+            .step-text
+               .step-title
+                  span Guest Details
+               .step-description
+                  span Please fill in the details of the person who is going to check in at the hotel.  (Must be over 21)
+         .step-form
+            form(data-toggle='validator', role='form')
+               .row
+                  .col-sm-6.form-group.has-feedback
+                     label.control-label(for='inputFirstName') First Name
+                        span.danger *
+                     input#inputFirstName.form-control(type='text', required, data-error='This field is required')
+                     .help-block.with-errors
+                  .col-sm-6.form-group.has-feedback
+                     label.control-label(for='inputLastName') Last Name
+                        span.danger *
+                     input#inputLastName.form-control(type='text', required, data-error='This field is required')
+                     .help-block.with-errors
+                  .col-sm-6.form-group.has-feedback
+                     label.control-label(for='inputEmail') Email
+                        span.danger *
+                     input#inputEmail.form-control(type='email', required, data-error='This field is required')
+                     .help-block.with-errors
+                  .col-sm-6.form-group.has-feedback
+                     label.control-label(for='inputEmail') Confirm Email address
+                        span.danger *
+                     input#inputEmailConfirm.form-control(type='email', required, data-match='#inputEmail', data-error='This field is required', data-match-error="Email does not match")
+                     .help-block.with-errors
+                  .col-sm-12.form-group.has-feedback
+                     label.control-label(for='inputCountry') Country
+                        span.danger *
+                     select#inputCountry.selectpicker.form-control.list-of-countries
+                        - for ( var i = 0; i < countriesList.length; i++ ) {
+                           - if ( i == 13 ) {
+                              option(value=countriesList[i].name, selected='selected')=countriesList[i].name
+                           - } else {
+                              option(value=countriesList[i].name)=countriesList[i].name
+                           - }
+                        - }
+                     a.find-my-location(href='javascript:void(0)') Find my location
+                  .col-sm-12.form-group.has-feedback
+                     label.control-label(for='inputPhone') Phone
+                        span.danger *
+                     .phone-number-block.clearfix
+                        select#inputCodePhone.selectpicker.form-control.list-of-phones
+                           - for ( var i = 0; i < countriesList.length; i++ ) {
+                              - if ( i == 13 ) {
+                                 option(value=countriesList[i].code, selected='selected')=countriesList[i].code
+                              - } else {
+                                 option(value=countriesList[i].code)=countriesList[i].code
+                              - }
+                           - }
+                        input#inputPhone.form-control(type='text', required, data-error='This field is required')
+         .step-footer
+            span (We won’t call you for marketing purposes)

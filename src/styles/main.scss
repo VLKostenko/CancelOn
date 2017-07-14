@@ -93,6 +93,7 @@
           .number {
             font-size: 12px;
             line-height: 20px;
+            float: left;
             a {
               color: #fff;
               &:hover {
@@ -689,6 +690,7 @@
   }
 }
 @import "landing";
+@import "payment";
 @import "unsupport";
 @import "conditions";
 @import "response";
