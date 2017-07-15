@@ -66,6 +66,27 @@
     );
   };
 
+  $.fn.shuffle = function() {
+
+    var allElems = this.get(),
+      getRandom = function(max) {
+        return Math.floor(Math.random() * max);
+      },
+      shuffled = $.map(allElems, function(){
+        var random = getRandom(allElems.length),
+          randEl = $(allElems[random]).clone(true)[0];
+        allElems.splice(random, 1);
+        return randEl;
+      });
+
+    this.each(function(i){
+      $(this).replaceWith($(shuffled[i]));
+    });
+
+    return $(shuffled);
+
+  };
+
   $.fn.extend({
     animateCss: function (animationName, destroy) {
       var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -528,6 +549,15 @@
     });
   }
 
+  function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if ( charCode > 31 && (charCode < 48 || charCode > 57) ) {
+      return false;
+    }
+    return true;
+  }
+
   /**
    * ------------------------------------------------------------------------------------------------------
    * Click Functions
@@ -798,6 +828,24 @@
     }
   });
 
+  if ( $('.card-number-input').length ) {
+    $('.card-number-input .card-input').keypress(function (event) {
+      var inputVal = $(this).val();
+      var characterReg = /^[0-9]{4}$/;
+
+      if ( characterReg.test(inputVal) ) {
+        var inputs = $(this).closest('form').find(':input');
+        inputs.eq(inputs.index(this) + 1).focus();
+      }
+      isNumber(event);
+    });
+  }
+
+  $('#inputCardCVC').on('focus', function (e) {
+    e.preventDefault();
+    $(this).blur();
+  });
+
   $(document).on('click', '.booking-table .room-type_info-open-btn .hotel-button', function() {
   if ( $(window).width() > 991 ) {
     $(this)
@@ -838,6 +886,40 @@
 
   $('.find-my-location').click(function() {
     setCountryLocation();
+  });
+
+  $('#inputCardCVC').click(function() {
+    $(this).prop('type', 'password');
+    $(this).siblings('.cvv-input').fadeIn(200);
+    return false;
+  });
+
+  if ( $('#inputCardCVC').length ) {
+    $(document).mouseup(function(e) {
+      var container = $('.cvv-input');
+      if ( container.is(':visible') ) {
+        if ( !container.is(e.target) && container.has(e.target).length === 0 ) {
+          container.fadeOut(200);
+        }
+      }
+    });
+  }
+  var cvvValue;
+  $('.cvv-input .number a').click(function() {
+    cvvValue = $('#inputCardCVC').val();
+    if ( (cvvValue.length + 1) < 4 ) {
+      $('#inputCardCVC').val(cvvValue + Number($(this).html()));
+    }
+  });
+
+  $('.cvv-input .delete-button a').click(function() {
+    $('#inputCardCVC').val(function(index, value){
+      return value.substr(0, value.length - 1);
+    });
+  });
+
+  $('.cvv-input .enter-button a').click(function() {
+    $('.cvv-input').fadeOut(200);
   });
 
   /**
@@ -1243,6 +1325,7 @@
       }
     }
 
+    $('.cvv-input .number').shuffle();
   });
 
   window.addEventListener('resize', function() {

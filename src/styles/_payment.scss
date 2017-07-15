@@ -297,6 +297,7 @@
     padding: 15px 30px;
     height: 2500px;
     .step {
+      margin-bottom: 30px;
       .step-header {
         display: flex;
         align-items: center;
@@ -322,7 +323,7 @@
               top: 0;
               bottom: 0;
               margin: auto;
-              height: 33px;
+              height: 35px;
               text-align: center;
             }
           }
@@ -480,6 +481,107 @@
             }
           }
         }
+      }
+      .step-footer {
+        font-size: 14px;
+        color: #b0b0b0;
+      }
+      .cvv-input {
+        display: none;
+        position: absolute;
+        width: calc(100% - 30px);
+        border: 1px solid #d8def0;
+        box-shadow: 0 4px 7px 0 rgba(0,0,0,.1);
+        .numbers-block {
+          width: 50%;
+          margin: 20px auto 15px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .number,
+          .delete-button {
+            width: 32%;
+            height: 62px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            border: 1px solid #d8def0;
+            margin-bottom: 4px;
+            a {
+              color: #000;
+              line-height: 60px;
+              width: 100%;
+              height: 100%;
+              display: block;
+              @include crossBrowser(transition, background .2s ease-in);
+              &:hover {
+                background: #e8edff;
+              }
+            }
+          }
+          .delete-button {
+            width: 66%;
+          }
+          .enter-button {
+            width: 100%;
+            height: 62px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            border: 1px solid $main-blue;
+            margin-bottom: 4px;
+            background: $main-blue;
+            a {
+              color: #fff;
+              line-height: 60px;
+              width: 100%;
+              height: 100%;
+              display: block;
+              @include crossBrowser(transition, background .2s ease-in);
+              &:hover {
+                background: lighten($main-blue, 10%);
+              }
+            }
+          }
+        }
+      }
+      .help-button {
+        a {
+          position: absolute;
+          top: 37px;
+          right: 30px;
+          font-size: 22px;
+          color: $main-blue;
+          &:hover {
+            & + .cvv-help {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .cvv-help {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          background: #fff;
+          border: 2px solid $main-blue;
+          z-index: 2;
+          right: -72px;
+          bottom: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 15px;
+          @include crossBrowser(transition, .2s ease-in);
+          .text {
+            font-size: 18px;
+            font-family: "Montserrat", sans-serif;
+          }
+        }
+      }
+      .small-desc {
+        font-size: 12px;
       }
     }
   }
