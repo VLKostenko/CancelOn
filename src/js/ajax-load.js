@@ -75,9 +75,11 @@ function loadContentTable(tableType) {
     } else {
       url = './partial/' + tableType + '.html';
     }
+    console.log(url);
     var xhr = $.ajax({
       url: url,
       type: 'GET',
+      crossDomain: true,
       beforeSend: function() {
         start_time = new Date().getTime();
       },
