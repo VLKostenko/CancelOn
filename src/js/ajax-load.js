@@ -32,7 +32,7 @@ $('.loading-more .loading a').click(function(event) {
 
 function loadContentSearch(url) {
   $.ajax({
-    url: url,
+    url: './' + url,
     type: 'GET',
     beforeSend: function() {
     },
@@ -70,7 +70,7 @@ function loadContentTable(tableType) {
   var existing = $('.booking-table table.table.table-responsive').hasClass(tableType);
   if ( !existing ) {
     var xhr = $.ajax({
-      url: '/partial/' + tableType + '.html',
+      url: './partial/' + tableType + '.html',
       type: 'GET',
       beforeSend: function() {
         start_time = new Date().getTime();
