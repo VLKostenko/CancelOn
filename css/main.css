@@ -14920,16 +14920,22 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .payment-details .payment-block {
-  background: #fff;
   width: calc(100% - 285px - 15px);
   margin-left: 15px;
   float: left;
+  margin-bottom: 50px;
+}
+
+.payment-details .payment-block form {
+  background: #fff;
+  padding-top: 15px;
   box-shadow: 0 1px 3px rgba(108, 118, 123, 0.15);
-  padding: 15px 30px;
-  height: 2500px;
+  margin-bottom: 30px;
 }
 
 .payment-details .payment-block .step {
+  background: #fff;
+  padding: 0 30px;
   margin-bottom: 30px;
 }
 
@@ -14981,32 +14987,32 @@ aside.show-on-map .panel-group .panel.panel-default {
   font-family: "Roboto", sans-serif;
 }
 
-.payment-details .payment-block .step .step-form {
+.payment-details .payment-block .step .step-body {
   font-family: "Roboto", sans-serif;
 }
 
-.payment-details .payment-block .step .step-form .form-group {
+.payment-details .payment-block .step .step-body .form-group {
   position: relative;
 }
 
-.payment-details .payment-block .step .step-form .form-group .control-label .danger {
+.payment-details .payment-block .step .step-body .form-group .control-label .danger {
   color: #f10000;
   padding-left: 10px;
 }
 
-.payment-details .payment-block .step .step-form .form-group label {
+.payment-details .payment-block .step .step-body .form-group label {
   font-size: 16px;
   font-weight: 400;
   color: #000;
 }
 
-.payment-details .payment-block .step .step-form .form-group input {
+.payment-details .payment-block .step .step-body .form-group input {
   border: 1px solid #d8def0;
   height: 50px;
   border-radius: 0;
 }
 
-.payment-details .payment-block .step .step-form .form-group .help-block {
+.payment-details .payment-block .step .step-body .form-group .help-block {
   pointer-events: none;
   position: absolute;
   right: 30px;
@@ -15018,33 +15024,33 @@ aside.show-on-map .panel-group .panel.panel-default {
   line-height: 46px;
 }
 
-.payment-details .payment-block .step .step-form .form-group .help-block li {
+.payment-details .payment-block .step .step-body .form-group .help-block li {
   display: none;
 }
 
-.payment-details .payment-block .step .step-form .form-group .help-block li:last-child {
+.payment-details .payment-block .step .step-body .form-group .help-block li:last-child {
   display: block;
 }
 
-.payment-details .payment-block .step .step-form .form-group.has-success input {
+.payment-details .payment-block .step .step-body .form-group.has-success input {
   border-color: #c8dd99;
 }
 
-.payment-details .payment-block .step .step-form .form-group.has-error input {
+.payment-details .payment-block .step .step-body .form-group.has-error input {
   border-color: #fbc0c7;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-countries {
+.payment-details .payment-block .step .step-body .form-group .list-of-countries {
   height: 50px;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-countries.open button {
+.payment-details .payment-block .step .step-body .form-group .list-of-countries.open button {
   background: #f7f7f7;
   color: #000;
   box-shadow: none;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-countries button {
+.payment-details .payment-block .step .step-body .form-group .list-of-countries button {
   height: 100%;
   border-radius: 0;
   border: 1px solid #d8def0;
@@ -15052,19 +15058,19 @@ aside.show-on-map .panel-group .panel.panel-default {
   font-weight: 500;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-countries button:hover, .payment-details .payment-block .step .step-form .form-group .list-of-countries button:active, .payment-details .payment-block .step .step-form .form-group .list-of-countries button:focus {
+.payment-details .payment-block .step .step-body .form-group .list-of-countries button:hover, .payment-details .payment-block .step .step-body .form-group .list-of-countries button:active, .payment-details .payment-block .step .step-body .form-group .list-of-countries button:focus {
   background: #f7f7f7;
   color: #000;
   box-shadow: none;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones {
   float: left;
   width: 140px;
   height: 50px;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button {
   height: 100%;
   border-radius: 0;
   border: 1px solid #d8def0;
@@ -15075,24 +15081,24 @@ aside.show-on-map .panel-group .panel.panel-default {
   padding: 15px;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button:hover, .payment-details .payment-block .step .step-form .form-group .list-of-phones button:active, .payment-details .payment-block .step .step-form .form-group .list-of-phones button:focus {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button:hover, .payment-details .payment-block .step .step-body .form-group .list-of-phones button:active, .payment-details .payment-block .step .step-body .form-group .list-of-phones button:focus {
   background: #eff1f8;
   color: #000;
   box-shadow: none;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button .bs-caret .caret {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button .bs-caret .caret {
   right: 0;
   margin: auto;
   left: 0;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button .filter-option {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button .filter-option {
   padding-left: 30px;
   text-align: right;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button .filter-option:before {
   content: '';
   position: absolute;
   width: 30px;
@@ -15105,760 +15111,760 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin: auto;
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+7 840'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+7 840'] .filter-option:before {
   background-image: url("/images/country-flags/Abkhazia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+93'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+93'] .filter-option:before {
   background-image: url("/images/country-flags/Afghanistan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+355'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+355'] .filter-option:before {
   background-image: url("/images/country-flags/Albania.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+213'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+213'] .filter-option:before {
   background-image: url("/images/country-flags/Algeria.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+376'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+376'] .filter-option:before {
   background-image: url("/images/country-flags/Andorra.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+244'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+244'] .filter-option:before {
   background-image: url("/images/country-flags/Angola.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1 268'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1 268'] .filter-option:before {
   background-image: url("/images/country-flags/Antigua and Barbuda.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+54'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+54'] .filter-option:before {
   background-image: url("/images/country-flags/Argentina.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+374'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+374'] .filter-option:before {
   background-image: url("/images/country-flags/Armenia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+61'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+61'] .filter-option:before {
   background-image: url("/images/country-flags/Australia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+43'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+43'] .filter-option:before {
   background-image: url("/images/country-flags/Austria.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+994'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+994'] .filter-option:before {
   background-image: url("/images/country-flags/Azerbaijan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1 242'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1 242'] .filter-option:before {
   background-image: url("/images/country-flags/Bahamas.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+973'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+973'] .filter-option:before {
   background-image: url("/images/country-flags/Bahrain.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+880'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+880'] .filter-option:before {
   background-image: url("/images/country-flags/Bangladesh.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1 246'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1 246'] .filter-option:before {
   background-image: url("/images/country-flags/Barbados.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+375'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+375'] .filter-option:before {
   background-image: url("/images/country-flags/Belarus.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+32'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+32'] .filter-option:before {
   background-image: url("/images/country-flags/Belgium.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+501'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+501'] .filter-option:before {
   background-image: url("/images/country-flags/Belize.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+229'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+229'] .filter-option:before {
   background-image: url("/images/country-flags/Benin.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+975'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+975'] .filter-option:before {
   background-image: url("/images/country-flags/Bhutan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+591'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+591'] .filter-option:before {
   background-image: url("/images/country-flags/Bolivia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+387'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+387'] .filter-option:before {
   background-image: url("/images/country-flags/Bosnia and Herzegovina.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+267'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+267'] .filter-option:before {
   background-image: url("/images/country-flags/Botswana.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+55'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+55'] .filter-option:before {
   background-image: url("/images/country-flags/Brazil.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+673'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+673'] .filter-option:before {
   background-image: url("/images/country-flags/Brunei.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+359'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+359'] .filter-option:before {
   background-image: url("/images/country-flags/Bulgaria.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+226'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+226'] .filter-option:before {
   background-image: url("/images/country-flags/Burkina Faso.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+257'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+257'] .filter-option:before {
   background-image: url("/images/country-flags/Burundi.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+855'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+855'] .filter-option:before {
   background-image: url("/images/country-flags/Cambodia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+237'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+237'] .filter-option:before {
   background-image: url("/images/country-flags/Cameroon.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1'] .filter-option:before {
   background-image: url("/images/country-flags/Canada.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+238'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+238'] .filter-option:before {
   background-image: url("/images/country-flags/Cape Verde.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+236'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+236'] .filter-option:before {
   background-image: url("/images/country-flags/Central African Republic.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+235'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+235'] .filter-option:before {
   background-image: url("/images/country-flags/Chad.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+56'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+56'] .filter-option:before {
   background-image: url("/images/country-flags/Chile.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+86'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+86'] .filter-option:before {
   background-image: url("/images/country-flags/China.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+57'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+57'] .filter-option:before {
   background-image: url("/images/country-flags/Colombia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+269'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+269'] .filter-option:before {
   background-image: url("/images/country-flags/Comoros.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+682'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+682'] .filter-option:before {
   background-image: url("/images/country-flags/Cook Islands.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+506'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+506'] .filter-option:before {
   background-image: url("/images/country-flags/Costa Rica.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+385'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+385'] .filter-option:before {
   background-image: url("/images/country-flags/Croatia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+53'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+53'] .filter-option:before {
   background-image: url("/images/country-flags/Cuba.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+537'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+537'] .filter-option:before {
   background-image: url("/images/country-flags/Cyprus.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+420'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+420'] .filter-option:before {
   background-image: url("/images/country-flags/Czech Republic.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+45'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+45'] .filter-option:before {
   background-image: url("/images/country-flags/Denmark.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+253'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+253'] .filter-option:before {
   background-image: url("/images/country-flags/Djibouti.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1 767'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1 767'] .filter-option:before {
   background-image: url("/images/country-flags/Dominica.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1 809'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1 809'] .filter-option:before {
   background-image: url("/images/country-flags/Dominican Republic.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+670'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+670'] .filter-option:before {
   background-image: url("/images/country-flags/East Timor.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+593'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+593'] .filter-option:before {
   background-image: url("/images/country-flags/Ecuador.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+20'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+20'] .filter-option:before {
   background-image: url("/images/country-flags/Egypt.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+503'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+503'] .filter-option:before {
   background-image: url("/images/country-flags/El Salvador.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+240'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+240'] .filter-option:before {
   background-image: url("/images/country-flags/Equatorial Guinea.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+291'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+291'] .filter-option:before {
   background-image: url("/images/country-flags/Eritrea.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+372'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+372'] .filter-option:before {
   background-image: url("/images/country-flags/Estonia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+251'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+251'] .filter-option:before {
   background-image: url("/images/country-flags/Ethiopia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+679'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+679'] .filter-option:before {
   background-image: url("/images/country-flags/Fiji.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+358'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+358'] .filter-option:before {
   background-image: url("/images/country-flags/Finland.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+33'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+33'] .filter-option:before {
   background-image: url("/images/country-flags/France.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+241'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+241'] .filter-option:before {
   background-image: url("/images/country-flags/Gabon.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+220'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+220'] .filter-option:before {
   background-image: url("/images/country-flags/Gambia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+995'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+995'] .filter-option:before {
   background-image: url("/images/country-flags/Georgia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+49'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+49'] .filter-option:before {
   background-image: url("/images/country-flags/Germany.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+233'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+233'] .filter-option:before {
   background-image: url("/images/country-flags/Ghana.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+30'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+30'] .filter-option:before {
   background-image: url("/images/country-flags/Greece.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1 473'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1 473'] .filter-option:before {
   background-image: url("/images/country-flags/Grenada.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+502'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+502'] .filter-option:before {
   background-image: url("/images/country-flags/Guatemala.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+224'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+224'] .filter-option:before {
   background-image: url("/images/country-flags/Guinea.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+245'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+245'] .filter-option:before {
   background-image: url("/images/country-flags/Guinea-Bissau.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+595'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+595'] .filter-option:before {
   background-image: url("/images/country-flags/Guyana.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+509'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+509'] .filter-option:before {
   background-image: url("/images/country-flags/Haiti.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+504'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+504'] .filter-option:before {
   background-image: url("/images/country-flags/Honduras.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+36'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+36'] .filter-option:before {
   background-image: url("/images/country-flags/Hungary.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+354'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+354'] .filter-option:before {
   background-image: url("/images/country-flags/Iceland.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+91'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+91'] .filter-option:before {
   background-image: url("/images/country-flags/India.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+62'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+62'] .filter-option:before {
   background-image: url("/images/country-flags/Indonesia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+98'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+98'] .filter-option:before {
   background-image: url("/images/country-flags/Iran.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+964'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+964'] .filter-option:before {
   background-image: url("/images/country-flags/Iraq.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+353'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+353'] .filter-option:before {
   background-image: url("/images/country-flags/Ireland.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+972'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+972'] .filter-option:before {
   background-image: url("/images/country-flags/Israel.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+39'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+39'] .filter-option:before {
   background-image: url("/images/country-flags/Italy.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+225'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+225'] .filter-option:before {
   background-image: url("/images/country-flags/Ivory Coast.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1 876'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1 876'] .filter-option:before {
   background-image: url("/images/country-flags/Jamaica.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+81'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+81'] .filter-option:before {
   background-image: url("/images/country-flags/Japan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+962'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+962'] .filter-option:before {
   background-image: url("/images/country-flags/Jordan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+7 7'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+7 7'] .filter-option:before {
   background-image: url("/images/country-flags/Kazakhstan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+254'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+254'] .filter-option:before {
   background-image: url("/images/country-flags/Kenya.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+686'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+686'] .filter-option:before {
   background-image: url("/images/country-flags/Kiribati.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+965'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+965'] .filter-option:before {
   background-image: url("/images/country-flags/Kuwait.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+996'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+996'] .filter-option:before {
   background-image: url("/images/country-flags/Kyrgyzstan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+856'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+856'] .filter-option:before {
   background-image: url("/images/country-flags/Laos.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+371'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+371'] .filter-option:before {
   background-image: url("/images/country-flags/Latvia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+961'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+961'] .filter-option:before {
   background-image: url("/images/country-flags/Lebanon.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+266'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+266'] .filter-option:before {
   background-image: url("/images/country-flags/Lesotho.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+231'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+231'] .filter-option:before {
   background-image: url("/images/country-flags/Liberia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+218'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+218'] .filter-option:before {
   background-image: url("/images/country-flags/Libya.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+423'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+423'] .filter-option:before {
   background-image: url("/images/country-flags/Liechtenstein.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+370'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+370'] .filter-option:before {
   background-image: url("/images/country-flags/Lithuania.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+352'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+352'] .filter-option:before {
   background-image: url("/images/country-flags/Luxembourg.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+389'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+389'] .filter-option:before {
   background-image: url("/images/country-flags/Macedonia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+261'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+261'] .filter-option:before {
   background-image: url("/images/country-flags/Madagascar.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+265'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+265'] .filter-option:before {
   background-image: url("/images/country-flags/Malawi.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+60'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+60'] .filter-option:before {
   background-image: url("/images/country-flags/Malaysia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+960'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+960'] .filter-option:before {
   background-image: url("/images/country-flags/Maldives.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+223'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+223'] .filter-option:before {
   background-image: url("/images/country-flags/Mali.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+356'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+356'] .filter-option:before {
   background-image: url("/images/country-flags/Malta.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+692'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+692'] .filter-option:before {
   background-image: url("/images/country-flags/Marshall Islands.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+222'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+222'] .filter-option:before {
   background-image: url("/images/country-flags/Mauritania.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+230'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+230'] .filter-option:before {
   background-image: url("/images/country-flags/Mauritius.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+52'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+52'] .filter-option:before {
   background-image: url("/images/country-flags/Mexico.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+373'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+373'] .filter-option:before {
   background-image: url("/images/country-flags/Moldova.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+377'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+377'] .filter-option:before {
   background-image: url("/images/country-flags/Monaco.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+976'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+976'] .filter-option:before {
   background-image: url("/images/country-flags/Mongolia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+382'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+382'] .filter-option:before {
   background-image: url("/images/country-flags/Montenegro.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+212'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+212'] .filter-option:before {
   background-image: url("/images/country-flags/Morocco.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+95'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+95'] .filter-option:before {
   background-image: url("/images/country-flags/Myanmar.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+264'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+264'] .filter-option:before {
   background-image: url("/images/country-flags/Namibia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+674'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+674'] .filter-option:before {
   background-image: url("/images/country-flags/Nauru.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+977'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+977'] .filter-option:before {
   background-image: url("/images/country-flags/Nepal.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+31'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+31'] .filter-option:before {
   background-image: url("/images/country-flags/Netherlands.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+64'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+64'] .filter-option:before {
   background-image: url("/images/country-flags/New Zealand.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+505'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+505'] .filter-option:before {
   background-image: url("/images/country-flags/Nicaragua.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+227'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+227'] .filter-option:before {
   background-image: url("/images/country-flags/Niger.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+234'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+234'] .filter-option:before {
   background-image: url("/images/country-flags/Nigeria.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+683'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+683'] .filter-option:before {
   background-image: url("/images/country-flags/Niue.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+850'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+850'] .filter-option:before {
   background-image: url("/images/country-flags/North Korea.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+47'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+47'] .filter-option:before {
   background-image: url("/images/country-flags/Norway.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+968'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+968'] .filter-option:before {
   background-image: url("/images/country-flags/Oman.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+92'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+92'] .filter-option:before {
   background-image: url("/images/country-flags/Pakistan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+680'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+680'] .filter-option:before {
   background-image: url("/images/country-flags/Palau.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+970'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+970'] .filter-option:before {
   background-image: url("/images/country-flags/Palestine.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+507'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+507'] .filter-option:before {
   background-image: url("/images/country-flags/Panama.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+675'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+675'] .filter-option:before {
   background-image: url("/images/country-flags/Papua New Guinea.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+595'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+595'] .filter-option:before {
   background-image: url("/images/country-flags/Paraguay.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+51'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+51'] .filter-option:before {
   background-image: url("/images/country-flags/Peru.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+63'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+63'] .filter-option:before {
   background-image: url("/images/country-flags/Philippines.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+48'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+48'] .filter-option:before {
   background-image: url("/images/country-flags/Poland.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+351'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+351'] .filter-option:before {
   background-image: url("/images/country-flags/Portugal.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+974'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+974'] .filter-option:before {
   background-image: url("/images/country-flags/Qatar.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+40'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+40'] .filter-option:before {
   background-image: url("/images/country-flags/Romania.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+7'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+7'] .filter-option:before {
   background-image: url("/images/country-flags/Russia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+250'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+250'] .filter-option:before {
   background-image: url("/images/country-flags/Rwanda.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+685'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+685'] .filter-option:before {
   background-image: url("/images/country-flags/Samoa.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+378'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+378'] .filter-option:before {
   background-image: url("/images/country-flags/San Marino.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+966'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+966'] .filter-option:before {
   background-image: url("/images/country-flags/Saudi Arabia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+221'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+221'] .filter-option:before {
   background-image: url("/images/country-flags/Senegal.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+381'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+381'] .filter-option:before {
   background-image: url("/images/country-flags/Serbia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+248'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+248'] .filter-option:before {
   background-image: url("/images/country-flags/Seychelles.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+232'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+232'] .filter-option:before {
   background-image: url("/images/country-flags/Sierra Leone.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+65'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+65'] .filter-option:before {
   background-image: url("/images/country-flags/Singapore.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+421'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+421'] .filter-option:before {
   background-image: url("/images/country-flags/Slovakia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+386'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+386'] .filter-option:before {
   background-image: url("/images/country-flags/Slovenia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+677'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+677'] .filter-option:before {
   background-image: url("/images/country-flags/Solomon Islands.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+27'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+27'] .filter-option:before {
   background-image: url("/images/country-flags/South Africa.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+82'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+82'] .filter-option:before {
   background-image: url("/images/country-flags/South Korea.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+34'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+34'] .filter-option:before {
   background-image: url("/images/country-flags/Spain.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+94'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+94'] .filter-option:before {
   background-image: url("/images/country-flags/Sri Lanka.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+249'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+249'] .filter-option:before {
   background-image: url("/images/country-flags/Sudan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+597'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+597'] .filter-option:before {
   background-image: url("/images/country-flags/Suriname.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+268'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+268'] .filter-option:before {
   background-image: url("/images/country-flags/Swaziland.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+46'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+46'] .filter-option:before {
   background-image: url("/images/country-flags/Sweden.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+41'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+41'] .filter-option:before {
   background-image: url("/images/country-flags/Switzerland.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+963'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+963'] .filter-option:before {
   background-image: url("/images/country-flags/Syria.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+992'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+992'] .filter-option:before {
   background-image: url("/images/country-flags/Tajikistan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+255'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+255'] .filter-option:before {
   background-image: url("/images/country-flags/Tanzania.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+66'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+66'] .filter-option:before {
   background-image: url("/images/country-flags/Thailand.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+228'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+228'] .filter-option:before {
   background-image: url("/images/country-flags/Togo.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+676'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+676'] .filter-option:before {
   background-image: url("/images/country-flags/Tonga.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1 868'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1 868'] .filter-option:before {
   background-image: url("/images/country-flags/Trinidad and Tobago.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+216'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+216'] .filter-option:before {
   background-image: url("/images/country-flags/Tunisia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+90'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+90'] .filter-option:before {
   background-image: url("/images/country-flags/Turkey.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+993'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+993'] .filter-option:before {
   background-image: url("/images/country-flags/Turkmenistan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+688'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+688'] .filter-option:before {
   background-image: url("/images/country-flags/Tuvalu.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+256'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+256'] .filter-option:before {
   background-image: url("/images/country-flags/Uganda.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+380'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+380'] .filter-option:before {
   background-image: url("/images/country-flags/Ukraine.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+971'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+971'] .filter-option:before {
   background-image: url("/images/country-flags/United Arab Emirates.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+44'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+44'] .filter-option:before {
   background-image: url("/images/country-flags/United Kingdom.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+1'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+1'] .filter-option:before {
   background-image: url("/images/country-flags/United States.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+598'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+598'] .filter-option:before {
   background-image: url("/images/country-flags/Uruguay.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+998'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+998'] .filter-option:before {
   background-image: url("/images/country-flags/Uzbekistan.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+678'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+678'] .filter-option:before {
   background-image: url("/images/country-flags/Vanuatu.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+58'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+58'] .filter-option:before {
   background-image: url("/images/country-flags/Venezuela.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+84'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+84'] .filter-option:before {
   background-image: url("/images/country-flags/Vietnam.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+967'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+967'] .filter-option:before {
   background-image: url("/images/country-flags/Yemen.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+260'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+260'] .filter-option:before {
   background-image: url("/images/country-flags/Zambia.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .list-of-phones button[title='+263'] .filter-option:before {
+.payment-details .payment-block .step .step-body .form-group .list-of-phones button[title='+263'] .filter-option:before {
   background-image: url("/images/country-flags/Zimbabwe.png");
 }
 
-.payment-details .payment-block .step .step-form .form-group .phone-number-block input {
+.payment-details .payment-block .step .step-body .form-group .phone-number-block input {
   float: left;
   width: calc(100% - 140px);
 }
 
-.payment-details .payment-block .step .step-form .form-group .find-my-location {
+.payment-details .payment-block .step .step-body .form-group .find-my-location {
   position: absolute;
   font-size: 14px;
   font-weight: 400;
@@ -15868,7 +15874,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   z-index: 3;
 }
 
-.payment-details .payment-block .step .step-form .form-group .find-my-location:hover {
+.payment-details .payment-block .step .step-body .form-group .find-my-location:hover {
   text-decoration: underline !important;
 }
 
@@ -15880,6 +15886,8 @@ aside.show-on-map .panel-group .panel.panel-default {
 .payment-details .payment-block .step .cvv-input {
   display: none;
   position: absolute;
+  z-index: 5;
+  background: #fff;
   width: calc(100% - 30px);
   border: 1px solid #d8def0;
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
@@ -15952,6 +15960,18 @@ aside.show-on-map .panel-group .panel.panel-default {
   background: #33ceff;
 }
 
+.payment-details .payment-block .step .bootstrap-select {
+  height: 50px;
+}
+
+.payment-details .payment-block .step .bootstrap-select .dropdown-toggle {
+  height: 100%;
+  border-radius: 0;
+  border: 1px solid #d8def0;
+  font-family: Roboto,sans-serif;
+  font-weight: 500;
+}
+
 .payment-details .payment-block .step .help-button a {
   position: absolute;
   top: 37px;
@@ -15972,7 +15992,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   background: #fff;
   border: 2px solid #00c2ff;
   z-index: 2;
-  right: -72px;
+  right: -74px;
   bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15991,6 +16011,21 @@ aside.show-on-map .panel-group .panel.panel-default {
   transition: 0.2s ease-in;
 }
 
+.payment-details .payment-block .step .help-button .cvv-help:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00c2ff;
+  position: absolute;
+  z-index: 1;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .payment-details .payment-block .step .help-button .cvv-help .text {
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
@@ -15998,6 +16033,187 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .payment-details .payment-block .step .small-desc {
   font-size: 12px;
+}
+
+.payment-details .payment-block .step.submit-step {
+  background: #eff4fb;
+  border-top: 1px solid #e2eaf6;
+  margin-bottom: 0;
+  padding: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.payment-details .payment-block .step.submit-step .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment-details .payment-block .step.submit-step .wrapper .submit-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.payment-details .payment-block .step.submit-step input[type='submit'] {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  background: #1d79d6;
+  height: 65px;
+  border: 0;
+  padding: 0 85px;
+  margin-right: 15px;
+  transition: background 0.2s ease-in;
+}
+
+.payment-details .payment-block .step.submit-step input[type='submit']:hover {
+  background: #4193e5;
+}
+
+.payment-details .payment-block .step.submit-step .cancel a {
+  color: #47494b;
+  text-decoration: underline !important;
+  font-size: 14px;
+}
+
+.payment-details .payment-block .step.submit-step .cancel a:hover {
+  text-decoration: initial !important;
+}
+
+.payment-details .payment-block .step.submit-step .alert {
+  padding: 0;
+  margin: 30px 0 20px;
+  border: 0;
+}
+
+.payment-details .payment-block .step.submit-step .alert p {
+  color: #9ea2a6;
+  font-size: 12px;
+}
+
+.payment-details .payment-block .step.submit-step .alert a {
+  color: #00c2ff;
+  font-size: 12px;
+  text-decoration: underline !important;
+}
+
+.payment-details .payment-block .step.submit-step .alert a:hover {
+  text-decoration: initial !important;
+}
+
+.payment-details .payment-block .step.info-step {
+  padding-top: 15px;
+  padding-bottom: 70px;
+  margin-bottom: 0;
+  box-shadow: 0 1px 3px rgba(108, 118, 123, 0.15);
+  display: none;
+}
+
+.payment-details .payment-block .step.info-step .text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.payment-details .payment-block .step .payment-method {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.payment-details .payment-block .step .payment-method li {
+  margin-right: 30px;
+}
+
+.payment-details .payment-block .step .payment-method li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.payment-details .payment-block .step .payment-method li a .radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  border: 2px solid #000;
+  position: relative;
+}
+
+.payment-details .payment-block .step .payment-method li a .radio:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+
+.payment-details .payment-block .step .payment-method li a .text {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.payment-details .payment-block .step .payment-method li.active a .radio:before {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+.payment-details .payment-block .step .other-payment a {
+  width: 100%;
+  height: 110px;
+  border: 1px solid #f5f6fb;
+  background: #fff;
+  display: block;
+  position: relative;
+  transition: 0.2s ease-in;
+}
+
+.payment-details .payment-block .step .other-payment a:hover {
+  background: #e8edff;
+  border-color: #d8def0;
+}
+
+.payment-details .payment-block .step .other-payment a img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .unsupport {

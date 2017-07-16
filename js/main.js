@@ -96,6 +96,22 @@
     }
   });
 
+  $.fn.serializeObject = function() {
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+      if ( o[this.name] !== undefined ) {
+        if ( !o[this.name].push ) {
+          o[this.name] = [o[this.name]];
+        }
+        o[this.name].push(this.value || '');
+      } else {
+        o[this.name] = this.value || '';
+      }
+    });
+    return o;
+  };
+
   /**
    * ------------------------------------------------------------------------------------------------------
    * Main Functions
@@ -922,6 +938,36 @@
     $('.cvv-input').fadeOut(200);
   });
 
+  $('.payment-block form').validator().submit(function (e) {
+    if ( !e.isDefaultPrevented() ) {
+      $('.info-step').show();
+      $('.payment-details .ui.sticky').sticky('refresh');
+      $('html, body').animate({
+        scrollTop : $('.info-step').offset().top
+      }, 800);
+      // var userInfo = JSON.stringify($(this).serializeObject());
+      var userInfo = $(this).serializeObject();
+      console.log(userInfo);
+      e.preventDefault();
+    }
+  });
+
+  $('#testValidation').click(function() {
+    $('#inputFirstName').val('Test Name');
+    $('#inputLastName').val('Test Surname');
+    $('#inputEmail').val('test@gmail.com');
+    $('#inputEmailConfirm').val('test@gmail.com');
+    $('#inputPhone').val('123456789');
+    $('#inputCardFirstName').val('Test Card Name');
+    $('#inputCardLastName').val('Test Card Surname');
+    $('#inputCardNumber1').val('1234');
+    $('#inputCardNumber2').val('5678');
+    $('#inputCardNumber3').val('9012');
+    $('#inputCardNumber4').val('3456');
+    $('#inputCardCVC').val('123');
+    $('#inputCardPostal').val('987654');
+  });
+
   /**
    * ------------------------------------------------------------------------------------------------------
    * Initialization
@@ -1503,7 +1549,8 @@
 
       $('.payment-details .ui.sticky').sticky({
         context: '#sticky-wrap',
-        silent: true
+        silent: true,
+        observeChanges: true
       });
     }, 1500);
     // remove all placeholders

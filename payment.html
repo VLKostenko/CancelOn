@@ -238,40 +238,41 @@
             </div>
           </div>
           <div class="payment-block" id="sticky-wrap">
-            <div class="step first-step">
-              <div class="step-header">
-                <div class="step-number"><span>1</span></div>
-                <div class="step-text">
-                  <div class="step-title"><span>Guest Details</span></div>
-                  <div class="step-description"><span>Please fill in the details of the person who is going to check in at the hotel.  (Must be over 21)</span></div>
+            <form data-toggle="validator" role="form">
+              <button id="testValidation" type="button" style="position: absolute; right: 0; top: 0;">Test Validation</button>
+              <div class="step first-step">
+                <div class="step-header">
+                  <div class="step-number"><span>1</span></div>
+                  <div class="step-text">
+                    <div class="step-title"><span>Guest Details</span></div>
+                    <div class="step-description"><span>Please fill in the details of the person who is going to check in at the hotel.  (Must be over 21)</span></div>
+                  </div>
                 </div>
-              </div>
-              <div class="step-form">
-                <form data-toggle="validator" role="form">
+                <div class="step-body">
                   <div class="row">
                     <div class="col-sm-6 form-group has-feedback">
                       <label class="control-label" for="inputFirstName">First Name<span class="danger">*</span></label>
-                      <input class="form-control" id="inputFirstName" type="text" required data-error="This field is required">
+                      <input class="form-control" id="inputFirstName" name="First Name" type="text" required data-error="This field is required">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-sm-6 form-group has-feedback">
                       <label class="control-label" for="inputLastName">Last Name<span class="danger">*</span></label>
-                      <input class="form-control" id="inputLastName" type="text" required data-error="This field is required">
+                      <input class="form-control" id="inputLastName" name="Last Name" type="text" required data-error="This field is required">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-sm-6 form-group has-feedback">
                       <label class="control-label" for="inputEmail">Email<span class="danger">*</span></label>
-                      <input class="form-control" id="inputEmail" type="email" required data-error="This field is required">
+                      <input class="form-control" id="inputEmail" name="Email" type="email" required data-error="This field is required">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-sm-6 form-group has-feedback">
                       <label class="control-label" for="inputEmail">Confirm Email address<span class="danger">*</span></label>
-                      <input class="form-control" id="inputEmailConfirm" type="email" required data-match="#inputEmail" data-error="This field is required" data-match-error="Email does not match">
+                      <input class="form-control" id="inputEmailConfirm" ,="" type="email" required data-match="#inputEmail" data-error="This field is required" data-match-error="Email does not match">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-sm-12 form-group">
                       <label class="control-label" for="inputCountry">Country<span class="danger">*</span></label>
-                      <select class="selectpicker form-control list-of-countries" id="inputCountry">
+                      <select class="selectpicker form-control list-of-countries" id="inputCountry" name="Country">
                         <option value="Abkhazia">Abkhazia</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -464,7 +465,7 @@
                     <div class="col-sm-12 form-group">
                       <label class="control-label" for="inputPhone">Phone<span class="danger">*</span></label>
                       <div class="phone-number-block clearfix">
-                        <select class="selectpicker form-control list-of-phones" id="inputCodePhone">
+                        <select class="selectpicker form-control list-of-phones" id="inputCodePhone" name="Phone Code">
                           <option value="+7 840">+7 840</option>
                           <option value="+93">+93</option>
                           <option value="+355">+355</option>
@@ -653,146 +654,193 @@
                           <option value="+260">+260</option>
                           <option value="+263">+263</option>
                         </select>
-                        <input class="form-control" id="inputPhone" type="text" required data-error="This field is required">
+                        <input class="form-control" id="inputPhone" name="Phone Number" type="text" required data-error="This field is required">
                       </div>
                     </div>
                   </div>
-                </form>
+                </div>
+                <div class="step-footer"><span>(We won’t call you for marketing purposes)</span></div>
               </div>
-              <div class="step-footer"><span>(We won’t call you for marketing purposes)</span></div>
-            </div>
-            <div class="step first-step">
-              <div class="step-header">
-                <div class="step-number"><span>2</span></div>
-                <div class="step-text">
-                  <div class="step-title"><span>Payment Details</span></div>
-                  <div class="step-description"><span>Please fill in the details of the owner of the credit card.</span></div>
+              <div class="step second-step">
+                <div class="step-header">
+                  <div class="step-number"><span>2</span></div>
+                  <div class="step-text">
+                    <div class="step-title"><span>Payment Details</span></div>
+                    <div class="step-description"><span>Please fill in the details of the owner of the credit card.</span></div>
+                  </div>
+                </div>
+                <div class="step-body">
+                  <ul class="list-inline payment-method">
+                    <li class="active"><a href="#credit-card" data-toggle="tab"><span class="radio"></span><span class="text">Credit Card</span></a></li>
+                    <li><a href="#other-payment" data-toggle="tab"><span class="radio"></span><span class="text">Other Payment</span></a></li>
+                  </ul>
+                  <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="credit-card">
+                      <div class="row">
+                        <div class="col-sm-12 form-group has-feedback">
+                          <label class="control-label" for="inputCardFirstName">First Name<span class="danger">*</span></label>
+                          <input class="form-control" id="inputCardFirstName" name="Card First Name" type="text" required autocomplete="off" data-error="This field is required">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-sm-12 form-group has-feedback">
+                          <label class="control-label" for="inputCardLastName">Last Name<span class="danger">*</span></label>
+                          <input class="form-control" id="inputCardLastName" name="Card Last Name" type="text" required autocomplete="off" data-error="This field is required">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-sm-12 form-group card-number-input">
+                          <label class="control-label" for="inputCardNumber1">Card Number<span class="danger">*</span></label>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <input class="form-control card-input" id="inputCardNumber1" name="Card Number 1" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
+                            </div>
+                            <div class="col-sm-3">
+                              <input class="form-control card-input" id="inputCardNumber2" name="Card Number 2" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
+                            </div>
+                            <div class="col-sm-3">
+                              <input class="form-control card-input" id="inputCardNumber3" name="Card Number 3" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
+                            </div>
+                            <div class="col-sm-3">
+                              <input class="form-control card-input" id="inputCardNumber4" name="Card Number 4" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                          <label class="control-label" for="inputCardExpDate">Expiration Date<span class="danger">*</span></label>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <select class="selectpicker form-control" id="inputCardExpDate" name="Expiration Date Day">
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-6">
+                              <select class="selectpicker form-control" id="inputCardExpDateYear" name="Expiration Date Year">
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018" selected>2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                          <label class="control-label" for="inputCardCVC">CVC<span class="danger">*</span><span class="small-desc"> The 3 digits (back) or 4 digits (front) value on your card.</span></label>
+                          <input class="form-control" id="inputCardCVC" name="Card CVC" type="text" autocomplete="off" required maxlength="3" data-error="This field is required">
+                          <div class="cvv-input">
+                            <div class="numbers-block">
+                              <div class="number"><a href="javascript:void(0)">0</a></div>
+                              <div class="number"><a href="javascript:void(0)">1</a></div>
+                              <div class="number"><a href="javascript:void(0)">2</a></div>
+                              <div class="number"><a href="javascript:void(0)">3</a></div>
+                              <div class="number"><a href="javascript:void(0)">4</a></div>
+                              <div class="number"><a href="javascript:void(0)">5</a></div>
+                              <div class="number"><a href="javascript:void(0)">6</a></div>
+                              <div class="number"><a href="javascript:void(0)">7</a></div>
+                              <div class="number"><a href="javascript:void(0)">8</a></div>
+                              <div class="number"><a href="javascript:void(0)">9</a></div>
+                              <div class="delete-button"><a href="javascript:void(0)">Delete</a></div>
+                              <div class="enter-button"><a href="javascript:void(0)">Enter</a></div>
+                            </div>
+                          </div>
+                          <div class="help-button"><a href="javascript:void(0)"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+                            <div class="cvv-help"><img src="images/cvv_num_img.png" alt="cvv help" srcset="images/cvv_num_img.png 1x, images/cvv_num_img@2x.png 2x, images/cvv_num_img@3x.png 3x"><span class="text">3 digit security code</span></div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                          <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
+                          <input class="form-control" id="inputCardPostal" name="Card Postal" type="text" required autocomplete="off" data-error="This field is required">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane other-payment" id="other-payment">
+                      <div class="row">
+                        <div class="col-sm-3"><a href="javascript:void(0)"><img src="/images/payment-method/paypal.png" alt="paypal" srcset="/images/payment-method/paypal.png 1x, /images/payment-method/paypal@2x.png 2x, /images/payment-method/paypal@3x.png 3x"></a></div>
+                        <div class="col-sm-3"><a href="javascript:void(0)"><img src="/images/payment-method/apple-pay.png" alt="apple pay" srcset="/images/payment-method/apple-pay.png 1x, /images/payment-method/apple-pay@2x.png 2x, /images/payment-method/apple-pay@3x.png 3x"></a></div>
+                        <div class="col-sm-3"><a href="javascript:void(0)"><img src="/images/payment-method/amazon-pay.png" alt="amazon pay" srcset="/images/payment-method/amazon-pay.png 1x, /images/payment-method/amazon-pay@2x.png 2x, /images/payment-method/amazon-pay@3x.png 3x"></a></div>
+                        <div class="col-sm-3"><a href="javascript:void(0)"><img src="/images/payment-method/google-wallet.png" alt="google wallet" srcset="/images/payment-method/google-wallet.png 1x, /images/payment-method/google-wallet@2x.png 2x, /images/payment-method/google-wallet@3x.png 3x"></a></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="step-form">
-                <form data-toggle="validator" role="form" autocomplete="off">
-                  <div class="row">
-                    <div class="col-sm-12 form-group has-feedback">
-                      <label class="control-label" for="inputCardFirstName">First Name<span class="danger">*</span></label>
-                      <input class="form-control" id="inputCardFirstName" type="text" required autocomplete="off" data-error="This field is required">
-                      <div class="help-block with-errors"></div>
+              <div class="step submit-step">
+                <div class="wrapper">
+                  <div class="submit-wrapper">
+                    <div class="submit">
+                      <input type="submit" value="Reservation">
                     </div>
-                    <div class="col-sm-12 form-group has-feedback">
-                      <label class="control-label" for="inputCardLastName">Last Name<span class="danger">*</span></label>
-                      <input class="form-control" id="inputCardLastName" type="text" required autocomplete="off" data-error="This field is required">
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-sm-12 form-group card-number-input">
-                      <label class="control-label" for="inputCardNumber1">Card Number<span class="danger">*</span></label>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <input class="form-control card-input" id="inputCardNumber1" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
-                        </div>
-                        <div class="col-sm-3">
-                          <input class="form-control card-input" id="inputCardNumber2" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
-                        </div>
-                        <div class="col-sm-3">
-                          <input class="form-control card-input" id="inputCardNumber3" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
-                        </div>
-                        <div class="col-sm-3">
-                          <input class="form-control card-input" id="inputCardNumber4" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-12 form-group">
-                      <label class="control-label" for="inputCardExpDate">Expiration Date<span class="danger">*</span></label>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <select class="selectpicker form-control" id="inputCardExpDate">
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                          </select>
-                        </div>
-                        <div class="col-sm-6">
-                          <select class="selectpicker form-control" id="inputCardExpDateYear">
-                            <option value="2010">2010</option>
-                            <option value="2011">2011</option>
-                            <option value="2012">2012</option>
-                            <option value="2013">2013</option>
-                            <option value="2014">2014</option>
-                            <option value="2015">2015</option>
-                            <option value="2016">2016</option>
-                            <option value="2017">2017</option>
-                            <option value="2018" selected>2018</option>
-                            <option value="2019">2019</option>
-                            <option value="2020">2020</option>
-                            <option value="2021">2021</option>
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
-                            <option value="2026">2026</option>
-                            <option value="2027">2027</option>
-                            <option value="2028">2028</option>
-                            <option value="2029">2029</option>
-                            <option value="2030">2030</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                      <label class="control-label" for="inputCardCVC">CVC<span class="danger">*</span><span class="small-desc"> The 3 digits (back) or 4 digits (front) value on your card.</span></label>
-                      <input class="form-control" id="inputCardCVC" type="text" autocomplete="off" required maxlength="3" data-error="This field is required">
-                      <div class="cvv-input">
-                        <div class="numbers-block">
-                          <div class="number"><a href="javascript:void(0)">0</a></div>
-                          <div class="number"><a href="javascript:void(0)">1</a></div>
-                          <div class="number"><a href="javascript:void(0)">2</a></div>
-                          <div class="number"><a href="javascript:void(0)">3</a></div>
-                          <div class="number"><a href="javascript:void(0)">4</a></div>
-                          <div class="number"><a href="javascript:void(0)">5</a></div>
-                          <div class="number"><a href="javascript:void(0)">6</a></div>
-                          <div class="number"><a href="javascript:void(0)">7</a></div>
-                          <div class="number"><a href="javascript:void(0)">8</a></div>
-                          <div class="number"><a href="javascript:void(0)">9</a></div>
-                          <div class="delete-button"><a href="javascript:void(0)">Delete</a></div>
-                          <div class="enter-button"><a href="javascript:void(0)">Enter</a></div>
-                        </div>
-                      </div>
-                      <div class="help-button"><a href="javascript:void(0)"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
-                        <div class="cvv-help"><img src="images/cvv_num_img.png" alt="cvv help" srcset="images/cvv_num_img.png 1x, images/cvv_num_img@2x.png 2x, images/cvv_num_img@3x.png 3x"><span class="text">3 digit security code</span></div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                      <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
-                      <input class="form-control" id="inputCardPostal" type="text" required autocomplete="off" data-error="This field is required">
-                    </div>
+                    <div class="guarantee"><img src="images/icons/shopping-guarantee.png" alt="shopping guarantee" srcset="images/icons/shopping-guarantee.png 1x, images/icons/shopping-guarantee@2x.png 2x, images/icons/shopping-guarantee@3x.png 3x"></div>
                   </div>
-                </form>
+                  <div class="cancel"><a href="javascript:void(0)">Cancel</a></div>
+                </div>
+                <div class="alert">
+                  <p>By Continuing With Your Booking, You Agree That You:</p>
+                  <p>1) Have Read And Accepted Our<a href="javascript:void(0)"> Privacy Policy</a> And<a href="javascript:void(0)"> User Agreement.</a></p>
+                  <p>2) Are At Least 18 Years Old.</p>
+                </div>
+              </div>
+            </form>
+            <div class="step info-step">
+              <div class="step-header">
+                <div class="step-number"><span>3</span></div>
+                <div class="step-text">
+                  <div class="step-title"><span>Important Information</span></div>
+                </div>
+              </div>
+              <div class="step-body">
+                <div class="popup green mt-30 mb-30">
+                  <div class="popup_title mb-0"><span class="fs-xl">Successful! Your order is complete!</span></div><a class="popup_close" href="javascript:void(0)"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="text">
+                  <p>Cancellation Policy: Cancellations before<span class="before-date"> Jun 29, 2017 12:00 PM</span> (Local Time) are<span class="blue-text"> FULLY REFUNDABLE.</span> Bookings cancelled after<span class="before-date"> Jun 29, 2017 12:00 PM</span> (Local Time) are non-refundable and cannot be amended. There is no refund for no-shows or early checkouts.</p><br>
+                  <p>Once you completed filling in your payment information, you will get an email verifying  your transaction with the hotel information and your reservation information.</p>
+                </div>
               </div>
             </div>
           </div>
