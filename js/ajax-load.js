@@ -32,7 +32,7 @@ $('.loading-more .loading a').click(function(event) {
 
 function loadContentSearch(url) {
   $.ajax({
-    url: './' + url,
+    url: url,
     type: 'GET',
     beforeSend: function() {
     },
@@ -69,8 +69,14 @@ function loadContentSearch(url) {
 function loadContentTable(tableType) {
   var existing = $('.booking-table table.table.table-responsive').hasClass(tableType);
   if ( !existing ) {
+    var url;
+    if ( window.location.href.indexOf("localhost") > -1 ) {
+      url = '/partial/' + tableType + '.html';
+    } else {
+      url = './partial/' + tableType + '.html';
+    }
     var xhr = $.ajax({
-      url: './partial/' + tableType + '.html',
+      url: url,
       type: 'GET',
       beforeSend: function() {
         start_time = new Date().getTime();
@@ -99,7 +105,7 @@ function loadContentTable(tableType) {
           // it is the fix of default owl method that returns wrong value
           var current = (event.item.index + 1) - event.relatedTarget._clones.length / 2;
           var allItems = event.item.count;
-          if (current > allItems || current == 0) {
+          if (current > allItems || current === 0) {
             current = allItems - (current % allItems);
           }
           event.relatedTarget.$element.context.nextElementSibling.innerHTML = current + "/" + event.item.count;
