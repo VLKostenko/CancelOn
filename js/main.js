@@ -941,11 +941,13 @@
   $('.payment-block form').validator().submit(function (e) {
     if ( !e.isDefaultPrevented() ) {
       $('.info-step').show();
-      $('.payment-details .ui.sticky').sticky('refresh');
+      if ( $(window).width() > 991 ) {
+        $('.payment-details .ui.sticky').sticky('refresh');
+      }
       $('html, body').animate({
         scrollTop : $('.info-step').offset().top
       }, 800);
-      // var userInfo = JSON.stringify($(this).serializeObject());
+      // var userInfo = JSON.stringify($(this).serializeObject()); // output in JSON string
       var userInfo = $(this).serializeObject();
       console.log(userInfo);
       e.preventDefault();
@@ -973,41 +975,6 @@
    * Initialization
    * ------------------------------------------------------------------------------------------------------
    **/
-
-  // jquery ui draggable
-  $(".draggable").draggable({
-    axis: 'x', // only horizontally
-    drag: function(e, ui) {
-      var $element = ui.helper;
-      // calculate
-      var w = $element.width();
-      var pw = $element.parent().width();
-      var maxPosLeft = 0;
-      if ( w > pw ) {
-        maxPosLeft = -(w - pw);
-      }
-      var h = $element.height();
-      var ph = $element.parent().height();
-      var maxPosTop = 0;
-      if ( h > ph ) {
-        maxPosTop = h - ph;
-      }
-      // horizontal
-      if ( ui.position.left > 0 ) {
-        ui.position.left = 0;
-      } else if ( ui.position.left < maxPosLeft ) {
-        ui.position.left = maxPosLeft;
-      }
-      // vertical
-      if ( ui.position.top > 0 ) {
-        ui.position.top = 0;
-      } else if ( ui.position.top < maxPosTop ) {
-        ui.position.top = maxPosTop;
-      }
-    }
-  });
-
-  initTouchHandler($(".draggable"));
 
   initPhotoSwipeFromDOM('.photoswipe-block');
 
@@ -1138,7 +1105,9 @@
     thumbImage: false,
     thumbsPrerendered: true,
     thumbContainerClass: 'owl-thumbs-info-payment',
-    thumbItemClass: 'owl-thumb-item'
+    thumbItemClass: 'owl-thumb-item',
+    touchDrag: false,
+    mouseDrag: false
   });
 
   $('.same-height').matchHeight();
@@ -1372,6 +1341,13 @@
     }
 
     $('.cvv-input .number').shuffle();
+
+    // TODO this code for resize also
+    if ( $(window).width() < 992 ) {
+      $('.payment-details .sidebar-block').addClass('draggable');
+    } else {
+      $('.payment-details .sidebar-block').removeClass('draggable');
+    }
   });
 
   window.addEventListener('resize', function() {
@@ -1487,6 +1463,47 @@
 
       // window loaded functions
 
+      // jquery ui draggable
+      var itemsCount = 0;
+      $(".draggable").draggable({
+        axis: 'x', // only horizontally
+        drag: function(e, ui) {
+          var $element = ui.helper;
+          // calculate
+          var w = $element.width();
+          var pw = $element.parent().width();
+          var maxPosLeft = 0;
+          if ( w > pw ) {
+            maxPosLeft = -(w - pw);
+          }
+          var h = $element.height();
+          var ph = $element.parent().height();
+          var maxPosTop = 0;
+          if ( h > ph ) {
+            maxPosTop = h - ph;
+          }
+          // horizontal
+          if ( ui.position.left > 0 ) {
+            ui.position.left = 0;
+          } else if ( ui.position.left < maxPosLeft ) {
+            ui.position.left = maxPosLeft;
+          }
+          // vertical
+          if ( ui.position.top > 0 ) {
+            ui.position.top = 0;
+          } else if ( ui.position.top < maxPosTop ) {
+            ui.position.top = maxPosTop;
+          }
+          if ( $element.parent().hasClass('sidebar-block-wrapper') ) {
+            var calc = 1 - ( ui.position.left + $element.children('.panel').eq(itemsCount - 1).width() - 400 ) / 400 - 0.275;
+            itemsCount = $element.children('.panel').length;
+
+            $element.children('.panel').eq(itemsCount - 1).css('opacity', calc);
+          }
+        }
+      });
+
+      initTouchHandler($(".draggable"));
       checkMobileFilter('#myonoffswitch-mobile-gallery', '#myonoffswitch-mobile-map');
       reinitMap();
       setMapWrapperHeight();
@@ -1532,6 +1549,7 @@
         });
       }
 
+
       $('.map-wrapper .ui.sticky').sticky({
         context: '#sticky-wrap',
         silent: true,
@@ -1547,11 +1565,27 @@
         silent: true
       });
 
-      $('.payment-details .ui.sticky').sticky({
-        context: '#sticky-wrap',
-        silent: true,
-        observeChanges: true
-      });
+      // TODO this code for resize also
+      if ( $(window).width() > 991 ) {
+        $('.payment-details .ui.sticky').sticky({
+          context: '#sticky-wrap',
+          silent: true,
+          observeChanges: true
+        });
+        $('.payment-details .sidebar-block .panel-second').appendTo($('.payment-details .sidebar-block'));
+        $('.payment-details .sidebar-block .slider-panel').css('opacity', 1);
+      } else {
+        var paymentSidebarWidth = 0;
+        $('.payment-details .sidebar-block .panel').each(function() {
+          paymentSidebarWidth += $(this).outerWidth();
+        });
+        $('.payment-details .sidebar-block').css('max-width', paymentSidebarWidth);
+
+        $('.payment-details .sidebar-block .panel').matchHeight();
+
+        $('.payment-details .sidebar-block .panel-second').insertAfter('.payment-details .sidebar-block .panel-first');
+        // $('.payment-details .sidebar-block .panel').length
+      }
     }, 1500);
     // remove all placeholders
     setTimeout(function() {

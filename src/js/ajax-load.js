@@ -127,7 +127,7 @@ $(window).load(function() {
   if ( $('.booking-table').length ) {
     if ( $(window).width() < 768 ) {
       loadContentTable('table-mobile');
-    } else if ( $(window).width() > 768 && $(window).width() < 992 ) {
+    } else if ( $(window).width() > 767 && $(window).width() < 992 ) {
       loadContentTable('table-tablet');
     } else {
       loadContentTable('table-desktop');
@@ -139,7 +139,7 @@ $(window).resize(function() {
   if ( $('.booking-table').length ) {
     if ( $(window).width() < 768 ) {
       loadContentTable('table-mobile');
-    } else if ( $(window).width() > 768 && $(window).width() < 992 ) {
+    } else if ( $(window).width() > 767 && $(window).width() < 992 ) {
       loadContentTable('table-tablet');
     } else {
       loadContentTable('table-desktop');

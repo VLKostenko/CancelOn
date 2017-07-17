@@ -93,7 +93,7 @@
                 <li><a href="javascript:void(0)">Language</a></li>
                 <!--li.visible-xs//a.blue-btn(href='javascript:void(0)') Unlock special prices
                 -->
-                <li class="visible-xs"><a class="green-btn" href="javascript:void(0)">Buy hotel reservation</a></li>
+                <li class="visible-xs"><a class="green-btn" href="./payment.html">Buy hotel reservation</a></li>
               </ul>
             </div>
             <div class="navbar-filter hidden-lg" id="filter_mobile"><a id="filter-done" href="javascript:void(0)">Done</a></div>
@@ -145,7 +145,7 @@
               <li class="visible-lg"><a href="javascript:void(0)">About</a></li>
               <!--li-->
               <!--	a.blue-btn(href='javascript:void(0)') Unlock special prices-->
-              <li><a class="green-btn" href="javascript:void(0)">Buy hotel reservation</a></li>
+              <li><a class="green-btn" href="./payment.html">Buy hotel reservation</a></li>
             </ul>
           </div>
         </div>
@@ -155,7 +155,7 @@
       <div class="loading-title-cover">
         <div class="loading-title"></div>
       </div>
-      <div class="container pl-xs-0 pr-xs-0">
+      <div class="container timer-container pl-xs-0 pr-xs-0">
         <div class="row">
           <div class="col-md-12 pl-xs-15 pr-xs-15 pl-md-0 pr-md-0 pl-0 pr-0">
             <div class="time"><span class="text">This Deal Expires In:</span><span class="timer" id="timer" data-time="25"><span>25:</span><span>00</span></span></div>
@@ -166,9 +166,9 @@
     <div class="container payment-details-wrapper">
       <div class="row">
         <div class="payment-details clearfix">
-          <div class="sidebar-block-wrapper">
+          <div class="sidebar-block-wrapper draggable-container">
             <div class="sidebar-block ui sticky">
-              <div class="panel panel-default">
+              <div class="panel panel-default panel-first">
                 <div class="panel-heading">
                   <h4 class="panel-title">Your Price Summary</h4>
                 </div>
@@ -183,7 +183,7 @@
                   <div class="change-details clearfix"><a href="javascript:void(0)">Change your selection</a></div>
                 </div>
               </div>
-              <div class="panel panel-default">
+              <div class="panel panel-default slider-panel">
                 <div class="panel-body payment-details-info">
                   <div class="block-slider clearfix">
                     <div class="owl-carousel owl-carousel-info-payment photoswipe-block" data-slider-id="1" itemscope="" itemtype="http://schema.org/ImageGallery">
@@ -215,11 +215,11 @@
                   <div class="change-room-button"><span class="type">Room: Superior Room</span><a href="javascript:void(0)">Change</a></div>
                 </div>
               </div>
-              <div class="order-another">
+              <div class="order-another hidden-sm">
                 <div class="title"><span class="text">Order Another Item?</span><span class="arrow"><span class="icon-arrow-right"></span></span></div>
                 <div class="hotel-name"><span>ALFAVITO Kyiv Hotel</span></div>
               </div>
-              <div class="panel panel-default">
+              <div class="panel panel-default panel-second">
                 <div class="panel-heading">
                   <h4 class="panel-title">Your Booking Details</h4>
                 </div>
@@ -239,7 +239,7 @@
           </div>
           <div class="payment-block" id="sticky-wrap">
             <form data-toggle="validator" role="form">
-              <button id="testValidation" type="button" style="position: absolute; right: 0; top: 0;">Test Validation</button>
+              <button id="testValidation" type="button" style="position: absolute; right: 0; top: 0; background: #00b9f1; color: #fff; border: 1px solid #2091b3;">Test Validation</button>
               <div class="step first-step">
                 <div class="step-header">
                   <div class="step-number"><span>1</span></div>
@@ -675,32 +675,32 @@
                     <li><a href="#other-payment" data-toggle="tab"><span class="radio"></span><span class="text">Other Payment</span></a></li>
                   </ul>
                   <div class="tab-content clearfix">
-                    <div class="tab-pane active" id="credit-card">
+                    <div class="tab-pane credit-card-info active" id="credit-card">
                       <div class="row">
                         <div class="col-sm-12 form-group has-feedback">
                           <label class="control-label" for="inputCardFirstName">First Name<span class="danger">*</span></label>
-                          <input class="form-control" id="inputCardFirstName" name="Card First Name" type="text" required autocomplete="off" data-error="This field is required">
+                          <input class="form-control" id="inputCardFirstName" name="Card First Name" type="text" required autocomplete="off" data-error="This field is required"><img src="/images/icons/credit/first-name.png" alt="first name" srcset="/images/icons/credit/first-name.png 1x, /images/icons/credit/first-name@2x.png 2x, /images/icons/credit/first-name@3x.png 3x">
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-sm-12 form-group has-feedback">
                           <label class="control-label" for="inputCardLastName">Last Name<span class="danger">*</span></label>
-                          <input class="form-control" id="inputCardLastName" name="Card Last Name" type="text" required autocomplete="off" data-error="This field is required">
+                          <input class="form-control" id="inputCardLastName" name="Card Last Name" type="text" required autocomplete="off" data-error="This field is required"><img src="/images/icons/credit/last-name.png" alt="last name" srcset="/images/icons/credit/last-name.png 1x, /images/icons/credit/last-name@2x.png 2x, /images/icons/credit/last-name@3x.png 3x">
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-sm-12 form-group card-number-input">
                           <label class="control-label" for="inputCardNumber1">Card Number<span class="danger">*</span></label>
                           <div class="row">
                             <div class="col-sm-3">
-                              <input class="form-control card-input" id="inputCardNumber1" name="Card Number 1" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
+                              <input class="form-control card-input" id="inputCardNumber1" name="Card Number 1" type="text" required maxlength="4" autocomplete="off" data-error="This field is required"><img src="/images/icons/credit/number1.png" alt="number 1" srcset="/images/icons/credit/number1.png 1x, /images/icons/credit/number1@2x.png 2x, /images/icons/credit/number1@3x.png 3x">
                             </div>
                             <div class="col-sm-3">
-                              <input class="form-control card-input" id="inputCardNumber2" name="Card Number 2" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
+                              <input class="form-control card-input" id="inputCardNumber2" name="Card Number 2" type="text" required maxlength="4" autocomplete="off" data-error="This field is required"><img src="/images/icons/credit/number2.png" alt="number 2" srcset="/images/icons/credit/number2.png 1x, /images/icons/credit/number2@2x.png 2x, /images/icons/credit/number2@3x.png 3x">
                             </div>
                             <div class="col-sm-3">
-                              <input class="form-control card-input" id="inputCardNumber3" name="Card Number 3" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
+                              <input class="form-control card-input" id="inputCardNumber3" name="Card Number 3" type="text" required maxlength="4" autocomplete="off" data-error="This field is required"><img src="/images/icons/credit/number3.png" alt="number 3" srcset="/images/icons/credit/number3.png 1x, /images/icons/credit/number3@2x.png 2x, /images/icons/credit/number3@3x.png 3x">
                             </div>
                             <div class="col-sm-3">
-                              <input class="form-control card-input" id="inputCardNumber4" name="Card Number 4" type="text" required maxlength="4" autocomplete="off" data-error="This field is required">
+                              <input class="form-control card-input" id="inputCardNumber4" name="Card Number 4" type="text" required maxlength="4" autocomplete="off" data-error="This field is required"><img src="/images/icons/credit/number4.png" alt="number 4" srcset="/images/icons/credit/number4.png 1x, /images/icons/credit/number4@2x.png 2x, /images/icons/credit/number4@3x.png 3x">
                             </div>
                           </div>
                         </div>
@@ -740,7 +740,7 @@
                                 <option value="29">29</option>
                                 <option value="30">30</option>
                                 <option value="31">31</option>
-                              </select>
+                              </select><img src="/images/icons/credit/date-day.png" alt="expiration date day" srcset="/images/icons/credit/date-day.png 1x, /images/icons/credit/date-day@2x.png 2x, /images/icons/credit/date-day@3x.png 3x">
                             </div>
                             <div class="col-sm-6">
                               <select class="selectpicker form-control" id="inputCardExpDateYear" name="Expiration Date Year">
@@ -765,36 +765,38 @@
                                 <option value="2028">2028</option>
                                 <option value="2029">2029</option>
                                 <option value="2030">2030</option>
-                              </select>
+                              </select><img src="/images/icons/credit/date-year.png" alt="expiration date year" srcset="/images/icons/credit/date-year.png 1x, /images/icons/credit/date-year@2x.png 2x, /images/icons/credit/date-year@3x.png 3x">
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-6 form-group">
-                          <label class="control-label" for="inputCardCVC">CVC<span class="danger">*</span><span class="small-desc"> The 3 digits (back) or 4 digits (front) value on your card.</span></label>
-                          <input class="form-control" id="inputCardCVC" name="Card CVC" type="text" autocomplete="off" required maxlength="3" data-error="This field is required">
-                          <div class="cvv-input">
-                            <div class="numbers-block">
-                              <div class="number"><a href="javascript:void(0)">0</a></div>
-                              <div class="number"><a href="javascript:void(0)">1</a></div>
-                              <div class="number"><a href="javascript:void(0)">2</a></div>
-                              <div class="number"><a href="javascript:void(0)">3</a></div>
-                              <div class="number"><a href="javascript:void(0)">4</a></div>
-                              <div class="number"><a href="javascript:void(0)">5</a></div>
-                              <div class="number"><a href="javascript:void(0)">6</a></div>
-                              <div class="number"><a href="javascript:void(0)">7</a></div>
-                              <div class="number"><a href="javascript:void(0)">8</a></div>
-                              <div class="number"><a href="javascript:void(0)">9</a></div>
-                              <div class="delete-button"><a href="javascript:void(0)">Delete</a></div>
-                              <div class="enter-button"><a href="javascript:void(0)">Enter</a></div>
+                        <div class="last-line-wrapper">
+                          <div class="col-sm-6 form-group">
+                            <label class="control-label" for="inputCardCVC">CVC<span class="danger">*</span><span class="small-desc"> The 3 digits (back) or 4 digits (front) value on your card.</span></label>
+                            <input class="form-control" id="inputCardCVC" name="Card CVC" type="text" autocomplete="off" required maxlength="3" data-error="This field is required"><img src="/images/icons/credit/cvc.png" alt="cvc code" srcset="/images/icons/credit/cvc.png 1x, /images/icons/credit/cvc@2x.png 2x, /images/icons/credit/cvc@3x.png 3x">
+                            <div class="cvv-input">
+                              <div class="numbers-block">
+                                <div class="number"><a href="javascript:void(0)">0</a></div>
+                                <div class="number"><a href="javascript:void(0)">1</a></div>
+                                <div class="number"><a href="javascript:void(0)">2</a></div>
+                                <div class="number"><a href="javascript:void(0)">3</a></div>
+                                <div class="number"><a href="javascript:void(0)">4</a></div>
+                                <div class="number"><a href="javascript:void(0)">5</a></div>
+                                <div class="number"><a href="javascript:void(0)">6</a></div>
+                                <div class="number"><a href="javascript:void(0)">7</a></div>
+                                <div class="number"><a href="javascript:void(0)">8</a></div>
+                                <div class="number"><a href="javascript:void(0)">9</a></div>
+                                <div class="delete-button"><a href="javascript:void(0)">Delete</a></div>
+                                <div class="enter-button"><a href="javascript:void(0)">Enter</a></div>
+                              </div>
+                            </div>
+                            <div class="help-button"><a href="javascript:void(0)"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
+                              <div class="cvv-help"><img src="images/cvv_num_img.png" alt="cvv help" srcset="images/cvv_num_img.png 1x, images/cvv_num_img@2x.png 2x, images/cvv_num_img@3x.png 3x"><span class="text">3 digit security code</span></div>
                             </div>
                           </div>
-                          <div class="help-button"><a href="javascript:void(0)"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
-                            <div class="cvv-help"><img src="images/cvv_num_img.png" alt="cvv help" srcset="images/cvv_num_img.png 1x, images/cvv_num_img@2x.png 2x, images/cvv_num_img@3x.png 3x"><span class="text">3 digit security code</span></div>
+                          <div class="col-sm-6 form-group">
+                            <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
+                            <input class="form-control pl-10" id="inputCardPostal" name="Card Postal" type="text" required autocomplete="off" data-error="This field is required">
                           </div>
-                        </div>
-                        <div class="col-sm-6 form-group">
-                          <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
-                          <input class="form-control" id="inputCardPostal" name="Card Postal" type="text" required autocomplete="off" data-error="This field is required">
                         </div>
                       </div>
                     </div>
@@ -955,7 +957,7 @@
                     <li><a href="javascript:void(0)">Sell hotel reservation</a></li>
                     <li><a href="javascript:void(0)">Hotel cancellation policy</a></li>
                     <li><a href="javascript:void(0)">Hotel reservation deals</a></li>
-                    <li><a href="javascript:void(0)">Buy hotel reservation</a></li>
+                    <li><a href="./payment.html">Buy hotel reservation</a></li>
                     <li><a href="javascript:void(0)">Hotel Reservation</a></li>
                     <li><a href="javascript:void(0)">Cancel hotel reservation</a></li>
                   </ul>
@@ -1011,7 +1013,7 @@
                     <li><a href="javascript:void(0)">Sell hotel reservation</a></li>
                     <li><a href="javascript:void(0)">Hotel cancellation policy</a></li>
                     <li><a href="javascript:void(0)">Hotel reservation deals</a></li>
-                    <li><a href="javascript:void(0)">Buy hotel reservation</a></li>
+                    <li><a href="./payment.html">Buy hotel reservation</a></li>
                     <li><a href="javascript:void(0)">Hotel Reservation</a></li>
                     <li><a href="javascript:void(0)">Cancel hotel reservation</a></li>
                   </ul>

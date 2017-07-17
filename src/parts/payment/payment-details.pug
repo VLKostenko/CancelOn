@@ -1,4 +1,3 @@
-//- var countriesList = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cruise Ship", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyz Republic", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Mauritania", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Namibia", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Satellite", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "South Africa", "South Korea", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "St. Lucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
 -
    var countriesList = [{
    code: "+7 840",
@@ -563,9 +562,9 @@
    name: "Zimbabwe"
    }]
 .payment-details.clearfix
-   .sidebar-block-wrapper
+   .sidebar-block-wrapper.draggable-container
       .sidebar-block.ui.sticky
-         .panel.panel-default
+         .panel.panel-default.panel-first
             .panel-heading
                h4.panel-title Your Price Summary
             .panel-body
@@ -581,7 +580,7 @@
                   span For 2 Guests, 0 Child and 2 Nights
                .change-details.clearfix
                   a(href='javascript:void(0)') Change your selection
-         .panel.panel-default
+         .panel.panel-default.slider-panel
             .panel-body.payment-details-info
                .block-slider.clearfix
                   .owl-carousel.owl-carousel-info-payment.photoswipe-block(data-slider-id='1', itemscope, itemtype="http://schema.org/ImageGallery")
@@ -619,14 +618,14 @@
                .change-room-button
                   span.type Room: Superior Room
                   a(href='javascript:void(0)') Change
-         .order-another
+         .order-another.hidden-sm
             .title
                span.text Order Another Item?
                span.arrow
                   span.icon-arrow-right
             .hotel-name
                span ALFAVITO Kyiv Hotel
-         .panel.panel-default
+         .panel.panel-default.panel-second
             .panel-heading
                h4.panel-title Your Booking Details
             .panel-body.payment-booking-details
@@ -644,7 +643,7 @@
 
    .payment-block#sticky-wrap
       form(data-toggle='validator', role='form')
-         button#testValidation(type='button', style='position: absolute; right: 0; top: 0;') Test Validation
+         button#testValidation(type='button', style='position: absolute; right: 0; top: 0; background: #00b9f1; color: #fff; border: 1px solid #2091b3;') Test Validation
          .step.first-step
             .step-header
                .step-number
@@ -723,17 +722,19 @@
                         span.radio
                         span.text Other Payment
                .tab-content.clearfix
-                  #credit-card.tab-pane.active
+                  #credit-card.tab-pane.credit-card-info.active
                      .row
                         .col-sm-12.form-group.has-feedback
                            label.control-label(for='inputCardFirstName') First Name
                               span.danger *
                            input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required')
+                           img(src='/images/icons/credit/first-name.png', alt='first name')
                            .help-block.with-errors
                         .col-sm-12.form-group.has-feedback
                            label.control-label(for='inputCardLastName') Last Name
                               span.danger *
                            input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required')
+                           img(src='/images/icons/credit/last-name.png', alt='last name')
                            .help-block.with-errors
                         .col-sm-12.form-group.card-number-input
                            label.control-label(for='inputCardNumber1') Card Number
@@ -741,12 +742,16 @@
                            .row
                               .col-sm-3
                                  input#inputCardNumber1.form-control.card-input(name='Card Number 1', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
+                                 img(src='/images/icons/credit/number1.png', alt='number 1')
                               .col-sm-3
                                  input#inputCardNumber2.form-control.card-input(name='Card Number 2', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
+                                 img(src='/images/icons/credit/number2.png', alt='number 2')
                               .col-sm-3
                                  input#inputCardNumber3.form-control.card-input(name='Card Number 3', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
+                                 img(src='/images/icons/credit/number3.png', alt='number 3')
                               .col-sm-3
                                  input#inputCardNumber4.form-control.card-input(name='Card Number 4', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
+                                 img(src='/images/icons/credit/number4.png', alt='number 4')
                         .col-sm-12.form-group
                            label.control-label(for='inputCardExpDate') Expiration Date
                               span.danger *
@@ -760,6 +765,7 @@
                                           option(value=i)=i
                                        - }
                                     - }
+                                 img(src='/images/icons/credit/date-day.png', alt='expiration date day')
                               .col-sm-6
                                  select#inputCardExpDateYear.selectpicker.form-control(name='Expiration Date Year')
                                     - for ( var i = 2010; i < 2031; i++ ) {
@@ -769,47 +775,50 @@
                                           option(value=i)=i
                                        - }
                                     - }
-                        .col-sm-6.form-group
-                           label.control-label(for='inputCardCVC') CVC
-                              span.danger *
-                              span.small-desc  The 3 digits (back) or 4 digits (front) value on your card.
-                           input#inputCardCVC.form-control(name='Card CVC', type='text', autocomplete='off', required, maxlength='3', data-error='This field is required')
-                           .cvv-input
-                              .numbers-block
-                                 .number
-                                    a(href='javascript:void(0)') 0
-                                 .number
-                                    a(href='javascript:void(0)') 1
-                                 .number
-                                    a(href='javascript:void(0)') 2
-                                 .number
-                                    a(href='javascript:void(0)') 3
-                                 .number
-                                    a(href='javascript:void(0)') 4
-                                 .number
-                                    a(href='javascript:void(0)') 5
-                                 .number
-                                    a(href='javascript:void(0)') 6
-                                 .number
-                                    a(href='javascript:void(0)') 7
-                                 .number
-                                    a(href='javascript:void(0)') 8
-                                 .number
-                                    a(href='javascript:void(0)') 9
-                                 .delete-button
-                                    a(href='javascript:void(0)') Delete
-                                 .enter-button
-                                    a(href='javascript:void(0)') Enter
-                           .help-button
-                              a(href='javascript:void(0)')
-                                 i.fa.fa-question-circle-o(aria-hidden='true')
-                              .cvv-help
-                                 img(src='images/cvv_num_img.png', alt='cvv help')
-                                 span.text 3 digit security code
-                        .col-sm-6.form-group
-                           label.control-label(for='inputCardPostal') Postal Code
-                              span.danger *
-                           input#inputCardPostal.form-control(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
+                                 img(src='/images/icons/credit/date-year.png', alt='expiration date year')
+                        .last-line-wrapper
+                           .col-sm-6.form-group
+                              label.control-label(for='inputCardCVC') CVC
+                                 span.danger *
+                                 span.small-desc  The 3 digits (back) or 4 digits (front) value on your card.
+                              input#inputCardCVC.form-control(name='Card CVC', type='text', autocomplete='off', required, maxlength='3', data-error='This field is required')
+                              img(src='/images/icons/credit/cvc.png', alt='cvc code')
+                              .cvv-input
+                                 .numbers-block
+                                    .number
+                                       a(href='javascript:void(0)') 0
+                                    .number
+                                       a(href='javascript:void(0)') 1
+                                    .number
+                                       a(href='javascript:void(0)') 2
+                                    .number
+                                       a(href='javascript:void(0)') 3
+                                    .number
+                                       a(href='javascript:void(0)') 4
+                                    .number
+                                       a(href='javascript:void(0)') 5
+                                    .number
+                                       a(href='javascript:void(0)') 6
+                                    .number
+                                       a(href='javascript:void(0)') 7
+                                    .number
+                                       a(href='javascript:void(0)') 8
+                                    .number
+                                       a(href='javascript:void(0)') 9
+                                    .delete-button
+                                       a(href='javascript:void(0)') Delete
+                                    .enter-button
+                                       a(href='javascript:void(0)') Enter
+                              .help-button
+                                 a(href='javascript:void(0)')
+                                    i.fa.fa-question-circle-o(aria-hidden='true')
+                                 .cvv-help
+                                    img(src='images/cvv_num_img.png', alt='cvv help')
+                                    span.text 3 digit security code
+                           .col-sm-6.form-group
+                              label.control-label(for='inputCardPostal') Postal Code
+                                 span.danger *
+                              input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
                   #other-payment.tab-pane.other-payment
                      .row
                         .col-sm-3

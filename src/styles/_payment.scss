@@ -5,6 +5,9 @@
   font-family: "Roboto", sans-serif;
   margin-bottom: 15px;
   box-shadow: 0 1px 3px rgba(108,118,123,.15);
+  .timer-container {
+    overflow: hidden;
+  }
   .loading-search-cover,
   .loading-title-cover {
     .loading-title {
@@ -294,6 +297,7 @@
     float: left;
     //min-height: 1220px;
     margin-bottom: 50px;
+    position: relative;
     form {
       background: #fff;
       padding-top: 15px;
@@ -361,6 +365,14 @@
             border: 1px solid #d8def0;
             height: 50px;
             border-radius: 0;
+            & + img {
+              position: absolute;
+              z-index: 1;
+              bottom: 10px;
+              left: 25px;
+              height: 30px;
+              width: initial;
+            }
           }
           .help-block {
             pointer-events: none;
@@ -387,30 +399,6 @@
           &.has-error {
             input {
               border-color: #fbc0c7;
-            }
-          }
-          .list-of-countries {
-            height: 50px;
-            &.open {
-              button {
-                background: #f7f7f7;
-                color: #000;
-                box-shadow: none;
-              }
-            }
-            button {
-              height: 100%;
-              border-radius: 0;
-              border: 1px solid #d8def0;
-              font-family: "Roboto", sans-serif;
-              font-weight: 500;
-              &:hover,
-              &:active,
-              &:focus {
-                background: #f7f7f7;
-                color: #000;
-                box-shadow: none;
-              }
             }
           }
           .list-of-phones {
@@ -489,6 +477,7 @@
         }
       }
       .step-footer {
+        font-family: "Roboto", sans-serif;
         font-size: 14px;
         color: #b0b0b0;
       }
@@ -555,12 +544,41 @@
       }
       .bootstrap-select {
         height: 50px;
+        &.open {
+          .dropdown-toggle {
+            background: #f7f7f7;
+            color: #000;
+            box-shadow: none;
+          }
+        }
+        & + img {
+          position: absolute;
+          z-index: 2;
+          bottom: 10px;
+          left: 25px;
+          height: 30px;
+          width: initial;
+        }
         .dropdown-toggle {
           height: 100%;
           border-radius: 0;
           border: 1px solid #d8def0;
           font-family: Roboto,sans-serif;
           font-weight: 500;
+          &:hover,
+          &:active,
+          &:focus {
+            background: #f7f7f7;
+            color: #000;
+            box-shadow: none;
+          }
+        }
+        .dropdown-menu {
+          & > li {
+            & > a {
+              padding: 10px 20px;
+            }
+          }
         }
       }
       .help-button {
@@ -763,6 +781,282 @@
             left: 0;
             right: 0;
             margin: auto;
+          }
+        }
+      }
+      .credit-card-info {
+        input {
+          padding-left: 75px;
+        }
+        .bootstrap-select {
+          .dropdown-toggle {
+            padding-left: 75px;
+          }
+        }
+        .last-line-wrapper {
+          display: flex;
+          align-items: flex-end;
+          flex-direction: row;
+          float: left;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  .payment-details {
+    .payment-block {
+      .step {
+        .step {
+          &-header {
+            margin-bottom: 25px;
+            .step-text {
+              width: calc(100% - 50px);
+            }
+          }
+        }
+        .small-desc {
+          padding-left: 10px;
+        }
+        .help-button {
+          a {
+            top: 59px;
+          }
+          .cvv-help {
+            bottom: 55px;
+          }
+        }
+        .cvv-input {
+          .numbers-block {
+            width: 60%;
+            .number {
+              height: 55px;
+              a {
+                line-height: 55px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .payment-timer {
+    padding: 30px 0;
+    margin-bottom: 30px;
+    .loading-search-cover,
+    .loading-title-cover {
+      .loading-title {
+        margin: 25px auto 0;
+      }
+    }
+  }
+  .payment-details {
+    .sidebar-block-wrapper {
+      width: 100%;
+      height: initial;
+      &.draggable-container {
+        overflow: hidden;
+        /* no selection */
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .draggable {
+        width: 9999999px;
+        //white-space: nowrap; /* all on same line */
+        font-size: 0; /* fix inline block spacing */
+      }
+    }
+    .sidebar-block {
+      //max-width: calc(280px * 3);
+      height: 300px;
+      .panel {
+        width: 285px;
+        float: left;
+        padding-right: 30px;
+        background: transparent;
+        margin-bottom: 30px;
+        &:last-child {
+          padding-right: 0;
+        }
+        &.slider-panel {
+          width: 560px;
+          opacity: .4;
+          padding-right: 0;
+        }
+        .panel-body {
+          background: #fff;
+        }
+        .payment-booking-details {
+          .change-dates-button {
+            margin-top: 18px;
+          }
+        }
+        .payment-details-full {
+          background: #ecf3ff;
+        }
+        .payment-details-info {
+          background: #ecf3ff;
+          position: relative;
+          .block-slider {
+            width: 50%;
+            float: left;
+            .owl-carousel-info-payment {
+              margin-right: 10px;
+              height: 164px;
+              .owl-item {
+                img {
+                  height: 164px;
+                }
+              }
+            }
+            .owl-thumbs-info-payment {
+              .owl-thumb-item {
+                width: 48px;
+                height: 48px;
+              }
+            }
+          }
+          .info-label {
+            position: absolute;
+            left: 15px;
+            z-index: 10;
+          }
+          .title {
+            float: left;
+            width: calc(51% - 10px);
+            padding-left: 10px;
+            margin-top: 0;
+          }
+          .stars {
+            width: calc(51% - 10px);
+            padding-left: 10px;
+          }
+          .trip {
+            width: 22%;
+            max-width: 116px;
+            padding-left: 10px;
+          }
+          .reviews {
+            width: 15%;
+          }
+        }
+        .change-room {
+          background: #e3e9f3;
+        }
+      }
+    }
+    .payment-block {
+      width: 100%;
+      margin-left: 0;
+      .step {
+        .bootstrap-select {
+          .dropdown-toggle {
+            .caret {
+              right: 18px;
+              border-width: 5px;
+            }
+          }
+        }
+        .step-body {
+          .form-group {
+            .find-my-location {
+              right: 60px;
+            }
+          }
+        }
+        .other-payment {
+          a {
+            img {
+              max-width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .payment-details {
+    .payment-block {
+      padding: 15px;
+      form {
+        overflow: hidden;
+      }
+      .step {
+        padding: 0 15px;
+        position: relative;
+        .step-header {
+          .step-number {
+            position: absolute;
+            font-size: 24px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            top: 5px;
+            span {
+              height: 32px;
+              right: -20px;
+            }
+          }
+          .step-text {
+            width: 100%;
+            padding-left: 35px;
+          }
+        }
+        .step-body {
+          .form-group {
+            .list-of-phones {
+              width: 90px;
+              button {
+                .filter-option {
+                  padding-left: 0;
+                  &:before {
+                    display: none;
+                  }
+                }
+                .bs-caret {
+                  .caret {
+                    margin: initial;
+                    left: 13px;
+                  }
+                }
+              }
+            }
+            .phone-number-block {
+              input {
+                @include calc(width, 'calc(100% - 90px)');
+              }
+            }
+          }
+        }
+        &.submit-step {
+          position: relative;
+          padding-bottom: 70px;
+          .wrapper {
+            .submit-wrapper {
+              display: block;
+              width: 100%;
+            }
+          }
+          .cancel {
+            position: absolute;
+            bottom: 36px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+          }
+          input[type='submit'] {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 15px;
           }
         }
       }

@@ -9665,7 +9665,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 @media screen and (max-width: 767px) {
   /* .draggable navs */
-  .draggable-container {
+  .hotel-information .draggable-container {
     /* no selection */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -9673,17 +9673,17 @@ aside.show-on-map .panel-group .panel.panel-default {
     -ms-user-select: none;
     user-select: none;
   }
-  .draggable {
+  .hotel-information .draggable {
     width: 9999999px;
     white-space: nowrap;
     /* all on same line */
     font-size: 0;
     /* fix inline block spacing */
   }
-  .draggable li p {
+  .hotel-information .draggable li p {
     font-size: 14px;
   }
-  .draggable.nav > li > a {
+  .hotel-information .draggable.nav > li > a {
     font-size: 14px;
   }
 }
@@ -14573,6 +14573,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   box-shadow: 0 1px 3px rgba(108, 118, 123, 0.15);
 }
 
+.payment-timer .timer-container {
+  overflow: hidden;
+}
+
 .payment-timer .loading-search-cover .loading-title,
 .payment-timer .loading-title-cover .loading-title {
   margin: 45px auto 0;
@@ -14924,6 +14928,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-left: 15px;
   float: left;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .payment-details .payment-block form {
@@ -15012,6 +15017,15 @@ aside.show-on-map .panel-group .panel.panel-default {
   border-radius: 0;
 }
 
+.payment-details .payment-block .step .step-body .form-group input + img {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 25px;
+  height: 30px;
+  width: initial;
+}
+
 .payment-details .payment-block .step .step-body .form-group .help-block {
   pointer-events: none;
   position: absolute;
@@ -15038,30 +15052,6 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .payment-details .payment-block .step .step-body .form-group.has-error input {
   border-color: #fbc0c7;
-}
-
-.payment-details .payment-block .step .step-body .form-group .list-of-countries {
-  height: 50px;
-}
-
-.payment-details .payment-block .step .step-body .form-group .list-of-countries.open button {
-  background: #f7f7f7;
-  color: #000;
-  box-shadow: none;
-}
-
-.payment-details .payment-block .step .step-body .form-group .list-of-countries button {
-  height: 100%;
-  border-radius: 0;
-  border: 1px solid #d8def0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-}
-
-.payment-details .payment-block .step .step-body .form-group .list-of-countries button:hover, .payment-details .payment-block .step .step-body .form-group .list-of-countries button:active, .payment-details .payment-block .step .step-body .form-group .list-of-countries button:focus {
-  background: #f7f7f7;
-  color: #000;
-  box-shadow: none;
 }
 
 .payment-details .payment-block .step .step-body .form-group .list-of-phones {
@@ -15879,6 +15869,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .payment-details .payment-block .step .step-footer {
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #b0b0b0;
 }
@@ -15964,12 +15955,37 @@ aside.show-on-map .panel-group .panel.panel-default {
   height: 50px;
 }
 
+.payment-details .payment-block .step .bootstrap-select.open .dropdown-toggle {
+  background: #f7f7f7;
+  color: #000;
+  box-shadow: none;
+}
+
+.payment-details .payment-block .step .bootstrap-select + img {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  left: 25px;
+  height: 30px;
+  width: initial;
+}
+
 .payment-details .payment-block .step .bootstrap-select .dropdown-toggle {
   height: 100%;
   border-radius: 0;
   border: 1px solid #d8def0;
   font-family: Roboto,sans-serif;
   font-weight: 500;
+}
+
+.payment-details .payment-block .step .bootstrap-select .dropdown-toggle:hover, .payment-details .payment-block .step .bootstrap-select .dropdown-toggle:active, .payment-details .payment-block .step .bootstrap-select .dropdown-toggle:focus {
+  background: #f7f7f7;
+  color: #000;
+  box-shadow: none;
+}
+
+.payment-details .payment-block .step .bootstrap-select .dropdown-menu > li > a {
+  padding: 10px 20px;
 }
 
 .payment-details .payment-block .step .help-button a {
@@ -16214,6 +16230,237 @@ aside.show-on-map .panel-group .panel.panel-default {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.payment-details .payment-block .step .credit-card-info input {
+  padding-left: 75px;
+}
+
+.payment-details .payment-block .step .credit-card-info .bootstrap-select .dropdown-toggle {
+  padding-left: 75px;
+}
+
+.payment-details .payment-block .step .credit-card-info .last-line-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  float: left;
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .payment-details .payment-block .step .step-header {
+    margin-bottom: 25px;
+  }
+  .payment-details .payment-block .step .step-header .step-text {
+    width: calc(100% - 50px);
+  }
+  .payment-details .payment-block .step .small-desc {
+    padding-left: 10px;
+  }
+  .payment-details .payment-block .step .help-button a {
+    top: 59px;
+  }
+  .payment-details .payment-block .step .help-button .cvv-help {
+    bottom: 55px;
+  }
+  .payment-details .payment-block .step .cvv-input .numbers-block {
+    width: 60%;
+  }
+  .payment-details .payment-block .step .cvv-input .numbers-block .number {
+    height: 55px;
+  }
+  .payment-details .payment-block .step .cvv-input .numbers-block .number a {
+    line-height: 55px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .payment-timer {
+    padding: 30px 0;
+    margin-bottom: 30px;
+  }
+  .payment-timer .loading-search-cover .loading-title,
+  .payment-timer .loading-title-cover .loading-title {
+    margin: 25px auto 0;
+  }
+  .payment-details .sidebar-block-wrapper {
+    width: 100%;
+    height: initial;
+  }
+  .payment-details .sidebar-block-wrapper.draggable-container {
+    overflow: hidden;
+    /* no selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .payment-details .sidebar-block-wrapper .draggable {
+    width: 9999999px;
+    font-size: 0;
+    /* fix inline block spacing */
+  }
+  .payment-details .sidebar-block {
+    height: 300px;
+  }
+  .payment-details .sidebar-block .panel {
+    width: 285px;
+    float: left;
+    padding-right: 30px;
+    background: transparent;
+    margin-bottom: 30px;
+  }
+  .payment-details .sidebar-block .panel:last-child {
+    padding-right: 0;
+  }
+  .payment-details .sidebar-block .panel.slider-panel {
+    width: 560px;
+    opacity: .4;
+    padding-right: 0;
+  }
+  .payment-details .sidebar-block .panel .panel-body {
+    background: #fff;
+  }
+  .payment-details .sidebar-block .panel .payment-booking-details .change-dates-button {
+    margin-top: 18px;
+  }
+  .payment-details .sidebar-block .panel .payment-details-full {
+    background: #ecf3ff;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info {
+    background: #ecf3ff;
+    position: relative;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .block-slider {
+    width: 50%;
+    float: left;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .block-slider .owl-carousel-info-payment {
+    margin-right: 10px;
+    height: 164px;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .block-slider .owl-carousel-info-payment .owl-item img {
+    height: 164px;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item {
+    width: 48px;
+    height: 48px;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .info-label {
+    position: absolute;
+    left: 15px;
+    z-index: 10;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .title {
+    float: left;
+    width: calc(51% - 10px);
+    padding-left: 10px;
+    margin-top: 0;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .stars {
+    width: calc(51% - 10px);
+    padding-left: 10px;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .trip {
+    width: 22%;
+    max-width: 116px;
+    padding-left: 10px;
+  }
+  .payment-details .sidebar-block .panel .payment-details-info .reviews {
+    width: 15%;
+  }
+  .payment-details .sidebar-block .panel .change-room {
+    background: #e3e9f3;
+  }
+  .payment-details .payment-block {
+    width: 100%;
+    margin-left: 0;
+  }
+  .payment-details .payment-block .step .bootstrap-select .dropdown-toggle .caret {
+    right: 18px;
+    border-width: 5px;
+  }
+  .payment-details .payment-block .step .step-body .form-group .find-my-location {
+    right: 60px;
+  }
+  .payment-details .payment-block .step .other-payment a img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .payment-details .payment-block {
+    padding: 15px;
+  }
+  .payment-details .payment-block form {
+    overflow: hidden;
+  }
+  .payment-details .payment-block .step {
+    padding: 0 15px;
+    position: relative;
+  }
+  .payment-details .payment-block .step .step-header .step-number {
+    position: absolute;
+    font-size: 24px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    top: 5px;
+  }
+  .payment-details .payment-block .step .step-header .step-number span {
+    height: 32px;
+    right: -20px;
+  }
+  .payment-details .payment-block .step .step-header .step-text {
+    width: 100%;
+    padding-left: 35px;
+  }
+  .payment-details .payment-block .step .step-body .form-group .list-of-phones {
+    width: 90px;
+  }
+  .payment-details .payment-block .step .step-body .form-group .list-of-phones button .filter-option {
+    padding-left: 0;
+  }
+  .payment-details .payment-block .step .step-body .form-group .list-of-phones button .filter-option:before {
+    display: none;
+  }
+  .payment-details .payment-block .step .step-body .form-group .list-of-phones button .bs-caret .caret {
+    margin: initial;
+    left: 13px;
+  }
+  .payment-details .payment-block .step .step-body .form-group .phone-number-block input {
+    width: calc(calc(100% - 90px));
+  }
+  .payment-details .payment-block .step.submit-step {
+    position: relative;
+    padding-bottom: 70px;
+  }
+  .payment-details .payment-block .step.submit-step .wrapper .submit-wrapper {
+    display: block;
+    width: 100%;
+  }
+  .payment-details .payment-block .step.submit-step .cancel {
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .payment-details .payment-block .step.submit-step input[type='submit'] {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+  }
 }
 
 .unsupport {
