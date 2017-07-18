@@ -563,7 +563,7 @@
    }]
 .payment-details.clearfix
    .sidebar-block-wrapper.draggable-container
-      .sidebar-block.ui.sticky
+      .sidebar-block.ui.sticky.hidden-xs
          .panel.panel-default.panel-first
             .panel-heading
                h4.panel-title Your Price Summary
@@ -618,13 +618,84 @@
                .change-room-button
                   span.type Room: Superior Room
                   a(href='javascript:void(0)') Change
-         .order-another.hidden-sm
+         .order-another.hidden-sm.hidden-xs
             .title
                span.text Order Another Item?
                span.arrow
                   span.icon-arrow-right
             .hotel-name
                span ALFAVITO Kyiv Hotel
+         .panel.panel-default.panel-second
+            .panel-heading
+               h4.panel-title Your Booking Details
+            .panel-body.payment-booking-details
+               .days-details
+                  p Check-in:
+                  p Friday 21 July 2017 from 14:00
+                  br
+                  p Check-out:
+                  p Friday 21 July 2017 from 14:00
+                  br
+                  p Total length of stay:
+                  p 2 nights
+               .change-dates-button.clearfix
+                  a(href='javascript:void(0)') Change Dates
+
+      .sidebar-block-mobile.owl-carousel.visible-xs
+         .panel.panel-default.panel-first
+            .panel-heading
+               h4.panel-title Your Price Summary
+            .panel-body
+               p Room
+               p 20% VAT
+            .panel-body.payment-details-full
+               .price
+                  span.text Price
+                  span.number $2,688.86
+               .old-price
+                  span Old price $4,872.00
+               .room-details
+                  span For 2 Guests, 0 Child and 2 Nights
+               .change-details.clearfix
+                  a(href='javascript:void(0)') Change your selection
+         .panel.panel-default.slider-panel
+            .panel-body.payment-details-info
+               .block-slider.clearfix
+                  .owl-carousel.owl-carousel-info-payment.photoswipe-block(data-slider-id='1', itemscope, itemtype="http://schema.org/ImageGallery")
+                     - for(var i = 1; i < 4; i++)
+                     figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+                        a(href='images/hotel-image' + i + '.jpg', itemprop='contentUrl', data-size='1086x908')
+                           img(src='images/hotel-image' + i + '.jpg', alt='Alt ' + i)
+                  .owl-thumbs.owl-thumbs-info-payment(data-slider-id='1')
+                     - for(var i = 1; i < 4; i++)
+                     button.owl-thumb-item
+                        img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
+               span.info-label.green Best Price Guaranteed
+               h2.title
+                  a(href='javascript:void(0)') Holiday Inn Express Hotel Suites Las Vegas I-215 S. Beltway
+               ul.stars.stars-hotel(data-stars='4.47')
+                  li
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.orange-text.fa-star(aria-hidden='true')
+                  li
+                     i.fa.orange-text.fa-star-half(aria-hidden='true')
+               .trip
+                  .rate(data-rate='4.54')
+                     img.rate-image(src='./images/icons/rate/4.5.svg', alt='rate')
+               a.reviews(href='javascript:void(0)') 142 Reviews
+               .address
+                  span 6220 S. Rainbow Boulevard, Las Vegas Nevada, Nv , United States
+            .panel-body.change-room
+               .change-room-button
+                  span.type Room: Superior Room
+                  a(href='javascript:void(0)') Change
          .panel.panel-default.panel-second
             .panel-heading
                h4.panel-title Your Booking Details
@@ -743,20 +814,20 @@
                               .col-sm-3
                                  input#inputCardNumber1.form-control.card-input(name='Card Number 1', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
                                  img(src='/images/icons/credit/number1.png', alt='number 1')
-                              .col-sm-3
+                              .col-sm-3.hidden-xs
                                  input#inputCardNumber2.form-control.card-input(name='Card Number 2', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
                                  img(src='/images/icons/credit/number2.png', alt='number 2')
-                              .col-sm-3
+                              .col-sm-3.hidden-xs
                                  input#inputCardNumber3.form-control.card-input(name='Card Number 3', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
                                  img(src='/images/icons/credit/number3.png', alt='number 3')
-                              .col-sm-3
+                              .col-sm-3.hidden-xs
                                  input#inputCardNumber4.form-control.card-input(name='Card Number 4', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
                                  img(src='/images/icons/credit/number4.png', alt='number 4')
                         .col-sm-12.form-group
                            label.control-label(for='inputCardExpDate') Expiration Date
                               span.danger *
                            .row
-                              .col-sm-6
+                              .col-sm-6.mb-xs-15
                                  select#inputCardExpDate.selectpicker.form-control(name='Expiration Date Day')
                                     - for ( var i = 1; i < 32; i++ ) {
                                        - if ( i < 10 ) {
@@ -815,7 +886,7 @@
                                  .cvv-help
                                     img(src='images/cvv_num_img.png', alt='cvv help')
                                     span.text 3 digit security code
-                           .col-sm-6.form-group
+                           .col-sm-6.col-xs-12.form-group
                               label.control-label(for='inputCardPostal') Postal Code
                                  span.danger *
                               input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
@@ -857,9 +928,9 @@
                .step-title
                   span Important Information
          .step-body
-            .popup.green.mt-30.mb-30
-               .popup_title.mb-0
-                  span.fs-xl Successful! Your order is complete!
+            .popup.green.mt-30.mb-30.ml-xs-0.mr-xs-0
+               .popup_title.mb-0.text-center-xs
+                  span.fs-xl.fs-xs-l Successful! Your order is complete!
                a.popup_close(href='javascript:void(0)')
                   i.fa.fa-close
             .text

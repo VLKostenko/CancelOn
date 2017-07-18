@@ -14622,60 +14622,71 @@ aside.show-on-map .panel-group .panel.panel-default {
   height: 1px;
 }
 
-.payment-details .sidebar-block {
+.payment-details .sidebar-block,
+.payment-details .sidebar-block-mobile {
   font-family: "Roboto", sans-serif;
 }
 
-.payment-details .sidebar-block .panel {
+.payment-details .sidebar-block .panel,
+.payment-details .sidebar-block-mobile .panel {
   box-shadow: none;
   border-radius: 0;
   margin-bottom: 15px;
 }
 
-.payment-details .sidebar-block .panel-heading {
+.payment-details .sidebar-block .panel-heading,
+.payment-details .sidebar-block-mobile .panel-heading {
   padding: 17px 15px;
   border: 1px solid #d0d8e1;
   margin-bottom: 0;
 }
 
-.payment-details .sidebar-block .panel-title {
+.payment-details .sidebar-block .panel-title,
+.payment-details .sidebar-block-mobile .panel-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
 }
 
-.payment-details .sidebar-block .panel-body {
+.payment-details .sidebar-block .panel-body,
+.payment-details .sidebar-block-mobile .panel-body {
   padding: 15px;
   border-left: 1px solid #cbd9ee;
   border-right: 1px solid #cbd9ee;
   border-bottom: 1px solid #cbd9ee;
 }
 
-.payment-details .sidebar-block .panel-body p {
+.payment-details .sidebar-block .panel-body p,
+.payment-details .sidebar-block-mobile .panel-body p {
   font-size: 16px;
   font-weight: 500;
 }
 
-.payment-details .sidebar-block .panel-body p:last-child {
+.payment-details .sidebar-block .panel-body p:last-child,
+.payment-details .sidebar-block-mobile .panel-body p:last-child {
   margin-bottom: 0;
 }
 
-.payment-details .sidebar-block .payment-details-full {
+.payment-details .sidebar-block .payment-details-full,
+.payment-details .sidebar-block-mobile .payment-details-full {
   background: #ecf3ff;
   font-size: 16px;
   font-weight: 500;
 }
 
-.payment-details .sidebar-block .payment-details-full > * {
+.payment-details .sidebar-block .payment-details-full > *,
+.payment-details .sidebar-block-mobile .payment-details-full > * {
   margin-bottom: 5px;
 }
 
-.payment-details .sidebar-block .payment-details-full > *:last-child {
+.payment-details .sidebar-block .payment-details-full > *:last-child,
+.payment-details .sidebar-block-mobile .payment-details-full > *:last-child {
   margin-bottom: 0;
 }
 
-.payment-details .sidebar-block .payment-details-full .price {
+.payment-details .sidebar-block .payment-details-full .price,
+.payment-details .sidebar-block-mobile .payment-details-full .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14687,43 +14698,51 @@ aside.show-on-map .panel-group .panel.panel-default {
           justify-content: space-between;
 }
 
-.payment-details .sidebar-block .payment-details-full .price .text {
+.payment-details .sidebar-block .payment-details-full .price .text,
+.payment-details .sidebar-block-mobile .payment-details-full .price .text {
   color: #000;
   font-size: 16px;
 }
 
-.payment-details .sidebar-block .payment-details-full .price .number {
+.payment-details .sidebar-block .payment-details-full .price .number,
+.payment-details .sidebar-block-mobile .payment-details-full .price .number {
   font-size: 24px;
 }
 
-.payment-details .sidebar-block .payment-details-full .old-price {
+.payment-details .sidebar-block .payment-details-full .old-price,
+.payment-details .sidebar-block-mobile .payment-details-full .old-price {
   color: #989898;
   text-align: right;
 }
 
-.payment-details .sidebar-block .payment-details-full .change-details a {
+.payment-details .sidebar-block .payment-details-full .change-details a,
+.payment-details .sidebar-block-mobile .payment-details-full .change-details a {
   float: right;
   font-size: 14px;
   font-weight: 400;
   color: #00c2ff;
 }
 
-.payment-details .sidebar-block .payment-details-full .change-details a:hover {
+.payment-details .sidebar-block .payment-details-full .change-details a:hover,
+.payment-details .sidebar-block-mobile .payment-details-full .change-details a:hover {
   text-decoration: underline !important;
 }
 
-.payment-details .sidebar-block .payment-details-info {
+.payment-details .sidebar-block .payment-details-info,
+.payment-details .sidebar-block-mobile .payment-details-info {
   background: #ecf3ff;
   font-size: 16px;
   font-weight: 500;
   border-top: 1px solid #cbd9ee;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider {
+.payment-details .sidebar-block .payment-details-info .block-slider,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider {
   margin-bottom: 15px;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider .owl-carousel-info-payment {
+.payment-details .sidebar-block .payment-details-info .block-slider .owl-carousel-info-payment,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider .owl-carousel-info-payment {
   height: 155px;
   overflow: hidden;
   width: calc(100% - 48px - 15px);
@@ -14731,11 +14750,13 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-right: 15px;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider .owl-carousel-info-payment .owl-item img {
+.payment-details .sidebar-block .payment-details-info .block-slider .owl-carousel-info-payment .owl-item img,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider .owl-carousel-info-payment .owl-item img {
   height: 155px;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment {
+.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider .owl-thumbs-info-payment {
   width: 48px;
   float: left;
   display: -webkit-box;
@@ -14753,7 +14774,8 @@ aside.show-on-map .panel-group .panel.panel-default {
           flex-direction: column;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item {
+.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item {
   background: 0 0;
   padding: 0;
   width: 45px;
@@ -14764,7 +14786,8 @@ aside.show-on-map .panel-group .panel.panel-default {
   border: 0;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item:before {
+.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item:before,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item:before {
   content: '';
   position: absolute;
   border: 3px solid transparent;
@@ -14778,20 +14801,24 @@ aside.show-on-map .panel-group .panel.panel-default {
   transition: 0.2s ease;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item.active:before {
+.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item.active:before,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item.active:before {
   border-color: #00c2ff;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item:last-child {
+.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item:last-child,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item:last-child {
   margin-bottom: 0;
 }
 
-.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item img {
+.payment-details .sidebar-block .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item img,
+.payment-details .sidebar-block-mobile .payment-details-info .block-slider .owl-thumbs-info-payment .owl-thumb-item img {
   width: 100%;
   height: 100%;
 }
 
-.payment-details .sidebar-block .payment-details-info .title {
+.payment-details .sidebar-block .payment-details-info .title,
+.payment-details .sidebar-block-mobile .payment-details-info .title {
   font-size: 22px;
   font-weight: 500;
   line-height: 26px;
@@ -14799,28 +14826,34 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-bottom: 5px;
 }
 
-.payment-details .sidebar-block .payment-details-info .title a {
+.payment-details .sidebar-block .payment-details-info .title a,
+.payment-details .sidebar-block-mobile .payment-details-info .title a {
   color: #000;
   position: relative;
 }
 
-.payment-details .sidebar-block .payment-details-info .title a:hover {
+.payment-details .sidebar-block .payment-details-info .title a:hover,
+.payment-details .sidebar-block-mobile .payment-details-info .title a:hover {
   text-decoration: underline !important;
 }
 
-.payment-details .sidebar-block .payment-details-info .trip {
+.payment-details .sidebar-block .payment-details-info .trip,
+.payment-details .sidebar-block-mobile .payment-details-info .trip {
   float: left;
 }
 
-.payment-details .sidebar-block .payment-details-info .trip img {
+.payment-details .sidebar-block .payment-details-info .trip img,
+.payment-details .sidebar-block-mobile .payment-details-info .trip img {
   max-width: 105px;
 }
 
-.payment-details .sidebar-block .payment-details-info .stars {
+.payment-details .sidebar-block .payment-details-info .stars,
+.payment-details .sidebar-block-mobile .payment-details-info .stars {
   margin-bottom: 5px;
 }
 
-.payment-details .sidebar-block .payment-details-info .reviews {
+.payment-details .sidebar-block .payment-details-info .reviews,
+.payment-details .sidebar-block-mobile .payment-details-info .reviews {
   float: left;
   font-size: 12px;
   text-decoration: underline !important;
@@ -14831,11 +14864,13 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-left: 10px;
 }
 
-.payment-details .sidebar-block .payment-details-info .reviews:hover {
+.payment-details .sidebar-block .payment-details-info .reviews:hover,
+.payment-details .sidebar-block-mobile .payment-details-info .reviews:hover {
   text-decoration: initial !important;
 }
 
-.payment-details .sidebar-block .payment-details-info .address {
+.payment-details .sidebar-block .payment-details-info .address,
+.payment-details .sidebar-block-mobile .payment-details-info .address {
   font-size: 14px;
   float: left;
   font-weight: 500;
@@ -14843,11 +14878,13 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-bottom: 10px;
 }
 
-.payment-details .sidebar-block .change-room {
+.payment-details .sidebar-block .change-room,
+.payment-details .sidebar-block-mobile .change-room {
   background: #e3e9f3;
 }
 
-.payment-details .sidebar-block .change-room-button {
+.payment-details .sidebar-block .change-room-button,
+.payment-details .sidebar-block-mobile .change-room-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14859,27 +14896,32 @@ aside.show-on-map .panel-group .panel.panel-default {
           justify-content: space-between;
 }
 
-.payment-details .sidebar-block .change-room-button .type {
+.payment-details .sidebar-block .change-room-button .type,
+.payment-details .sidebar-block-mobile .change-room-button .type {
   font-weight: 500;
   font-size: 16px;
 }
 
-.payment-details .sidebar-block .change-room-button a {
+.payment-details .sidebar-block .change-room-button a,
+.payment-details .sidebar-block-mobile .change-room-button a {
   font-size: 14px;
   font-weight: 400;
   color: #00c2ff;
 }
 
-.payment-details .sidebar-block .change-room-button a:hover {
+.payment-details .sidebar-block .change-room-button a:hover,
+.payment-details .sidebar-block-mobile .change-room-button a:hover {
   text-decoration: underline !important;
 }
 
-.payment-details .sidebar-block .order-another {
+.payment-details .sidebar-block .order-another,
+.payment-details .sidebar-block-mobile .order-another {
   text-align: right;
   margin: 30px 0;
 }
 
-.payment-details .sidebar-block .order-another .title {
+.payment-details .sidebar-block .order-another .title,
+.payment-details .sidebar-block-mobile .order-another .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14891,13 +14933,15 @@ aside.show-on-map .panel-group .panel.panel-default {
           justify-content: flex-end;
 }
 
-.payment-details .sidebar-block .order-another .title .text {
+.payment-details .sidebar-block .order-another .title .text,
+.payment-details .sidebar-block-mobile .order-another .title .text {
   font-size: 16px;
   font-weight: 500;
   color: #000;
 }
 
-.payment-details .sidebar-block .order-another .title .arrow > * {
+.payment-details .sidebar-block .order-another .title .arrow > *,
+.payment-details .sidebar-block-mobile .order-another .title .arrow > * {
   font-size: 60px;
   line-height: 0;
   position: relative;
@@ -14905,21 +14949,24 @@ aside.show-on-map .panel-group .panel.panel-default {
   right: -10px;
 }
 
-.payment-details .sidebar-block .order-another .hotel-name {
+.payment-details .sidebar-block .order-another .hotel-name,
+.payment-details .sidebar-block-mobile .order-another .hotel-name {
   padding-right: 60px;
   font-size: 14px;
   font-weight: 400;
   color: #cecece;
 }
 
-.payment-details .sidebar-block .payment-booking-details .change-dates-button a {
+.payment-details .sidebar-block .payment-booking-details .change-dates-button a,
+.payment-details .sidebar-block-mobile .payment-booking-details .change-dates-button a {
   float: right;
   font-size: 14px;
   font-weight: 400;
   color: #00c2ff;
 }
 
-.payment-details .sidebar-block .payment-booking-details .change-dates-button a:hover {
+.payment-details .sidebar-block .payment-booking-details .change-dates-button a:hover,
+.payment-details .sidebar-block-mobile .payment-booking-details .change-dates-button a:hover {
   text-decoration: underline !important;
 }
 
@@ -16236,6 +16283,11 @@ aside.show-on-map .panel-group .panel.panel-default {
   padding-left: 75px;
 }
 
+.payment-details .payment-block .step .credit-card-info #inputCardCVC {
+  font-size: 20px;
+  color: #00c2ff;
+}
+
 .payment-details .payment-block .step .credit-card-info .bootstrap-select .dropdown-toggle {
   padding-left: 75px;
 }
@@ -16398,11 +16450,20 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 @media screen and (max-width: 767px) {
+  .payment-timer {
+    margin-bottom: 15px;
+  }
+  .payment-timer .loading-title-cover .loading-title {
+    margin: 25px auto 0 !important;
+  }
   .payment-details .payment-block {
     padding: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .payment-details .payment-block form {
     overflow: hidden;
+    margin-bottom: 15px;
   }
   .payment-details .payment-block .step {
     padding: 0 15px;
@@ -16423,6 +16484,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   .payment-details .payment-block .step .step-header .step-text {
     width: 100%;
     padding-left: 35px;
+  }
+  .payment-details .payment-block .step .step-body .form-group .help-block {
+    display: none;
   }
   .payment-details .payment-block .step .step-body .form-group .list-of-phones {
     width: 90px;
@@ -16460,6 +16524,58 @@ aside.show-on-map .panel-group .panel.panel-default {
     width: 100%;
     padding: 0;
     margin-bottom: 15px;
+  }
+  .payment-details .payment-block .step .credit-card-info .last-line-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .payment-details .payment-block .step .cvv-input .numbers-block {
+    width: 75%;
+  }
+  .payment-details .payment-block .step .cvv-input .numbers-block .number {
+    height: 61px;
+  }
+  .payment-details .payment-block .step .help-button .cvv-help {
+    right: 15px;
+  }
+  .payment-details .payment-block .step .help-button .cvv-help:before {
+    left: inherit;
+    right: 13px;
+  }
+  .payment-details .payment-block .step.info-step {
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  .payment-details .payment-block .step.info-step .popup {
+    padding: 40px 25px 25px 25px;
+  }
+  .payment-details .payment-block .step.info-step .popup_close {
+    top: -90px;
+    right: 10px;
+  }
+  .payment-details .sidebar-block {
+    position: relative;
+  }
+  .payment-details .sidebar-block-mobile .owl-dot {
+    margin-right: 10px;
+  }
+  .payment-details .sidebar-block-mobile .owl-dot span {
+    width: 15px;
+    height: 15px;
+    background: #000 !important;
+    opacity: .25;
+    transition: all 0.2s ease-in;
+  }
+  .payment-details .sidebar-block-mobile .owl-dot:hover span {
+    opacity: 1;
+  }
+  .payment-details .sidebar-block-mobile .owl-dot.active span {
+    opacity: 1;
+  }
+  .payment-details .sidebar-block-mobile .panel {
+    margin: 0 15px 15px;
   }
 }
 

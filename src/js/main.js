@@ -18,6 +18,7 @@
   owlCarouselTableSlider = $('.owl-carousel-table-slider'),
   owlCarouselShort = $('.owl-carousel-short'),
   owlCarouselInfoPayment = $('.owl-carousel-info-payment'),
+  owlCarouselPaymentMobile = $('.payment-details .sidebar-block-mobile'),
   delayResize = 100,
   throttledResize = false,
   callsResize = 0,
@@ -846,14 +847,22 @@
 
   if ( $('.card-number-input').length ) {
     $('.card-number-input .card-input').keypress(function (event) {
-      var inputVal = $(this).val();
-      var characterReg = /^[0-9]{4}$/;
-
-      if ( characterReg.test(inputVal) ) {
-        var inputs = $(this).closest('form').find(':input');
-        inputs.eq(inputs.index(this) + 1).focus();
+      if ( $(window).width() > 767 ) {
+        var inputVal = $(this).val();
+        var characterReg = /^[0-9]{4}$/;
+        $('.card-number-input .card-input').attr('maxlength', 4);
+        if ( characterReg.test(inputVal) ) {
+          var inputs = $(this).closest('form').find(':input');
+          inputs.eq(inputs.index(this) + 1).focus();
+        }
+        isNumber(event);
+      } else {
+        $('.card-number-input .card-input').attr('maxlength', 19);
+        var $this = $(this);
+        if ( (($this.val().length + 1) % 5) === 0 ) {
+          $this.val($this.val() + " ");
+        }
       }
-      isNumber(event);
     });
   }
 
@@ -1110,6 +1119,13 @@
     mouseDrag: false
   });
 
+  owlCarouselPaymentMobile.owlCarousel({
+    loop: true,
+    items: 1,
+    nav: false,
+    dots: true
+  });
+
   $('.same-height').matchHeight();
 
   if ( $(window).width() > 767 ) {
@@ -1342,8 +1358,7 @@
 
     $('.cvv-input .number').shuffle();
 
-    // TODO this code for resize also
-    if ( $(window).width() < 992 ) {
+    if ( $(window).width() > 767 && $(window).width() < 992 ) {
       $('.payment-details .sidebar-block').addClass('draggable');
     } else {
       $('.payment-details .sidebar-block').removeClass('draggable');
@@ -1415,6 +1430,51 @@
         }
       }
       reinitMap();
+
+      if ( $(window).width() > 767 && $(window).width() < 992 ) {
+        $('.payment-details .sidebar-block').addClass('draggable');
+      } else {
+        $('.payment-details .sidebar-block').removeClass('draggable');
+      }
+      if ( $(window).width() > 991 ) {
+        $('.payment-details .ui.sticky').sticky({
+          context: '#sticky-wrap',
+          silent: true,
+          observeChanges: true
+        });
+        $('.payment-details .sidebar-block .panel-second').appendTo($('.payment-details .sidebar-block'));
+        $('.payment-details .sidebar-block .slider-panel').css('opacity', 1);
+      } else {
+        var paymentSidebarWidth = 0;
+        $('.payment-details .sidebar-block .panel').each(function() {
+          paymentSidebarWidth += $(this).outerWidth();
+        });
+        $('.payment-details .sidebar-block').css('max-width', paymentSidebarWidth);
+
+        $('.payment-details .sidebar-block .panel').matchHeight();
+
+        $('.payment-details .sidebar-block .panel-second').insertAfter('.payment-details .sidebar-block .panel-first');
+      }
+      if ( $('.card-number-input').length ) {
+        $('.card-number-input .card-input').keypress(function (event) {
+          if ( $(window).width() > 767 ) {
+            var inputVal = $(this).val();
+            var characterReg = /^[0-9]{4}$/;
+            $('.card-number-input .card-input').attr('maxlength', 4);
+            if ( characterReg.test(inputVal) ) {
+              var inputs = $(this).closest('form').find(':input');
+              inputs.eq(inputs.index(this) + 1).focus();
+            }
+            isNumber(event);
+          } else {
+            $('.card-number-input .card-input').attr('maxlength', 19);
+            var $this = $(this);
+            if ( (($this.val().length + 1) % 5) === 0 ) {
+              $this.val($this.val() + " ");
+            }
+          }
+        });
+      }
       // we're throttled!
       throttledResize = true;
       // set a timeout to un-throttle
@@ -1565,7 +1625,6 @@
         silent: true
       });
 
-      // TODO this code for resize also
       if ( $(window).width() > 991 ) {
         $('.payment-details .ui.sticky').sticky({
           context: '#sticky-wrap',
@@ -1584,7 +1643,6 @@
         $('.payment-details .sidebar-block .panel').matchHeight();
 
         $('.payment-details .sidebar-block .panel-second').insertAfter('.payment-details .sidebar-block .panel-first');
-        // $('.payment-details .sidebar-block .panel').length
       }
     }, 1500);
     // remove all placeholders

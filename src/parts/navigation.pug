@@ -34,8 +34,9 @@ nav.navbar.navbar-default.mb-0
 						.message
 							a(href='javascript:void(0)')
 								img(src='images/messages.png', alt='messages')
-				.filter-icon.visible-xs
-					i.fa.fa-sliders(aria-hidden='true')
+				if ( page.name !== 'payment' )
+					.filter-icon.visible-xs
+						i.fa.fa-sliders(aria-hidden='true')
 				if ( page.name == 'landing' )
 					p.navbar-text-landing.small-text.font-weight-200.visible-lg.visible-md
 						| As seen on

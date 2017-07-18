@@ -51,7 +51,8 @@
     float: left;
     height: 1px;
   }
-  .sidebar-block {
+  .sidebar-block,
+  .sidebar-block-mobile {
     font-family: "Roboto", sans-serif;
     .panel {
       box-shadow: none;
@@ -788,6 +789,10 @@
         input {
           padding-left: 75px;
         }
+        #inputCardCVC {
+          font-size: 20px;
+          color: #00c2ff;
+        }
         .bootstrap-select {
           .dropdown-toggle {
             padding-left: 75px;
@@ -983,11 +988,22 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .payment-timer {
+    margin-bottom: 15px;
+    .loading-title-cover {
+      .loading-title {
+        margin: 25px auto 0 !important;
+      }
+    }
+  }
   .payment-details {
     .payment-block {
       padding: 15px;
+      margin-bottom: 0;
+      padding-bottom: 0;
       form {
         overflow: hidden;
+        margin-bottom: 15px;
       }
       .step {
         padding: 0 15px;
@@ -1012,6 +1028,9 @@
         }
         .step-body {
           .form-group {
+            .help-block {
+              display: none;
+            }
             .list-of-phones {
               width: 90px;
               button {
@@ -1059,6 +1078,67 @@
             margin-bottom: 15px;
           }
         }
+        .credit-card-info {
+          .last-line-wrapper {
+            flex-direction: column;
+          }
+        }
+        .cvv-input {
+          .numbers-block {
+            width: 75%;
+            .number {
+              height: 61px;
+            }
+          }
+        }
+        .help-button {
+          .cvv-help {
+            right: 15px;
+            &:before {
+              left: inherit;
+              right: 13px;
+            }
+          }
+        }
+        &.info-step {
+          overflow: hidden;
+          margin-bottom: 15px;
+          .popup {
+            padding: 40px 25px 25px 25px;
+          }
+          .popup_close {
+            top: -90px;
+            right: 10px;
+          }
+        }
+      }
+    }
+    .sidebar-block {
+      position: relative;
+    }
+    .sidebar-block-mobile {
+      .owl-dot {
+        margin-right: 10px;
+        span {
+          width: 15px;
+          height: 15px;
+          background: #000!important;
+          opacity: .25;
+          @include crossBrowser(transition, all .2s ease-in);
+        }
+        &:hover {
+          span {
+            opacity: 1;
+          }
+        }
+        &.active {
+          span {
+            opacity: 1;
+          }
+        }
+      }
+      .panel {
+        margin: 0 15px 15px;
       }
     }
   }
