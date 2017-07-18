@@ -1092,6 +1092,9 @@
           }
         }
         .help-button {
+          a {
+            top: 37px;
+          }
           .cvv-help {
             right: 15px;
             &:before {
@@ -1141,5 +1144,10 @@
         margin: 0 15px 15px;
       }
     }
+  }
+}
+@media screen and (max-width: 416px) {
+  .payment-details .payment-block .step .help-button a {
+    top: 58px;
   }
 }

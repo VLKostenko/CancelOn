@@ -16537,6 +16537,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   .payment-details .payment-block .step .cvv-input .numbers-block .number {
     height: 61px;
   }
+  .payment-details .payment-block .step .help-button a {
+    top: 37px;
+  }
   .payment-details .payment-block .step .help-button .cvv-help {
     right: 15px;
   }
@@ -16576,6 +16579,12 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .payment-details .sidebar-block-mobile .panel {
     margin: 0 15px 15px;
+  }
+}
+
+@media screen and (max-width: 416px) {
+  .payment-details .payment-block .step .help-button a {
+    top: 58px;
   }
 }
 

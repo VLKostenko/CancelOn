@@ -18,7 +18,6 @@
   owlCarouselTableSlider = $('.owl-carousel-table-slider'),
   owlCarouselShort = $('.owl-carousel-short'),
   owlCarouselInfoPayment = $('.owl-carousel-info-payment'),
-  owlCarouselPaymentMobile = $('.payment-details .sidebar-block-mobile'),
   delayResize = 100,
   throttledResize = false,
   callsResize = 0,
@@ -1117,13 +1116,6 @@
     thumbItemClass: 'owl-thumb-item',
     touchDrag: false,
     mouseDrag: false
-  });
-
-  owlCarouselPaymentMobile.owlCarousel({
-    loop: true,
-    items: 1,
-    nav: false,
-    dots: true
   });
 
   $('.same-height').matchHeight();

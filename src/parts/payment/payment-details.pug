@@ -641,77 +641,6 @@
                .change-dates-button.clearfix
                   a(href='javascript:void(0)') Change Dates
 
-      .sidebar-block-mobile.owl-carousel.visible-xs
-         .panel.panel-default.panel-first
-            .panel-heading
-               h4.panel-title Your Price Summary
-            .panel-body
-               p Room
-               p 20% VAT
-            .panel-body.payment-details-full
-               .price
-                  span.text Price
-                  span.number $2,688.86
-               .old-price
-                  span Old price $4,872.00
-               .room-details
-                  span For 2 Guests, 0 Child and 2 Nights
-               .change-details.clearfix
-                  a(href='javascript:void(0)') Change your selection
-         .panel.panel-default.slider-panel
-            .panel-body.payment-details-info
-               .block-slider.clearfix
-                  .owl-carousel.owl-carousel-info-payment.photoswipe-block(data-slider-id='1', itemscope, itemtype="http://schema.org/ImageGallery")
-                     - for(var i = 1; i < 4; i++)
-                     figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
-                        a(href='images/hotel-image' + i + '.jpg', itemprop='contentUrl', data-size='1086x908')
-                           img(src='images/hotel-image' + i + '.jpg', alt='Alt ' + i)
-                  .owl-thumbs.owl-thumbs-info-payment(data-slider-id='1')
-                     - for(var i = 1; i < 4; i++)
-                     button.owl-thumb-item
-                        img(src='images/hotel-slider/' + i + '.png', alt='full slider image')
-               span.info-label.green Best Price Guaranteed
-               h2.title
-                  a(href='javascript:void(0)') Holiday Inn Express Hotel Suites Las Vegas I-215 S. Beltway
-               ul.stars.stars-hotel(data-stars='4.47')
-                  li
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li
-                     i.fa.orange-text.fa-star-half(aria-hidden='true')
-               .trip
-                  .rate(data-rate='4.54')
-                     img.rate-image(src='./images/icons/rate/4.5.svg', alt='rate')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-               .address
-                  span 6220 S. Rainbow Boulevard, Las Vegas Nevada, Nv , United States
-            .panel-body.change-room
-               .change-room-button
-                  span.type Room: Superior Room
-                  a(href='javascript:void(0)') Change
-         .panel.panel-default.panel-second
-            .panel-heading
-               h4.panel-title Your Booking Details
-            .panel-body.payment-booking-details
-               .days-details
-                  p Check-in:
-                  p Friday 21 July 2017 from 14:00
-                  br
-                  p Check-out:
-                  p Friday 21 July 2017 from 14:00
-                  br
-                  p Total length of stay:
-                  p 2 nights
-               .change-dates-button.clearfix
-                  a(href='javascript:void(0)') Change Dates
-
    .payment-block#sticky-wrap
       form(data-toggle='validator', role='form')
          button#testValidation(type='button', style='position: absolute; right: 0; top: 0; background: #00b9f1; color: #fff; border: 1px solid #2091b3;') Test Validation
@@ -848,7 +777,7 @@
                                     - }
                                  img(src='/images/icons/credit/date-year.png', alt='expiration date year')
                         .last-line-wrapper
-                           .col-sm-6.form-group
+                           .col-sm-6.col-xs-12.form-group
                               label.control-label(for='inputCardCVC') CVC
                                  span.danger *
                                  span.small-desc  The 3 digits (back) or 4 digits (front) value on your card.
