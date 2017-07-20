@@ -1,0 +1,446 @@
+.details-item {
+  &-block {
+    float: left;
+    width: 74%;
+    margin-right: 15px;
+    .main-details-block {
+      border: 1px solid #eaeaea;
+      &_header {
+        background: #fafafa;
+        border-bottom: 1px solid #eaeaea;
+        position: relative;
+        ul {
+          margin-left: 20px;
+          li {
+            padding: 15px;
+            &.active {
+              a {
+                &:before {
+                  background: #1d79d6;
+                }
+              }
+            }
+            a {
+              padding: 15px 0;
+              font-size: 18px;
+              font-family: "Roboto", sans-serif;
+              color: #000;
+              position: relative;
+              display: block;
+              &:before {
+                content: '';
+                position: absolute;
+                bottom: 5px;
+                height: 5px;
+                border-radius: 50px;
+                width: 100%;
+                background: transparent;
+                @include crossBrowser(transition, .2s ease-in);
+              }
+              &:hover {
+                &:before {
+                  background: #1d79d6;
+                }
+              }
+            }
+            &:nth-child(2) {
+              position: relative;
+              &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -30px;
+                bottom: 0;
+                margin: auto;
+                width: 10px;
+                height: 10px;
+                background: #d24a43;
+                border-radius: 50px;
+              }
+            }
+          }
+        }
+        .make-offer {
+          position: absolute;
+          right: 30px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          height: 45px;
+          line-height: 45px;
+          text-transform: uppercase;
+          background: #7c9b51;
+          color: #fff;
+          padding: 0 20px;
+          font-family: "Roboto", sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          @include crossBrowser(transition, background .2s ease-in);
+          &:hover {
+            background: lighten(#7c9b51, 15%);
+          }
+        }
+      }
+      .hotel-information {
+        &_block-tabs {
+          width: 100%;
+          padding: 20px 15px 15px 15px;
+        }
+      }
+    }
+    .information-block {
+      min-height: 495px;
+      margin-bottom: 0;
+    }
+    .onoffswitch-gallery-wrapper {
+      left: 25px;
+      top: 25px;
+    }
+    .slider-block {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+    .payment-block {
+      margin-left: 0;
+      width: 100%;
+      form {
+        margin-bottom: 15px;
+      }
+      .step {
+        &.submit-step {
+          input[type=submit] {
+            padding: 0 42px;
+          }
+        }
+        &.info-step {
+          padding-bottom: 1px;
+        }
+      }
+    }
+  }
+  &-info {
+    width: calc(26% - 15px);
+    float: left;
+    position: relative;
+    margin-bottom: 15px;
+    .payment-details {
+      float: left;
+      margin-bottom: 15px;
+      width: 100%;
+      .sidebar-block-wrapper {
+        height: initial;
+        width: 100%;
+        .sidebar-block {
+          width: 100%;
+          padding: 0;
+          .panel {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .sidebar-block {
+      background: #fff;
+      width: 100%;
+      float: left;
+      box-shadow: 0 1px 3px rgba(108,118,123,.15);
+      padding: 15px;
+      font-family: "Roboto", sans-serif;
+      .sidebar-wrapper {
+        padding-top: 10px;
+        .sidebar-logo {
+          img {
+            width: 80%;
+            display: block;
+            margin: auto;
+          }
+          span {
+            font-size: 10px;
+            color: #9d9d9d;
+            font-weight: 400;
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 15px;
+          }
+        }
+        .sidebar-info {
+          &_name-rating {
+            border-top: 1px solid #bfbfbf;
+            &_title {
+              font-size: 15px;
+              font-weight: 600;
+              margin-bottom: 5px;
+              margin-top: 10px;
+              text-decoration: underline!important;
+            }
+            &_rating {
+              .title {
+                font-size: 12px;
+                margin-bottom: 5px;
+              }
+              img {
+                max-width: 110px;
+                margin-bottom: 5px;
+              }
+              .text {
+                color: #737373;
+                font-size: 12px;
+                margin-bottom: 5px;
+              }
+            }
+          }
+          &_ranking {
+            border-top: 1px solid #bfbfbf;
+            .title {
+              font-size: 12px;
+              margin-bottom: 5px;
+              margin-top: 5px;
+            }
+            .text {
+              color: #5d9a50;
+              font-size: 14px;
+              margin-bottom: 5px;
+            }
+          }
+          &_comments {
+            border-top: 1px solid #bfbfbf;
+            font-size: 12px;
+            &-title {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dates-bg-block {
+  display: none;
+  position: fixed;
+  z-index: 155;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15,48,78,.7);
+}
+.change-dates-block {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 45%;
+  background: #fff;
+  box-shadow: -25px 0 60px 0 rgba(0,0,0,.21);
+  left: 0;
+  margin: auto;
+  height: 720px;
+  bottom: 0;
+  z-index: 160;
+  &_header {
+    position: relative;
+    .title {
+      font-size: 20px;
+      color: $main-blue;
+      font-weight: 500;
+      padding: 29px 50px;
+      margin: 0;
+    }
+    .close-btn {
+      position: absolute;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      display: inline-block;
+      line-height: 80px;
+      color: #000;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      .fa-close {
+        @include crossBrowser(transition, transform .15s ease);
+        top: 2px;
+        font-size: 15px;
+        color: #ff353d;
+      }
+      .text {
+        position: relative;
+        padding-left: 5px;
+      }
+      &:hover {
+        .fa-close {
+          @include crossBrowser(transform, rotate(90deg))
+        }
+      }
+    }
+  }
+  .change-date {
+    .change-date-datepicker {
+      margin-top: 0;
+      width: 100%!important;
+      &:before {
+        display: none;
+      }
+      .buttons {
+        display: none;
+      }
+      .month-wrapper {
+        background: #d5e8f3;
+        padding: 15px 20px;
+        width: 100%!important;
+        table {
+          th {
+            background: #d5e8f3;
+          }
+          .day {
+            padding: 13px 0;
+          }
+          .week-name {
+            background: #d5e8f3;
+          }
+        }
+        .time {
+          display: none;
+        }
+      }
+    }
+  }
+  .change-room {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .col-form-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 15px;
+      margin: 15px 0;
+      .input-group {
+        width: 100px;
+        .input-number {
+          margin: 0;
+          margin-left: 2px;
+          border: 0;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  .change-output {
+    padding-left: 30px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 30px;
+    table {
+      tr {
+        td {
+          padding: 0;
+          height: initial;
+          border-bottom: 10px solid transparent;
+          padding-left: 15px;
+          &.title {
+            font-weight: 500;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .change-save-btn {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .details-item {
+    &-block {
+      width: 65%;
+      .information-block {
+        .slider-block {
+          width: 100%;
+        }
+      }
+    }
+    &-info {
+      @include calc(width, '35% - 15px');
+      .payment-details {
+        width: 100%;
+        .sidebar-block-wrapper {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .change-dates-block {
+    width: 65%;
+    max-width: 640px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .details-item {
+    &-block {
+      width: 100%;
+      margin-right: 0;
+      .onoffswitch-gallery-wrapper {
+        left: initial;
+        top: initial;
+      }
+      .information-block {
+        .slider-block {
+          width: 100%;
+        }
+      }
+    }
+    &-info {
+      width: 100%;
+      max-height: 437px;
+      .main-sidebar {
+        position: relative;
+        left: 0!important;
+        .payment-details {
+          margin-bottom: 0;
+          .sidebar-block {
+            height: initial;
+            .panel {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hotel-info {
+    .block-wrapper {
+      .top-wrapper {
+        .right-block {
+          .book-btn {
+            &.book-now {
+              background: #1d79d6!important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .details-item {
+    &-block {
+      .information-block {
+        min-height: 340px;
+      }
+    }
+  }
+}

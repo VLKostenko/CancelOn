@@ -167,7 +167,18 @@
         <div class="payment-details clearfix">
           <div class="sidebar-block-wrapper draggable-container">
             <div class="sidebar-block ui sticky hidden-xs">
-              <div class="panel panel-default panel-first">
+              <div class="panel panel-default panel-second placeholder-room-info">
+                <div class="panel-body payment-booking-details">
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div><br>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div><br>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item w-30 pull-right"></div>
+                </div>
+              </div>
+              <div class="panel panel-default panel-first placeholder-show">
                 <div class="panel-heading">
                   <h4 class="panel-title">Your Price Summary</h4>
                 </div>
@@ -182,7 +193,18 @@
                   <div class="change-details clearfix"><a href="javascript:void(0)">Change your selection</a></div>
                 </div>
               </div>
-              <div class="panel panel-default slider-panel">
+              <div class="panel panel-default panel-second placeholder-room-info">
+                <div class="panel-body payment-booking-details">
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div><br>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div><br>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item w-30 pull-right"></div>
+                </div>
+              </div>
+              <div class="panel panel-default slider-panel placeholder-show">
                 <div class="panel-body payment-details-info">
                   <div class="block-slider clearfix">
                     <div class="owl-carousel owl-carousel-info-payment photoswipe-block" data-slider-id="1" itemscope="" itemtype="http://schema.org/ImageGallery">
@@ -218,7 +240,18 @@
                 <div class="title"><span class="text">Order Another Item?</span><span class="arrow"><span class="icon-arrow-right"></span></span></div>
                 <div class="hotel-name"><span>ALFAVITO Kyiv Hotel</span></div>
               </div>
-              <div class="panel panel-default panel-second">
+              <div class="panel panel-default panel-second placeholder-room-info">
+                <div class="panel-body payment-booking-details">
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div><br>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div><br>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item"></div>
+                  <div class="placeholder-item w-30 pull-right"></div>
+                </div>
+              </div>
+              <div class="panel panel-default panel-second placeholder-show">
                 <div class="panel-heading">
                   <h4 class="panel-title">Your Booking Details</h4>
                 </div>
@@ -237,6 +270,9 @@
             </div>
           </div>
           <div class="payment-block" id="sticky-wrap">
+            <div class="loading-form-cover">
+              <div class="loading-form"></div>
+            </div>
             <form data-toggle="validator" role="form">
               <button id="testValidation" type="button" style="position: absolute; right: 0; top: 0; background: #00b9f1; color: #fff; border: 1px solid #2091b3;">Test Validation</button>
               <div class="step first-step">
@@ -769,7 +805,7 @@
                           </div>
                         </div>
                         <div class="last-line-wrapper">
-                          <div class="col-sm-6 col-xs-12 form-group">
+                          <div class="col-sm-6 form-group">
                             <label class="control-label" for="inputCardCVC">CVC<span class="danger">*</span><span class="small-desc"> The 3 digits (back) or 4 digits (front) value on your card.</span></label>
                             <input class="form-control" id="inputCardCVC" name="Card CVC" type="text" autocomplete="off" required maxlength="3" data-error="This field is required"><img src="/images/icons/credit/cvc.png" alt="cvc code" srcset="/images/icons/credit/cvc.png 1x, /images/icons/credit/cvc@2x.png 2x, /images/icons/credit/cvc@3x.png 3x">
                             <div class="cvv-input">

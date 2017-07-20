@@ -1,7 +1,7 @@
 .container-fluid.white.pl-xs-0.pr-xs-0.pos-rel.hotel-info-wrapper
 	.loading-title-cover
 		.loading-title
-	.container.pl-xs-0.pr-xs-0
+	.container.pl-xs-0.pr-xs-0.overflow-hidden-sm
 		.row
 			.col-md-12.pl-xs-15.pr-xs-15.pl-md-0.pr-md-0.pl-0.pr-0
 				.hotel-info
@@ -41,4 +41,8 @@
 									| $468
 									span.regular-text /Day
 								span.red-price $520
-								a.book-btn(href='./payment.html') Book Offsite
+								- if ( page.name == 'landing' ) {
+									a.book-btn(href='./details-item.html') Book Offsite
+								- } else {
+									a.book-btn.book-now(href='./payment.html') Book Now
+								- }

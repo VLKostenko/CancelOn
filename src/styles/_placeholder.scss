@@ -388,6 +388,81 @@ body {
   }
 }
 
+.loading-form-cover {
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid $placeholder;
+  background: linear-gradient(
+                  to right,
+                  rgba(236, 236, 238, 0.7) 30%,
+                  rgba(225, 225, 229, 0.7) 50%,
+                  rgba(235, 235, 237, 0.7) 70%);
+  background-size: 800px 104px;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholderGradient;
+  animation-timing-function: linear;
+  .loading-form {
+    height: 48px;
+    line-height: 48px;
+    width: 48px;
+    margin: 180px auto 0;
+    background-image: url('../images/icons/loading-icon.gif');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.details-item-info {
+  .placeholder-logo {
+    .placeholder-image {
+      height: 32px;
+      margin: auto;
+    }
+    .placeholder-text {
+      height: 10px;
+      margin: 20px auto 15px;
+    }
+  }
+  .placeholder-info {
+    .placeholder-item {
+      height: 10px;
+      margin-bottom: 10px;
+    }
+    .placeholder-title {
+      height: 15px;
+    }
+    .sidebar-info_ranking {
+      padding-top: 10px;
+    }
+    .sidebar-info_comments {
+      padding-top: 10px;
+    }
+    .placeholder-comment {
+      height: 8px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+.placeholder-room-info {
+  .placeholder-item {
+    height: 13px;
+    margin-bottom: 15px;
+  }
+  .panel-body {
+    border: 0!important;
+  }
+}
 
 
 

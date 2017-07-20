@@ -187,6 +187,15 @@
       background: rgba(122, 168, 53, 0.85);
     }
   }
+  .book-btn {
+    &.book-now {
+      background: #1d79d6;
+      text-transform: uppercase;
+      &:hover {
+        background: lighten(#1d79d6, 15%);
+      }
+    }
+  }
 }
 
 .information-block {

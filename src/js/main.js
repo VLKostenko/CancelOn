@@ -13,6 +13,7 @@
   loadIcon = $('.load-icon'),
   datepickerInput = $('.search-group .datepicker-input'),
   datepickerInputLanding = $('.booking-table .datepicker-input'),
+  datepickerInputChangeDate = $('.change-dates-block .datepicker-input'),
   input = $('.input-number'),
   owlCarouselFull = $('.owl-carousel-full'),
   owlCarouselTableSlider = $('.owl-carousel-table-slider'),
@@ -952,6 +953,7 @@
       if ( $(window).width() > 991 ) {
         $('.payment-details .ui.sticky').sticky('refresh');
       }
+      $('.details-item-info .ui.sticky').sticky('refresh');
       $('html, body').animate({
         scrollTop : $('.info-step').offset().top
       }, 800);
@@ -976,6 +978,58 @@
     $('#inputCardNumber4').val('3456');
     $('#inputCardCVC').val('123');
     $('#inputCardPostal').val('987654');
+  });
+
+  $('.change-dates-button a').click(function() {
+    $('.dates-bg-block').fadeIn(200);
+    $('.change-dates-block').show().animateCss('bounceIn');
+    if ( $(window).width() > 992 ) {
+      $(window).disablescroll();
+    }
+  });
+
+  $('.dates-bg-block, .change-dates-block .close-btn').click(function() {
+    $('.dates-bg-block').fadeOut(200);
+    $('.change-dates-block').fadeOut(750).animateCss('bounceOut');
+    setTimeout(function() {
+      $('.change-dates-block').removeClass('animated bounceOut');
+    }, 750);
+    $(window).disablescroll('undo');
+  });
+
+  $('.change-save-btn .save').click(function() {
+    if ( $('.change-output .change-input').text() === '' ) {
+      alert('You must choose the dates before saving!');
+    } else {
+      $('.dates-bg-block').fadeOut(200);
+      $('.change-dates-block').fadeOut(750).animateCss('bounceOut');
+      setTimeout(function() {
+        $('.change-dates-block').removeClass('animated bounceOut');
+      }, 750);
+      $(window).disablescroll('undo');
+      var outputInput = '.change-output .datepicker-input';
+      var outputOutput = '.change-output .datepicker-output';
+      var changePath = '.payment-details .payment-booking-details .days-details';
+      var dayTextStart = $(outputInput + ' .day').text();
+      var monthTextStart = $(outputInput + ' .month').text();
+      var yearTextStart = $(outputInput + ' .year').text();
+      var dayNameTextStart = $(outputInput + ' .dayName').text();
+      var dayTextEnd = $(outputOutput + ' .day').text();
+      var monthTextEnd = $(outputOutput + ' .month').text();
+      var yearTextEnd =  $(outputOutput + ' .year').text();
+      var dayNameTextEnd = $(outputOutput + ' .dayName').text();
+      var nightText = $('.change-output .datepicker-total .nights').text();
+
+      $(changePath + ' .start .dayName').text(dayNameTextStart);
+      $(changePath + ' .start .day').text(' ' + dayTextStart);
+      $(changePath + ' .start .month').text(' ' + monthTextStart);
+      $(changePath + ' .start .year').text(' ' + yearTextStart);
+      $(changePath + ' .end .dayName').text(dayNameTextEnd);
+      $(changePath + ' .end .day').text(' ' + dayTextEnd);
+      $(changePath + ' .end .month').text(' ' + monthTextEnd);
+      $(changePath + ' .end .year').text(' ' + yearTextEnd);
+      $(changePath + ' .total .nights').text(nightText);
+    }
   });
 
   /**
@@ -1038,6 +1092,34 @@
     });
   }
 
+  if ( datepickerInputChangeDate.length ) {
+    datepickerInputChangeDate.dateRangePicker({
+      startOfWeek: 'sunday',
+      separator: ' ~ ',
+      singleMonth: false,
+      showTopbar: false,
+      format: 'DD MMM dddd',
+      autoClose: false,
+      time: {
+        enabled: true
+      },
+      extraClass: 'change-date-datepicker',
+      defaultTime: moment().startOf('day').toDate(),
+      defaultEndTime: moment().endOf('day').toDate(),
+      language: 'en',
+      applyBtnClass: 'save-time',
+      inline: true,
+      container: '#change-dates-container',
+      alwaysOpen: true,
+      customOpenAnimation: function(cb) {
+        $(this).fadeIn(300, cb);
+      },
+      customCloseAnimation: function(cb) {
+        $(this).fadeOut(300, cb);
+      }
+    });
+  }
+
   $('.selectpicker').selectpicker();
 
   $("#slider-range").slider({
@@ -1063,7 +1145,10 @@
     thumbImage: false,
     thumbsPrerendered: true,
     thumbContainerClass: 'owl-thumbs-full',
-    thumbItemClass: 'owl-thumb-item'
+    thumbItemClass: 'owl-thumb-item',
+    onInitialized: function() {
+      $('.gallery-map-wrapper #map').height($('.information-block').height());
+    }
   });
 
   owlCarouselTableSlider.on('initialized.owl.carousel', function(event) {
@@ -1306,7 +1391,6 @@
   $(document).ready(function() {
 
     initAOS();
-    $('.gallery-map-wrapper #map').height($('.information-block').height());
     $('.loading-search-cover').fadeOut(200).removeClass('showing');
     if ( !$('#map-item-block').is(':visible') ) {
       sidebarPosition();
@@ -1351,9 +1435,9 @@
     $('.cvv-input .number').shuffle();
 
     if ( $(window).width() > 767 && $(window).width() < 992 ) {
-      $('.payment-details .sidebar-block').addClass('draggable');
+      $('.payment-details-wrapper .payment-details .sidebar-block').addClass('draggable');
     } else {
-      $('.payment-details .sidebar-block').removeClass('draggable');
+      $('.payment-details-wrapper .payment-details .sidebar-block').removeClass('draggable');
     }
   });
 
@@ -1424,9 +1508,9 @@
       reinitMap();
 
       if ( $(window).width() > 767 && $(window).width() < 992 ) {
-        $('.payment-details .sidebar-block').addClass('draggable');
+        $('.payment-details-wrapper .payment-details .sidebar-block').addClass('draggable');
       } else {
-        $('.payment-details .sidebar-block').removeClass('draggable');
+        $('.payment-details-wrapper .payment-details .sidebar-block').removeClass('draggable');
       }
       if ( $(window).width() > 991 ) {
         $('.payment-details .ui.sticky').sticky({
@@ -1434,18 +1518,19 @@
           silent: true,
           observeChanges: true
         });
-        $('.payment-details .sidebar-block .panel-second').appendTo($('.payment-details .sidebar-block'));
-        $('.payment-details .sidebar-block .slider-panel').css('opacity', 1);
+        $('.payment-details-wrapper .payment-details .sidebar-block .panel-second').appendTo($('.payment-details .sidebar-block'));
+        $('.payment-details-wrapper .payment-details .sidebar-block .slider-panel').css('opacity', 1);
       } else {
+        $('.payment-details .ui.sticky').sticky('destroy');
         var paymentSidebarWidth = 0;
-        $('.payment-details .sidebar-block .panel').each(function() {
+        $('.payment-details-wrapper .payment-details .sidebar-block .panel').each(function() {
           paymentSidebarWidth += $(this).outerWidth();
         });
-        $('.payment-details .sidebar-block').css('max-width', paymentSidebarWidth);
+        $('.payment-details-wrapper .payment-details .sidebar-block').css('max-width', paymentSidebarWidth);
 
-        $('.payment-details .sidebar-block .panel').matchHeight();
+        $('.payment-details-wrapper .payment-details .sidebar-block .panel').matchHeight();
 
-        $('.payment-details .sidebar-block .panel-second').insertAfter('.payment-details .sidebar-block .panel-first');
+        $('.payment-details-wrapper .payment-details .sidebar-block .panel-second').insertAfter('.payment-details-wrapper .payment-details .sidebar-block .panel-first');
       }
       if ( $('.card-number-input').length ) {
         $('.card-number-input .card-input').keypress(function (event) {
@@ -1467,6 +1552,19 @@
           }
         });
       }
+
+      if ( $(window).width() > 991 ) {
+        $('.details-item-info .main-sidebar').addClass('ui sticky');
+        $('.details-item-info .ui.sticky').sticky({
+          context: '#sticky-wrap',
+          silent: true,
+          observeChanges: true
+        });
+      } else {
+        $('.details-item-info').removeAttr('style');
+        $('.details-item-info .ui.sticky').removeClass('ui sticky');
+      }
+
       // we're throttled!
       throttledResize = true;
       // set a timeout to un-throttle
@@ -1510,6 +1608,7 @@
         '.placeholder-map'
       ).hide();
       $('.placeholder-show').removeClass('placeholder-show');
+      $('.loading-form-cover').fadeOut(200);
       $('.loading-title-cover').fadeOut(200);
 
 
@@ -1555,6 +1654,7 @@
         }
       });
 
+      $(window).disablescroll('undo');
       initTouchHandler($(".draggable"));
       checkMobileFilter('#myonoffswitch-mobile-gallery', '#myonoffswitch-mobile-map');
       reinitMap();
@@ -1618,23 +1718,31 @@
       });
 
       if ( $(window).width() > 991 ) {
-        $('.payment-details .ui.sticky').sticky({
+        $('.payment-details-wrapper .payment-details .ui.sticky').sticky({
           context: '#sticky-wrap',
           silent: true,
           observeChanges: true
         });
-        $('.payment-details .sidebar-block .panel-second').appendTo($('.payment-details .sidebar-block'));
-        $('.payment-details .sidebar-block .slider-panel').css('opacity', 1);
+        $('.payment-details-wrapper .payment-details .sidebar-block .panel-second').appendTo($('.payment-details .sidebar-block'));
+        $('.payment-details-wrapper .payment-details .sidebar-block .slider-panel').css('opacity', 1);
       } else {
         var paymentSidebarWidth = 0;
-        $('.payment-details .sidebar-block .panel').each(function() {
+        $('.payment-details-wrapper .payment-details .sidebar-block .panel').each(function() {
           paymentSidebarWidth += $(this).outerWidth();
         });
-        $('.payment-details .sidebar-block').css('max-width', paymentSidebarWidth);
+        $('.payment-details-wrapper .payment-details .sidebar-block').css('max-width', paymentSidebarWidth);
 
-        $('.payment-details .sidebar-block .panel').matchHeight();
+        $('.payment-details-wrapper .payment-details .sidebar-block .panel').matchHeight();
 
-        $('.payment-details .sidebar-block .panel-second').insertAfter('.payment-details .sidebar-block .panel-first');
+        $('.payment-details-wrapper .payment-details .sidebar-block .panel-second').insertAfter('.payment-details-wrapper .payment-details .sidebar-block .panel-first');
+      }
+
+      if ( $(window).width() > 991 ) {
+        $('.details-item-info .ui.sticky').sticky({
+          context: '#sticky-wrap',
+          silent: true,
+          observeChanges: true
+        });
       }
     }, 1500);
     // remove all placeholders
@@ -1646,7 +1754,8 @@
           '.placeholder-thumbs,' +
           '.placeholder-logo,' +
           '.placeholder-info,' +
-          '.placeholder-facilities'
+          '.placeholder-facilities,' +
+          '.placeholder-room-info'
       ).remove();
     }, 1501);
   });

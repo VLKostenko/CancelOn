@@ -1,0 +1,406 @@
+.hotel-information_block.clearfix
+   .hotel-information_block-tabs(class=page.name == 'landing' ? 'same-height-map' : '')
+      .draggable-container
+         ul.nav.nav-tabs.draggable.draggable-center
+            li.active
+               a(href='#location', data-toggle='tab')
+                  i.icon-placeholders
+               p Location
+            li
+               a(href='#attractions', data-toggle='tab')
+                  i.icon-skyline
+               p Attractions
+            li
+               a(href='#good-to-know', data-toggle='tab')
+                  i.icon-credit-card-1
+               p Good To Know
+            li
+               a.likes-counter(href='#reviews', data-toggle='tab')
+                  i.icon-like
+                  span.negative 256
+                  span.positive 726
+               p Reviews
+            li
+               a(href='#analytics', data-toggle='tab')
+                  i.icon-line-chart
+               p Analytics
+            li
+               a(href='#contacts', data-toggle='tab')
+                  i.icon-speech-bubble
+               p Contacts
+      .tab-content
+         #location.tab-pane.active
+            h3 Location
+            p.main Our Las Vegas Hotel Offers Close Access To Mccarran International Airport Ideally Located Near Mccarran International Airport Las), Our Holiday Inn Express Hotel Suites In Las Vegas Provides Access To Local Businesses, As Well As To The Famous Las Vegas Strip. Our Hotel Is Minutes From The Las Vegas Strip And Fremont Street, Where You Will Find The World's Best Dining, Shopping And Entertainment. Nature Lovers Can Take A Short Drive To The Beautiful Red Rock Recreation Area, And Avid Shoppers Can Enjoy The Las Vegas Outlet Mall Or The Fashion Show Mall.
+            p
+               b General:
+            p.main Booking And Cancellation Policies Vary By Rate Type. Please Check All Applicable Rules Prior To Booking To Avoid Possible Charges. American Disabilities Act. If Your Accessibility Needs Are Not Met, Please Contact The Hotel Manager On Duty. Should You Require Additional Information Regarding Accessible Facilities For Guests With Disabilities, Please Call 1-800-465-4339 (U.S. And Canada) Or Contact The Hotel Directly. For The Hearing Impaired, Tdd Service Is Available At 1-800-238-5544 Within The U.S. And Canada
+            p.main
+               b More facilities:
+               |  Earliest Check-In At 15:00 1 Outdoor Pool 4 Floors
+            p
+               b Distance
+            p Centrally located
+            p 13 kms to the airport (mccarran intl)
+            p 25 kms to the airport (vgt)
+            p Close to the station (none)
+            p -1 km to the nearest fair site (?)
+            p Close to the beach
+         #attractions.tab-pane
+            h3 Attractions
+            - if ( page.name == 'landing' ) {
+               .attractions_map
+                  #map2
+            - }
+            .attractions_gallery
+               .attractions_gallery-item
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image1.png', alt='attractions image')
+                  .description-wrapper
+                     .title London Palladium
+                     span.distance 0.1 km
+               .attractions_gallery-item
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image2.png', alt='attractions image')
+                  .description-wrapper
+                     .title Liberty of London Department Store
+                     span.distance 0.2 km
+               .attractions_gallery-item
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image3.png', alt='attractions image')
+                  .description-wrapper
+                     .title Carnaby Street
+                     span.distance 0.3 km
+               .attractions_gallery-item
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image4.png', alt='attractions image')
+                  .description-wrapper
+                     .title Hamleys Toy Store
+                     span.distance 0.36 km
+               .attractions_gallery-item
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image5.png', alt='attractions image')
+                  .description-wrapper
+                     .title Regent Street
+                     span.distance 0.9 km
+               .attractions_gallery-item
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image6.png', alt='attractions image')
+                  .description-wrapper
+                     .title Big Ben
+                     span.distance 0.4 km
+               .attractions_gallery-item
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image1.png', alt='attractions image')
+                  .description-wrapper
+                     .title London Palladium
+                     span.distance 0.1 km
+               .attractions_gallery-item
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image2.png', alt='attractions image')
+                  .description-wrapper
+                     .title Liberty of London Department Store
+                     span.distance 0.2 km
+               .attractions_gallery-item.visible-lg
+                  .image
+                     a(href='javascript:void(0)')
+                        img(src='images/attractions-image3.png', alt='attractions image')
+                  .description-wrapper
+                     .title Carnaby Street
+                     span.distance 0.3 km
+
+         #good-to-know.tab-pane
+            h3 Good to Know
+            .row.mt-15
+               .col-sm-3.col-xs-6
+                  p
+                     b Check In
+                  p
+                     b Check Out
+               .col-sm-9.col-xs-6
+                  p 14:00 - 00:00
+                  p Until 12:00
+            .divider.pull-left
+            .row
+               .col-sm-3
+                  p
+                     b Cancellation/
+                     br.hidden-xs
+                     b prepayment
+               .col-sm-9
+                  p Cancellation and prepayment policies vary according to room type. Please check what room conditions may apply when selecting your room above.
+            .divider.pull-left
+            .row
+               .col-sm-3
+                  p
+                     b Children and Extra Beds
+               .col-sm-9
+                  p All children are welcome. There is no capacity for extra beds in the room.
+            .divider.pull-left
+            .row
+               .col-sm-3
+                  p
+                     b Pets
+               .col-sm-9
+                  p Pets are not allowed.
+            .divider.pull-left
+            .row
+               .col-sm-3
+                  p
+                     b Cards accepted at this property
+               .col-sm-9
+                  .good-to-know_payments
+                     img(src='images/payment/visa.png', alt='payment')
+                     img(src='images/payment/mastercard.png', alt='payment')
+                     img(src='images/payment/discover.png', alt='payment')
+                     img(src='images/payment/paypal.png', alt='payment')
+                     img(src='images/payment/amex.png', alt='payment')
+                     img(src='images/payment/jcb.png', alt='payment')
+                     img(src='images/payment/android-pay.png', alt='payment')
+                     img(src='images/payment/wallet.png', alt='payment')
+                  p Hover over the cards for more info.
+         #reviews.tab-pane
+            h3 Newest Reviews for Holiday Inn Express Hotel Suites Las Vegas
+            .review-block
+               .review-block_rating
+                  ul.stars.stars-hotel(data-stars='4.3')
+                     li.hidden
+                        i.fa.orange-text.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.orange-text.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.orange-text.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.orange-text.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.orange-text.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.orange-text.fa-star-half(aria-hidden='true')
+                  span.rating 4,3 / 5
+                  a.see-all.hidden-sm.hidden-xs(href='javascript:void(0)') See all guest reviews
+                  .review-block_rating-like.hidden-sm.hidden-xs
+                     .review-block_rating-like-up
+                        a(href='javascript:void(0)')
+                           i.icon-like
+                        span.like +1
+                     .review-block_rating-like-down
+                        a(href='javascript:void(0)')
+                           i.icon-like
+                        span.like -1
+               .review-block_comments
+                  .review-block_comments-block
+                     .name
+                        span Adam
+                     .country
+                        span.flag
+                           img(src='./images/icons/usa.png', alt='usa')
+                        span USA
+                     .date
+                        span May 5th, 2017
+                     .comment.clearfix
+                        ul.stars.stars-hotel
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                        p.comment-rating Perfect
+                        p.comment-text Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell.
+                  .review-block_comments-block
+                     .name
+                        span Geralt
+                     .country
+                        span.flag
+                           img(src='./images/icons/usa.png', alt='usa')
+                        span USA
+                     .date
+                        span June 25th, 2017
+                     .comment.clearfix
+                        ul.stars.stars-hotel
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                        p.comment-rating Good
+                        p.comment-text Am terminated it excellence invitation projection as.
+                  .review-block_comments-block
+                     .name
+                        span Anna Maria
+                     .country
+                        span.flag
+                           img(src='./images/icons/usa.png', alt='usa')
+                        span USA
+                     .date
+                        span June 27th, 2017
+                     .comment.clearfix
+                        ul.stars.stars-hotel
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                           li
+                              i.fa.orange-text.fa-star(aria-hidden='true')
+                        p.comment-rating Perfect
+                        p.comment-text Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell.
+               .loading-more
+                  .loading
+                     i.fa.fa-spinner.fa-spin(aria-hidden='true')
+                     a(href='/partial/content-comments.html').text-uppercase Load Next 6 Comments
+               .pagination-wrapper
+                  .pagination
+                     ul
+                        li
+                           a(href='javascript:void(0)') Previous
+                        li.numbers
+                           a(href='javascript:void(0)') 1
+                        li.numbers
+                           a(href='javascript:void(0)') 2
+                        li.numbers.active
+                           a(href='javascript:void(0)') 3
+                        li.numbers.hidden-xs
+                           a(href='javascript:void(0)') 4
+                        li.numbers.hidden-xs
+                           a(href='javascript:void(0)') 5
+                        li.hidden-xs
+                           a(href='javascript:void(0)') Next
+         #analytics.tab-pane
+            .hidden-xs
+               h3 Analyst views and reservations
+               .main-statistic.clearfix
+                  #chart-legends
+                  .main-chart-wrapper
+                     #parentCanvas
+                        canvas#canvas(width='443', height='200')
+               .row.pie-statistic
+                  .col-sm-4
+                     .text-center
+                        .progress-radial.progress-90.setsize.first
+                           .overlay
+                              p 92%
+                        span.pie_title.pie_title1 Positive Appreciated this hotel
+                  .col-sm-4
+                     .text-center
+                        .progress-radial.progress-60.setsize.second
+                           .overlay
+                              p 1253
+                        span.pie_title.pie_title2 Re-booking Rooms In This Hotel
+                  .col-sm-4
+                     .text-center
+                        .progress-radial.progress-75.setsize.third
+                           .overlay
+                              p 16 421
+                        span.pie_title.pie_title3 People were satisfied
+               .statistic
+                  .statistic_title
+                     span 3,090 people have reviewed this hotel
+                  .statistic_block
+                     .row
+                        .col-sm-4
+                           .ul-title Traveller rating
+                           ul.traveller-rating
+                              li.first
+                                 span 2,539
+                              li.second
+                                 span 430
+                              li.third
+                                 span 71
+                              li.fourth
+                                 span 30
+                              li.fifth
+                                 span 19
+                        .col-sm-3
+                           .ul-title See reviews for
+                           ul.reviews-category
+                              li
+                                 i.icon.icon-family-room
+                                 .text Families
+                                 .count 548
+                              li
+                                 i.icon.icon-valentines-heart
+                                 .text Couples
+                                 .count 1621
+                              li
+                                 i.icon.icon-man-user
+                                 .text Solo
+                                 .count 11
+                              li
+                                 i.icon.icon-old-fashion-briefcase
+                                 .text Business
+                                 .count 172
+                        .col-sm-5
+                           .ul-title Rating summary
+                           ul.rating-summary
+                              li
+                                 span Location
+                                 img(src='./images/icons/rate/5.0.svg', alt='rating')
+                              li
+                                 span Sleep Quality
+                                 img(src='./images/icons/rate/5.0.svg', alt='rating')
+                              li
+                                 span Rooms
+                                 img(src='./images/icons/rate/5.0.svg', alt='rating')
+                              li
+                                 span Service
+                                 img(src='./images/icons/rate/5.0.svg', alt='rating')
+                              li
+                                 span Value
+                                 img(src='./images/icons/rate/5.0.svg', alt='rating')
+                              li
+                                 span Cleanlines
+                                 img(src='./images/icons/rate/5.0.svg', alt='rating')
+
+            .visible-xs
+               .mobile-analytics
+                  p If you want to see Analytics System please
+                  a(href='javascript:void(0)') Open Desktop Version
+         #contacts.tab-pane
+            h3 Contact Us
+            p.main Dissuade ecstatic and properly saw entirely sir why laughter endeavor. In on my jointure horrible margaret suitable he followed speedily. Indeed vanity excuse or mr lovers of on. By offer scale an stuff. Blush be sorry no sight. Sang lose of hour then he left find.
+            .contacts
+               .contacts_form
+                  form(data-toggle='validator', role='form')
+                     .row
+                        .col-sm-6
+                           .form-group
+                              input#inputName.form-control.contacts_form-name(type='text', placeholder='Your Name', data-error='Something wrong', required='')
+                              .help-block.with-errors
+                        .col-sm-6
+                           .form-group
+                              input#inputEmail.form-control.contacts_form-email(type='email', placeholder='Your Email', data-error='Something wrong', required='')
+                              .help-block.with-errors
+                        .col-sm-12
+                           .form-group
+                              textarea#textareaMessage.form-control.contacts_form-message(placeholder='Message', rows='8', data-error='Something wrong', required='')
+                              .help-block.with-errors
+                     .form-group
+                        button.book-btn(type='submit') Send Message
+   - if ( page.name == 'landing' ) {
+      .hotel-information_block-map.same-height-map
+         .loading-search-cover
+            .loading-search
+         .placeholder-map
+         #map1.placeholder-show
+   - }
