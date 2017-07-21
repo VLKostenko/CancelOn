@@ -950,6 +950,7 @@
   $('.payment-block form').validator().submit(function (e) {
     if ( !e.isDefaultPrevented() ) {
       $('.info-step').show();
+      $('.loading-submit-form-cover').fadeIn(200);
       if ( $(window).width() > 991 ) {
         $('.payment-details .ui.sticky').sticky('refresh');
       }
@@ -980,7 +981,7 @@
     $('#inputCardPostal').val('987654');
   });
 
-  $('.change-dates-button a').click(function() {
+  $('.change-dates-button a.change').click(function() {
     $('.dates-bg-block').fadeIn(200);
     $('.change-dates-block').show().animateCss('bounceIn');
     if ( $(window).width() > 992 ) {
@@ -1540,7 +1541,9 @@
         $('.payment-details .ui.sticky').sticky('destroy');
         var paymentSidebarWidth = 0;
         $('.payment-details-wrapper .payment-details .sidebar-block .panel').each(function() {
-          paymentSidebarWidth += $(this).outerWidth();
+          if ( !$(this).hasClass('placeholder-room-info') ) {
+            paymentSidebarWidth += $(this).outerWidth();
+          }
         });
         $('.payment-details-wrapper .payment-details .sidebar-block').css('max-width', paymentSidebarWidth);
 
@@ -1744,7 +1747,9 @@
       } else {
         var paymentSidebarWidth = 0;
         $('.payment-details-wrapper .payment-details .sidebar-block .panel').each(function() {
-          paymentSidebarWidth += $(this).outerWidth();
+          if ( !$(this).hasClass('placeholder-room-info') ) {
+            paymentSidebarWidth += $(this).outerWidth();
+          }
         });
         $('.payment-details-wrapper .payment-details .sidebar-block').css('max-width', paymentSidebarWidth);
 
@@ -1754,11 +1759,15 @@
       }
 
       if ( $(window).width() > 991 ) {
+        $('.details-item-info .main-sidebar').addClass('ui sticky');
         $('.details-item-info .ui.sticky').sticky({
           context: '#sticky-wrap',
           silent: true,
           observeChanges: true
         });
+      } else {
+        // $('.details-item-info').removeAttr('style');
+        $('.details-item-info .ui.sticky').removeClass('ui sticky');
       }
     }, 1500);
     // remove all placeholders

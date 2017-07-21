@@ -388,7 +388,8 @@ body {
   }
 }
 
-.loading-form-cover {
+.loading-form-cover,
+.loading-submit-form-cover {
   position: absolute;
   z-index: 99;
   right: 0;
@@ -417,6 +418,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+.loading-submit-form-cover {
+  display: none;
 }
 
 .details-item-info {
