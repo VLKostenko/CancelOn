@@ -450,7 +450,7 @@
               &[title='#{$code}'] {
                 .filter-option {
                   &:before {
-                    background-image: url('/images/country-flags/#{$name}.png');
+                    background-image: url('../images/country-flags/#{$name}.png');
                   }
                 }
               }

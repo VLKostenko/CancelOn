@@ -649,13 +649,13 @@ form(data-toggle='validator', role='form')
                      label.control-label(for='inputCardFirstName') First Name
                         span.danger *
                      input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required')
-                     img(src='/images/icons/credit/first-name.png', alt='first name')
+                     img(src='./images/icons/credit/first-name.png', alt='first name')
                      .help-block.with-errors
                   .col-sm-12.form-group.has-feedback
                      label.control-label(for='inputCardLastName') Last Name
                         span.danger *
                      input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required')
-                     img(src='/images/icons/credit/last-name.png', alt='last name')
+                     img(src='./images/icons/credit/last-name.png', alt='last name')
                      .help-block.with-errors
                   .col-sm-12.form-group.card-number-input
                      label.control-label(for='inputCardNumber1') Card Number
@@ -663,16 +663,16 @@ form(data-toggle='validator', role='form')
                      .row
                         .col-sm-3
                            input#inputCardNumber1.form-control.card-input(name='Card Number 1', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
-                           img(src='/images/icons/credit/number1.png', alt='number 1')
+                           img(src='./images/icons/credit/number1.png', alt='number 1')
                         .col-sm-3.hidden-xs
                            input#inputCardNumber2.form-control.card-input(name='Card Number 2', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
-                           img(src='/images/icons/credit/number2.png', alt='number 2')
+                           img(src='./images/icons/credit/number2.png', alt='number 2')
                         .col-sm-3.hidden-xs
                            input#inputCardNumber3.form-control.card-input(name='Card Number 3', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
-                           img(src='/images/icons/credit/number3.png', alt='number 3')
+                           img(src='./images/icons/credit/number3.png', alt='number 3')
                         .col-sm-3.hidden-xs
                            input#inputCardNumber4.form-control.card-input(name='Card Number 4', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
-                           img(src='/images/icons/credit/number4.png', alt='number 4')
+                           img(src='./images/icons/credit/number4.png', alt='number 4')
                   .col-sm-12.form-group
                      label.control-label(for='inputCardExpDate') Expiration Date
                         span.danger *
@@ -686,7 +686,7 @@ form(data-toggle='validator', role='form')
                                     option(value=i)=i
                                  - }
                               - }
-                           img(src='/images/icons/credit/date-day.png', alt='expiration date day')
+                           img(src='./images/icons/credit/date-day.png', alt='expiration date day')
                         .col-sm-6
                            select#inputCardExpDateYear.selectpicker.form-control(name='Expiration Date Year')
                               - for ( var i = 2010; i < 2031; i++ ) {
@@ -696,14 +696,14 @@ form(data-toggle='validator', role='form')
                                     option(value=i)=i
                                  - }
                               - }
-                           img(src='/images/icons/credit/date-year.png', alt='expiration date year')
+                           img(src='./images/icons/credit/date-year.png', alt='expiration date year')
                   .last-line-wrapper
                      .col-sm-6.form-group
                         label.control-label(for='inputCardCVC') CVC
                            span.danger *
                            span.small-desc  The 3 digits (back) or 4 digits (front) value on your card.
                         input#inputCardCVC.form-control(name='Card CVC', type='text', autocomplete='off', required, maxlength='3', data-error='This field is required')
-                        img(src='/images/icons/credit/cvc.png', alt='cvc code')
+                        img(src='./images/icons/credit/cvc.png', alt='cvc code')
                         .cvv-input
                            .numbers-block
                               .number
@@ -744,16 +744,16 @@ form(data-toggle='validator', role='form')
                .row
                   .col-sm-3
                      a(href='javascript:void(0)')
-                        img(src='/images/payment-method/paypal.png', alt='paypal')
+                        img(src='./images/payment-method/paypal.png', alt='paypal')
                   .col-sm-3
                      a(href='javascript:void(0)')
-                        img(src='/images/payment-method/apple-pay.png', alt='apple pay')
+                        img(src='./images/payment-method/apple-pay.png', alt='apple pay')
                   .col-sm-3
                      a(href='javascript:void(0)')
-                        img(src='/images/payment-method/amazon-pay.png', alt='amazon pay')
+                        img(src='./images/payment-method/amazon-pay.png', alt='amazon pay')
                   .col-sm-3
                      a(href='javascript:void(0)')
-                        img(src='/images/payment-method/google-wallet.png', alt='google wallet')
+                        img(src='./images/payment-method/google-wallet.png', alt='google wallet')
    .step.submit-step
       .wrapper
          .submit-wrapper
