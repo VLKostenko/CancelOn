@@ -1439,6 +1439,22 @@
     } else {
       $('.payment-details-wrapper .payment-details .sidebar-block').removeClass('draggable');
     }
+
+    // $('form').jCryption();
+
+    // var crypt = new JSEncrypt();
+    // crypt.setKey('MIICXAIBAAKBgQDT1zdVRn7oDjaC8/BsIu/D/bueuHxadz4EPwIme4Bps90vR/Ma5LSHx3mOpWcIWuer49jTQnMozcX98IlyNHhjft0aqHv0amkIrUZTlyKTQlsTIGJd +3U5ymImCjMN75vGX2aXi1H2LPs1kS0WpzCU/waPdfHxLeuyVYkKNvw4dwIDAQABAoGBANATMLJ+D+D3NOvjl19f4YntDACWzO4++ZdKHF6YKEWq+bKbRVpBEmHbuLY4GL/IKo5Xun2nY13M4JDRVu/qQeQO/5rQ3weC5dk7a33Uri/KmmcsJ2RFRohFZa8zLed6UEsXj4t39kNRE8pikhXhTbnt5+CXxr90EqKxYk9VeDSBAkEA7dGCAgwaI++nJQ5FJFGlXiUKtZCKALXHBQwovKfBVEInRVeS7AXVqfZ5TpZ3jly3j4sm0XUoLUb5 +EIQHaC08QJBAOQJSFCwHhjs6rrFLuIfAGeZPbqqT+FxlzcdX0YkirmTR92NQ545hJ7cOJWDMlLcH8FmERrPcZx3IlMLcrX8I+cCQCpSgY95teE1UgqPKpDXEtXZQ7miGl0b/GoSiuFf/VDQYQq/Ff943lhb66SntGkaaPRbsDHQZrEAE5Yxs4qCQhECQE8HrIlSUEwBJ+Ss2+/AIMrGwC8GQYL3dBnE0zUjCvT/xyNQhwO6GW1ZEz815eXzpgnHztvE0zIP09SGHi5WATcCQAJn+W4AY78s99OGuD1gZ3d66Js3UUBRUE6Oo6MhWir2PL95CQHuYO23X7xATd1dcVF8H/CBRXI5XMZF7vkpQx8=');
+    //
+    // var text = 'test';
+    // var enc = crypt.encrypt(text);
+    // var dec = crypt.decrypt(enc);
+    //
+    // if (dec === text) {
+    //   alert('It works!!!');
+    // } else {
+    //   alert('Something went wrong....');
+    // }
+
   });
 
   window.addEventListener('resize', function() {

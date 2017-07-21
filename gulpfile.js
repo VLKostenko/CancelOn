@@ -71,7 +71,8 @@ var path = {
       'assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js',
       'assets/plugins/semantic-ui/semantic.min.js',
       'assets/plugins/disableScroll/jquery.disablescroll.min.js',
-      'assets/plugins/chart.js/dist/Chart.min.js'
+      'assets/plugins/chart.js/dist/Chart.min.js',
+      // 'assets/plugins/jсryption/jquery.jcryption.3.1.0.js'
     ],
     css: folders.src + 'styles/**/*.scss',
     less: folders.src + 'styles/**/*.less',
