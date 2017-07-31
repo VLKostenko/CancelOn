@@ -479,6 +479,19 @@
     .input-group {
       width: 55%;
     }
+    .children-age {
+      //display: none;
+      .child {
+        margin-top: 15px;
+        display: block;
+        select {
+          width: 100%;
+        }
+        &:last-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }
 

@@ -23,10 +23,10 @@
 									i.fa.fa-sliders(aria-hidden='true')
 								a#peopleCount.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 									span.block
-										span.value#rooms 3
+										span.value#rooms 1
 										span.col-form-label Rooms
 									span.block
-										span.value#adults 4
+										span.value#adults 1
 										span.col-form-label Adults
 									span.block
 										span.value#children 0
@@ -39,7 +39,7 @@
 										span.input-group-btn
 											button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[1]')
 												| -
-										input.form-control.input-number(type='number', id='quant[1]', name='quant[1]', value='3', min='1', max='10', data-id='rooms')
+										input.form-control.input-number(type='number', id='quant[1]', name='quant[1]', value='1', min='1', max='99', data-id='rooms')
 										span.input-group-btn
 											button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1]')
 												| +
@@ -48,7 +48,7 @@
 										span.input-group-btn
 											button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2]')
 												| -
-										input.form-control.input-number(type='number', id='quant[2]', name='quant[2]', value='4', min='1', max='99', data-id='adults')
+										input.form-control.input-number(type='number', id='quant[2]', name='quant[2]', value='1', min='1', max='99', data-id='adults')
 										span.input-group-btn
 											button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2]')
 												| +
@@ -61,6 +61,8 @@
 										span.input-group-btn
 											button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[3]')
 												| +
+									span.children-age
+										.child.child-1
 							span.search-divider
 						span.input-search-btn.hidden-xs
 							button.btn.btn-default(type='button') SEARCH

@@ -872,32 +872,32 @@
   });
 
   $(document).on('click', '.booking-table .room-type_info-open-btn .hotel-button', function() {
-  if ( $(window).width() > 991 ) {
-    $(this)
-      .toggleClass('opened closed')
-      .closest('.row-info')
-      .toggleClass('opened closed');
-  } else if ( $(window).width() > 767 && $(window).width() < 992 ) {
-    $(this)
-      .toggleClass('opened closed')
-      .closest('.row-info')
-      .toggleClass('opened closed');
-    if ( $(this).closest('.row-info').hasClass('opened') ) {
-      $(this).closest('.room-type_info')
-        .appendTo($(this).closest('.room-type_info-mobile-wrapper').find('.room-type_info-mobile'));
+    if ( $(window).width() > 991 ) {
+      $(this)
+        .toggleClass('opened closed')
+        .closest('.row-info')
+        .toggleClass('opened closed');
+    } else if ( $(window).width() > 767 && $(window).width() < 992 ) {
+      $(this)
+        .toggleClass('opened closed')
+        .closest('.row-info')
+        .toggleClass('opened closed');
+      if ( $(this).closest('.row-info').hasClass('opened') ) {
+        $(this).closest('.room-type_info')
+          .appendTo($(this).closest('.room-type_info-mobile-wrapper').find('.room-type_info-mobile'));
+      } else {
+        $(this).closest('.room-type_info')
+          .prependTo($(this)
+            .closest('.room-type_info-mobile-wrapper')
+            .find('.right-part_info .variant1'));
+      }
     } else {
-      $(this).closest('.room-type_info')
-        .prependTo($(this)
-          .closest('.room-type_info-mobile-wrapper')
-          .find('.right-part_info .variant1'));
+      $(this)
+        .toggleClass('opened closed')
+        .closest('.row-info')
+        .toggleClass('opened closed');
     }
-  } else {
-    $(this)
-      .toggleClass('opened closed')
-      .closest('.row-info')
-      .toggleClass('opened closed');
-  }
-});
+  });
 
   $(document).on('click', '.booking-table .right-part_info .variant .conditions-open-close-btn a', function() {
     $(this).closest('.variant').toggleClass('opened closed');
@@ -1030,6 +1030,50 @@
       $(changePath + ' .end .month').text(' ' + monthTextEnd);
       $(changePath + ' .end .year').text(' ' + yearTextEnd);
       $(changePath + ' .total .nights').text(nightText);
+    }
+  });
+
+  var oldValue = 1;
+  $('.input-number[data-id="children"]').change(function() {
+    if ( $(this).val() == 0 ) {
+      $('.children-age').fadeOut(300);
+      $('.children-age').html('');
+      oldValue = 1;
+    } else {
+      var value = $(this).val();
+      $('.children-age').fadeIn(300);
+      if ( oldValue <= value ) {
+        oldValue = $(this).val();
+        $('.children-age').append(
+          '<span class=\'child child-' + value + '\'>' +
+          '<label for=\'childrenAge-' + value + '\'>Age Of Child ' + value + '</label>' +
+          '<select id=\'childrenAge-' + value + '\'>' +
+          '<option value="< 1" selected>< 1 </option>' +
+          '<option value="1">1</option>' +
+          '<option value="2">2</option>' +
+          '<option value="3">3</option>' +
+          '<option value="4">4</option>' +
+          '<option value="5">5</option>' +
+          '<option value="6">6</option>' +
+          '<option value="7">7</option>' +
+          '<option value="8">8</option>' +
+          '<option value="9">9</option>' +
+          '<option value="10">10</option>' +
+          '<option value="11">11</option>' +
+          '<option value="12">12</option>' +
+          '<option value="13">13</option>' +
+          '<option value="14">14</option>' +
+          '<option value="15">15</option>' +
+          '<option value="16">16</option>' +
+          '<option value="17">17</option>' +
+          '</select>' +
+          '</span>'
+        );
+        // $('.children-age .selectpicker').selectpicker();
+      } else {
+        oldValue = $(this).val();
+        $('.children-age .child:last-child').remove();
+      }
     }
   });
 

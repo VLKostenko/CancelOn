@@ -11883,6 +11883,19 @@ aside.show-on-map .panel-group .panel.panel-default {
   width: 55%;
 }
 
+.people-count .book-menu .children-age .child {
+  margin-top: 15px;
+  display: block;
+}
+
+.people-count .book-menu .children-age .child select {
+  width: 100%;
+}
+
+.people-count .book-menu .children-age .child:last-child {
+  margin-bottom: 10px;
+}
+
 .search-result {
   display: none;
   position: absolute;
