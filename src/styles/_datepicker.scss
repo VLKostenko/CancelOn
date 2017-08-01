@@ -8,7 +8,7 @@
   line-height: 25px;
   padding-left: 10px;
   font-size: 12px;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   cursor: pointer;
   color: #303030;
@@ -122,7 +122,7 @@
           cursor: default;
           display: block;
           &.hovering {
-            background-color: rgba(0,0,77,.5);
+            background-color: #516fb3;
           }
         }
       }
@@ -398,11 +398,10 @@
     }
   }
   &.search-datepicker {
-    @media (max-width: 767px) {
-      .month-wrapper {
-        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-        box-shadow: 0 6px 12px rgba(0,0,0,.175);
-      }
+    margin-top: 10px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+    &:before {
+      display: none;
     }
   }
 }
@@ -519,7 +518,7 @@ input[type="text"] {
   }
   .first-date-selected, .last-date-selected {
     border-radius: 0;
-    background: #00004d !important;
+    background: #2e4ca0 !important;
     position: relative;
     z-index: 1;
   }
@@ -549,7 +548,7 @@ input[type="text"] {
       z-index: 1;
     }
     &.checked + .round-border, &.hovering + .round-border {
-      background: rgba(0, 0, 77, 0.5);
+      background: #516fb3;
       position: absolute;
       z-index: 0;
       left: 0;
@@ -584,7 +583,7 @@ input[type="text"] {
         background: #fff;
       }
       tbody {
-        background: $main-blue;
+        background: #fff;
         border-top: 15px solid transparent;
         border-bottom: 15px solid transparent;
       }
@@ -628,21 +627,24 @@ input[type="text"] {
         padding: 11px 0;
         &.toMonth {
           &.valid {
-            color: #fff;
+            color: #000;
           }
           &.hovering {
-            background: rgba(0, 0, 77, 0.5);
+            background: #516fb3;
+            color: #fff;
           }
         }
         &.real-today {
           border-radius: 0;
-          background: #68b925;
+          background: #68b925!important;
+          color: #fff!important;
           &.checked, &.hovering {
             background: #68b925;
           }
         }
         &.checked {
-          background: rgba(0, 0, 77, 0.5);
+          background: #516fb3;
+          color: #fff!important;
         }
       }
     }
@@ -668,6 +670,14 @@ input[type="text"] {
         padding: 3px 0;
         border-radius: 0;
         margin-left: 10px;
+        &.apply-btn {
+          background: #4978d2;
+          border-color: #4978d2;
+          &:hover {
+            background: lighten(#4978d2, 10%);
+            border-color: lighten(#4978d2, 10%);
+          }
+        }
       }
     }
   }
@@ -691,6 +701,8 @@ input[type="text"] {
 }
 .date-picker-wrapper .month-wrapper table .day.nextMonth,
 .date-picker-wrapper .month-wrapper table .day.lastMonth {
-  display: none!important;
-  color: transparent!important;
+  //display: none!important;
+  color: #c6c6c6!important;
+  font-size: 12px;
+  padding: 12px 0;
 }

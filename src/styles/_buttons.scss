@@ -87,24 +87,31 @@
 }
 
 .input-search-btn {
-  position: absolute;
-  right: 15px;
-  top: 36px;
+  display: block;
+  float: left;
+  margin: 25px 0;
+  margin-left: 10px;
   z-index: 4;
   button {
-    background-color: $main-blue;
-    border-color: $main-blue;
-    padding: 6px 18px;
+    background-color: #1d79d6;
+    border: 0;
+    padding: 0;
     border-radius: 0;
     color: #ffffff;
-    height: 42px;
-    width: 115px;
+    height: 50px;
+    width: 50px;
     font-family: "Roboto", sans-serif;
+    background-image: url('../images/icons/go-right-arrow.svg');
+    background-repeat:  no-repeat;
+    background-position: 50% 50%;
+    background-size: 20px;
+    @include crossBrowser(transition, background .2s ease-in);
     &:hover, &:focus, &:active {
-      background-color: $light-blue;
-      border-color: $light-blue;
-      color: #ffffff;
+      background-color: lighten(#1d79d6, 10%);
     }
+    //.load-icon {
+      //display: none;
+    //}
   }
 }
 
