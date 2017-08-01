@@ -921,9 +921,9 @@
         open(opt.duration);
         $('.date-group').addClass('active');
         $('.people-count').removeClass('active');
-        if ( $(window).width() > 767 ) {
-          $('.black-bg-search').fadeIn(opt.duration);
-        }
+        // if ( $(window).width() > 767 ) {
+        //   $('.black-bg-search').fadeIn(opt.duration);
+        // }
         // showDaysBorders();
       } else {
         closeDatePicker();
@@ -1332,9 +1332,6 @@
       });
       showGap();
       updateCalendarWidth();
-      if ( $(window).width() > 992 ) {
-        $(window).disablescroll();
-      }
     }
 
     function checkAndSetDefaultValue() {
@@ -2101,12 +2098,11 @@
       $(self).trigger('datepicker-close', {
         relatedTarget: box
       });
-      setTimeout(function() {
-        if ( $('.people-count .book-menu').is(':hidden') ) {
-          $('.black-bg-search').fadeOut(opt.duration);
-          $(window).disablescroll('undo');
-        }
-      }, 10);
+      // setTimeout(function() {
+      //   if ( $('.people-count .book-menu').is(':hidden') ) {
+      //     $('.black-bg-search').fadeOut(opt.duration);
+      //   }
+      // }, 10);
       $('.date-group').removeClass('active');
     }
 
@@ -2562,19 +2558,19 @@
 
       $('.people-count .dropdown-toggle').click(function() {
         closeDatePicker();
-        if ( $(window).width() > 767 ) {
-          $('.black-bg-search').fadeIn(opt.duration);
-        }
+        // if ( $(window).width() > 767 ) {
+        //   $('.black-bg-search').fadeIn(opt.duration);
+        // }
       });
-      $(window).resize(function() {
-        if ( box.is(':visible') ) {
-          if ( $(window).width() > 767 ) {
-            $('.black-bg-search').fadeIn(opt.duration);
-          } else {
-            $('.black-bg-search').fadeOut(opt.duration);
-          }
-        }
-      });
+      // $(window).resize(function() {
+      //   if ( box.is(':visible') ) {
+      //     if ( $(window).width() > 767 ) {
+      //       $('.black-bg-search').fadeIn(opt.duration);
+      //     } else {
+      //       $('.black-bg-search').fadeOut(opt.duration);
+      //     }
+      //   }
+      // });
     }
   };
 }));

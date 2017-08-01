@@ -1349,6 +1349,7 @@ aside {
     color: #9d9d9d;
   }
   &.scrolled {
+    display: none;
     position: fixed;
     top: 0;
     width: calc(54% + 8px);
@@ -1395,7 +1396,7 @@ aside {
       font-size: 15px;
     }
     .input-search {
-      height: 60px;
+      height: 50px;
       padding-right: 450px;
       &.icon {
         background-position: 6px 22px;

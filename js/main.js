@@ -256,15 +256,15 @@
   function toggleFocus(e) {
     if ( e.type == 'keyup' ) {
       searchResult.fadeIn(200);
-      $('.black-bg-search').fadeIn(200);
+      // $('.black-bg-search').fadeIn(200);
     }
     else {
       searchResult.fadeOut(200);
-      $('.black-bg-search').fadeOut(200);
+      // $('.black-bg-search').fadeOut(200);
     }
     if(e.which == 13) {
       searchResult.fadeOut(200);
-      $('.black-bg-search').fadeOut(200);
+      // $('.black-bg-search').fadeOut(200);
     }
   }
 
@@ -604,23 +604,21 @@
     var currentVal = parseInt(input.val());
     if ( !isNaN(currentVal) ) {
       if ( type == 'minus' ) {
-
         if ( currentVal > input.attr('min') ) {
           input.val(currentVal - 1).change();
         }
         if ( parseInt(input.val()) == input.attr('min') ) {
           $(this).attr('disabled', true);
         }
-
+        countBookedVals();
       } else if ( type == 'plus' ) {
-
         if ( currentVal < input.attr('max') ) {
           input.val(currentVal + 1).change();
         }
         if ( parseInt(input.val()) == input.attr('max') ) {
           $(this).attr('disabled', true);
         }
-
+        countBookedVals('add');
       }
     } else {
       input.val(0);
@@ -717,14 +715,14 @@
     }
   });
 
-  $('.black-bg-search').click(function() {
-    if ( $('.navbar').hasClass('open-menu') ) {
-      hideMobileNav();
-    } else if ( $('.navbar-header').hasClass('open-filter') ) {
-      hideMobileFilter();
-    }
-    $(this).fadeOut(200);
-  });
+  // $('.black-bg-search').click(function() {
+  //   if ( $('.navbar').hasClass('open-menu') ) {
+  //     hideMobileNav();
+  //   } else if ( $('.navbar-header').hasClass('open-filter') ) {
+  //     hideMobileFilter();
+  //   }
+  //   $(this).fadeOut(200);
+  // });
 
   $('.datepicker-input').click(function() {
     hideMapItemBlock();
@@ -740,16 +738,13 @@
     $('#dropdownMenuLink2').append('<span class="bs-caret"><span class="caret"></span></span>');
   });
 
-  $('.people-count .book-menu .btn-number').click(function() {
-    var value = $(this).parent().siblings('.input-number').val();
-    var el = $(this).parent().siblings('.input-number').data('id');
-    $('#' + el).html(value);
-  });
+  // $('.people-count .book-menu .btn-number').click(function() {
+  //   var value = $(this).parent().siblings('.input-number').val();
+  //   var el = $(this).parent().siblings('.input-number').data('id');
+  //   $('#' + el).html(value);
+  // });
 
   $('.people-count #peopleCount').click(function() {
-    if ( $(window).width() > 767 ) {
-      $('.black-bg-search').fadeIn(200);
-    }
     $(this).closest('.people-count').addClass('active');
   });
 
@@ -762,12 +757,6 @@
     $('.input-group.search-group').removeClass('scrolled');
     $('#search-space').height('initial');
     $('.input-group.search-group').addClass('closed');
-  });
-
-  $('#peopleCount').click(function() {
-    if ( $(window).width() > 992 ) {
-      $(window).disablescroll();
-    }
   });
 
   $('.popup .popup_close').click(function() {
@@ -783,9 +772,6 @@
   $(document).on('click', '.show-popup', function() {
     $('.black-bg-map').fadeIn(200);
     $('.map-item-block').show().animateCss('bounceIn');
-    if ( $(window).width() > 992 ) {
-      $(window).disablescroll();
-    }
   });
 
   $('.review-block_rating-like .review-block_rating-like-up,' +
@@ -812,9 +798,9 @@
     '.features .open-map-item').click(function() {
     $('.black-bg-map').fadeIn(200);
     $('.map-item-block').show("slide", { direction: "right" }, 300);
-    if ( $(window).width() > 992 ) {
-      $(window).disablescroll();
-    }
+    // if ( $(window).width() > 992 ) {
+    //   $(window).disablescroll();
+    // }
   });
 
   $('.search-result .result-item').click(function() {
@@ -984,9 +970,9 @@
   $('.change-dates-button a.change').click(function() {
     $('.dates-bg-block').fadeIn(200);
     $('.change-dates-block').show().animateCss('bounceIn');
-    if ( $(window).width() > 992 ) {
-      $(window).disablescroll();
-    }
+    // if ( $(window).width() > 992 ) {
+    //   $(window).disablescroll();
+    // }
   });
 
   $('.dates-bg-block, .change-dates-block .close-btn').click(function() {
@@ -1033,49 +1019,84 @@
     }
   });
 
-  var oldValue = 1;
   $('.input-number[data-id="children"]').change(function() {
-    if ( $(this).val() == 0 ) {
-      $('.children-age').fadeOut(300);
-      $('.children-age').html('');
-      oldValue = 1;
-    } else {
-      var value = $(this).val();
-      $('.children-age').fadeIn(300);
-      if ( oldValue <= value ) {
-        oldValue = $(this).val();
-        $('.children-age').append(
-          '<span class=\'child child-' + value + '\'>' +
-          '<label for=\'childrenAge-' + value + '\'>Age Of Child ' + value + '</label>' +
-          '<select id=\'childrenAge-' + value + '\'>' +
-          '<option value="< 1" selected>< 1 </option>' +
-          '<option value="1">1</option>' +
-          '<option value="2">2</option>' +
-          '<option value="3">3</option>' +
-          '<option value="4">4</option>' +
-          '<option value="5">5</option>' +
-          '<option value="6">6</option>' +
-          '<option value="7">7</option>' +
-          '<option value="8">8</option>' +
-          '<option value="9">9</option>' +
-          '<option value="10">10</option>' +
-          '<option value="11">11</option>' +
-          '<option value="12">12</option>' +
-          '<option value="13">13</option>' +
-          '<option value="14">14</option>' +
-          '<option value="15">15</option>' +
-          '<option value="16">16</option>' +
-          '<option value="17">17</option>' +
-          '</select>' +
-          '</span>'
-        );
-        // $('.children-age .selectpicker').selectpicker();
-      } else {
-        oldValue = $(this).val();
-        $('.children-age .child:last-child').remove();
+    if ( $(this).val() != 0 ) {
+      $(this).closest('.children').next('.children-age').removeClass('hidden');
+      if ( $(this).val() == 1 ) {
+        $(this).closest('.children').next('.children-age').children('.child-2').addClass('hidden');
+        $(this).closest('.children').next('.children-age').children('.child-3').addClass('hidden');
+        $(this).closest('.children').next('.children-age').children('.child-4').addClass('hidden');
+      } else if ( $(this).val() == 2 ) {
+        $(this).closest('.children').next('.children-age').children('.child-2').removeClass('hidden');
+        $(this).closest('.children').next('.children-age').children('.child-3').addClass('hidden');
+        $(this).closest('.children').next('.children-age').children('.child-4').addClass('hidden');
+      } else if ( $(this).val() == 3 ) {
+        $(this).closest('.children').next('.children-age').children('.child-3').removeClass('hidden');
+        $(this).closest('.children').next('.children-age').children('.child-4').addClass('hidden');
+      } else if ( $(this).val() == 4 ) {
+        $(this).closest('.children').next('.children-age').children('.child-4').removeClass('hidden');
       }
+    } else {
+      $(this).closest('.children').next('.children-age').addClass('hidden');
     }
   });
+
+  var addedRooms = 1;
+  $('#add-book-room').click(function() {
+    $('.book-menu .room:first-child .remove').removeClass('hidden');
+    addedRooms += 1;
+    if ( $('.book-menu .room').eq(-1).hasClass('hidden') ) {
+      $('.book-menu .room:not(.hidden)').next().removeClass('hidden');
+      if ( $('.book-menu .room:not(.hidden)').next().hasClass('book-footer') ) {
+        $('#add-book-room').hide();
+      } else {
+        $('#add-book-room').show();
+      }
+    }
+    $('#roomsVal').val(addedRooms);
+    countBookedVals('add');
+  });
+
+  $('#done-book-menu').click(function() {
+    $('.people-count').removeClass('active open');
+  });
+
+  $('.book-menu .room .remove').click(function() {
+    addedRooms -= 1;
+    $('.book-menu .room:not(.hidden):last').addClass('hidden');
+    $('#add-book-room').show();
+    if ( $('.book-menu .room:first-child').next().hasClass('hidden') ) {
+      $('.book-menu .room:first-child .remove').addClass('hidden');
+    }
+    $('#roomsVal').val(addedRooms);
+    countBookedVals();
+  });
+
+  function writeBookedVals(add) {
+    var adultsVal = 0;
+    var childrenVal = 0;
+    $('.book-menu .room:not(.hidden) [data-id="adults"]').each(function() {
+      adultsVal += parseInt($(this).val(), 10);
+    });
+    $('.book-menu .room:not(.hidden) [data-id="children"]').each(function() {
+      childrenVal += parseInt($(this).val(), 10);
+    });
+    console.log(childrenVal);
+    if ( add === 'add' ) {
+      $('#adultsVal').val(adultsVal);
+      $('#childrenVal').val(childrenVal);
+    } else {
+      $('#adultsVal').val(adultsVal);
+      $('#childrenVal').val(childrenVal);
+    }
+  }
+
+  function countBookedVals(add) {
+    writeBookedVals(add);
+    $('#peopleCount #rooms').html($('#roomsVal').val());
+    $('#peopleCount #adults').html($('#adultsVal').val());
+    $('#peopleCount #children').html($('#childrenVal').val());
+  }
 
   /**
    * ------------------------------------------------------------------------------------------------------
@@ -1543,14 +1564,6 @@
         $('#reviews .review-block_comments').mCustomScrollbar({
           scrollbarPosition: "outside"
         });
-      }
-
-      if ( $('.people-count .book-menu').is(':visible') ) {
-        if ( $(window).width() > 767 ) {
-          $('.black-bg-search').fadeIn(200);
-        } else {
-          $('.black-bg-search').fadeOut(200);
-        }
       }
 
       initAOS();
