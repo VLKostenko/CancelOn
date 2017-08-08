@@ -12654,7 +12654,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .booking-table .search-filter-block {
   position: relative;
-  z-index: 2;
+  z-index: 30;
   right: initial;
   height: 60px;
   top: initial;
@@ -18381,18 +18381,27 @@ aside.show-on-map .panel-group .panel.panel-default {
   .booking-table .search-filter-block .people-count:before {
     bottom: 8px;
   }
+  .booking-table .search-filter-block .people-count.active:before {
+    display: none;
+  }
   .booking-table .search-filter-block .people-count .book-menu {
-    top: 75px;
+    top: 90px;
+    width: 750px;
+    max-width: initial;
+    left: -241px;
   }
   .booking-table .search-filter-block .people-count .dropdown-toggle {
-    margin-top: 28px;
+    margin-top: 15px;
   }
   .booking-table .search-filter-block .people-count .down-arrow {
     height: 3px;
     right: 10px;
   }
-  .booking-table .search-filter-block .currency {
-    margin-top: 32px;
+  .booking-table .search-filter-block .people-count .input-group-addon {
+    padding-top: 24px;
+  }
+  .booking-table .search-filter-block .update {
+    margin-top: 36px;
   }
   .booking-table table thead {
     display: none;
@@ -18750,9 +18759,21 @@ aside.show-on-map .panel-group .panel.panel-default {
     margin-top: 18px;
     height: 35px !important;
   }
-  .search-filter-block .people-count .book-menu {
-    top: 70px;
-    width: 290px;
+  .search-filter-block .people-count .book-menu .room {
+    padding: 15px 10px;
+  }
+  .search-filter-block .people-count .book-menu .room .title, .search-filter-block .people-count .book-menu .room .adults, .search-filter-block .people-count .book-menu .room .children {
+    width: 34%;
+  }
+  .search-filter-block .people-count .book-menu .room .children-age {
+    width: 100%;
+  }
+  .search-filter-block .people-count .book-menu .room .children-age .child select {
+    border: 1px solid #333;
+  }
+  .search-filter-block .people-count #peopleCount .block {
+    line-height: 0;
+    padding-top: 2px !important;
   }
   #nav_mobile .nav {
     width: 100vw;
@@ -19267,8 +19288,9 @@ aside.show-on-map .panel-group .panel.panel-default {
     left: 0;
   }
   .booking-table .search-filter-block .people-count .book-menu {
-    top: 70px;
-    width: 290px;
+    top: 60px;
+    width: 320px;
+    padding: 0;
     left: 0;
   }
   .booking-table .search-filter-block .people-count .book-menu:after {
@@ -19289,8 +19311,8 @@ aside.show-on-map .panel-group .panel.panel-default {
     padding-top: 0;
   }
   .booking-table .search-filter-block .people-count .form-control {
-    margin-top: 8px;
-    padding-left: 15px;
+    margin-top: 3px;
+    padding-left: 0;
   }
   .booking-table .search-filter-block .people-count #peopleCount {
     padding: 5px 5px 3px 1px;

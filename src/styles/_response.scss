@@ -1313,19 +1313,30 @@
         &:before {
           bottom: 8px;
         }
+        &.active {
+          &:before {
+            display: none;
+          }
+        }
         .book-menu {
-          top: 75px;
+          top: 90px;
+          width: 750px;
+          max-width: initial;
+          left: -241px;
         }
         .dropdown-toggle {
-          margin-top: 28px;
+          margin-top: 15px;
         }
         .down-arrow {
           height: 3px;
           right: 10px;
         }
+        .input-group-addon {
+          padding-top: 24px;
+        }
       }
-      .currency {
-        margin-top: 32px;
+      .update {
+        margin-top: 36px;
       }
     }
     table {
@@ -1747,8 +1758,26 @@
         height: 35px !important;
       }
       .book-menu {
-        top: 70px;
-        width: 290px;
+        .room {
+          padding: 15px 10px;
+          .title, .adults, .children {
+            width: 34%;
+          }
+          .children-age {
+            width: 100%;
+            .child {
+              select {
+                border: 1px solid #333;
+              }
+            }
+          }
+        }
+      }
+      #peopleCount {
+        .block {
+          line-height: 0;
+          padding-top: 2px!important;
+        }
       }
     }
   }
@@ -2327,8 +2356,9 @@
           left: 0;
         }
         .book-menu {
-          top: 70px;
-          width: 290px;
+          top: 60px;
+          width: 320px;
+          padding: 0;
           left: 0;
           &:after {
             content: '';
@@ -2349,8 +2379,8 @@
           padding-top: 0;
         }
         .form-control {
-          margin-top: 8px;
-          padding-left: 15px;
+          margin-top: 3px;
+          padding-left: 0;
         }
         #peopleCount {
           padding: 5px 5px 3px 1px;
