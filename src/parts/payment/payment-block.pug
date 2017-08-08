@@ -646,59 +646,54 @@ form(data-toggle='validator', role='form')
          .tab-content.clearfix
             #credit-card.tab-pane.credit-card-info.active
                .row
-                  .col-sm-12.form-group.has-feedback
+                  .col-sm-6.form-group.has-feedback
                      label.control-label(for='inputCardFirstName') First Name
                         span.danger *
                      input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required')
                      img(src='./images/icons/credit/first-name.png', alt='first name')
                      .help-block.with-errors
-                  .col-sm-12.form-group.has-feedback
+                  .col-sm-6.form-group.has-feedback
                      label.control-label(for='inputCardLastName') Last Name
                         span.danger *
                      input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required')
                      img(src='./images/icons/credit/last-name.png', alt='last name')
                      .help-block.with-errors
-                  .col-sm-12.form-group.card-number-input
-                     label.control-label(for='inputCardNumber1') Card Number
+                  .col-sm-6.col-xs-12.form-group
+                     label.control-label(for='inputCardPostal') Postal Code
                         span.danger *
-                     .row
-                        .col-sm-3
-                           input#inputCardNumber1.form-control.card-input(name='Card Number 1', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
-                           img(src='./images/icons/credit/number1.png', alt='number 1')
-                        .col-sm-3.hidden-xs
-                           input#inputCardNumber2.form-control.card-input(name='Card Number 2', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
-                           img(src='./images/icons/credit/number2.png', alt='number 2')
-                        .col-sm-3.hidden-xs
-                           input#inputCardNumber3.form-control.card-input(name='Card Number 3', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
-                           img(src='./images/icons/credit/number3.png', alt='number 3')
-                        .col-sm-3.hidden-xs
-                           input#inputCardNumber4.form-control.card-input(name='Card Number 4', type='text', required, maxlength='4', autocomplete='off', data-error='This field is required')
-                           img(src='./images/icons/credit/number4.png', alt='number 4')
-                  .col-sm-12.form-group
-                     label.control-label(for='inputCardExpDate') Expiration Date
+                     input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
+                  .col-sm-6.form-group.card-number-input
+                     label.control-label(for='inputCardNumber') Card Number
                         span.danger *
-                     .row
-                        .col-sm-6.mb-xs-15
-                           select#inputCardExpDate.selectpicker.form-control(name='Expiration Date Day')
-                              - for ( var i = 1; i < 32; i++ ) {
-                                 - if ( i < 10 ) {
-                                    option(value='0' + i)= '0' + i
-                                 - } else {
-                                    option(value=i)=i
-                                 - }
-                              - }
-                           img(src='./images/icons/credit/date-day.png', alt='expiration date day')
-                        .col-sm-6
-                           select#inputCardExpDateYear.selectpicker.form-control(name='Expiration Date Year')
-                              - for ( var i = 2010; i < 2031; i++ ) {
-                                 - if ( i == 2018 ) {
-                                    option(value=i, selected)=i
-                                 - } else {
-                                    option(value=i)=i
-                                 - }
-                              - }
-                           img(src='./images/icons/credit/date-year.png', alt='expiration date year')
+                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='off', data-error='This field is required')
+                     img(src='./images/icons/credit/number1.png', alt='number')
+
                   .last-line-wrapper
+                     .col-sm-6.form-group
+                        label.control-label(for='inputCardExpDate') Expiration Date
+                           span.danger *
+                        .row
+                           .col-sm-6.mb-xs-15
+                              select#inputCardExpDate.selectpicker.form-control(name='Expiration Date Day')
+                                 - for ( var i = 1; i < 32; i++ ) {
+                                    - if ( i < 10 ) {
+                                       option(value='0' + i)= '0' + i
+                                    - } else {
+                                       option(value=i)=i
+                                    - }
+                                 - }
+                              img(src='./images/icons/credit/date-day.png', alt='expiration date day')
+                           .col-sm-6
+                              select#inputCardExpDateYear.selectpicker.form-control(name='Expiration Date Year')
+                                 - for ( var i = 2010; i < 2031; i++ ) {
+                                    - if ( i == 2018 ) {
+                                       option(value=i, selected)=i
+                                    - } else {
+                                       option(value=i)=i
+                                    - }
+                                 - }
+                              img(src='./images/icons/credit/date-year.png', alt='expiration date year')
+
                      .col-sm-6.form-group
                         label.control-label(for='inputCardCVC') CVC
                            span.danger *
@@ -737,10 +732,7 @@ form(data-toggle='validator', role='form')
                            .cvv-help
                               img(src='images/cvv_num_img.png', alt='cvv help')
                               span.text 3 digit security code
-                     .col-sm-6.col-xs-12.form-group
-                        label.control-label(for='inputCardPostal') Postal Code
-                           span.danger *
-                        input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
+
             #other-payment.tab-pane.other-payment
                .row
                   .col-sm-3

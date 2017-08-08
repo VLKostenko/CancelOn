@@ -715,99 +715,90 @@
                   <div class="tab-content clearfix">
                     <div class="tab-pane credit-card-info active" id="credit-card">
                       <div class="row">
-                        <div class="col-sm-12 form-group has-feedback">
+                        <div class="col-sm-6 form-group has-feedback">
                           <label class="control-label" for="inputCardFirstName">First Name<span class="danger">*</span></label>
                           <input class="form-control" id="inputCardFirstName" name="Card First Name" type="text" required autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/first-name.png" alt="first name" srcset="./images/icons/credit/first-name.png 1x, ./images/icons/credit/first-name@2x.png 2x, ./images/icons/credit/first-name@3x.png 3x">
                           <div class="help-block with-errors"></div>
                         </div>
-                        <div class="col-sm-12 form-group has-feedback">
+                        <div class="col-sm-6 form-group has-feedback">
                           <label class="control-label" for="inputCardLastName">Last Name<span class="danger">*</span></label>
                           <input class="form-control" id="inputCardLastName" name="Card Last Name" type="text" required autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/last-name.png" alt="last name" srcset="./images/icons/credit/last-name.png 1x, ./images/icons/credit/last-name@2x.png 2x, ./images/icons/credit/last-name@3x.png 3x">
                           <div class="help-block with-errors"></div>
                         </div>
-                        <div class="col-sm-12 form-group card-number-input">
-                          <label class="control-label" for="inputCardNumber1">Card Number<span class="danger">*</span></label>
-                          <div class="row">
-                            <div class="col-sm-3">
-                              <input class="form-control card-input" id="inputCardNumber1" name="Card Number 1" type="text" required maxlength="4" autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/number1.png" alt="number 1" srcset="./images/icons/credit/number1.png 1x, ./images/icons/credit/number1@2x.png 2x, ./images/icons/credit/number1@3x.png 3x">
-                            </div>
-                            <div class="col-sm-3 hidden-xs">
-                              <input class="form-control card-input" id="inputCardNumber2" name="Card Number 2" type="text" required maxlength="4" autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/number2.png" alt="number 2" srcset="./images/icons/credit/number2.png 1x, ./images/icons/credit/number2@2x.png 2x, ./images/icons/credit/number2@3x.png 3x">
-                            </div>
-                            <div class="col-sm-3 hidden-xs">
-                              <input class="form-control card-input" id="inputCardNumber3" name="Card Number 3" type="text" required maxlength="4" autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/number3.png" alt="number 3" srcset="./images/icons/credit/number3.png 1x, ./images/icons/credit/number3@2x.png 2x, ./images/icons/credit/number3@3x.png 3x">
-                            </div>
-                            <div class="col-sm-3 hidden-xs">
-                              <input class="form-control card-input" id="inputCardNumber4" name="Card Number 4" type="text" required maxlength="4" autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/number4.png" alt="number 4" srcset="./images/icons/credit/number4.png 1x, ./images/icons/credit/number4@2x.png 2x, ./images/icons/credit/number4@3x.png 3x">
-                            </div>
-                          </div>
+                        <div class="col-sm-6 col-xs-12 form-group">
+                          <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
+                          <input class="form-control pl-10" id="inputCardPostal" name="Card Postal" type="text" required autocomplete="off" data-error="This field is required">
                         </div>
-                        <div class="col-sm-12 form-group">
-                          <label class="control-label" for="inputCardExpDate">Expiration Date<span class="danger">*</span></label>
-                          <div class="row">
-                            <div class="col-sm-6 mb-xs-15">
-                              <select class="selectpicker form-control" id="inputCardExpDate" name="Expiration Date Day">
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                              </select><img src="./images/icons/credit/date-day.png" alt="expiration date day" srcset="./images/icons/credit/date-day.png 1x, ./images/icons/credit/date-day@2x.png 2x, ./images/icons/credit/date-day@3x.png 3x">
-                            </div>
-                            <div class="col-sm-6">
-                              <select class="selectpicker form-control" id="inputCardExpDateYear" name="Expiration Date Year">
-                                <option value="2010">2010</option>
-                                <option value="2011">2011</option>
-                                <option value="2012">2012</option>
-                                <option value="2013">2013</option>
-                                <option value="2014">2014</option>
-                                <option value="2015">2015</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018" selected>2018</option>
-                                <option value="2019">2019</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                              </select><img src="./images/icons/credit/date-year.png" alt="expiration date year" srcset="./images/icons/credit/date-year.png 1x, ./images/icons/credit/date-year@2x.png 2x, ./images/icons/credit/date-year@3x.png 3x">
-                            </div>
-                          </div>
+                        <div class="col-sm-6 form-group card-number-input">
+                          <label class="control-label" for="inputCardNumber">Card Number<span class="danger">*</span></label>
+                          <input class="form-control card-input" id="inputCardNumber" name="Card Number" type="text" required maxlength="19" autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/number1.png" alt="number" srcset="./images/icons/credit/number1.png 1x, ./images/icons/credit/number1@2x.png 2x, ./images/icons/credit/number1@3x.png 3x">
                         </div>
                         <div class="last-line-wrapper">
+                          <div class="col-sm-6 form-group">
+                            <label class="control-label" for="inputCardExpDate">Expiration Date<span class="danger">*</span></label>
+                            <div class="row">
+                              <div class="col-sm-6 mb-xs-15">
+                                <select class="selectpicker form-control" id="inputCardExpDate" name="Expiration Date Day">
+                                  <option value="01">01</option>
+                                  <option value="02">02</option>
+                                  <option value="03">03</option>
+                                  <option value="04">04</option>
+                                  <option value="05">05</option>
+                                  <option value="06">06</option>
+                                  <option value="07">07</option>
+                                  <option value="08">08</option>
+                                  <option value="09">09</option>
+                                  <option value="10">10</option>
+                                  <option value="11">11</option>
+                                  <option value="12">12</option>
+                                  <option value="13">13</option>
+                                  <option value="14">14</option>
+                                  <option value="15">15</option>
+                                  <option value="16">16</option>
+                                  <option value="17">17</option>
+                                  <option value="18">18</option>
+                                  <option value="19">19</option>
+                                  <option value="20">20</option>
+                                  <option value="21">21</option>
+                                  <option value="22">22</option>
+                                  <option value="23">23</option>
+                                  <option value="24">24</option>
+                                  <option value="25">25</option>
+                                  <option value="26">26</option>
+                                  <option value="27">27</option>
+                                  <option value="28">28</option>
+                                  <option value="29">29</option>
+                                  <option value="30">30</option>
+                                  <option value="31">31</option>
+                                </select><img src="./images/icons/credit/date-day.png" alt="expiration date day" srcset="./images/icons/credit/date-day.png 1x, ./images/icons/credit/date-day@2x.png 2x, ./images/icons/credit/date-day@3x.png 3x">
+                              </div>
+                              <div class="col-sm-6">
+                                <select class="selectpicker form-control" id="inputCardExpDateYear" name="Expiration Date Year">
+                                  <option value="2010">2010</option>
+                                  <option value="2011">2011</option>
+                                  <option value="2012">2012</option>
+                                  <option value="2013">2013</option>
+                                  <option value="2014">2014</option>
+                                  <option value="2015">2015</option>
+                                  <option value="2016">2016</option>
+                                  <option value="2017">2017</option>
+                                  <option value="2018" selected>2018</option>
+                                  <option value="2019">2019</option>
+                                  <option value="2020">2020</option>
+                                  <option value="2021">2021</option>
+                                  <option value="2022">2022</option>
+                                  <option value="2023">2023</option>
+                                  <option value="2024">2024</option>
+                                  <option value="2025">2025</option>
+                                  <option value="2026">2026</option>
+                                  <option value="2027">2027</option>
+                                  <option value="2028">2028</option>
+                                  <option value="2029">2029</option>
+                                  <option value="2030">2030</option>
+                                </select><img src="./images/icons/credit/date-year.png" alt="expiration date year" srcset="./images/icons/credit/date-year.png 1x, ./images/icons/credit/date-year@2x.png 2x, ./images/icons/credit/date-year@3x.png 3x">
+                              </div>
+                            </div>
+                          </div>
                           <div class="col-sm-6 form-group">
                             <label class="control-label" for="inputCardCVC">CVC<span class="danger">*</span><span class="small-desc"> The 3 digits (back) or 4 digits (front) value on your card.</span></label>
                             <input class="form-control" id="inputCardCVC" name="Card CVC" type="text" autocomplete="off" required maxlength="3" data-error="This field is required"><img src="./images/icons/credit/cvc.png" alt="cvc code" srcset="./images/icons/credit/cvc.png 1x, ./images/icons/credit/cvc@2x.png 2x, ./images/icons/credit/cvc@3x.png 3x">
@@ -830,10 +821,6 @@
                             <div class="help-button"><a href="javascript:void(0)"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
                               <div class="cvv-help"><img src="images/cvv_num_img.png" alt="cvv help" srcset="images/cvv_num_img.png 1x, images/cvv_num_img@2x.png 2x, images/cvv_num_img@3x.png 3x"><span class="text">3 digit security code</span></div>
                             </div>
-                          </div>
-                          <div class="col-sm-6 col-xs-12 form-group">
-                            <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
-                            <input class="form-control pl-10" id="inputCardPostal" name="Card Postal" type="text" required autocomplete="off" data-error="This field is required">
                           </div>
                         </div>
                       </div>

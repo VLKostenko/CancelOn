@@ -833,21 +833,10 @@
 
   if ( $('.card-number-input').length ) {
     $('.card-number-input .card-input').keypress(function (event) {
-      if ( $(window).width() > 767 ) {
-        var inputVal = $(this).val();
-        var characterReg = /^[0-9]{4}$/;
-        $('.card-number-input .card-input').attr('maxlength', 4);
-        if ( characterReg.test(inputVal) ) {
-          var inputs = $(this).closest('form').find(':input');
-          inputs.eq(inputs.index(this) + 1).focus();
-        }
-        isNumber(event);
-      } else {
-        $('.card-number-input .card-input').attr('maxlength', 19);
-        var $this = $(this);
-        if ( (($this.val().length + 1) % 5) === 0 ) {
-          $this.val($this.val() + " ");
-        }
+      $('.card-number-input .card-input').attr('maxlength', 19);
+      var $this = $(this);
+      if ( (($this.val().length + 1) % 5) === 0 ) {
+        $this.val($this.val() + " ");
       }
     });
   }
@@ -959,10 +948,7 @@
     $('#inputPhone').val('123456789');
     $('#inputCardFirstName').val('Test Card Name');
     $('#inputCardLastName').val('Test Card Surname');
-    $('#inputCardNumber1').val('1234');
-    $('#inputCardNumber2').val('5678');
-    $('#inputCardNumber3').val('9012');
-    $('#inputCardNumber4').val('3456');
+    $('#inputCardNumber').val('1234 5678 9876 5432');
     $('#inputCardCVC').val('123');
     $('#inputCardPostal').val('987654');
   });
@@ -1605,21 +1591,10 @@
       }
       if ( $('.card-number-input').length ) {
         $('.card-number-input .card-input').keypress(function (event) {
-          if ( $(window).width() > 767 ) {
-            var inputVal = $(this).val();
-            var characterReg = /^[0-9]{4}$/;
-            $('.card-number-input .card-input').attr('maxlength', 4);
-            if ( characterReg.test(inputVal) ) {
-              var inputs = $(this).closest('form').find(':input');
-              inputs.eq(inputs.index(this) + 1).focus();
-            }
-            isNumber(event);
-          } else {
-            $('.card-number-input .card-input').attr('maxlength', 19);
-            var $this = $(this);
-            if ( (($this.val().length + 1) % 5) === 0 ) {
-              $this.val($this.val() + " ");
-            }
+          $('.card-number-input .card-input').attr('maxlength', 19);
+          var $this = $(this);
+          if ( (($this.val().length + 1) % 5) === 0 ) {
+            $this.val($this.val() + " ");
           }
         });
       }
