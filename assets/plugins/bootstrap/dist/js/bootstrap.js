@@ -814,7 +814,7 @@ if (typeof jQuery === 'undefined') {
       }
 
       $this.attr('aria-expanded', 'false')
-      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget));
+      $parent.removeClass('open opened').trigger($.Event('hidden.bs.dropdown', relatedTarget));
 
     });
   }

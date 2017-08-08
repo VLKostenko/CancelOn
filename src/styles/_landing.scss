@@ -374,6 +374,7 @@
   width: 100%;
   margin-bottom: 15px;
   position: relative;
+  @include clearfix();
   .loading-search-cover {
     .loading-search {
       margin-top: 50%;
@@ -388,6 +389,7 @@
   }
   .search-filter-block {
     position: relative;
+    z-index: 2;
     right: initial;
     height: 60px;
     top: initial;
@@ -397,6 +399,7 @@
     display: block;
     padding-left: 16px;
     padding-right: 45px;
+    margin: 0;
     &:before {
       left: 0;
     }
@@ -406,6 +409,8 @@
     .input-group-addon {
       background: #1a4e63;
       padding-top: 10px;
+      border: 0;
+      color: $main-blue;
     }
     .date-group {
       width: 225px;
@@ -413,13 +418,9 @@
       border-bottom: 0;
       position: relative;
       z-index: 2;
+      float: left;
       &:before {
-        content: '';
-        border-bottom: 2px solid transparent;
-        bottom: 5px;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
+        display: none;
       }
       &.active {
         border-bottom: 0;
@@ -431,7 +432,7 @@
     .datepicker-input,
     .datepicker-output {
       background: #1a4e63;
-      padding: 12px 5px 3px 1px;
+      padding: 7px 5px 3px 1px;
       .date, .day {
         color: #fff;
       }
@@ -442,12 +443,13 @@
       border-bottom: 0;
       position: relative;
       z-index: 2;
+      float: left;
       &:before {
         content: '';
         border-bottom: 2px solid transparent;
         bottom: 5px;
         position: absolute;
-        width: 85%;
+        width: 90%;
         margin: auto;
         left: -20px;
         right: 0;
@@ -459,101 +461,39 @@
           border-color: $main-blue;
         }
       }
-      .down-arrow {
-        height: 15px;
-      }
-      .book-menu {
-        width: 243px;
-        top: 60px;
-        left: -20px;
-        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-        box-shadow: 0 6px 12px rgba(0,0,0,.175);
-        &:before {
-          display: none;
+      &.opened {
+        .book-menu {
+          display: block;
         }
       }
       #peopleCount {
-        padding: 12px 5px 3px 1px;
         .block {
+          padding-top: 7px;
+          .text {
+            color: #fff;
+          }
           .value {
             color: #fff;
           }
-          .col-form-label {
-            color: #fff;
-          }
         }
       }
-      .down-arrow {
-        color: #fff;
-        right: 15px;
+      .book-menu {
+        width: 176%;
+        left: -93%;
       }
     }
-    .currency {
+    .update {
       width: 70px;
       float: right;
-      margin-top: 16px;
-    }
-    .currency-menu {
-      button {
-        background: 0 0;
+      margin-top: 21px;
+      font-family: "Roboto", sans-serif;
+      a {
         color: #fff;
-        border: none;
-        padding-left: 12px!important;
-        box-shadow: none;
+        font-size: 16px;
         &:hover {
-          background: 0 0!important;
-          color: $main-blue;
-          box-shadow: none;
-        }
-        &:before {
-          content: "\f0d6";
-          font: normal normal normal 14px/1 FontAwesome;
-          font-size: inherit;
-          text-rendering: auto;
-          -moz-osx-font-smoothing: grayscale;
-          position: absolute;
-          left: -10px;
-          top: 10px;
+          text-decoration: underline!important;
         }
       }
-      .dropdown-toggle {
-        .filter-option {
-          font-family: "Montserrat", sans-serif;
-          font-size: 14px;
-          display: inline-block;
-          overflow: hidden;
-          width: 100%;
-          text-align: left;
-        }
-        .caret {
-          right: 10px;
-          position: absolute;
-          top: 50%;
-          margin-top: -1px;
-          vertical-align: middle;
-          border-top: 2.5px solid;
-          border-right: 2.5px solid transparent;
-          border-left: 2.5px solid transparent;
-          border-bottom: 0;
-        }
-      }
-      .dropdown-menu {
-        left: 10px;
-        li {
-          position: relative;
-          &:hover {
-            background: $main-blue;
-          }
-          a {
-            background-color: transparent;
-            color: $main-blue;
-          }
-        }
-      }
-    }
-    .currency-menu:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) button {
-      padding: 4px 8px 5px;
-      margin-top: -3px;
     }
   }
   table {

@@ -1058,7 +1058,7 @@
   });
 
   $('#done-book-menu').click(function() {
-    $('.people-count').removeClass('active open');
+    $('.people-count').removeClass('active open opened');
   });
 
   $('.book-menu .room .remove').click(function() {
@@ -1081,7 +1081,6 @@
     $('.book-menu .room:not(.hidden) [data-id="children"]').each(function() {
       childrenVal += parseInt($(this).val(), 10);
     });
-    console.log(childrenVal);
     if ( add === 'add' ) {
       $('#adultsVal').val(adultsVal);
       $('#childrenVal').val(childrenVal);
@@ -1097,6 +1096,17 @@
     $('#peopleCount #adults').html($('#adultsVal').val());
     $('#peopleCount #children').html($('#childrenVal').val());
   }
+
+  $('#people-count-open').click(function(e) {
+    e.preventDefault();
+    var peopleCount = $('.booking-table .search-filter-block .people-count');
+    var bookMenu = $('.booking-table .search-filter-block .people-count .book-menu');
+    if ( bookMenu.is(':visible') ) {
+      peopleCount.removeClass('active opened');
+    } else {
+      peopleCount.addClass('active opened');
+    }
+  });
 
   /**
    * ------------------------------------------------------------------------------------------------------

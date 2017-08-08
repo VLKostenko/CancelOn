@@ -12635,6 +12635,15 @@ aside.show-on-map .panel-group .panel.panel-default {
   position: relative;
 }
 
+.booking-table:before, .booking-table:after {
+  content: '';
+  display: table;
+}
+
+.booking-table:after {
+  clear: both;
+}
+
 .booking-table .loading-search-cover .loading-search {
   margin-top: 50%;
 }
@@ -12645,6 +12654,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .booking-table .search-filter-block {
   position: relative;
+  z-index: 2;
   right: initial;
   height: 60px;
   top: initial;
@@ -12654,6 +12664,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   display: block;
   padding-left: 16px;
   padding-right: 45px;
+  margin: 0;
 }
 
 .booking-table .search-filter-block:before {
@@ -12667,6 +12678,8 @@ aside.show-on-map .panel-group .panel.panel-default {
 .booking-table .search-filter-block .input-group-addon {
   background: #1a4e63;
   padding-top: 10px;
+  border: 0;
+  color: #00c2ff;
 }
 
 .booking-table .search-filter-block .date-group {
@@ -12675,15 +12688,11 @@ aside.show-on-map .panel-group .panel.panel-default {
   border-bottom: 0;
   position: relative;
   z-index: 2;
+  float: left;
 }
 
 .booking-table .search-filter-block .date-group:before {
-  content: '';
-  border-bottom: 2px solid transparent;
-  bottom: 5px;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
+  display: none;
 }
 
 .booking-table .search-filter-block .date-group.active {
@@ -12697,7 +12706,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .booking-table .search-filter-block .datepicker-input,
 .booking-table .search-filter-block .datepicker-output {
   background: #1a4e63;
-  padding: 12px 5px 3px 1px;
+  padding: 7px 5px 3px 1px;
 }
 
 .booking-table .search-filter-block .datepicker-input .date, .booking-table .search-filter-block .datepicker-input .day,
@@ -12712,6 +12721,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   border-bottom: 0;
   position: relative;
   z-index: 2;
+  float: left;
 }
 
 .booking-table .search-filter-block .people-count:before {
@@ -12719,7 +12729,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   border-bottom: 2px solid transparent;
   bottom: 5px;
   position: absolute;
-  width: 85%;
+  width: 90%;
   margin: auto;
   left: -20px;
   right: 0;
@@ -12734,110 +12744,41 @@ aside.show-on-map .panel-group .panel.panel-default {
   border-color: #00c2ff;
 }
 
-.booking-table .search-filter-block .people-count .down-arrow {
-  height: 15px;
+.booking-table .search-filter-block .people-count.opened .book-menu {
+  display: block;
 }
 
-.booking-table .search-filter-block .people-count .book-menu {
-  width: 243px;
-  top: 60px;
-  left: -20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+.booking-table .search-filter-block .people-count #peopleCount .block {
+  padding-top: 7px;
 }
 
-.booking-table .search-filter-block .people-count .book-menu:before {
-  display: none;
-}
-
-.booking-table .search-filter-block .people-count #peopleCount {
-  padding: 12px 5px 3px 1px;
+.booking-table .search-filter-block .people-count #peopleCount .block .text {
+  color: #fff;
 }
 
 .booking-table .search-filter-block .people-count #peopleCount .block .value {
   color: #fff;
 }
 
-.booking-table .search-filter-block .people-count #peopleCount .block .col-form-label {
-  color: #fff;
+.booking-table .search-filter-block .people-count .book-menu {
+  width: 176%;
+  left: -93%;
 }
 
-.booking-table .search-filter-block .people-count .down-arrow {
-  color: #fff;
-  right: 15px;
-}
-
-.booking-table .search-filter-block .currency {
+.booking-table .search-filter-block .update {
   width: 70px;
   float: right;
-  margin-top: 16px;
+  margin-top: 21px;
+  font-family: "Roboto", sans-serif;
 }
 
-.booking-table .search-filter-block .currency-menu button {
-  background: 0 0;
+.booking-table .search-filter-block .update a {
   color: #fff;
-  border: none;
-  padding-left: 12px !important;
-  box-shadow: none;
+  font-size: 16px;
 }
 
-.booking-table .search-filter-block .currency-menu button:hover {
-  background: 0 0 !important;
-  color: #00c2ff;
-  box-shadow: none;
-}
-
-.booking-table .search-filter-block .currency-menu button:before {
-  content: "\f0d6";
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -moz-osx-font-smoothing: grayscale;
-  position: absolute;
-  left: -10px;
-  top: 10px;
-}
-
-.booking-table .search-filter-block .currency-menu .dropdown-toggle .filter-option {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  display: inline-block;
-  overflow: hidden;
-  width: 100%;
-  text-align: left;
-}
-
-.booking-table .search-filter-block .currency-menu .dropdown-toggle .caret {
-  right: 10px;
-  position: absolute;
-  top: 50%;
-  margin-top: -1px;
-  vertical-align: middle;
-  border-top: 2.5px solid;
-  border-right: 2.5px solid transparent;
-  border-left: 2.5px solid transparent;
-  border-bottom: 0;
-}
-
-.booking-table .search-filter-block .currency-menu .dropdown-menu {
-  left: 10px;
-}
-
-.booking-table .search-filter-block .currency-menu .dropdown-menu li {
-  position: relative;
-}
-
-.booking-table .search-filter-block .currency-menu .dropdown-menu li:hover {
-  background: #00c2ff;
-}
-
-.booking-table .search-filter-block .currency-menu .dropdown-menu li a {
-  background-color: transparent;
-  color: #00c2ff;
-}
-
-.booking-table .search-filter-block .currency-menu:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) button {
-  padding: 4px 8px 5px;
-  margin-top: -3px;
+.booking-table .search-filter-block .update a:hover {
+  text-decoration: underline !important;
 }
 
 .booking-table table {
