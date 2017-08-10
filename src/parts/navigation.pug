@@ -37,11 +37,12 @@ nav.navbar.navbar-default.mb-0
 				if ( page.name !== 'payment' && page.name !== 'details-item' )
 					.filter-icon.visible-xs
 						i.fa.fa-sliders(aria-hidden='true')
-				if ( page.name == 'landing' )
+				if ( page.name === 'landing' )
 					p.navbar-text-landing.small-text.font-weight-200.visible-lg.visible-md
 						| As seen on
 					a(href='javascript:void(0)').secondary-logo.hidden-xs
-						img(src='./images/trivago-logo.png', alt='trivago')
+						//img(src='./images/trivago-logo.png', alt='trivago')
+						img(src='./images/booking-com.png', alt='booking')
 				else
 					p.navbar-text.small-text.font-weight-200.visible-lg
 						i.fa.fa-info-circle(aria-hidden='true')

@@ -23,10 +23,10 @@
 @media screen and (max-width: 1440px) {
   nav {
     .navbar-header {
-      width: 42%;
+      width: 52%;
     }
     .navbar-menu {
-      width: 58%;
+      width: 48%;
     }
   }
 }
@@ -43,13 +43,13 @@
 @media screen and (max-width: 1405px) {
   .navbar-default {
     .navbar-text {
-      margin-top: -8px;
-      margin-bottom: 10px;
+      //margin-top: -8px;
+      //margin-bottom: 10px;
     }
   }
   nav {
     .navbar-header {
-      width: 40%;
+      width: 50%;
     }
     .navbar-menu {
       padding: 10px 0;
@@ -64,10 +64,10 @@
   }
   nav {
     .navbar-header {
-      width: 30%;
+      width: 47%;
     }
     .navbar-menu {
-      width: 69%;
+      width: 53%;
       padding: 10px 0;
     }
   }
@@ -107,6 +107,11 @@
   .load-icon {
     width: 145px;
     right: -10px;
+  }
+}
+@media screen and (max-width: 1235px) {
+  .navbar-text {
+    display: none!important;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {

@@ -204,25 +204,23 @@ button[type="button"].btn:focus {
   float: left;
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-  .navbar-default .navbar-text-landing {
-    clear: left;
-    margin-top: -12px;
-    margin-bottom: 0;
-  }
-}
-
 .navbar-default .secondary-logo {
   max-width: 125px;
+  height: 42px;
   float: left;
   margin-top: 36px;
   margin-bottom: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .navbar-default .secondary-logo {
     max-width: 120px;
-    margin-top: -22px;
     margin-bottom: 0;
   }
 }
@@ -243,6 +241,7 @@ button[type="button"].btn:focus {
 
 .navbar-right {
   margin-right: -10px;
+  clear: both;
 }
 
 .dropdown-item {
@@ -17297,10 +17296,10 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 @media screen and (max-width: 1440px) {
   nav .navbar-header {
-    width: 42%;
+    width: 52%;
   }
   nav .navbar-menu {
-    width: 58%;
+    width: 48%;
   }
 }
 
@@ -17312,12 +17311,8 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 @media screen and (max-width: 1405px) {
-  .navbar-default .navbar-text {
-    margin-top: -8px;
-    margin-bottom: 10px;
-  }
   nav .navbar-header {
-    width: 40%;
+    width: 50%;
   }
   nav .navbar-menu {
     padding: 10px 0;
@@ -17331,10 +17326,10 @@ aside.show-on-map .panel-group .panel.panel-default {
     padding-right: 15px;
   }
   nav .navbar-header {
-    width: 30%;
+    width: 47%;
   }
   nav .navbar-menu {
-    width: 69%;
+    width: 53%;
     padding: 10px 0;
   }
   .navbar-default .navbar-nav li a {
@@ -17369,6 +17364,12 @@ aside.show-on-map .panel-group .panel.panel-default {
   .load-icon {
     width: 145px;
     right: -10px;
+  }
+}
+
+@media screen and (max-width: 1235px) {
+  .navbar-text {
+    display: none !important;
   }
 }
 
