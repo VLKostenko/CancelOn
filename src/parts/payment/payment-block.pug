@@ -597,7 +597,7 @@ form(data-toggle='validator', role='form')
                   span.danger *
                input#inputEmailConfirm.form-control(, type='email', required, data-match='#inputEmail', data-error='This field is required', data-match-error="Email does not match")
                .help-block.with-errors
-            .col-sm-12.form-group
+            .col-sm-6.form-group
                label.control-label(for='inputCountry') Country
                   span.danger *
                select#inputCountry.selectpicker.form-control.list-of-countries(name='Country')
@@ -609,7 +609,7 @@ form(data-toggle='validator', role='form')
                      - }
                   - }
                a.find-my-location(href='javascript:void(0)') Find my location
-            .col-sm-12.form-group
+            .col-sm-6.form-group
                label.control-label(for='inputPhone') Phone
                   span.danger *
                .phone-number-block.clearfix
@@ -742,7 +742,7 @@ form(data-toggle='validator', role='form')
       .wrapper
          .submit-wrapper
             .submit
-               - if ( page.name == 'payment' ) {
+               - if ( page.name === 'payment' ) {
                   input(type='submit', value='Reservation')
                - } else {
                   input.visible-lg(type='submit', value='Book This Room For $2668.86')
@@ -759,6 +759,8 @@ form(data-toggle='validator', role='form')
             |  And
             a(href='javascript:void(0)')  User Agreement.
          p 2) Are At Least 18 Years Old.
+         p 3)
+            a(href='javascript:void(0)')  Cancellation policy
 .step.info-step
    .step-header
       .step-number
@@ -767,7 +769,7 @@ form(data-toggle='validator', role='form')
          .step-title
             span Important Information
    .step-body
-      - if ( page.name == 'payment' ) {
+      - if ( page.name === 'payment' ) {
          .popup.green.mt-30.mb-30.ml-xs-0.mr-xs-0
             .popup_title.mb-0.text-center-xs
                span.fs-xl.fs-xs-l Successful! Your order is complete!
