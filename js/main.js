@@ -194,6 +194,7 @@
     $('.list-btn').addClass('active');
     $('.grid-btn').removeClass('active');
     $('.grid').addClass('list-view');
+    $('.grid .grid-item.not-available').removeClass('not-available-block-view').addClass('not-available-list-view');
     AOS.refresh();
   }
 
@@ -201,6 +202,7 @@
     $('.grid-btn').addClass('active');
     $('.list-btn').removeClass('active');
     $('.grid').removeClass('list-view');
+    $('.grid .grid-item.not-available').removeClass('not-available-list-view').addClass('not-available-block-view');
     AOS.refresh();
   }
 
@@ -1091,6 +1093,16 @@
       peopleCount.removeClass('active opened');
     } else {
       peopleCount.addClass('active opened');
+    }
+  });
+
+  $(document).on('click', '.list-of-countries ul.dropdown-menu li a', function(e) {
+    e.preventDefault();
+    console.log($(this).children('.text').text());
+    if ( $(this).children('.text').text() === 'United States' ) {
+      $('.states-usa').removeClass('hidden');
+    } else {
+      $('.states-usa').addClass('hidden');
     }
   });
 

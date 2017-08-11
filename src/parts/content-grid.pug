@@ -1,5 +1,5 @@
 .grid.list-view.noplaceholder.placeholder-show
-   .grid-item(data-aos='fade-up')
+   .grid-item.not-available.not-available-list-view(data-aos='fade-up')
       span.ribbon.top Top Deal
       .preview
          a(href='./landing.html')
@@ -50,6 +50,14 @@
                   .rate(data-rate='4.54')
                a.reviews(href='javascript:void(0)') 142 Reviews
             .right-block.center-block
+               .not-available-block
+                  span.icon
+                     img(src='./images/icons/info-button.svg')
+                  span.text
+                     p
+                        b You missed it!
+                     |
+                     | Your dates are popular - we've run out of rooms at this property! Check out more below.
                a.views(href='./landing.html')
                   span.right View
                   span.left
@@ -80,6 +88,12 @@
             p.watching-now.pull-right
                span 5
                |  People Looking Right Now
+      .not-available-list
+         span.icon
+            img(src='./images/icons/info-button.svg')
+         span.text
+            b You missed it!
+            |  Your dates are popular - we've run out of rooms at this property! Check out more below.
    .grid-item(data-aos='fade-up')
       span.ribbon.top.hidden Top Deal
       .preview

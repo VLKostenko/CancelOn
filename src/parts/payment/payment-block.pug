@@ -561,6 +561,186 @@
    code: "+263",
    name: "Zimbabwe"
    }]
+   var statesList = [{
+   "name": "Alabama",
+   "abbreviation": "AL"
+   }, {
+   "name": "Alaska",
+   "abbreviation": "AK"
+   }, {
+   "name": "American Samoa",
+   "abbreviation": "AS" },
+   {
+   "name": "Arizona",
+   "abbreviation": "AZ"
+   }, {
+   "name": "Arkansas",
+   "abbreviation": "AR"
+   }, {
+   "name": "California",
+   "abbreviation": "CA"
+   }, {
+   "name": "Colorado",
+   "abbreviation": "CO"
+   }, {
+   "name": "Connecticut",
+   "abbreviation": "CT"
+   }, {
+   "name": "Delaware",
+   "abbreviation": "DE"
+   }, {
+   "name": "District Of Columbia",
+   "abbreviation": "DC"
+   }, {
+   "name": "Federated States Of Micronesia",
+   "abbreviation": "FM"
+   }, {
+   "name": "Florida",
+   "abbreviation": "FL"
+   }, {
+   "name": "Georgia",
+   "abbreviation": "GA"
+   }, {
+   "name": "Guam",
+   "abbreviation": "GU"
+   }, {
+   "name": "Hawaii",
+   "abbreviation": "HI"
+   }, {
+   "name": "Idaho",
+   "abbreviation": "ID"
+   }, {
+   "name": "Illinois",
+   "abbreviation": "IL"
+   }, {
+   "name": "Indiana",
+   "abbreviation": "IN"
+   }, {
+   "name": "Iowa",
+   "abbreviation": "IA"
+   }, {
+   "name": "Kansas",
+   "abbreviation": "KS"
+   }, {
+   "name": "Kentucky",
+   "abbreviation": "KY"
+   }, {
+   "name": "Louisiana",
+   "abbreviation": "LA"
+   }, {
+   "name": "Maine",
+   "abbreviation": "ME"
+   }, {
+   "name": "Marshall Islands",
+   "abbreviation": "MH"
+   }, {
+   "name": "Maryland",
+   "abbreviation": "MD"
+   }, {
+   "name": "Massachusetts",
+   "abbreviation": "MA"
+   }, {
+   "name": "Michigan",
+   "abbreviation": "MI"
+   }, {
+   "name": "Minnesota",
+   "abbreviation": "MN"
+   }, {
+   "name": "Mississippi",
+   "abbreviation": "MS"
+   }, {
+   "name": "Missouri",
+   "abbreviation": "MO"
+   }, {
+   "name": "Montana",
+   "abbreviation": "MT"
+   }, {
+   "name": "Nebraska",
+   "abbreviation": "NE"
+   }, {
+   "name": "Nevada",
+   "abbreviation": "NV"
+   }, {
+   "name": "New Hampshire",
+   "abbreviation": "NH"
+   }, {
+   "name": "New Jersey",
+   "abbreviation": "NJ"
+   }, {
+   "name": "New Mexico",
+   "abbreviation": "NM"
+   }, {
+   "name": "New York",
+   "abbreviation": "NY"
+   }, {
+   "name": "North Carolina",
+   "abbreviation": "NC"
+   }, {
+   "name": "North Dakota",
+   "abbreviation": "ND"
+   }, {
+   "name": "Northern Mariana Islands",
+   "abbreviation": "MP"
+   }, {
+   "name": "Ohio",
+   "abbreviation": "OH"
+   }, {
+   "name": "Oklahoma",
+   "abbreviation": "OK"
+   },
+   {
+   "name": "Oregon",
+   "abbreviation": "OR"
+   }, {
+   "name": "Palau",
+   "abbreviation": "PW"
+   }, {
+   "name": "Pennsylvania",
+   "abbreviation": "PA"
+   }, {
+   "name": "Puerto Rico",
+   "abbreviation": "PR"
+   }, {
+   "name": "Rhode Island",
+   "abbreviation": "RI"
+   }, {
+   "name": "South Carolina",
+   "abbreviation": "SC"
+   }, {
+   "name": "South Dakota",
+   "abbreviation": "SD"
+   }, {
+   "name": "Tennessee",
+   "abbreviation": "TN"
+   }, {
+   "name": "Texas",
+   "abbreviation": "TX"
+   }, {
+   "name": "Utah",
+   "abbreviation": "UT"
+   }, {
+   "name": "Vermont",
+   "abbreviation": "VT"
+   }, {
+   "name": "Virgin Islands",
+   "abbreviation": "VI"
+   }, {
+   "name": "Virginia",
+   "abbreviation": "VA"
+   }, {
+   "name": "Washington",
+   "abbreviation": "WA"
+   }, {
+   "name": "West Virginia",
+   "abbreviation": "WV"
+   }, {
+   "name": "Wisconsin",
+   "abbreviation": "WI"
+   }, {
+   "name": "Wyoming",
+   "abbreviation": "WY"
+   }]
+
 .loading-form-cover
    .loading-form
 form(data-toggle='validator', role='form')
@@ -605,7 +785,7 @@ form(data-toggle='validator', role='form')
                      - if ( i == 9 ) {
                         option(value=countriesList[i].name, selected='selected')=countriesList[i].name
                      - } else {
-                        option(value=countriesList[i].name)=countriesList[i].name
+                        option#jopa(value=countriesList[i].name)=countriesList[i].name
                      - }
                   - }
                a.find-my-location(href='javascript:void(0)') Find my location
@@ -622,6 +802,14 @@ form(data-toggle='validator', role='form')
                         - }
                      - }
                   input#inputPhone.form-control(name='Phone Number', type='text', required, data-error='This field is required')
+            .col-sm-6.form-group.states-usa.hidden
+               label.control-label(for='inputPhone') State
+                  span.danger *
+               .states-block.clearfix
+                  select#inputState.selectpicker.form-control.list-of-states(name='State')
+                     - for ( var i = 0; i < statesList.length; i++ ) {
+                        option(value=statesList[i].name)=statesList[i].name
+                     - }
       .step-footer
          span (We won’t call you for marketing purposes)
    .step.second-step
@@ -644,7 +832,7 @@ form(data-toggle='validator', role='form')
                   span.radio
                   span.text Paypal
          .tab-content.clearfix
-            #credit-card.tab-pane.credit-card-info.active
+            .tab-pane.credit-card-info.active
                .row
                   .col-sm-6.form-group.has-feedback
                      label.control-label(for='inputCardFirstName') First Name
@@ -733,11 +921,11 @@ form(data-toggle='validator', role='form')
                               img(src='images/cvv_num_img.png', alt='cvv help')
                               span.text 3 digit security code
 
-            #other-payment.tab-pane.other-payment
-               .row
-                  .col-sm-3
-                     a(href='javascript:void(0)')
-                        img(src='./images/payment-method/paypal.png', alt='paypal')
+            //#other-payment.tab-pane.other-payment
+            //   .row
+            //      .col-sm-3
+            //         a(href='javascript:void(0)')
+            //            img(src='./images/payment-method/paypal.png', alt='paypal')
    .step.submit-step
       .wrapper
          .submit-wrapper

@@ -23,10 +23,10 @@
 @media screen and (max-width: 1440px) {
   nav {
     .navbar-header {
-      width: 52%;
+      width: 49%;
     }
     .navbar-menu {
-      width: 48%;
+      width: 51%;
     }
   }
 }
@@ -48,9 +48,9 @@
     }
   }
   nav {
-    .navbar-header {
-      width: 50%;
-    }
+    //.navbar-header {
+    //  width: 50%;
+    //}
     .navbar-menu {
       padding: 10px 0;
       padding-right: 15px;
@@ -109,12 +109,23 @@
     right: -10px;
   }
 }
-@media screen and (max-width: 1235px) {
+@media screen and (max-width: 1260px) {
   .navbar-text {
     display: none!important;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .navbar-right {
+    margin-right: 0;
+  }
+  nav {
+    .navbar-menu {
+      width: 54%;
+    }
+    .navbar-header {
+      width: 46%;
+    }
+  }
   .content-wrapper {
     @include calc(width, '70% - 15px');
   }
@@ -195,6 +206,9 @@
     }
   }
   .grid-item {
+    &.not-available-list-view .views {
+      bottom: 149px!important;
+    }
     &:hover {
       background: #fff;
     }
@@ -312,6 +326,9 @@
   }
   .navbar-text {
     padding: 5px 0;
+  }
+  .main-search-wrapper {
+    background: #f3f4f7!important;
   }
   nav {
     .navbar-menu {
@@ -496,14 +513,12 @@
   .hidden-sidebar-filter .grid-item .warning {
     top: 32%;
   }
-  .people-count {
-    width: 190px;
+  .search-group {
+    z-index: 3;
     .book-menu {
-      width: 190px;
+      width: 190%;
+      left: -90%;
     }
-  }
-  .search-group .input-search {
-    padding-right: 580px;
   }
   .avail {
     margin-left: -20px;
@@ -1085,6 +1100,7 @@
   }
   .input-search-btn {
     right: 6px;
+    position: absolute;
   }
   .search-group {
     border-bottom: 0;
@@ -1124,10 +1140,12 @@
     left: 0;
     right: 0;
     display: block;
-    margin-right: 5px;
-    margin-top: 112px;
+    //margin-right: 5px;
+    //margin-top: 112px;
     height: 90px;
     background: #1d4f62;
+    margin: auto;
+    width: 105%;
     .input-group-addon,
     .form-control {
       background: #1d4f62;
@@ -1195,6 +1213,15 @@
   .search-group {
     .input-search {
       padding-right: 115px;
+      &::-webkit-input-placeholder {
+        font-size: 20px;
+      }
+      &:-ms-input-placeholder {
+        font-size: 20px;
+      }
+      &::-moz-placeholder {
+        font-size: 20px!important;
+      }
     }
   }
   .date-picker-wrapper {
@@ -1693,6 +1720,28 @@
       height: 90px;
       background: #1d4f62;
     }
+    &:before,
+    &:after {
+      top: 0;
+      bottom: 0;
+    }
+    .date-group {
+      &:before {
+        background: #fff;
+      }
+    }
+    .people-count {
+      margin: auto;
+      .book-menu {
+        width: 545px;
+        padding: 12px 20px 0;
+      }
+      .block {
+        .text {
+          color: #fff;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 767px) {
@@ -1735,15 +1784,18 @@
     }
   }
   .search-filter-block {
-    margin-top: 80px;
     height: initial;
     margin-left: -15px;
     margin-right: -15px;
     padding: 0;
+    width: 105%;
     .date-group {
       width: 100%;
       height: 60px;
       background: #1a4e63;
+      &:before {
+        background: #fff;
+      }
       .form-control {
         margin-top: 8px;
       }
@@ -1752,6 +1804,12 @@
       width: 100%;
       height: 60px;
       background: #1e566d;
+      text-align: center;
+      .block {
+        .text {
+          color: #fff;
+        }
+      }
       .down-arrow {
         right: 15px;
       }
@@ -1763,6 +1821,9 @@
         height: 35px !important;
       }
       .book-menu {
+        width: 320px;
+        left: 0;
+        padding: 12px 20px 0;
         .room {
           padding: 15px 10px;
           .title, .adults, .children {
@@ -1995,18 +2056,20 @@
       font-size: 24px;
       border-width: 2px;
       padding-right: 5px;
-      padding-left: 5px;
+      padding-left: 15px;
+      width: 100%;
+      margin-bottom: 0;
       &.icon {
         background-position: 6px 30px;
       }
       &::-webkit-input-placeholder {
-        font-size: 24px;
+        font-size: 18px;
       }
       &:-ms-input-placeholder {
-        font-size: 24px;
+        font-size: 18px;
       }
       &::-moz-placeholder {
-        font-size: 24px;
+        font-size: 18px!important;
       }
     }
   }
@@ -2365,6 +2428,7 @@
           width: 320px;
           padding: 0;
           left: 0;
+          padding: 12px 20px 0;
           &:after {
             content: '';
             width: 0;
