@@ -11858,6 +11858,26 @@ aside.show-on-map .panel-group .panel.panel-default {
   background: #fff;
 }
 
+.search-filter-block .input-group .datepicker-book-rooms .datepicker-input,
+.search-filter-block .input-group .datepicker-book-rooms .datepicker-output {
+  background: 0 0;
+  border: 1px solid #a6a6a6;
+  width: initial;
+  min-width: 130px;
+  height: initial;
+  line-height: initial;
+  padding: 1px 0;
+  margin-right: 5px;
+  border-radius: 5px !important;
+}
+
+.search-filter-block .input-group .datepicker-book-rooms .datepicker-input .date,
+.search-filter-block .input-group .datepicker-book-rooms .datepicker-input .day,
+.search-filter-block .input-group .datepicker-book-rooms .datepicker-output .date,
+.search-filter-block .input-group .datepicker-book-rooms .datepicker-output .day {
+  color: #000;
+}
+
 .search-filter-block .input-group .form-control {
   border-bottom: 0;
   text-align: center;
@@ -11905,6 +11925,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .date-group {
   width: 100%;
   border-bottom: 2px solid transparent;
+  pointer-events: none;
 }
 
 .date-group.active {
@@ -11985,12 +12006,24 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .people-count .book-menu .room {
-  display: block;
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   padding: 20px 30px;
   border-bottom: 1px solid #ccd8df;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.people-count .book-menu .room:before, .people-count .book-menu .room:after {
+  display: none;
 }
 
 .people-count .book-menu .room:first-child:last-child {
@@ -12062,6 +12095,12 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .people-count .book-menu .room .children-age .child select {
   width: 100%;
+}
+
+.people-count .book-menu .book-header {
+  border-bottom: 1px solid #ccd8df;
+  display: block;
+  padding: 20px 30px;
 }
 
 .people-count .book-menu .book-footer {
@@ -12889,12 +12928,14 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .booking-table .search-filter-block .update a {
+  padding: 8px 24px;
   color: #fff;
+  background: #00c2ff;
   font-size: 16px;
 }
 
 .booking-table .search-filter-block .update a:hover {
-  text-decoration: underline !important;
+  background: #0cc6ff;
 }
 
 .booking-table table {

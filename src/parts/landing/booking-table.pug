@@ -27,10 +27,22 @@
                span.value#children 0
                span.text  Children
          span.dropdown-menu.book-menu(aria-labelledby='peopleCount')
+            span.book-header.clearfix
+               select#roomsCount(name='Rooms Count')
+                  option(value='1') 1 Room
+                  option(value='2') 2 Rooms
+                  option(value='3') 3 Rooms
+                  option(value='4') 4 Rooms
+               span.datepicker-book-rooms
+                  span.form-control.datepicker-input
+                     span.date May, 6th
+                     span.day Saturday
+                  span.form-control.datepicker-output
+                     span.date Jun, 14th
+                     span.day Wednesday
             span.room.clearfix
                span.title Room
                   span.number  1
-                  a.remove.hidden(href='javascript:void(0)') Remove
                span.adults
                   label.col-form-label(for='quant[1-1]') Adults
                   span.input-group
@@ -92,7 +104,6 @@
             span.room.clearfix.hidden
                span.title Room
                   span.number  2
-                  a.remove(href='javascript:void(0)') Remove
                span.adults
                   label.col-form-label(for='quant[2-1]') Adults
                   span.input-group
@@ -154,7 +165,6 @@
             span.room.clearfix.hidden
                span.title Room
                   span.number  3
-                  a.remove(href='javascript:void(0)') Remove
                span.adults
                   label.col-form-label(for='quant[3-1]') Adults
                   span.input-group
@@ -216,7 +226,6 @@
             span.room.clearfix.hidden
                span.title Room
                   span.number  4
-                  a.remove(href='javascript:void(0)') Remove
                span.adults
                   label.col-form-label(for='quant[4-1]') Adults
                   span.input-group
@@ -276,7 +285,7 @@
                         - }
                         - }
             span.book-footer.clearfix
-               a#add-book-room(href='javascript:void(0)') Add Room
+               //a#add-book-room(href='javascript:void(0)') Add Room
                a#done-book-menu(href='javascript:void(0)') Done
                input#roomsVal(type='hidden' value='1')
                input#adultsVal(type='hidden' value='1')

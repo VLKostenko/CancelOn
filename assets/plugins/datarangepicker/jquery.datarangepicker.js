@@ -1842,6 +1842,13 @@
           opt.setValue.call(selfDom.innerHTML += " <span class='day'>" + dateRangeStartDay + "</span>");
           opt.setValue.call(outputDom.get(0).innerHTML = "<span class='date'>" + dateRangeEnd + "</span>");
           opt.setValue.call(outputDom.get(0).innerHTML += " <span class='day'>" + dateRangeEndDay + "</span>");
+
+          var selfDomAddon = $('.datepicker-book-rooms .datepicker-input').get(0);
+          var outputDomAddon = $('.datepicker-book-rooms .datepicker-output').get(0);
+          opt.setValue.call(selfDomAddon.innerHTML = "<span class='date'>" + dateRangeStart + "</span>");
+          opt.setValue.call(selfDomAddon.innerHTML += " <span class='day'>" + dateRangeStartDay + "</span>");
+          opt.setValue.call(outputDomAddon.innerHTML = "<span class='date'>" + dateRangeEnd + "</span>");
+          opt.setValue.call(outputDomAddon.innerHTML += " <span class='day'>" + dateRangeEndDay + "</span>");
         }
         if (initiated && !silent) {
           $(self).trigger('datepicker-change', {

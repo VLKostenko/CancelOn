@@ -1029,19 +1029,41 @@
     }
   });
 
-  var addedRooms = 1;
-  $('#add-book-room').click(function() {
-    $('.book-menu .room:first-child .remove').removeClass('hidden');
-    addedRooms += 1;
-    if ( $('.book-menu .room').eq(-1).hasClass('hidden') ) {
-      $('.book-menu .room:not(.hidden)').next().removeClass('hidden');
-      if ( $('.book-menu .room:not(.hidden)').next().hasClass('book-footer') ) {
-        $('#add-book-room').hide();
-      } else {
-        $('#add-book-room').show();
-      }
+  // add rooms on "add" button
+  // var addedRooms = 1;
+  // $('#add-book-room').click(function() {
+  //   $('.book-menu .room:first-child .remove').removeClass('hidden');
+  //   addedRooms += 1;
+  //   if ( $('.book-menu .room').eq(-1).hasClass('hidden') ) {
+  //     $('.book-menu .room:not(.hidden)').next().removeClass('hidden');
+  //     if ( $('.book-menu .room:not(.hidden)').next().hasClass('book-footer') ) {
+  //       $('#add-book-room').hide();
+  //     } else {
+  //       $('#add-book-room').show();
+  //     }
+  //   }
+  //   $('#roomsVal').val(addedRooms);
+  //   countBookedVals('add');
+  // });
+
+  $('#roomsCount').on('change', function() {
+    var room = $('.search-filter-block .book-menu .room');
+    room.addClass('hidden');
+    if ( $(this).val() === '1' ) {
+      room.eq(0).removeClass('hidden');
+    } else if ( $(this).val() === '2' ) {
+      room.eq(0).removeClass('hidden');
+      room.eq(1).removeClass('hidden');
+    } else if ( $(this).val() === '3' ) {
+      room.eq(0).removeClass('hidden');
+      room.eq(1).removeClass('hidden');
+      room.eq(2).removeClass('hidden');
+    } else if ( $(this).val() === '4' ) {
+      room.eq(0).removeClass('hidden');
+      room.eq(1).removeClass('hidden');
+      room.eq(2).removeClass('hidden');
+      room.eq(3).removeClass('hidden');
     }
-    $('#roomsVal').val(addedRooms);
     countBookedVals('add');
   });
 
@@ -1049,16 +1071,16 @@
     $('.people-count').removeClass('active open opened');
   });
 
-  $('.book-menu .room .remove').click(function() {
-    addedRooms -= 1;
-    $('.book-menu .room:not(.hidden):last').addClass('hidden');
-    $('#add-book-room').show();
-    if ( $('.book-menu .room:first-child').next().hasClass('hidden') ) {
-      $('.book-menu .room:first-child .remove').addClass('hidden');
-    }
-    $('#roomsVal').val(addedRooms);
-    countBookedVals();
-  });
+  // $('.book-menu .room .remove').click(function() {
+  //   addedRooms -= 1;
+  //   $('.book-menu .room:not(.hidden):last').addClass('hidden');
+  //   $('#add-book-room').show();
+  //   if ( $('.book-menu .room:first-child').next().hasClass('hidden') ) {
+  //     $('.book-menu .room:first-child .remove').addClass('hidden');
+  //   }
+  //   $('#roomsVal').val(addedRooms);
+  //   countBookedVals();
+  // });
 
   function writeBookedVals(add) {
     var adultsVal = 0;
@@ -1193,6 +1215,41 @@
       }
     });
   }
+
+  // if ( $('.datepicker-book-rooms').length ) {
+  //   $('.datepicker-book-rooms').dateRangePicker({
+  //     startOfWeek: 'sunday',
+  //     separator: '',
+  //     singleMonth: false,
+  //     showTopbar: false,
+  //     format: 'DD MMM dddd',
+  //     autoClose: false,
+  //     time: {
+  //       enabled: true
+  //     },
+  //     extraClass: 'book-room-date-datepicker',
+  //     defaultTime: moment().startOf('day').toDate(),
+  //     defaultEndTime: moment().endOf('day').toDate(),
+  //     language: 'en',
+  //     applyBtnClass: 'save-time',
+  //     customOpenAnimation: function(cb) {
+  //       $(this).fadeIn(300, cb);
+  //     },
+  //     customCloseAnimation: function(cb) {
+  //       $(this).fadeOut(300, cb);
+  //     },
+  //     getValue: function() {
+  //       if ($('#dateRangeRooms-start').val() && $('#dateRangeRooms-end').val() )
+  //         return $('#dateRangeRooms-start').val() + ' ' + $('#dateRangeRooms-end').val();
+  //       else
+  //         return '';
+  //     },
+  //     setValue: function(s, s1, s2) {
+  //       $('#dateRangeRooms-start').val(s1);
+  //       $('#dateRangeRooms-end').val(s2);
+  //     }
+  //   });
+  // }
 
   $('.selectpicker').selectpicker();
 
