@@ -1251,7 +1251,31 @@
   //   });
   // }
 
-  $('.selectpicker').selectpicker();
+  // $('.selectpicker').selectpicker();
+
+  $('.selectpicker').selectpicker({
+    container: 'body',
+    dropupAuto: false
+  });
+
+  // make selectpicker works inside dropdown-menu
+  $('.dropdown-menu').on('click', function(event) {
+    event.stopPropagation();
+    $('.bootstrap-select.open').removeClass('open');
+  }).find('.btn-group').on('click', function(event) {
+    event.stopPropagation();
+  });
+
+  $('body').on('click', function(event) {
+    var target = $(event.target);
+    if (target.parents('.bootstrap-select').length) {
+      event.stopPropagation();
+      $('.bootstrap-select.open').removeClass('open');
+    }
+    if ( $('.search-filter-block .people-count').hasClass('active') ) {
+      $(this).find('.bootstrap-select.open').removeClass('open');
+    }
+  });
 
   $("#slider-range").slider({
     range: true,

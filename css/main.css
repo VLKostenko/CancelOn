@@ -11858,10 +11858,34 @@ aside.show-on-map .panel-group .panel.panel-default {
   background: #fff;
 }
 
+.search-filter-block .input-group .datepicker-book-rooms {
+  float: left;
+  padding: 8px 0;
+  border: 1px solid #d4dee4;
+  border-radius: 2px;
+  position: relative;
+}
+
+.search-filter-block .input-group .datepicker-book-rooms:before {
+  content: '...';
+  height: 4px;
+  width: 25px;
+  color: #000;
+  font-size: 40px;
+  background: transparent;
+  border-radius: 100px;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: -20px;
+  bottom: 0;
+  margin: auto;
+}
+
 .search-filter-block .input-group .datepicker-book-rooms .datepicker-input,
 .search-filter-block .input-group .datepicker-book-rooms .datepicker-output {
   background: 0 0;
-  border: 1px solid #a6a6a6;
   width: initial;
   min-width: 130px;
   height: initial;
@@ -12040,6 +12064,25 @@ aside.show-on-map .panel-group .panel.panel-default {
   width: 85%;
 }
 
+.people-count .book-menu .room .input-group .input-group-btn .btn {
+  border-radius: 50% !important;
+  line-height: 0;
+}
+
+.people-count .book-menu .room .input-group .input-group-btn .btn:hover {
+  border-width: 2px;
+  background-color: transparent !important;
+  color: inherit;
+}
+
+.people-count .book-menu .room .input-group .input-group-btn .btn-info:hover {
+  color: #636e80;
+}
+
+.people-count .book-menu .room .input-group .input-group-btn .btn-warning:hover {
+  color: #f68d2a;
+}
+
 .people-count .book-menu .room .form-control {
   font-size: 16px;
 }
@@ -12079,6 +12122,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .people-count .book-menu .room .children-age .col-form-label {
   margin-bottom: 5px;
+  pointer-events: none;
 }
 
 .people-count .book-menu .room .children-age .child {
@@ -12093,14 +12137,34 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-right: 0;
 }
 
-.people-count .book-menu .room .children-age .child select {
+.people-count .book-menu .room .children-age .child select,
+.people-count .book-menu .room .children-age .child .bootstrap-select {
   width: 100%;
+  border-radius: 2px;
+}
+
+.people-count .book-menu .room .children-age .child select button,
+.people-count .book-menu .room .children-age .child .bootstrap-select button {
+  padding-left: 15px;
+  border: 1px solid #d4dee4;
 }
 
 .people-count .book-menu .book-header {
   border-bottom: 1px solid #ccd8df;
   display: block;
   padding: 20px 30px;
+}
+
+.people-count .book-menu .book-header > .bootstrap-select {
+  float: right;
+}
+
+.people-count .book-menu .book-header > .bootstrap-select button {
+  border: 1px solid #d4dee4;
+  padding: 8px;
+  padding-left: 15px;
+  border-radius: 2px;
+  margin-top: 0;
 }
 
 .people-count .book-menu .book-footer {

@@ -28,12 +28,12 @@
                span.text  Children
          span.dropdown-menu.book-menu(aria-labelledby='peopleCount')
             span.book-header.clearfix
-               select#roomsCount(name='Rooms Count')
+               select#roomsCount.selectpicker(name='Rooms Count')
                   option(value='1') 1 Room
                   option(value='2') 2 Rooms
                   option(value='3') 3 Rooms
                   option(value='4') 4 Rooms
-               span.datepicker-book-rooms
+               span.datepicker-book-rooms.clearfix
                   span.form-control.datepicker-input
                      span.date May, 6th
                      span.day Saturday
@@ -66,7 +66,7 @@
                span.children-age.hidden
                   label.col-form-label Children's Ages
                   span.child.child-1
-                     select#childAge1-1(name='Child Age')
+                     select.selectpicker#childAge1-1(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -75,7 +75,7 @@
                         - }
                         - }
                   span.child.child-2.hidden
-                     select#childAge1-2(name='Child Age')
+                     select.selectpicker#childAge1-2(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -84,7 +84,7 @@
                         - }
                         - }
                   span.child.child-3.hidden
-                     select#childAge1-3(name='Child Age')
+                     select.selectpicker#childAge1-3(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -93,7 +93,7 @@
                         - }
                         - }
                   span.child.child-4.hidden
-                     select#childAge1-4(name='Child Age')
+                     select.selectpicker#childAge1-4(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -127,7 +127,7 @@
                span.children-age.hidden
                   label.col-form-label Children's Ages
                   span.child.child-1
-                     select#childAge2-1(name='Child Age')
+                     select.selectpicker#childAge2-1(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -136,7 +136,7 @@
                         - }
                         - }
                   span.child.child-2.hidden
-                     select#childAge2-2(name='Child Age')
+                     select.selectpicker#childAge2-2(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -145,7 +145,7 @@
                         - }
                         - }
                   span.child.child-3.hidden
-                     select#childAge2-3(name='Child Age')
+                     select.selectpicker#childAge2-3(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -154,7 +154,7 @@
                         - }
                         - }
                   span.child.child-4.hidden
-                     select#childAge2-4(name='Child Age')
+                     select.selectpicker#childAge2-4(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -188,7 +188,7 @@
                span.children-age.hidden
                   label.col-form-label Children's Ages
                   span.child.child-1
-                     select#childAge3-1(name='Child Age')
+                     select.selectpicker#childAge3-1(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -197,7 +197,7 @@
                         - }
                         - }
                   span.child.child-2.hidden
-                     select#childAge3-2(name='Child Age')
+                     select.selectpicker#childAge3-2(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -206,7 +206,7 @@
                         - }
                         - }
                   span.child.child-3.hidden
-                     select#childAge3-3(name='Child Age')
+                     select.selectpicker#childAge3-3(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -215,7 +215,7 @@
                         - }
                         - }
                   span.child.child-4.hidden
-                     select#childAge3-4(name='Child Age')
+                     select.selectpicker#childAge3-4(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -249,7 +249,7 @@
                span.children-age.hidden
                   label.col-form-label Children's Ages
                   span.child.child-1
-                     select#childAge4-1(name='Child Age')
+                     select.selectpicker#childAge4-1(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -258,7 +258,7 @@
                         - }
                         - }
                   span.child.child-2.hidden
-                     select#childAge4-2(name='Child Age')
+                     select.selectpicker#childAge4-2(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -267,7 +267,7 @@
                         - }
                         - }
                   span.child.child-3.hidden
-                     select#childAge4-3(name='Child Age')
+                     select.selectpicker#childAge4-3(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
@@ -276,7 +276,7 @@
                         - }
                         - }
                   span.child.child-4.hidden
-                     select#childAge4-4(name='Child Age')
+                     select.selectpicker#childAge4-4(name='Child Age')
                         - for ( var i = -1; i < 18; i++ ) {
                         - if ( i === -1 ) {
                         option(value="null", selected) -
