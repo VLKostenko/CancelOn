@@ -825,9 +825,10 @@
                                 <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
                                 <input class="form-control pl-10" id="inputCardPostal" name="Card Postal" type="text" required autocomplete="off" data-error="This field is required">
                               </div>
-                              <div class="col-sm-6 form-group card-number-input">
+                              <div class="col-sm-6 form-group has-feedback card-number-input">
                                 <label class="control-label" for="inputCardNumber">Card Number<span class="danger">*</span></label>
-                                <input class="form-control card-input" id="inputCardNumber" name="Card Number" type="text" required maxlength="19" autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/number1.png" alt="number" srcset="./images/icons/credit/number1.png 1x, ./images/icons/credit/number1@2x.png 2x, ./images/icons/credit/number1@3x.png 3x">
+                                <input class="form-control card-input" id="inputCardNumber" name="Card Number" type="text" required maxlength="19" autocomplete="off" data-error="This field is required" data-pattern-error="Your card number is invalid" pattern="^([0-9]{4}( |)){3}[0-4]{4}$"><img src="./images/icons/credit/number1.png" alt="number" srcset="./images/icons/credit/number1.png 1x, ./images/icons/credit/number1@2x.png 2x, ./images/icons/credit/number1@3x.png 3x">
+                                <div class="help-block with-errors"></div>
                               </div>
                               <div class="last-line-wrapper">
                                 <div class="col-sm-6 form-group">

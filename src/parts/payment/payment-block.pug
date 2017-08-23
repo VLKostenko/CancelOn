@@ -850,11 +850,12 @@ form(data-toggle='validator', role='form')
                      label.control-label(for='inputCardPostal') Postal Code
                         span.danger *
                      input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
-                  .col-sm-6.form-group.card-number-input
+                  .col-sm-6.form-group.has-feedback.card-number-input
                      label.control-label(for='inputCardNumber') Card Number
                         span.danger *
-                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='off', data-error='This field is required')
+                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='off', data-error='This field is required', data-pattern-error='Your card number is invalid', pattern='^([0-9]{4}( |)){3}[0-4]{4}$')
                      img(src='./images/icons/credit/number1.png', alt='number')
+                     .help-block.with-errors
 
                   .last-line-wrapper
                      .col-sm-6.form-group

@@ -835,9 +835,8 @@
 
   if ( $('.card-number-input').length ) {
     $('.card-number-input .card-input').keypress(function (event) {
-      $('.card-number-input .card-input').attr('maxlength', 19);
       var $this = $(this);
-      if ( (($this.val().length + 1) % 5) === 0 ) {
+      if ( (($this.val().length + 1) % 5) === 0 && ($this.val().length < 19 ) ) {
         $this.val($this.val() + " ");
       }
     });
@@ -950,7 +949,7 @@
     $('#inputPhone').val('123456789');
     $('#inputCardFirstName').val('Test Card Name');
     $('#inputCardLastName').val('Test Card Surname');
-    $('#inputCardNumber').val('1234 5678 9876 5432');
+    // $('#inputCardNumber').val('1234 5678 9876 5432');
     $('#inputCardCVC').val('123');
     $('#inputCardPostal').val('987654');
   });
@@ -1268,10 +1267,11 @@
 
   $('body').on('click', function(event) {
     var target = $(event.target);
-    if (target.parents('.bootstrap-select').length) {
-      event.stopPropagation();
-      $('.bootstrap-select.open').removeClass('open');
-    }
+    // if ( target.parents('.bootstrap-select').length) {
+    //   console.log(1);
+    //   event.stopPropagation();
+    //   $('.bootstrap-select.open').removeClass('open');
+    // }
     if ( $('.search-filter-block .people-count').hasClass('active') ) {
       $(this).find('.bootstrap-select.open').removeClass('open');
     }
@@ -1684,9 +1684,8 @@
       }
       if ( $('.card-number-input').length ) {
         $('.card-number-input .card-input').keypress(function (event) {
-          $('.card-number-input .card-input').attr('maxlength', 19);
           var $this = $(this);
-          if ( (($this.val().length + 1) % 5) === 0 ) {
+          if ( (($this.val().length + 1) % 5) === 0 && ($this.val().length < 19 ) ) {
             $this.val($this.val() + " ");
           }
         });
