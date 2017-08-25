@@ -113,6 +113,42 @@
     return o;
   };
 
+  var directBorder = function() {
+    var menu = $('.navbar-header').find('ul.menu'),
+      items = menu.find('>li'),
+      dummy = function() {};
+    if ( menu.length === 0 ) {
+      return;
+    }
+    var borderBox = $('<span class="border-box"></span>'),
+      curr = items.eq(0).get(0);
+    menu.append(borderBox);
+    setCurr(curr);
+
+    function move(e) {
+      borderBox.dequeue();
+      borderBox.animate({
+        width: e.offsetWidth - 20,
+        left: e.offsetLeft + 10
+      }, 300, 'easeInOutQuint');
+    }
+
+    function setCurr(e) {
+      borderBox.css({
+        'left': e.offsetLeft + 10 + 'px',
+        'width': e.offsetWidth - 20 + 'px'
+      });
+      curr = e;
+    }
+
+    items.each(function() {
+      var e = this;
+      $(this).hover(function() {
+        move(e);
+      }, dummy);
+    });
+  };
+
   /**
    * ------------------------------------------------------------------------------------------------------
    * Main Functions
@@ -1594,6 +1630,7 @@
     } else {
       $('.payment-details-wrapper .payment-details .sidebar-block').removeClass('draggable');
     }
+    directBorder();
 
   });
 

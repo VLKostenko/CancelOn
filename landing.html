@@ -80,6 +80,14 @@
             <div class="filter-icon visible-xs"><i class="fa fa-sliders" aria-hidden="true"></i></div>
             <p class="navbar-text-landing small-text font-weight-200 visible-lg visible-md">As seen on</p><a class="secondary-logo hidden-xs" href="javascript:void(0)">
               <!--img(src='./images/trivago-logo.png', alt='trivago')--><img src="./images/booking-com.png" alt="booking" srcset="./images/booking-com.png 1x, ./images/booking-com@2x.png 2x, ./images/booking-com@3x.png 3x"></a>
+            <ul class="nav navbar-nav navbar-left menu">
+              <li><a href="javascript:void(0)">Search</a></li>
+              <li><a href="javascript:void(0)">About</a></li>
+              <li><a href="javascript:void(0)">Sell</a></li>
+              <li><a href="javascript:void(0)">Support</a></li>
+              <li><a href="javascript:void(0)">Alert Me</a></li>
+              <li><a href="javascript:void(0)">Explore</a></li>
+            </ul>
             <div class="navbar-mobile hidden-lg" id="nav_mobile">
               <ul class="nav navbar-nav">
                 <li class="back"><a href="javascript:void(0)"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</a></li>
@@ -100,11 +108,9 @@
             <div class="navbar-filter hidden-lg" id="filter_mobile"><a id="filter-done" href="javascript:void(0)">Done</a></div>
           </div>
           <button class="navbar-toggle" id="menu-button" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-          <div class="navbar-menu hidden-xs">
+          <div class="navbar-menu hidden-xs"><a class="blue-btn pull-right" href="./payment.html">Buy hotel reservation</a><a class="blue-btn pull-right" href="javascript:void(0)">Unlock special prices</a>
             <ul class="nav navbar-nav navbar-right">
-              <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i>Search</a></li>
-              <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-fire" aria-hidden="true"></i>Sell</a></li>
-              <li class="dropdown show visible-lg"><a class="dropdown-toggle mnr-10" id="dropdownMenuLink1" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>Sign In<span class="bs-caret"><span class="caret"></span></span></a>
+              <li class="dropdown show"><a class="dropdown-toggle mnr-10" id="dropdownMenuLink1" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign In<span class="bs-caret"><span class="caret"></span></span></a>
                 <div class="dropdown-menu sign-in-menu" aria-labelledby="dropdownMenuLink1">
                   <div class="col-md-12">
                     <p class="pull-left w-30 big-text font-weight-500">Login</p><a class="pull-right w-70 extra-small" href="javascript:void(0)">Not registered? Sign Up</a>
@@ -116,38 +122,24 @@
                   </div>
                 </div>
               </li>
-              <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-info-circle" aria-hidden="true"></i>Alert Me</a></li>
-              <li class="form-group visible-lg">
-                <select class="selectpicker currency-menu" id="sel1">
-                  <option>(USD) $</option>
-                  <option>(EUR) &euro;</option>
-                  <option>(GBP) &pound;</option>
-                  <option>(AED) Dh</option>
-                  <option>(AFN) ؋</option>
-                  <option>(ALL) Lek</option>
-                  <option>(DZD) DA</option>
-                  <option>(ARS) $</option>
-                  <option>(AUD) $</option>
-                  <option>(BSD) $</option>
-                  <option>(BDT) Tk</option>
-                  <option>(BBD) $</option>
-                  <option>(BMD) $</option>
-                </select>
-              </li>
-              <li class="dropdown show visible-lg"><a class="dropdown-toggle" id="dropdownMenuLink2" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-language" aria-hidden="true"></i>Language<span class="bs-caret"><span class="caret"></span></span></a>
+              <li class="dropdown show"><a class="dropdown-toggle" id="dropdownMenuLink2" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language and Currency<span class="bs-caret"><span class="caret"></span></span></a>
                 <div class="dropdown-menu languages-menu" aria-labelledby="dropdownMenuLink2">
                   <div class="col-md-12 languages"><a href="javascript:void(0)"><img width="25" src="images/icons/flag.svg" alt="flag">English</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag1.svg" alt="flag">Deutch</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag2.svg" alt="flag">French</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag3.svg" alt="flag">Spanish</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag4.svg" alt="flag">Italiano</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag5.svg" alt="flag">Russian</a></div>
                 </div>
               </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right down-menu">
-              <li class="visible-lg"><a href="javascript:void(0)"><i class="fa fa-life-ring" aria-hidden="true"></i>Support</a></li>
-              <li class="visible-lg"><a href="javascript:void(0)">About</a></li>
-              <!--li-->
-              <!--	a.blue-btn(href='javascript:void(0)') Unlock special prices-->
-              <!--li-->
-              <!--	a.green-btn(href='./payment.html') Buy hotel reservation-->
-            </ul>
+            <!--ul.nav.navbar-nav.navbar-right.down-menu-->
+            <!--	li.visible-lg-->
+            <!--		a(href='javascript:void(0)')-->
+            <!--			i.fa.fa-life-ring(aria-hidden='true')-->
+            <!--			| Support-->
+            <!--	li.visible-lg-->
+            <!--		a(href='javascript:void(0)') About
+            //li
+            //	a.blue-btn(href='javascript:void(0)') Unlock special prices
+            //li
+            //	a.green-btn(href='./payment.html') Buy hotel reservation
+            -->
           </div>
         </div>
       </div>

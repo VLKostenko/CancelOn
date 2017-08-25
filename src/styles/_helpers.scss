@@ -54,7 +54,11 @@
 
 nav {
   .navbar-header {
-    width: 41%;
+    display: flex;
+    align-items: center;
+    .navbar-nav {
+      margin-left: 75px;
+    }
   }
 }
 footer .navbar-header {
@@ -66,6 +70,10 @@ footer .navbar-header {
   float: left;
   padding-left: 15px;
   padding-right: 15px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
   .form-group {
     margin-left: 20px;
   }
@@ -84,7 +92,7 @@ footer .navbar-header {
   box-shadow: 0 1px 3px rgba(108,118,123,.15);
   width: 100%;
   padding: 40px 50px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   &_smile {
     font-size: 72px;
     font-weight: 400;
@@ -132,7 +140,7 @@ footer .navbar-header {
   margin-bottom: 15px;
   margin-top: 15px;
   &_title {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     h4 {
       margin-bottom: 15px;
     }
@@ -195,7 +203,7 @@ footer .navbar-header {
 }
 
 .grid-item {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
   @include calc(width, '(100% - 15px)/2');
   float: left;
   margin-bottom: 15px;
@@ -314,7 +322,7 @@ footer .navbar-header {
   }
   .price-line {
     .info-label {
-      font-family: "Roboto", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size: 10px;
       font-weight: 500;
       color: #fff;
@@ -466,7 +474,7 @@ footer .navbar-header {
         top: 2px;
       }
       .more-items {
-        font-family: "Roboto", sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-weight: 300;
         font-size: 12px;
         color: #0c8a96;
@@ -549,7 +557,7 @@ footer .navbar-header {
     display: none;
   }
   .booked {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
     margin-top: 15px;
@@ -696,7 +704,7 @@ footer .navbar-header {
     }
     .watching-now {
       display: block;
-      font-family: Roboto,sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size: 12px;
       font-weight: 400;
       margin-bottom: 0;
@@ -864,7 +872,7 @@ footer .navbar-header {
     font-size: 18px;
     margin-top: 8px;
     margin-bottom: 5px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     a {
       color: #000;
       &:hover,
@@ -879,7 +887,7 @@ footer .navbar-header {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 22px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   h3 {
     width: 145px;
@@ -887,7 +895,7 @@ footer .navbar-header {
     border-bottom: 1px solid #fff;
     padding: 9px;
     margin: 19px auto;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 21px;
     color: white;
@@ -910,7 +918,7 @@ footer .navbar-header {
     background-color: #f68d2a;
     padding: 5px 15px 3px;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 9pt;
     float: right;
     cursor: pointer;
@@ -938,7 +946,7 @@ footer .navbar-header {
 footer {
   background-color: #282d36;
   width: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   .container {
     max-width: 1170px!important;
   }
@@ -955,11 +963,11 @@ footer {
     }
   }
   h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   a {
     font-size: 14px !important;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     &:hover {
       text-decoration: underline !important;
     }
@@ -979,7 +987,7 @@ footer {
     margin-top: 42px;
     font-weight: 400;
     font-size: 14px;
-    font-family: 'Montserat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   .widget-container {
     font-family: "Montserat", sans-serif;
@@ -1055,7 +1063,7 @@ footer {
 }
 
 aside {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: transparent;
   margin-left: 15px;
   float: left;
@@ -1105,7 +1113,7 @@ aside {
     margin: -5px;
     margin-left: -4px;
     margin-top: 11px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   #amount2 {
     width: 25%;
@@ -1116,7 +1124,7 @@ aside {
     margin: -5px;
     margin-left: 10px;
     margin-top: 11px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   .range-divider {
     position: relative;
@@ -1445,7 +1453,7 @@ aside {
     z-index: 2;
     left: 30px;
     top: 75px;
-    font-family: "Roboto",sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #9d9d9d;
   }
   &.scrolled {
@@ -1652,8 +1660,7 @@ aside {
   }
 }
 #dropdownMenuLink2 {
-  width: 127px;
-  height: 45px;
+  min-width: 192px;
   a {
     img {
       margin-right: 5px;
@@ -1714,7 +1721,7 @@ aside {
 
 .check {
   float: left;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .loading-more {
@@ -1726,7 +1733,7 @@ aside {
   width: 100%;
   float: left;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -2078,7 +2085,7 @@ aside {
   //position: relative;
   .bootstrap-select {
     .dropdown-menu {
-      font-family: "Roboto", sans-serif;
+      font-family: 'Open Sans', sans-serif;
     }
   }
 }
@@ -2091,7 +2098,7 @@ aside {
   text-align: center;
 }
 .pagination {
-  font-family: "Roboto",sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin-top: 0;
   ul {
     li {
@@ -2167,13 +2174,13 @@ aside {
   position: relative;
   margin-bottom: 15px;
   &_title {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
   }
   &_text {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 600;
   }

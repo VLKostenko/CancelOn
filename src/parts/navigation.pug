@@ -44,9 +44,22 @@ nav.navbar.navbar-default.mb-0
 						//img(src='./images/trivago-logo.png', alt='trivago')
 						img(src='./images/booking-com.png', alt='booking')
 				else
-					p.navbar-text.small-text.font-weight-200.visible-lg
-						i.fa.fa-info-circle(aria-hidden='true')
-						|  Sell and Buy Non-Refundable Hotel Reservations
+					//p.navbar-text.small-text.font-weight-200.visible-lg
+					//	i.fa.fa-info-circle(aria-hidden='true')
+					//	|  Sell and Buy Non-Refundable Hotel Reservations
+				ul.nav.navbar-nav.navbar-left.menu
+					li
+						a(href='javascript:void(0)') Search
+					li
+						a(href='javascript:void(0)') About
+					li
+						a(href='javascript:void(0)') Sell
+					li
+						a(href='javascript:void(0)') Support
+					li
+						a(href='javascript:void(0)') Alert Me
+					li
+						a(href='javascript:void(0)') Explore
 				#nav_mobile.navbar-mobile.hidden-lg
 					ul.nav.navbar-nav
 						li.back
@@ -92,19 +105,11 @@ nav.navbar.navbar-default.mb-0
 				span.icon-bar
 				span.icon-bar
 			.navbar-menu.hidden-xs
+				a.blue-btn.pull-right(href='./payment.html') Buy hotel reservation
+				a.blue-btn.pull-right(href='javascript:void(0)') Unlock special prices
 				ul.nav.navbar-nav.navbar-right
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-search(aria-hidden='true')
-							| Search
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-fire(aria-hidden='true')
-							| Sell
-					li.dropdown.show.visible-lg
-						a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-							i.fa.fa-user(aria-hidden='true')
-							| Sign In
+					li.dropdown.show
+						a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Sign In
 							span.bs-caret
 								span.caret
 						.dropdown-menu.sign-in-menu(aria-labelledby='dropdownMenuLink1')
@@ -124,34 +129,8 @@ nav.navbar.navbar-default.mb-0
 										i.fa.fa-google-plus(aria-hidden='true')
 									a(href="javascript:void(0)")
 										i.fa.fa-twitter(aria-hidden='true')
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-info-circle(aria-hidden='true')
-							| Alert Me
-					if ( page.name !== 'landing' )
-						li.visible-lg
-							a(href='javascript:void(0)')
-								i.fa.fa-map(aria-hidden='true')
-								| Explore
-					li.form-group.visible-lg
-						select#sel1.selectpicker.currency-menu
-							option (USD) $
-							option (EUR) &euro;
-							option (GBP) &pound;
-							option (AED) Dh
-							option (AFN) ؋
-							option (ALL) Lek
-							option (DZD) DA
-							option (ARS) $
-							option (AUD) $
-							option (BSD) $
-							option (BDT) Tk
-							option (BBD) $
-							option (BMD) $
-					li.dropdown.show.visible-lg
-						a#dropdownMenuLink2.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-							i.fa.fa-language(aria-hidden='true')
-							| Language
+					li.dropdown.show
+						a#dropdownMenuLink2.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Language and Currency
 							span.bs-caret
 								span.caret
 						.dropdown-menu.languages-menu(aria-labelledby='dropdownMenuLink2')
@@ -174,13 +153,13 @@ nav.navbar.navbar-default.mb-0
 								a(href='javascript:void(0)')
 									img(width='25', src='images/icons/flag5.svg', alt='flag')
 									| Russian
-				ul.nav.navbar-nav.navbar-right.down-menu
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-life-ring(aria-hidden='true')
-							| Support
-					li.visible-lg
-						a(href='javascript:void(0)') About
+				//ul.nav.navbar-nav.navbar-right.down-menu
+				//	li.visible-lg
+				//		a(href='javascript:void(0)')
+				//			i.fa.fa-life-ring(aria-hidden='true')
+				//			| Support
+				//	li.visible-lg
+				//		a(href='javascript:void(0)') About
 					//li
 					//	a.blue-btn(href='javascript:void(0)') Unlock special prices
 					//li
