@@ -771,9 +771,13 @@
   });
 
   $('.languages-menu .languages a').click(function() {
-    $('#dropdownMenuLink2').html('');
-    $(this).clone().appendTo($('#dropdownMenuLink2'));
-    $('#dropdownMenuLink2').append('<span class="bs-caret"><span class="caret"></span></span>');
+    $('.languages-menu .languages a').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $('.languages-menu .choose-currency li a').click(function() {
+    $('.languages-menu .choose-currency li').removeClass('active');
+    $(this).parent('li').addClass('active');
   });
 
   // $('.people-count .book-menu .btn-number').click(function() {
@@ -1352,7 +1356,6 @@
     items: 1,
     nav: true,
     dots: false,
-    // lazyLoad: true,
     singleItem: true
   });
 
@@ -1392,6 +1395,15 @@
     thumbItemClass: 'owl-thumb-item',
     touchDrag: false,
     mouseDrag: false
+  });
+
+  $('.currency-slider').owlCarousel({
+    loop: false,
+    items: 1,
+    nav: true,
+    navText: ["<img src='../images/icons/left-arrow.svg'><span>Previous Currencies</span>","<img src='../images/icons/right-arrow.svg'><span>Next Currencies</span>"],
+    dots: false,
+    singleItem: true
   });
 
   $('.same-height').matchHeight();

@@ -1560,6 +1560,10 @@ aside {
 .sign-in-menu {
   padding: 15px 0 13px;
   min-width: 320px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 110px;
   .big-text {
     & + a {
       line-height: 21px;
@@ -1572,8 +1576,28 @@ aside {
       color: #000!important;
     };
   }
-  p {
+  .wrapper {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  label {
     margin: 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 10px;
+    @include crossBrowser(transition, .2s ease all);
+  }
+  input {
+    &:focus ~ label,
+    &:valid ~ label {
+      top: -15px;
+      font-size: 14px;
+      color: $main-blue;
+    }
   }
   .log-input {
     border: none;
@@ -1589,6 +1613,7 @@ aside {
     text-transform: uppercase;
     width: 100%;
     display: block;
+    border: 0;
     &:hover {
       color: #fff!important;
       background: lighten($main-blue, 5%)!important;
@@ -1596,39 +1621,66 @@ aside {
   }
   .socials {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     height: 45px;
     padding-left: 10px;
     a {
-      width: 20px;
+      width: 40px;
       text-align: center;
-      color: #333!important;
+      padding: 0 !important;
+      margin-left: 5px;
+      color: #333 !important;
       &:hover {
-        color: $main-blue!important;
+        color: $main-blue !important;
       }
       i {
         font-size: 16px;
       }
     }
   }
+  .last-line-btn {
+    color: #a1a1a1 !important;
+    margin-top: 80px;
+    padding: 0 !important;
+  }
   @include placeholder-color('.log-input', #a1a1a1);
 }
 
 .languages-menu {
-  @media (min-width: 768px) {
-    right: -1px;
-    left: initial;
-    min-width: 140px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 110px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .title {
+    font-size: 24px;
+    color: #7b7b7b;
+    margin-bottom: 10px;
   }
+  //@media (min-width: 768px) {
+  //  right: -1px;
+  //  left: initial;
+  //  min-width: 140px;
+  //}
   .languages {
     padding-left: 0;
     padding-right: 0;
+    width: 8%;
+    float: left;
     a {
       float: left;
       width: 100%;
       color: #000 !important;
-      padding: 5px 13px;
+      padding: 5px 10px!important;
+      border: 2px solid transparent;
+      margin-bottom: 5px;
+      margin-left: -10px;
+      &.active {
+        border: 2px solid $main-blue;
+        border-radius: 2px;
+      }
       img {
         margin-right: 12px;
         margin-top: -1px;
@@ -1637,6 +1689,85 @@ aside {
         color: $main-blue!important;
       }
 
+    }
+  }
+  .popular-currencies {
+    float: left;
+    width: 22%;
+    margin-left: 50px;
+  }
+  .all-currencies {
+    float: left;
+    width: 55%;
+    margin-left: 50px;
+  }
+  .currency-slider {
+    position: relative;
+    .item {
+      padding-left: 10px;
+    }
+    .ul-list {
+      width: 30%;
+      float: left;
+    }
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        right: -110px;
+        left: initial;
+        width: 186px;
+        height: 100px;
+        opacity: 1;
+        background: #fff;
+        @include crossBrowser(transition, .2s ease-in);
+        img {
+          max-width: 85px;
+          display: block;
+          margin: auto;
+        }
+        span {
+          display: block;
+          width: 100%;
+          font-size: 20px;
+          float: left;
+          text-align: center;
+        }
+        &.disabled {
+          @include crossBrowser(transform, scale(0.8));
+          opacity: .5;
+        }
+      }
+      .owl-next {
+        top: 50px;
+      }
+      .owl-prev {
+        top: 150px;
+      }
+    }
+  }
+  .ul-list {
+    margin-left: 0;
+    margin-top: 20px;
+    li {
+      display: block;
+      margin-bottom: 10px;
+      &.active {
+        a {
+          border: 2px solid $main-blue;
+          border-radius: 2px;
+        }
+      }
+      a {
+        color: #000 !important;
+        padding: 5px 10px!important;
+        border: 2px solid transparent;
+        margin-bottom: 5px;
+        margin-left: -10px;
+        &:hover {
+          color: $main-blue!important;
+        }
+      }
     }
   }
 }

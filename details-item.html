@@ -113,19 +113,267 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown show"><a class="dropdown-toggle mnr-10" id="dropdownMenuLink1" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign In<span class="bs-caret"><span class="caret"></span></span></a>
                 <div class="dropdown-menu sign-in-menu" aria-labelledby="dropdownMenuLink1">
-                  <div class="col-md-12">
-                    <p class="pull-left w-30 big-text font-weight-500">Login</p><a class="pull-right w-70 extra-small" href="javascript:void(0)">Not registered? Sign Up</a>
-                    <input class="log-input" type="text" placeholder="Enter Your Login">
-                    <p class="pull-left w-50 big-text font-weight-500">Password</p><a class="pull-right w-50 extra-small" href="javascript:void(0)">Forgot Password</a>
-                    <input class="log-input" type="text" placeholder="Enter Your Password">
-                    <div class="w-50 pull-left text-center"><a class="sign-btn" href="javascript:void(0)">Sign In</a></div>
-                    <div class="w-50 pull-right text-center socials"><a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="javascript:void(0)"><i class="fa fa-google-plus" aria-hidden="true"></i></a><a href="javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                  <div class="col-md-4 col-md-offset-4 pt-50 pb-50">
+                    <form>
+                      <div class="wrapper">
+                        <input class="log-input" id="sign-in-login" type="text" required>
+                        <label for="sign-in-login">Enter Your Login</label>
+                      </div>
+                      <div class="wrapper">
+                        <input class="log-input" id="sign-in-password" type="text" required>
+                        <label for="sign-in-password">Enter Your Password</label>
+                      </div>
+                      <div class="w-50 pull-left text-center">
+                        <input class="sign-btn" type="submit" value="Sign In">
+                      </div>
+                      <div class="w-50 pull-right text-center socials"><a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="javascript:void(0)"><i class="fa fa-google-plus" aria-hidden="true"></i></a><a href="javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></div><a class="pull-left w-30 last-line-btn" href="javascript:void(0)">Sign Up</a><a class="pull-right w-30 last-line-btn" href="javascript:void(0)">Forgot Password</a>
+                    </form>
                   </div>
                 </div>
               </li>
               <li class="dropdown show"><a class="dropdown-toggle" id="dropdownMenuLink2" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language and Currency<span class="bs-caret"><span class="caret"></span></span></a>
                 <div class="dropdown-menu languages-menu" aria-labelledby="dropdownMenuLink2">
-                  <div class="col-md-12 languages"><a href="javascript:void(0)"><img width="25" src="images/icons/flag.svg" alt="flag">English</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag1.svg" alt="flag">Deutch</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag2.svg" alt="flag">French</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag3.svg" alt="flag">Spanish</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag4.svg" alt="flag">Italiano</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag5.svg" alt="flag">Russian</a></div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="languages clearfix">
+                          <div class="title"><span>Language</span></div><a class="active" href="javascript:void(0)"><img width="25" src="images/icons/flag.svg" alt="flag">English</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag1.svg" alt="flag">Deutch</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag2.svg" alt="flag">French</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag3.svg" alt="flag">Spanish</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag4.svg" alt="flag">Italiano</a><a href="javascript:void(0)"><img width="25" src="images/icons/flag5.svg" alt="flag">Russian</a>
+                        </div>
+                        <div class="popular-currencies">
+                          <div class="title"><span>Popular Currency Profiles</span></div>
+                          <ul class="ul-list choose-currency">
+                            <li><a href="javascript:void(0)">USD - US Dollar</a></li>
+                            <li><a href="javascript:void(0)">EUR - Euro</a></li>
+                            <li><a href="javascript:void(0)">GBP - British Pound</a></li>
+                            <li><a href="javascript:void(0)">INR - Indian Rupee</a></li>
+                            <li><a href="javascript:void(0)">AUD - Australian Dollar</a></li>
+                            <li><a href="javascript:void(0)">CAD - Canadian Dollar</a></li>
+                            <li><a href="javascript:void(0)">SGD - Singapore Dollar</a></li>
+                            <li><a href="javascript:void(0)">CHF - Swiss Frank</a></li>
+                            <li><a href="javascript:void(0)">MYR - Malaysian Ringgit</a></li>
+                            <li><a href="javascript:void(0)">JPY - Japanese Yen</a></li>
+                            <li><a href="javascript:void(0)">CNY - Chinese Yuan Renminbi</a></li>
+                          </ul>
+                        </div>
+                        <div class="all-currencies">
+                          <div class="title"><span>All Currency</span></div>
+                          <div class="currency-slider owl-carousel">
+                            <div class="item">
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">AED - Emirati Dirham</a></li>
+                                <li><a href="javascript:void(0)">AFN - Afghan Afghani</a></li>
+                                <li><a href="javascript:void(0)">ALL - Albanian Lek</a></li>
+                                <li><a href="javascript:void(0)">AMD - Armenian Dram</a></li>
+                                <li><a href="javascript:void(0)">ANG - Dutch Guilder</a></li>
+                                <li><a href="javascript:void(0)">AOA - Angolan Kwanza</a></li>
+                                <li><a href="javascript:void(0)">ARS - Argentine Peso</a></li>
+                                <li><a href="javascript:void(0)">AUD - Australian Dollar</a></li>
+                                <li><a href="javascript:void(0)">AWG - Aruban or Dutch Guilder</a></li>
+                                <li><a href="javascript:void(0)">AZN - Azerbaijan Manat</a></li>
+                                <li><a href="javascript:void(0)">BAM - Bosnian Convertible Marka</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">BBD - Barbadian or Bajan Dollar</a></li>
+                                <li><a href="javascript:void(0)">BDT - Bangladeshi Taka</a></li>
+                                <li><a href="javascript:void(0)">BGN - Bulgarian Lev</a></li>
+                                <li><a href="javascript:void(0)">BHD - Bahraini Dinar</a></li>
+                                <li><a href="javascript:void(0)">BIF - Burundian Franc</a></li>
+                                <li><a href="javascript:void(0)">BMD - Bermudian Dollar</a></li>
+                                <li><a href="javascript:void(0)">BND - Bruneian Dollar</a></li>
+                                <li><a href="javascript:void(0)">BOB - Bolivian Bolíviano</a></li>
+                                <li><a href="javascript:void(0)">BRL - Brazilian Real</a></li>
+                                <li><a href="javascript:void(0)">BSD - Bahamian Dollar</a></li>
+                                <li><a href="javascript:void(0)">BTN - Bhutanese Ngultrum</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">BWP - Botswana Pula</a></li>
+                                <li><a href="javascript:void(0)">BYN - Belarusian Ruble</a></li>
+                                <li><a href="javascript:void(0)">BZD - Belizean Dollar</a></li>
+                                <li><a href="javascript:void(0)">CAD - Canadian Dollar</a></li>
+                                <li><a href="javascript:void(0)">CDF - Congolese Franc</a></li>
+                                <li><a href="javascript:void(0)">CHF - Swiss Franc</a></li>
+                                <li><a href="javascript:void(0)">CLP - Chilean Peso</a></li>
+                                <li><a href="javascript:void(0)">CNY - Chinese Yuan Renminbi</a></li>
+                                <li><a href="javascript:void(0)">COP - Colombian Peso</a></li>
+                                <li><a href="javascript:void(0)">CRC - Costa Rican Colon</a></li>
+                                <li><a href="javascript:void(0)">CUC - Cuban Convertible Peso</a></li>
+                              </ul>
+                            </div>
+                            <div class="item">
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">CUP - Cuban Peso</a></li>
+                                <li><a href="javascript:void(0)">CVE - Cape Verdean Escudo</a></li>
+                                <li><a href="javascript:void(0)">CZK - Czech Koruna</a></li>
+                                <li><a href="javascript:void(0)">DJF - Djiboutian Franc</a></li>
+                                <li><a href="javascript:void(0)">DKK - Danish Krone</a></li>
+                                <li><a href="javascript:void(0)">DOP - Dominican Peso</a></li>
+                                <li><a href="javascript:void(0)">DZD - Algerian Dinar</a></li>
+                                <li><a href="javascript:void(0)">EGP - Egyptian Pound</a></li>
+                                <li><a href="javascript:void(0)">ERN - Eritrean Nakfa</a></li>
+                                <li><a href="javascript:void(0)">ETB - Ethiopian Birr</a></li>
+                                <li><a href="javascript:void(0)">EUR - Euro</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">FJD - Fijian Dollar</a></li>
+                                <li><a href="javascript:void(0)">FKP - Falkland Island Pound</a></li>
+                                <li><a href="javascript:void(0)">GBP - British Pound</a></li>
+                                <li><a href="javascript:void(0)">GEL - Georgian Lari</a></li>
+                                <li><a href="javascript:void(0)">GGP - Guernsey Pound</a></li>
+                                <li><a href="javascript:void(0)">GHS - Ghanaian Cedi</a></li>
+                                <li><a href="javascript:void(0)">GIP - Gibraltar Pound</a></li>
+                                <li><a href="javascript:void(0)">GMD - Gambian Dalasi</a></li>
+                                <li><a href="javascript:void(0)">GNF - Guinean Franc</a></li>
+                                <li><a href="javascript:void(0)">GTQ - Guatemalan Quetzal</a></li>
+                                <li><a href="javascript:void(0)">GYD - Guyanese Dollar</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">HKD - Hong Kong Dollar</a></li>
+                                <li><a href="javascript:void(0)">HNL - Honduran Lempira</a></li>
+                                <li><a href="javascript:void(0)">HRK - Croatian Kuna</a></li>
+                                <li><a href="javascript:void(0)">HTG - Haitian Gourde</a></li>
+                                <li><a href="javascript:void(0)">HUF - Hungarian Forint</a></li>
+                                <li><a href="javascript:void(0)">IDR - Indonesian Rupiah</a></li>
+                                <li><a href="javascript:void(0)">ILS - Israeli Shekel</a></li>
+                                <li><a href="javascript:void(0)">IMP - Isle of Man Pound</a></li>
+                                <li><a href="javascript:void(0)">INR - Indian Rupee</a></li>
+                                <li><a href="javascript:void(0)">IQD - Iraqi Dinar</a></li>
+                                <li><a href="javascript:void(0)">IRR - Iranian Rial</a></li>
+                              </ul>
+                            </div>
+                            <div class="item">
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">ISK - Icelandic Krona</a></li>
+                                <li><a href="javascript:void(0)">JEP - Jersey Pound</a></li>
+                                <li><a href="javascript:void(0)">JMD - Jamaican Dollar</a></li>
+                                <li><a href="javascript:void(0)">JOD - Jordanian Dinar</a></li>
+                                <li><a href="javascript:void(0)">JPY - Japanese Yen</a></li>
+                                <li><a href="javascript:void(0)">KES - Kenyan Shilling</a></li>
+                                <li><a href="javascript:void(0)">KGS - Kyrgyzstani Som</a></li>
+                                <li><a href="javascript:void(0)">KHR - Cambodian Riel</a></li>
+                                <li><a href="javascript:void(0)">KMF - Comorian Franc</a></li>
+                                <li><a href="javascript:void(0)">KPW - North Korean Won</a></li>
+                                <li><a href="javascript:void(0)">KRW - South Korean Won</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">KWD - Kuwaiti Dinar</a></li>
+                                <li><a href="javascript:void(0)">KYD - Caymanian Dollar</a></li>
+                                <li><a href="javascript:void(0)">KZT - Kazakhstani Tenge</a></li>
+                                <li><a href="javascript:void(0)">LAK - Lao Kip</a></li>
+                                <li><a href="javascript:void(0)">LBP - Lebanese Pound</a></li>
+                                <li><a href="javascript:void(0)">LKR - Sri Lankan Rupee</a></li>
+                                <li><a href="javascript:void(0)">LRD - Liberian Dollar</a></li>
+                                <li><a href="javascript:void(0)">LSL - Basotho Loti</a></li>
+                                <li><a href="javascript:void(0)">LYD - Libyan Dinar</a></li>
+                                <li><a href="javascript:void(0)">MAD - Moroccan Dirham</a></li>
+                                <li><a href="javascript:void(0)">MDL - Moldovan Leu</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">MGA - Malagasy Ariary</a></li>
+                                <li><a href="javascript:void(0)">MKD - Macedonian Denar</a></li>
+                                <li><a href="javascript:void(0)">MMK - Burmese Kyat</a></li>
+                                <li><a href="javascript:void(0)">MNT - Mongolian Tughrik</a></li>
+                                <li><a href="javascript:void(0)">MOP - Macau Pataca</a></li>
+                                <li><a href="javascript:void(0)">MRO - Mauritanian Ouguiya</a></li>
+                                <li><a href="javascript:void(0)">MUR - Mauritian Rupee</a></li>
+                                <li><a href="javascript:void(0)">MVR - Maldivian Rufiyaa</a></li>
+                                <li><a href="javascript:void(0)">MWK - Malawian Kwacha</a></li>
+                                <li><a href="javascript:void(0)">MXN - Mexican Peso</a></li>
+                                <li><a href="javascript:void(0)">MYR - Malaysian Ringgit</a></li>
+                              </ul>
+                            </div>
+                            <div class="item">
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">MZN - Mozambican Metical</a></li>
+                                <li><a href="javascript:void(0)">NAD - Namibian Dollar</a></li>
+                                <li><a href="javascript:void(0)">NGN - Nigerian Naira</a></li>
+                                <li><a href="javascript:void(0)">NIO - Nicaraguan Cordoba</a></li>
+                                <li><a href="javascript:void(0)">NOK - Norwegian Krone</a></li>
+                                <li><a href="javascript:void(0)">NPR - Nepalese Rupee</a></li>
+                                <li><a href="javascript:void(0)">NZD - New Zealand Dollar</a></li>
+                                <li><a href="javascript:void(0)">OMR - Omani Rial</a></li>
+                                <li><a href="javascript:void(0)">PAB - Panamanian Balboa</a></li>
+                                <li><a href="javascript:void(0)">PEN - Peruvian Sol</a></li>
+                                <li><a href="javascript:void(0)">PGK - Papua New Guinean Kina</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">PHP - Philippine Peso</a></li>
+                                <li><a href="javascript:void(0)">PKR - Pakistani Rupee</a></li>
+                                <li><a href="javascript:void(0)">PLN - Polish Zloty</a></li>
+                                <li><a href="javascript:void(0)">PYG - Paraguayan Guarani</a></li>
+                                <li><a href="javascript:void(0)">QAR - Qatari Riyal</a></li>
+                                <li><a href="javascript:void(0)">RON - Romanian Leu</a></li>
+                                <li><a href="javascript:void(0)">RSD - Serbian Dinar</a></li>
+                                <li><a href="javascript:void(0)">RUB - Russian Ruble</a></li>
+                                <li><a href="javascript:void(0)">RWF - Rwandan Franc</a></li>
+                                <li><a href="javascript:void(0)">SAR - Saudi Arabian Riyal</a></li>
+                                <li><a href="javascript:void(0)">SBD - Solomon Islander Dollar</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">SCR - Seychellois Rupee</a></li>
+                                <li><a href="javascript:void(0)">SDG - Sudanese Pound</a></li>
+                                <li><a href="javascript:void(0)">SEK - Swedish Krona</a></li>
+                                <li><a href="javascript:void(0)">SGD - Singapore Dollar</a></li>
+                                <li><a href="javascript:void(0)">SHP - Saint Helenian Pound</a></li>
+                                <li><a href="javascript:void(0)">SLL - Sierra Leonean Leone</a></li>
+                                <li><a href="javascript:void(0)">SOS - Somali Shilling</a></li>
+                                <li><a href="javascript:void(0)">SPL - Seborgan Luigino</a></li>
+                                <li><a href="javascript:void(0)">SRD - Surinamese Dollar</a></li>
+                                <li><a href="javascript:void(0)">STD - Sao Tomean Dobra</a></li>
+                                <li><a href="javascript:void(0)">SVC - Salvadoran Colon</a></li>
+                              </ul>
+                            </div>
+                            <div class="item">
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">SYP - Syrian Pound</a></li>
+                                <li><a href="javascript:void(0)">SZL - Swazi Lilangeni</a></li>
+                                <li><a href="javascript:void(0)">THB - Thai Baht</a></li>
+                                <li><a href="javascript:void(0)">TJS - Tajikistani Somoni</a></li>
+                                <li><a href="javascript:void(0)">TMT - Turkmenistani Manat</a></li>
+                                <li><a href="javascript:void(0)">TND - Tunisian Dinar</a></li>
+                                <li><a href="javascript:void(0)">TOP - Tongan Pa'anga</a></li>
+                                <li><a href="javascript:void(0)">TRY - Turkish Lira</a></li>
+                                <li><a href="javascript:void(0)">TTD - Trinidadian Dollar</a></li>
+                                <li><a href="javascript:void(0)">TVD - Tuvaluan Dollar</a></li>
+                                <li><a href="javascript:void(0)">TWD - Taiwan New Dollar</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">TZS - Tanzanian Shilling</a></li>
+                                <li><a href="javascript:void(0)">UAH - Ukrainian Hryvnia</a></li>
+                                <li><a href="javascript:void(0)">UGX - Ugandan Shilling</a></li>
+                                <li><a href="javascript:void(0)">USD - US Dollar</a></li>
+                                <li><a href="javascript:void(0)">UYU - Uruguayan Peso</a></li>
+                                <li><a href="javascript:void(0)">UZS - Uzbekistani Som</a></li>
+                                <li><a href="javascript:void(0)">VEF - Venezuelan Bolívar</a></li>
+                                <li><a href="javascript:void(0)">VND - Vietnamese Dong</a></li>
+                                <li><a href="javascript:void(0)">VUV - Ni-Vanuatu Vatu</a></li>
+                                <li><a href="javascript:void(0)">WST - Samoan Tala</a></li>
+                                <li><a href="javascript:void(0)">XAF - Central African CFA Franc BEAC</a></li>
+                              </ul>
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">XAG - Silver Ounce</a></li>
+                                <li><a href="javascript:void(0)">XAU - Gold Ounce</a></li>
+                                <li><a href="javascript:void(0)">XBT - Bitcoin</a></li>
+                                <li><a href="javascript:void(0)">XCD - East Caribbean Dollar</a></li>
+                                <li><a href="javascript:void(0)">XDR - IMF Special Drawing Rights</a></li>
+                                <li><a href="javascript:void(0)">XOF - CFA Franc</a></li>
+                                <li><a href="javascript:void(0)">XPD - Palladium Ounce</a></li>
+                                <li><a href="javascript:void(0)">XPF - CFP Franc</a></li>
+                                <li><a href="javascript:void(0)">XPT - Platinum Ounce</a></li>
+                                <li><a href="javascript:void(0)">YER - Yemeni Rial</a></li>
+                                <li><a href="javascript:void(0)">ZAR - South African Rand</a></li>
+                              </ul>
+                            </div>
+                            <div class="item">
+                              <ul class="ul-list choose-currency">
+                                <li><a href="javascript:void(0)">ZMW - Zambian Kwacha</a></li>
+                                <li><a href="javascript:void(0)">ZWD - Zimbabwean Dollar</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>
