@@ -7,7 +7,7 @@ input:focus,
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: #e3e4eb;
 }
 
 mark {
@@ -267,6 +267,9 @@ button[type="button"].btn:focus {
 
 .navbar-right {
   margin-right: -5px;
+  right: initial;
+  left: 0;
+  top: 110px;
 }
 
 .dropdown-item {
@@ -281,6 +284,10 @@ button[type="button"].btn:focus {
 .navbar-brand {
   height: auto;
   padding: 28px 15px;
+}
+
+.navbar-default .navbar-nav li {
+  position: initial;
 }
 
 .navbar-default .navbar-nav li a {
@@ -578,9 +585,13 @@ button[type="button"].btn:focus {
 
 .panel-heading {
   border-radius: 0;
-  background-color: #d0d8e1 !important;
+  background-color: #eaeef0 !important;
   padding: 0;
   margin-bottom: 1px;
+}
+
+.panel-heading h4 {
+  font-weight: 600;
 }
 
 .panel-collapse {
@@ -886,16 +897,18 @@ h6, .h6 {
 }
 
 .menu-icon {
-  background-image: url("../images/icons/menu-icon.svg");
+  background-image: url("../images/icons/hide-eye.svg");
   background-size: cover;
   width: 17px;
   height: 15px;
   display: block;
   margin-top: 3px;
+  opacity: .25;
+  transition: opacity 0.2s ease-in;
 }
 
-.menu-icon.active {
-  background-image: url("../images/icons/menu-icon-active.svg");
+.menu-icon:hover {
+  opacity: 1;
 }
 
 .list-btn i {
@@ -8681,7 +8694,7 @@ aside .show-all:hover {
 }
 
 aside .panel-title > a.collapsed {
-  background-color: #ebebeb;
+  background-color: #eaeef0;
 }
 
 aside #date-adults .input-group-addon {
@@ -9130,7 +9143,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   padding: 15px 0 13px;
   min-width: 320px;
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 110px;
 }
@@ -9242,7 +9255,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .languages-menu {
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 110px;
   padding-top: 30px;
@@ -9294,8 +9307,8 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .languages-menu .all-currencies {
   float: left;
-  width: 55%;
-  margin-left: 50px;
+  width: 58%;
+  margin-left: 0;
 }
 
 .languages-menu .currency-slider {
@@ -9307,14 +9320,15 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .languages-menu .currency-slider .ul-list {
-  width: 30%;
+  width: 34%;
   float: left;
+  margin-left: -10px;
 }
 
 .languages-menu .currency-slider .owl-nav .owl-prev,
 .languages-menu .currency-slider .owl-nav .owl-next {
   position: absolute;
-  right: -110px;
+  right: -120px;
   left: initial;
   width: 186px;
   height: 100px;
@@ -9412,10 +9426,6 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .filter-top {
-  height: 55px;
-  padding-top: 18px;
-  padding-left: 15px;
-  padding-right: 15px;
   position: relative;
   z-index: 12;
 }
@@ -9429,16 +9439,178 @@ aside.show-on-map .panel-group .panel.panel-default {
 .filter-top .search-filter {
   float: left;
   width: 225px;
+  background: #f4f6f7;
+}
+
+.filter-top .search-filter p {
+  margin: 17px 0;
 }
 
 .filter-top .search-filter .hide-filter {
-  margin-right: 28px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.filter-top .search-filter .show-all {
+  margin-right: 25px;
+  margin-top: 2px;
+  font-size: 12px;
+  text-transform: initial;
+  color: #1d79d6;
 }
 
 .filter-top .content-settings {
+  background: #fff;
   float: left;
-  margin-left: 5px;
-  width: calc(100% - 225px - 5px);
+  width: calc(100% - 225px);
+}
+
+.filter-top .content-settings .sort-button {
+  float: left;
+  position: relative;
+}
+
+.filter-top .content-settings .sort-button.last a, .filter-top .content-settings .sort-button.last label {
+  border-right: 1px solid #ededed;
+}
+
+.filter-top .content-settings .sort-button a {
+  padding: 18px 15px;
+  display: block;
+  float: left;
+  border-left: 1px solid #ededed;
+  transition: 0.2s ease-in;
+}
+
+.filter-top .content-settings .sort-button a:hover {
+  background: #f3f4f7;
+}
+
+.filter-top .content-settings .sort-button a span {
+  color: #000;
+}
+
+.filter-top .content-settings .sort-button a i {
+  margin-left: 10px;
+  color: #1d79d6;
+}
+
+.filter-top .content-settings .sort-button input {
+  display: none;
+}
+
+.filter-top .content-settings .sort-button input:checked ~ label:before {
+  background: #1d79d6;
+  border-color: #1d79d6;
+}
+
+.filter-top .content-settings .sort-button input:checked ~ label:after {
+  opacity: 1;
+}
+
+.filter-top .content-settings .sort-button label {
+  margin: 0;
+  padding: 18px 15px 18px 35px;
+  border-left: 1px solid #ededed;
+  cursor: pointer;
+  /* Disable Text Selecting */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.filter-top .content-settings .sort-button label:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #ced7de;
+  transition: 0.2s ease-in;
+}
+
+.filter-top .content-settings .sort-button label:after {
+  content: '';
+  width: 11px;
+  height: 10px;
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  top: 1px;
+  bottom: 0;
+  margin: auto;
+  background: url("../images/icons/check-mark.svg") no-repeat 50% 50%;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+
+.filter-top .content-settings .sort-button label:hover {
+  background: #f3f4f7;
+}
+
+.filter-top .content-settings .view-icons {
+  padding: 17px 15px;
+}
+
+.filter-top .content-settings .view-icons .btn {
+  padding: 0;
+  width: 32px;
+  height: 20px;
+  border-radius: 0;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  opacity: .15;
+  margin-top: 0;
+  transition: 0.2s ease-in;
+}
+
+.filter-top .content-settings .view-icons .btn:before, .filter-top .content-settings .view-icons .btn:after {
+  display: none;
+}
+
+.filter-top .content-settings .view-icons .btn:hover {
+  opacity: 1;
+}
+
+.filter-top .content-settings .view-icons .btn.active {
+  opacity: 1;
+}
+
+.filter-top .content-settings .view-icons .btn.list-btn {
+  background-image: url("../images/icons/list-icon.svg");
+}
+
+.filter-top .content-settings .view-icons .btn.grid-btn {
+  background-image: url("../images/icons/grid-icon.svg");
+}
+
+.filter-top .content-settings .view-icons .btn.map-btn {
+  opacity: 1;
+}
+
+.filter-top .content-settings .view-icons .btn.map-btn input:checked ~ label {
+  opacity: 1;
+}
+
+.filter-top .content-settings .view-icons .btn.map-btn label {
+  opacity: .15;
+  background-image: url("../images/icons/map-icon.svg");
+  transition: 0.2s ease-in;
+}
+
+.filter-top .content-settings .view-icons .btn.map-btn label:hover {
+  opacity: 1;
 }
 
 .filter-top .content-settings .display {

@@ -111,14 +111,19 @@
 }
 
 .menu-icon {
-  background-image: url("../images/icons/menu-icon.svg");
+  background-image: url("../images/icons/hide-eye.svg");
   background-size: cover;
   width: 17px;
   height: 15px;
   display: block;
   margin-top: 3px;
+  opacity: .25;
+  @include crossBrowser(transition, opacity .2s ease-in);
+  &:hover {
+    opacity: 1;
+  }
   &.active {
-    background-image: url("../images/icons/menu-icon-active.svg");
+    //background-image: url("../images/icons/menu-icon-active.svg");
   }
 }
 

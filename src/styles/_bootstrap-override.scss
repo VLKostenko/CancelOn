@@ -162,9 +162,9 @@ button[type="button"] {
 
 .navbar-right {
   margin-right: -5px;
-  //&.down-menu {
-  //  margin-right: 12px !important;
-  //}
+  right: initial;
+  left: 0;
+  top: 110px;
 }
 
 .dropdown-item {
@@ -187,6 +187,7 @@ button[type="button"] {
 
 .navbar-default .navbar-nav {
   li {
+    position: initial;
     a {
       color: #ffffff;
     }
@@ -490,9 +491,12 @@ footer {
 
 .panel-heading {
   border-radius: 0;
-  background-color: #d0d8e1 !important;
+  background-color: #eaeef0 !important;
   padding: 0;
   margin-bottom: 1px;
+  h4 {
+    font-weight: 600;
+  }
 }
 
 .panel-collapse {

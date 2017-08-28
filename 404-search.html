@@ -811,21 +811,39 @@
     </div>
     <div class="container mt-15 remove-padding-md pl-xs-0 pr-xs-0">
       <div class="filter-top white">
-        <div class="search-filter">
-          <p class="big-text text-uppercase font-weight-600 mnl-5 hidden-xs">Search Filter<a class="pull-right hide-filter" href="javascript:void(0)"><span class="menu-icon active"></span></a></p>
+        <div class="search-filter"><a class="pull-left hide-filter" href="javascript:void(0)"><span class="menu-icon active"></span></a>
+          <p class="big-text text-uppercase font-weight-600 mnl-5 hidden-xs">Filter<a class="pull-right show-all" href="javascript:void(0)">Show All</a></p>
         </div>
         <div class="content-settings">
-          <div class="display hidden-xs hidden-sm"><a class="list-btn active" href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a><a class="grid-btn ml-5" href="javascript:void(0)"><i class="fa fa-th" aria-hidden="true"></i></a></div>
-          <select class="selectpicker pull-left">
-            <option>Low to High</option>
-            <option>High to Low</option>
-            <option>Newest</option>
-          </select>
-          <p class="avail">Available 471 Of 471</p>
-          <div class="onoffswitch pull-right">
-            <input class="myonoffswitch onoffswitch-checkbox" id="myonoffswitch1" type="checkbox" name="onoffswitch1">
-            <label class="onoffswitch-label" for="myonoffswitch1"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+          <div class="sort-button sort-price"><a href="javascript:void(0)" data-sort="price-high-low"><span>Price</span><i class="fa fa-sort-amount-desc" aria-hidden="true"></i></a></div>
+          <div class="sort-button guest-rating"><a href="javascript:void(0)" data-sort="price-low-high"><span>Guest Rating</span><i class="fa fa-sort-amount-asc" aria-hidden="true"></i></a></div>
+          <div class="sort-button recommended"><a href="javascript:void(0)" data-sort="recommended"><span>Recommended</span><i class="fa fa-sort-amount-desc" aria-hidden="true"></i></a></div>
+          <div class="sort-button best-price">
+            <input id="best-price-guaranted" type="checkbox" data-sort="best-price">
+            <label for="best-price-guaranted">Best Price Guaranted</label>
           </div>
+          <div class="sort-button last top-deal">
+            <input id="top-deal" type="checkbox" data-sort="top-deal">
+            <label for="top-deal">Top Deal</label>
+          </div>
+          <div class="view-icons pull-right"><a class="btn list-btn active" href="javascript:void(0)"></a><a class="btn grid-btn ml-10" href="javascript:void(0)"></a><a class="btn map-btn ml-10 onoffswitch" href="javascript:void(0)">
+              <input class="myonoffswitch onoffswitch-checkbox" id="myonoffswitch1" type="checkbox" name="onoffswitch1">
+              <label class="btn onoffswitch-label" for="myonoffswitch1"></label></a></div>
+          <!--.display.hidden-xs.hidden-sm-->
+          <!--	a.list-btn.active(href='javascript:void(0)')-->
+          <!--		i.fa.fa-bars(aria-hidden='true')-->
+          <!--	a.grid-btn.ml-5(href='javascript:void(0)')-->
+          <!--		i.fa.fa-th(aria-hidden='true')-->
+          <!--select.selectpicker.pull-left-->
+          <!--	option Low to High-->
+          <!--	option High to Low-->
+          <!--	option Newest-->
+          <!--p.avail Available 471 Of 471-->
+          <!--.onoffswitch.pull-right-->
+          <!--	input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1')-->
+          <!--	label.onoffswitch-label(for='myonoffswitch1')-->
+          <!--		span.onoffswitch-inner-->
+          <!--		span.onoffswitch-switch-->
         </div>
       </div>
     </div>
