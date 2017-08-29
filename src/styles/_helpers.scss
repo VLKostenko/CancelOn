@@ -946,9 +946,14 @@ footer {
     button {
       height: 49px;
       width: 150px;
-      background-color: #96a4af;
+      background-color: #96a4af!important;
       color: #ffffff;
-      border-radius: 0;
+      border-radius: 0!important;
+      @include crossBrowser(transition, .2s ease-in);
+      &:hover {
+        color: #fff!important;
+        background-color: lighten(#96a4af, 15%)!important;
+      }
     }
     .form-control {
       border-radius: 0;

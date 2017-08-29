@@ -1117,16 +1117,6 @@
     }
   });
 
-  $(document).on('click', '.list-of-countries ul.dropdown-menu li a', function(e) {
-    e.preventDefault();
-    console.log($(this).children('.text').text());
-    if ( $(this).children('.text').text() === 'United States' ) {
-      $('.states-usa').removeClass('hidden');
-    } else {
-      $('.states-usa').addClass('hidden');
-    }
-  });
-
   /**
    * ------------------------------------------------------------------------------------------------------
    * Initialization
@@ -1739,6 +1729,17 @@
   getDimensionsScroll();
 
   window.addEventListener('load', function() {
+
+    $('.list-of-countries ul.dropdown-menu li').on('click', 'a', function(e) {
+      e.preventDefault();
+      // console.log($(this).children('.text').text());
+      if ( $(this).children('.text').text() === 'United States' ) {
+        $('.states-usa').removeClass('hidden');
+      } else {
+        $('.states-usa').addClass('hidden');
+      }
+    });
+
     setTimeout(function() {
       $('body').removeClass('placeholder');
       $('.placeholder-sidebar,' +

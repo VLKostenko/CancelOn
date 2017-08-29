@@ -481,6 +481,16 @@
     right: 0;
     margin: auto;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+    .input-group {
+      .input-group-btn {
+        .btn {
+          border-radius: 100%!important;
+          &:hover {
+            background-color: transparent !important;
+          }
+        }
+      }
+    }
     .room {
       //display: block;
       width: 100%;

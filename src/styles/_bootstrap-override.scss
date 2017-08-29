@@ -455,11 +455,11 @@ footer {
 
 .input-group-btn {
   .btn {
-    border-radius: 50% !important;
+    border-radius: 50%;
     line-height: 0;
     &:hover {
       border-width: 2px;
-      background-color: transparent !important;
+      background-color: transparent;
       color: inherit;
     }
   }

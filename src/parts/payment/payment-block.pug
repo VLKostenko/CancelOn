@@ -785,7 +785,7 @@ form(data-toggle='validator', role='form')
                      - if ( i == 9 ) {
                         option(value=countriesList[i].name, selected='selected')=countriesList[i].name
                      - } else {
-                        option#jopa(value=countriesList[i].name)=countriesList[i].name
+                        option(value=countriesList[i].name)=countriesList[i].name
                      - }
                   - }
                a.find-my-location(href='javascript:void(0)') Find my location
@@ -932,7 +932,8 @@ form(data-toggle='validator', role='form')
          .submit-wrapper
             .submit
                - if ( page.name === 'payment' ) {
-                  input(type='submit', value='Reservation')
+                  input.visible-lg(type='submit', value='Book This Room For $2668.86')
+                  input.hidden-lg(type='submit', value='Book For $2668.86')
                - } else {
                   input.visible-lg(type='submit', value='Book This Room For $2668.86')
                   input.hidden-lg(type='submit', value='Book For $2668.86')
@@ -942,12 +943,18 @@ form(data-toggle='validator', role='form')
       .alert
          p By Continuing With Your Booking, You Agree That You:
          p 1) Have Read And Accepted Our
-            a(href='javascript:void(0)')  Privacy Policy
+            |
+            |
+            a(href='javascript:void(0)') Privacy Policy
             |  And
-            a(href='javascript:void(0)')  User Agreement.
+            |
+            |
+            a(href='javascript:void(0)') User Agreement.
          p 2) Are At Least 18 Years Old.
          p 3)
-            a(href='javascript:void(0)')  Cancellation policy
+            |
+            |
+            a(href='javascript:void(0)') Cancellation policy
 .step.info-step
    .step-header
       .step-number
