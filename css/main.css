@@ -11946,10 +11946,13 @@ aside.show-on-map .panel-group .panel.panel-default {
   font-size: 12px;
 }
 
+.booking-table .date-group {
+  pointer-events: none;
+}
+
 .date-group {
   width: 100%;
   border-bottom: 2px solid transparent;
-  pointer-events: none;
 }
 
 .date-group.active {

@@ -404,10 +404,15 @@
   }
 }
 
+.booking-table {
+  .date-group {
+    pointer-events: none;
+  }
+}
+
 .date-group {
   width: 100%;
   border-bottom: 2px solid transparent;
-  pointer-events: none;
   &.active {
     border-bottom: 2px solid #1d79d6;
   }

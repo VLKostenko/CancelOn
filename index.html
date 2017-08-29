@@ -163,7 +163,13 @@
               </div>
               <div id="search-space"></div>
               <div class="input-group search-group">
-                <input class="form-control input-search" type="text" placeholder="What Are You Looking For?"><span class="search-filter-block"><span class="input-group input-group-white date-group"><span class="form-control datepicker-input"><span class="date">May, 6th</span><span class="day hidden">Saturday</span></span><span class="form-control datepicker-output"><span class="date">Jun, 14th</span><span class="day hidden">Wednesday</span></span></span></span><span class="search-filter-block"><span class="input-group input-group-white people-count"><a class="dropdown-toggle" id="peopleCount" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="block"><span class="value" id="rooms">1</span><span class="text"> Room<span class="text-one">,</span><span class="text-two hidden">s,</span></span></span><span class="block"><span class="value" id="adults">1</span><span class="text"> Adult<span class="text-one">,</span><span class="text-two hidden">s,</span></span></span><span class="block"><span class="value" id="children">0</span><span class="text"> Children</span></span></a><span class="dropdown-menu book-menu" aria-labelledby="peopleCount"><span class="room clearfix"><span class="title">Room<span class="number"> 1</span><a class="remove hidden" href="javascript:void(0)">Remove</a></span><span class="adults">
+                <input class="form-control input-search" type="text" placeholder="What Are You Looking For?"><span class="search-filter-block"><span class="input-group input-group-white date-group"><span class="form-control datepicker-input"><span class="date">May, 6th</span><span class="day hidden">Saturday</span></span><span class="form-control datepicker-output"><span class="date">Jun, 14th</span><span class="day hidden">Wednesday</span></span></span></span><span class="search-filter-block"><span class="input-group input-group-white people-count"><a class="dropdown-toggle" id="peopleCount" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="block"><span class="value" id="rooms">1</span><span class="text"> Room<span class="text-one">,</span><span class="text-two hidden">s,</span></span></span><span class="block"><span class="value" id="adults">1</span><span class="text"> Adult<span class="text-one">,</span><span class="text-two hidden">s,</span></span></span><span class="block"><span class="value" id="children">0</span><span class="text"> Children</span></span></a><span class="dropdown-menu book-menu" aria-labelledby="peopleCount"><span class="book-header clearfix">
+                        <select class="selectpicker" id="roomsCount" name="Rooms Count">
+                          <option value="1">1 Room</option>
+                          <option value="2">2 Rooms</option>
+                          <option value="3">3 Rooms</option>
+                          <option value="4">4 Rooms</option>
+                        </select><span class="datepicker-book-rooms clearfix"><span class="form-control datepicker-input"><span class="date">May, 6th</span><span class="day">Saturday</span></span><span class="form-control datepicker-output"><span class="date">Jun, 14th</span><span class="day">Wednesday</span></span></span></span><span class="room clearfix"><span class="title">Room<span class="number"> 1</span></span><span class="adults">
                           <label class="col-form-label" for="quant[1-1]">Adults</label><span class="input-group"><span class="input-group-btn">
                               <button class="btn btn-info btn-number" type="button" data-type="minus" data-field="quant[1-1]" disabled>-</button></span>
                             <input class="form-control input-number" type="number" id="quant[1-1]" name="quant[1-1]" value="1" min="1" max="4" data-id="adults"><span class="input-group-btn">
@@ -173,7 +179,7 @@
                             <input class="form-control input-number" type="number" id="quant[1-2]" name="quant[1-2]" value="0" min="0" max="4" data-id="children"><span class="input-group-btn">
                               <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[1-2]">+</button></span></span></span><span class="children-age hidden">
                           <label class="col-form-label">Children's Ages</label><span class="child child-1">
-                            <select id="childAge1-1" name="Child Age">
+                            <select class="selectpicker" id="childAge1-1" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -194,7 +200,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-2 hidden">
-                            <select id="childAge1-2" name="Child Age">
+                            <select class="selectpicker" id="childAge1-2" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -215,7 +221,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-3 hidden">
-                            <select id="childAge1-3" name="Child Age">
+                            <select class="selectpicker" id="childAge1-3" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -236,7 +242,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-4 hidden">
-                            <select id="childAge1-4" name="Child Age">
+                            <select class="selectpicker" id="childAge1-4" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -256,7 +262,7 @@
                               <option value="15">15</option>
                               <option value="16">16</option>
                               <option value="17">17</option>
-                            </select></span></span></span><span class="room clearfix hidden"><span class="title">Room<span class="number"> 2</span><a class="remove" href="javascript:void(0)">Remove</a></span><span class="adults">
+                            </select></span></span></span><span class="room clearfix hidden"><span class="title">Room<span class="number"> 2</span></span><span class="adults">
                           <label class="col-form-label" for="quant[2-1]">Adults</label><span class="input-group"><span class="input-group-btn">
                               <button class="btn btn-info btn-number" type="button" data-type="minus" data-field="quant[2-1]" disabled>-</button></span>
                             <input class="form-control input-number" type="number" id="quant[2-1]" name="quant[2-1]" value="1" min="1" max="4" data-id="adults"><span class="input-group-btn">
@@ -266,7 +272,7 @@
                             <input class="form-control input-number" type="number" id="quant[2-2]" name="quant[2-2]" value="0" min="0" max="4" data-id="children"><span class="input-group-btn">
                               <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[2-2]">+</button></span></span></span><span class="children-age hidden">
                           <label class="col-form-label">Children's Ages</label><span class="child child-1">
-                            <select id="childAge2-1" name="Child Age">
+                            <select class="selectpicker" id="childAge2-1" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -287,7 +293,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-2 hidden">
-                            <select id="childAge2-2" name="Child Age">
+                            <select class="selectpicker" id="childAge2-2" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -308,7 +314,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-3 hidden">
-                            <select id="childAge2-3" name="Child Age">
+                            <select class="selectpicker" id="childAge2-3" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -329,7 +335,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-4 hidden">
-                            <select id="childAge2-4" name="Child Age">
+                            <select class="selectpicker" id="childAge2-4" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -349,7 +355,7 @@
                               <option value="15">15</option>
                               <option value="16">16</option>
                               <option value="17">17</option>
-                            </select></span></span></span><span class="room clearfix hidden"><span class="title">Room<span class="number"> 3</span><a class="remove" href="javascript:void(0)">Remove</a></span><span class="adults">
+                            </select></span></span></span><span class="room clearfix hidden"><span class="title">Room<span class="number"> 3</span></span><span class="adults">
                           <label class="col-form-label" for="quant[3-1]">Adults</label><span class="input-group"><span class="input-group-btn">
                               <button class="btn btn-info btn-number" type="button" data-type="minus" data-field="quant[3-1]" disabled>-</button></span>
                             <input class="form-control input-number" type="number" id="quant[3-1]" name="quant[3-1]" value="1" min="1" max="4" data-id="adults"><span class="input-group-btn">
@@ -359,7 +365,7 @@
                             <input class="form-control input-number" type="number" id="quant[3-2]" name="quant[3-3]" value="0" min="0" max="4" data-id="children"><span class="input-group-btn">
                               <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[3-3]">+</button></span></span></span><span class="children-age hidden">
                           <label class="col-form-label">Children's Ages</label><span class="child child-1">
-                            <select id="childAge3-1" name="Child Age">
+                            <select class="selectpicker" id="childAge3-1" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -380,7 +386,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-2 hidden">
-                            <select id="childAge3-2" name="Child Age">
+                            <select class="selectpicker" id="childAge3-2" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -401,7 +407,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-3 hidden">
-                            <select id="childAge3-3" name="Child Age">
+                            <select class="selectpicker" id="childAge3-3" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -422,7 +428,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-4 hidden">
-                            <select id="childAge3-4" name="Child Age">
+                            <select class="selectpicker" id="childAge3-4" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -442,7 +448,7 @@
                               <option value="15">15</option>
                               <option value="16">16</option>
                               <option value="17">17</option>
-                            </select></span></span></span><span class="room clearfix hidden"><span class="title">Room<span class="number"> 4</span><a class="remove" href="javascript:void(0)">Remove</a></span><span class="adults">
+                            </select></span></span></span><span class="room clearfix hidden"><span class="title">Room<span class="number"> 4</span></span><span class="adults">
                           <label class="col-form-label" for="quant[4-1]">Adults</label><span class="input-group"><span class="input-group-btn">
                               <button class="btn btn-info btn-number" type="button" data-type="minus" data-field="quant[4-1]" disabled>-</button></span>
                             <input class="form-control input-number" type="number" id="quant[4-1]" name="quant[4-1]" value="1" min="1" max="4" data-id="adults"><span class="input-group-btn">
@@ -452,7 +458,7 @@
                             <input class="form-control input-number" type="number" id="quant[4-2]" name="quant[4-2]" value="0" min="0" max="4" data-id="children"><span class="input-group-btn">
                               <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[4-2]">+</button></span></span></span><span class="children-age hidden">
                           <label class="col-form-label">Children's Ages</label><span class="child child-1">
-                            <select id="childAge4-1" name="Child Age">
+                            <select class="selectpicker" id="childAge4-1" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -473,7 +479,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-2 hidden">
-                            <select id="childAge4-2" name="Child Age">
+                            <select class="selectpicker" id="childAge4-2" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -494,7 +500,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-3 hidden">
-                            <select id="childAge4-3" name="Child Age">
+                            <select class="selectpicker" id="childAge4-3" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -515,7 +521,7 @@
                               <option value="16">16</option>
                               <option value="17">17</option>
                             </select></span><span class="child child-4 hidden">
-                            <select id="childAge4-4" name="Child Age">
+                            <select class="selectpicker" id="childAge4-4" name="Child Age">
                               <option value="null" selected>-</option>
                               <option value="0">0</option>
                               <option value="1">1</option>
@@ -535,7 +541,8 @@
                               <option value="15">15</option>
                               <option value="16">16</option>
                               <option value="17">17</option>
-                            </select></span></span></span><span class="book-footer clearfix"><a id="add-book-room" href="javascript:void(0)">Add Room</a><a id="done-book-menu" href="javascript:void(0)">Done</a>
+                            </select></span></span></span><span class="book-footer clearfix">
+                        <!--a#add-book-room(href='javascript:void(0)') Add Room--><a id="done-book-menu" href="javascript:void(0)">Done</a>
                         <input id="roomsVal" type="hidden" value="1">
                         <input id="adultsVal" type="hidden" value="1">
                         <input id="childrenVal" type="hidden" value="0"></span></span></span></span><span class="input-search-btn hidden-xs">

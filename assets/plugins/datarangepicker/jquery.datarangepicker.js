@@ -919,14 +919,15 @@
       var isOpen = box.is(':visible');
       if (!isOpen) {
         open(opt.duration);
-        $('.date-group').addClass('active');
-        $('.people-count').removeClass('active');
+        // $('.date-group').addClass('active');
+        // $('.people-count').removeClass('active');
         // if ( $(window).width() > 767 ) {
         //   $('.black-bg-search').fadeIn(opt.duration);
         // }
         // showDaysBorders();
       } else {
-        closeDatePicker();
+        // closeDatePicker();
+        $('.people-count').addClass('open');
       }
     }).bind('change.datepicker', function(evt) {
       checkAndSetDefaultValue();
@@ -2563,12 +2564,12 @@
         }
       });
 
-      $('.people-count .dropdown-toggle').click(function() {
-        closeDatePicker();
-        // if ( $(window).width() > 767 ) {
-        //   $('.black-bg-search').fadeIn(opt.duration);
-        // }
-      });
+      // $('.people-count .dropdown-toggle').click(function() {
+      //   closeDatePicker();
+      //   // if ( $(window).width() > 767 ) {
+      //   //   $('.black-bg-search').fadeIn(opt.duration);
+      //   // }
+      // });
       // $(window).resize(function() {
       //   if ( box.is(':visible') ) {
       //     if ( $(window).width() > 767 ) {
