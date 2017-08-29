@@ -542,6 +542,25 @@ button[type="button"].btn:focus {
   margin-top: -3px;
 }
 
+.input-group-btn .btn {
+  border-radius: 50% !important;
+  line-height: 0;
+}
+
+.input-group-btn .btn:hover {
+  border-width: 2px;
+  background-color: transparent !important;
+  color: inherit;
+}
+
+.input-group-btn .btn-info:hover {
+  color: #636e80;
+}
+
+.input-group-btn .btn-warning:hover {
+  color: #f68d2a;
+}
+
 .avail {
   margin-left: 10px;
   margin-top: 2px;
@@ -12065,25 +12084,6 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .people-count .book-menu .room .input-group {
   width: 85%;
-}
-
-.people-count .book-menu .room .input-group .input-group-btn .btn {
-  border-radius: 50% !important;
-  line-height: 0;
-}
-
-.people-count .book-menu .room .input-group .input-group-btn .btn:hover {
-  border-width: 2px;
-  background-color: transparent !important;
-  color: inherit;
-}
-
-.people-count .book-menu .room .input-group .input-group-btn .btn-info:hover {
-  color: #636e80;
-}
-
-.people-count .book-menu .room .input-group .input-group-btn .btn-warning:hover {
-  color: #f68d2a;
 }
 
 .people-count .book-menu .room .form-control {

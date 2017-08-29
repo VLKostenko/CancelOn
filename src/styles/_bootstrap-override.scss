@@ -453,6 +453,28 @@ footer {
   }
 }
 
+.input-group-btn {
+  .btn {
+    border-radius: 50% !important;
+    line-height: 0;
+    &:hover {
+      border-width: 2px;
+      background-color: transparent !important;
+      color: inherit;
+    }
+  }
+  .btn-info {
+    &:hover {
+      color: #636e80;
+    }
+  }
+  .btn-warning {
+    &:hover {
+      color: #f68d2a;
+    }
+  }
+}
+
 .avail {
   margin-left: 10px;
   margin-top: 2px;
