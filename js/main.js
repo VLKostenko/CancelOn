@@ -113,42 +113,6 @@
     return o;
   };
 
-  var directBorder = function() {
-    var menu = $('.navbar-header').find('ul.menu'),
-      items = menu.find('>li'),
-      dummy = function() {};
-    if ( menu.length === 0 ) {
-      return;
-    }
-    var borderBox = $('<span class="border-box"></span>'),
-      curr = items.eq(0).get(0);
-    menu.append(borderBox);
-    setCurr(curr);
-
-    function move(e) {
-      borderBox.dequeue();
-      borderBox.animate({
-        width: e.offsetWidth - 20,
-        left: e.offsetLeft + 10
-      }, 300, 'easeInOutQuint');
-    }
-
-    function setCurr(e) {
-      borderBox.css({
-        'left': e.offsetLeft + 10 + 'px',
-        'width': e.offsetWidth - 20 + 'px'
-      });
-      curr = e;
-    }
-
-    items.each(function() {
-      var e = this;
-      $(this).hover(function() {
-        move(e);
-      }, dummy);
-    });
-  };
-
   /**
    * ------------------------------------------------------------------------------------------------------
    * Main Functions
@@ -771,13 +735,9 @@
   });
 
   $('.languages-menu .languages a').click(function() {
-    $('.languages-menu .languages a').removeClass('active');
-    $(this).addClass('active');
-  });
-
-  $('.languages-menu .choose-currency li a').click(function() {
-    $('.languages-menu .choose-currency li').removeClass('active');
-    $(this).parent('li').addClass('active');
+    $('#dropdownMenuLink2').html('');
+    $(this).clone().appendTo($('#dropdownMenuLink2'));
+    $('#dropdownMenuLink2').append('<span class="bs-caret"><span class="caret"></span></span>');
   });
 
   // $('.people-count .book-menu .btn-number').click(function() {
@@ -1356,6 +1316,7 @@
     items: 1,
     nav: true,
     dots: false,
+    // lazyLoad: true,
     singleItem: true
   });
 
@@ -1395,15 +1356,6 @@
     thumbItemClass: 'owl-thumb-item',
     touchDrag: false,
     mouseDrag: false
-  });
-
-  $('.currency-slider').owlCarousel({
-    loop: false,
-    items: 1,
-    nav: true,
-    navText: ["<img src='../images/icons/left-arrow.svg'><span>Previous Currencies</span>","<img src='../images/icons/right-arrow.svg'><span>Next Currencies</span>"],
-    dots: false,
-    singleItem: true
   });
 
   $('.same-height').matchHeight();
@@ -1642,7 +1594,6 @@
     } else {
       $('.payment-details-wrapper .payment-details .sidebar-block').removeClass('draggable');
     }
-    directBorder();
 
   });
 

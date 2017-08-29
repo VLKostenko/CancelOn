@@ -3,7 +3,7 @@
   box-shadow: 0 1px 3px rgba(108,118,123,.15);
 }
 .hotel-info {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   float: left;
   background-color: #ffffff;
   position: relative;
@@ -15,7 +15,7 @@
     padding-top: 10px;
   }
   .info-label {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: 500;
     color: #fff;
@@ -287,7 +287,7 @@
     float: left;
     box-shadow: 0 1px 3px rgba(108,118,123,.15);
     padding: 15px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     .sidebar-wrapper {
       padding-top: 50px;
       .sidebar-logo {
@@ -486,7 +486,7 @@
       width: 70px;
       float: right;
       margin-top: 21px;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Roboto", sans-serif;
       a {
         padding: 8px 24px;
         color: #fff;
@@ -500,7 +500,7 @@
   }
   table {
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin-bottom: 0;
     table-layout: fixed;
     .info-label {
@@ -628,7 +628,7 @@
             width: 100%;
             height: 1px;
             color: #fff;
-            font-family: 'Open Sans', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-weight: 100;
             pointer-events: none;
             @include crossBrowser(transition, .2s ease-in);
@@ -1012,13 +1012,13 @@
     padding: 20px 20px;
     color: #fff;
     text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
   }
   &_block {
     background: #fff;
     padding: 20px 15px 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     &-item {
       margin-bottom: 30px;
@@ -1050,12 +1050,12 @@
     padding: 20px 20px;
     color: #fff;
     text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
   }
   &_block {
     background: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     position: relative;
     &-tabs {
@@ -1860,12 +1860,12 @@
         }
         .label-name {
           font-size: 14px;
-          font-family: 'Open Sans', sans-serif;
+          font-family: "Roboto", sans-serif;
           font-weight: 600;
         }
         .label-value {
           font-size: 14px;
-          font-family: 'Open Sans', sans-serif;
+          font-family: "Roboto", sans-serif;
           font-weight: 600;
           &.rating {
             font-size: 28px;

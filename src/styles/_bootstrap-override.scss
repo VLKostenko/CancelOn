@@ -36,14 +36,7 @@ button[type="button"] {
   }
   .navbar-nav {
     li {
-      display: inline-block;
-      position: relative;
-      z-index: 100;
       a {
-        padding: 10px;
-        &:hover {
-          color: #fff;
-        }
         .fa {
           margin-right: 5px;
         }
@@ -93,18 +86,6 @@ button[type="button"] {
           }
         }
       }
-    }
-    .border-box {
-      background: transparent none repeat scroll 0 0;
-      border-bottom: 4px solid #1d79d6;
-      bottom: auto;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: -35px;
-      width: 50px;
-      z-index: 1;
-      margin: auto;
     }
     .open {
       a, a:focus, a:hover {
@@ -161,10 +142,11 @@ button[type="button"] {
 }
 
 .navbar-right {
-  margin-right: -5px;
-  right: initial;
-  left: 0;
-  top: 110px;
+  margin-right: -10px;
+  clear: both;
+  //&.down-menu {
+  //  margin-right: 12px !important;
+  //}
 }
 
 .dropdown-item {
@@ -187,12 +169,11 @@ button[type="button"] {
 
 .navbar-default .navbar-nav {
   li {
-    position: initial;
     a {
       color: #ffffff;
     }
     a:focus, a:hover {
-      //color: $main-blue;
+      color: $main-blue;
     }
   }
 }
@@ -330,7 +311,7 @@ footer {
   color: #000000;
   font-size: 14px;
   font-weight: normal;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .dropdown-toggle:hover .dropdown-menu {
@@ -395,7 +376,7 @@ footer {
   .input-search {
     background: #fff;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #000;
     font-weight: 500;
     width: 45%;
@@ -420,7 +401,7 @@ footer {
     }
     &::-moz-placeholder {
       font-size: 16px !important;
-      font-family: 'Open Sans', sans-serif !important;
+      font-family: 'Roboto', sans-serif !important;
       color: #000 !important;
       font-weight: 500 !important;
     }
@@ -476,7 +457,7 @@ footer {
   margin-left: 10px;
   margin-top: 2px;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   float: left;
 }
 
@@ -491,12 +472,9 @@ footer {
 
 .panel-heading {
   border-radius: 0;
-  background-color: #eaeef0 !important;
+  background-color: #d0d8e1 !important;
   padding: 0;
   margin-bottom: 1px;
-  h4 {
-    font-weight: 600;
-  }
 }
 
 .panel-collapse {
@@ -543,7 +521,7 @@ footer {
   background: #68b925;
 }
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
 .table>tbody>tr>td,

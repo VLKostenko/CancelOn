@@ -54,11 +54,7 @@
 
 nav {
   .navbar-header {
-    display: flex;
-    align-items: center;
-    .navbar-nav {
-      margin-left: 75px;
-    }
+    width: 41%;
   }
 }
 footer .navbar-header {
@@ -70,10 +66,6 @@ footer .navbar-header {
   float: left;
   padding-left: 15px;
   padding-right: 15px;
-  height: 110px;
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
   .form-group {
     margin-left: 20px;
   }
@@ -92,7 +84,7 @@ footer .navbar-header {
   box-shadow: 0 1px 3px rgba(108,118,123,.15);
   width: 100%;
   padding: 40px 50px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Montserrat", sans-serif;
   &_smile {
     font-size: 72px;
     font-weight: 400;
@@ -140,7 +132,7 @@ footer .navbar-header {
   margin-bottom: 15px;
   margin-top: 15px;
   &_title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Montserrat", sans-serif;
     h4 {
       margin-bottom: 15px;
     }
@@ -203,7 +195,7 @@ footer .navbar-header {
 }
 
 .grid-item {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   @include calc(width, '(100% - 15px)/2');
   float: left;
   margin-bottom: 15px;
@@ -322,7 +314,7 @@ footer .navbar-header {
   }
   .price-line {
     .info-label {
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-size: 10px;
       font-weight: 500;
       color: #fff;
@@ -474,7 +466,7 @@ footer .navbar-header {
         top: 2px;
       }
       .more-items {
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 300;
         font-size: 12px;
         color: #0c8a96;
@@ -557,7 +549,7 @@ footer .navbar-header {
     display: none;
   }
   .booked {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
     margin-top: 15px;
@@ -704,7 +696,7 @@ footer .navbar-header {
     }
     .watching-now {
       display: block;
-      font-family: 'Open Sans', sans-serif;
+      font-family: Roboto,sans-serif;
       font-size: 12px;
       font-weight: 400;
       margin-bottom: 0;
@@ -872,7 +864,7 @@ footer .navbar-header {
     font-size: 18px;
     margin-top: 8px;
     margin-bottom: 5px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     a {
       color: #000;
       &:hover,
@@ -887,7 +879,7 @@ footer .navbar-header {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 22px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   h3 {
     width: 145px;
@@ -895,7 +887,7 @@ footer .navbar-header {
     border-bottom: 1px solid #fff;
     padding: 9px;
     margin: 19px auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 21px;
     color: white;
@@ -918,7 +910,7 @@ footer .navbar-header {
     background-color: #f68d2a;
     padding: 5px 15px 3px;
     color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 9pt;
     float: right;
     cursor: pointer;
@@ -946,7 +938,7 @@ footer .navbar-header {
 footer {
   background-color: #282d36;
   width: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Montserrat", sans-serif;
   .container {
     max-width: 1170px!important;
   }
@@ -963,11 +955,11 @@ footer {
     }
   }
   h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
   a {
     font-size: 14px !important;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Montserrat", sans-serif;
     &:hover {
       text-decoration: underline !important;
     }
@@ -987,7 +979,7 @@ footer {
     margin-top: 42px;
     font-weight: 400;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserat', sans-serif;
   }
   .widget-container {
     font-family: "Montserat", sans-serif;
@@ -1063,7 +1055,7 @@ footer {
 }
 
 aside {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: transparent;
   margin-left: 15px;
   float: left;
@@ -1113,7 +1105,7 @@ aside {
     margin: -5px;
     margin-left: -4px;
     margin-top: 11px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   #amount2 {
     width: 25%;
@@ -1124,7 +1116,7 @@ aside {
     margin: -5px;
     margin-left: 10px;
     margin-top: 11px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   .range-divider {
     position: relative;
@@ -1144,7 +1136,7 @@ aside {
   .panel-title {
     > a {
       &.collapsed {
-        background-color: #eaeef0;
+        background-color: #ebebeb;
       }
     }
   }
@@ -1453,7 +1445,7 @@ aside {
     z-index: 2;
     left: 30px;
     top: 75px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto",sans-serif;
     color: #9d9d9d;
   }
   &.scrolled {
@@ -1560,10 +1552,6 @@ aside {
 .sign-in-menu {
   padding: 15px 0 13px;
   min-width: 320px;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 110px;
   .big-text {
     & + a {
       line-height: 21px;
@@ -1576,28 +1564,8 @@ aside {
       color: #000!important;
     };
   }
-  .wrapper {
-    position: relative;
-    margin-bottom: 10px;
-  }
-  label {
+  p {
     margin: 0;
-    color: #333;
-    font-size: 16px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 0;
-    top: 10px;
-    @include crossBrowser(transition, .2s ease all);
-  }
-  input {
-    &:focus ~ label,
-    &:valid ~ label {
-      top: -15px;
-      font-size: 14px;
-      color: $main-blue;
-    }
   }
   .log-input {
     border: none;
@@ -1613,7 +1581,6 @@ aside {
     text-transform: uppercase;
     width: 100%;
     display: block;
-    border: 0;
     &:hover {
       color: #fff!important;
       background: lighten($main-blue, 5%)!important;
@@ -1621,66 +1588,39 @@ aside {
   }
   .socials {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     height: 45px;
     padding-left: 10px;
     a {
-      width: 40px;
+      width: 20px;
       text-align: center;
-      padding: 0 !important;
-      margin-left: 5px;
-      color: #333 !important;
+      color: #333!important;
       &:hover {
-        color: $main-blue !important;
+        color: $main-blue!important;
       }
       i {
         font-size: 16px;
       }
     }
   }
-  .last-line-btn {
-    color: #a1a1a1 !important;
-    margin-top: 80px;
-    padding: 0 !important;
-  }
   @include placeholder-color('.log-input', #a1a1a1);
 }
 
 .languages-menu {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 110px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  .title {
-    font-size: 24px;
-    color: #7b7b7b;
-    margin-bottom: 10px;
+  @media (min-width: 768px) {
+    right: -1px;
+    left: initial;
+    min-width: 140px;
   }
-  //@media (min-width: 768px) {
-  //  right: -1px;
-  //  left: initial;
-  //  min-width: 140px;
-  //}
   .languages {
     padding-left: 0;
     padding-right: 0;
-    width: 8%;
-    float: left;
     a {
       float: left;
       width: 100%;
       color: #000 !important;
-      padding: 5px 10px!important;
-      border: 2px solid transparent;
-      margin-bottom: 5px;
-      margin-left: -10px;
-      &.active {
-        border: 2px solid $main-blue;
-        border-radius: 2px;
-      }
+      padding: 5px 13px;
       img {
         margin-right: 12px;
         margin-top: -1px;
@@ -1689,86 +1629,6 @@ aside {
         color: $main-blue!important;
       }
 
-    }
-  }
-  .popular-currencies {
-    float: left;
-    width: 22%;
-    margin-left: 50px;
-  }
-  .all-currencies {
-    float: left;
-    width: 58%;
-    margin-left: 0;
-  }
-  .currency-slider {
-    position: relative;
-    .item {
-      padding-left: 10px;
-    }
-    .ul-list {
-      width: 34%;
-      float: left;
-      margin-left: -10px;
-    }
-    .owl-nav {
-      .owl-prev,
-      .owl-next {
-        position: absolute;
-        right: -120px;
-        left: initial;
-        width: 186px;
-        height: 100px;
-        opacity: 1;
-        background: #fff;
-        @include crossBrowser(transition, .2s ease-in);
-        img {
-          max-width: 85px;
-          display: block;
-          margin: auto;
-        }
-        span {
-          display: block;
-          width: 100%;
-          font-size: 20px;
-          float: left;
-          text-align: center;
-        }
-        &.disabled {
-          @include crossBrowser(transform, scale(0.8));
-          opacity: .5;
-        }
-      }
-      .owl-next {
-        top: 50px;
-      }
-      .owl-prev {
-        top: 150px;
-      }
-    }
-  }
-  .ul-list {
-    margin-left: 0;
-    margin-top: 20px;
-    li {
-      display: block;
-      margin-bottom: 10px;
-      &.active {
-        a {
-          border: 2px solid $main-blue;
-          border-radius: 2px;
-        }
-      }
-      a {
-        color: #000 !important;
-        padding: 5px 10px!important;
-        border: 2px solid transparent;
-        margin-bottom: 5px;
-        margin-left: -10px;
-        &:hover {
-          color: $main-blue!important;
-        }
-      }
     }
   }
 }
@@ -1792,7 +1652,8 @@ aside {
   }
 }
 #dropdownMenuLink2 {
-  min-width: 192px;
+  width: 127px;
+  height: 45px;
   a {
     img {
       margin-right: 5px;
@@ -1805,10 +1666,10 @@ aside {
   }
 }
 .filter-top {
-  //height: 55px;
-  //padding-top: 18px;
-  //padding-left: 15px;
-  //padding-right: 15px;
+  height: 55px;
+  padding-top: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
   z-index: 12;
 
@@ -1820,167 +1681,23 @@ aside {
   .search-filter {
     float: left;
     width: 225px;
-    background: #f4f6f7;
     //@media screen and (min-width: 1441px) {
     //  $aside-width: 14%;
     //  width: $aside-width;
     //}
-    p {
-      margin: 17px 0;
-    }
     .hide-filter {
-      margin-right: 15px;
-      margin-top: 15px;
-      margin-left: 15px;
-    }
-    .show-all {
-      margin-right: 25px;
-      margin-top: 2px;
-      font-size: 12px;
-      text-transform: initial;
-      color: $main-blue;
+      margin-right: 28px;
     }
   }
   .content-settings {
-    background: #fff;
     float: left;
-    @include calc(width, '100% - 225px');
+    margin-left: 5px;
+    @include calc(width, '100% - 225px - 5px');
     //@media screen and (min-width: 1441px) {
     //  $content-settings-width: 86%;
     //  @include calc(width, '#{$content-settings-width} - 5px');
     //
     //}
-    .sort-button {
-      float: left;
-      position: relative;
-      &.last {
-        a, label {
-          border-right: 1px solid #ededed;
-        }
-      }
-      a {
-        padding: 18px 15px;
-        display: block;
-        float: left;
-        border-left: 1px solid #ededed;
-        @include crossBrowser(transition, .2s ease-in);
-        &:hover {
-          background: #f3f4f7;
-        }
-        span {
-          color: #000;
-        }
-        i {
-          margin-left: 10px;
-          color: $main-blue;
-        }
-      }
-      input {
-        display: none;
-        &:checked ~ label {
-          &:before {
-            background: $main-blue;
-            border-color: $main-blue;
-          }
-          &:after {
-            opacity: 1;
-          }
-        }
-      }
-      label {
-        margin: 0;
-        padding: 18px 15px 18px 35px;
-        border-left: 1px solid #ededed;
-        cursor: pointer;
-        /* Disable Text Selecting */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        &:before {
-          content: '';
-          width: 15px;
-          height: 15px;
-          border-radius: 2px;
-          position: absolute;
-          z-index: 1;
-          left: 12px;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          background: #fff;
-          border: 1px solid #ced7de;
-          @include crossBrowser(transition, .2s ease-in);
-        }
-        &:after {
-          content: '';
-          width: 11px;
-          height: 10px;
-          position: absolute;
-          z-index: 2;
-          left: 14px;
-          top: 1px;
-          bottom: 0;
-          margin: auto;
-          background: url('../images/icons/check-mark.svg') no-repeat 50% 50%;
-          opacity: 0;
-          @include crossBrowser(transition, .2s ease-in);
-        }
-        &:hover {
-          background: #f3f4f7;
-        }
-      }
-    }
-    .view-icons {
-      padding: 17px 15px;
-      .btn {
-        padding: 0;
-        width: 32px;
-        height: 20px;
-        border-radius: 0;
-        background-size: contain;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        box-shadow: none;
-        opacity: .15;
-        margin-top: 0;
-        @include crossBrowser(transition, .2s ease-in);
-        &:before,
-        &:after {
-          display: none;
-        }
-        &:hover {
-          opacity: 1;
-        }
-        &.active {
-          opacity: 1;
-        }
-        &.list-btn {
-          background-image: url('../images/icons/list-icon.svg');
-        }
-        &.grid-btn {
-          background-image: url('../images/icons/grid-icon.svg');
-        }
-        &.map-btn {;
-          opacity: 1;
-          input {
-            &:checked ~ label {
-              opacity: 1;
-            }
-          }
-          label {
-            opacity: .15;
-            background-image: url('../images/icons/map-icon.svg');
-            @include crossBrowser(transition, .2s ease-in);
-            &:hover {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
     .display {
       float: left;
       padding-right: 20px;
@@ -1997,7 +1714,7 @@ aside {
 
 .check {
   float: left;
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .loading-more {
@@ -2009,7 +1726,7 @@ aside {
   width: 100%;
   float: left;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -2361,7 +2078,7 @@ aside {
   //position: relative;
   .bootstrap-select {
     .dropdown-menu {
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Roboto", sans-serif;
     }
   }
 }
@@ -2374,7 +2091,7 @@ aside {
   text-align: center;
 }
 .pagination {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto",sans-serif;
   margin-top: 0;
   ul {
     li {
@@ -2450,13 +2167,13 @@ aside {
   position: relative;
   margin-bottom: 15px;
   &_title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
   }
   &_text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 600;
   }

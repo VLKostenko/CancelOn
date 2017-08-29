@@ -23,10 +23,10 @@
 @media screen and (max-width: 1440px) {
   nav {
     .navbar-header {
-      width: 55%;
+      width: 49%;
     }
     .navbar-menu {
-      width: 45%;
+      width: 51%;
     }
   }
 }
@@ -578,7 +578,7 @@
       li {
         width: 100%;
         a {
-          font-family: 'Open Sans', sans-serif;
+          font-family: "Roboto", sans-serif;
           display: block;
           color: #fff;
           font-size: 16px;
@@ -663,7 +663,7 @@
       position: absolute;
       z-index: 99999;
       color: #00c2ff;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Roboto", sans-serif;
       @include crossBrowser(transition, left .3s);
     }
   }
@@ -2210,7 +2210,7 @@
       display: none;
     }
     .views-bottom {
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Roboto", sans-serif;
       color: #68b925;
       font-size: 12px;
       text-transform: uppercase;
@@ -2609,7 +2609,7 @@
               }
             }
             p {
-              font-family: 'Open Sans', sans-serif;
+              font-family: "Roboto", sans-serif;
               font-weight: 600;
               text-align: center;
               position: relative;

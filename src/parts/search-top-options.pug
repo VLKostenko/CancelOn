@@ -1,48 +1,23 @@
 .container.mt-15.remove-padding-md.pl-xs-0.pr-xs-0
 	.filter-top.white
 		.search-filter
-			a.pull-left.hide-filter(href='javascript:void(0)')
-				span.menu-icon.active
-			p.big-text.text-uppercase.font-weight-600.mnl-5.hidden-xs
-				| Filter
-				a.pull-right(href='javascript:void(0)', class='show-all') Show All
+			p.big-text.text-uppercase.font-weight-600.font-roboto.mnl-5.hidden-xs
+				| Search Filter
+				a.pull-right.hide-filter(href='javascript:void(0)')
+					span.menu-icon.active
 		.content-settings
-			.sort-button.sort-price
-				a(href='javascript:void(0)', data-sort='price-high-low')
-					span Price
-					i.fa.fa-sort-amount-desc(aria-hidden='true')
-			.sort-button.guest-rating
-				a(href='javascript:void(0)', data-sort='price-low-high')
-					span Guest Rating
-					i.fa.fa-sort-amount-asc(aria-hidden='true')
-			.sort-button.recommended
-				a(href='javascript:void(0)', data-sort='recommended')
-					span Recommended
-					i.fa.fa-sort-amount-desc(aria-hidden='true')
-			.sort-button.best-price
-				input#best-price-guaranted(type='checkbox', data-sort='best-price')
-				label(for='best-price-guaranted') Best Price Guaranted
-			.sort-button.last.top-deal
-				input#top-deal(type='checkbox', data-sort='top-deal')
-				label(for='top-deal') Top Deal
-			.view-icons.pull-right
-				a.btn.list-btn.active(href='javascript:void(0)')
-				a.btn.grid-btn.ml-10(href='javascript:void(0)')
-				a.btn.map-btn.ml-10.onoffswitch(href='javascript:void(0)')
-					input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1')
-					label.btn.onoffswitch-label(for='myonoffswitch1')
-			//.display.hidden-xs.hidden-sm
-			//	a.list-btn.active(href='javascript:void(0)')
-			//		i.fa.fa-bars(aria-hidden='true')
-			//	a.grid-btn.ml-5(href='javascript:void(0)')
-			//		i.fa.fa-th(aria-hidden='true')
-			//select.selectpicker.pull-left
-			//	option Low to High
-			//	option High to Low
-			//	option Newest
-			//p.avail Available 471 Of 471
-			//.onoffswitch.pull-right
-			//	input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1')
-			//	label.onoffswitch-label(for='myonoffswitch1')
-			//		span.onoffswitch-inner
-			//		span.onoffswitch-switch
+			.display.hidden-xs.hidden-sm
+				a.list-btn.active(href='javascript:void(0)')
+					i.fa.fa-bars(aria-hidden='true')
+				a.grid-btn.ml-5(href='javascript:void(0)')
+					i.fa.fa-th(aria-hidden='true')
+			select.selectpicker.pull-left
+				option Low to High
+				option High to Low
+				option Newest
+			p.avail Available 471 Of 471
+			.onoffswitch.pull-right
+				input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1')
+				label.onoffswitch-label(for='myonoffswitch1')
+					span.onoffswitch-inner
+					span.onoffswitch-switch
