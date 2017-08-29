@@ -1047,21 +1047,26 @@
 
   $('#roomsCount').on('change', function() {
     var room = $('.search-filter-block .book-menu .room');
+
     room.addClass('hidden');
     if ( $(this).val() === '1' ) {
       room.eq(0).removeClass('hidden');
+      $('#roomsVal').val('1');
     } else if ( $(this).val() === '2' ) {
       room.eq(0).removeClass('hidden');
       room.eq(1).removeClass('hidden');
+      $('#roomsVal').val('2');
     } else if ( $(this).val() === '3' ) {
       room.eq(0).removeClass('hidden');
       room.eq(1).removeClass('hidden');
       room.eq(2).removeClass('hidden');
+      $('#roomsVal').val('3');
     } else if ( $(this).val() === '4' ) {
       room.eq(0).removeClass('hidden');
       room.eq(1).removeClass('hidden');
       room.eq(2).removeClass('hidden');
       room.eq(3).removeClass('hidden');
+      $('#roomsVal').val('4');
     }
     countBookedVals('add');
   });
