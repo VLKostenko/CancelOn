@@ -71,7 +71,10 @@ var path = {
       'assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js',
       'assets/plugins/semantic-ui/semantic.min.js',
       'assets/plugins/disableScroll/jquery.disablescroll.min.js',
-      'assets/plugins/chart.js/dist/Chart.min.js'
+      'assets/plugins/chart.js/dist/Chart.min.js',
+      'assets/plugins/intl-tel-input/build/js/intlTelInput.min.js',
+      'assets/plugins/jquery.creditCardValidator.js',
+      'assets/plugins/inputmask/jquery.inputmask.bundle.min.js'
     ],
     css: folders.src + 'styles/**/*.scss',
     less: folders.src + 'styles/**/*.less',

@@ -781,26 +781,28 @@ form(data-toggle='validator', role='form')
                label.control-label(for='inputCountry') Country
                   span.danger *
                select#inputCountry.selectpicker.form-control.list-of-countries(name='Country')
+                  option(value='Australia', selected='selected') Australia
+                  option(value='France') France
+                  option(value='Germany') Germany
+                  option(value='Italy') Italy
+                  option(value='New Zealand') New Zealand
+                  option(value='Spain') Spain
+                  option(value='United Kingdom') United Kingdom
+                  option(value='United States') United States
+                  option(disabled) ---------------------------------------------------------------------------------------
                   - for ( var i = 0; i < countriesList.length; i++ ) {
-                     - if ( i == 9 ) {
-                        option(value=countriesList[i].name, selected='selected')=countriesList[i].name
-                     - } else {
-                        option(value=countriesList[i].name)=countriesList[i].name
-                     - }
+                     option(value=countriesList[i].name)=countriesList[i].name
+                     //- if ( i == 9 ) {
+                     //   option(value=countriesList[i].name, selected='selected')=countriesList[i].name
+                     //- } else {
+                     //
+                     //- }
                   - }
                a.find-my-location(href='javascript:void(0)') Find my location
             .col-sm-6.form-group
                label.control-label(for='inputPhone') Phone
                   span.danger *
                .phone-number-block.clearfix
-                  select#inputCodePhone.selectpicker.form-control.list-of-phones(name='Phone Code')
-                     - for ( var i = 0; i < countriesList.length; i++ ) {
-                        - if ( i == 9 ) {
-                           option(value=countriesList[i].code, selected='selected')=countriesList[i].code
-                        - } else {
-                           option(value=countriesList[i].code)=countriesList[i].code
-                        - }
-                     - }
                   input#inputPhone.form-control(name='Phone Number', type='text', required, data-error='This field is required')
             .col-sm-6.form-group.states-usa.hidden
                label.control-label(for='inputPhone') State
@@ -850,12 +852,13 @@ form(data-toggle='validator', role='form')
                      label.control-label(for='inputCardPostal') Postal Code
                         span.danger *
                      input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
-                  .col-sm-6.form-group.has-feedback.card-number-input
+                  .col-sm-6.form-group.card-number-input
                      label.control-label(for='inputCardNumber') Card Number
                         span.danger *
-                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='off', data-error='This field is required', data-pattern-error='Your card number is invalid', pattern='^([0-9]{4}( |)){3}[0-4]{4}$')
-                     img(src='./images/icons/credit/number1.png', alt='number')
-                     .help-block.with-errors
+                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='on')
+                     //.help-block.with-errors
+                     //   ul.list-unstyled
+                     //      li Your card number is invalid
 
                   .last-line-wrapper
                      .col-sm-6.form-group

@@ -566,6 +566,15 @@
       $('.list-of-countries').val(country);
       $('.list-of-countries').selectpicker('refresh');
     });
+    setTimeout(function() {
+      var selected = $('.list-of-countries').find('option:selected').val();
+      console.log(selected);
+      if ( selected === 'United States' ) {
+        $('.states-usa').removeClass('hidden');
+      } else {
+        $('.states-usa').addClass('hidden');
+      }
+    }, 400);
   }
 
   function isNumber(evt) {
@@ -834,12 +843,69 @@
   });
 
   if ( $('.card-number-input').length ) {
-    $('.card-number-input .card-input').keypress(function (event) {
-      var $this = $(this);
-      if ( (($this.val().length + 1) % 5) === 0 && ($this.val().length < 19 ) ) {
-        $this.val($this.val() + " ");
+    $('.card-number-input .card-input').keyup(function () {
+      if ( $(this).val().length <= 0 || $(this).val().length < 19 ) {
+        $("#inputCardNumber").closest('.card-number-input').removeClass('succeed');
+      } else {
+        $("#inputCardNumber").closest('.card-number-input').addClass('succeed');
       }
     });
+  }
+
+  function validateCreditCard() {
+    var $card = $("#inputCardNumber");
+    $card.validateCreditCard(function (result) {
+      $(this).removeAttr('class');
+      // $(this).removeClass('visa_electron');
+      // $(this).removeClass('mastercard');
+      // $(this).removeClass('maestro');
+      // $(this).removeClass('discover');
+      // $(this).removeClass('valid');
+
+      if ( result.card_type === null ) {
+        $('.vertical.maestro').slideUp({
+          duration: 200
+        }).animate({
+          opacity: 0
+        }, {
+          queue: false,
+          duration: 200
+        });
+        return;
+      }
+      $(this).addClass(result.card_type.name);
+      $(this).attr('data-cardtype-field', result.card_type.name);
+      if ( result.card_type.name === 'maestro' ) {
+        $('.vertical.maestro').slideDown({
+          duration: 200
+        }).animate({
+          opacity: 1
+        }, {
+          queue: false
+        });
+      } else {
+        $('.vertical.maestro').slideUp({
+          duration: 200
+        }).animate({
+          opacity: 0
+        }, {
+          queue: false,
+          duration: 200
+        });
+      }
+      if ( result.valid ) {
+        console.log(result, 'valid');
+        return $(this).addClass('validcard');
+      } else {
+        console.log(result, 'not valid');
+        return $(this).removeClass('validcard');
+      }
+    }, {
+      accept: ['visa', 'visa_electron', 'mastercard', 'maestro', 'discover']
+    });
+  }
+  if ( $("#inputCardNumber").length ) {
+    validateCreditCard();
   }
 
   $('#inputCardCVC').on('focus', function (e) {
@@ -1359,6 +1425,17 @@
     $('.same-height-map').matchHeight();
   }
 
+  var inputPhone = $('#inputPhone');
+  if ( inputPhone.length ) {
+    inputPhone.intlTelInput({
+      autoPlaceholder: true,
+      nationalMode: false,
+      preferredCountries: ['us', 'fr', 'gb']
+    });
+    if ( inputPhone.data('default-country') !== "" && inputPhone.data('default-country') !== undefined )
+      inputPhone.intlTelInput('setCountry', inputPhone.data('default-country'));
+  }
+
   /**
    * ------------------------------------------------------------------------------------------------------
    * Events
@@ -1590,6 +1667,14 @@
       $('.payment-details-wrapper .payment-details .sidebar-block').removeClass('draggable');
     }
 
+    // $(selector).inputmask("99-9999999");  //static mask
+    // $(selector).inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax
+    $('#inputCardNumber').inputmask({
+      mask: '9999 9999 9999 9999',
+      placeholder: ''
+    }); //specifying options
+    // 5168 7554 0345 5161
+
   });
 
   window.addEventListener('resize', function() {
@@ -1735,10 +1820,21 @@
 
   window.addEventListener('load', function() {
 
-    $('.list-of-countries ul.dropdown-menu li').on('click', 'a', function(e) {
-      e.preventDefault();
-      // console.log($(this).children('.text').text());
-      if ( $(this).children('.text').text() === 'United States' ) {
+    // $('.list-of-countries').on('change', function(e) {
+    //   console.log($(this).val());
+    //   e.preventDefault();
+    //   // console.log($(this).children('.text').text());
+    //   if ( $(this).val() === 'United States' ) {
+    //     $('.states-usa').removeClass('hidden');
+    //   } else {
+    //     $('.states-usa').addClass('hidden');
+    //   }
+    // });
+
+    $('.list-of-countries').on('change', function(){
+      var selected = $(this).find("option:selected").val();
+      console.log(selected);
+      if ( selected === 'United States' ) {
         $('.states-usa').removeClass('hidden');
       } else {
         $('.states-usa').addClass('hidden');

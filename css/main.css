@@ -11975,10 +11975,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   font-size: 12px;
 }
 
-.booking-table .date-group {
-  pointer-events: none;
-}
-
 .date-group {
   width: 100%;
   border-bottom: 2px solid transparent;
@@ -15385,7 +15381,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   display: block;
 }
 
-.payment-block .step .step-body .form-group.has-success input {
+.payment-block .step .step-body .form-group.has-success input, .payment-block .step .step-body .form-group.succeed input {
   border-color: #c8dd99;
 }
 
@@ -16188,9 +16184,17 @@ aside.show-on-map .panel-group .panel.panel-default {
   background-image: url("../images/country-flags/Zimbabwe.png");
 }
 
+.payment-block .step .step-body .form-group .intl-tel-input {
+  width: 100%;
+}
+
+.payment-block .step .step-body .form-group .intl-tel-input .country-list .divider {
+  padding-bottom: 0;
+}
+
 .payment-block .step .step-body .form-group .phone-number-block input {
   float: left;
-  width: calc(100% - 140px);
+  width: 100%;
 }
 
 .payment-block .step .step-body .form-group .find-my-location {
@@ -16568,6 +16572,56 @@ aside.show-on-map .panel-group .panel.panel-default {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.payment-block .step #inputCardNumber {
+  background-image: url("../images/creditcardtype.png"), url("../images/creditcardtype.png");
+  background-position: 9px -226px, 160% -102px;
+  background-size: 123px, 130px;
+  background-repeat: no-repeat;
+  padding-left: 66px;
+  width: 100%;
+  position: relative;
+}
+
+.payment-block .step #inputCardNumber.visa {
+  background-position: 9px -300px, 138% -102px;
+}
+
+.payment-block .step #inputCardNumber.visa_electron {
+  background-position: 9px -379px, 138% -102px;
+}
+
+.payment-block .step #inputCardNumber.mastercard {
+  background-position: 9px -457px, 138% -102px;
+}
+
+.payment-block .step #inputCardNumber.maestro {
+  background-position: 9px -535px, 138% -102px;
+}
+
+.payment-block .step #inputCardNumber.discover {
+  background-position: 9px -609px, 138% -102px;
+}
+
+.payment-block .step #inputCardNumber.valid.visa, .payment-block .step #inputCardNumber.validcard.visa {
+  background-position: 9px -300px, 138% -163px;
+}
+
+.payment-block .step #inputCardNumber.valid.visa_electron, .payment-block .step #inputCardNumber.validcard.visa_electron {
+  background-position: 9px -379px, 138% -163px;
+}
+
+.payment-block .step #inputCardNumber.valid.mastercard, .payment-block .step #inputCardNumber.validcard.mastercard {
+  background-position: 9px -457px, 138% -163px;
+}
+
+.payment-block .step #inputCardNumber.valid.maestro, .payment-block .step #inputCardNumber.validcard.maestro {
+  background-position: 9px -535px, 138% -163px;
+}
+
+.payment-block .step #inputCardNumber.valid.discover, .payment-block .step #inputCardNumber.validcard.discover {
+  background-position: 9px -609px, 138% -163px;
 }
 
 .payment-block .step .credit-card-info input {

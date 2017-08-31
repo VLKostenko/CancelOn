@@ -394,7 +394,8 @@
             }
           }
         }
-        &.has-success {
+        &.has-success,
+        &.succeed {
           input {
             border-color: #c8dd99;
           }
@@ -459,10 +460,18 @@
 
           }
         }
+        .intl-tel-input {
+          width: 100%;
+          .country-list {
+            .divider {
+              padding-bottom: 0;
+            }
+          }
+        }
         .phone-number-block {
           input {
             float: left;
-            @include calc(width, '100% - 140px');
+            width: 100%;
           }
         }
         .find-my-location {
@@ -783,6 +792,49 @@
           left: 0;
           right: 0;
           margin: auto;
+        }
+      }
+    }
+
+    #inputCardNumber {
+      background-image: url('../images/creditcardtype.png'), url('../images/creditcardtype.png');
+      background-position: 9px -226px, 160% -102px;
+      background-size: 123px, 130px;
+      background-repeat: no-repeat;
+      padding-left: 66px;
+      width: 100%;
+      position: relative;
+      &.visa {
+        background-position: 9px -300px, 138% -102px;
+      }
+      &.visa_electron {
+        background-position: 9px -379px, 138% -102px;
+      }
+      &.mastercard {
+        background-position: 9px -457px, 138% -102px;
+      }
+      &.maestro {
+        background-position: 9px -535px, 138% -102px;
+      }
+      &.discover {
+        background-position: 9px -609px, 138% -102px;
+      }
+      &.valid,
+      &.validcard {
+        &.visa {
+          background-position: 9px -300px, 138% -163px;
+        }
+        &.visa_electron {
+          background-position: 9px -379px, 138% -163px;
+        }
+        &.mastercard {
+          background-position: 9px -457px, 138% -163px;
+        }
+        &.maestro {
+          background-position: 9px -535px, 138% -163px;
+        }
+        &.discover {
+          background-position: 9px -609px, 138% -163px;
         }
       }
     }

@@ -53,6 +53,7 @@
     <link href="assets/plugins/animate.css/animate.min.css" rel="stylesheet">
     <link href="assets/plugins/photoswipe/dist/photoswipe.css" rel="stylesheet">
     <link href="assets/plugins/photoswipe/dist/default-skin/default-skin.css" rel="stylesheet">
+    <link href="assets/plugins/intl-tel-input/build/css/intlTelInput.css" rel="stylesheet">
     <!-- Main Template CSS-->
     <link href="css/main.min.css" rel="stylesheet">
   </head>
@@ -308,387 +309,581 @@
                     <div class="col-sm-6 form-group">
                       <label class="control-label" for="inputCountry">Country<span class="danger">*</span></label>
                       <select class="selectpicker form-control list-of-countries" id="inputCountry" name="Country">
-                        <option value="Abkhazia">Abkhazia</option>
-                        <option value="Afghanistan">Afghanistan</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Algeria">Algeria</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Armenia">Armenia</option>
                         <option value="Australia" selected="selected">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaijan">Azerbaijan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bahrain">Bahrain</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belarus">Belarus</option>
-                        <option value="Belgium">Belgium</option>
-                        <option value="Belize">Belize</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bhutan">Bhutan</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                        <option value="Botswana">Botswana</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="Brunei">Brunei</option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="Burkina Faso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Cameroon">Cameroon</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Cape Verde">Cape Verde</option>
-                        <option value="Central African Republic">Central African Republic</option>
-                        <option value="Chad">Chad</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Comoros">Comoros</option>
-                        <option value="Cook Islands">Cook Islands</option>
-                        <option value="Costa Rica">Costa Rica</option>
-                        <option value="Croatia">Croatia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Cyprus">Cyprus</option>
-                        <option value="Czech Republic">Czech Republic</option>
-                        <option value="Denmark">Denmark</option>
-                        <option value="Djibouti">Djibouti</option>
-                        <option value="Dominica">Dominica</option>
-                        <option value="Dominican Republic">Dominican Republic</option>
-                        <option value="East Timor">East Timor</option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="Egypt">Egypt</option>
-                        <option value="El Salvador">El Salvador</option>
-                        <option value="Equatorial Guinea">Equatorial Guinea</option>
-                        <option value="Eritrea">Eritrea</option>
-                        <option value="Estonia">Estonia</option>
-                        <option value="Ethiopia">Ethiopia</option>
-                        <option value="Fiji">Fiji</option>
-                        <option value="Finland">Finland</option>
                         <option value="France">France</option>
-                        <option value="Gabon">Gabon</option>
-                        <option value="Gambia">Gambia</option>
-                        <option value="Georgia">Georgia</option>
                         <option value="Germany">Germany</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="Greece">Greece</option>
-                        <option value="Grenada">Grenada</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Guinea">Guinea</option>
-                        <option value="Guinea-Bissau">Guinea-Bissau</option>
-                        <option value="Guyana">Guyana</option>
-                        <option value="Haiti">Haiti</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="Hungary">Hungary</option>
-                        <option value="Iceland">Iceland</option>
-                        <option value="India">India</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Iran">Iran</option>
-                        <option value="Iraq">Iraq</option>
-                        <option value="Ireland">Ireland</option>
-                        <option value="Israel">Israel</option>
                         <option value="Italy">Italy</option>
-                        <option value="Ivory Coast">Ivory Coast</option>
-                        <option value="Jamaica">Jamaica</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Jordan">Jordan</option>
-                        <option value="Kazakhstan">Kazakhstan</option>
-                        <option value="Kenya">Kenya</option>
-                        <option value="Kiribati">Kiribati</option>
-                        <option value="Kuwait">Kuwait</option>
-                        <option value="Kyrgyzstan">Kyrgyzstan</option>
-                        <option value="Laos">Laos</option>
-                        <option value="Latvia">Latvia</option>
-                        <option value="Lebanon">Lebanon</option>
-                        <option value="Lesotho">Lesotho</option>
-                        <option value="Liberia">Liberia</option>
-                        <option value="Libya">Libya</option>
-                        <option value="Liechtenstein">Liechtenstein</option>
-                        <option value="Lithuania">Lithuania</option>
-                        <option value="Luxembourg">Luxembourg</option>
-                        <option value="Macedonia">Macedonia</option>
-                        <option value="Madagascar">Madagascar</option>
-                        <option value="Malawi">Malawi</option>
-                        <option value="Malaysia">Malaysia</option>
-                        <option value="Maldives">Maldives</option>
-                        <option value="Mali">Mali</option>
-                        <option value="Malta">Malta</option>
-                        <option value="Marshall Islands">Marshall Islands</option>
-                        <option value="Mauritania">Mauritania</option>
-                        <option value="Mauritius">Mauritius</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Moldova">Moldova</option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="Mongolia">Mongolia</option>
-                        <option value="Montenegro">Montenegro</option>
-                        <option value="Morocco">Morocco</option>
-                        <option value="Myanmar">Myanmar</option>
-                        <option value="Namibia">Namibia</option>
-                        <option value="Nauru">Nauru</option>
-                        <option value="Nepal">Nepal</option>
-                        <option value="Netherlands">Netherlands</option>
                         <option value="New Zealand">New Zealand</option>
-                        <option value="Nicaragua">Nicaragua</option>
-                        <option value="Niger">Niger</option>
-                        <option value="Nigeria">Nigeria</option>
-                        <option value="Niue">Niue</option>
-                        <option value="North Korea">North Korea</option>
-                        <option value="Norway">Norway</option>
-                        <option value="Oman">Oman</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Palau">Palau</option>
-                        <option value="Palestine">Palestine</option>
-                        <option value="Panama">Panama</option>
-                        <option value="Papua New Guinea">Papua New Guinea</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Philippines">Philippines</option>
-                        <option value="Poland">Poland</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Qatar">Qatar</option>
-                        <option value="Romania">Romania</option>
-                        <option value="Russia">Russia</option>
-                        <option value="Rwanda">Rwanda</option>
-                        <option value="Samoa">Samoa</option>
-                        <option value="San Marino">San Marino</option>
-                        <option value="Saudi Arabia">Saudi Arabia</option>
-                        <option value="Senegal">Senegal</option>
-                        <option value="Serbia">Serbia</option>
-                        <option value="Seychelles">Seychelles</option>
-                        <option value="Sierra Leone">Sierra Leone</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Slovakia">Slovakia</option>
-                        <option value="Slovenia">Slovenia</option>
-                        <option value="Solomon Islands">Solomon Islands</option>
-                        <option value="South Africa">South Africa</option>
-                        <option value="South Korea">South Korea</option>
                         <option value="Spain">Spain</option>
-                        <option value="Sri Lanka">Sri Lanka</option>
-                        <option value="Sudan">Sudan</option>
-                        <option value="Suriname">Suriname</option>
-                        <option value="Swaziland">Swaziland</option>
-                        <option value="Sweden">Sweden</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Syria">Syria</option>
-                        <option value="Tajikistan">Tajikistan</option>
-                        <option value="Tanzania">Tanzania</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Togo">Togo</option>
-                        <option value="Tonga">Tonga</option>
-                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                        <option value="Tunisia">Tunisia</option>
-                        <option value="Turkey">Turkey</option>
-                        <option value="Turkmenistan">Turkmenistan</option>
-                        <option value="Tuvalu">Tuvalu</option>
-                        <option value="Uganda">Uganda</option>
-                        <option value="Ukraine">Ukraine</option>
-                        <option value="United Arab Emirates">United Arab Emirates</option>
                         <option value="United Kingdom">United Kingdom</option>
                         <option value="United States">United States</option>
+                        <option disabled>---------------------------------------------------------------------------------------</option>
+                        <option value="Abkhazia">Abkhazia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Afghanistan">Afghanistan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Albania">Albania</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Algeria">Algeria</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Andorra">Andorra</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Angola">Angola</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Argentina">Argentina</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Armenia">Armenia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Australia">Australia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Austria">Austria</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Bahamas">Bahamas</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Bahrain">Bahrain</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Bangladesh">Bangladesh</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Barbados">Barbados</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Belarus">Belarus</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Belgium">Belgium</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Belize">Belize</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Benin">Benin</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Bhutan">Bhutan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Bolivia">Bolivia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Botswana">Botswana</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Brazil">Brazil</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Brunei">Brunei</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Bulgaria">Bulgaria</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Burundi">Burundi</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Cambodia">Cambodia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Cameroon">Cameroon</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Canada">Canada</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Cape Verde">Cape Verde</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Central African Republic">Central African Republic</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Chad">Chad</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Chile">Chile</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="China">China</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Colombia">Colombia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Comoros">Comoros</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Cook Islands">Cook Islands</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Costa Rica">Costa Rica</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Croatia">Croatia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Cuba">Cuba</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Cyprus">Cyprus</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Czech Republic">Czech Republic</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Denmark">Denmark</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Djibouti">Djibouti</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Dominica">Dominica</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="East Timor">East Timor</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Ecuador">Ecuador</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Egypt">Egypt</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="El Salvador">El Salvador</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Eritrea">Eritrea</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Estonia">Estonia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Ethiopia">Ethiopia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Fiji">Fiji</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Finland">Finland</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="France">France</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Gabon">Gabon</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Gambia">Gambia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Georgia">Georgia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Germany">Germany</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Ghana">Ghana</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Greece">Greece</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Grenada">Grenada</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Guatemala">Guatemala</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Guinea">Guinea</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Guinea-Bissau">Guinea-Bissau</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Guyana">Guyana</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Haiti">Haiti</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Honduras">Honduras</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Hungary">Hungary</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Iceland">Iceland</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="India">India</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Indonesia">Indonesia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Iran">Iran</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Iraq">Iraq</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Ireland">Ireland</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Israel">Israel</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Italy">Italy</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Ivory Coast">Ivory Coast</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Jamaica">Jamaica</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Japan">Japan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Jordan">Jordan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Kenya">Kenya</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Kiribati">Kiribati</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Kuwait">Kuwait</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Laos">Laos</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Latvia">Latvia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Lebanon">Lebanon</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Lesotho">Lesotho</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Liberia">Liberia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Libya">Libya</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Lithuania">Lithuania</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Luxembourg">Luxembourg</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Macedonia">Macedonia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Madagascar">Madagascar</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Malawi">Malawi</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Malaysia">Malaysia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Maldives">Maldives</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Mali">Mali</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Malta">Malta</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Marshall Islands">Marshall Islands</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Mauritania">Mauritania</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Mauritius">Mauritius</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Mexico">Mexico</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Moldova">Moldova</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Monaco">Monaco</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Mongolia">Mongolia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Montenegro">Montenegro</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Morocco">Morocco</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Myanmar">Myanmar</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Namibia">Namibia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Nauru">Nauru</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Nepal">Nepal</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Netherlands">Netherlands</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="New Zealand">New Zealand</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Nicaragua">Nicaragua</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Niger">Niger</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Nigeria">Nigeria</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Niue">Niue</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="North Korea">North Korea</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Norway">Norway</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Oman">Oman</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Pakistan">Pakistan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Palau">Palau</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Palestine">Palestine</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Panama">Panama</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Paraguay">Paraguay</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Peru">Peru</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Philippines">Philippines</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Poland">Poland</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Portugal">Portugal</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Qatar">Qatar</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Romania">Romania</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Russia">Russia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Rwanda">Rwanda</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Samoa">Samoa</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="San Marino">San Marino</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Senegal">Senegal</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Serbia">Serbia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Seychelles">Seychelles</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Singapore">Singapore</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Slovakia">Slovakia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Slovenia">Slovenia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="South Africa">South Africa</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="South Korea">South Korea</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Spain">Spain</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Sudan">Sudan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Suriname">Suriname</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Swaziland">Swaziland</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Sweden">Sweden</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Switzerland">Switzerland</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Syria">Syria</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Tajikistan">Tajikistan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Tanzania">Tanzania</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Thailand">Thailand</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Togo">Togo</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Tonga">Tonga</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Tunisia">Tunisia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Turkey">Turkey</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Tuvalu">Tuvalu</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Uganda">Uganda</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="Ukraine">Ukraine</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="United Kingdom">United Kingdom</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
+                        <option value="United States">United States</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                         <option value="Uruguay">Uruguay</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                         <option value="Uzbekistan">Uzbekistan</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                         <option value="Vanuatu">Vanuatu</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                         <option value="Venezuela">Venezuela</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                         <option value="Vietnam">Vietnam</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                         <option value="Yemen">Yemen</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                         <option value="Zambia">Zambia</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                         <option value="Zimbabwe">Zimbabwe</option>
+                        <!--   option(value=countriesList[i].name, selected='selected')=countriesList[i].name-->
+                        <!---->
                       </select><a class="find-my-location" href="javascript:void(0)">Find my location</a>
                     </div>
                     <div class="col-sm-6 form-group">
                       <label class="control-label" for="inputPhone">Phone<span class="danger">*</span></label>
                       <div class="phone-number-block clearfix">
-                        <select class="selectpicker form-control list-of-phones" id="inputCodePhone" name="Phone Code">
-                          <option value="+7 840">+7 840</option>
-                          <option value="+93">+93</option>
-                          <option value="+355">+355</option>
-                          <option value="+213">+213</option>
-                          <option value="+376">+376</option>
-                          <option value="+244">+244</option>
-                          <option value="+1 268">+1 268</option>
-                          <option value="+54">+54</option>
-                          <option value="+374">+374</option>
-                          <option value="+61" selected="selected">+61</option>
-                          <option value="+43">+43</option>
-                          <option value="+994">+994</option>
-                          <option value="+1 242">+1 242</option>
-                          <option value="+973">+973</option>
-                          <option value="+880">+880</option>
-                          <option value="+1 246">+1 246</option>
-                          <option value="+375">+375</option>
-                          <option value="+32">+32</option>
-                          <option value="+501">+501</option>
-                          <option value="+229">+229</option>
-                          <option value="+975">+975</option>
-                          <option value="+591">+591</option>
-                          <option value="+387">+387</option>
-                          <option value="+267">+267</option>
-                          <option value="+55">+55</option>
-                          <option value="+673">+673</option>
-                          <option value="+359">+359</option>
-                          <option value="+226">+226</option>
-                          <option value="+257">+257</option>
-                          <option value="+855">+855</option>
-                          <option value="+237">+237</option>
-                          <option value="+1">+1</option>
-                          <option value="+238">+238</option>
-                          <option value="+236">+236</option>
-                          <option value="+235">+235</option>
-                          <option value="+56">+56</option>
-                          <option value="+86">+86</option>
-                          <option value="+57">+57</option>
-                          <option value="+269">+269</option>
-                          <option value="+682">+682</option>
-                          <option value="+506">+506</option>
-                          <option value="+385">+385</option>
-                          <option value="+53">+53</option>
-                          <option value="+537">+537</option>
-                          <option value="+420">+420</option>
-                          <option value="+45">+45</option>
-                          <option value="+253">+253</option>
-                          <option value="+1 767">+1 767</option>
-                          <option value="+1 809">+1 809</option>
-                          <option value="+670">+670</option>
-                          <option value="+593">+593</option>
-                          <option value="+20">+20</option>
-                          <option value="+503">+503</option>
-                          <option value="+240">+240</option>
-                          <option value="+291">+291</option>
-                          <option value="+372">+372</option>
-                          <option value="+251">+251</option>
-                          <option value="+679">+679</option>
-                          <option value="+358">+358</option>
-                          <option value="+33">+33</option>
-                          <option value="+241">+241</option>
-                          <option value="+220">+220</option>
-                          <option value="+995">+995</option>
-                          <option value="+49">+49</option>
-                          <option value="+233">+233</option>
-                          <option value="+30">+30</option>
-                          <option value="+1 473">+1 473</option>
-                          <option value="+502">+502</option>
-                          <option value="+224">+224</option>
-                          <option value="+245">+245</option>
-                          <option value="+595">+595</option>
-                          <option value="+509">+509</option>
-                          <option value="+504">+504</option>
-                          <option value="+36">+36</option>
-                          <option value="+354">+354</option>
-                          <option value="+91">+91</option>
-                          <option value="+62">+62</option>
-                          <option value="+98">+98</option>
-                          <option value="+964">+964</option>
-                          <option value="+353">+353</option>
-                          <option value="+972">+972</option>
-                          <option value="+39">+39</option>
-                          <option value="+225">+225</option>
-                          <option value="+1 876">+1 876</option>
-                          <option value="+81">+81</option>
-                          <option value="+962">+962</option>
-                          <option value="+7 7">+7 7</option>
-                          <option value="+254">+254</option>
-                          <option value="+686">+686</option>
-                          <option value="+965">+965</option>
-                          <option value="+996">+996</option>
-                          <option value="+856">+856</option>
-                          <option value="+371">+371</option>
-                          <option value="+961">+961</option>
-                          <option value="+266">+266</option>
-                          <option value="+231">+231</option>
-                          <option value="+218">+218</option>
-                          <option value="+423">+423</option>
-                          <option value="+370">+370</option>
-                          <option value="+352">+352</option>
-                          <option value="+389">+389</option>
-                          <option value="+261">+261</option>
-                          <option value="+265">+265</option>
-                          <option value="+60">+60</option>
-                          <option value="+960">+960</option>
-                          <option value="+223">+223</option>
-                          <option value="+356">+356</option>
-                          <option value="+692">+692</option>
-                          <option value="+222">+222</option>
-                          <option value="+230">+230</option>
-                          <option value="+52">+52</option>
-                          <option value="+373">+373</option>
-                          <option value="+377">+377</option>
-                          <option value="+976">+976</option>
-                          <option value="+382">+382</option>
-                          <option value="+212">+212</option>
-                          <option value="+95">+95</option>
-                          <option value="+264">+264</option>
-                          <option value="+674">+674</option>
-                          <option value="+977">+977</option>
-                          <option value="+31">+31</option>
-                          <option value="+64">+64</option>
-                          <option value="+505">+505</option>
-                          <option value="+227">+227</option>
-                          <option value="+234">+234</option>
-                          <option value="+683">+683</option>
-                          <option value="+850">+850</option>
-                          <option value="+47">+47</option>
-                          <option value="+968">+968</option>
-                          <option value="+92">+92</option>
-                          <option value="+680">+680</option>
-                          <option value="+970">+970</option>
-                          <option value="+507">+507</option>
-                          <option value="+675">+675</option>
-                          <option value="+595">+595</option>
-                          <option value="+51">+51</option>
-                          <option value="+63">+63</option>
-                          <option value="+48">+48</option>
-                          <option value="+351">+351</option>
-                          <option value="+974">+974</option>
-                          <option value="+40">+40</option>
-                          <option value="+7">+7</option>
-                          <option value="+250">+250</option>
-                          <option value="+685">+685</option>
-                          <option value="+378">+378</option>
-                          <option value="+966">+966</option>
-                          <option value="+221">+221</option>
-                          <option value="+381">+381</option>
-                          <option value="+248">+248</option>
-                          <option value="+232">+232</option>
-                          <option value="+65">+65</option>
-                          <option value="+421">+421</option>
-                          <option value="+386">+386</option>
-                          <option value="+677">+677</option>
-                          <option value="+27">+27</option>
-                          <option value="+82">+82</option>
-                          <option value="+34">+34</option>
-                          <option value="+94">+94</option>
-                          <option value="+249">+249</option>
-                          <option value="+597">+597</option>
-                          <option value="+268">+268</option>
-                          <option value="+46">+46</option>
-                          <option value="+41">+41</option>
-                          <option value="+963">+963</option>
-                          <option value="+992">+992</option>
-                          <option value="+255">+255</option>
-                          <option value="+66">+66</option>
-                          <option value="+228">+228</option>
-                          <option value="+676">+676</option>
-                          <option value="+1 868">+1 868</option>
-                          <option value="+216">+216</option>
-                          <option value="+90">+90</option>
-                          <option value="+993">+993</option>
-                          <option value="+688">+688</option>
-                          <option value="+256">+256</option>
-                          <option value="+380">+380</option>
-                          <option value="+971">+971</option>
-                          <option value="+44">+44</option>
-                          <option value="+1">+1</option>
-                          <option value="+598">+598</option>
-                          <option value="+998">+998</option>
-                          <option value="+678">+678</option>
-                          <option value="+58">+58</option>
-                          <option value="+84">+84</option>
-                          <option value="+967">+967</option>
-                          <option value="+260">+260</option>
-                          <option value="+263">+263</option>
-                        </select>
                         <input class="form-control" id="inputPhone" name="Phone Number" type="text" required data-error="This field is required">
                       </div>
                     </div>
@@ -792,10 +987,12 @@
                           <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
                           <input class="form-control pl-10" id="inputCardPostal" name="Card Postal" type="text" required autocomplete="off" data-error="This field is required">
                         </div>
-                        <div class="col-sm-6 form-group has-feedback card-number-input">
+                        <div class="col-sm-6 form-group card-number-input">
                           <label class="control-label" for="inputCardNumber">Card Number<span class="danger">*</span></label>
-                          <input class="form-control card-input" id="inputCardNumber" name="Card Number" type="text" required maxlength="19" autocomplete="off" data-error="This field is required" data-pattern-error="Your card number is invalid" pattern="^([0-9]{4}( |)){3}[0-4]{4}$"><img src="./images/icons/credit/number1.png" alt="number" srcset="./images/icons/credit/number1.png 1x, ./images/icons/credit/number1@2x.png 2x, ./images/icons/credit/number1@3x.png 3x">
-                          <div class="help-block with-errors"></div>
+                          <input class="form-control card-input" id="inputCardNumber" name="Card Number" type="text" required maxlength="19" autocomplete="on">
+                          <!--.help-block.with-errors-->
+                          <!--   ul.list-unstyled-->
+                          <!--      li Your card number is invalid-->
                         </div>
                         <div class="last-line-wrapper">
                           <div class="col-sm-6 form-group">
