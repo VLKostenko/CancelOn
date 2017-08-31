@@ -194,7 +194,7 @@
                   <div class="price"><span class="text">Price</span><span class="number">$2,688.86</span></div>
                   <div class="old-price"><span>Old price $4,872.00</span></div>
                   <div class="room-details"><span>For 2 Guests, 0 Child and 2 Nights</span></div>
-                  <div class="change-details clearfix"><a href="javascript:void(0)">Change your selection</a></div>
+                  <div class="change-details change-dates-button clearfix"><a class="change" href="javascript:void(0)">Change your selection</a></div>
                 </div>
               </div>
               <div class="panel panel-default panel-second placeholder-room-info">
@@ -237,7 +237,7 @@
                   <div class="address"><span>6220 S. Rainbow Boulevard, Las Vegas Nevada, Nv , United States</span></div>
                 </div>
                 <div class="panel-body change-room">
-                  <div class="change-room-button"><span class="type">Room: Superior Room</span><a href="javascript:void(0)">Change</a></div>
+                  <div class="change-room-button change-dates-button"><span class="type">Room: Superior Room</span><a class="change" href="javascript:void(0)">Change</a></div>
                 </div>
               </div>
               <div class="panel panel-default panel-second placeholder-room-info">
@@ -258,13 +258,13 @@
                 <div class="panel-body payment-booking-details">
                   <div class="days-details">
                     <p>Check-in:</p>
-                    <p>Friday 21 July 2017 from 14:00</p><br>
+                    <p class="start"><span class="dayName">Friday</span><span class="day"> 21</span><span class="month"> July</span><span class="year"> 2017</span><span> form 14:00</span></p><br>
                     <p>Check-out:</p>
-                    <p>Friday 21 July 2017 from 14:00</p><br>
+                    <p class="end"><span class="dayName">Friday</span><span class="day"> 27</span><span class="month"> July</span><span class="year"> 2017</span><span> form 14:00</span></p><br>
                     <p>Total length of stay:</p>
-                    <p>2 nights</p>
+                    <p class="total"><span class="nights">2</span><span> nights</span></p>
                   </div>
-                  <div class="change-dates-button clearfix"><a href="javascript:void(0)">Change Dates</a></div>
+                  <div class="change-dates-button clearfix"><a class="change" href="javascript:void(0)">Change Dates</a></div>
                 </div>
               </div>
             </div>
@@ -1104,7 +1104,8 @@
                     <div class="guarantee"><img src="images/icons/shopping-guarantee.png" alt="shopping guarantee" srcset="images/icons/shopping-guarantee.png 1x, images/icons/shopping-guarantee@2x.png 2x, images/icons/shopping-guarantee@3x.png 3x"></div>
                   </div>
                 </div>
-                <div class="alert">
+                <div class="label-block mt-10"><span class="info-label green">Best Price Guaranteed</span></div>
+                <div class="alert mt-10">
                   <p>By Continuing With Your Booking, You Agree That You:</p>
                   <p>1) Have Read And Accepted Our
                     
@@ -1140,6 +1141,50 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="dates-bg-block"></div>
+    <div class="change-dates-block">
+      <div class="change-dates-block_header">
+        <h2 class="title">Change Dates</h2><a class="close-btn" href="javascript:void(0)"><i class="fa fa-close" aria-hidden="true"></i><span class="text">Close</span></a>
+      </div>
+      <div class="change-dates-block_body">
+        <div class="change-date">
+          <div id="change-dates-container"></div>
+        </div>
+        <div class="change-room">
+          <label class="col-form-label" for="quant[1]"><span class="input-name">Adults</span><span class="input-group"><span class="input-group-btn">
+                <button class="btn btn-info btn-number" type="button" data-type="minus" data-field="quant[1]">-</button></span>
+              <input class="form-control input-number" type="number" id="quant[1]" name="quant[1]" value="1" min="1" max="99" data-id="adults"><span class="input-group-btn">
+                <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[1]">+</button></span></span></label>
+          <label class="col-form-label" for="quant[2]"><span class="input-name">Rooms</span><span class="input-group"><span class="input-group-btn">
+                <button class="btn btn-info btn-number" type="button" data-type="minus" data-field="quant[2]">-</button></span>
+              <input class="form-control input-number" type="number" id="quant[2]" name="quant[2]" value="1" min="1" max="99" data-id="rooms"><span class="input-group-btn">
+                <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[2]">+</button></span></span></label>
+          <label class="col-form-label" for="quant[3]"><span class="input-name">Children</span><span class="input-group"><span class="input-group-btn">
+                <button class="btn btn-info btn-number" type="button" disabled="disabled" data-type="minus" data-field="quant[3]">-</button></span>
+              <input class="form-control input-number" type="number" id="quant[3]" name="quant[3]" value="0" min="0" max="99" data-id="children"><span class="input-group-btn">
+                <button class="btn btn-warning btn-number" type="button" data-type="plus" data-field="quant[3]">+</button></span></span></label>
+        </div>
+        <div class="change-output">
+          <table>
+            <tbody>
+              <tr>
+                <td class="title">Check-In:</td>
+                <td class="datepicker-input change-input"></td>
+              </tr>
+              <tr>
+                <td class="title">Check-Out:</td>
+                <td class="datepicker-output change-input"></td>
+              </tr>
+              <tr>
+                <td class="title">Total Nights:</td>
+                <td class="datepicker-total change-input"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="change-save-btn"><a class="save book-btn" href="javascript:void(0)">Save New Dates</a></div>
       </div>
     </div>
     <!-- Root element of PhotoSwipe. Must have class pswp.-->

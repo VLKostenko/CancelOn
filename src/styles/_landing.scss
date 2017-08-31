@@ -394,12 +394,13 @@
     height: 60px;
     top: initial;
     bottom: initial;
-    background: #1a4e63;
+    background: #e6ebf3;
     width: 100%;
     display: block;
     padding-left: 16px;
     padding-right: 45px;
     margin: 0;
+    box-shadow: none;
     &:before {
       left: 0;
     }
@@ -407,10 +408,10 @@
       right: 0;
     }
     .input-group-addon {
-      background: #1a4e63;
+      background: #e6ebf3;
       padding-top: 10px;
       border: 0;
-      color: $main-blue;
+      color: #000;
     }
     .date-group {
       width: 225px;
@@ -422,19 +423,19 @@
       &:before {
         display: none;
       }
-      &.active {
-        border-bottom: 0;
-        &:before {
-          border-color: #00c2ff;
-        }
-      }
+      //&.active {
+      //  border-bottom: 0;
+      //  &:before {
+      //    border-color: #00c2ff;
+      //  }
+      //}
     }
     .datepicker-input,
     .datepicker-output {
-      background: #1a4e63;
+      background: #e6ebf3;
       padding: 7px 5px 3px 1px;
       .date, .day {
-        color: #fff;
+        color: #000;
       }
     }
     .people-count {
@@ -457,9 +458,9 @@
       }
       &.active {
         border-bottom: 0;
-        &:before {
-          border-color: $main-blue;
-        }
+        //&:before {
+        //  border-color: $main-blue;
+        //}
       }
       &.opened {
         .book-menu {
@@ -470,10 +471,10 @@
         .block {
           padding-top: 7px;
           .text {
-            color: #fff;
+            color: #000;
           }
           .value {
-            color: #fff;
+            color: #000;
           }
         }
       }
@@ -484,7 +485,7 @@
     }
     .update {
       width: 70px;
-      float: right;
+      float: left;
       margin-top: 21px;
       font-family: "Roboto", sans-serif;
       a {

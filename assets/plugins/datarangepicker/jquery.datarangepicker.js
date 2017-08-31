@@ -1153,7 +1153,7 @@
 
       box.find('.close-btn').click(function() {
         closeDatePicker();
-        clearSelection();
+        // clearSelection();
       });
 
       box.find('[custom]').click(function() {

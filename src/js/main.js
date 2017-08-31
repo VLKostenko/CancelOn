@@ -1021,11 +1021,9 @@
   });
 
   $('.change-dates-button a.change').click(function() {
+    console.log('click');
     $('.dates-bg-block').fadeIn(200);
     $('.change-dates-block').show().animateCss('bounceIn');
-    // if ( $(window).width() > 992 ) {
-    //   $(window).disablescroll();
-    // }
   });
 
   $('.dates-bg-block, .change-dates-block .close-btn').click(function() {

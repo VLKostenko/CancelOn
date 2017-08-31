@@ -12012,7 +12012,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .people-count .fa-sliders {
-  color: #00c2ff;
+  color: #000;
   font-size: 20px;
 }
 
@@ -12895,12 +12895,13 @@ aside.show-on-map .panel-group .panel.panel-default {
   height: 60px;
   top: initial;
   bottom: initial;
-  background: #1a4e63;
+  background: #e6ebf3;
   width: 100%;
   display: block;
   padding-left: 16px;
   padding-right: 45px;
   margin: 0;
+  box-shadow: none;
 }
 
 .booking-table .search-filter-block:before {
@@ -12912,10 +12913,10 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .booking-table .search-filter-block .input-group-addon {
-  background: #1a4e63;
+  background: #e6ebf3;
   padding-top: 10px;
   border: 0;
-  color: #00c2ff;
+  color: #000;
 }
 
 .booking-table .search-filter-block .date-group {
@@ -12931,24 +12932,16 @@ aside.show-on-map .panel-group .panel.panel-default {
   display: none;
 }
 
-.booking-table .search-filter-block .date-group.active {
-  border-bottom: 0;
-}
-
-.booking-table .search-filter-block .date-group.active:before {
-  border-color: #00c2ff;
-}
-
 .booking-table .search-filter-block .datepicker-input,
 .booking-table .search-filter-block .datepicker-output {
-  background: #1a4e63;
+  background: #e6ebf3;
   padding: 7px 5px 3px 1px;
 }
 
 .booking-table .search-filter-block .datepicker-input .date, .booking-table .search-filter-block .datepicker-input .day,
 .booking-table .search-filter-block .datepicker-output .date,
 .booking-table .search-filter-block .datepicker-output .day {
-  color: #fff;
+  color: #000;
 }
 
 .booking-table .search-filter-block .people-count {
@@ -12976,10 +12969,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   border-bottom: 0;
 }
 
-.booking-table .search-filter-block .people-count.active:before {
-  border-color: #00c2ff;
-}
-
 .booking-table .search-filter-block .people-count.opened .book-menu {
   display: block;
 }
@@ -12989,11 +12978,11 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .booking-table .search-filter-block .people-count #peopleCount .block .text {
-  color: #fff;
+  color: #000;
 }
 
 .booking-table .search-filter-block .people-count #peopleCount .block .value {
-  color: #fff;
+  color: #000;
 }
 
 .booking-table .search-filter-block .people-count .book-menu {
@@ -13003,7 +12992,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .booking-table .search-filter-block .update {
   width: 70px;
-  float: right;
+  float: left;
   margin-top: 21px;
   font-family: "Roboto", sans-serif;
 }
@@ -15359,6 +15348,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   left: 25px;
   height: 30px;
   width: initial;
+  pointer-events: none;
 }
 
 .payment-block .step .step-body .form-group .help-block {
@@ -16311,6 +16301,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   left: 25px;
   height: 30px;
   width: initial;
+  pointer-events: none;
 }
 
 .payment-block .step .bootstrap-select .dropdown-toggle {
@@ -17311,6 +17302,14 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .change-dates-block .change-room .col-form-label .input-group {
   width: 100px;
+}
+
+.change-dates-block .change-room .col-form-label .input-group .input-group-btn button {
+  border-radius: 50% !important;
+}
+
+.change-dates-block .change-room .col-form-label .input-group .input-group-btn button:hover {
+  background: transparent !important;
 }
 
 .change-dates-block .change-room .col-form-label .input-group .input-number {

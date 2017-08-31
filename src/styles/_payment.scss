@@ -375,6 +375,7 @@
             left: 25px;
             height: 30px;
             width: initial;
+            pointer-events: none;
           }
         }
         .help-block {
@@ -570,6 +571,7 @@
         left: 25px;
         height: 30px;
         width: initial;
+        pointer-events: none;
       }
       .dropdown-toggle {
         height: 100%;

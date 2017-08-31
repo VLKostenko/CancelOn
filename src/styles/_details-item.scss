@@ -322,6 +322,14 @@
       margin: 15px 0;
       .input-group {
         width: 100px;
+        .input-group-btn {
+          button {
+            border-radius: 50% !important;
+            &:hover {
+              background: transparent !important;
+            }
+          }
+        }
         .input-number {
           margin: 0;
           margin-left: 2px;

@@ -18,8 +18,8 @@
                   span Old price $4,872.00
                .room-details
                   span For 2 Guests, 0 Child and 2 Nights
-               .change-details.clearfix
-                  a(href='javascript:void(0)') Change your selection
+               .change-details.change-dates-button.clearfix
+                  a.change(href='javascript:void(0)') Change your selection
          include ../details-item/placeholder/panel-placeholder
          .panel.panel-default.slider-panel.placeholder-show
             .panel-body.payment-details-info
@@ -56,9 +56,9 @@
                .address
                   span 6220 S. Rainbow Boulevard, Las Vegas Nevada, Nv , United States
             .panel-body.change-room
-               .change-room-button
+               .change-room-button.change-dates-button
                   span.type Room: Superior Room
-                  a(href='javascript:void(0)') Change
+                  a.change(href='javascript:void(0)') Change
          include ../details-item/placeholder/panel-placeholder
          .panel.panel-default.panel-second.placeholder-show
             .panel-heading
@@ -66,14 +66,26 @@
             .panel-body.payment-booking-details
                .days-details
                   p Check-in:
-                  p Friday 21 July 2017 from 14:00
+                  p.start
+                     span.dayName Friday
+                     span.day  21
+                     span.month  July
+                     span.year  2017
+                     span  form 14:00
                   br
                   p Check-out:
-                  p Friday 21 July 2017 from 14:00
+                  p.end
+                     span.dayName Friday
+                     span.day  27
+                     span.month  July
+                     span.year  2017
+                     span  form 14:00
                   br
                   p Total length of stay:
-                  p 2 nights
+                  p.total
+                     span.nights 2
+                     span  nights
                .change-dates-button.clearfix
-                  a(href='javascript:void(0)') Change Dates
+                  a.change(href='javascript:void(0)') Change Dates
    .payment-block#sticky-wrap
       include payment-block

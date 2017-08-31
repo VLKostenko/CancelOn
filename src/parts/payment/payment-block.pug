@@ -934,16 +934,13 @@ form(data-toggle='validator', role='form')
       .wrapper
          .submit-wrapper
             .submit
-               - if ( page.name === 'payment' ) {
-                  input.visible-lg(type='submit', value='Book This Room For $2668.86')
-                  input.hidden-lg(type='submit', value='Book For $2668.86')
-               - } else {
-                  input.visible-lg(type='submit', value='Book This Room For $2668.86')
-                  input.hidden-lg(type='submit', value='Book For $2668.86')
-               - }
+               input.visible-lg(type='submit', value='Book This Room For $2668.86')
+               input.hidden-lg(type='submit', value='Book For $2668.86')
             .guarantee
                img(src='images/icons/shopping-guarantee.png', alt='shopping guarantee')
-      .alert
+      .label-block.mt-10
+         span.info-label.green Best Price Guaranteed
+      .alert.mt-10
          p By Continuing With Your Booking, You Agree That You:
          p 1) Have Read And Accepted Our
             |
