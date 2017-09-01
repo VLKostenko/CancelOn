@@ -781,22 +781,17 @@ form(data-toggle='validator', role='form')
                label.control-label(for='inputCountry') Country
                   span.danger *
                select#inputCountry.selectpicker.form-control.list-of-countries(name='Country')
-                  option(value='Australia', selected='selected') Australia
-                  option(value='France') France
-                  option(value='Germany') Germany
-                  option(value='Italy') Italy
-                  option(value='New Zealand') New Zealand
-                  option(value='Spain') Spain
+                  option(value='United States', selected='selected') United States
                   option(value='United Kingdom') United Kingdom
-                  option(value='United States') United States
+                  option(value='Germany') Germany
+                  option(value='France') France
+                  option(value='Italy') Italy
+                  option(value='Spain') Spain
+                  option(value='Australia') Australia
+                  option(value='New Zealand') New Zealand
                   option(disabled) ---------------------------------------------------------------------------------------
                   - for ( var i = 0; i < countriesList.length; i++ ) {
                      option(value=countriesList[i].name)=countriesList[i].name
-                     //- if ( i == 9 ) {
-                     //   option(value=countriesList[i].name, selected='selected')=countriesList[i].name
-                     //- } else {
-                     //
-                     //- }
                   - }
                a.find-my-location(href='javascript:void(0)') Find my location
             .col-sm-6.form-group
@@ -804,7 +799,7 @@ form(data-toggle='validator', role='form')
                   span.danger *
                .phone-number-block.clearfix
                   input#inputPhone.form-control(name='Phone Number', type='text', required, data-error='This field is required')
-            .col-sm-6.form-group.states-usa.hidden
+            .col-sm-6.form-group.states-usa
                label.control-label(for='inputPhone') State
                   span.danger *
                .states-block.clearfix
