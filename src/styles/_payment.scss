@@ -1323,6 +1323,14 @@
       }
     }
   }
+  .expired-block {
+    width: 95%;
+    height: 250px;
+    &_body {
+      padding: 0 15px;
+      height: 200px;
+    }
+  }
 }
 @media screen and (max-width: 416px) {
   .payment-block .step .help-button a {

@@ -17057,6 +17057,14 @@ aside.show-on-map .panel-group .panel.panel-default {
   .payment-block .step .other-payment a {
     margin-bottom: 15px;
   }
+  .expired-block {
+    width: 95%;
+    height: 250px;
+  }
+  .expired-block_body {
+    padding: 0 15px;
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 416px) {
