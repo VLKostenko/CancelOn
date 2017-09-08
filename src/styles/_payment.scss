@@ -368,6 +368,7 @@
           border: 1px solid #d8def0;
           height: 50px;
           border-radius: 0;
+          font-size: 16px;
           & + img {
             position: absolute;
             z-index: 1;
@@ -387,7 +388,9 @@
           margin: auto;
           font-size: 14px;
           color: #bf4f65;
-          line-height: 46px;
+          height: 25px;
+          line-height: 25px;
+          background: #fff;
           li {
             display: none;
             &:last-child {
@@ -863,6 +866,92 @@
     }
   }
 }
+
+.expired-bg-block {
+  display: none;
+  position: fixed;
+  z-index: 155;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15,48,78,.7);
+}
+.expired-block {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 45%;
+  background: #fff;
+  box-shadow: -25px 0 60px 0 rgba(0,0,0,.21);
+  left: 0;
+  margin: auto;
+  height: 200px;
+  bottom: 0;
+  z-index: 160;
+  &_header {
+    position: relative;
+    height: 35px;
+    .close-btn {
+      position: absolute;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      display: inline-block;
+      line-height: 52px;
+      color: #000;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      .fa-close {
+        @include crossBrowser(transition, transform .15s ease);
+        top: 2px;
+        font-size: 15px;
+        color: #ff353d;
+      }
+      .text {
+        position: relative;
+        padding-left: 5px;
+      }
+      &:hover {
+        .fa-close {
+          @include crossBrowser(transform, rotate(90deg))
+        }
+      }
+    }
+  }
+  &_body {
+    height: 150px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    a {
+      display: block;
+      width: 150px;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 10px;
+      background: $main-blue;
+      color: #fff;
+      border-radius: 2px;
+      @include crossBrowser(transition, .2s ease-in);
+      &:hover {
+        background: #0cc6ff;
+      }
+    }
+  }
+}
+
+
 @media screen and (max-width: 1199px) {
   .payment-block {
     .step {
@@ -1089,6 +1178,42 @@
     .step {
       padding: 0 15px;
       position: relative;
+      #inputCardNumber {
+        background-position: 9px -226px, 179% -102px;
+        &.visa {
+          background-position: 9px -300px, 179% -102px;
+        }
+        &.visa_electron {
+          background-position: 9px -379px, 179% -102px;
+        }
+        &.mastercard {
+          background-position: 9px -457px, 179% -102px;
+        }
+        &.maestro {
+          background-position: 9px -535px, 179% -102px;
+        }
+        &.discover {
+          background-position: 9px -609px, 179% -102px;
+        }
+        &.valid,
+        &.validcard {
+          &.visa {
+            background-position: 9px -300px, 179% -163px;
+          }
+          &.visa_electron {
+            background-position: 9px -379px, 179% -163px;
+          }
+          &.mastercard {
+            background-position: 9px -457px, 179% -163px;
+          }
+          &.maestro {
+            background-position: 9px -535px, 179% -163px;
+          }
+          &.discover {
+            background-position: 9px -609px, 179% -163px;
+          }
+        }
+      }
       .step-header {
         .step-number {
           position: absolute;
@@ -1127,11 +1252,6 @@
                   left: 13px;
                 }
               }
-            }
-          }
-          .phone-number-block {
-            input {
-              @include calc(width, 'calc(100% - 90px)');
             }
           }
         }

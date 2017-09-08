@@ -8496,7 +8496,6 @@ footer .form-control {
   color: #9d9d9d;
   border: none;
   height: 50px;
-  border: none;
 }
 
 footer .form-control::-moz-placeholder {
@@ -11910,6 +11909,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   top: -20px;
   bottom: 0;
   margin: auto;
+  pointer-events: none;
 }
 
 .search-filter-block .input-group .datepicker-book-rooms .datepicker-input,
@@ -15339,6 +15339,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   border: 1px solid #d8def0;
   height: 50px;
   border-radius: 0;
+  font-size: 16px;
 }
 
 .payment-block .step .step-body .form-group input + img {
@@ -15360,7 +15361,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin: auto;
   font-size: 14px;
   color: #bf4f65;
-  line-height: 46px;
+  height: 25px;
+  line-height: 25px;
+  background: #fff;
 }
 
 .payment-block .step .step-body .form-group .help-block li {
@@ -16643,6 +16646,110 @@ aside.show-on-map .panel-group .panel.panel-default {
   width: 100%;
 }
 
+.expired-bg-block {
+  display: none;
+  position: fixed;
+  z-index: 155;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 48, 78, 0.7);
+}
+
+.expired-block {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 45%;
+  background: #fff;
+  box-shadow: -25px 0 60px 0 rgba(0, 0, 0, 0.21);
+  left: 0;
+  margin: auto;
+  height: 200px;
+  bottom: 0;
+  z-index: 160;
+}
+
+.expired-block_header {
+  position: relative;
+  height: 35px;
+}
+
+.expired-block_header .close-btn {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: inline-block;
+  line-height: 52px;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.expired-block_header .close-btn .fa-close {
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+  top: 2px;
+  font-size: 15px;
+  color: #ff353d;
+}
+
+.expired-block_header .close-btn .text {
+  position: relative;
+  padding-left: 5px;
+}
+
+.expired-block_header .close-btn:hover .fa-close {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.expired-block_body {
+  height: 150px;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.expired-block_body p {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.expired-block_body a {
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 10px;
+  background: #00c2ff;
+  color: #fff;
+  border-radius: 2px;
+  transition: 0.2s ease-in;
+}
+
+.expired-block_body a:hover {
+  background: #0cc6ff;
+}
+
 @media screen and (max-width: 1199px) {
   .payment-block .step .step-header {
     margin-bottom: 25px;
@@ -16827,6 +16934,39 @@ aside.show-on-map .panel-group .panel.panel-default {
     padding: 0 15px;
     position: relative;
   }
+  .payment-block .step #inputCardNumber {
+    background-position: 9px -226px, 179% -102px;
+  }
+  .payment-block .step #inputCardNumber.visa {
+    background-position: 9px -300px, 179% -102px;
+  }
+  .payment-block .step #inputCardNumber.visa_electron {
+    background-position: 9px -379px, 179% -102px;
+  }
+  .payment-block .step #inputCardNumber.mastercard {
+    background-position: 9px -457px, 179% -102px;
+  }
+  .payment-block .step #inputCardNumber.maestro {
+    background-position: 9px -535px, 179% -102px;
+  }
+  .payment-block .step #inputCardNumber.discover {
+    background-position: 9px -609px, 179% -102px;
+  }
+  .payment-block .step #inputCardNumber.valid.visa, .payment-block .step #inputCardNumber.validcard.visa {
+    background-position: 9px -300px, 179% -163px;
+  }
+  .payment-block .step #inputCardNumber.valid.visa_electron, .payment-block .step #inputCardNumber.validcard.visa_electron {
+    background-position: 9px -379px, 179% -163px;
+  }
+  .payment-block .step #inputCardNumber.valid.mastercard, .payment-block .step #inputCardNumber.validcard.mastercard {
+    background-position: 9px -457px, 179% -163px;
+  }
+  .payment-block .step #inputCardNumber.valid.maestro, .payment-block .step #inputCardNumber.validcard.maestro {
+    background-position: 9px -535px, 179% -163px;
+  }
+  .payment-block .step #inputCardNumber.valid.discover, .payment-block .step #inputCardNumber.validcard.discover {
+    background-position: 9px -609px, 179% -163px;
+  }
   .payment-block .step .step-header .step-number {
     position: absolute;
     font-size: 24px;
@@ -16858,9 +16998,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   .payment-block .step .step-body .form-group .list-of-phones button .bs-caret .caret {
     margin: initial;
     left: 13px;
-  }
-  .payment-block .step .step-body .form-group .phone-number-block input {
-    width: calc(calc(100% - 90px));
   }
   .payment-block .step.submit-step {
     position: relative;
@@ -18520,6 +18657,24 @@ aside.show-on-map .panel-group .panel.panel-default {
   .bootstrap-select.btn-group .dropdown-toggle .caret {
     right: 7px;
   }
+  .booking-table .search-filter-block .date-group {
+    background: #e6ebf3;
+  }
+  .booking-table .search-filter-block .date-group .form-control .date {
+    color: #000;
+  }
+  .booking-table .search-filter-block .date-group .form-control .day {
+    color: #000;
+  }
+  .booking-table .search-filter-block .people-count {
+    background: #e6ebf3;
+  }
+  .booking-table .search-filter-block .people-count .dropdown-toggle {
+    background: #e6ebf3;
+  }
+  .booking-table .search-filter-block .people-count .dropdown-toggle .block .value {
+    color: #000 !important;
+  }
   .search-filter-block {
     position: relative;
     left: 0;
@@ -18538,8 +18693,10 @@ aside.show-on-map .panel-group .panel.panel-default {
     position: relative;
     top: 5px;
   }
+  .search-filter-block .input-group .datepicker-book-rooms:before {
+    left: -20px;
+  }
   .search-filter-block .date-group {
-    background: #1d4f62;
     height: 100%;
   }
   .search-filter-block .date-group:before {
@@ -19073,7 +19230,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   .search-filter-block .date-group {
     width: 100%;
     height: 60px;
-    background: #1a4e63;
+    background: #e6ebf3;
   }
   .search-filter-block .date-group:before {
     background: #fff;
@@ -19102,17 +19259,47 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .search-filter-block .people-count .book-menu {
     width: 320px;
-    left: 0;
-    padding: 12px 20px 0;
+    top: 60px;
+    left: 15px;
+    padding: 12px 0 0;
+  }
+  .search-filter-block .people-count .book-menu .book-header {
+    padding: 20px 15px;
+  }
+  .search-filter-block .people-count .book-menu .book-header .bootstrap-select {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .search-filter-block .people-count .book-menu .book-header .datepicker-book-rooms {
+    width: 100%;
+    padding: 0;
+  }
+  .search-filter-block .people-count .book-menu .book-header .datepicker-book-rooms .form-control {
+    line-height: 40px;
+    margin-right: 0;
+    padding-right: 5px;
+    min-width: 142px;
   }
   .search-filter-block .people-count .book-menu .room {
     padding: 15px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .search-filter-block .people-count .book-menu .room .title, .search-filter-block .people-count .book-menu .room .adults, .search-filter-block .people-count .book-menu .room .children {
     width: 34%;
   }
+  .search-filter-block .people-count .book-menu .room .adults {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .search-filter-block .people-count .book-menu .room .children {
+    margin-top: 10px;
+  }
   .search-filter-block .people-count .book-menu .room .children-age {
     width: 100%;
+    margin-top: 10px;
   }
   .search-filter-block .people-count .book-menu .room .children-age .child select {
     border: 1px solid #333;
@@ -19611,7 +19798,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   .booking-table .search-filter-block .date-group {
     width: 100%;
     height: 60px;
-    background: #1a4e63;
+    background: #e6ebf3;
     margin-left: 15px;
   }
   .booking-table .search-filter-block .date-group:before {
@@ -19638,9 +19825,8 @@ aside.show-on-map .panel-group .panel.panel-default {
   .booking-table .search-filter-block .people-count .book-menu {
     top: 60px;
     width: 320px;
-    padding: 0;
     left: 0;
-    padding: 12px 20px 0;
+    padding: 12px 0 0;
   }
   .booking-table .search-filter-block .people-count .book-menu:after {
     content: '';
@@ -19658,6 +19844,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .booking-table .search-filter-block .people-count .input-group-addon {
     padding-top: 0;
+    background: #e6ebf3;
   }
   .booking-table .search-filter-block .people-count .form-control {
     margin-top: 3px;

@@ -30,9 +30,21 @@ function getCountdown() {
     seconds = pad(parseInt(secondsLeft % 60));
 
     timer.html('<span>' + minutes + ':</span><span>' + seconds + '</span>');
-  }
 
+    if ( parseInt(minutes) === 0 && parseInt(seconds) === 0 ) {
+      $('.expired-bg-block').fadeIn(200);
+      $('.expired-block').show().animateCss('bounceIn');
+    }
+  }
 }
+
+$('.expired-bg-block, .expired-block .close-btn').click(function() {
+  $('.expired-bg-block').fadeOut(200);
+  $('.expired-block').fadeOut(750).animateCss('bounceOut');
+  setTimeout(function() {
+    $('.expired-block').removeClass('animated bounceOut');
+  }, 750);
+});
 
 function pad(n) {
   return (n < 10 ? '0' : '') + n;

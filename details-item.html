@@ -543,7 +543,7 @@
                           <div class="col-sm-6 form-group">
                             <label class="control-label" for="inputPhone">Phone<span class="danger">*</span></label>
                             <div class="phone-number-block clearfix">
-                              <input class="form-control" id="inputPhone" name="Phone Number" type="text" required data-error="This field is required">
+                              <input class="form-control" id="inputPhone" name="Phone Number" type="text" required data-error="This field is required" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57">
                             </div>
                           </div>
                           <div class="col-sm-6 form-group states-usa">
@@ -634,27 +634,29 @@
                             <div class="row">
                               <div class="col-sm-6 form-group has-feedback">
                                 <label class="control-label" for="inputCardFirstName">First Name<span class="danger">*</span></label>
-                                <input class="form-control" id="inputCardFirstName" name="Card First Name" type="text" required autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/first-name.png" alt="first name" srcset="./images/icons/credit/first-name.png 1x, ./images/icons/credit/first-name@2x.png 2x, ./images/icons/credit/first-name@3x.png 3x">
+                                <input class="form-control" id="inputCardFirstName" name="Card First Name" type="text" required autocomplete="off" data-error="This field is required" placeholder="John"><img src="./images/icons/credit/first-name.png" alt="first name" srcset="./images/icons/credit/first-name.png 1x, ./images/icons/credit/first-name@2x.png 2x, ./images/icons/credit/first-name@3x.png 3x">
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-sm-6 form-group has-feedback">
                                 <label class="control-label" for="inputCardLastName">Last Name<span class="danger">*</span></label>
-                                <input class="form-control" id="inputCardLastName" name="Card Last Name" type="text" required autocomplete="off" data-error="This field is required"><img src="./images/icons/credit/last-name.png" alt="last name" srcset="./images/icons/credit/last-name.png 1x, ./images/icons/credit/last-name@2x.png 2x, ./images/icons/credit/last-name@3x.png 3x">
+                                <input class="form-control" id="inputCardLastName" name="Card Last Name" type="text" required autocomplete="off" data-error="This field is required" placeholder="Doe"><img src="./images/icons/credit/last-name.png" alt="last name" srcset="./images/icons/credit/last-name.png 1x, ./images/icons/credit/last-name@2x.png 2x, ./images/icons/credit/last-name@3x.png 3x">
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-sm-6 col-xs-12 form-group">
+                              <div class="col-sm-6 col-xs-12 form-group has-feedback">
                                 <label class="control-label" for="inputCardPostal">Postal Code<span class="danger">*</span></label>
                                 <input class="form-control pl-10" id="inputCardPostal" name="Card Postal" type="text" required autocomplete="off" data-error="This field is required">
+                                <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-sm-6 form-group card-number-input">
+                              <div class="col-sm-6 form-group card-number-input has-feedback">
                                 <label class="control-label" for="inputCardNumber">Card Number<span class="danger">*</span></label>
-                                <input class="form-control card-input" id="inputCardNumber" name="Card Number" type="text" required maxlength="19" autocomplete="on">
-                                <!--.help-block.with-errors-->
-                                <!--   ul.list-unstyled-->
-                                <!--      li Your card number is invalid-->
+                                <input class="form-control card-input" id="inputCardNumber" name="Card Number" type="text" required maxlength="19" autocomplete="on" data-error="This field is required">
+                                <div class="help-block with-errors">
+                                  <!--ul.list-unstyled-->
+                                  <!--   li Your card number is invalid-->
+                                </div>
                               </div>
                               <div class="last-line-wrapper">
-                                <div class="col-sm-6 form-group">
+                                <div class="col-sm-6 col-xs-12 form-group">
                                   <label class="control-label" for="inputCardExpDate">Expiration Date<span class="danger">*</span></label>
                                   <div class="row">
                                     <div class="col-sm-6 mb-xs-15">
@@ -719,7 +721,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-sm-6 form-group">
+                                <div class="col-sm-6 col-xs-12 form-group has-feedback">
                                   <label class="control-label" for="inputCardCVC">CVC<span class="danger">*</span><span class="small-desc"> The 3 digits (back) or 4 digits (front) value on your card.</span></label>
                                   <input class="form-control" id="inputCardCVC" name="Card CVC" type="text" autocomplete="off" required maxlength="3" data-error="This field is required"><img src="./images/icons/credit/cvc.png" alt="cvc code" srcset="./images/icons/credit/cvc.png 1x, ./images/icons/credit/cvc@2x.png 2x, ./images/icons/credit/cvc@3x.png 3x">
                                   <div class="cvv-input">
@@ -741,6 +743,7 @@
                                   <div class="help-button"><a href="javascript:void(0)"><i class="fa fa-question-circle-o" aria-hidden="true"></i></a>
                                     <div class="cvv-help"><img src="images/cvv_num_img.png" alt="cvv help" srcset="images/cvv_num_img.png 1x, images/cvv_num_img@2x.png 2x, images/cvv_num_img@3x.png 3x"><span class="text">3 digit security code</span></div>
                                   </div>
+                                  <div class="help-block with-errors"></div>
                                 </div>
                               </div>
                             </div>

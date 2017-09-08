@@ -7,3 +7,15 @@ block main
    .container.payment-details-wrapper
       .row
          include parts/payment/payment-details
+   .expired-bg-block
+   .expired-block
+      .expired-block_header
+         a.close-btn(href='javascript:void(0)')
+            i.fa.fa-close(aria-hidden='true')
+            span.text Close
+      .expired-block_body
+         .text-center
+            p This booking option has expired.
+               |
+               | Please reload the page in order to ensure accurate prices and availability.
+         a(href='javascript:void(0)', onclick='window.location.reload()') Reload Page

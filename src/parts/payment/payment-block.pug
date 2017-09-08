@@ -798,7 +798,7 @@ form(data-toggle='validator', role='form')
                label.control-label(for='inputPhone') Phone
                   span.danger *
                .phone-number-block.clearfix
-                  input#inputPhone.form-control(name='Phone Number', type='text', required, data-error='This field is required')
+                  input#inputPhone.form-control(name='Phone Number', type='text', required, data-error='This field is required', onkeypress='return event.charCode >= 48 && event.charCode <= 57')
             .col-sm-6.form-group.states-usa
                label.control-label(for='inputPhone') State
                   span.danger *
@@ -834,29 +834,30 @@ form(data-toggle='validator', role='form')
                   .col-sm-6.form-group.has-feedback
                      label.control-label(for='inputCardFirstName') First Name
                         span.danger *
-                     input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required')
+                     input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required', placeholder='John')
                      img(src='./images/icons/credit/first-name.png', alt='first name')
                      .help-block.with-errors
                   .col-sm-6.form-group.has-feedback
                      label.control-label(for='inputCardLastName') Last Name
                         span.danger *
-                     input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required')
+                     input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required', placeholder='Doe')
                      img(src='./images/icons/credit/last-name.png', alt='last name')
                      .help-block.with-errors
-                  .col-sm-6.col-xs-12.form-group
+                  .col-sm-6.col-xs-12.form-group.has-feedback
                      label.control-label(for='inputCardPostal') Postal Code
                         span.danger *
                      input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
-                  .col-sm-6.form-group.card-number-input
+                     .help-block.with-errors
+                  .col-sm-6.form-group.card-number-input.has-feedback
                      label.control-label(for='inputCardNumber') Card Number
                         span.danger *
-                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='on')
-                     //.help-block.with-errors
-                     //   ul.list-unstyled
-                     //      li Your card number is invalid
+                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='on', data-error='This field is required')
+                     .help-block.with-errors
+                        //ul.list-unstyled
+                        //   li Your card number is invalid
 
                   .last-line-wrapper
-                     .col-sm-6.form-group
+                     .col-sm-6.col-xs-12.form-group
                         label.control-label(for='inputCardExpDate') Expiration Date
                            span.danger *
                         .row
@@ -881,7 +882,7 @@ form(data-toggle='validator', role='form')
                                  - }
                               img(src='./images/icons/credit/date-year.png', alt='expiration date year')
 
-                     .col-sm-6.form-group
+                     .col-sm-6.col-xs-12.form-group.has-feedback
                         label.control-label(for='inputCardCVC') CVC
                            span.danger *
                            span.small-desc  The 3 digits (back) or 4 digits (front) value on your card.
@@ -919,6 +920,7 @@ form(data-toggle='validator', role='form')
                            .cvv-help
                               img(src='images/cvv_num_img.png', alt='cvv help')
                               span.text 3 digit security code
+                        .help-block.with-errors
 
             //#other-payment.tab-pane.other-payment
             //   .row

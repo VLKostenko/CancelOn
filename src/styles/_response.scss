@@ -1135,6 +1135,32 @@
   .bootstrap-select.btn-group .dropdown-toggle .caret {
     right: 7px;
   }
+  .booking-table {
+    .search-filter-block {
+      .date-group {
+        background: #e6ebf3;
+        .form-control {
+          .date {
+            color: #000;
+          }
+          .day {
+            color: #000;
+          }
+        }
+      }
+      .people-count {
+        background: #e6ebf3;
+        .dropdown-toggle {
+          background: #e6ebf3;
+          .block {
+            .value {
+              color: #000 !important;
+            }
+          }
+        }
+      }
+    }
+  }
   .search-filter-block {
     position: relative;
     left: 0;
@@ -1156,8 +1182,14 @@
         top: 5px;
       }
     }
+    .input-group {
+      .datepicker-book-rooms {
+        &:before {
+          left: -20px;
+        }
+      }
+    }
     .date-group {
-      background: #1d4f62;
       height: 100%;
       &:before {
         bottom: -5px;
@@ -1792,7 +1824,7 @@
     .date-group {
       width: 100%;
       height: 60px;
-      background: #1a4e63;
+      background: #e6ebf3;
       &:before {
         background: #fff;
       }
@@ -1822,15 +1854,42 @@
       }
       .book-menu {
         width: 320px;
-        left: 0;
-        padding: 12px 20px 0;
+        top: 60px;
+        left: 15px;
+        padding: 12px 0 0;
+        .book-header {
+          padding: 20px 15px;
+          .bootstrap-select {
+            width: 100%;
+            margin-bottom: 15px;
+          }
+          .datepicker-book-rooms {
+            width: 100%;
+            padding: 0;
+            .form-control {
+              line-height: 40px;
+              margin-right: 0;
+              padding-right: 5px;
+              min-width: 142px;
+            }
+          }
+        }
         .room {
           padding: 15px 10px;
+          flex-direction: column;
           .title, .adults, .children {
             width: 34%;
           }
+          .adults {
+            margin-left: 0;
+            margin-top: 10px;
+          }
+          .children {
+            margin-top: 10px;
+          }
           .children-age {
             width: 100%;
+            margin-top: 10px;
             .child {
               select {
                 border: 1px solid #333;
@@ -2400,7 +2459,7 @@
       .date-group {
         width: 100%;
         height: 60px;
-        background: #1a4e63;
+        background: #e6ebf3;
         margin-left: 15px;
         &:before {
           bottom: 0;
@@ -2426,9 +2485,8 @@
         .book-menu {
           top: 60px;
           width: 320px;
-          padding: 0;
           left: 0;
-          padding: 12px 20px 0;
+          padding: 12px 0 0;
           &:after {
             content: '';
             width: 0;
@@ -2443,9 +2501,11 @@
             right: 0;
             margin: auto;
           }
+
         }
         .input-group-addon {
           padding-top: 0;
+          background: #e6ebf3;
         }
         .form-control {
           margin-top: 3px;

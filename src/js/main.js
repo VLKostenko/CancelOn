@@ -1032,7 +1032,6 @@
     setTimeout(function() {
       $('.change-dates-block').removeClass('animated bounceOut');
     }, 750);
-    $(window).disablescroll('undo');
   });
 
   $('.change-save-btn .save').click(function() {
