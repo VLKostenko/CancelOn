@@ -166,13 +166,14 @@
   table .caption {
     height: 40px;
     .next, .prev {
-      display: none;
-      padding: 0 5px;
+      //display: none;
+      padding: 2px 7px;
       cursor: pointer;
     }
     .next:hover, .prev:hover {
-      background-color: #ccc;
       color: white;
+      box-shadow: none !important;
+      background: #7296dc !important;
     }
   }
   .gap {
@@ -597,7 +598,7 @@ input[type="text"] {
           //}
         }
         .prev, .next {
-          background-color: $main-blue;
+          background-color: #4978d2;
           border-radius: 0;
           color: #fff;
           border: 0;

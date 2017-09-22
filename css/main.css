@@ -1353,14 +1353,14 @@ h6, .h6 {
 }
 
 .date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev {
-  display: none;
-  padding: 0 5px;
+  padding: 2px 7px;
   cursor: pointer;
 }
 
 .date-picker-wrapper table .caption .next:hover, .date-picker-wrapper table .caption .prev:hover {
-  background-color: #ccc;
   color: white;
+  box-shadow: none !important;
+  background: #7296dc !important;
 }
 
 .date-picker-wrapper .gap {
@@ -1750,7 +1750,7 @@ input[type="text"].datepicker-input {
 }
 
 .date-picker-wrapper .month-wrapper table .caption .prev, .date-picker-wrapper .month-wrapper table .caption .next {
-  background-color: #00c2ff;
+  background-color: #4978d2;
   border-radius: 0;
   color: #fff;
   border: 0;
