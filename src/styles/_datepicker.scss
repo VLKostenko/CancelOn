@@ -580,6 +580,32 @@ input[type="text"] {
         width: 10%;
         position: relative;
       }
+      td {
+        &:first-child {
+          .day {
+            &.toMonth {
+              &.valid {
+                color: #949494;
+                &.hovering {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+        &:last-child {
+          .day {
+            &.toMonth {
+              &.valid {
+                color: #949494;
+                &.hovering {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
       thead {
         background: #fff;
       }
@@ -704,6 +730,7 @@ input[type="text"] {
 .date-picker-wrapper .month-wrapper table .day.lastMonth {
   //display: none!important;
   color: #c6c6c6!important;
+  text-decoration: underline;
   font-size: 12px;
   padding: 12px 0;
 }

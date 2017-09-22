@@ -1739,6 +1739,22 @@ input[type="text"].datepicker-input {
   position: relative;
 }
 
+.date-picker-wrapper .month-wrapper table td:first-child .day.toMonth.valid {
+  color: #949494;
+}
+
+.date-picker-wrapper .month-wrapper table td:first-child .day.toMonth.valid.hovering {
+  color: #fff;
+}
+
+.date-picker-wrapper .month-wrapper table td:last-child .day.toMonth.valid {
+  color: #949494;
+}
+
+.date-picker-wrapper .month-wrapper table td:last-child .day.toMonth.valid.hovering {
+  color: #fff;
+}
+
 .date-picker-wrapper .month-wrapper table thead {
   background: #fff;
 }
@@ -1855,6 +1871,7 @@ input[type="text"].datepicker-input {
 .date-picker-wrapper .month-wrapper table .day.nextMonth,
 .date-picker-wrapper .month-wrapper table .day.lastMonth {
   color: #c6c6c6 !important;
+  text-decoration: underline;
   font-size: 12px;
   padding: 12px 0;
 }
