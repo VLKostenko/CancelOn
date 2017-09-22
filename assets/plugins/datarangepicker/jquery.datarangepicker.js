@@ -2258,8 +2258,8 @@
           '<div class="date"><span class="month">' + monthName + ' </span><span class="day"> ' + moment(new Date()).format('Do') + '</span> <span class="year">' + date.getFullYear() + '</span></div>' +
           '</div>';
       }
-      html += '<div class="buttons"><input type="button" class="close-btn cancel btn-dark-grey btn open-sans-font" value="Cancel" />';
-      html += '<input type="button" class="apply-btn disabled btn-primary btn open-sans-font' + getApplyBtnClass() + '" value="Save Date" /></div>';
+      // html += '<div class="buttons"><input type="button" class="close-btn cancel btn-dark-grey btn open-sans-font" value="Cancel" />';
+      html += '<div class="buttons"><input type="button" class="apply-btn btn-primary btn open-sans-font' + getApplyBtnClass() + '" value="Done" /></div>';
 
       html += '</div>' +
         '<div style="clear:both;height:0;font-size:0;"></div>' +

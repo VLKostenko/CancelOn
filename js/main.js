@@ -816,21 +816,21 @@
 
   $('.search-result .result-item').click(function() {
     var title = $(this).find('h4').text();
-    var icon = $(this).find('.result-icon').attr('class');
-    var location = $(this).find('.location');
+    // var icon = $(this).find('.result-icon').attr('class');
+    // var location = $(this).find('.location');
     $('.search-group .input-search').val(title);
-    $('.search-group .input-search')
-      .removeAttr('class')
-      .attr('class', 'form-control input-search')
-      .addClass(icon + ' icon');
-    if ( $('.search-group > .location').length ) {
-      if ( location.text() !== $('.search-group > .location').text() ) {
-        $('.search-group > .location').remove();
-        location.clone().appendTo('.search-group');
-      }
-    } else {
-      location.clone().appendTo('.search-group');
-    }
+    // $('.search-group .input-search')
+    //   .removeAttr('class')
+    //   .attr('class', 'form-control input-search')
+    //   .addClass(icon + ' icon');
+    // if ( $('.search-group > .location').length ) {
+      // if ( location.text() !== $('.search-group > .location').text() ) {
+      //   $('.search-group > .location').remove();
+        // location.clone().appendTo('.search-group');
+      // }
+    // } else {
+      // location.clone().appendTo('.search-group');
+    // }
   });
 
   search.keyup(function() {
