@@ -9372,11 +9372,11 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .main-wrapper.hidden-sidebar-filter .content-wrapper {
-  width: calc(60% - 15px);
+  width: calc(50% - 15px);
 }
 
 .main-wrapper.hidden-sidebar-filter .map-wrapper {
-  width: calc(40% - 15px);
+  width: calc(50% - 15px);
 }
 
 .content-wrapper {
@@ -17752,6 +17752,15 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
 }
 
+@media screen and (max-width: 1500px) {
+  .main-wrapper.hidden-sidebar-filter .content-wrapper {
+    width: calc(55% - 15px);
+  }
+  .main-wrapper.hidden-sidebar-filter .map-wrapper {
+    width: calc(45% - 15px);
+  }
+}
+
 @media screen and (max-width: 1440px) {
   nav .navbar-header {
     width: 49%;
@@ -17819,6 +17828,12 @@ aside.show-on-map .panel-group .panel.panel-default {
   .load-icon {
     width: 145px;
     right: -10px;
+  }
+  .main-wrapper.hidden-sidebar-filter .content-wrapper {
+    width: calc(60% - 15px);
+  }
+  .main-wrapper.hidden-sidebar-filter .map-wrapper {
+    width: calc(40% - 15px);
   }
 }
 

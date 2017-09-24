@@ -20,6 +20,18 @@
     float: right;
   }
 }
+@media screen and (max-width: 1500px) {
+  .main-wrapper {
+    &.hidden-sidebar-filter {
+      .content-wrapper {
+        width: calc(55% - 15px);
+      }
+      .map-wrapper {
+        width: calc(45% - 15px);
+      }
+    }
+  }
+}
 @media screen and (max-width: 1440px) {
   nav {
     .navbar-header {
@@ -107,6 +119,16 @@
   .load-icon {
     width: 145px;
     right: -10px;
+  }
+  .main-wrapper {
+    &.hidden-sidebar-filter {
+      .content-wrapper {
+        width: calc(60% - 15px);
+      }
+      .map-wrapper {
+        width: calc(40% - 15px);
+      }
+    }
   }
 }
 @media screen and (max-width: 1260px) {

@@ -1756,10 +1756,10 @@ aside {
   &.hidden-sidebar-filter {
     @include calc(width, '100% - 15px');
     .content-wrapper {
-      @include calc(width, '60% - 15px');
+      @include calc(width, '50% - 15px');
     }
     .map-wrapper {
-      @include calc(width, '40% - 15px');
+      @include calc(width, '50% - 15px');
     }
   }
 }
