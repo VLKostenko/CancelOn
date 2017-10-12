@@ -4,16 +4,17 @@
   border-left: 1px solid #e3e4eb;
   position: absolute;
   z-index: 12;
-  width: calc(100% - 30px);
+  width: calc(50% - 5px);
+  left: 15px;
+  right: auto;
   margin: auto;
-  left: 0;
-  right: 0;
   top: 0;
   bottom: auto;
   padding: 25px 50px 0;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
   @include crossBrowser(transition, .2s ease-in);
   &.active {
     opacity: 1;

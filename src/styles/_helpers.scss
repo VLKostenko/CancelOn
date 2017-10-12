@@ -1696,7 +1696,8 @@ aside {
   .content-settings {
     float: left;
     margin-left: 5px;
-    @include calc(width, '100% - 225px - 5px');
+    //@include calc(width, '100% - 225px - 5px');
+    @include calc(width, '100% - 5px');
     //@media screen and (min-width: 1441px) {
     //  $content-settings-width: 86%;
     //  @include calc(width, '#{$content-settings-width} - 5px');
@@ -1761,10 +1762,10 @@ aside {
     .map-wrapper {
       @include calc(width, '50% - 15px');
     }
-    .full-filter-search {
-      width: calc(100% - 14px);
-      left: 14px;
-    }
+    //.full-filter-search {
+    //  width: calc(100% - 14px);
+    //  left: 14px;
+    //}
   }
 }
 
@@ -2087,6 +2088,20 @@ aside {
   .bootstrap-select {
     .dropdown-menu {
       font-family: "Roboto", sans-serif;
+    }
+  }
+  .show-all {
+    padding: 8px 28px;
+    color: #fff;
+    background: $main-blue;
+    border-radius: 3px;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    @include crossBrowser(transition, .2s ease-in);
+    &:hover {
+      background: lighten($main-blue, 10%);
     }
   }
 }

@@ -9310,7 +9310,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .filter-top .content-settings {
   float: left;
   margin-left: 5px;
-  width: calc(100% - 225px - 5px);
+  width: calc(100% - 5px);
 }
 
 .filter-top .content-settings .display {
@@ -9377,11 +9377,6 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .main-wrapper.hidden-sidebar-filter .map-wrapper {
   width: calc(50% - 15px);
-}
-
-.main-wrapper.hidden-sidebar-filter .full-filter-search {
-  width: calc(100% - 14px);
-  left: 14px;
 }
 
 .content-wrapper {
@@ -9710,6 +9705,22 @@ aside.show-on-map .panel-group .panel.panel-default {
   font-family: "Roboto", sans-serif;
 }
 
+.filter-top .show-all {
+  padding: 8px 28px;
+  color: #fff;
+  background: #00c2ff;
+  border-radius: 3px;
+  margin-left: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  transition: 0.2s ease-in;
+}
+
+.filter-top .show-all:hover {
+  background: #33ceff;
+}
+
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top: 0;
 }
@@ -9898,16 +9909,17 @@ aside.show-on-map .panel-group .panel.panel-default {
   border-left: 1px solid #e3e4eb;
   position: absolute;
   z-index: 12;
-  width: calc(100% - 30px);
+  width: calc(50% - 5px);
+  left: 15px;
+  right: auto;
   margin: auto;
-  left: 0;
-  right: 0;
   top: 0;
   bottom: auto;
   padding: 25px 50px 0;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
   transition: 0.2s ease-in;
 }
 

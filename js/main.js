@@ -1185,7 +1185,7 @@
     }
   });
 
-  $('.sidebar-filter .show-all').on('click', function() {
+  $('.show-all').on('click', function() {
     $('.main-wrapper .full-filter-search').addClass('active');
   });
 
@@ -1195,15 +1195,16 @@
 
   $('.full-filter-search input[type="checkbox"]').change(function() {
     if ( $(this).prop('checked') ) {
-      if ( $(this).parent().offset().left < 900 ) {
+      console.log($(this).parent().offset().left);
+      if ( $(this).parent().offset().left < 400 ) {
         $('.full-filter-search .filter-search-result').removeClass('right').addClass('active left').animate({
-          left: $(this).parent().offset().left + 300,
+          left: $(this).parent().offset().left + 170,
           top: $(this).parent().offset().top - 284
         }, 200);
         console.log('1')
       } else {
         $('.full-filter-search .filter-search-result').removeClass('left').addClass('active right').animate({
-          left: $(this).parent().offset().left - 380,
+          left: $(this).parent().offset().left - 340,
           top: $(this).parent().offset().top - 284
         }, 200);
         console.log('2')
