@@ -1185,6 +1185,38 @@
     }
   });
 
+  $('.sidebar-filter .show-all').on('click', function() {
+    $('.main-wrapper .full-filter-search').addClass('active');
+  });
+
+  $('.main-wrapper .full-filter-search .close a, .main-wrapper .full-filter-search .filter-search-footer a').on('click', function() {
+    $('.main-wrapper .full-filter-search').removeClass('active');
+  });
+
+  $('.full-filter-search input[type="checkbox"]').change(function() {
+    if ( $(this).prop('checked') ) {
+      if ( $(this).parent().offset().left < 900 ) {
+        $('.full-filter-search .filter-search-result').removeClass('right').addClass('active left').animate({
+          left: $(this).parent().offset().left + 300,
+          top: $(this).parent().offset().top - 284
+        }, 200);
+        console.log('1')
+      } else {
+        $('.full-filter-search .filter-search-result').removeClass('left').addClass('active right').animate({
+          left: $(this).parent().offset().left - 380,
+          top: $(this).parent().offset().top - 284
+        }, 200);
+        console.log('2')
+      }
+    } else {
+      $('.full-filter-search .filter-search-result').removeClass('active');
+    }
+  });
+
+  $('.full-filter-search .filter-search-result .close').on('click', function() {
+    $('.full-filter-search .filter-search-result').removeClass('active left right');
+  });
+
   /**
    * ------------------------------------------------------------------------------------------------------
    * Initialization

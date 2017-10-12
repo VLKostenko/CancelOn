@@ -1761,6 +1761,10 @@ aside {
     .map-wrapper {
       @include calc(width, '50% - 15px');
     }
+    .full-filter-search {
+      width: calc(100% - 14px);
+      left: 14px;
+    }
   }
 }
 
