@@ -16,6 +16,15 @@
   overflow: hidden;
   font-family: "Roboto", sans-serif;
   @include crossBrowser(transition, .2s ease-in);
+  @media screen and (max-width: 1499px) {
+    width: calc(55% - 8px);
+  }
+  @media screen and (max-width: 1400px) {
+    width: calc(60% - 9px);
+  }
+  @media screen and (max-width: 1280px) {
+    width: calc(100% - 30px);
+  }
   &.active {
     opacity: 1;
     visibility: visible;
@@ -150,6 +159,9 @@
       &:hover {
         opacity: 1;
       }
+    }
+    @media screen and (max-width: 1024px) {
+      display: none;
     }
   }
   .filter-search-footer {

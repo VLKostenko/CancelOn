@@ -479,7 +479,7 @@
   }
   .filter-top .content-settings {
     margin-left: 0;
-    width: calc(100% - 225px);
+    //width: calc(100% - 225px);
   }
   .main-wrapper {
     .map-wrapper {
@@ -2299,6 +2299,17 @@
       line-height: 39px;
       .fa {
         margin-right: 5px;
+      }
+    }
+  }
+  .main-wrapper {
+    &.hidden-sidebar-filter {
+      .grid-item {
+        width: 100%;
+        margin-left: 0;
+        &:nth-child(2n) {
+          margin-left: 0;
+        }
       }
     }
   }

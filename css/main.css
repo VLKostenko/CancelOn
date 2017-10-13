@@ -9923,6 +9923,24 @@ aside.show-on-map .panel-group .panel.panel-default {
   transition: 0.2s ease-in;
 }
 
+@media screen and (max-width: 1499px) {
+  .full-filter-search {
+    width: calc(55% - 8px);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .full-filter-search {
+    width: calc(60% - 9px);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .full-filter-search {
+    width: calc(100% - 30px);
+  }
+}
+
 .full-filter-search.active {
   opacity: 1;
   visibility: visible;
@@ -10087,6 +10105,12 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .full-filter-search .filter-search-result .close:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .full-filter-search .filter-search-result {
+    display: none;
+  }
 }
 
 .full-filter-search .filter-search-footer {
@@ -18453,7 +18477,6 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .filter-top .content-settings {
     margin-left: 0;
-    width: calc(100% - 225px);
   }
   .main-wrapper .map-wrapper {
     display: none;
@@ -19985,6 +20008,13 @@ aside.show-on-map .panel-group .panel.panel-default {
   }
   .grid-item .views-bottom .fa {
     margin-right: 5px;
+  }
+  .main-wrapper.hidden-sidebar-filter .grid-item {
+    width: 100%;
+    margin-left: 0;
+  }
+  .main-wrapper.hidden-sidebar-filter .grid-item:nth-child(2n) {
+    margin-left: 0;
   }
   .exclusive {
     padding-left: 0 !important;

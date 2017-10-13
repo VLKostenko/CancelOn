@@ -184,9 +184,9 @@
 
   function sidebarPosition() {
     if ( $(window).width() < 768 ) {
-      $('.sidebar-filter').appendTo('#filter_mobile');
+      $('.sidebar-filter').removeClass('to-left').appendTo('#filter_mobile');
     } else {
-      $('.sidebar-filter').insertBefore($('.main-wrapper'));
+      $('.sidebar-filter').addClass('to-left').insertBefore($('.main-wrapper'));
     }
   }
 
@@ -1500,14 +1500,14 @@
       $('.main-wrapper').addClass('hidden-sidebar-filter');
       $('.search-group').addClass('hidden-sidebar-filter');
       $('.content-wrapper').fadeOut(200);
-      $('.sidebar-filter').addClass('to-left');
+      // $('.sidebar-filter').addClass('to-left');
       $('.search-filter .menu-icon').removeClass('active').parent('.hide-filter').addClass('hidden-filter');
-      $('.sidebar-filter').addClass('show-on-map').height(1690);
+      // $('.sidebar-filter').addClass('show-on-map').height(1690);
 
       $('#map').parent('.ui').removeClass('sticky').removeAttr('style');
       $('.map-wrapper.full-width').height(1690);
 
-      $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
+      $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail, .filter-top .show-all')
         .css({
           'opacity': 1,
           'pointer-events': 'none'
@@ -1525,19 +1525,19 @@
       } else {
         if ( $(window).width() > 767 ) {
           $('.content-wrapper').fadeIn(200);
-          $('.sidebar-filter').removeClass('to-left');
+      //     $('.sidebar-filter').removeClass('to-left');
         } else {
           $('.content-wrapper').fadeIn(200);
         }
-        $('.main-wrapper').removeClass('hidden-sidebar-filter');
-        $('.search-group').removeClass('hidden-sidebar-filter');
+      //   $('.main-wrapper').removeClass('hidden-sidebar-filter');
+      //   $('.search-group').removeClass('hidden-sidebar-filter');
       }
-      $('.sidebar-filter').removeClass('show-on-map').height($('.main-wrapper').height());
+      // $('.sidebar-filter').removeClass('show-on-map').height($('.main-wrapper').height());
 
       $('#map').parent('.ui').addClass('sticky').width($('#map').parent().width()).height('auto');
       $('.map-wrapper').height($('.sidebar-filter').height());
 
-      $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail')
+      $('.filter-top .display, .filter-top .bootstrap-select, .filter-top .avail, .filter-top .show-all')
         .css({
           'opacity': 0,
           'pointer-events': 'initial'
