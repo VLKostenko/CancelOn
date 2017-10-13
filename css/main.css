@@ -9914,7 +9914,7 @@ aside.show-on-map .panel-group .panel.panel-default {
   right: auto;
   margin: auto;
   top: 0;
-  bottom: auto;
+  bottom: 0;
   padding: 25px 50px 0;
   opacity: 0;
   visibility: hidden;
