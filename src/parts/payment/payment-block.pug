@@ -745,11 +745,9 @@
    .loading-form
 form(data-toggle='validator', role='form')
    .loading-submit-form-cover
-   button#testValidation(type='button', style='position: absolute; right: 0; top: 0; background: #00b9f1; color: #fff; border: 1px solid #2091b3;') Test Validation
+   button#testValidation(type='button', style='position: absolute; right: 0; top: 0; background: #1d79d5; color: #fff; border: 1px solid #2091b3;') Test Validation
    .step.first-step
       .step-header
-         .step-number
-            span 1
          .step-text
             .step-title
                span Guest Details
@@ -757,52 +755,39 @@ form(data-toggle='validator', role='form')
                span Please fill in the details of the person who is going to check in at the hotel.  (Must be over 21)
       .step-body
          .row
-            .col-sm-6.form-group.has-feedback
+            .col-sm-3.pr-0.form-group.has-feedback
                label.control-label(for='inputFirstName') First Name
                   span.danger *
                input#inputFirstName.form-control(name='First Name', type='text', required, data-error='This field is required')
                .help-block.with-errors
-            .col-sm-6.form-group.has-feedback
+            .col-sm-3.pl-0.form-group.has-feedback
                label.control-label(for='inputLastName') Last Name
                   span.danger *
                input#inputLastName.form-control(name='Last Name', type='text', required, data-error='This field is required')
-               .help-block.with-errors
-            .col-sm-6.form-group.has-feedback
-               label.control-label(for='inputEmail') Email
-                  span.danger *
-               input#inputEmail.form-control(name='Email', type='email', required, data-error='This field is required')
-               .help-block.with-errors
-            .col-sm-6.form-group.has-feedback
-               label.control-label(for='inputEmail') Confirm Email address
-                  span.danger *
-               input#inputEmailConfirm.form-control(, type='email', required, data-match='#inputEmail', data-error='This field is required', data-match-error="Email does not match")
                .help-block.with-errors
             .col-sm-6.form-group
                label.control-label(for='inputCountry') Country
                   span.danger *
                select#inputCountry.selectpicker.form-control.list-of-countries(name='Country')
+                  option(value='United States', selected='selected') United States
+                  option(value='United Kingdom') United Kingdom
+                  option(value='Germany') Germany
+                  option(value='France') France
+                  option(value='Italy') Italy
+                  option(value='Spain') Spain
+                  option(value='Australia') Australia
+                  option(value='New Zealand') New Zealand
+                  option(disabled) ---------------------------------------------------------------------------------------
                   - for ( var i = 0; i < countriesList.length; i++ ) {
-                     - if ( i == 9 ) {
-                        option(value=countriesList[i].name, selected='selected')=countriesList[i].name
-                     - } else {
-                        option#jopa(value=countriesList[i].name)=countriesList[i].name
-                     - }
+                    option(value=countriesList[i].name)=countriesList[i].name
                   - }
                a.find-my-location(href='javascript:void(0)') Find my location
-            .col-sm-6.form-group
-               label.control-label(for='inputPhone') Phone
+            .col-sm-6.form-group.has-feedback
+               label.control-label(for='inputEmail') Email
                   span.danger *
-               .phone-number-block.clearfix
-                  select#inputCodePhone.selectpicker.form-control.list-of-phones(name='Phone Code')
-                     - for ( var i = 0; i < countriesList.length; i++ ) {
-                        - if ( i == 9 ) {
-                           option(value=countriesList[i].code, selected='selected')=countriesList[i].code
-                        - } else {
-                           option(value=countriesList[i].code)=countriesList[i].code
-                        - }
-                     - }
-                  input#inputPhone.form-control(name='Phone Number', type='text', required, data-error='This field is required')
-            .col-sm-6.form-group.states-usa.hidden
+               input#inputEmail.form-control(name='Email', type='email', required, data-error='This field is required')
+               .help-block.with-errors
+            .col-sm-6.form-group.states-usa
                label.control-label(for='inputPhone') State
                   span.danger *
                .states-block.clearfix
@@ -810,117 +795,111 @@ form(data-toggle='validator', role='form')
                      - for ( var i = 0; i < statesList.length; i++ ) {
                         option(value=statesList[i].name)=statesList[i].name
                      - }
-      .step-footer
-         span (We won’t call you for marketing purposes)
+            .col-sm-6.form-group
+               label.control-label(for='inputPhone') Phone
+                  span.danger *
+               .phone-number-block.clearfix
+                  input#inputPhone.form-control(name='Phone Number', type='text', required, data-error='This field is required', onkeypress='return event.charCode >= 48 && event.charCode <= 57')
+                  .help-button
+                     a(href='javascript:void(0)')
+                        i.fa.fa-question-circle-o(aria-hidden='true')
+                     .help
+                        span.text We won’t call you for marketing purposes
+            .col-sm-6.col-xs-12.form-group
+               label.control-label(for='inputPostal') Postal Code
+                  span.danger *
+               input#inputPostal.form-control.pl-10(name='Postal Code', type='text', required, autocomplete='off', data-error='This field is required')
+               .help-block.with-errors
    .step.second-step
       .step-header
-         .step-number
-            span 2
          .step-text
             .step-title
                span Payment Details
             .step-description
                span Please fill in the details of the owner of the credit card.
       .step-body
-         ul.list-inline.payment-method
-            li.active
-               a(href='#credit-card', data-toggle='tab')
-                  span.radio
-                  span.text Credit Card
-            li
-               a(href='#other-payment', data-toggle='tab')
-                  span.radio
-                  span.text Paypal
+         .line-wrapper
+            ul.list-inline.payment-method
+               li.active
+                  a(href='#credit-card', data-toggle='tab')
+                     span.radio
+                     span.text Credit Card
+               li
+                  a(href='#other-payment', data-toggle='tab')
+                     span.radio
+                     span.text Paypal
+            .checkbox
+               input#card-same-info(type='checkbox', checked)
+               label(for='card-same-info') Same as Guest Details
          .tab-content.clearfix
             .tab-pane.credit-card-info.active
                .row
-                  .col-sm-6.form-group.has-feedback
-                     label.control-label(for='inputCardFirstName') First Name
-                        span.danger *
-                     input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required')
-                     img(src='./images/icons/credit/first-name.png', alt='first name')
-                     .help-block.with-errors
-                  .col-sm-6.form-group.has-feedback
-                     label.control-label(for='inputCardLastName') Last Name
-                        span.danger *
-                     input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required')
-                     img(src='./images/icons/credit/last-name.png', alt='last name')
-                     .help-block.with-errors
-                  .col-sm-6.col-xs-12.form-group
-                     label.control-label(for='inputCardPostal') Postal Code
-                        span.danger *
-                     input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
-                  .col-sm-6.form-group.has-feedback.card-number-input
+                  //.col-sm-6.form-group.has-feedback
+                  //   label.control-label(for='inputCardFirstName') First Name
+                  //      span.danger *
+                  //   input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required', placeholder='John')
+                  //   img(src='./images/icons/credit/first-name.png', alt='first name')
+                  //   .help-block.with-errors
+                  //.col-sm-6.form-group.has-feedback
+                  //   label.control-label(for='inputCardLastName') Last Name
+                  //      span.danger *
+                  //   input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required', placeholder='Doe')
+                  //   img(src='./images/icons/credit/last-name.png', alt='last name')
+                  //   .help-block.with-errors
+                  //.col-sm-6.col-xs-12.form-group
+                  //   label.control-label(for='inputCardPostal') Postal Code
+                  //      span.danger *
+                  //   input#inputCardPostal.form-control.pl-10(name='Card Postal', type='text', required, autocomplete='off', data-error='This field is required')
+                  //   .help-block.with-errors
+                  .col-sm-6.form-group.card-number-input.has-feedback
                      label.control-label(for='inputCardNumber') Card Number
                         span.danger *
-                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='off', data-error='This field is required', data-pattern-error='Your card number is invalid', pattern='^([0-9]{4}( |)){3}[0-4]{4}$')
-                     img(src='./images/icons/credit/number1.png', alt='number')
+                     input#inputCardNumber.form-control.card-input(name='Card Number', type='text', required, maxlength='19', autocomplete='on', data-error='This field is required')
                      .help-block.with-errors
-
-                  .last-line-wrapper
-                     .col-sm-6.form-group
-                        label.control-label(for='inputCardExpDate') Expiration Date
-                           span.danger *
-                        .row
-                           .col-sm-6.mb-xs-15
-                              select#inputCardExpDate.selectpicker.form-control(name='Expiration Date Day')
-                                 - for ( var i = 1; i < 32; i++ ) {
-                                    - if ( i < 10 ) {
-                                       option(value='0' + i)= '0' + i
-                                    - } else {
-                                       option(value=i)=i
-                                    - }
-                                 - }
-                              img(src='./images/icons/credit/date-day.png', alt='expiration date day')
-                           .col-sm-6
-                              select#inputCardExpDateYear.selectpicker.form-control(name='Expiration Date Year')
-                                 - for ( var i = 2010; i < 2031; i++ ) {
-                                    - if ( i == 2018 ) {
-                                       option(value=i, selected)=i
-                                    - } else {
-                                       option(value=i)=i
-                                    - }
-                                 - }
-                              img(src='./images/icons/credit/date-year.png', alt='expiration date year')
-
-                     .col-sm-6.form-group
-                        label.control-label(for='inputCardCVC') CVC
-                           span.danger *
-                           span.small-desc  The 3 digits (back) or 4 digits (front) value on your card.
-                        input#inputCardCVC.form-control(name='Card CVC', type='text', autocomplete='off', required, maxlength='3', data-error='This field is required')
-                        img(src='./images/icons/credit/cvc.png', alt='cvc code')
-                        .cvv-input
-                           .numbers-block
-                              .number
-                                 a(href='javascript:void(0)') 0
-                              .number
-                                 a(href='javascript:void(0)') 1
-                              .number
-                                 a(href='javascript:void(0)') 2
-                              .number
-                                 a(href='javascript:void(0)') 3
-                              .number
-                                 a(href='javascript:void(0)') 4
-                              .number
-                                 a(href='javascript:void(0)') 5
-                              .number
-                                 a(href='javascript:void(0)') 6
-                              .number
-                                 a(href='javascript:void(0)') 7
-                              .number
-                                 a(href='javascript:void(0)') 8
-                              .number
-                                 a(href='javascript:void(0)') 9
-                              .delete-button
-                                 a(href='javascript:void(0)') Delete
-                              .enter-button
-                                 a(href='javascript:void(0)') Enter
-                        .help-button
-                           a(href='javascript:void(0)')
-                              i.fa.fa-question-circle-o(aria-hidden='true')
-                           .cvv-help
-                              img(src='images/cvv_num_img.png', alt='cvv help')
-                              span.text 3 digit security code
+                  .col-sm-6
+                     .row
+                        .col-sm-6.col-xs-12.form-group
+                           label.control-label(for='inputCardExpDate') Expiration Date
+                              span.danger *
+                           input#inputCardExpDate.form-control.pl-15(name='Expiration Date', type='text', required, autocomplete='off', data-error='This field is required', placeholder='MM/YYYY')
+                           .help-block.with-errors
+                        .col-sm-6.col-xs-12.form-group.has-feedback
+                           label.control-label(for='inputCardCVC') CVC
+                              span.danger *
+                           input#inputCardCVC.form-control(name='Card CVC', type='text', autocomplete='off', required, maxlength='3', data-error='This field is required')
+                           .cvv-input
+                              .numbers-block
+                                 .number
+                                    a(href='javascript:void(0)') 0
+                                 .number
+                                    a(href='javascript:void(0)') 1
+                                 .number
+                                    a(href='javascript:void(0)') 2
+                                 .number
+                                    a(href='javascript:void(0)') 3
+                                 .number
+                                    a(href='javascript:void(0)') 4
+                                 .number
+                                    a(href='javascript:void(0)') 5
+                                 .number
+                                    a(href='javascript:void(0)') 6
+                                 .number
+                                    a(href='javascript:void(0)') 7
+                                 .number
+                                    a(href='javascript:void(0)') 8
+                                 .number
+                                    a(href='javascript:void(0)') 9
+                                 .delete-button
+                                    a(href='javascript:void(0)') Delete
+                                 .enter-button
+                                    a(href='javascript:void(0)') Enter
+                           .help-button
+                              a(href='javascript:void(0)')
+                                 i.fa.fa-question-circle-o(aria-hidden='true')
+                              .help
+                                 img(src='images/cvv_num_img.png', alt='cvv help')
+                                 span.text 3 digit security code
+                           .help-block.with-errors
 
             //#other-payment.tab-pane.other-payment
             //   .row
@@ -950,8 +929,6 @@ form(data-toggle='validator', role='form')
             a(href='javascript:void(0)')  Cancellation policy
 .step.info-step
    .step-header
-      .step-number
-         span 3
       .step-text
          .step-title
             span Important Information

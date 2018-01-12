@@ -103,15 +103,23 @@
 				i.fa.fa-caret-up(aria-hidden='true')
 	#collapse1.panel-collapse.collapse.in
 		.panel-body
-			input#amount1(type='text', style='border:0; color:#f6931f; font-weight:bold;')
-			span.range-divider -
-			input#amount2(type='text', style='border:0; color:#f6931f; font-weight:bold;')
-			a(href='javascript:void(0)', class='show-all') Show All
-			#slider-range
+			//.input-wrapper
+			//	input#amount1(type='text')
+			//	span.range-divider -
+			//	input#amount2(type='text')
+			//#slider-range
+			//	.histogram-wrapper.clearfix
+			//		.histogram-tooltip
+			.price-slider-range
+				.histogram-wrapper.clearfix
+					.histogram-tooltip
+				.input-wrapper
+					input.price-amount1(type='text')
+					input.price-amount2(type='text')
 	.panel-heading
 		h4.panel-title
 			a(data-toggle='collapse', href='#collapse2', aria-expanded='true')
-				| Stars
+				| Hotel Stars
 				i.fa.fa-caret-up(aria-hidden='true')
 	#collapse2.stars-filter.panel-collapse.collapse.in
 		.panel-body
@@ -176,40 +184,51 @@
 					| Any
 	.panel-heading
 		h4.panel-title
-			a(data-toggle='collapse', href='#collapse2-1', aria-expanded='true')
-				| TripAdviser Rating
+			a(data-toggle='collapse', href='#collapse-distance', aria-expanded='true')
+				| Distance
 				i.fa.fa-caret-up(aria-hidden='true')
-	#collapse2-1.tripavisor-filter.panel-collapse.collapse.in
+	#collapse-distance.panel-collapse.collapse.in
 		.panel-body
-			.checkbox.checkbox-success
-				input#checkbox1-1(type='checkbox')
-				label(for='checkbox1-1')
-					span.rate(data-rate='5')
-			.divider
-			.checkbox.checkbox-success
-				input#checkbox2-1(type='checkbox')
-				label(for='checkbox2-1')
-					span.rate(data-rate='4')
-			.divider
-			.checkbox.checkbox-success
-				input#checkbox3-1(type='checkbox')
-				label(for='checkbox3-1')
-					span.rate(data-rate='3')
-			.divider
-			.checkbox.checkbox-success
-				input#checkbox4-1(type='checkbox')
-				label(for='checkbox4-1')
-					span.rate(data-rate='2')
-			.divider
-			.checkbox.checkbox-success
-				input#checkbox5-1(type='checkbox')
-				label(for='checkbox5-1')
-					span.rate(data-rate='1')
-			.divider
-			.checkbox.checkbox-success
-				input#checkbox6-1(type='checkbox')
-				label(for='checkbox6-1')
-					| Any
+			.input-wrapper.distance
+				label(for='amount-distance') From City Center
+				input#amount-distance(type='text', value='23 km.')
+			#slider-range-distance
+	//.panel-heading
+	//	h4.panel-title
+	//		a(data-toggle='collapse', href='#collapse2-1', aria-expanded='true')
+	//			| TripAdviser Rating
+	//			i.fa.fa-caret-up(aria-hidden='true')
+	//#collapse2-1.tripavisor-filter.panel-collapse.collapse.in
+	//	.panel-body
+	//		.checkbox.checkbox-success
+	//			input#checkbox1-1(type='checkbox')
+	//			label(for='checkbox1-1')
+	//				span.rate(data-rate='5')
+	//		.divider
+	//		.checkbox.checkbox-success
+	//			input#checkbox2-1(type='checkbox')
+	//			label(for='checkbox2-1')
+	//				span.rate(data-rate='4')
+	//		.divider
+	//		.checkbox.checkbox-success
+	//			input#checkbox3-1(type='checkbox')
+	//			label(for='checkbox3-1')
+	//				span.rate(data-rate='3')
+	//		.divider
+	//		.checkbox.checkbox-success
+	//			input#checkbox4-1(type='checkbox')
+	//			label(for='checkbox4-1')
+	//				span.rate(data-rate='2')
+	//		.divider
+	//		.checkbox.checkbox-success
+	//			input#checkbox5-1(type='checkbox')
+	//			label(for='checkbox5-1')
+	//				span.rate(data-rate='1')
+	//		.divider
+	//		.checkbox.checkbox-success
+	//			input#checkbox6-1(type='checkbox')
+	//			label(for='checkbox6-1')
+	//				| Any
 	.panel-heading
 		h4.panel-title
 			a(data-toggle='collapse', href='#collapse3', aria-expanded='true')
@@ -217,32 +236,32 @@
 				i.fa.fa-caret-up(aria-hidden='true')
 	#collapse3.panel-collapse.collapse.in
 		.panel-body
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox11(type='checkbox')
 				label(for='checkbox11')
 					| Sale Hotel Rooms
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox12(type='checkbox')
 				label(for='checkbox12')
 					| Only Deals
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox13(type='checkbox')
 				label(for='checkbox13')
 					| Roll-in shower
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox14(type='checkbox')
 				label(for='checkbox14')
 					| In-room accessibility
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox15(type='checkbox')
 				label(for='checkbox15')
 					| Accessible bathroom
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox16(type='checkbox')
 				label(for='checkbox16')
 					| Wheelchair accessible rooms
@@ -250,55 +269,47 @@
 		h4.panel-title
 			a.collapse(data-toggle='collapse', href='#collapse4', aria-expanded='true')
 				| Facilities
-				i.fa.fa-caret-down(aria-hidden='true')
+				i.fa.fa-caret-up(aria-hidden='true')
 	#collapse4.panel-collapse.facilities.collapse.in
 		.panel-body
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox21(type='checkbox')
 				label(for='checkbox21')
-					i.blue-text.icon-wifi
 					|  Free Wi-Fi
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox22(type='checkbox')
 				label(for='checkbox22')
-					i.blue-text.icon-parking
 					|  Parking
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox23(type='checkbox')
 				label(for='checkbox23')
-					i.blue-text.icon-air-conditioner
 					|  Air conditioner
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox24(type='checkbox')
 				label(for='checkbox24')
-					i.blue-text.icon-old-typical-phone
 					|  Phone
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox25(type='checkbox')
 				label(for='checkbox25')
-					i.blue-text.icon-television
 					|  TV
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox26(type='checkbox')
 				label(for='checkbox26')
-					i.blue-text.icon-shower-head
 					|  Shower
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox27(type='checkbox')
 				label(for='checkbox27')
-					i.blue-text.icon-valet-head
 					| Valet
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox28(type='checkbox')
 				label(for='checkbox28')
-					i.blue-text.icon-single-bed
 					|  Single bed
 			.divider
 			a.underline.block.pt-20.pb-20(href='javascript:void(0)') Show 33 parametrs
@@ -306,20 +317,20 @@
 		h4.panel-title
 			a.collapse(data-toggle='collapse', href='#collapse5', aria-expanded='true')
 				| Accommodation Type
-				i.fa.fa-caret-down(aria-hidden='true')
+				i.fa.fa-caret-up(aria-hidden='true')
 	#collapse5.panel-collapse.collapse.in
 		.panel-body
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox41(type='checkbox')
 				label(for='checkbox41')
 					| Hotel
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox42(type='checkbox')
 				label(for='checkbox42')
 					| Hostel
 			.divider
-			.checkbox.checkbox-success
+			.checkbox
 				input#checkbox43(type='checkbox')
 				label(for='checkbox43')
 					| Apartments

@@ -4,16 +4,16 @@ block vars
 block main
    include parts/navigation
    include parts/search
-   include parts/search-top-options
    .container.pl-0.pr-0.pos-rel
-      aside.sidebar-filter.same-height
+      aside.sidebar-filter.same-height.to-left
          .mobile-filter-line.visible-xs
-            i.fa.fa-filter(aria-hidden='true')
+            i.fa.fa-chevron-up(aria-hidden='true')
             | Search filter
          .panel-group.mb-0.mt-xs-50.ui.sticky
             include parts/aside
-      .main-wrapper#sticky-wrap
+      .main-wrapper.hidden-sidebar-filter#sticky-wrap
          include parts/content
          .black-bg-search
-         .black-bg-map
-         include parts/map-item
+         include parts/full-filter-search
+   .black-bg-map
+   include parts/map-item

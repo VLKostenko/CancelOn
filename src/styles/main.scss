@@ -32,9 +32,9 @@
 /* end of icomoon */
 
 .navbar-brand {
-  max-width: 225px;
+  max-width: 180px;
   padding: 0;
-  margin: 24px 0 24px 0!important;
+  margin: 15px 0!important;
   &.dropdown {
     & + .dropdown-menu {
       display: block;
@@ -42,7 +42,7 @@
       visibility: hidden;
       transition: opacity .2s ease, visibility .2s ease;
       margin: 0;
-      padding: 40px 0 0;
+      padding: 25px 0 0;
       left: 15px;
       top: calc(100% - 25px);
       background: transparent;
@@ -140,13 +140,13 @@
 .map-item-block {
   display: none;
   position: fixed;
-  //z-index: 11;
-  //z-index: 14;
-  z-index: 160;
-  font-family: "Roboto", sans-serif;
+  z-index: 201;
+  font-family: 'Open Sans', sans-serif;
   right: 0;
-  top: 0;
-  width: 45%;
+  left: 0;
+  top: 10%;
+  width: 50%;
+  margin: auto;
   height: 100%;
   background: #fff;
   box-shadow:  -25px 0 60px 0 rgba(0, 0, 0, 0.21);
@@ -157,21 +157,22 @@
       padding: 15px;
       background: #f3f3f3;
       position: relative;
+      text-align: right;
       .close-btn {
         display: inline-block;
         color: #000;
-        font-family: "Roboto", sans-serif;
+        font-family: 'Open Sans', sans-serif;
         font-size: 14px;
         font-weight: 700;
         .fa-close {
           @include crossBrowser(transition, transform .15s ease);
           top: 2px;
           font-size: 15px;
-          color: #ff353d;
+          //color: #ff353d;
         }
         .text {
           position: relative;
-          padding-left: 10px;
+          padding-left: 8px;
         }
         &:hover {
           .fa-close {
@@ -206,13 +207,46 @@
         }
       }
     }
+    .book-btn {
+      text-transform: uppercase;
+      border-radius: 3px;
+      background: $main-blue;
+      padding: 15px 30px;
+      &:hover {
+        background: lighten($main-blue, 10%);
+      }
+      span {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
     .title-rating {
-      padding: 15px 0;
-      .main-title {
-        font-family: "Roboto", sans-serif;
-        font-size: 22px;
-        font-weight: 600;
-        margin-bottom: 0;
+      padding: 15px 20px;
+      .top-bar {
+        .number {
+          float: left;
+          width: 23px;
+          height: 23px;
+          text-align: center;
+          font-weight: 500;
+          line-height: 20px;
+          border: 2px solid $main-blue;
+          border-radius: 50%;
+          margin-right: 5px;
+        }
+        .main-title {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 22px;
+          font-weight: 600;
+          margin-bottom: 0;
+          float: left;
+          color: $main-blue;
+        }
+        .stars-hotel {
+          float: left;
+          margin-top: 3px;
+          margin-left: 15px;
+        }
       }
       .trip {
         .rate {
@@ -247,7 +281,7 @@
     padding: 13px 15px 8px;
     font-size: 26px;
     font-weight: 600;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     width: 200px;
     color: #fff;
     background: $main-blue;
@@ -291,19 +325,21 @@
             width: 25%;
             & > * {
               font-size: 13px;
-              padding-left: 30px;
+              padding-left: 25px;
               margin-bottom: 5px;
               float: left;
               clear: left;
               position: relative;
               width: 100%;
               i {
+                color: #74ce2a;
                 position: absolute;
                 left: 0;
-                top: 0;
+                top: 2px;
                 bottom: 0;
                 width: 15px;
                 text-align: center;
+                font-size: 15px;
               }
             }
           }
@@ -321,13 +357,31 @@
   position: relative;
   height: 50px;
   width: calc((55% - 50px) / 2);
-  @include calc(width, 'calc((55% - 50px - 30px)/ 2)');
+  @include calc(width, 'calc((55% - 50px)/ 2)');
   float: left;
   z-index: 1;
-  margin: 25px 0;
-  margin-left: 10px;
-  box-shadow: 0 1px 5px -2px rgba(0,0,0,.4);
+  margin: 10px 0;
+  //margin-left: 10px;
+  //box-shadow: 0 1px 5px -2px rgba(0,0,0,.4);
   background: #fff;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 60%;
+    width: 1px;
+    margin: auto;
+    background: #dadce3;
+  }
+  &.left-part {
+    width: 275px;
+  }
+  &.right-part {
+    width: 310px;
+  }
   .input-group {
     .datepicker-book-rooms {
       float: left;
@@ -337,18 +391,20 @@
       position: relative;
       &:before {
         content: '...';
+        background: transparent;
+        position: absolute;
+        z-index: 5;
+        right: 0;
+        bottom: 0;
         height: 4px;
         width: 25px;
         color: #000;
         font-size: 40px;
-        background: transparent;
+        line-height: 0;
+        background: 0 0;
         border-radius: 100px;
-        position: absolute;
-        z-index: 5;
-        left: 0;
-        right: 0;
-        top: -20px;
-        bottom: 0;
+        left: -10px;
+        top: -10px;
         margin: auto;
       }
       .datepicker-input,
@@ -376,8 +432,8 @@
       font-weight: 700;
       padding: 0;
       height: 100%;
-      line-height: 50px;
-      font-family: "Roboto", sans-serif;
+      //line-height: 50px;
+      font-family: 'Open Sans', sans-serif;
       .day {
         display: none;
       }
@@ -404,27 +460,68 @@
   }
 }
 
+.booking-table {
+  .date-group {
+    pointer-events: none;
+  }
+}
+
 .date-group {
   width: 100%;
   border-bottom: 2px solid transparent;
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  &:before {
+    //display: none;
+    content: '...';
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    height: 5px;
+    width: 30px;
+    line-height: 0;
+    font-size: 36px;
+    color: #000;
+    border-radius: 100px;
+    left: 0;
+    top: -14px;
+    bottom: 0;
+    margin: auto;
+    pointer-events: none;
+  }
   &.active {
     border-bottom: 2px solid #1d79d6;
   }
-  &:before {
-    content: '';
-    height: 4px;
-    width: 37px;
-    background: #000;
-    border-radius: 100px;
-    position: absolute;
-    z-index: 5;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+  & > input {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    border: 0;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
   }
+  .hide-calendar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    &.not-active {
+      z-index: -1;
+    }
+  }
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #fff;
 }
 
 .people-count {
@@ -451,18 +548,27 @@
   #peopleCount {
     float: left;
     padding: 0;
-    height: 50px;
+    height: 48px;
     width: 100%;
-    padding-left: 15px;
+    //padding-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .block {
       display: inline-block;
       height: 100%;
       line-height: 50px;
       font-size: 16px;
-      font-weight: 500;
-      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      font-family: 'Open Sans', sans-serif;
       color: #000;
-      padding-left: 5px;
+      padding-left: 20px;
+      &:first-child {
+        padding-left: 0;
+      }
+      .value {
+        color: $main-blue;
+      }
     }
   }
   .book-menu {
@@ -471,7 +577,7 @@
     padding: 0;
     border: 0;
     border-radius: 0;
-    top: 60px;
+    top: 51px;
     left: -55%;
     right: 0;
     margin: auto;
@@ -479,19 +585,29 @@
     .room {
       //display: block;
       width: 100%;
-      font-family: "Roboto", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size: 16px;
       padding: 20px 30px;
       border-bottom: 1px solid #ccd8df;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      overflow: hidden;
+      transition: .2s ease-in;
+      margin-top: 0;
+      opacity: 1;
+      visibility: visible;
       &:before,
       &:after {
         display: none;
       }
       &:first-child:last-child {
         border-bottom: 0;
+      }
+      &.not-active {
+        opacity: 0;
+        visibility: hidden;
+        margin-top: -108px;
       }
       .col-form-label {
         display: block;
@@ -500,27 +616,6 @@
       }
       .input-group {
         width: 85%;
-        .input-group-btn {
-          .btn {
-            border-radius: 50% !important;
-            line-height: 0;
-            &:hover {
-              border-width: 2px;
-              background-color: transparent !important;
-              color: inherit;
-            }
-          }
-          .btn-info {
-            &:hover {
-              color: #636e80;
-            }
-          }
-          .btn-warning {
-            &:hover {
-              color: #f68d2a;
-            }
-          }
-        }
       }
       .form-control {
         font-size: 16px;
@@ -547,14 +642,28 @@
         display: block;
         float: left;
         width: 20%;
+        & + .children-age {
+          &.not-active {
+            margin-right: -60%;
+            margin-top: -80px;
+          }
+        }
       }
       .children-age {
         display: block;
         float: left;
         width: 40%;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .2s ease-in, margin-right .2s ease-in;
+        &.not-active {
+          opacity: 0;
+          visibility: hidden;
+        }
         .col-form-label {
           margin-bottom: 5px;
           pointer-events: none;
+          white-space: nowrap;
         }
         .child {
           margin-top: 15px;
@@ -562,9 +671,22 @@
           @include calc(width, '50% - 10px');
           margin-right: 10px;
           float: left;
+          transition: opacity .2s ease-in, width .2s ease-in;
           &-2,
           &-4 {
             margin-right: 0;
+          }
+          &.not-active {
+            width: 0;
+            opacity: 0;
+            visibility: hidden;
+            & * {
+              margin: 0 !important;
+              padding: 0 !important;
+              width: 0 !important;
+              height: 0 !important;
+              border: 0 !important;
+            }
           }
           select,
           .bootstrap-select {
@@ -596,7 +718,7 @@
     .book-footer {
       display: block;
       padding: 20px 30px;
-      font-family: "Roboto", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size: 16px;
       a {
         color: #4091ff;
@@ -626,13 +748,13 @@
   display: none;
   position: absolute;
   z-index: 13;
-  top: 85px;
+  top: 59px;
   left: 0;
   right: 0;
   background: #fff;
   border-top: 1px solid #1f93d7;
-  width: 45%;
-  font-family: "Roboto", sans-serif;
+  width: calc(100% - 310px - 275px - 50px);
+  font-family: 'Open Sans', sans-serif;
   //margin: auto;
   overflow: hidden;
   -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.25);
@@ -670,7 +792,7 @@
     }
     .category {
       text-align: right;
-      font-family: "Roboto", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-weight: 900;
       text-transform: uppercase;
       font-size: 12px;
@@ -689,7 +811,7 @@
     color: #a7a7a7;
     background: #fff;
     width: 100%;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
@@ -776,7 +898,7 @@
     }
     i {
       font-size: 70px;
-      line-height: 280px;
+      line-height: 368px;
       text-align: center;
       width: 100%;
     }
@@ -828,6 +950,7 @@
     }
   }
 }
+@import "full-filter-search";
 @import "landing";
 @import "payment";
 @import "details-item";

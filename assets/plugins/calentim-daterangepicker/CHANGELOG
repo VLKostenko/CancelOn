@@ -1,0 +1,97 @@
+v1.0.0
+	- Released initial version.
+
+v1.0.1
+	- fixed minute step overflow error on last step range
+	- fixed ineffective initial value on `startEmpty: true` setting
+	- fixed parameterless hideDropdown call bug in firefox
+	- fixed multiple instance closing issues
+	- added option to remove time picker
+	- added infinite scroll on timepickers
+
+v1.0.2
+	- fixed target element confusion when different target option is specified
+	- added `showCalendars` option to disable date selection (only time picker)
+
+v1.1.0
+   - fixed an issue about time pickers setting the wrong value on first click
+   - fixed autoCloseOnSelect on singleDate version / mobile views
+   - changed code to make clicking on disabled days select start/end date
+   - added some transition delays to make it smoother
+   - added keyboard navigation (`enableKeyboard` option)
+        - up: previous week
+        - down: next week
+        - left: previous day
+        - right: next day
+        - space: select day
+        - pageup: previous month
+        - pagedown next month
+        - shift + pageup: previous year
+        - shift + pagedown: next year
+   - added easy year switch buttons on year list
+   - fixed startEmpty cell selected classes
+   - added destroy method and some extra tests
+   - fix custom target element reading in fetchInputs method
+
+v1.1.1
+   - fixed the month change problem which is caused by a reset when validating dates.
+
+v1.1.2
+   - fixed the problem about showing the initial month when the selected date is in a different month.
+   - added inline view support on mobile devices
+   - fixed startEmpty behaviour when clicking the cancel button on mobile
+
+v1.1.3
+   - added showButtons property for not automatically updating the input, default false
+   - added tests for showButtons property
+   - added time changes to onbeforechange and onafterchange event
+   - fixed range selection on instances with startEmpty: true defined
+   - fixed hovering bug after month change when first date is selected
+
+v1.1.4
+   - fixed button disabled state with startEmpty and showButtons are both active
+   - reapplied deleted locale setting
+   - innerWidth function was called on javascript object, not jQuery object, fixed.
+   - buttons now don't submit forms.
+
+v1.1.5
+   - configuration objects attached to prototype converted to independent objects
+   - startEmpty property clears input on initialization
+   - added jshint javascript linter to gruntfile
+   - some optimizations
+   - moved event bubbling in one method
+   - added "left" "right" display options ("showOn" option, default "bottom")
+   - added auto positioning enable/disable flag ("autoAlign" option, default "true")
+   - added position recalculation on window scroll and resize events
+   - fixed hour:minute scrolling issue
+   - fixed locale error on month selector
+   - added adjustment for font-size in month selector page
+
+v1.1.6
+   - Repeating day issue caused by daylight saving time activation fixed.
+
+v1.1.7
+   - fixed header display bug on startEmpty
+   - converted moment instances to unix timestamps on reDrawCells method
+   - added first and last hover classes (border radius effect)
+   - removed autoprefixer and added postcss plugin for browser compatible CSS
+   - fixed visibility issues
+   - Added `calentim-not-in-month` class for the days that don't belong to that month
+   - Replaced moment's `.startOf("day")` to `middleOfDay()` extension function to minimize DST change bugs.
+   - switched from grunt-jasmine to karma test runner
+
+v1.1.8
+   - added next day selection demo to linked single time pickers example
+   - fixed ESC key hiding inline calendars bug.
+   - added backup and restore time pickers method to keep time values intact on month changes
+   - added numericMonthSwitcher config option to show month numbers instead of month names in month selector
+   - fixed month selector styling on small calendars on all browsers
+   - removed clearing of user value when user inputs a valid date when startEmpty is still active
+   - skipped input clearing when the input contains a valid date even if startEmpty is set
+   - startDate and endDate setting on plugin intialization didn't work, fixed.
+   - fixed mobile inline view resize bug after month changes
+   - fixed dropdown closing issues
+
+v1.1.9
+   - fixed display bug on header (start week of day showed day number instead of name)
+   - improved linked single date picker example

@@ -14,13 +14,13 @@
     <!--link(rel='apple-touch-icon', sizes='180x180', href='images/favicon/apple-touch-icon-180x180.png')-->
     <!--link(rel='icon', type='image/png', href='images/favicon/favicon-32x32.png', sizes='32x32')-->
     <!--link(rel='icon', type='image/png', href='images/favicon/android-chrome-192x192.png', sizes='192x192')-->
-    <!--link(rel='icon', type='image/png', href='images/favicon/favicon-16x16.png', sizes='16x16')-->
     <!--link(rel='manifest', href='images/favicon/manifest.json')-->
     <!--link(rel='mask-icon', href='images/favicon/safari-pinned-tab.svg')-->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
     <meta name="apple-mobile-web-app-title" content="CancelOn">
     <meta name="application-name" content="CancelOn">
-    <meta name="msapplication-TileColor" content="#323232">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!--meta(name='msapplication-TileColor', content='#323232')-->
+    <!--meta(name='msapplication-TileImage', content='images/favicon/mstile-144x144.png')-->
     <!-- /Favicons-->
     <!-- Personal Meta tags-->
     <meta name="CancelOn - Booking Service" content="">
@@ -53,10 +53,12 @@
     <link href="assets/plugins/animate.css/animate.min.css" rel="stylesheet">
     <link href="assets/plugins/photoswipe/dist/photoswipe.css" rel="stylesheet">
     <link href="assets/plugins/photoswipe/dist/default-skin/default-skin.css" rel="stylesheet">
+    <link href="assets/plugins/calentim-daterangepicker/build/css/calentim.min.css" rel="stylesheet">
+    <link href="assets/plugins/intl-tel-input/build/css/intlTelInput.css" rel="stylesheet">
     <!-- Main Template CSS-->
     <link href="css/main.min.css" rel="stylesheet">
   </head>
-  <body class="unsupport">
+  <body class="unsupport" id="body">
     <div class="update-block">
       <div class="update-block_top-bar clearfix"><a class="navbar-brand" href="javascript:void(0)"><img class="img-responsive" alt="logo" src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x"></a>
         <div class="navbar-menu">
@@ -105,6 +107,7 @@
     </div>
     <!-- Scripts-->
     <script type="text/javascript" src="js/assets.min.js"></script>
+    <script type="text/javascript" src="js/jquery.html5storage.min.js"></script>
     <!-- Google Maps Api-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvpH7_ggEW5MYLRO8EN1BbJak4u2uIvaA"></script>
     <!-- Additional JS-->

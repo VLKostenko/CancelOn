@@ -5,46 +5,24 @@
             a.close-btn(href='javascript:void(0)')
                i.fa.fa-close(aria-hidden='true')
                span.text Close Details
-            .socials
-               ul.social
-                  li
-                     a(href='javascript:void(0)')
-                        i.fa.fa-facebook(aria-hidden='true')
-                  li
-                     a(href='javascript:void(0)')
-                        i.fa.fa-twitter(aria-hidden='true')
-                  li
-                     a(href='javascript:void(0)')
-                        i.fa.fa-rss(aria-hidden='true')
-                  li
-                     a(href='javascript:void(0)')
-                        i.fa.fa-linkedin(aria-hidden='true')
-                  li
-                     a(href='javascript:void(0)')
-                        i.fa.fa-google-plus(aria-hidden='true')
          .title-rating
-            .row.pl-16.pr-16
-               .col-sm-1.col-xs-3
-                  img(src='images/icons/map-item.png', alt='map-item')
-               .col-sm-3.col-xs-9.pl-10
-                  h2.main-title Joint Base
-                  ul.stars.stars-hotel(data-stars='4.47')
-                     li.hidden
-                        i.fa.orange-text.fa-star(aria-hidden='true')
-                     li.hidden
-                        i.fa.orange-text.fa-star(aria-hidden='true')
-                     li.hidden
-                        i.fa.orange-text.fa-star(aria-hidden='true')
-                     li.hidden
-                        i.fa.orange-text.fa-star(aria-hidden='true')
-                     li.hidden
-                        i.fa.orange-text.fa-star(aria-hidden='true')
-                     li.hidden
-                        i.fa.orange-text.fa-star-half(aria-hidden='true')
-               .col-sm-3.col-sm-offset-5.hidden-xs
-                  .trip
-                     .rate(data-rate='4.54')
-                  a.reviews(href='javascript:void(0)') 142 Reviews
+            .top-bar.clearfix
+               span.number
+                  span 5
+               h2.main-title Mandapa, A Ritz-Carlton Resort
+               ul.stars.stars-hotel(data-stars='4.47')
+                  li.hidden
+                     i.fa.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.fa-star(aria-hidden='true')
+                  li.hidden
+                     i.fa.fa-star-half(aria-hidden='true')
          .owl-carousel.owl-carousel-short.photoswipe-block(itemscope, itemtype="http://schema.org/ImageGallery")
             figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
                a(href='images/map-item-image.png', itemprop='contentUrl', data-size='1296x570')
@@ -78,18 +56,19 @@
                   img(src='images/map-item-image.png', alt='Alt 1')
          .map-item-info
             .row.pl-16.pr-16
-               .col-sm-12
+               .col-sm-12.pl-25.pr-25
                   .top-info
                      .row
                         .col-sm-6
                            h3 Overview
-                           a.distance-blue(href='javascript:void(0)')
-                              i.fa.fa-map-pin(aria-hidden='true')
-                              | 1.98 km. to the centre of Central Park (map)
+                           a.distance-blue(href='javascript:void(0)') 1.98 km. to the centre of Central Park (map)
                         .col-sm-6
                            .pull-right
-                              a.book-btn(href='./payment.html') $60 Book Offsite
-               .col-sm-12
+                              a.book-btn(href='./payment.html') $425/
+                                 span Day
+                                 |
+                                 | Book Now
+               .col-sm-12.pl-25.pr-25
                   .bottom-info
                      ul.nav.nav-pills
                         li.active
@@ -101,55 +80,55 @@
                            .clearfix
                            ul
                               li
-                                 i.distance-blue.icon-wifi
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Free Wf-Fi
                               li
-                                 i.distance-blue.icon-parking
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Parking
                               li
-                                 i.distance-blue.icon-air-conditioner
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Air Conditioner
                               li
-                                 i.distance-blue.icon-old-typical-phone
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Phone
                            ul
                               li
-                                 i.distance-blue.icon-television
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  |  TV
                               li
-                                 i.distance-blue.icon-shower-head
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  |  Shower
                               li
-                                 i.distance-blue.icon-valet-head
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Valet
                               li
-                                 i.distance-blue.icon-single-bed
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Single bed
                            ul
                               li
-                                 i.distance-blue.icon-sweeping-broom
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Sweeping broom
                               li
-                                 i.distance-blue.icon-double-bed
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Double bed
                               li
-                                 i.distance-blue.icon-hotel-keycard
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Hotel keycard
                               li
-                                 i.distance-blue.icon-surveillance-camera
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Camera
                            ul
                               li
-                                 i.distance-blue.icon-no-smoking-sign
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | No smoking
                               li
-                                 i.distance-blue.icon-hotel-do-not-disturb-door-hanger
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Do not disturb
                               li
-                                 i.distance-blue.icon-briefcase-with-plus-symbol
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Medic
                               li
-                                 i.distance-blue.icon-cigar-with-smoke
+                                 i.fa.fa-check-circle-o(aria-hidden='true')
                                  | Smoke free
                            .clearfix
                            .description.mt-30

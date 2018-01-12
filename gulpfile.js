@@ -16,7 +16,6 @@ var gulp = require('gulp'),
   reload = browserSync.reload,
   clip = require('gulp-clip-empty-files'),
   saveLicense = require('uglify-save-license'),
-  lessToScss = require('gulp-less-to-scss'),
   imgRetina = require('gulp-img-retina'),
   pug = require('gulp-pug'),
   gutil = require('gulp-util'),
@@ -43,8 +42,7 @@ var path = {
     css_ds_components: folders.dst + 'css/',
     css_bootstrap: folders.dst + 'css/',
     img: folders.dst + 'images/',
-    fonts: folders.dst + 'assets/font/',
-    less: folders.src + 'styles/'
+    fonts: folders.dst + 'assets/font/'
   },
   src: {
     html: folders.src + '*.html',
@@ -56,7 +54,8 @@ var path = {
       'assets/plugins/jquery/dist/jquery.min.js',
       'assets/plugins/bootstrap/dist/js/bootstrap.js',
       'assets/plugins/moment/min/moment.min.js',
-      'assets/plugins/datarangepicker/jquery.datarangepicker.js',
+      'assets/plugins/calentim-daterangepicker/build/js/calentim.min.js',
+      // 'assets/plugins/datarangepicker/jquery.datarangepicker.js',
       'assets/plugins/bootstrap-dropdown-hover/dist/jquery.bootstrap-dropdown-hover.min.js',
       'assets/plugins/bootstrap-select/dist/js/bootstrap-select.js',
       'assets/plugins/bootstrap-validator/dist/validator.min.js',
@@ -71,7 +70,10 @@ var path = {
       'assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js',
       'assets/plugins/semantic-ui/semantic.min.js',
       'assets/plugins/disableScroll/jquery.disablescroll.min.js',
-      'assets/plugins/chart.js/dist/Chart.min.js'
+      'assets/plugins/chart.js/dist/Chart.min.js',
+      'assets/plugins/intl-tel-input/build/js/intlTelInput.min.js',
+      'assets/plugins/jquery.creditCardValidator.js',
+      'assets/plugins/inputmask/jquery.inputmask.bundle.min.js'
     ],
     css: folders.src + 'styles/**/*.scss',
     less: folders.src + 'styles/**/*.less',
@@ -81,7 +83,6 @@ var path = {
     fonts: folders.src + 'fonts/**/*.*'
   },
   watch: {
-    html: folders.src + '**/*.html',
     pug: folders.src + '**/*.pug',
     css: folders.src + 'styles/**/*.scss',
     less: folders.src + 'styles/**/*.less',
@@ -94,18 +95,13 @@ var path = {
   }
 };
 
-gulp.task('lessToScss',function(){
-  gulp.src(path.src.less)
-    .pipe(lessToScss())
-    .pipe(gulp.dest(path.build.less));
-});
-
 gulp.task('browser:sync', function() {
   browserSync.init({
     server: {
       baseDir: path.build.html
     },
-    open: false
+    open: false,
+    tunnel: false
   });
   gulp.watch(path.src.css).on("end", reload);
 });
@@ -138,11 +134,11 @@ gulp.task('js:build', function () {
     .pipe(gulp.dest(path.build.js_scripts))
     .pipe(rigger())
     .pipe(rename({ extname: '.min.js' }))
-    .pipe(uglify({
-      output: {
-        comments: saveLicense
-      }
-    }).on('error', gutil.log))
+    // .pipe(uglify({
+    //   output: {
+    //     comments: saveLicense
+    //   }
+    // }).on('error', gutil.log))
     .pipe(gulp.dest(path.build.js_scripts));
 });
 

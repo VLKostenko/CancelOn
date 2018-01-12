@@ -1,22 +1,25 @@
-.container-fluid.white.pl-md-0.pr-md-0.pl-sm-0.pr-sm-0.pl-xs-0.pr-xs-0.pos-rel.main-search-wrapper
+div(class=page.name === 'search' ? 'container-fluid white pl-md-0 pr-md-0 pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0 pos-rel main-search-wrapper' : 'container-fluid landing-search pl-md-0 pr-md-0 pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0 pos-rel main-search-wrapper')
 	.container.pl-xs-0.pr-xs-0
 		.row.container-search-wrapper
-			.col-md-12.pl-xs-0.pr-xs-0.pl-md-0.pr-md-0.pl-0.pr-0
+			.col-md-12.pl-xs-15.pr-xs-15.pl-md-0.pr-md-0.pl-0.pr-0
 				.pl-15.pr-15.pl-xs-0.pr-xs-0
 					.loading-search-cover
-						.loading-search
+						//.loading-search
 					#search-space
 					.input-group.search-group
 						input.form-control.input-search(type='text', placeholder='What Are You Looking For?')
-						span.search-filter-block
+						span.search-filter-block.left-part
 							span.input-group.input-group-white.date-group
-								span.form-control.datepicker-input
-									span.date May, 6th
-									span.day.hidden Saturday
-								span.form-control.datepicker-output
-									span.date Jun, 14th
-									span.day.hidden Wednesday
-						span.search-filter-block
+								.hide-calendar.not-active
+								input#datepicker-start(type='text', readonly)
+								//input#datepicker-end(type='text', readonly)
+								//span.form-control.datepicker-input
+								//	span.date May, 6th
+								//	span.day.hidden Saturday
+								//span.form-control.datepicker-output
+								//	span.date Jun, 14th
+								//	span.day.hidden Wednesday
+						span.search-filter-block.right-part
 							span.input-group.input-group-white.people-count
 								a#peopleCount.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 									span.block
@@ -33,260 +36,275 @@
 										span.value#children 0
 										span.text  Children
 								span.dropdown-menu.book-menu(aria-labelledby='peopleCount')
+									span.book-header.clearfix
+										select#roomsCount.selectpicker(name='Rooms Count')
+											option(value='1') 1 Room
+											option(value='2') 2 Rooms
+											option(value='3') 3 Rooms
+											option(value='4') 4 Rooms
+										span.datepicker-book-rooms.clearfix
+											span.form-control.datepicker-input
+												span.date July 3rd
+												span.day Saturday
+											span.form-control.datepicker-output
+												span.date August 14th
+												span.day Wednesday
 									span.room.clearfix
 										span.title Room
 											span.number  1
-											a.remove.hidden(href='javascript:void(0)') Remove
 										span.adults
 											label.col-form-label(for='quant[1-1]') Adults
 											span.input-group
 												span.input-group-btn
-													button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[1-1]', disabled)
+													button.btn.btn-info.btn-number.minus(type='button', data-type='minus', data-field='quant[1-1]', disabled)
 														| -
 												input.form-control.input-number(type='number', id='quant[1-1]', name='quant[1-1]', value='1', min='1', max='4', data-id='adults')
 												span.input-group-btn
-													button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1-1]')
+													button.btn.btn-warning.btn-number.plus(type='button', data-type='plus', data-field='quant[1-1]')
 														| +
 										span.children
 											label.col-form-label(for='quant[1-2]') Children
 											span.input-group
 												span.input-group-btn
-													button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1-2]')
+													button.btn.btn-info.btn-number.minus(type='button', disabled='disabled', data-type='minus', data-field='quant[1-2]')
 														| -
 												input.form-control.input-number(type='number', id='quant[1-2]', name='quant[1-2]', value='0', min='0', max='4', data-id='children')
 												span.input-group-btn
-													button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1-2]')
+													button.btn.btn-warning.btn-number.plus(type='button', data-type='plus', data-field='quant[1-2]')
 														| +
-										span.children-age.hidden
+										span.children-age.not-active
 											label.col-form-label Children's Ages
 											span.child.child-1
-												select#childAge1-1(name='Child Age')
+												select.selectpicker#childAge1-1(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-2.hidden
-												select#childAge1-2(name='Child Age')
+													- }
+											span.child.child-2.not-active
+												select.selectpicker#childAge1-2(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-3.hidden
-												select#childAge1-3(name='Child Age')
+													- }
+											span.child.child-3.not-active
+												select.selectpicker#childAge1-3(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-4.hidden
-												select#childAge1-4(name='Child Age')
+													- }
+											span.child.child-4.not-active
+												select.selectpicker#childAge1-4(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-									span.room.clearfix.hidden
+													- }
+									span.room.clearfix.not-active
 										span.title Room
 											span.number  2
-											a.remove(href='javascript:void(0)') Remove
 										span.adults
 											label.col-form-label(for='quant[2-1]') Adults
 											span.input-group
 												span.input-group-btn
-													button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2-1]', disabled)
+													button.btn.btn-info.btn-number.minus(type='button', data-type='minus', data-field='quant[2-1]', disabled)
 														| -
 												input.form-control.input-number(type='number', id='quant[2-1]', name='quant[2-1]', value='1', min='1', max='4', data-id='adults')
 												span.input-group-btn
-													button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2-1]')
+													button.btn.btn-warning.btn-number.plus(type='button', data-type='plus', data-field='quant[2-1]')
 														| +
 										span.children
 											label.col-form-label(for='quant[2-2]') Children
 											span.input-group
 												span.input-group-btn
-													button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[2-2]')
+													button.btn.btn-info.btn-number.minus(type='button', disabled='disabled', data-type='minus', data-field='quant[2-2]')
 														| -
 												input.form-control.input-number(type='number', id='quant[2-2]', name='quant[2-2]', value='0', min='0', max='4', data-id='children')
 												span.input-group-btn
-													button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2-2]')
+													button.btn.btn-warning.btn-number.plus(type='button', data-type='plus', data-field='quant[2-2]')
 														| +
-										span.children-age.hidden
+										span.children-age.not-active
 											label.col-form-label Children's Ages
 											span.child.child-1
-												select#childAge2-1(name='Child Age')
+												select.selectpicker#childAge2-1(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-2.hidden
-												select#childAge2-2(name='Child Age')
+													- }
+											span.child.child-2.not-active
+												select.selectpicker#childAge2-2(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-3.hidden
-												select#childAge2-3(name='Child Age')
+													- }
+											span.child.child-3.not-active
+												select.selectpicker#childAge2-3(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-4.hidden
-												select#childAge2-4(name='Child Age')
+													- }
+											span.child.child-4.not-active
+												select.selectpicker#childAge2-4(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-									span.room.clearfix.hidden
+													- }
+									span.room.clearfix.not-active
 										span.title Room
 											span.number  3
-											a.remove(href='javascript:void(0)') Remove
 										span.adults
 											label.col-form-label(for='quant[3-1]') Adults
 											span.input-group
 												span.input-group-btn
-													button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[3-1]', disabled)
+													button.btn.btn-info.btn-number.minus(type='button', data-type='minus', data-field='quant[3-1]', disabled)
 														| -
 												input.form-control.input-number(type='number', id='quant[3-1]', name='quant[3-1]', value='1', min='1', max='4', data-id='adults')
 												span.input-group-btn
-													button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[3-1]')
+													button.btn.btn-warning.btn-number.plus(type='button', data-type='plus', data-field='quant[3-1]')
 														| +
 										span.children
 											label.col-form-label(for='quant[3-2]') Children
 											span.input-group
 												span.input-group-btn
-													button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[3-3]')
+													button.btn.btn-info.btn-number.minus(type='button', disabled='disabled', data-type='minus', data-field='quant[3-3]')
 														| -
 												input.form-control.input-number(type='number', id='quant[3-2]', name='quant[3-3]', value='0', min='0', max='4', data-id='children')
 												span.input-group-btn
-													button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[3-3]')
+													button.btn.btn-warning.btn-number.plus(type='button', data-type='plus', data-field='quant[3-3]')
 														| +
-										span.children-age.hidden
+										span.children-age.not-active
 											label.col-form-label Children's Ages
 											span.child.child-1
-												select#childAge3-1(name='Child Age')
+												select.selectpicker#childAge3-1(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-2.hidden
-												select#childAge3-2(name='Child Age')
+													- }
+											span.child.child-2.not-active
+												select.selectpicker#childAge3-2(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-3.hidden
-												select#childAge3-3(name='Child Age')
+													- }
+											span.child.child-3.not-active
+												select.selectpicker#childAge3-3(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-4.hidden
-												select#childAge3-4(name='Child Age')
+													- }
+											span.child.child-4.not-active
+												select.selectpicker#childAge3-4(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-									span.room.clearfix.hidden
+													- }
+									span.room.clearfix.not-active
 										span.title Room
 											span.number  4
-											a.remove(href='javascript:void(0)') Remove
 										span.adults
 											label.col-form-label(for='quant[4-1]') Adults
 											span.input-group
 												span.input-group-btn
-													button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[4-1]', disabled)
+													button.btn.btn-info.btn-number.minus(type='button', data-type='minus', data-field='quant[4-1]', disabled)
 														| -
 												input.form-control.input-number(type='number', id='quant[4-1]', name='quant[4-1]', value='1', min='1', max='4', data-id='adults')
 												span.input-group-btn
-													button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[4-1]')
+													button.btn.btn-warning.btn-number.plus(type='button', data-type='plus', data-field='quant[4-1]')
 														| +
 										span.children
 											label.col-form-label(for='quant[4-2]') Children
 											span.input-group
 												span.input-group-btn
-													button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[4-2]')
+													button.btn.btn-info.btn-number.minus(type='button', disabled='disabled', data-type='minus', data-field='quant[4-2]')
 														| -
 												input.form-control.input-number(type='number', id='quant[4-2]', name='quant[4-2]', value='0', min='0', max='4', data-id='children')
 												span.input-group-btn
-													button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[4-2]')
+													button.btn.btn-warning.btn-number.plus(type='button', data-type='plus', data-field='quant[4-2]')
 														| +
-										span.children-age.hidden
+										span.children-age.not-active
 											label.col-form-label Children's Ages
 											span.child.child-1
-												select#childAge4-1(name='Child Age')
+												select.selectpicker#childAge4-1(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-2.hidden
-												select#childAge4-2(name='Child Age')
-													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
 													- }
-											span.child.child-3.hidden
-												select#childAge4-3(name='Child Age')
+											span.child.child-2.not-active
+												select.selectpicker#childAge4-2(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
 													- }
-											span.child.child-4.hidden
-												select#childAge4-4(name='Child Age')
+													- }
+											span.child.child-3.not-active
+												select.selectpicker#childAge4-3(name='Child Age')
 													- for ( var i = -1; i < 18; i++ ) {
-														- if ( i === -1 ) {
-															option(value="null", selected) -
-														- } else {
-															option(value=i)=i
-														- }
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
+													- }
+													- }
+											span.child.child-4.not-active
+												select.selectpicker#childAge4-4(name='Child Age')
+													- for ( var i = -1; i < 18; i++ ) {
+													- if ( i === -1 ) {
+													option(value="null", selected) -
+													- } else {
+													option(value=i)=i
+													- }
 													- }
 									span.book-footer.clearfix
-										a#add-book-room(href='javascript:void(0)') Add Room
+										//a#add-book-room(href='javascript:void(0)') Add Room
 										a#done-book-menu(href='javascript:void(0)') Done
 										input#roomsVal(type='hidden' value='1')
 										input#adultsVal(type='hidden' value='1')
 										input#childrenVal(type='hidden' value='0')
+						span.visible-xs.map-button-wrapper
+							.map
+								a.open-map(href='javascript:void(0)')
+									i.fa.fa-search(aria-hidden='true')
+									span.text Enlarge map
+
 						span.input-search-btn.hidden-xs
 							button.btn.btn-default(type='button')
 								span.load-icon

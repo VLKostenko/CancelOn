@@ -1,28 +1,23 @@
 .blue-btn {
   background-color: $main-blue;
-  padding: 7px 19px 7px 42px !important;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  &:before {
-    content: '';
-    display: block;
-    width: 22px;
-    height: 22px;
-    background-image: url('../images/icons/unblocked-icon.svg');
-    background-size: cover;
-    position: absolute;
-    left: 11px;
-  }
+  padding: 7px 19px !important;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 2px;
   &:hover, &:focus {
-    background-color: $light-blue !important;
+    background-color: lighten($main-blue, 10%) !important;
     color: #ffffff !important;
+  }
+  & + .blue-btn {
+    margin-right: 10px;
   }
 }
 
 .green-btn {
   background-color: #68b925;
   padding: 7px 19px 7px 19px !important;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   &:hover, &:focus {
     background-color: darken(#68b925, 6%) !important;
@@ -57,7 +52,7 @@
   display: block;
   font-weight: 400;
   text-decoration: none !important;
-  font-family: Roboto, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #000;
   &:before {
     background-image: url("../images/icons/user.svg");
@@ -86,11 +81,25 @@
   border-color: $light-blue;
 }
 
+.landing-search {
+  .people-count {
+    .book-menu {
+      width: 190%;
+      left: -228px;
+    }
+  }
+  .input-search-btn {
+    button {
+      background-image: url('../images/icons/pencil.svg');
+    }
+  }
+}
+
 .input-search-btn {
   display: block;
   float: left;
-  margin: 25px 0;
-  margin-left: 10px;
+  margin: 10px 0;
+  //margin-left: 10px;
   z-index: 4;
   button {
     background-color: #1d79d6;
@@ -100,7 +109,7 @@
     color: #ffffff;
     height: 50px;
     width: 50px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-image: url('../images/icons/go-right-arrow.svg');
     background-repeat:  no-repeat;
     background-position: 50% 50%;
@@ -116,14 +125,23 @@
 }
 
 .menu-icon {
-  background-image: url("../images/icons/menu-icon.svg");
+  background-image: url("../images/icons/show-eye.svg");
   background-size: cover;
   width: 17px;
   height: 15px;
   display: block;
   margin-top: 3px;
+  opacity: 1;
+  @include crossBrowser(transition, .2s ease-in);
+  &:hover {
+    opacity: .25;
+  }
   &.active {
-    background-image: url("../images/icons/menu-icon-active.svg");
+    opacity: .25;
+    background-image: url("../images/icons/hide-eye.svg");
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -164,14 +182,14 @@
     position: absolute;
     left: -41px;
     top: 2px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   &:after {
     content: 'Map';
     position: absolute;
     right: -33px;
     top: 2px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   margin-right: 35px;
   position: relative;
@@ -199,14 +217,14 @@
     position: absolute;
     left: -50px;
     top: 2px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   &:after {
     content: 'Map';
     position: absolute;
     right: -33px;
     top: 2px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
   margin-right: 35px;
   position: relative;
@@ -220,7 +238,7 @@
   &:before,
   &:after {
     position: absolute;
-    font-family: Roboto, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     text-transform: initial;
     font-weight: 400;

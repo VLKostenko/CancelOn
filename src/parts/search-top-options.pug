@@ -1,23 +1,89 @@
-.container.mt-15.remove-padding-md.pl-xs-0.pr-xs-0
-	.filter-top.white
-		.search-filter
-			p.big-text.text-uppercase.font-weight-600.font-roboto.mnl-5.hidden-xs
-				| Search Filter
-				a.pull-right.hide-filter(href='javascript:void(0)')
-					span.menu-icon.active
-		.content-settings
-			.display.hidden-xs.hidden-sm
-				a.list-btn.active(href='javascript:void(0)')
-					i.fa.fa-bars(aria-hidden='true')
-				a.grid-btn.ml-5(href='javascript:void(0)')
-					i.fa.fa-th(aria-hidden='true')
-			select.selectpicker.pull-left
-				option Low to High
-				option High to Low
-				option Newest
-			p.avail Available 471 Of 471
-			.onoffswitch.pull-right
-				input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1')
-				label.onoffswitch-label(for='myonoffswitch1')
-					span.onoffswitch-inner
-					span.onoffswitch-switch
+.filter-top.white.clearfix
+	.content-settings
+		.sort-button.sort-by.change-text
+			button.dropdown-toggle(type='button', data-toggle='dropdown')
+				| Sort By
+				span.caret.ml-10
+			ul.dropdown-menu
+				li
+					a(href='javascript:void(0)')
+						| Price (Low)
+				li
+					a(href='javascript:void(0)')
+						| Price (High)
+				li
+					a(href='javascript:void(0)')
+						| Stars
+				li
+					a(href='javascript:void(0)')
+						| Rating
+				li
+					a(href='javascript:void(0)')
+						| Price Guaratned
+				li
+					a(href='javascript:void(0)')
+						| Top Deal
+		.sort-button.price-filter
+			button.dropdown-toggle(type='button', data-toggle='dropdown')
+				| Price
+				span.caret.ml-10
+			.dropdown-menu
+				.price-slider-range
+					.histogram-wrapper.clearfix
+						.histogram-tooltip
+					.input-wrapper
+						input.price-amount1(type='text')
+						input.price-amount2(type='text')
+		.sort-button.stars
+			button.dropdown-toggle(type='button', data-toggle='dropdown')
+				| Stars
+				span.caret.ml-10
+			.dropdown-menu
+				input#stars-rating5(type='radio', name='stars-rating', value='5', data-filter='stars')
+				label.five(for='stars-rating5')
+				input#stars-rating4(type='radio', name='stars-rating', value='4', data-filter='stars')
+				label.four(for='stars-rating4')
+				input#stars-rating3(type='radio', name='stars-rating', value='3', data-filter='stars')
+				label.three(for='stars-rating3')
+				input#stars-rating2(type='radio', name='stars-rating', value='2', data-filter='stars')
+				label.two(for='stars-rating2')
+				input#stars-rating1(type='radio', name='stars-rating', value='1', data-filter='stars')
+				label.one(for='stars-rating1')
+				span.up
+					| & up
+		.sort-button.rating
+			button.dropdown-toggle(type='button', data-toggle='dropdown')
+				| Rating
+				span.caret.ml-10
+			.dropdown-menu
+				img(src='./images/icons/tripavisor.svg', alt='tripadvisor')
+				input#hotel-rating5(type='radio', name='hotel-rating', value='5', data-filter='rating')
+				label.five(for='hotel-rating5')
+				input#hotel-rating4(type='radio', name='hotel-rating', value='4', data-filter='rating')
+				label.four(for='hotel-rating4')
+				input#hotel-rating3(type='radio', name='hotel-rating', value='3', data-filter='rating')
+				label.three(for='hotel-rating3')
+				input#hotel-rating2(type='radio', name='hotel-rating', value='2', data-filter='rating')
+				label.two(for='hotel-rating2')
+				input#hotel-rating1(type='radio', name='hotel-rating', value='1', data-filter='rating')
+				label.one(for='hotel-rating1')
+				span.up
+					| & up
+		//.sort-button.guest-rating
+		//	a.low-high(href='javascript:void(0)', data-sort='guest_rating')
+		//		span Guest Rating
+		//		i.fa.fa-sort-amount-asc(aria-hidden='true')
+		//.sort-button.recommended
+		//	a.low-high(href='javascript:void(0)', data-sort='recommended_rating')
+		//		span Recommended
+		//		i.fa.fa-sort-amount-desc(aria-hidden='true')
+		//.sort-button.best-price
+		//	input#best-price-guaranted(type='checkbox', data-sort='best-price')
+		//	label.checkbox(for='best-price-guaranted') Best Price Guaranted
+		//.sort-button.last.top-deal
+		//	input#top-deal(type='checkbox', data-sort='top-deal')
+		//	label.checkbox(for='top-deal') Top Deal
+	.search-filter
+		a.show-all(href='javascript:void(0)')
+			i.fa.fa-align-left(aria-hidden='true')
+			| More Filters

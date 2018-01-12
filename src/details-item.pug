@@ -3,62 +3,70 @@ block vars
    - page = {name: 'details-item', classes: 'details placeholder', title: 'Details Item'}
 block main
    include parts/navigation
+   include parts/search
    include parts/landing/hotel-title
-   .container.information-block-wrapper
-      .row.column-reverse
-         include parts/details-item/information-block
-   .dates-bg-block
-   .change-dates-block
-      .change-dates-block_header
-         h2.title Change Dates
-         a.close-btn(href='javascript:void(0)')
-            i.fa.fa-close(aria-hidden='true')
-            span.text Close
-      .change-dates-block_body
-         .change-date
-            #change-dates-container
-         .change-room
-            label.col-form-label(for='quant[1]')
-               span.input-name Adults
-               span.input-group
-                  span.input-group-btn
-                     button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[1]')
-                        | -
-                  input.form-control.input-number(type='number', id='quant[1]', name='quant[1]', value='1', min='1', max='99', data-id='adults')
-                  span.input-group-btn
-                     button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1]')
-                        | +
-            label.col-form-label(for='quant[2]')
-               span.input-name Rooms
-               span.input-group
-                  span.input-group-btn
-                     button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2]')
-                        | -
-                  input.form-control.input-number(type='number', id='quant[2]', name='quant[2]', value='1', min='1', max='99', data-id='rooms')
-                  span.input-group-btn
-                     button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2]')
-                        | +
-            label.col-form-label(for='quant[3]')
-               span.input-name Children
-               span.input-group
-                  span.input-group-btn
-                     button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[3]')
-                        | -
-                  input.form-control.input-number(type='number', id='quant[3]', name='quant[3]', value='0', min='0', max='99', data-id='children')
-                  span.input-group-btn
-                     button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[3]')
-                        | +
-         .change-output
-            table
-               tbody
-                  tr
-                     td.title Check-In:
-                     td.datepicker-input.change-input
-                  tr
-                     td.title Check-Out:
-                     td.datepicker-output.change-input
-                  tr
-                     td.title Total Nights:
-                     td.datepicker-total.change-input
-         .change-save-btn
-            a.save.book-btn(href='javascript:void(0)') Save New Dates
+   include parts/landing/information-block
+   .container.pos-rel.booking-wrapper.details-booking-block
+      .row
+         include parts/landing/hotel-information
+   .landing-popup
+      .black-bg-map
+      include parts/map-item
+   //.container.information-block-wrapper
+   //   .row.column-reverse
+   //      include parts/details-item/information-block
+   //.dates-bg-block
+   //.change-dates-block
+   //   .change-dates-block_header
+   //      h2.title Change Dates
+   //      a.close-btn(href='javascript:void(0)')
+   //         i.fa.fa-close(aria-hidden='true')
+   //         span.text Close
+   //   .change-dates-block_body
+   //      .change-date
+   //         #change-dates-container
+   //      .change-room
+   //         label.col-form-label(for='quant[1]')
+   //            span.input-name Adults
+   //            span.input-group
+   //               span.input-group-btn
+   //                  button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[1]')
+   //                     | -
+   //               input.form-control.input-number(type='number', id='quant[1]', name='quant[1]', value='1', min='1', max='99', data-id='adults')
+   //               span.input-group-btn
+   //                  button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[1]')
+   //                     | +
+   //         label.col-form-label(for='quant[2]')
+   //            span.input-name Rooms
+   //            span.input-group
+   //               span.input-group-btn
+   //                  button.btn.btn-info.btn-number(type='button', data-type='minus', data-field='quant[2]')
+   //                     | -
+   //               input.form-control.input-number(type='number', id='quant[2]', name='quant[2]', value='1', min='1', max='99', data-id='rooms')
+   //               span.input-group-btn
+   //                  button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[2]')
+   //                     | +
+   //         label.col-form-label(for='quant[3]')
+   //            span.input-name Children
+   //            span.input-group
+   //               span.input-group-btn
+   //                  button.btn.btn-info.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[3]')
+   //                     | -
+   //               input.form-control.input-number(type='number', id='quant[3]', name='quant[3]', value='0', min='0', max='99', data-id='children')
+   //               span.input-group-btn
+   //                  button.btn.btn-warning.btn-number(type='button', data-type='plus', data-field='quant[3]')
+   //                     | +
+   //      .change-output
+   //         table
+   //            tbody
+   //               tr
+   //                  td.title Check-In:
+   //                  td.datepicker-input.change-input
+   //               tr
+   //                  td.title Check-Out:
+   //                  td.datepicker-output.change-input
+   //               tr
+   //                  td.title Total Nights:
+   //                  td.datepicker-total.change-input
+   //      .change-save-btn
+   //         a.save.book-btn(href='javascript:void(0)') Save New Dates

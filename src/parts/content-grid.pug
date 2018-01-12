@@ -1,501 +1,735 @@
-.grid.list-view.noplaceholder.placeholder-show
-   .grid-item.not-available.not-available-list-view(data-aos='fade-up')
-      span.ribbon.top Top Deal
-      .preview
-         a(href='./landing.html')
-            .image(style="background-image: url('images/room1.png')")
-      .warning.orange Only 3 rooms left!
-      .block-wrapper
-         .price-line.line.clearfix
-            span.info-label.green Best Price Guaranteed
-            span.price
-               span.red-price $520
-               | $468
-               span.regular-text /Day
-         .top-wrapper.clearfix
-            .left-block.top-block
-               h2.title.long
-                  a(href='./landing.html') Mandapa, A Ritz-Carlton Resort
-               ul.stars.stars-hotel(data-stars='4.47')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star-half(aria-hidden='true')
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-               p.address 485 Clawson St, Staten Island, NY 10306
-            .right-block.top-block
-               p.warning-list Only
-                  span.orange-text  3
-                  |  rooms left!
-            .clearfix
-            .divider
-            .left-block.center-block
-               span.colored-line
-                  span.number
-                     span 5
-                  span.distance
-                     span.distance-color 1.98 km.
-                     |  to the centre of Central Park
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-            .right-block.center-block
-               .not-available-block
-                  span.icon
-                     img(src='./images/icons/info-button.svg')
+ul#hotels
+   li.grid-item.not-available.not-available-list-view(data-aos='fade-up', data-filter='top-deal', data-price='468', data-guest_rating='9.0', data-stars_rating='4.17')
+      .image
+         .image-block(style="background-image: url('images/room1.png')")
+      .content
+         .part1
+            .title
+               span Mandapa, A Ritz-Carlton Resort White Treasure Resort & Spa
+               .item-label.top-deal
+                  .icon-label
                   span.text
-                     p
-                        b You missed it!
-                     |
-                     | Your dates are popular - we've run out of rooms at this property! Check out more below.
-               a.views(href='./landing.html')
-                  span.right View
-                  span.left
-                     i.fa.fa-eye(aria-hidden='true')
-                     | 5
-            .clearfix
-            .divider
-            ul.features
-               li
-                  i.icon-wifi
-               li
-                  i.icon-parking
-               li
-                  i.icon-old-typical-phone
-               li
-                  i.icon-television
-               li
-                  i.icon-shower-head
-               li
-                  a.open-map-item.more-items(href='javascript:void(0)') +10 items
-            .views-bottom.visible-xs
-               i.fa.fa-eye(aria-hidden='true')
-               | 5
-            p.booked.pull-right
-               | Booked
-               span  30
-               |  Times Today
-            p.watching-now.pull-right
-               span 5
-               |  People Looking Right Now
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price.hidden
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 9.0/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='4.17')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='4.94')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price
+                  span $520
+               .new-price
+                  span.sort-price $468
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
       .not-available-list
          span.icon
-            img(src='./images/icons/info-button.svg')
+            .image
          span.text
             b You missed it!
             |  Your dates are popular - we've run out of rooms at this property! Check out more below.
-   .grid-item(data-aos='fade-up')
-      span.ribbon.top.hidden Top Deal
-      .preview
-         a(href='./landing.html')
-            .image(style="background-image: url('images/room2.png')")
-      .warning.green Only 5 rooms left!
-      .block-wrapper
-         .price-line.line.clearfix
-            span.info-label.hidden Best Price Guaranteed
-            span.price
-               span.red-price $479
-               | $412
-               span.regular-text /Day
-         .top-wrapper.clearfix
-            .left-block.top-block
-               h2.title
-                  a(href='./landing.html') Radisson Blu Resort
-               ul.stars.stars-hotel(data-stars='4.47')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star-half(aria-hidden='true')
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-               p.address 485 Clawson St, Staten Island, NY 10306
-            .right-block.top-block
-               p.warning-list Only
-                  span.green-text  5
-                  |  rooms left!
-            .clearfix
-            .divider
-            .left-block.center-block
-               span.colored-line
-                  span.number
-                     span 5
-                  span.distance
-                     span.distance-color 1.98 km.
-                     |  to the centre of Central Park
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-            .right-block.center-block
-               a.views(href='./landing.html')
-                  span.right View
-                  span.left
-                     i.fa.fa-eye(aria-hidden='true')
-                     | 5
-            .clearfix
-            .divider
-            ul.features
-               li
-                  i.icon-wifi
-               li
-                  i.icon-parking
-               li
-                  i.icon-old-typical-phone
-               li
-                  i.icon-television
-               li
-                  i.icon-shower-head
-               li
-                  a.open-map-item.more-items(href='./landing.html') +10 items
-            .views-bottom.visible-xs
-               i.fa.fa-eye(aria-hidden='true')
-               | 5
-            p.booked.pull-right
-               | Booked
-               span  30
-               |  Times Today
-            p.watching-now.pull-right
-               span 5
-               |  People Looking Right Now
-   .grid-item(data-aos='fade-up')
-      span.ribbon.top.hidden Top Deal
-      .preview
-         a(href='./landing.html')
-            .image(style="background-image: url('images/room3.png')")
-      .warning.orange.hidden Only 3 rooms left!
-      .block-wrapper
-         .price-line.line.clearfix
-            span.info-label.hidden Best Price Guaranteed
-            span.price
-               span.red-price $480
-               | $458
-               span.regular-text /Day
-         .top-wrapper.clearfix
-            .left-block.top-block
-               h2.title
-                  a(href='./landing.html') Soho, Soma-Bay Resort
-               ul.stars.stars-hotel(data-stars='4.47')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star-half(aria-hidden='true')
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-               p.address 485 Clawson St, Staten Island, NY 10306
-            .right-block.top-block
-               p.warning-list.hidden Only
-                  span.orange-text  3
-                  |  rooms left!
-            .clearfix
-            .divider
-            .left-block.center-block
-               span.colored-line
-                  span.number
-                     span 5
-                  span.distance
-                     span.distance-color 1.98 km.
-                     |  to the centre of Central Park
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-            .right-block.center-block
-               a.views(href='./landing.html')
-                  span.right View
-                  span.left
-                     i.fa.fa-eye(aria-hidden='true')
-                     | 5
-            .clearfix
-            .divider
-            ul.features
-               li
-                  i.icon-wifi
-               li
-                  i.icon-parking
-               li
-                  i.icon-old-typical-phone
-               li
-                  i.icon-television
-               li
-                  i.icon-shower-head
-               li
-                  a.open-map-item.more-items(href='./landing.html') +10 items
-            .views-bottom.visible-xs
-               i.fa.fa-eye(aria-hidden='true')
-               | 5
-            p.booked.pull-right
-               | Booked
-               span  30
-               |  Times Today
-            p.watching-now.pull-right
-               span 5
-               |  People Looking Right Now
-   .grid-item(data-aos='fade-up')
-      span.ribbon.top.hidden Top Deal
-      .preview
-         a(href='./landing.html')
-            .image(style="background-image: url('images/room4.png')")
-      .warning.red Only 1 rooms left!
-      .block-wrapper
-         .price-line.line.clearfix
-            span.info-label.hidden Best Price Guaranteed
-            span.price
-               span.red-price $410
-               | $360
-               span.regular-text /Day
-         .top-wrapper.clearfix
-            .left-block.top-block
-               h2.title
-                  a(href='./landing.html') Hotel The Serras
-               ul.stars.stars-hotel(data-stars='4.47')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star-half(aria-hidden='true')
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-               p.address 485 Clawson St, Staten Island, NY 10306
-            .right-block.top-block
-               p.warning-list Only
-                  span.red-text  1
-                  |  rooms left!
-            .clearfix
-            .divider
-            .left-block.center-block
-               span.colored-line
-                  span.number
-                     span 5
-                  span.distance
-                     span.distance-color 1.98 km.
-                     |  to the centre of Central Park
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-            .right-block.center-block
-               a.views(href='./landing.html')
-                  span.right View
-                  span.left
-                     i.fa.fa-eye(aria-hidden='true')
-                     | 5
-            .clearfix
-            .divider
-            ul.features
-               li
-                  i.icon-wifi
-               li
-                  i.icon-parking
-               li
-                  i.icon-old-typical-phone
-               li
-                  i.icon-television
-               li
-                  i.icon-shower-head
-               li
-                  a.open-map-item.more-items(href='./landing.html') +10 items
-            .views-bottom.visible-xs
-               i.fa.fa-eye(aria-hidden='true')
-               | 5
-            p.booked.pull-right
-               | Booked
-               span  30
-               |  Times Today
-            p.watching-now.pull-right
-               span 5
-               |  People Looking Right Now
-   .grid-item(data-aos='fade-up')
-      span.ribbon.top.hidden Top Deal
-      .preview
-         a(href='./landing.html')
-            .image(style="background-image: url('images/room5.png')")
-      .warning.green Only 6 rooms left!
-      .block-wrapper
-         .price-line.line.clearfix
-            span.info-label.hidden Best Price Guaranteed
-            span.price
-               span.red-price $545
-               | $500
-               span.regular-text /Day
-         .top-wrapper.clearfix
-            .left-block.top-block
-               h2.title
-                  a(href='./landing.html') Aria Hotel Budapest
-               ul.stars.stars-hotel(data-stars='4.47')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star-half(aria-hidden='true')
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-               p.address 485 Clawson St, Staten Island, NY 10306
-            .right-block.top-block
-               p.warning-list Only
-                  span.green-text  6
-                  |  rooms left!
-            .clearfix
-            .divider
-            .left-block.center-block
-               span.colored-line
-                  span.number
-                     span 5
-                  span.distance
-                     span.distance-color 1.98 km.
-                     |  to the centre of Central Park
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-            .right-block.center-block
-               a.views(href='./landing.html')
-                  span.right View
-                  span.left
-                     i.fa.fa-eye(aria-hidden='true')
-                     | 5
-            .clearfix
-            .divider
-            ul.features
-               li
-                  i.icon-wifi
-               li
-                  i.icon-parking
-               li
-                  i.icon-old-typical-phone
-               li
-                  i.icon-television
-               li
-                  i.icon-shower-head
-               li
-                  a.open-map-item.more-items(href='./landing.html') +10 items
-            .views-bottom.visible-xs
-               i.fa.fa-eye(aria-hidden='true')
-               | 5
-            p.booked.pull-right
-               | Booked
-               span  30
-               |  Times Today
-            p.watching-now.pull-right
-               span 5
-               |  People Looking Right Now
-   .grid-item(data-aos='fade-up')
-      span.ribbon.top.hidden Top Deal
-      .preview
-         a(href='./landing.html')
-            .image(style="background-image: url('images/room6.png')")
-      .warning.red Only 2 rooms left!
-      .block-wrapper
-         .price-line.line.clearfix
-            span.info-label.hidden Best Price Guaranteed
-            span.price
-               span.red-price $510
-               | $460
-               span.regular-text /Day
-         .top-wrapper.clearfix
-            .left-block.top-block
-               h2.title
-                  a(href='./landing.html') Herods Vitalis Spa Hotel Eilat
-               ul.stars.stars-hotel(data-stars='4.47')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star(aria-hidden='true')
-                  li.hidden
-                     i.fa.orange-text.fa-star-half(aria-hidden='true')
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-               p.address 485 Clawson St, Staten Island, NY 10306
-            .right-block.top-block
-               p.warning-list Only
-                  span.red-text  2
-                  |  rooms left!
-            .clearfix
-            .divider
-            .left-block.center-block
-               span.colored-line
-                  span.number
-                     span 5
-                  span.distance
-                     span.distance-color 1.98 km.
-                     |  to the centre of Central Park
-               .trip
-                  .rate(data-rate='4.54')
-               a.reviews(href='javascript:void(0)') 142 Reviews
-            .right-block.center-block
-               a.views(href='./landing.html')
-                  span.right View
-                  span.left
-                     i.fa.fa-eye(aria-hidden='true')
-                     | 5
-            .clearfix
-            .divider
-            ul.features
-               li
-                  i.icon-wifi
-               li
-                  i.icon-parking
-               li
-                  i.icon-old-typical-phone
-               li
-                  i.icon-television
-               li
-                  i.icon-shower-head
-               li
-                  a.open-map-item.more-items(href='./landing.html') +10 items
-            .views-bottom.visible-xs
-               i.fa.fa-eye(aria-hidden='true')
-               | 5
-            p.booked.pull-right
-               | Booked
-               span  30
-               |  Times Today
-            p.watching-now.pull-right
-               span 5
-               |  People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-filter='best-price', data-price='899', data-guest_rating='8.8', data-stars_rating='4.97')
+      .image
+         .image-block(style="background-image: url('images/room2.png')")
+      .content
+         .part1
+            .title
+               span Radisson Blu Resort
+               .item-label.top-deal.hidden
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 8.8/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='4.97')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='4.84')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price.hidden
+                  span $520
+               .new-price
+                  span.sort-price $899
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-price='745', data-guest_rating='7.2', data-stars_rating='4.85')
+      .image
+         .image-block(style="background-image: url('images/room3.png')")
+      .content
+         .part1
+            .title
+               span Soho, Soma-Bay Resort
+               .item-label.top-deal.hidden
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price.hidden
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 7.2/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='4.85')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='3.98')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price.hidden
+                  span $520
+               .new-price
+                  span.sort-price $745
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-filter='best-price', data-price='156', data-guest_rating='4.3', data-stars_rating='2.17')
+      .image
+         .image-block(style="background-image: url('images/room4.png')")
+         .ribbon Today -25% off
+      .content
+         .part1
+            .title
+               span Hotel The Serras
+               .item-label.top-deal.hidden
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 4.3/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='2.17')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='4.54')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price
+                  span $250
+               .new-price
+                  span.sort-price $156
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-filter='best-price', data-price='300', data-guest_rating='5.5', data-stars_rating='3.17')
+      .image
+         .image-block(style="background-image: url('images/room5.png')")
+      .content
+         .part1
+            .title
+               span Aria Hotel Budapest
+               .item-label.top-deal.hidden
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 5.5/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='3.17')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='3.17')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price
+                  span $360
+               .new-price
+                  span.sort-price $300
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-filter='top-deal', data-price='240', data-guest_rating='7.0', data-stars_rating='3.17')
+      .image
+         .image-block(style="background-image: url('images/room6.png')")
+      .content
+         .part1
+            .title
+               span Herods Vitalis Spa Hotel
+               .item-label.top-deal
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price.hidden
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 7.0/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='3.17')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='3.74')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price.hidden
+                  span $520
+               .new-price
+                  span.sort-price $240
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-filter='top-deal', data-price='870', data-guest_rating='7.3', data-stars_rating='4.17')
+      .image
+         .image-block(style="background-image: url('images/room1.png')")
+      .content
+         .part1
+            .title
+               span Mandapa, A Ritz-Carlton
+               .item-label.top-deal
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price.hidden
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 7.3/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='4.17')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='4.21')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price
+                  span $620
+               .new-price
+                  span.sort-price $870
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-filter='best-price', data-price='899', data-guest_rating='8.8', data-stars_rating='4.97')
+      .image
+         .image-block(style="background-image: url('images/room2.png')")
+      .content
+         .part1
+            .title
+               span Radisson Blu Resort
+               .item-label.top-deal.hidden
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 8.8/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='4.97')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='4.84')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price.hidden
+                  span $520
+               .new-price
+                  span.sort-price $899
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item.not-available.not-available-list-view(data-aos='fade-up', data-price='745', data-guest_rating='7.2', data-stars_rating='4.85')
+      .image
+         .image-block(style="background-image: url('images/room3.png')")
+      .content
+         .part1
+            .title
+               span Soho, Soma-Bay Resort
+               .item-label.top-deal.hidden
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price.hidden
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 7.2/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='4.85')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='3.98')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price.hidden
+                  span $520
+               .new-price
+                  span.sort-price $745
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+      .not-available-list
+         span.icon
+            .image
+         span.text
+            b You missed it!
+            |  Your dates are popular - we've run out of rooms at this property! Check out more below.
+   li.grid-item(data-aos='fade-up', data-filter='best-price', data-price='156', data-guest_rating='4.3', data-stars_rating='2.17')
+      .image
+         .image-block(style="background-image: url('images/room1.png')")
+         .ribbon Today -25% off
+      .content
+         .part1
+            .title
+               span Hotel The Serras
+               .item-label.top-deal.hidden
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 4.3/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='2.17')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='4.54')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price
+                  span $250
+               .new-price
+                  span.sort-price $156
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-filter='best-price', data-price='220', data-guest_rating='6.1', data-stars_rating='3.17')
+      .image
+         .image-block(style="background-image: url('images/room2.png')")
+      .content
+         .part1
+            .title
+               span Herods Vitalis Spa Hotel
+               .item-label.top-deal.hidden
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 6.1/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='3.17')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='3.21')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price
+                  span $310
+               .new-price
+                  span.sort-price $220
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now
+   li.grid-item(data-aos='fade-up', data-filter='top-deal', data-price='340', data-guest_rating='7.3', data-stars_rating='3.17')
+      .image
+         .image-block(style="background-image: url('images/room6.png')")
+      .content
+         .part1
+            .title
+               span Aria Hotel Budapest
+               .item-label.top-deal
+                  .icon-label
+                  span.text
+                     b Top Deal Cancelon
+                     |  The best offer among all existing
+               .item-label.best-price.hidden
+                  .icon-label
+                  span.text
+                     b Best Price Guaranted
+                     |  On Cancelon you are getting the best price at the time of booking
+               .hotel-rating
+                  img(src='./images/icons/smiling-icon.svg', alt='smiling icon')
+                  .rating 7.3/10
+            .rating-line
+               .stars
+                  ul.stars-hotel(data-stars='3.17')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star(aria-hidden='true')
+                     li.hidden
+                        i.fa.fa-star-half(aria-hidden='true')
+               .rate(data-rate='3.77')
+               .reviews
+                  a(href='javascript:void(0)') 142 Reviews
+            .rooms-count.not-active
+               span Only 5 rooms left on our site!
+            .location
+               span 485 Clawson St, Staten Island, NY 10306
+            .distance
+               span.number
+                  span 5
+               span 1.98 km. to the centre of Central Park
+         .part2
+            .price
+               .old-price.hidden
+                  span $520
+               .new-price
+                  span.sort-price $340
+                  span.slash /
+                  span.day Day
+            .view-btn
+               a.view(href='javascript:void(0)') View
+            .book-text
+               span Booked 30 Times Today
+            .looking-text
+               span 5 People Looking Right Now

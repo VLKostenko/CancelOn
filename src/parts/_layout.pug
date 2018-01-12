@@ -6,7 +6,7 @@ block vars
 html(lang="en")
    head
       include ../parts/head
-   body(class=page.classes)
+   body#body(class=page.classes)
       block main
       if page.name !== 'update-browser'
          include ../parts/footer

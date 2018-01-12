@@ -1,13 +1,39 @@
 .content-wrapper
+	include ../parts/search-top-options
+	.searching-tags.clearfix.hidden
+		.tag
+			.text $100 - $2500
+			a.close(href='javascript:void(0)') &times;
+		.tag
+			.text 1-4 Stars
+			a.close(href='javascript:void(0)') &times;
+		.tag
+			.text Sale Hotels Room
+			a.close(href='javascript:void(0)') &times;
+		.tag
+			.text Accessible Bathroom
+			a.close(href='javascript:void(0)') &times;
+	.searching-result.clearfix
+		.text.pull-left.pt-20.pb-20 Showing 1–20 of 37 found
+		.view-icons.pull-right.pt-20.pb-20
+			a.btn.list-btn.active(href='javascript:void(0)')
+			a.btn.grid-btn.ml-10(href='javascript:void(0)')
+			a.btn.map-btn.ml-10.onoffswitch(href='javascript:void(0)')
+				input#myonoffswitch1.myonoffswitch.onoffswitch-checkbox(type='checkbox', name='onoffswitch1')
+				label.btn.onoffswitch-label(for='myonoffswitch1')
 	.check
-		include content-placeholder
-		include content-placeholder
-		include content-grid
-		include content-grid
+		.loading-items
+		.grid.list-view.placeholder-grid
+			include content-placeholder
+		.grid.list-view.noplaceholder.placeholder-show
+			include content-grid
 	.loading-more
 		.loading
-			i.fa.fa-spinner.fa-spin(aria-hidden='true')
-			a(href='./partial/content-grid-item.html').text-uppercase Load Next 6 Items
+			.dots
+				.dot.dot1
+				.dot.dot2
+				.dot.dot3
+			a(href='./partial/content-grid-item.html') Show More
 	.pagination-wrapper
 		.pagination
 			ul
@@ -31,3 +57,6 @@
 	.placeholder-map
 	.ui.sticky
 		#map.placeholder-show
+		.search-on-map.hidden-xs
+			input(type='text', name='search', placeholder='Search Airport, convention center, venue, ...')
+		a.back-btn(href='javascript:void(0)') Back

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html style="position:  absolute; top: 0; bottom:0; left: 0; right: 0;">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        Calentim - Datetime Range Picker
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../build/css/calentim.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>-->
+    <!-- calentim includes -->
+    <script src="../build/js/moment.min.js"></script>
+    <script src="../build/js/calentim.min.js"></script>
+    <!-- end calentim includes -->
+</head>
+
+<body style="background: #00c2d5; display: flex; align-items: flex-start; margin-top: 300px; justify-content: center; height: 100%;">
+    <div>
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, quidem magnam. Dolorum laudantium voluptatem iste animi natus ipsum minima exercitationem vitae, ad sapiente dicta commodi, reprehenderit veritatis? Doloremque, numquam odit!-->
+        <input type="text" id="calentim-ex-6-5-start" style="width: 150px;" placeholder="Start Date" />
+        <input type="text" id="calentim-ex-6-5-end" style="width: 150px;" placeholder="End Date" />
+        <!--#Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, quidem magnam. Dolorum laudantium voluptatem iste animi natus ipsum minima exercitationem vitae, ad sapiente dicta commodi, reprehenderit veritatis? Doloremque, numquam odit!-->
+    </div>
+    <script type="text/javascript">
+        var calentimStart, calentimEnd, startSelected = null, endSelected = null;
+        var ondrawEvent = function (instance) {
+            if (instance.globals.initComplete) {
+                instance.readTimeFromDisplay();
+                updateInputs();
+            }
+        };
+        var updateInputs = function () {
+            if (startSelected && endSelected && startSelected.hasOwnProperty("_isAMomentObject") && endSelected.hasOwnProperty("_isAMomentObject")) {
+                if (startSelected.isAfter(endSelected, "day")) {
+                    endSelected = startSelected.clone().add(1, "days");
+                }
+            }
+            if (startSelected && startSelected.hasOwnProperty("_isAMomentObject")) {
+                calentimStart.config.startDate = startSelected;
+                calentimEnd.config.startDate = startSelected;
+                calentimEnd.config.minDate = startSelected;
+                calentimStart.$elem.val(startSelected.format(calentimStart.config.format));
+            }
+            if (endSelected && endSelected.hasOwnProperty("_isAMomentObject")) {
+                calentimStart.config.endDate = endSelected;
+                calentimEnd.config.endDate = endSelected;
+                calentimEnd.$elem.val(endSelected.format(calentimEnd.config.format));
+            }
+        };
+        // start always selects start date.
+        $("#calentim-ex-6-5-start").calentim({
+            oninit: function (instance) {
+                instance.globals.delayInputUpdate = true;
+                instance.$elem.val("");
+                calentimStart = instance;
+            },
+            ondraw: ondrawEvent,
+            onfirstselect: function (instance, start) {
+                startSelected = start.clone();
+                instance.globals.startSelected = false;
+                updateInputs();
+                instance.hideDropdown();
+                calentimEnd.showDropdown();
+            },
+            onbeforeselect: function (instance, start, end) {
+                startSelected = start.clone();
+                endSelected = end.clone();
+                updateInputs();
+            }
+        });
+        // end always selects end date.
+        $("#calentim-ex-6-5-end").calentim({
+            oninit: function (instance) {
+                instance.globals.delayInputUpdate = true;
+                instance.$elem.val("");
+                calentimEnd = instance;
+            },
+            ondraw: ondrawEvent,
+            onfirstselect: function (instance, start) {
+                if (calentimStart.config.endDate)
+                    endSelected = start.clone().set({ hours: calentimStart.config.endDate.hours(), minutes: calentimStart.config.endDate.minutes(), seconds: calentimStart.config.endDate.seconds() });
+                else
+                    endSelected = start.clone();
+                instance.globals.startSelected = false;
+                updateInputs();
+                instance.input.find(".calentim-apply").attr("disabled",false);
+            },
+            onbeforeselect: function (instance, start, end) {
+                startSelected = start.clone();
+                endSelected = end.clone();
+                updateInputs();
+            }
+        });
+    </script>
+</body>
+
+</html>

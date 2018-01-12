@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700');
+//@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
 }
 
 h1, .h1 { font-size: 26px; }
@@ -49,13 +53,13 @@ h6, .h6 { font-size: 12px; }
   font-size: 13px;
 }
 
-.font-roboto {
-  font-family: 'Roboto', sans-serif;
-}
-
-.font-montserrat {
-  font-family: 'Montserrat', sans-serif;
-}
+//.font-roboto {
+//  font-family: 'Open Sans', sans-serif;
+//}
+//
+//.font-montserrat {
+//  font-family: 'Open Sans', sans-serif;
+//}
 
 .large {
   font-size: 17px;
@@ -70,7 +74,7 @@ h6, .h6 { font-size: 12px; }
   font-weight: 600;
   color: #ff454c;
   text-align: right;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin-bottom: 0;
   margin-right: 10px;
   line-height: 40px;
@@ -78,8 +82,8 @@ h6, .h6 { font-size: 12px; }
 
 .price {
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
-  color: #68b925;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
   font-size: 30px;
   margin-bottom: 0;
   text-align: right;
@@ -87,10 +91,14 @@ h6, .h6 { font-size: 12px; }
 
 .price-red {
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
-  color: #ff353d;
+  font-family: 'Open Sans', sans-serif;
+  color: #ff0505;
   font-size: 14px;
   text-align: right;
+  text-decoration: line-through;
+}
+
+.red-price {
   text-decoration: line-through;
 }
 

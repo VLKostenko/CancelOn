@@ -1,0 +1,16 @@
+extends parts/_layout
+block vars
+   - page = {name: 'explore', classes: 'wide-container', title: 'Explore'}
+block main
+   include parts/navigation
+   .container.pl-0.pr-0.pos-rel
+      .main-wrapper.hidden-sidebar-filter#sticky-wrap
+         .map-wrapper.full-width
+            .loading-search-cover
+               .loading-search
+            .placeholder-map
+            .ui.sticky
+               #map.placeholder-show
+         .black-bg-search
+   .black-bg-map
+   include parts/map-item

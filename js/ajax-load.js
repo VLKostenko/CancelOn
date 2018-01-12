@@ -1,15 +1,93 @@
 function addSpinnerSpin() {
-  $('.loading-more .loading .fa-spinner').show(200);
+  $('.loading-more .loading .dots').addClass('active');
 }
 
 function removeSpinnerSpin() {
-  $('.loading-more .loading .fa-spinner').hide(200);
+  $('.loading-more .loading .dots').removeClass('active');
 }
 
 function setMapWrapperHeight() {
   var mainWrapperHeight = $('.main-wrapper').height();
   $('.map-wrapper').height(mainWrapperHeight);
   $('.sidebar-filter').height(mainWrapperHeight);
+}
+
+// Check if grid looks good
+function gridViewChecker() {
+  var item = $('.grid .grid-item');
+  item.removeClass('ml-15');
+  if ( $('.grid').hasClass('grid-view') ) {
+    item.not('.hidden').each(function(index) {
+      if ( index % 2 !== 0 ) {
+        $(this).addClass('ml-15');
+      }
+    });
+  }
+  AOS.refresh();
+}
+
+function reinitMap() {
+  if ( $('#map').length && !$('#map1').length && !$('#map2').length ) {
+    var center = map.getCenter();
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(center);
+  } else if ( $('#map').length && $('#map1').length && !$('#map2').length ) {
+    var center0 = map.getCenter();
+    var center1 = map1.getCenter();
+    google.maps.event.trigger(map, "resize");
+    google.maps.event.trigger(map1, "resize");
+    map.setCenter(center0);
+    map1.setCenter(center1);
+  } else if ( !$('#map').length && $('#map1').length && !$('#map2').length ) {
+    var center = map1.getCenter();
+    google.maps.event.trigger(map1, "resize");
+    map1.setCenter(center);
+  } else if ( $('#map').length && !$('#map1').length && $('#map2').length ) {
+    var center0 = map.getCenter();
+    var center2 = map2.getCenter();
+    google.maps.event.trigger(map, "resize");
+    google.maps.event.trigger(map2, "resize");
+    map.setCenter(center0);
+    map2.setCenter(center2);
+  } else if ( !$('#map').length && $('#map1').length && $('#map2').length ) {
+    var center1 = map.getCenter();
+    var center2 = map2.getCenter();
+    google.maps.event.trigger(map1, "resize");
+    google.maps.event.trigger(map2, "resize");
+    map1.setCenter(center1);
+    map2.setCenter(center2);
+  } else if ( !$('#map').length && !$('#map1').length && $('#map2').length ) {
+    var center2 = map.getCenter();
+    google.maps.event.trigger(map2, "resize");
+    map2.setCenter(center2);
+  } else if ( $('#map').length && $('#map1').length && $('#map2').length ) {
+    var center0 = map.getCenter();
+    var center1 = map1.getCenter();
+    var center2 = map2.getCenter();
+    google.maps.event.trigger(map, "resize");
+    google.maps.event.trigger(map1, "resize");
+    google.maps.event.trigger(map2, "resize");
+    map.setCenter(center0);
+    map1.setCenter(center1);
+    map2.setCenter(center2);
+  }
+}
+
+function sortTypeItem() {
+  if ( $('#best-price-guaranted').prop('checked') && !$('#top-deal').prop('checked') ) {
+    $('.grid .grid-item').addClass('hidden');
+    $('.grid .grid-item[data-filter="best-price"]').removeClass('hidden');
+  } else if ( !$('#best-price-guaranted').prop('checked') && $('#top-deal').prop('checked') ) {
+    $('.grid .grid-item').addClass('hidden');
+    $('.grid .grid-item[data-filter="top-deal"]').removeClass('hidden');
+  } else if ( $('#best-price-guaranted').prop('checked') && $('#top-deal').prop('checked') ) {
+    $('.grid .grid-item').addClass('hidden');
+    $('.grid .grid-item[data-filter="best-price"]').removeClass('hidden');
+    $('.grid .grid-item[data-filter="top-deal"]').removeClass('hidden');
+  } else {
+    $('.grid .grid-item').removeClass('hidden');
+  }
+  gridViewChecker();
 }
 
 // Ajax setup
@@ -38,11 +116,11 @@ function loadContentSearch(url) {
     },
     success: function(data) {
       removeSpinnerSpin();
-      $('.main-wrapper .content-wrapper .check').append(data);
-      $('.main-wrapper .content-wrapper .check .grid').removeClass('placeholder-show');
-      if ( !$('.main-wrapper .content-wrapper .check .grid:first-child').hasClass('list-view') ) {
-        $('.main-wrapper .content-wrapper .check .grid:last-child').removeClass('list-view');
-      }
+      $('.main-wrapper .content-wrapper .check .grid').append(data);
+      // $('.main-wrapper .content-wrapper .check .grid').removeClass('placeholder-show');
+      // if ( !$('.main-wrapper .content-wrapper .check .grid:first-child').hasClass('list-view') ) {
+      //   $('.main-wrapper .content-wrapper .check .grid:last-child').removeClass('list-view');
+      // }
       if ( $('#reviews .review-block_comments').length ) {
         if ( !$('#reviews .review-block_comments').hasClass('mCustomScrollbar') ) {
           $('#reviews .review-block_comments').append(data);
@@ -55,10 +133,19 @@ function loadContentSearch(url) {
       }
       $('.stars-hotel').stars();
       $('.rate').rate();
-      $('.ui.sticky').sticky({
+      $('.map-wrapper .ui.sticky').sticky('destroy');
+      $('.map-wrapper .ui.sticky').sticky({
         context: '#sticky-wrap',
-        silent: true
+        silent: true,
+        observeChanges: true
       });
+      reinitMap();
+      gridViewChecker();
+      sortTypeItem();
+      setTimeout(function() {
+        $(window).trigger('resize');
+        console.log('resize');
+      }, 100);
     },
     error: function(jqXHR, textStatus, errorThrown) {
       alert(textStatus + ': ' + errorThrown + ' please, try again later');

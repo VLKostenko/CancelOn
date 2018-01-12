@@ -10,3 +10,8 @@
     }
   }
 }
+@-moz-document url-prefix() {
+  .search-filter-block .input-group .datepicker-book-rooms::before {
+    top: 10px;
+  }
+}

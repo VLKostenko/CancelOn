@@ -3,10 +3,9 @@ block vars
    - page = {name: 'landing', classes: 'landing placeholder', title: 'Express Hotel Suites Las Vegas'}
 block main
    include parts/navigation
+   include parts/search
    include parts/landing/hotel-title
-   .container.information-block-wrapper
-      .row
-         include parts/landing/information-block
+   include parts/landing/information-block
    .container.pos-rel.booking-wrapper
       .row
          include parts/landing/booking-table
@@ -30,7 +29,7 @@ block main
    .visible-xs
       aside.sidebar-filter.same-height
          .mobile-filter-line.visible-xs
-            i.fa.fa-filter(aria-hidden='true')
+            i.fa.fa-chevron-up(aria-hidden='true')
             | Settings
          .mobile-filter-landing.panel-group.mb-0.mt-xs-50.pt-xs-30
             .onoffswitch-mobile-wrapper.clearfix

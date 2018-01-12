@@ -44,47 +44,1013 @@ nav.navbar.navbar-default.mb-0
 						//img(src='./images/trivago-logo.png', alt='trivago')
 						img(src='./images/booking-com.png', alt='booking')
 				else
-					p.navbar-text.small-text.font-weight-200.visible-lg
-						i.fa.fa-info-circle(aria-hidden='true')
-						|  Sell and Buy Non-Refundable Hotel Reservations
+					//p.navbar-text.small-text.font-weight-200.visible-lg
+					//	i.fa.fa-info-circle(aria-hidden='true')
+					//	|  Sell and Buy Non-Refundable Hotel Reservations
+				ul.nav.navbar-nav.navbar-left.menu
+					li
+						a(href='javascript:void(0)') Search
+					li
+						a(href='javascript:void(0)') About
+					li
+						a(href='javascript:void(0)') Sell
+					li
+						a(href='javascript:void(0)') Support
+					li
+						a(href='javascript:void(0)') Alert Me
+					li
+						a(href='javascript:void(0)') Explore
 				#nav_mobile.navbar-mobile.hidden-lg
 					ul.nav.navbar-nav
-						li.back
-							a(href='javascript:void(0)')
-								i.fa.fa-angle-left(aria-hidden='true')
-								| Back
+						li.profile
+							.bg
+								.user
+									img(src='./images/user.png', alt='user')
+								a.link-mobile.sign-in-mobile(href='javascript:void(0)') Sign In
+								a.link-mobile.language-mobile(href='javascript:void(0)') EN
+								a.link-mobile.currency-mobile(href='javascript:void(0)') USD
+						//li.back.hidden-xs.hidden-sm
+						//	a(href='javascript:void(0)')
+						//		i.fa.fa-angle-left(aria-hidden='true')
+						//		| Back
 						li
 							a(href='javascript:void(0)')
-								| Home
+								| Search
 						li
 							a(href='javascript:void(0)')
 								| About
 						li
 							a(href='javascript:void(0)')
+								| Sell
+						li
+							a(href='javascript:void(0)')
 								| Support
+						//if ( page.name !== 'landing' )
+						//	li
+						//		a(href='javascript:void(0)')
+						//			| Explore
 						li
 							a(href='javascript:void(0)')
-								| Alert Me
-						if ( page.name !== 'landing' )
-							li
-								a(href='javascript:void(0)')
-									| Explore
+								| Alert me
 						li
 							a(href='javascript:void(0)')
-								| Sign In
-						li
-							a(href='javascript:void(0)')
-								| Sign Up
-						li
-							a(href='javascript:void(0)')
-								| USD
-						li
-							a(href='javascript:void(0)')
-								| Language
-						//li.visible-xs
-							//a.blue-btn(href='javascript:void(0)') Unlock special prices
-						//li.visible-xs
-						//	a.green-btn(href='./payment.html') Buy hotel reservation
+								| Explore
+						//li
+						//	a(href='javascript:void(0)')
+						//		| USD
+						//li
+						//	a(href='javascript:void(0)')
+						//		| Language
+						li.visible-xs
+							a.blue-btn(href='javascript:void(0)') Unlock special prices
+						li.visible-xs
+							a.blue-btn(href='./payment.html') Buy hotel reservation
+					.sign-in-mobile-menu
+						a.back-sign-btn
+							i.fa.fa-chevron-right(aria-hidden='true')
+						form
+							.wrapper
+								input#sign-in-mobile-login.log-input(type='text', required)
+								label(for='sign-in-mobile-login') Enter Your Login
+							.wrapper
+								input#sign-in-mobile-password.log-input(type='text', required)
+								label(for='sign-in-mobile-password') Enter Your Password
+							.button.text-center
+								input.sign-btn(type='submit', value='Sign In')
+							.socials
+								a(href="javascript:void(0)")
+									i.fa.fa-facebook(aria-hidden='true')
+								a(href="javascript:void(0)")
+									i.fa.fa-google-plus(aria-hidden='true')
+								a(href="javascript:void(0)")
+									i.fa.fa-twitter(aria-hidden='true')
+							.last-line-btns.clearfix
+								a.pull-left.last-line-btn(href='javascript:void(0)') Sign Up
+								a.pull-right.last-line-btn(href='javascript:void(0)') Forgot Password
+					.currencies-mobile
+						a.back-sign-btn
+							i.fa.fa-chevron-right(aria-hidden='true')
+						.languages.clearfix
+							span.caret
+							select.language-mobile
+								option
+									img(width='25', src='images/icons/flag.svg', alt='flag')
+									| English
+								option
+									img(width='25', src='images/icons/flag1.svg', alt='flag')
+									| Deutch
+								option
+									img(width='25', src='images/icons/flag2.svg', alt='flag')
+									| French
+								option
+									img(width='25', src='images/icons/flag3.svg', alt='flag')
+									| Spanish
+								option
+									img(width='25', src='images/icons/flag4.svg', alt='flag')
+									| Italiano
+								option
+									img(width='25', src='images/icons/flag5.svg', alt='flag')
+									| Russian
+						.currency-title-mobile
+							| USD
+						.popular-currencies
+							.title
+								span Popular Currency
+							ul.ul-list.choose-currency
+								li.active
+									a(href='javascript:void(0)')
+										span.currency USD
+										|
+										| - US Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency EUR
+										|
+										| - Euro
+								li
+									a(href='javascript:void(0)')
+										span.currency GBP
+										|
+										| - British Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency INR
+										|
+										| - Indian Rupee
+								li
+									a(href='javascript:void(0)')
+										span.currency AUD
+										|
+										| - Australian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency CAD
+										|
+										| - Canadian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency SGD
+										|
+										| - Singapore Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency CHF
+										|
+										| - Swiss Frank
+								li
+									a(href='javascript:void(0)')
+										span.currency MYR
+										|
+										| - Malaysian Ringgit
+								li
+									a(href='javascript:void(0)')
+										span.currency JPY
+										|
+										| - Japanese Yen
+								li
+									a(href='javascript:void(0)')
+										span.currency CNY
+										|
+										| - Chinese Yuan Renminbi
+						.all-currencies
+							.title
+								span All Currency
+							ul.ul-list.choose-currency
+								li
+									a(href='javascript:void(0)')
+										span.currency AED
+										|
+										| - Emirati Dirham
+								li
+									a(href='javascript:void(0)')
+										span.currency AFN
+										|
+										|  - Afghan Afghani
+								li
+									a(href='javascript:void(0)')
+										span.currency ALL
+										|
+										| - Albanian Lek
+								li
+									a(href='javascript:void(0)')
+										span.currency AMD
+										|
+										| - Armenian Dram
+								li
+									a(href='javascript:void(0)')
+										span.currency ANG
+										|
+										| - Dutch Guilder
+								li
+									a(href='javascript:void(0)')
+										span.currency AOA
+										|
+										| - Angolan Kwanza
+								li
+									a(href='javascript:void(0)')
+										span.currency ARS
+										|
+										| - Argentine Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency AUD
+										|
+										| - Australian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency AWG
+										|
+										| - Aruban or Dutch Guilder
+								li
+									a(href='javascript:void(0)')
+										span.currency AZN
+										|
+										| - Azerbaijan Manat
+								li
+									a(href='javascript:void(0)')
+										span.currency BAM
+										|
+										| - Bosnian Convertible Marka
+								li
+									a(href='javascript:void(0)')
+										span.currency BBD
+										|
+										| - Barbadian or Bajan Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency BDT
+										|
+										| - Bangladeshi Taka
+								li
+									a(href='javascript:void(0)')
+										span.currency BGN
+										|
+										| - Bulgarian Lev
+								li
+									a(href='javascript:void(0)')
+										span.currency BHD
+										|
+										| - Bahraini Dinar
+								li
+									a(href='javascript:void(0)')
+										span.currency BIF
+										|
+										| - Burundian Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency BMD
+										|
+										| - Bermudian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency BND
+										|
+										| - Bruneian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency BOB
+										|
+										| - Bolivian Bolíviano
+								li
+									a(href='javascript:void(0)')
+										span.currency BRL
+										|
+										| - Brazilian Real
+								li
+									a(href='javascript:void(0)')
+										span.currency BSD
+										|
+										| - Bahamian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency BTN
+										|
+										| - Bhutanese Ngultrum
+								li
+									a(href='javascript:void(0)')
+										span.currency BWP
+										|
+										| - Botswana Pula
+								li
+									a(href='javascript:void(0)')
+										span.currency BYN
+										|
+										| - Belarusian Ruble
+								li
+									a(href='javascript:void(0)')
+										span.currency BZD
+										|
+										| - Belizean Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency CAD
+										|
+										| - Canadian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency CDF
+										|
+										| - Congolese Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency CHF
+										|
+										| - Swiss Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency ClP
+										|
+										| - Chilean Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency CNY
+										|
+										| - Chinese Yuan Renminbi
+								li
+									a(href='javascript:void(0)')
+										span.currency COP
+										|
+										| - Colombian Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency CRC
+										|
+										| - Costa Rican Colon
+								li
+									a(href='javascript:void(0)')
+										span.currency CUC
+										|
+										| - Cuban Convertible Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency CUP
+										|
+										| - Cuban Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency CVE
+										|
+										| - Cape Verdean Escudo
+								li
+									a(href='javascript:void(0)')
+										span.currency CZK
+										|
+										| - Czech Koruna
+								li
+									a(href='javascript:void(0)')
+										span.currency DJF
+										|
+										| - Djiboutian Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency DKK
+										|
+										| - Danish Krone
+								li
+									a(href='javascript:void(0)')
+										span.currency DOP
+										|
+										| - Dominican Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency DZD
+										|
+										| - Algerian Dinar
+								li
+									a(href='javascript:void(0)')
+										span.currency EGP
+										|
+										| - Egyptian Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency ERN
+										|
+										| - Eritrean Nakfa
+								li
+									a(href='javascript:void(0)')
+										span.currency ETB
+										|
+										| - Ethiopian Birr
+								li
+									a(href='javascript:void(0)')
+										span.currency EUR
+										|
+										| - Euro
+								li
+									a(href='javascript:void(0)')
+										span.currency FJD
+										|
+										| - Fijian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency FKP
+										|
+										| - Falkland Island Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency GBP
+										|
+										| - British Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency GEL
+										|
+										| - Georgian Lari
+								li
+									a(href='javascript:void(0)')
+										span.currency GGP
+										|
+										| - Guernsey Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency GHS
+										|
+										| - Ghanaian Cedi
+								li
+									a(href='javascript:void(0)')
+										span.currency GIP
+										|
+										| - Gibraltar Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency GMD
+										|
+										| - Gambian Dalasi
+								li
+									a(href='javascript:void(0)')
+										span.currency GNF
+										|
+										| - Guinean Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency GTQ
+										|
+										| - Guatemalan Quetzal
+								li
+									a(href='javascript:void(0)')
+										span.currency GYD
+										|
+										| - Guyanese Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency HKD
+										|
+										| - Hong Kong Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency HNL
+										|
+										| - Honduran Lempira
+								li
+									a(href='javascript:void(0)')
+										span.currency HRK
+										|
+										| - Croatian Kuna
+								li
+									a(href='javascript:void(0)')
+										span.currency HTG
+										|
+										| - Haitian Gourde
+								li
+									a(href='javascript:void(0)')
+										span.currency HUF
+										|
+										| - Hungarian Forint
+								li
+									a(href='javascript:void(0)')
+										span.currency IDR
+										|
+										| - Indonesian Rupiah
+								li
+									a(href='javascript:void(0)')
+										span.currency ILS
+										|
+										| - Israeli Shekel
+								li
+									a(href='javascript:void(0)')
+										span.currency IMP
+										|
+										| - Isle of Man Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency INR
+										|
+										| - Indian Rupee
+								li
+									a(href='javascript:void(0)')
+										span.currency IQD
+										|
+										| - Iraqi Dinar
+								li
+									a(href='javascript:void(0)')
+										span.currency IRR
+										|
+										| - Iranian Rial
+								li
+									a(href='javascript:void(0)')
+										span.currency ISK
+										|
+										| - Icelandic Krona
+								li
+									a(href='javascript:void(0)')
+										span.currency JEP
+										|
+										| - Jersey Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency JMD
+										|
+										| - Jamaican Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency JOD
+										|
+										| - Jordanian Dinar
+								li
+									a(href='javascript:void(0)')
+										span.currency JPY
+										|
+										| - Japanese Yen
+								li
+									a(href='javascript:void(0)')
+										span.currency KES
+										|
+										| - Kenyan Shilling
+								li
+									a(href='javascript:void(0)')
+										span.currency KGS
+										|
+										| - Kyrgyzstani Som
+								li
+									a(href='javascript:void(0)')
+										span.currency KHR
+										|
+										| - Cambodian Riel
+								li
+									a(href='javascript:void(0)')
+										span.currency KMF
+										|
+										| - Comorian Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency KPW
+										|
+										| - North Korean Won
+								li
+									a(href='javascript:void(0)')
+										span.currency KRW
+										|
+										| - South Korean Won
+								li
+									a(href='javascript:void(0)')
+										span.currency KWD
+										|
+										| - Kuwaiti Dinar
+								li
+									a(href='javascript:void(0)')
+										span.currency KYD
+										|
+										| - Caymanian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency KZT
+										|
+										| - Kazakhstani Tenge
+								li
+									a(href='javascript:void(0)')
+										span.currency LAK
+										|
+										| - Lao Kip
+								li
+									a(href='javascript:void(0)')
+										span.currency LBP
+										|
+										| - Lebanese Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency LKR
+										|
+										| - Sri Lankan Rupee
+								li
+									a(href='javascript:void(0)')
+										span.currency LRD
+										|
+										| - Liberian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency LSL
+										|
+										| - Basotho Loti
+								li
+									a(href='javascript:void(0)')
+										span.currency LYD
+										|
+										| - Libyan Dinar
+								li
+									a(href='javascript:void(0)')
+										span.currency MAC
+										|
+										| - Moroccan Dirham
+								li
+									a(href='javascript:void(0)')
+										span.currency MDL
+										|
+										| - Moldovan Leu
+								li
+									a(href='javascript:void(0)')
+										span.currency MGA
+										|
+										| - Malagasy Ariary
+								li
+									a(href='javascript:void(0)')
+										span.currency MKD
+										|
+										| - Macedonian Denar
+								li
+									a(href='javascript:void(0)')
+										span.currency MMK
+										|
+										| - Burmese Kyat
+								li
+									a(href='javascript:void(0)')
+										span.currency MNT
+										|
+										| - Mongolian Tughrik
+								li
+									a(href='javascript:void(0)')
+										span.currency MOP
+										|
+										| - Macau Pataca
+								li
+									a(href='javascript:void(0)')
+										span.currency MRO
+										|
+										| - Mauritanian Ouguiya
+								li
+									a(href='javascript:void(0)')
+										span.currency MUR
+										|
+										| - Mauritian Rupee
+								li
+									a(href='javascript:void(0)')
+										span.currency MVR
+										|
+										| - Maldivian Rufiyaa
+								li
+									a(href='javascript:void(0)')
+										span.currency MVK
+										|
+										| - Malawian Kwacha
+								li
+									a(href='javascript:void(0)')
+										span.currency MXN
+										|
+										| - Mexican Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency MYR
+										|
+										| - Malaysian Ringgit
+								li
+									a(href='javascript:void(0)')
+										span.currency MZN
+										|
+										| - Mozambican Metical
+								li
+									a(href='javascript:void(0)')
+										span.currency NAD
+										|
+										| - Namibian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency NGN
+										|
+										| - Nigerian Naira
+								li
+									a(href='javascript:void(0)')
+										span.currency NIO
+										|
+										| - Nicaraguan Cordoba
+								li
+									a(href='javascript:void(0)')
+										span.currency NOK
+										|
+										| - Norwegian Krone
+								li
+									a(href='javascript:void(0)')
+										span.currency NPR
+										|
+										| - Nepalese Rupee
+								li
+									a(href='javascript:void(0)')
+										span.currency NZD
+										|
+										| - New Zealand Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency OMR
+										|
+										| - Omani Rial
+								li
+									a(href='javascript:void(0)')
+										span.currency PAB
+										|
+										| - Panamanian Balboa
+								li
+									a(href='javascript:void(0)')
+										span.currency PEN
+										|
+										| - Peruvian Sol
+								li
+									a(href='javascript:void(0)')
+										span.currency PGK
+										|
+										| - Papua New Guinean Kina
+								li
+									a(href='javascript:void(0)')
+										span.currency PHP
+										|
+										| - Philippine Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency PKR
+										|
+										| - Pakistani Rupee
+								li
+									a(href='javascript:void(0)')
+										span.currency PLN
+										|
+										| - Polish Zloty
+								li
+									a(href='javascript:void(0)')
+										span.currency PYG
+										|
+										| - Paraguayan Guarani
+								li
+									a(href='javascript:void(0)')
+										span.currency QAR
+										|
+										| - Qatari Riyal
+								li
+									a(href='javascript:void(0)')
+										span.currency RON
+										|
+										| - Romanian Leu
+								li
+									a(href='javascript:void(0)')
+										span.currency RSD
+										|
+										| - Serbian Dinar
+								li
+									a(href='javascript:void(0)')
+										span.currency RUB
+										|
+										| - Russian Ruble
+								li
+									a(href='javascript:void(0)')
+										span.currency RWF
+										|
+										| - Rwandan Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency SAR
+										|
+										| - Saudi Arabian Riyal
+								li
+									a(href='javascript:void(0)')
+										span.currency SBD
+										|
+										| - Solomon Islander Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency SCR
+										|
+										| - Seychellois Rupee
+								li
+									a(href='javascript:void(0)')
+										span.currency SDG
+										|
+										| - Sudanese Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency SEK
+										|
+										| - Swedish Krona
+								li
+									a(href='javascript:void(0)')
+										span.currency SGD
+										|
+										| - Singapore Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency SHP
+										|
+										| - Saint Helenian Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency SLL
+										|
+										| - Sierra Leonean Leone
+								li
+									a(href='javascript:void(0)')
+										span.currency SOS
+										|
+										| - Somali Shilling
+								li
+									a(href='javascript:void(0)')
+										span.currency SPL
+										|
+										| - Seborgan Luigino
+								li
+									a(href='javascript:void(0)')
+										span.currency SRD
+										|
+										| - Surinamese Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency STD
+										|
+										| - Sao Tomean Dobra
+								li
+									a(href='javascript:void(0)')
+										span.currency SVC
+										|
+										| - Salvadoran Colon
+								li
+									a(href='javascript:void(0)')
+										span.currency SYP
+										|
+										| - Syrian Pound
+								li
+									a(href='javascript:void(0)')
+										span.currency SZL
+										|
+										| - Swazi Lilangeni
+								li
+									a(href='javascript:void(0)')
+										span.currency THB
+										|
+										| - Thai Baht
+								li
+									a(href='javascript:void(0)')
+										span.currency TJS
+										|
+										| - Tajikistani Somoni
+								li
+									a(href='javascript:void(0)')
+										span.currency TMT
+										|
+										| - Turkmenistani Manat
+								li
+									a(href='javascript:void(0)')
+										span.currency TND
+										|
+										| - Tunisian Dinar
+								li
+									a(href='javascript:void(0)')
+										span.currency TOP
+										|
+										| - Tongan Pa'anga
+								li
+									a(href='javascript:void(0)')
+										span.currency TRY
+										|
+										| - Turkish Lira
+								li
+									a(href='javascript:void(0)')
+										span.currency TTD
+										|
+										| - Trinidadian Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency TVD
+										|
+										| - Tuvaluan Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency TWD
+										|
+										| - Taiwan New Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency TZS
+										|
+										| - Tanzanian Shilling
+								li
+									a(href='javascript:void(0)')
+										span.currency UAH
+										|
+										| - Ukrainian Hryvnia
+								li
+									a(href='javascript:void(0)')
+										span.currency UGX
+										|
+										| - Ugandan Shilling
+								li
+									a(href='javascript:void(0)')
+										span.currency USD
+										|
+										| - US Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency UYU
+										|
+										| - Uruguayan Peso
+								li
+									a(href='javascript:void(0)')
+										span.currency UZS
+										|
+										| - Uzbekistani Som
+								li
+									a(href='javascript:void(0)')
+										span.currency VEF
+										|
+										| - Venezuelan Bolívar
+								li
+									a(href='javascript:void(0)')
+										span.currency VND
+										|
+										| - Vietnamese Dong
+								li
+									a(href='javascript:void(0)')
+										span.currency VUV
+										|
+										| - Ni-Vanuatu Vatu
+								li
+									a(href='javascript:void(0)')
+										span.currency WST
+										|
+										| - Samoan Tala
+								li
+									a(href='javascript:void(0)')
+										span.currency XAF
+										|
+										| - Central African CFA Franc BEAC
+								li
+									a(href='javascript:void(0)')
+										span.currency XAG
+										|
+										| - Silver Ounce
+								li
+									a(href='javascript:void(0)')
+										span.currency XAU
+										|
+										| - Gold Ounce
+								li
+									a(href='javascript:void(0)')
+										span.currency XBT
+										|
+										| - Bitcoin
+								li
+									a(href='javascript:void(0)')
+										span.currency XCD
+										|
+										| - East Caribbean Dollar
+								li
+									a(href='javascript:void(0)')
+										span.currency XDR
+										|
+										| - IMF Special Drawing Rights
+								li
+									a(href='javascript:void(0)')
+										span.currency XOF
+										|
+										| - CFA Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency XPD
+										|
+										| - Palladium Ounce
+								li
+									a(href='javascript:void(0)')
+										span.currency XPF
+										|
+										| - CFP Franc
+								li
+									a(href='javascript:void(0)')
+										span.currency XPT
+										|
+										| - Platinum Ounce
+								li
+									a(href='javascript:void(0)')
+										span.currency YER
+										|
+										| - Yemeni Rial
+								li
+									a(href='javascript:void(0)')
+										span.currency ZAR
+										|
+										| - South African Rand
+								li
+									a(href='javascript:void(0)')
+										span.currency ZMW
+										|
+										| - Zambian Kwacha
+								li
+									a(href='javascript:void(0)')
+										span.currency ZWD
+										|
+										| - Zimbabwean Dollar
 				#filter_mobile.navbar-filter.hidden-lg
 					a#filter-done(href='javascript:void(0)') Done
 			button#menu-button.navbar-toggle(type='button')
@@ -92,95 +1058,992 @@ nav.navbar.navbar-default.mb-0
 				span.icon-bar
 				span.icon-bar
 			.navbar-menu.hidden-xs
+				a.blue-btn.pull-right(href='./payment.html') Buy hotel reservation
+				a.blue-btn.pull-right(href='javascript:void(0)') Unlock special prices
 				ul.nav.navbar-nav.navbar-right
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-search(aria-hidden='true')
-							| Search
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-fire(aria-hidden='true')
-							| Sell
-					li.dropdown.show.visible-lg
-						a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-							i.fa.fa-user(aria-hidden='true')
-							| Sign In
+					li.dropdown.show
+						a#dropdownMenuLink1.dropdown-toggle.mnr-10(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Sign In
 							span.bs-caret
 								span.caret
-						.dropdown-menu.sign-in-menu(aria-labelledby='dropdownMenuLink1')
-							.col-md-12
-								p.pull-left.w-30.big-text.font-weight-500 Login
-								a.pull-right.w-70.extra-small(href='javascript:void(0)') Not registered? Sign Up
-								input.log-input(type='text', placeholder='Enter Your Login')
-								p.pull-left.w-50.big-text.font-weight-500 Password
-								a.pull-right.w-50.extra-small(href='javascript:void(0)') Forgot Password
-								input.log-input(type='text', placeholder='Enter Your Password')
-								.w-50.pull-left.text-center
-									a.sign-btn(href="javascript:void(0)") Sign In
-								.w-50.pull-right.text-center.socials
-									a(href="javascript:void(0)")
-										i.fa.fa-facebook(aria-hidden='true')
-									a(href="javascript:void(0)")
-										i.fa.fa-google-plus(aria-hidden='true')
-									a(href="javascript:void(0)")
-										i.fa.fa-twitter(aria-hidden='true')
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-info-circle(aria-hidden='true')
-							| Alert Me
-					if ( page.name !== 'landing' )
-						li.visible-lg
-							a(href='javascript:void(0)')
-								i.fa.fa-map(aria-hidden='true')
-								| Explore
-					li.form-group.visible-lg
-						select#sel1.selectpicker.currency-menu
-							option (USD) $
-							option (EUR) &euro;
-							option (GBP) &pound;
-							option (AED) Dh
-							option (AFN) ؋
-							option (ALL) Lek
-							option (DZD) DA
-							option (ARS) $
-							option (AUD) $
-							option (BSD) $
-							option (BDT) Tk
-							option (BBD) $
-							option (BMD) $
-					li.dropdown.show.visible-lg
+							.dropdown-menu.sign-in-menu(aria-labelledby='dropdownMenuLink1')
+								.col-md-4.col-md-offset-4.pt-50.pb-50
+									form
+										.wrapper
+											input#sign-in-login.log-input(type='text', required)
+											label(for='sign-in-login') Enter Your Login
+										.wrapper
+											input#sign-in-password.log-input(type='text', required)
+											label(for='sign-in-password') Enter Your Password
+										.w-50.pull-left.text-center
+											input.sign-btn(type='submit', value='Sign In')
+										.w-50.pull-right.text-center.socials
+											a(href="javascript:void(0)")
+												i.fa.fa-facebook(aria-hidden='true')
+											a(href="javascript:void(0)")
+												i.fa.fa-google-plus(aria-hidden='true')
+											a(href="javascript:void(0)")
+												i.fa.fa-twitter(aria-hidden='true')
+										a.pull-left.w-30.last-line-btn(href='javascript:void(0)') Sign Up
+										a.pull-right.w-30.last-line-btn(href='javascript:void(0)') Forgot Password
+					li.dropdown.show
 						a#dropdownMenuLink2.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-							i.fa.fa-language(aria-hidden='true')
-							| Language
+							span.language ENG
+							| /
+							span.currency USD
 							span.bs-caret
 								span.caret
 						.dropdown-menu.languages-menu(aria-labelledby='dropdownMenuLink2')
-							.col-md-12.languages
-								a(href='javascript:void(0)')
-									img(width='25', src='images/icons/flag.svg', alt='flag')
-									| English
-								a(href='javascript:void(0)')
-									img(width='25', src='images/icons/flag1.svg', alt='flag')
-									| Deutch
-								a(href='javascript:void(0)')
-									img(width='25', src='images/icons/flag2.svg', alt='flag')
-									| French
-								a(href='javascript:void(0)')
-									img(width='25', src='images/icons/flag3.svg', alt='flag')
-									| Spanish
-								a(href='javascript:void(0)')
-									img(width='25', src='images/icons/flag4.svg', alt='flag')
-									| Italiano
-								a(href='javascript:void(0)')
-									img(width='25', src='images/icons/flag5.svg', alt='flag')
-									| Russian
-				ul.nav.navbar-nav.navbar-right.down-menu
-					li.visible-lg
-						a(href='javascript:void(0)')
-							i.fa.fa-life-ring(aria-hidden='true')
-							| Support
-					li.visible-lg
-						a(href='javascript:void(0)') About
+							.container
+								.row
+									.col-md-12
+										.languages.clearfix
+											.title
+												span Language
+											a.active(href='javascript:void(0)', data-lang='ENG')
+												img(width='25', src='images/icons/flag.svg', alt='flag')
+												| English
+											a(href='javascript:void(0)', data-lang='DE')
+												img(width='25', src='images/icons/flag1.svg', alt='flag')
+												| Deutch
+											a(href='javascript:void(0)', data-lang='FR')
+												img(width='25', src='images/icons/flag2.svg', alt='flag')
+												| French
+											a(href='javascript:void(0)', data-lang='SP')
+												img(width='25', src='images/icons/flag3.svg', alt='flag')
+												| Spanish
+											a(href='javascript:void(0)', data-lang='IT')
+												img(width='25', src='images/icons/flag4.svg', alt='flag')
+												| Italiano
+											a(href='javascript:void(0)', data-lang='RUS')
+												img(width='25', src='images/icons/flag5.svg', alt='flag')
+												| Russian
+										.popular-currencies
+											.title
+												span Popular Currency Profiles
+											ul.ul-list.choose-currency
+												li.active
+													a(href='javascript:void(0)')
+														span.currency USD
+														|
+														| - US Dollar
+												li
+													a(href='javascript:void(0)')
+														span.currency EUR
+														|
+														| - Euro
+												li
+													a(href='javascript:void(0)')
+														span.currency GBP
+														|
+														| - British Pound
+												li
+													a(href='javascript:void(0)')
+														span.currency INR
+														|
+														| - Indian Rupee
+												li
+													a(href='javascript:void(0)')
+														span.currency AUD
+														|
+														| - Australian Dollar
+												li
+													a(href='javascript:void(0)')
+														span.currency CAD
+														|
+														| - Canadian Dollar
+												li
+													a(href='javascript:void(0)')
+														span.currency SGD
+														|
+														| - Singapore Dollar
+												li
+													a(href='javascript:void(0)')
+														span.currency CHF
+														|
+														| - Swiss Frank
+												li
+													a(href='javascript:void(0)')
+														span.currency MYR
+														|
+														| - Malaysian Ringgit
+												li
+													a(href='javascript:void(0)')
+														span.currency JPY
+														|
+														| - Japanese Yen
+												li
+													a(href='javascript:void(0)')
+														span.currency CNY
+														|
+														| - Chinese Yuan Renminbi
+										.all-currencies
+											.title
+												span All Currency
+											.currency-slider.owl-carousel
+												.item
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency AED
+																|
+																| - Emirati Dirham
+														li
+															a(href='javascript:void(0)')
+																span.currency AFN
+																|
+																|  - Afghan Afghani
+														li
+															a(href='javascript:void(0)')
+																span.currency ALL
+																|
+																| - Albanian Lek
+														li
+															a(href='javascript:void(0)')
+																span.currency AMD
+																|
+																| - Armenian Dram
+														li
+															a(href='javascript:void(0)')
+																span.currency ANG
+																|
+																| - Dutch Guilder
+														li
+															a(href='javascript:void(0)')
+																span.currency AOA
+																|
+																| - Angolan Kwanza
+														li
+															a(href='javascript:void(0)')
+																span.currency ARS
+																|
+																| - Argentine Peso
+														li
+															a(href='javascript:void(0)')
+																span.currency AUD
+																|
+																| - Australian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency AWG
+																|
+																| - Aruban or Dutch Guilder
+														li
+															a(href='javascript:void(0)')
+																span.currency AZN
+																|
+																| - Azerbaijan Manat
+														li
+															a(href='javascript:void(0)')
+																span.currency BAM
+																|
+																| - Bosnian Convertible Marka
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency BBD
+																|
+																| - Barbadian or Bajan Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency BDT
+																|
+																| - Bangladeshi Taka
+														li
+															a(href='javascript:void(0)')
+																span.currency BGN
+																|
+																| - Bulgarian Lev
+														li
+															a(href='javascript:void(0)')
+																span.currency BHD
+																|
+																| - Bahraini Dinar
+														li
+															a(href='javascript:void(0)')
+																span.currency BIF
+																|
+																| - Burundian Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency BMD
+																|
+																| - Bermudian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency BND
+																|
+																| - Bruneian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency BOB
+																|
+																| - Bolivian Bolíviano
+														li
+															a(href='javascript:void(0)')
+																span.currency BRL
+																|
+																| - Brazilian Real
+														li
+															a(href='javascript:void(0)')
+																span.currency BSD
+																|
+																| - Bahamian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency BTN
+																|
+																| - Bhutanese Ngultrum
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency BWP
+																|
+																| - Botswana Pula
+														li
+															a(href='javascript:void(0)')
+																span.currency BYN
+																|
+																| - Belarusian Ruble
+														li
+															a(href='javascript:void(0)')
+																span.currency BZD
+																|
+																| - Belizean Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency CAD
+																|
+																| - Canadian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency CDF
+																|
+																| - Congolese Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency CHF
+																|
+																| - Swiss Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency ClP
+																|
+																| - Chilean Peso
+														li
+															a(href='javascript:void(0)')
+																span.currency CNY
+																|
+																| - Chinese Yuan Renminbi
+														li
+															a(href='javascript:void(0)')
+																span.currency COP
+																|
+																| - Colombian Peso
+														li
+															a(href='javascript:void(0)')
+																span.currency CRC
+																|
+																| - Costa Rican Colon
+														li
+															a(href='javascript:void(0)')
+																span.currency CUC
+																|
+																| - Cuban Convertible Peso
+												.item
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency CUP
+																|
+																| - Cuban Peso
+														li
+															a(href='javascript:void(0)')
+																span.currency CVE
+																|
+																| - Cape Verdean Escudo
+														li
+															a(href='javascript:void(0)')
+																span.currency CZK
+																|
+																| - Czech Koruna
+														li
+															a(href='javascript:void(0)')
+																span.currency DJF
+																|
+																| - Djiboutian Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency DKK
+																|
+																| - Danish Krone
+														li
+															a(href='javascript:void(0)')
+																span.currency DOP
+																|
+																| - Dominican Peso
+														li
+															a(href='javascript:void(0)')
+																span.currency DZD
+																|
+																| - Algerian Dinar
+														li
+															a(href='javascript:void(0)')
+																span.currency EGP
+																|
+																| - Egyptian Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency ERN
+																|
+																| - Eritrean Nakfa
+														li
+															a(href='javascript:void(0)')
+																span.currency ETB
+																|
+																| - Ethiopian Birr
+														li
+															a(href='javascript:void(0)')
+																span.currency EUR
+																|
+																| - Euro
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency FJD
+																|
+																| - Fijian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency FKP
+																|
+																| - Falkland Island Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency GBP
+																|
+																| - British Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency GEL
+																|
+																| - Georgian Lari
+														li
+															a(href='javascript:void(0)')
+																span.currency GGP
+																|
+																| - Guernsey Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency GHS
+																|
+																| - Ghanaian Cedi
+														li
+															a(href='javascript:void(0)')
+																span.currency GIP
+																|
+																| - Gibraltar Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency GMD
+																|
+																| - Gambian Dalasi
+														li
+															a(href='javascript:void(0)')
+																span.currency GNF
+																|
+																| - Guinean Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency GTQ
+																|
+																| - Guatemalan Quetzal
+														li
+															a(href='javascript:void(0)')
+																span.currency GYD
+																|
+																| - Guyanese Dollar
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency HKD
+																|
+																| - Hong Kong Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency HNL
+																|
+																| - Honduran Lempira
+														li
+															a(href='javascript:void(0)')
+																span.currency HRK
+																|
+																| - Croatian Kuna
+														li
+															a(href='javascript:void(0)')
+																span.currency HTG
+																|
+																| - Haitian Gourde
+														li
+															a(href='javascript:void(0)')
+																span.currency HUF
+																|
+																| - Hungarian Forint
+														li
+															a(href='javascript:void(0)')
+																span.currency IDR
+																|
+																| - Indonesian Rupiah
+														li
+															a(href='javascript:void(0)')
+																span.currency ILS
+																|
+																| - Israeli Shekel
+														li
+															a(href='javascript:void(0)')
+																span.currency IMP
+																|
+																| - Isle of Man Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency INR
+																|
+																| - Indian Rupee
+														li
+															a(href='javascript:void(0)')
+																span.currency IQD
+																|
+																| - Iraqi Dinar
+														li
+															a(href='javascript:void(0)')
+																span.currency IRR
+																|
+																| - Iranian Rial
+												.item
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency ISK
+																|
+																| - Icelandic Krona
+														li
+															a(href='javascript:void(0)')
+																span.currency JEP
+																|
+																| - Jersey Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency JMD
+																|
+																| - Jamaican Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency JOD
+																|
+																| - Jordanian Dinar
+														li
+															a(href='javascript:void(0)')
+																span.currency JPY
+																|
+																| - Japanese Yen
+														li
+															a(href='javascript:void(0)')
+																span.currency KES
+																|
+																| - Kenyan Shilling
+														li
+															a(href='javascript:void(0)')
+																span.currency KGS
+																|
+																| - Kyrgyzstani Som
+														li
+															a(href='javascript:void(0)')
+																span.currency KHR
+																|
+																| - Cambodian Riel
+														li
+															a(href='javascript:void(0)')
+																span.currency KMF
+																|
+																| - Comorian Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency KPW
+																|
+																| - North Korean Won
+														li
+															a(href='javascript:void(0)')
+																span.currency KRW
+																|
+																| - South Korean Won
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency KWD
+																|
+																| - Kuwaiti Dinar
+														li
+															a(href='javascript:void(0)')
+																span.currency KYD
+																|
+																| - Caymanian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency KZT
+																|
+																| - Kazakhstani Tenge
+														li
+															a(href='javascript:void(0)')
+																span.currency LAK
+																|
+																| - Lao Kip
+														li
+															a(href='javascript:void(0)')
+																span.currency LBP
+																|
+																| - Lebanese Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency LKR
+																|
+																| - Sri Lankan Rupee
+														li
+															a(href='javascript:void(0)')
+																span.currency LRD
+																|
+																| - Liberian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency LSL
+																|
+																| - Basotho Loti
+														li
+															a(href='javascript:void(0)')
+																span.currency LYD
+																|
+																| - Libyan Dinar
+														li
+															a(href='javascript:void(0)')
+																span.currency MAC
+																|
+																| - Moroccan Dirham
+														li
+															a(href='javascript:void(0)')
+																span.currency MDL
+																|
+																| - Moldovan Leu
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency MGA
+																|
+																| - Malagasy Ariary
+														li
+															a(href='javascript:void(0)')
+																span.currency MKD
+																|
+																| - Macedonian Denar
+														li
+															a(href='javascript:void(0)')
+																span.currency MMK
+																|
+																| - Burmese Kyat
+														li
+															a(href='javascript:void(0)')
+																span.currency MNT
+																|
+																| - Mongolian Tughrik
+														li
+															a(href='javascript:void(0)')
+																span.currency MOP
+																|
+																| - Macau Pataca
+														li
+															a(href='javascript:void(0)')
+																span.currency MRO
+																|
+																| - Mauritanian Ouguiya
+														li
+															a(href='javascript:void(0)')
+																span.currency MUR
+																|
+																| - Mauritian Rupee
+														li
+															a(href='javascript:void(0)')
+																span.currency MVR
+																|
+																| - Maldivian Rufiyaa
+														li
+															a(href='javascript:void(0)')
+																span.currency MVK
+																|
+																| - Malawian Kwacha
+														li
+															a(href='javascript:void(0)')
+																span.currency MXN
+																|
+																| - Mexican Peso
+														li
+															a(href='javascript:void(0)')
+																span.currency MYR
+																|
+																| - Malaysian Ringgit
+												.item
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency MZN
+																|
+																| - Mozambican Metical
+														li
+															a(href='javascript:void(0)')
+																span.currency NAD
+																|
+																| - Namibian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency NGN
+																|
+																| - Nigerian Naira
+														li
+															a(href='javascript:void(0)')
+																span.currency NIO
+																|
+																| - Nicaraguan Cordoba
+														li
+															a(href='javascript:void(0)')
+																span.currency NOK
+																|
+																| - Norwegian Krone
+														li
+															a(href='javascript:void(0)')
+																span.currency NPR
+																|
+																| - Nepalese Rupee
+														li
+															a(href='javascript:void(0)')
+																span.currency NZD
+																|
+																| - New Zealand Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency OMR
+																|
+																| - Omani Rial
+														li
+															a(href='javascript:void(0)')
+																span.currency PAB
+																|
+																| - Panamanian Balboa
+														li
+															a(href='javascript:void(0)')
+																span.currency PEN
+																|
+																| - Peruvian Sol
+														li
+															a(href='javascript:void(0)')
+																span.currency PGK
+																|
+																| - Papua New Guinean Kina
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency PHP
+																|
+																| - Philippine Peso
+														li
+															a(href='javascript:void(0)')
+																span.currency PKR
+																|
+																| - Pakistani Rupee
+														li
+															a(href='javascript:void(0)')
+																span.currency PLN
+																|
+																| - Polish Zloty
+														li
+															a(href='javascript:void(0)')
+																span.currency PYG
+																|
+																| - Paraguayan Guarani
+														li
+															a(href='javascript:void(0)')
+																span.currency QAR
+																|
+																| - Qatari Riyal
+														li
+															a(href='javascript:void(0)')
+																span.currency RON
+																|
+																| - Romanian Leu
+														li
+															a(href='javascript:void(0)')
+																span.currency RSD
+																|
+																| - Serbian Dinar
+														li
+															a(href='javascript:void(0)')
+																span.currency RUB
+																|
+																| - Russian Ruble
+														li
+															a(href='javascript:void(0)')
+																span.currency RWF
+																|
+																| - Rwandan Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency SAR
+																|
+																| - Saudi Arabian Riyal
+														li
+															a(href='javascript:void(0)')
+																span.currency SBD
+																|
+																| - Solomon Islander Dollar
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency SCR
+																|
+																| - Seychellois Rupee
+														li
+															a(href='javascript:void(0)')
+																span.currency SDG
+																|
+																| - Sudanese Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency SEK
+																|
+																| - Swedish Krona
+														li
+															a(href='javascript:void(0)')
+																span.currency SGD
+																|
+																| - Singapore Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency SHP
+																|
+																| - Saint Helenian Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency SLL
+																|
+																| - Sierra Leonean Leone
+														li
+															a(href='javascript:void(0)')
+																span.currency SOS
+																|
+																| - Somali Shilling
+														li
+															a(href='javascript:void(0)')
+																span.currency SPL
+																|
+																| - Seborgan Luigino
+														li
+															a(href='javascript:void(0)')
+																span.currency SRD
+																|
+																| - Surinamese Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency STD
+																|
+																| - Sao Tomean Dobra
+														li
+															a(href='javascript:void(0)')
+																span.currency SVC
+																|
+																| - Salvadoran Colon
+												.item
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency SYP
+																|
+																| - Syrian Pound
+														li
+															a(href='javascript:void(0)')
+																span.currency SZL
+																|
+																| - Swazi Lilangeni
+														li
+															a(href='javascript:void(0)')
+																span.currency THB
+																|
+																| - Thai Baht
+														li
+															a(href='javascript:void(0)')
+																span.currency TJS
+																|
+																| - Tajikistani Somoni
+														li
+															a(href='javascript:void(0)')
+																span.currency TMT
+																|
+																| - Turkmenistani Manat
+														li
+															a(href='javascript:void(0)')
+																span.currency TND
+																|
+																| - Tunisian Dinar
+														li
+															a(href='javascript:void(0)')
+																span.currency TOP
+																|
+																| - Tongan Pa'anga
+														li
+															a(href='javascript:void(0)')
+																span.currency TRY
+																|
+																| - Turkish Lira
+														li
+															a(href='javascript:void(0)')
+																span.currency TTD
+																|
+																| - Trinidadian Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency TVD
+																|
+																| - Tuvaluan Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency TWD
+																|
+																| - Taiwan New Dollar
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency TZS
+																|
+																| - Tanzanian Shilling
+														li
+															a(href='javascript:void(0)')
+																span.currency UAH
+																|
+																| - Ukrainian Hryvnia
+														li
+															a(href='javascript:void(0)')
+																span.currency UGX
+																|
+																| - Ugandan Shilling
+														li
+															a(href='javascript:void(0)')
+																span.currency USD
+																|
+																| - US Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency UYU
+																|
+																| - Uruguayan Peso
+														li
+															a(href='javascript:void(0)')
+																span.currency UZS
+																|
+																| - Uzbekistani Som
+														li
+															a(href='javascript:void(0)')
+																span.currency VEF
+																|
+																| - Venezuelan Bolívar
+														li
+															a(href='javascript:void(0)')
+																span.currency VND
+																|
+																| - Vietnamese Dong
+														li
+															a(href='javascript:void(0)')
+																span.currency VUV
+																|
+																| - Ni-Vanuatu Vatu
+														li
+															a(href='javascript:void(0)')
+																span.currency WST
+																|
+																| - Samoan Tala
+														li
+															a(href='javascript:void(0)')
+																span.currency XAF
+																|
+																| - Central African CFA Franc BEAC
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency XAG
+																|
+																| - Silver Ounce
+														li
+															a(href='javascript:void(0)')
+																span.currency XAU
+																|
+																| - Gold Ounce
+														li
+															a(href='javascript:void(0)')
+																span.currency XBT
+																|
+																| - Bitcoin
+														li
+															a(href='javascript:void(0)')
+																span.currency XCD
+																|
+																| - East Caribbean Dollar
+														li
+															a(href='javascript:void(0)')
+																span.currency XDR
+																|
+																| - IMF Special Drawing Rights
+														li
+															a(href='javascript:void(0)')
+																span.currency XOF
+																|
+																| - CFA Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency XPD
+																|
+																| - Palladium Ounce
+														li
+															a(href='javascript:void(0)')
+																span.currency XPF
+																|
+																| - CFP Franc
+														li
+															a(href='javascript:void(0)')
+																span.currency XPT
+																|
+																| - Platinum Ounce
+														li
+															a(href='javascript:void(0)')
+																span.currency YER
+																|
+																| - Yemeni Rial
+														li
+															a(href='javascript:void(0)')
+																span.currency ZAR
+																|
+																| - South African Rand
+												.item
+													ul.ul-list.choose-currency
+														li
+															a(href='javascript:void(0)')
+																span.currency ZMW
+																|
+																| - Zambian Kwacha
+														li
+															a(href='javascript:void(0)')
+																span.currency ZWD
+																|
+																| - Zimbabwean Dollar
+				//ul.nav.navbar-nav.navbar-right.down-menu
+				//	li.visible-lg
+				//		a(href='javascript:void(0)')
+				//			i.fa.fa-life-ring(aria-hidden='true')
+				//			| Support
+				//	li.visible-lg
+				//		a(href='javascript:void(0)') About
 					//li
 					//	a.blue-btn(href='javascript:void(0)') Unlock special prices
 					//li
