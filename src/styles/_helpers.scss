@@ -2721,6 +2721,81 @@ aside {
   }
 }
 
+.explore-page {
+  .main-wrapper {
+    width: 100% !important;
+    .map-wrapper {
+      margin-left: 0 !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.find-trip {
+  position: fixed;
+  z-index: 12;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(8, 37, 62, 0.9);
+  .trip-block-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+  }
+  .trip-block {
+    width: 100%;
+    margin: 30px 1%;
+    min-height: 150px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+    &:first-child {
+      background-color: #5a95cf;
+    }
+    &:nth-child(2) {
+      background-color: #beb7a2;
+    }
+    &:nth-child(3) {
+      background-color: #83a369;
+    }
+    &:nth-child(4) {
+      background-color: #c7c5b7;
+    }
+    &:nth-child(5) {
+      background-color: #5a95cf;
+    }
+    &:last-child {
+      background-color: #97a08e;
+    }
+    .image {
+      width: 40%;
+    }
+    .content {
+      width: 60%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 15px;
+      .price {
+        color: #fff;
+        font-weight: 700;
+        font-size: 36px;
+      }
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 10px;
+      }
+    }
+  }
+}
 
 .sign-in-menu {
   padding: 15px 0 13px;

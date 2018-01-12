@@ -3,7 +3,7 @@ block vars
    - page = {name: 'explore', classes: 'wide-container', title: 'Explore'}
 block main
    include parts/navigation
-   .container.pl-0.pr-0.pos-rel
+   .container-fluid.explore-page.pl-0.pr-0.pos-rel
       .main-wrapper.hidden-sidebar-filter#sticky-wrap
          .map-wrapper.full-width
             .loading-search-cover
@@ -11,6 +11,42 @@ block main
             .placeholder-map
             .ui.sticky
                #map.placeholder-show
+            .find-trip
+               .button
+                  .icon-bar
+                  .icon-bar
+                  .icon-bar
+               .trip-block-wrapper
+                  .trip-block
+                     .image(style='background-image: url("../images/trip1.jpg")')
+                     .content
+                        .price $105+
+                        .title Surf Sport
+                  .trip-block
+                     .image(style='background-image: url("../images/trip3.jpg")')
+                     .content
+                        .price $39+
+                        .title Amazing Beaches
+                  .trip-block
+                     .image(style='background-image: url("../images/trip4.jpg")')
+                     .content
+                        .price $211+
+                        .title Gold Destinations
+                  .trip-block
+                     .image(style='background-image: url("../images/trip5.jpg")')
+                     .content
+                        .price $60+
+                        .title Family-Friendly Cities
+                  .trip-block
+                     .image(style='background-image: url("../images/trip6.jpg")')
+                     .content
+                        .price $420+
+                        .title Fisherman's Wharf
+                  .trip-block
+                     .image(style='background-image: url("../images/trip2.jpg")')
+                     .content
+                        .price $25+
+                        .title Fashion Destinations
          .black-bg-search
    .black-bg-map
    include parts/map-item
