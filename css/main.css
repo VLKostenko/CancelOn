@@ -9295,6 +9295,117 @@ aside.show-on-map .panel-group .panel.panel-default {
   color: #b8b8b8;
 }
 
+.explore-page .main-wrapper {
+  width: 100% !important;
+}
+
+.explore-page .main-wrapper .map-wrapper {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
+.find-trip {
+  position: fixed;
+  z-index: 12;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(8, 37, 62, 0.9);
+}
+
+.find-trip .trip-block-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1%;
+}
+
+.find-trip .trip-block {
+  width: 100%;
+  margin: 30px 1%;
+  min-height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.find-trip .trip-block:first-child {
+  background-color: #5a95cf;
+}
+
+.find-trip .trip-block:nth-child(2) {
+  background-color: #beb7a2;
+}
+
+.find-trip .trip-block:nth-child(3) {
+  background-color: #83a369;
+}
+
+.find-trip .trip-block:nth-child(4) {
+  background-color: #c7c5b7;
+}
+
+.find-trip .trip-block:nth-child(5) {
+  background-color: #5a95cf;
+}
+
+.find-trip .trip-block:last-child {
+  background-color: #97a08e;
+}
+
+.find-trip .trip-block .image {
+  width: 40%;
+}
+
+.find-trip .trip-block .content {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 15px;
+}
+
+.find-trip .trip-block .content .price {
+  color: #fff;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.find-trip .trip-block .content .title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 10px;
+}
+
 .sign-in-menu {
   padding: 15px 0 13px;
   min-width: 320px;
