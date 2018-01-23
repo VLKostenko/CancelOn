@@ -2797,6 +2797,12 @@ aside {
   }
 }
 
+.map-popup-wrapper {
+  .clicked {
+    z-index: 0 !important;
+  }
+}
+
 .sign-in-menu {
   padding: 15px 0 13px;
   min-width: 320px;
@@ -4156,7 +4162,7 @@ aside {
       margin-top: 10px;
       margin-bottom: 5px;
       display: none;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       h5 {
         margin-top: 0;

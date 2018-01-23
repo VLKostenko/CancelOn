@@ -9406,6 +9406,10 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-top: 10px;
 }
 
+.map-popup-wrapper .clicked {
+  z-index: 0 !important;
+}
+
 .sign-in-menu {
   padding: 15px 0 13px;
   min-width: 320px;
@@ -10481,9 +10485,9 @@ aside.show-on-map .panel-group .panel.panel-default {
   margin-top: 10px;
   margin-bottom: 5px;
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -21559,6 +21563,114 @@ aside.show-on-map .panel-group .panel.panel-default {
     margin-bottom: 15px;
   }
   .currencies-mobile .all-currencies .choose-currency li a {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.7;
+  }
+  .languages-mobile {
+    display: block;
+    padding: 0;
+    position: fixed;
+    z-index: 99999;
+    background: #fff;
+    top: 0;
+    width: 90vw;
+    right: -90vw;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100vh;
+    overflow-y: auto;
+    transition: 0.5s ease;
+  }
+  .languages-mobile.opened {
+    right: 0;
+  }
+  .languages-mobile ul li {
+    margin-bottom: 0;
+  }
+  .languages-mobile ul li a {
+    padding: 6px 12px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+  }
+  .languages-mobile ul li.active a {
+    border: 2px solid #1d79d6;
+  }
+  .languages-mobile .back-sign-btn {
+    position: absolute;
+    right: 15px;
+    top: 28px;
+    color: #000;
+    font-size: 24px;
+  }
+  .languages-mobile .languages {
+    padding: 25px 15px;
+  }
+  .languages-mobile .languages .caret {
+    position: absolute;
+    right: 60px;
+    top: 43px;
+    border-top: 6px dashed;
+    border-top: 5px solid;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+  }
+  .languages-mobile .languages select {
+    font-size: 18px;
+    font-weight: 700;
+    background: 0 0;
+    border: 2px solid #1d79d6;
+    border-radius: 3px;
+    width: calc(100% - 35px);
+    padding: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+  }
+  .languages-mobile .title {
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 15px;
+  }
+  .languages-mobile .choose-currency {
+    margin-left: -10px;
+  }
+  .languages-mobile .currency-title-mobile {
+    border-top: 1px solid #d2d2d2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    color: #d6d6d6;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .languages-mobile .popular-currencies {
+    border-top: 1px solid #d2d2d2;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .languages-mobile .popular-currencies .choose-currency li {
+    margin-bottom: 15px;
+  }
+  .languages-mobile .popular-currencies .choose-currency li a {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .languages-mobile .all-currencies {
+    border-top: 1px solid #d2d2d2;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .languages-mobile .all-currencies .choose-currency li {
+    margin-bottom: 15px;
+  }
+  .languages-mobile .all-currencies .choose-currency li a {
     color: #000;
     font-size: 14px;
     font-weight: 600;

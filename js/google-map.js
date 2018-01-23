@@ -297,37 +297,59 @@ function initialize() {
         .parent()
         .addClass('map-popup-wrapper');
 
-      $('.thumbnail').hover(
-        function(e) {
-          console.log($(this));
-          if ( !$(this).closest('.gm-style-iw').parent().hasClass('clicked') ) {
-            console.log('hovering');
-            zIndexHover = $(this).closest('.gm-style-iw').parent().css('z-index');
-            $(this).closest('.gm-style-iw').parent().css('z-index', 0).addClass('hovered');
-            console.log(zIndexHover);
-          } else {
+      // $('.thumbnail').hover(
+      //   function(e) {
+      //     // console.log($(this));
+      //     if ( !$(this).closest('.gm-style-iw').parent().hasClass('clicked') ) {
+      //       // console.log('hovering');
+      //       zIndexHover = $(this).closest('.gm-style-iw').parent().css('z-index');
+      //       $(this).closest('.gm-style-iw').parent().css('z-index', 0).addClass('hovered');
+      //       // console.log(zIndexHover);
+      //     } else {
+      //
+      //     }
+      //   },
+      //   function(e) {
+      //     console.log('unhovering');
+      //     if ( $('.map-popup-wrapper .hovered').hasClass('clicked') ) {
+      //       $('.map-popup-wrapper .hovered.clicked').css('z-index', 0).removeClass('hovered');
+      //     } else {
+      //       $('.map-popup-wrapper .hovered').css('z-index', zIndexHover).removeClass('hovered');
+      //       // console.log(zIndexHover);
+      //     }
+      //   }
+      // );
 
-          }
-        },
-        function(e) {
-          console.log('unhovering');
-          if ( $('.map-popup-wrapper .hovered').hasClass('clicked') ) {
-            $('.map-popup-wrapper .hovered.clicked').css('z-index', 0).removeClass('hovered');
-          } else {
-            $('.map-popup-wrapper .hovered').css('z-index', zIndexHover).removeClass('hovered');
-            console.log(zIndexHover);
-          }
-        }
-      );
-
-      $('.thumbnail').click(function() {
-        $('.thumbnail').removeClass('full-info').unbind('hover');
+      $(document).on('click', '.thumbnail.full-info a.close-btn', function() {
         $(this)
-          .addClass('full-info')
+          .closest('.thumbnail.full-info')
+          .removeClass('full-info')
           .closest('.gm-style-iw')
           .parent()
-          .addClass('clicked')
-          .css('z-index', 0);
+          .removeClass('clicked')
+          .removeClass('hovered');
+        // setTimeout(function() {
+        //   $(this)
+        //     .closest('.thumbnail.closing')
+        //     .removeClass('closing')
+        // }, 500);
+      });
+
+      $('.thumbnail').click(function() {
+        if ( !$(this).hasClass('full-info') ) {
+          $('.thumbnail')
+            .removeClass('full-info')
+            .unbind('hover')
+            .closest('.gm-style-iw')
+            .parent()
+            .removeClass('clicked');
+          $(this)
+            .addClass('full-info')
+            .closest('.gm-style-iw')
+            .parent()
+            .addClass('clicked');
+        }
+
       });
 
       $('.hotel-information .open-map-item, .gallery-map-wrapper .open-map-item').click(function() {

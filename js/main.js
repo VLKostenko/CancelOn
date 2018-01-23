@@ -212,6 +212,7 @@
     $('.black-bg-search').fadeOut(200).removeAttr('style');
     $('.sign-in-mobile-menu').removeClass('opened');
     $('.currencies-mobile').removeClass('opened');
+    $('.languages-mobile').removeClass('opened');
   }
 
   function showMobileNav() {
@@ -1674,12 +1675,20 @@
     $('.sign-in-mobile-menu').removeClass('opened');
   });
 
-  $('.currency-mobile, .language-mobile').click(function() {
+  $('.currency-mobile').click(function() {
     $('.currencies-mobile').addClass('opened');
+  });
+
+  $('.language-mobile').click(function() {
+    $('.languages-mobile').addClass('opened');
   });
 
   $('.currencies-mobile .back-sign-btn').click(function() {
     $('.currencies-mobile').removeClass('opened');
+  });
+
+  $('.languages-mobile .back-sign-btn').click(function() {
+    $('.languages-mobile').removeClass('opened');
   });
 
   $('.currencies-mobile ul li a').click(function() {
