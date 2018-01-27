@@ -1582,6 +1582,56 @@
     }
   });
 
+  // '<div class="thumbnail">'+
+  // '  <div class="thumbnail-wrapper"><a class="thumbnail-img" href="javascript:void(0)">'+
+  // '      <div class="image" style="background-image: url(' + locations[i][3] + ');"></div>'+
+  // '      <div class="thumbnail-info text-right"><span class="label"> ' + locations[i][2] + '</span></div></a>'+
+  // '    <div class="caption">'+
+  // '      <div class="calendar-price">'+
+  // '        <div class="calendar"> '+
+  // '          <div class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>'+
+  // '          <div class="date"><span>July, </span>'+
+  // '            <span class="day">3th</span>'+
+  // '            <span>- August,</span>'+
+  // '            <span class="day">14th</span>'+
+  // '          </div>'+
+  // '        </div>'+
+  // '        <div class="price"><span class="number">$468</span><span class="slash">/</span><span class="day">Day</span></div>'+
+  // '      </div>'+
+  // '      <div class="title">'+
+  // '        <h5><a href="javascript:void(0)">' + locations[i][0] + '</a></h5>'+
+  // '        <div class="blocks-wrapper">'+
+  // '          <div class="block rooms">'+
+  // '            <div class="icon"></div>'+
+  // '            <div class="count">3</div>'+
+  // '          </div>'+
+  // '          <div class="block adults">'+
+  // '            <div class="icon"></div>'+
+  // '            <div class="count">3</div>'+
+  // '          </div>'+
+  // '          <div class="block children">'+
+  // '            <div class="icon"></div>'+
+  // '            <div class="count">2</div>'+
+  // '          </div>'+
+  // '        </div>'+
+  // '      </div>'+
+  // '      <div class="rating-line">'+
+  // '        <div class="stars">'+
+  // '          <ul class="stars-hotel" data-stars=' + locations[i][2] + '>'+
+  // '            <li><i class="fa fa-star" aria-hidden="true"></i></li>'+
+  // '            <li><i class="fa fa-star" aria-hidden="true"></i></li>'+
+  // '            <li><i class="fa fa-star" aria-hidden="true"></i></li>'+
+  // '            <li><i class="fa fa-star" aria-hidden="true"></i></li>'+
+  // '            <li class="hidden"><i class="fa fa-star" aria-hidden="true"></i></li>'+
+  // '          </ul>'+
+  // '        </div>'+
+  // '        <div class="rate" data-rate=' + locations[i][2] + '><img class="rate-image" src="./images/icons/rate/5.0.svg"/></div>'+
+  // '        <div class="reviews"><a href="javascript:void(0)">142 Reviews</a></div>'+
+  // '      </div>'+
+  // '      <div class="buttons-line"><a class="view-btn open-map-item" href="javascript:void(0)">View</a><a class="close-btn" href="javascript:void(0)">Close</a></div>'+
+  // '    </div>'+
+  // '  </div>'+
+  // '</div>';
   $('.search-filter .show-all').on('click', function() {
     $('.main-wrapper .full-filter-search').toggleClass('active');
   });
@@ -1709,6 +1759,10 @@
       calentimStart.hideDropdown(e);
       // calentimEnd.hideDropdown(e);
     }
+  });
+
+  $('.trip-block-wrapper .navbar-toggle').click(function() {
+    $(this).closest('.find-trip').toggleClass('opened');
   });
 
   /**

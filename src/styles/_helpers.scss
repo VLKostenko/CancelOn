@@ -2738,11 +2738,64 @@ aside {
   left: 0;
   width: 100%;
   background: rgba(8, 37, 62, 0.9);
+  @include crossBrowser(transition, .2s ease-in);
+  &.opened {
+    transform: translateY(185px);
+  }
   .trip-block-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1%;
+    padding: 60px 1% 0;
+    .navbar-toggle {
+      display: block;
+      background: transparent;
+      border-radius: 0;
+      z-index: 101;
+      margin: 0;
+      width: 250px;
+      height: 25px;
+      padding: 0;
+      text-align: center;
+      border: 0;
+      position: absolute;
+      top: 33px;
+      left: 35px;
+      @include crossBrowser(transition, all .3s);
+      &:hover, &:focus, &:active {
+        background-color: transparent!important;
+      }
+      .icon-bar {
+        background-color: #fff!important;
+        width: 26px;
+        height: 4px;
+        margin: auto;
+        border-radius: 50px;
+        position: relative;
+        @include crossBrowser(transition, all .3s);
+        transform-origin: 0 50%;
+        float: left;
+        clear: left;
+        &:first-child {
+          left: -2px;
+        }
+        + .icon-bar {
+          margin-top: 4px;
+          left: -2px;
+          + .icon-bar {
+            left: -2px;
+          }
+        }
+      }
+      .text {
+        float: left;
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        margin-top: -14px;
+        margin-left: 15px;
+      }
+    }
   }
   .trip-block {
     width: 100%;

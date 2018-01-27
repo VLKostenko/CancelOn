@@ -9311,6 +9311,12 @@ aside.show-on-map .panel-group .panel.panel-default {
   left: 0;
   width: 100%;
   background: rgba(8, 37, 62, 0.9);
+  transition: 0.2s ease-in;
+}
+
+.find-trip.opened {
+  -webkit-transform: translateY(185px);
+          transform: translateY(185px);
 }
 
 .find-trip .trip-block-wrapper {
@@ -9323,7 +9329,64 @@ aside.show-on-map .panel-group .panel.panel-default {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 1%;
+  padding: 60px 1% 0;
+}
+
+.find-trip .trip-block-wrapper .navbar-toggle {
+  display: block;
+  background: transparent;
+  border-radius: 0;
+  z-index: 101;
+  margin: 0;
+  width: 250px;
+  height: 25px;
+  padding: 0;
+  text-align: center;
+  border: 0;
+  position: absolute;
+  top: 33px;
+  left: 35px;
+  transition: all 0.3s;
+}
+
+.find-trip .trip-block-wrapper .navbar-toggle:hover, .find-trip .trip-block-wrapper .navbar-toggle:focus, .find-trip .trip-block-wrapper .navbar-toggle:active {
+  background-color: transparent !important;
+}
+
+.find-trip .trip-block-wrapper .navbar-toggle .icon-bar {
+  background-color: #fff !important;
+  width: 26px;
+  height: 4px;
+  margin: auto;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.3s;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  float: left;
+  clear: left;
+}
+
+.find-trip .trip-block-wrapper .navbar-toggle .icon-bar:first-child {
+  left: -2px;
+}
+
+.find-trip .trip-block-wrapper .navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+  left: -2px;
+}
+
+.find-trip .trip-block-wrapper .navbar-toggle .icon-bar + .icon-bar + .icon-bar {
+  left: -2px;
+}
+
+.find-trip .trip-block-wrapper .navbar-toggle .text {
+  float: left;
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  margin-top: -14px;
+  margin-left: 15px;
 }
 
 .find-trip .trip-block {
