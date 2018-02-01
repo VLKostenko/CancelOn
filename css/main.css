@@ -16552,6 +16552,11 @@ aside.show-on-map .panel-group .panel.panel-default {
   text-decoration: underline !important;
 }
 
+.payment-block .step .step-body .cvc .help-block {
+  left: 95px;
+  top: 2px;
+}
+
 .payment-block .step .step-footer {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -16569,8 +16574,8 @@ aside.show-on-map .panel-group .panel.panel-default {
 }
 
 .payment-block .step .cvv-input .numbers-block {
-  width: 50%;
-  margin: 20px auto 15px;
+  width: 95%;
+  margin: 5px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16675,7 +16680,8 @@ aside.show-on-map .panel-group .panel.panel-default {
 
 .payment-block .step .help-button a {
   position: absolute;
-  top: 37px;
+  z-index: 1;
+  top: 11px;
   right: 30px;
   font-size: 22px;
   color: #00c2ff;
@@ -16973,6 +16979,7 @@ aside.show-on-map .panel-group .panel.panel-default {
 .payment-block .step .credit-card-info #inputCardCVC {
   font-size: 20px;
   color: #00c2ff;
+  padding-right: 10px;
 }
 
 .payment-block .step .credit-card-info .bootstrap-select .dropdown-toggle {
@@ -17109,13 +17116,14 @@ aside.show-on-map .panel-group .panel.panel-default {
     padding-left: 10px;
   }
   .payment-block .step .help-button a {
-    top: 59px;
+    top: 11px;
+    right: 25px;
   }
   .payment-block .step .help-button .cvv-help {
     bottom: 55px;
   }
   .payment-block .step .cvv-input .numbers-block {
-    width: 60%;
+    width: 95%;
   }
   .payment-block .step .cvv-input .numbers-block .number {
     height: 55px;
@@ -17376,13 +17384,14 @@ aside.show-on-map .panel-group .panel.panel-default {
             flex-direction: column;
   }
   .payment-block .step .cvv-input .numbers-block {
-    width: 75%;
+    width: 95%;
   }
   .payment-block .step .cvv-input .numbers-block .number {
     height: 61px;
   }
   .payment-block .step .help-button a {
-    top: 37px;
+    top: 11px;
+    right: 25px;
   }
   .payment-block .step .help-button .cvv-help {
     right: 15px;
@@ -17413,6 +17422,11 @@ aside.show-on-map .panel-group .panel.panel-default {
     padding: 0 15px;
     height: 200px;
   }
+}
+
+#inputCardFirstName,
+inputCardLastName {
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 416px) {

@@ -491,6 +491,12 @@
           }
         }
       }
+      .cvc {
+        .help-block {
+          left: 95px;
+          top: 2px;
+        }
+      }
     }
     .step-footer {
       font-family: "Roboto", sans-serif;
@@ -506,8 +512,8 @@
       border: 1px solid #d8def0;
       box-shadow: 0 4px 7px 0 rgba(0,0,0,.1);
       .numbers-block {
-        width: 50%;
-        margin: 20px auto 15px;
+        width: 95%;
+        margin: 5px auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -601,7 +607,8 @@
     .help-button {
       a {
         position: absolute;
-        top: 37px;
+        z-index: 1;
+        top: 11px;
         right: 30px;
         font-size: 22px;
         color: $main-blue;
@@ -850,6 +857,7 @@
       #inputCardCVC {
         font-size: 20px;
         color: #00c2ff;
+        padding-right: 10px;
       }
       .bootstrap-select {
         .dropdown-toggle {
@@ -968,7 +976,8 @@
       }
       .help-button {
         a {
-          top: 59px;
+          top: 11px;
+          right: 25px;
         }
         .cvv-help {
           bottom: 55px;
@@ -976,7 +985,7 @@
       }
       .cvv-input {
         .numbers-block {
-          width: 60%;
+          width: 95%;
           .number {
             height: 55px;
             a {
@@ -1287,7 +1296,7 @@
       }
       .cvv-input {
         .numbers-block {
-          width: 75%;
+          width: 95%;
           .number {
             height: 61px;
           }
@@ -1295,7 +1304,8 @@
       }
       .help-button {
         a {
-          top: 37px;
+          top: 11px;
+          right: 25px;
         }
         .cvv-help {
           right: 15px;
@@ -1331,6 +1341,10 @@
       height: 200px;
     }
   }
+}
+#inputCardFirstName,
+inputCardLastName {
+  text-transform: capitalize;
 }
 @media screen and (max-width: 416px) {
   .payment-block .step .help-button a {

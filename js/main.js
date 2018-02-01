@@ -1214,6 +1214,22 @@
     }
   });
 
+  $('#street-view').click(function() {
+    $('.onoffswitch-gallery .myonoffswitch').prop('checked', true);
+    if ( $('.onoffswitch-gallery .myonoffswitch').prop('checked') ) {
+      $(this).parent().addClass('checked');
+      $('.gallery-map-wrapper #map').removeClass('hidden');
+      $('.information-block .slider-block,' +
+        '.information-block .sidebar-block').addClass('hidden');
+    } else {
+      $(this).parent().removeClass('checked');
+      $('.gallery-map-wrapper #map').addClass('hidden');
+      $('.information-block .slider-block,' +
+        '.information-block .sidebar-block').removeClass('hidden');
+    }
+    reinitMap();
+  });
+
   $('.full-filter-search .filter-search-result .close').on('click', function() {
     $('.full-filter-search .filter-search-result').removeClass('active left right');
   });

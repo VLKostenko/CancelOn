@@ -834,13 +834,13 @@ form(data-toggle='validator', role='form')
                   .col-sm-6.form-group.has-feedback
                      label.control-label(for='inputCardFirstName') First Name
                         span.danger *
-                     input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required', placeholder='John')
+                     input#inputCardFirstName.form-control(name='Card First Name', type='text', required, autocomplete='off', data-error='This field is required')
                      img(src='./images/icons/credit/first-name.png', alt='first name')
                      .help-block.with-errors
                   .col-sm-6.form-group.has-feedback
                      label.control-label(for='inputCardLastName') Last Name
                         span.danger *
-                     input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required', placeholder='Doe')
+                     input#inputCardLastName.form-control(name='Card Last Name', type='text', required, autocomplete='off', data-error='This field is required')
                      img(src='./images/icons/credit/last-name.png', alt='last name')
                      .help-block.with-errors
                   .col-sm-6.col-xs-12.form-group.has-feedback
@@ -883,45 +883,47 @@ form(data-toggle='validator', role='form')
                               img(src='./images/icons/credit/date-year.png', alt='expiration date year')
 
                      .col-sm-6.col-xs-12.form-group.has-feedback
-                        label.control-label(for='inputCardCVC') CVC
-                           span.danger *
-                           span.small-desc  The 3 digits (back) or 4 digits (front) value on your card.
-                        input#inputCardCVC.form-control(name='Card CVC', type='text', autocomplete='off', required, maxlength='3', data-error='This field is required')
-                        img(src='./images/icons/credit/cvc.png', alt='cvc code')
-                        .cvv-input
-                           .numbers-block
-                              .number
-                                 a(href='javascript:void(0)') 0
-                              .number
-                                 a(href='javascript:void(0)') 1
-                              .number
-                                 a(href='javascript:void(0)') 2
-                              .number
-                                 a(href='javascript:void(0)') 3
-                              .number
-                                 a(href='javascript:void(0)') 4
-                              .number
-                                 a(href='javascript:void(0)') 5
-                              .number
-                                 a(href='javascript:void(0)') 6
-                              .number
-                                 a(href='javascript:void(0)') 7
-                              .number
-                                 a(href='javascript:void(0)') 8
-                              .number
-                                 a(href='javascript:void(0)') 9
-                              .delete-button
-                                 a(href='javascript:void(0)') Delete
-                              .enter-button
-                                 a(href='javascript:void(0)') Enter
-                        .help-button
-                           a(href='javascript:void(0)')
-                              i.fa.fa-question-circle-o(aria-hidden='true')
-                           .cvv-help
-                              img(src='images/cvv_num_img.png', alt='cvv help')
-                              span.text 3 digit security code
-                        .help-block.with-errors
-
+                        .row
+                           .col-sm-12
+                              label.control-label(for='inputCardCVC') CVC
+                                 span.danger *
+                                 span.small-desc  The 3 digits (back) or 4 digits (front) value on your card.
+                           .col-lg-8.col-md-10.col-xs-12.cvc
+                              input#inputCardCVC.form-control(name='Card CVC', type='text', autocomplete='off', required, maxlength='3', data-error='This field is required')
+                              img(src='./images/icons/credit/cvc.png', alt='cvc code')
+                              .cvv-input
+                                 .numbers-block
+                                    .number
+                                       a(href='javascript:void(0)') 0
+                                    .number
+                                       a(href='javascript:void(0)') 1
+                                    .number
+                                       a(href='javascript:void(0)') 2
+                                    .number
+                                       a(href='javascript:void(0)') 3
+                                    .number
+                                       a(href='javascript:void(0)') 4
+                                    .number
+                                       a(href='javascript:void(0)') 5
+                                    .number
+                                       a(href='javascript:void(0)') 6
+                                    .number
+                                       a(href='javascript:void(0)') 7
+                                    .number
+                                       a(href='javascript:void(0)') 8
+                                    .number
+                                       a(href='javascript:void(0)') 9
+                                    .delete-button
+                                       a(href='javascript:void(0)') Delete
+                                    .enter-button
+                                       a(href='javascript:void(0)') Enter
+                              .help-button
+                                 a(href='javascript:void(0)')
+                                    i.fa.fa-question-circle-o(aria-hidden='true')
+                                 .cvv-help
+                                    img(src='images/cvv_num_img.png', alt='cvv help')
+                                    span.text 3 digit security code
+                              .help-block.with-errors
             //#other-payment.tab-pane.other-payment
             //   .row
             //      .col-sm-3
@@ -942,11 +944,11 @@ form(data-toggle='validator', role='form')
          p 1) Have Read And Accepted Our
             |
             |
-            a(href='javascript:void(0)') Privacy Policy
+            a(href='javascript:void(0)', target='_blank') Privacy Policy
             |  And
             |
             |
-            a(href='javascript:void(0)') User Agreement.
+            a(href='javascript:void(0)', target='_blank') User Agreement.
          p 2) Are At Least 18 Years Old.
          p 3)
             |
