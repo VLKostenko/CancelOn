@@ -298,6 +298,7 @@
 .payment-block {
   @include calc(width, '100% - 285px - 15px');
   margin-left: 15px;
+  margin-top: 10px;
   float: left;
   //min-height: 1220px;
   margin-bottom: 50px;
@@ -558,7 +559,7 @@
       border: 1px solid #d8def0;
       box-shadow: 0 4px 7px 0 rgba(0,0,0,.1);
       .numbers-block {
-        width: 50%;
+        width: 85%;
         margin: 20px auto 15px;
         display: flex;
         justify-content: space-between;
@@ -671,11 +672,12 @@
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        background: #fff;
-        border: 2px solid $main-blue;
+        background: #f3f5fd;
+        border: 2px solid #c6d2e2;
+        border-radius: 4px;
         z-index: 2;
-        right: -74px;
-        bottom: 50px;
+        right: -65px;
+        bottom: 65px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -688,7 +690,7 @@
           height: 0;
           border-left: 10px solid transparent;
           border-right: 10px solid transparent;
-          border-top: 10px solid $main-blue;
+          border-top: 10px solid #c6d2e2;
           position: absolute;
           z-index: 1;
           bottom: -10px;
@@ -723,14 +725,14 @@
         }
       }
       input[type='submit'] {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
         text-transform: uppercase;
         color: #fff;
         background: #1d79d6;
         height: 65px;
         border: 0;
-        padding: 0 85px;
+        padding: 0 25px;
         margin-right: 15px;
         @include crossBrowser(transition, background .2s ease-in);
         &:hover {
@@ -752,7 +754,7 @@
         margin: 30px 0 20px;
         border: 0;
         p {
-          color: #9ea2a6;
+          color: #000;
           font-size: 12px;
         }
         a {
@@ -819,8 +821,8 @@
           a {
             .radio {
               &:before {
-                width: 10px;
-                height: 10px;
+                width: auto;
+                height: auto;
                 opacity: 1;
               }
             }
@@ -857,7 +859,7 @@
     }
 
     #inputCardNumber {
-      background-image: url('../images/creditcardtype.png'), url('../images/creditcardtype.png');
+      // background-image: url('../images/creditcardtype.png'), url('../images/creditcardtype.png');
       background-position: 9px -226px, 160% -102px;
       background-size: 123px, 130px;
       background-repeat: no-repeat;
